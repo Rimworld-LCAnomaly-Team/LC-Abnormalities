@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- O-09-91 Portrait of Another World Egg -->
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEgg ParentName="ResourceBase">
+    <defName>PortraitOfAnotherWorldEgg</defName>
+    <label>Portrait of Another World Egg</label>
+    <description>The sealed stasis pod of Portrait of Another World (O-09-91). Bind it to a Holding Platform to deploy the tool abnormality for colonist use, or smash it to harvest Enkephalin Boxes.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Special/PortraitOfAnotherWorldEgg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <genericMarketSellable>false</genericMarketSellable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <MarketValue>0</MarketValue>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <LC_MinimumContainmentStrength>0</LC_MinimumContainmentStrength>
+    </statBases>
+    <thingCategories>
+      <li>LC_Entity_Egg</li>
+    </thingCategories>
+    <descriptionHyperlinks>
+      <PawnKindDef>PortraitOfAnotherWorld</PawnKindDef>
+    </descriptionHyperlinks>
+    <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+    <comps>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <heldPawnKind>PortraitOfAnotherWorld</heldPawnKind>
+        <capturedLetterLabel>Portrait of Another World Contained</capturedLetterLabel>
+        <capturedLetterText>{PAWN_nameDef} secured the Portrait of Another World egg onto a holding platform, materializing the portrait inside.</capturedLetterText>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Smash {0_label}</useLabel>
+        <useMessage>{PAWN_nameDef} smashed the Portrait of Another World egg, dissolving it into Enkephalin Boxes.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>ChunkRock_Drop</soundOnUsed>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf">
+        <leavings>
+          <EnkephalinBox>18</EnkephalinBox>
+        </leavings>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Abnormality" />
+      <li Class="LCAnomalyCore.Comp.LC_CompProperties_InteractableEgg">
+        <compClass>LCAnomalyCore.Comp.LC_CompEgg</compClass>
+        <ticksToActivate>0</ticksToActivate>
+        <activateTexPath>UI/CodexEntries/PortraitOfAnotherWorld_MenuIcon</activateTexPath>
+        <activateLabelString>Smash...</activateLabelString>
+        <activateDescString>Smash the Portrait of Another World egg.</activateDescString>
+        <activatingStringPending>smashing Portrait of Another World egg</activatingStringPending>
+        <guiLabelString>Choose who should do this</guiLabelString>
+        <showMustBeActivatedByColonist>false</showMustBeActivatedByColonist>
+        <shouldTransferBioSignature>true</shouldTransferBioSignature>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
+
+  <!-- T-09-79 Flesh Idol Egg -->
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEgg ParentName="ResourceBase">
+    <defName>FleshIdolEgg</defName>
+    <label>Flesh Idol Egg</label>
+    <description>The sealed stasis pod of Flesh Idol (T-09-79). Bind it to a Holding Platform to deploy the tool abnormality for colonist prayer, or smash it to harvest Enkephalin Boxes.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Special/FleshIdolEgg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <genericMarketSellable>false</genericMarketSellable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <MarketValue>0</MarketValue>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <LC_MinimumContainmentStrength>0</LC_MinimumContainmentStrength>
+    </statBases>
+    <thingCategories>
+      <li>LC_Entity_Egg</li>
+    </thingCategories>
+    <descriptionHyperlinks>
+      <PawnKindDef>FleshIdol</PawnKindDef>
+    </descriptionHyperlinks>
+    <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+    <comps>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <heldPawnKind>FleshIdol</heldPawnKind>
+        <capturedLetterLabel>Flesh Idol Contained</capturedLetterLabel>
+        <capturedLetterText>{PAWN_nameDef} secured the Flesh Idol egg onto a holding platform, materializing the idol inside.</capturedLetterText>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Smash {0_label}</useLabel>
+        <useMessage>{PAWN_nameDef} smashed the Flesh Idol egg, dissolving it into Enkephalin Boxes.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>ChunkRock_Drop</soundOnUsed>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf">
+        <leavings>
+          <EnkephalinBox>24</EnkephalinBox>
+        </leavings>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Abnormality" />
+      <li Class="LCAnomalyCore.Comp.LC_CompProperties_InteractableEgg">
+        <compClass>LCAnomalyCore.Comp.LC_CompEgg</compClass>
+        <ticksToActivate>0</ticksToActivate>
+        <activateTexPath>UI/CodexEntries/FleshIdol_MenuIcon</activateTexPath>
+        <activateLabelString>Smash...</activateLabelString>
+        <activateDescString>Smash the Flesh Idol egg.</activateDescString>
+        <activatingStringPending>smashing Flesh Idol egg</activatingStringPending>
+        <guiLabelString>Choose who should do this</guiLabelString>
+        <showMustBeActivatedByColonist>false</showMustBeActivatedByColonist>
+        <shouldTransferBioSignature>true</shouldTransferBioSignature>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>WAW</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
+
+  <!-- T-09-85 We Can Change Anything Egg -->
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEgg ParentName="ResourceBase">
+    <defName>WeCanChangeAnythingEgg</defName>
+    <label>We Can Change Anything Egg</label>
+    <description>The sealed stasis pod of We Can Change Anything (T-09-85). Bind it to a Holding Platform to deploy the iron maiden, or smash it to harvest Enkephalin Boxes.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Special/WeCanChangeAnythingEgg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <genericMarketSellable>false</genericMarketSellable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <MarketValue>0</MarketValue>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <LC_MinimumContainmentStrength>0</LC_MinimumContainmentStrength>
+    </statBases>
+    <thingCategories>
+      <li>LC_Entity_Egg</li>
+    </thingCategories>
+    <descriptionHyperlinks>
+      <PawnKindDef>WeCanChangeAnything</PawnKindDef>
+    </descriptionHyperlinks>
+    <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+    <comps>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <heldPawnKind>WeCanChangeAnything</heldPawnKind>
+        <capturedLetterLabel>We Can Change Anything Contained</capturedLetterLabel>
+        <capturedLetterText>{PAWN_nameDef} secured the We Can Change Anything egg onto a holding platform, materializing the iron maiden inside.</capturedLetterText>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Smash {0_label}</useLabel>
+        <useMessage>{PAWN_nameDef} smashed the We Can Change Anything egg, dissolving it into Enkephalin Boxes.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>ChunkRock_Drop</soundOnUsed>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf">
+        <leavings>
+          <EnkephalinBox>10</EnkephalinBox>
+        </leavings>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Abnormality" />
+      <li Class="LCAnomalyCore.Comp.LC_CompProperties_InteractableEgg">
+        <compClass>LCAnomalyCore.Comp.LC_CompEgg</compClass>
+        <ticksToActivate>0</ticksToActivate>
+        <activateTexPath>UI/CodexEntries/WeCanChangeAnything_MenuIcon</activateTexPath>
+        <activateLabelString>Smash...</activateLabelString>
+        <activateDescString>Smash the We Can Change Anything egg.</activateDescString>
+        <activatingStringPending>smashing We Can Change Anything egg</activatingStringPending>
+        <guiLabelString>Choose who should do this</guiLabelString>
+        <showMustBeActivatedByColonist>false</showMustBeActivatedByColonist>
+        <shouldTransferBioSignature>true</shouldTransferBioSignature>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>ZAYIN</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
+
+  <!-- T-09-97 Old Belief and Promise Egg -->
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEgg ParentName="ResourceBase">
+    <defName>OldBeliefAndPromiseEgg</defName>
+    <label>Old Belief and Promise Egg</label>
+    <description>The sealed stasis pod of Old Belief and Promise (T-09-97). Bind it to a Holding Platform to deploy the tool abnormality for weapon oaths, or smash it to harvest Enkephalin Boxes.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Special/OldBeliefAndPromiseEgg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <genericMarketSellable>false</genericMarketSellable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <MarketValue>0</MarketValue>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <LC_MinimumContainmentStrength>0</LC_MinimumContainmentStrength>
+    </statBases>
+    <thingCategories>
+      <li>LC_Entity_Egg</li>
+    </thingCategories>
+    <descriptionHyperlinks>
+      <PawnKindDef>OldBeliefAndPromise</PawnKindDef>
+    </descriptionHyperlinks>
+    <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+    <comps>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <heldPawnKind>OldBeliefAndPromise</heldPawnKind>
+        <capturedLetterLabel>Old Belief and Promise Contained</capturedLetterLabel>
+        <capturedLetterText>{PAWN_nameDef} secured the Old Belief and Promise egg onto a holding platform, materializing the crystal pendulum inside.</capturedLetterText>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Smash {0_label}</useLabel>
+        <useMessage>{PAWN_nameDef} smashed the Old Belief and Promise egg, dissolving it into Enkephalin Boxes.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>ChunkRock_Drop</soundOnUsed>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf">
+        <leavings>
+          <EnkephalinBox>10</EnkephalinBox>
+        </leavings>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Abnormality" />
+      <li Class="LCAnomalyCore.Comp.LC_CompProperties_InteractableEgg">
+        <compClass>LCAnomalyCore.Comp.LC_CompEgg</compClass>
+        <ticksToActivate>0</ticksToActivate>
+        <activateTexPath>UI/CodexEntries/OldBeliefAndPromise_MenuIcon</activateTexPath>
+        <activateLabelString>Smash...</activateLabelString>
+        <activateDescString>Smash the Old Belief and Promise egg.</activateDescString>
+        <activatingStringPending>smashing Old Belief and Promise egg</activatingStringPending>
+        <guiLabelString>Choose who should do this</guiLabelString>
+        <showMustBeActivatedByColonist>false</showMustBeActivatedByColonist>
+        <shouldTransferBioSignature>true</shouldTransferBioSignature>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>ZAYIN</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
+
+</Defs>

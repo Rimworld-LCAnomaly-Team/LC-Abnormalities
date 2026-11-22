@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>OldBeliefAndPromise</defName>
+    <label>Old Belief and Promise</label>
+    <description>Old Belief and Promise (T-09-97) hangs by three cords as a glowing orb clasped by twin blue and gold puzzle serpents.\nOaths sworn before it permanently empower the wielder's primary weapon up to +40% damage—at an escalating risk of shattering betrayal.</description>
+    <uiIconPath>UI/CodexEntries/OldBeliefAndPromise</uiIconPath>
+    <category>ZAYIN</category>
+    <orderInCategory>860</orderInCategory>
+    <linkedThings>
+      <li>OldBeliefAndPromise</li>
+      <li>OldBeliefAndPromiseEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

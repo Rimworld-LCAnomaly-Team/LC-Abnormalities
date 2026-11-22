@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>NothingThere</defName>
+    <label>Nothing There</label>
+    <description>Nothing There (O-06-20) is a terrifying ALEPH Abnormality shrouded inside an amorphous mound of pulsating human flesh, eyes, teeth, and distorted limbs.\nDriven by an obsessive desire to imitate humanity, it wears the hollow shell of any employee who falters inside its containment unit, muttering stolen words as it sheds its disguise into a cocoon and hatches into its towering invincible True Form.\n"Hello? I love you. Goodbye."</description>
+    <uiIconPath>UI/CodexEntries/NothingThere</uiIconPath>
+    <category>ALEPH</category>
+    <orderInCategory>100</orderInCategory>
+    <linkedThings>
+      <li>NothingThere</li>
+      <li>NothingThereEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

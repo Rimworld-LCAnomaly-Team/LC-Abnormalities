@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="LC_EntityBase" Name="BaseSevenSinEntity" Abstract="True">
+    <thingClass>LC_SevenSin.Things.LC_SevenSinPawn</thingClass>
+    <statBases>
+      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+      <ComfyTemperatureMax>60</ComfyTemperatureMax>
+      <Flammability>1.25</Flammability>
+      <MeatAmount>0</MeatAmount>
+    </statBases>
+    <race>
+      <body>BaseSevenSinEntity</body>
+      <baseBodySize>2</baseBodySize>
+      <baseHealthScale>1</baseHealthScale>
+      <lifeExpectancy>100</lifeExpectancy>
+      <intelligence>ToolUser</intelligence>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <fleshType>LC_AbnormalityOrganic</fleshType>
+      <foodType>None</foodType>
+      <hasCorpse>true</hasCorpse>
+      <bloodDef>Filth_Blood</bloodDef>
+      <bloodSmearDef>Filth_BloodSmear</bloodSmearDef>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <soundCallIntervalRange>120~240</soundCallIntervalRange>
+      <disableIgniteVerb>true</disableIgniteVerb>
+      <trainability>None</trainability>
+      <isImmuneToInfections>true</isImmuneToInfections>
+      <bleedRateFactor>0.5</bleedRateFactor>
+      <hediffGiverSets>
+      </hediffGiverSets>
+      <corpseHiddenWhileUndiscovered>false</corpseHiddenWhileUndiscovered>
+      <lifeStageAges>
+        <li>
+          <def>LC_EntityFullyFormed</def>
+          <soundWounded>Pawn_BigInsect_Pain</soundWounded>
+          <soundDeath>Pawn_BigInsect_Death</soundDeath>
+          <soundCall>Pawn_BigInsect_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <deathAction Class="DeathActionProperties_Vanish">
+        <workerClass>DeathActionWorker_Vanish</workerClass>
+        <filth>Filth_Blood</filth>
+        <filthCountRange>1~3</filthCountRange>
+        <meatExplosionSize>Small</meatExplosionSize>
+      </deathAction>
+    </race>
+    <comps>
+      <li Class="LCAnomalyCore.Comp.CompProperties_PeBoxProduce">
+        <peBoxDef>EnkephalinBox</peBoxDef>
+        <amountProdueRangeNormal>4~7</amountProdueRangeNormal>
+        <amountProdueMax>10</amountProdueMax>
+        <boxTexOffsetZ>0.178</boxTexOffsetZ>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <lookForTargetOnEscape>true</lookForTargetOnEscape>
+        <hasAnimation>false</hasAnimation>
+      </li>
+      <li Class="CompProperties_AttachPoints">
+        <points>
+          <li>
+            <offset>(-.35, 0, .35)</offset>
+            <type>PlatformRestraint0</type>
+          </li>
+          <li>
+            <offset>(.35, 0, .35)</offset>
+            <type>PlatformRestraint1</type>
+          </li>
+          <li>
+            <offset>(.2, 0, -.71)</offset>
+            <type>PlatformRestraint2</type>
+          </li>
+          <li>
+            <offset>(-.2, 0, -.71)</offset>
+            <type>PlatformRestraint3</type>
+          </li>
+        </points>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudiable">
+        <frequencyTicks>60000</frequencyTicks>
+        <studyTimesPeriod>1</studyTimesPeriod>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>4</threshold>
+            <label>Observation Level: I</label>
+            <text>These lesser distortions emerge from unstable Cogito injections. When dropped outside a containment platform, a Peccatulum immediately attempts to breach.\nSuccess Rate +4%</text>
+          </li>
+          <li>
+            <threshold>8</threshold>
+            <label>Observation Level: II</label>
+            <text>Each Peccatulum manifests a distinct elemental affinity and sin temperament—ranging from physical brutality (Wrath, Sloth, Pride) to mental or erosive attacks (Melancholy, Gluttony).\nWork Speed +4%</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>spike</label>
+        <labelNoLocation>spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LC_MiddleSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <chanceFactor>0.5</chanceFactor>
+        <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Melee_Punch_HitPawn</soundMeleeHit>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>ZAYIN</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Gluttony -->
+  <ThingDef ParentName="BaseSevenSinEntity">
+    <defName>GluttonyEntity</defName>
+    <label>Gluttony Entity</label>
+    <description>It happened while passing through a lush, green jungle teeming with strange flora and butterflies. Normally, a plant takes root and spends its whole life in one spot, yet these mobile botanical beasts tore their roots free like limbs and hunted with fanged blossoms, endlessly stuffing prey into bodies that cannot store nourishment.</description>
+    <uiIconPath>UI/CodexEntries/GluttonyEntity</uiIconPath>
+    <race>
+      <renderTree>Animal</renderTree>
+      <thinkTreeMain>LC_FeralAbnormality</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+    </race>
+    <comps>
+      <li Class="LC_SevenSin.Comp.CompProperties_SevenSinEntity">
+        <qliphothCountMax>3</qliphothCountMax>
+        <studySucessRateBase>0.8</studySucessRateBase>
+        <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>true</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <instinctBonus>0.75</instinctBonus>
+        <insightBonus>0.65</insightBonus>
+        <attachmentBonus>0.60</attachmentBonus>
+        <repressionBonus>0.65</repressionBonus>
+      </li>
+    </comps>
+    <killedLeavingsRanges>
+      <GluttonyDead>1</GluttonyDead>
+    </killedLeavingsRanges>
+    <descriptionHyperlinks>
+      <ThingDef>GluttonyDead</ThingDef>
+    </descriptionHyperlinks>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>1.0</redResistance>
+        <whiteResistance>1.0</whiteResistance>
+        <blackResistance>0.7</blackResistance>
+        <paleResistance>1.5</paleResistance>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Black</damageType>
+        <riskLevel>ZAYIN</riskLevel>
+        <damageMultiplier>1.0</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Lust -->
+  <ThingDef ParentName="BaseSevenSinEntity">
+    <defName>LustEntity</defName>
+    <label>Lust Entity</label>
+    <description>At first glance it resembles a writhing heap of grotesque flesh, until its maw opens—revealing two twisted arms intertwined like a tongue, clutching a glaring eye within. Though silent, its ravenous gaze makes clear it still hungers to devour more living tissue.</description>
+    <uiIconPath>UI/CodexEntries/LustEntity</uiIconPath>
+    <race>
+      <renderTree>Animal</renderTree>
+      <thinkTreeMain>LC_FeralAbnormality</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+    </race>
+    <comps>
+      <li Class="LC_SevenSin.Comp.CompProperties_SevenSinEntity">
+        <qliphothCountMax>3</qliphothCountMax>
+        <studySucessRateBase>0.8</studySucessRateBase>
+        <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>true</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <instinctBonus>0.65</instinctBonus>
+        <insightBonus>0.60</insightBonus>
+        <attachmentBonus>0.75</attachmentBonus>
+        <repressionBonus>0.60</repressionBonus>
+        <passiveHealPerRareTick>0.5</passiveHealPerRareTick>
+      </li>
+    </comps>
+    <killedLeavingsRanges>
+      <LustDead>1</LustDead>
+    </killedLeavingsRanges>
+    <descriptionHyperlinks>
+      <ThingDef>LustDead</ThingDef>
+    </descriptionHyperlinks>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>0.8</redResistance>
+        <whiteResistance>1.1</whiteResistance>
+        <blackResistance>0.9</blackResistance>
+        <paleResistance>1.5</paleResistance>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Red</damageType>
+        <riskLevel>ZAYIN</riskLevel>
+        <damageMultiplier>1.0</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Melancholy -->
+  <ThingDef ParentName="BaseSevenSinEntity">
+    <defName>MelancholyEntity</defName>
+    <label>Melancholy Entity</label>
+    <description>An insect-like entity with a completely translucent body filled with stagnant water. Though organ-like structures float within, no biochemical reactions occur inside it—yet staring too long into its motionless depths threatens to drown the observer in sinking sorrow.</description>
+    <uiIconPath>UI/CodexEntries/MelancholyEntity</uiIconPath>
+    <race>
+      <renderTree>Animal</renderTree>
+      <thinkTreeMain>LC_FeralAbnormality</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+    </race>
+    <comps>
+      <li Class="LC_SevenSin.Comp.CompProperties_SevenSinEntity">
+        <qliphothCountMax>3</qliphothCountMax>
+        <studySucessRateBase>0.8</studySucessRateBase>
+        <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>true</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <instinctBonus>0.60</instinctBonus>
+        <insightBonus>0.75</insightBonus>
+        <attachmentBonus>0.70</attachmentBonus>
+        <repressionBonus>0.55</repressionBonus>
+      </li>
+    </comps>
+    <killedLeavingsRanges>
+      <MelancholyDead>1</MelancholyDead>
+    </killedLeavingsRanges>
+    <descriptionHyperlinks>
+      <ThingDef>MelancholyDead</ThingDef>
+    </descriptionHyperlinks>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>1.2</redResistance>
+        <whiteResistance>0.6</whiteResistance>
+        <blackResistance>0.9</blackResistance>
+        <paleResistance>1.5</paleResistance>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>White</damageType>
+        <riskLevel>ZAYIN</riskLevel>
+        <damageMultiplier>1.0</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Pride -->
+  <ThingDef ParentName="BaseSevenSinEntity">
+    <defName>PrideEntity</defName>
+    <label>Pride Entity</label>
+    <description>The wheel was the spark of human arrogance, turning dreams that did not exist in nature into steel reality. This jagged iron arc never stops rolling, indifferent to whether it crushes blades of grass or human flesh beneath its ceaseless arc.</description>
+    <uiIconPath>UI/CodexEntries/PrideEntity</uiIconPath>
+    <race>
+      <renderTree>Animal</renderTree>
+      <thinkTreeMain>LC_FeralAbnormality</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+    </race>
+    <comps>
+      <li Class="LC_SevenSin.Comp.CompProperties_SevenSinEntity">
+        <qliphothCountMax>3</qliphothCountMax>
+        <studySucessRateBase>0.8</studySucessRateBase>
+        <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>true</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <instinctBonus>0.60</instinctBonus>
+        <insightBonus>0.75</insightBonus>
+        <attachmentBonus>0.55</attachmentBonus>
+        <repressionBonus>0.70</repressionBonus>
+      </li>
+    </comps>
+    <killedLeavingsRanges>
+      <PrideDead>1</PrideDead>
+    </killedLeavingsRanges>
+    <descriptionHyperlinks>
+      <ThingDef>PrideDead</ThingDef>
+    </descriptionHyperlinks>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>0.75</redResistance>
+        <whiteResistance>0.85</whiteResistance>
+        <blackResistance>1.0</blackResistance>
+        <paleResistance>1.5</paleResistance>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Red</damageType>
+        <riskLevel>ZAYIN</riskLevel>
+        <damageMultiplier>1.05</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Sloth -->
+  <ThingDef ParentName="BaseSevenSinEntity">
+    <defName>SlothEntity</defName>
+    <label>Sloth Entity</label>
+    <description>Shaped like a heavy pebble that defies gravity at whim, it levitates idly before swiveling a single central eye toward whatever bothers its slumber—and effortlessly bowling over anything in its path despite its lethargic bulk.</description>
+    <uiIconPath>UI/CodexEntries/SlothEntity</uiIconPath>
+    <statBases>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+    </statBases>
+    <race>
+      <baseHealthScale>1.3</baseHealthScale>
+      <renderTree>Animal</renderTree>
+      <thinkTreeMain>LC_FeralAbnormality</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+    </race>
+    <comps>
+      <li Class="LC_SevenSin.Comp.CompProperties_SevenSinEntity">
+        <qliphothCountMax>3</qliphothCountMax>
+        <studySucessRateBase>0.8</studySucessRateBase>
+        <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>true</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <instinctBonus>0.75</instinctBonus>
+        <insightBonus>0.65</insightBonus>
+        <attachmentBonus>0.70</attachmentBonus>
+        <repressionBonus>0.55</repressionBonus>
+      </li>
+    </comps>
+    <killedLeavingsRanges>
+      <SlothDead>1</SlothDead>
+    </killedLeavingsRanges>
+    <descriptionHyperlinks>
+      <ThingDef>SlothDead</ThingDef>
+    </descriptionHyperlinks>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>0.6</redResistance>
+        <whiteResistance>1.0</whiteResistance>
+        <blackResistance>1.1</blackResistance>
+        <paleResistance>1.5</paleResistance>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Red</damageType>
+        <riskLevel>ZAYIN</riskLevel>
+        <damageMultiplier>0.95</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Wrath -->
+  <ThingDef ParentName="BaseSevenSinEntity">
+    <defName>WrathEntity</defName>
+    <label>Wrath Entity</label>
+    <description>Resembling a dehydrated tentacle pulsing with crimson fluid inside, this volatile entity jabs targets with its proboscis and injects searing red liquid that leaves victims burning with uncontrollable fury.</description>
+    <uiIconPath>UI/CodexEntries/WrathEntity</uiIconPath>
+    <race>
+      <renderTree>Animal</renderTree>
+      <thinkTreeMain>LC_FeralAbnormality</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+    </race>
+    <comps>
+      <li Class="LC_SevenSin.Comp.CompProperties_SevenSinEntity">
+        <qliphothCountMax>3</qliphothCountMax>
+        <studySucessRateBase>0.8</studySucessRateBase>
+        <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>true</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <instinctBonus>0.70</instinctBonus>
+        <insightBonus>0.60</insightBonus>
+        <attachmentBonus>0.55</attachmentBonus>
+        <repressionBonus>0.80</repressionBonus>
+      </li>
+    </comps>
+    <killedLeavingsRanges>
+      <WrathDead>1</WrathDead>
+    </killedLeavingsRanges>
+    <descriptionHyperlinks>
+      <ThingDef>WrathDead</ThingDef>
+    </descriptionHyperlinks>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>0.7</redResistance>
+        <whiteResistance>1.2</whiteResistance>
+        <blackResistance>1.0</blackResistance>
+        <paleResistance>1.5</paleResistance>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Red</damageType>
+        <riskLevel>ZAYIN</riskLevel>
+        <damageMultiplier>1.1</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

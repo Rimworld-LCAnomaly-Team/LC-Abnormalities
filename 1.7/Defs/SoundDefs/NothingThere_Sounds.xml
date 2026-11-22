@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <SoundDef>
+    <defName>NothingThere_WorkLoop</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/NothingThere/WorkLoop</clipPath>
+          </li>
+        </grains>
+        <volumeRange>26</volumeRange>
+        <distRange>25~80</distRange>
+        <sustainRelease>4</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>NothingThere_Form1Voice</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/NothingThere/Form1_Voice</clipPath>
+          </li>
+        </grains>
+        <volumeRange>32</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>NothingThere_Form1Meet</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/NothingThere/Form1_Meet</clipPath>
+          </li>
+        </grains>
+        <volumeRange>35</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>NothingThere_CocoonHeartbeat</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/NothingThere/Cocoon_Heartbeat</clipPath>
+          </li>
+        </grains>
+        <volumeRange>34</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>NothingThere_Transform</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/NothingThere/Transform</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>38</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>NothingThere_Hatch</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/NothingThere/Hatch</clipPath>
+          </li>
+        </grains>
+        <volumeRange>42</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>NothingThere_Attack</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/NothingThere/Attack</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>36</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>NothingThere_BoneSpikeCast</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/NothingThere/BoneSpike_Cast</clipPath>
+          </li>
+        </grains>
+        <volumeRange>34</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>NothingThere_BoneSpikeHit</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/NothingThere/BoneSpike_Hit</clipPath>
+          </li>
+        </grains>
+        <volumeRange>34</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>NothingThere_GoodbyeCast</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/NothingThere/Goodbye_Cast</clipPath>
+          </li>
+        </grains>
+        <volumeRange>40</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>NothingThere_GoodbyeFinish</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/NothingThere/Goodbye_Finish</clipPath>
+          </li>
+        </grains>
+        <volumeRange>42</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>NothingThere_Death</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/NothingThere/Death</clipPath>
+          </li>
+        </grains>
+        <volumeRange>36</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

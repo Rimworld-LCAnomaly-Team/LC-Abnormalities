@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <LC_Portrait_UseFloatMenu>凝视 {0}</LC_Portrait_UseFloatMenu>
+  <LC_Portrait_UseGizmoLabel>绑定替死替身...</LC_Portrait_UseGizmoLabel>
+  <LC_Portrait_UseGizmoDesc>指派一名殖民者凝视 {0}，使其承受的伤害转移给画作随机标记的替死替身。</LC_Portrait_UseGizmoDesc>
+  <LC_Portrait_AlreadyBound>已处于该肖像的庇护中</LC_Portrait_AlreadyBound>
+  <LC_Portrait_NoSubstitute>地图上没有可作为替死替身的目标</LC_Portrait_NoSubstitute>
+  <LC_Portrait_BoundMessage>{0} 凝视了异界肖像，{1} 已被画作标记为替死替身。</LC_Portrait_BoundMessage>
+  <LC_Portrait_RedirectedFloating>伤害转移（{0}）</LC_Portrait_RedirectedFloating>
+  <LC_Portrait_SubstituteReplaced>替死替身 {0} 已死亡！异界肖像被染为鲜红，并立刻将 {1} 标记为新的替身。</LC_Portrait_SubstituteReplaced>
+  <LC_Portrait_BondCollapsed>替死替身 {0} 死亡且找不到替代者！契约破碎并对 {1} 造成了剧烈的侵蚀（黑伤）反噬！</LC_Portrait_BondCollapsed>
+  <LC_Portrait_UnbindLabel>解除画作绑定</LC_Portrait_UnbindLabel>
+  <LC_Portrait_UnbindDesc>强行切断当前与异界肖像的契约连接，受庇护者将承受轻微的精神震荡。</LC_Portrait_UnbindDesc>
+  <LC_Portrait_UnboundMessage>异界肖像与 {0} 的替死契约已解除。</LC_Portrait_UnboundMessage>
+  <LC_Portrait_InspectUnbound>契约状态：未绑定</LC_Portrait_InspectUnbound>
+  <LC_Portrait_InspectBound>受庇护者：{0} → 替死替身：{1}</LC_Portrait_InspectBound>
+  <LC_Portrait_InspectCrimson>画作状态：染血警示</LC_Portrait_InspectCrimson>
+  <LC_Portrait_InspectRedirected>累计转移伤害：{0}</LC_Portrait_InspectRedirected>
+  <LC_Portrait_TipProtected>受异界肖像庇护\n替死替身：{0}</LC_Portrait_TipProtected>
+  <LC_Portrait_TipSubstitute>被异界肖像标记为替身\n正在代为承受伤害对象：{0}</LC_Portrait_TipSubstitute>
+  <LC_Portrait_TipUnlinked>已与异界肖像绑定</LC_Portrait_TipUnlinked>
+</LanguageData>

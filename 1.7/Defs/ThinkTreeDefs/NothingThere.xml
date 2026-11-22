@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThinkTreeDef>
+    <defName>NothingThere</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- Despawned -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Despawned</treeDef>
+        </li>
+
+        <!-- Downed -->
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Downed</treeDef>
+        </li>
+
+        <!-- Form 2 Cocoon stays immobile while hatching -->
+        <li Class="NothingThere.Job.ThinkNode_ConditionalNothingThereForm">
+          <allowForm2>true</allowForm2>
+          <subNodes>
+            <li Class="JobGiver_Idle">
+              <ticks>120</ticks>
+            </li>
+          </subNodes>
+        </li>
+
+        <!-- Hold position cleanly during Bone Spear throw / Goodbye windup & slash -->
+        <li Class="NothingThere.Job.ThinkNode_ConditionalNothingThereSkillLock">
+          <subNodes>
+            <li Class="JobGiver_Idle">
+              <ticks>15</ticks>
+            </li>
+          </subNodes>
+        </li>
+
+        <!-- Form 1 & Form 3 Hunt Enemies -->
+        <li Class="NothingThere.Job.ThinkNode_ConditionalNothingThereForm">
+          <allowForm1>true</allowForm1>
+          <allowForm3>true</allowForm3>
+          <subNodes>
+            <li Class="JobGiver_ReactToCloseMeleeThreat">
+              <maxDistance>3.5</maxDistance>
+            </li>
+            <li Class="NothingThere.Job.JobGiver_NothingThereHunt">
+              <targetAcquireRadius>9999</targetAcquireRadius>
+              <allowTurrets>true</allowTurrets>
+            </li>
+            <li Class="JobGiver_WanderAnywhere">
+              <maxDanger>Deadly</maxDanger>
+              <ticksBetweenWandersRange>60~120</ticksBetweenWandersRange>
+              <expireOnNearbyEnemy>true</expireOnNearbyEnemy>
+              <canBashDoors>true</canBashDoors>
+            </li>
+          </subNodes>
+        </li>
+
+        <li Class="JobGiver_Idle" />
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef>
+    <defName>NothingThereConstant</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Despawned</treeDef>
+        </li>
+        <li Class="ThinkNode_ConditionalCanDoLordJobNow">
+          <subNodes>
+            <li Class="ThinkNode_Subtree">
+              <treeDef>LordDutyConstant</treeDef>
+            </li>
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+</Defs>

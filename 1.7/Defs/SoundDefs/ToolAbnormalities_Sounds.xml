@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <SoundDef>
+    <defName>LC_FleshIdol_Heal</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Building/FleshIdol/FleshIdol_Heal</clipPath>
+          </li>
+        </grains>
+        <volumeRange>18~26</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~70</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_FleshIdol_Explode</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Building/FleshIdol/FleshIdol_Explode</clipPath>
+          </li>
+        </grains>
+        <volumeRange>35~45</volumeRange>
+        <pitchRange>0.94~1.04</pitchRange>
+        <distRange>0~90</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_IronMaiden_Start</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Building/WeCanChangeAnything/Iron_Start</clipPath>
+          </li>
+        </grains>
+        <volumeRange>25~34</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~65</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_IronMaiden_Generate</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Building/WeCanChangeAnything/Iron_Generate</clipPath>
+          </li>
+        </grains>
+        <volumeRange>20~28</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~65</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_IronMaiden_End</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Building/WeCanChangeAnything/Iron_End</clipPath>
+          </li>
+        </grains>
+        <volumeRange>28~38</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~75</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Promise_Doing</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Building/OldBeliefAndPromise/Promise_Doing</clipPath>
+          </li>
+        </grains>
+        <volumeRange>20~28</volumeRange>
+        <pitchRange>0.98~1.02</pitchRange>
+        <distRange>0~65</distRange>
+        <sustainLoop>True</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Promise_Success</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Building/OldBeliefAndPromise/Promise_Success</clipPath>
+          </li>
+        </grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.97~1.03</pitchRange>
+        <distRange>0~70</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Promise_Fail</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Building/OldBeliefAndPromise/Promise_Fail</clipPath>
+          </li>
+        </grains>
+        <volumeRange>28~38</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~70</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

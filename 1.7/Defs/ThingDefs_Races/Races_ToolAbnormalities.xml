@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- O-09-91 Portrait of Another World -->
+  <ThingDef ParentName="LC_ToolEntityBase">
+    <defName>PortraitOfAnotherWorld</defName>
+    <label>Portrait of Another World</label>
+    <description>An ornate, unblinking oil portrait (O-09-91) whose blank canvas reflects the soul of whoever gazes into it. When a colonist binds themselves to the frame, all harm meant for them is redirected to a randomly marked substitute.\n\nIf that substitute dies, the portrait weeps crimson and claims another. Should no living substitute remain when the bond breaks, catastrophic erosion backlash strikes the survivor.</description>
+    <uiIconPath>UI/CodexEntries/PortraitOfAnotherWorld_MenuIcon</uiIconPath>
+    <descriptionHyperlinks>
+      <HediffDef>LC_PortraitProtected</HediffDef>
+      <HediffDef>LC_PortraitSubstitute</HediffDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="PortraitOfAnotherWorld.Comp.CompProperties_PortraitOfAnotherWorld">
+        <toolMode>SingleUse</toolMode>
+        <studyMetric>UseCount</studyMetric>
+        <useDurationTicks>120</useDurationTicks>
+        <useLabelKey>LC_Portrait_UseFloatMenu</useLabelKey>
+        <useGizmoLabelKey>LC_Portrait_UseGizmoLabel</useGizmoLabelKey>
+        <useGizmoDescKey>LC_Portrait_UseGizmoDesc</useGizmoDescKey>
+        <useIconPath>UI/CodexEntries/PortraitOfAnotherWorld_MenuIcon</useIconPath>
+        <eggDef>PortraitOfAnotherWorldEgg</eggDef>
+        <expStatusType>Prudence</expStatusType>
+        <expGainOnUse>0.25</expGainOnUse>
+        <defaultTransferMultiplier>1.15</defaultTransferMultiplier>
+        <switchShockDamage>10</switchShockDamage>
+        <unbindShockDamage>12</unbindShockDamage>
+        <substituteDeathWhiteShock>20</substituteDeathWhiteShock>
+        <bondCollapseBlackDamage>35</bondCollapseBlackDamage>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>1</threshold>
+            <label>Observation Level: I</label>
+            <text>When a colonist gazes into Portrait of Another World, their silhouette anchors inside the canvas and another humanlike nearby is marked as a living substitute.\nAll incoming harm meant for the protected subject is diverted to the substitute instead.</text>
+          </li>
+          <li>
+            <threshold>3</threshold>
+            <label>Observation Level: II</label>
+            <text>Damage transferred through the painting is slightly amplified before striking the substitute.\nShould another colonist claim the portrait while it is already bound, the previous subject suffers acute mental agony.</text>
+          </li>
+          <li>
+            <threshold>5</threshold>
+            <label>Observation Level: III</label>
+            <text>When the marked substitute dies, the portrait stains crimson and immediately searches the facility for a new victim.\nIf no substitute can be found, the pact collapses in violent Black backlash against the protected survivor.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- T-09-79 Flesh Idol -->
+  <ThingDef ParentName="LC_ToolEntityBase">
+    <defName>FleshIdol</defName>
+    <label>Flesh Idol</label>
+    <description>A monstrous prayer cross (T-09-79) crusted with fused flesh, gears, and metal scraps. Whoever clasps it in fervent prayer can draw forth a miracle—or summon ruin.\n\nPraying continuously between 20 and 80 seconds periodically restores the health and sanity of the entire colony. Interrupting prayer before 20 seconds invites vicious retribution, while lingering past 90 seconds triggers a catastrophic explosion.</description>
+    <uiIconPath>UI/CodexEntries/FleshIdol_MenuIcon</uiIconPath>
+    <comps>
+      <li Class="LCAbnormalities.FleshIdol.CompProperties_FleshIdol">
+        <toolMode>Continuous</toolMode>
+        <studyMetric>UseSeconds</studyMetric>
+        <continuousTickInterval>60</continuousTickInterval>
+        <maxContinuousDurationTicks>5600</maxContinuousDurationTicks>
+        <allowManualStopContinuous>true</allowManualStopContinuous>
+        <useLabelKey>LC_FleshIdol_UseFloatMenu</useLabelKey>
+        <useGizmoLabelKey>LC_FleshIdol_UseGizmoLabel</useGizmoLabelKey>
+        <useGizmoDescKey>LC_FleshIdol_UseGizmoDesc</useGizmoDescKey>
+        <stopGizmoLabelKey>LC_FleshIdol_StopGizmoLabel</stopGizmoLabelKey>
+        <stopGizmoDescKey>LC_FleshIdol_StopGizmoDesc</stopGizmoDescKey>
+        <useIconPath>UI/CodexEntries/FleshIdol_MenuIcon</useIconPath>
+        <eggDef>FleshIdolEgg</eggDef>
+        <expStatusType>Prudence</expStatusType>
+        <expGainPerContinuousSecond>0.04</expGainPerContinuousSecond>
+        <minSafeSeconds>20</minSafeSeconds>
+        <maxSafeSeconds>80</maxSafeSeconds>
+        <explosionSeconds>90</explosionSeconds>
+        <healPulseIntervalSeconds>3</healPulseIntervalSeconds>
+        <healAmountPerPulse>4.5</healAmountPerPulse>
+        <mentalHealPerPulse>0.18</mentalHealPerPulse>
+        <earlyStopBlackDamage>45</earlyStopBlackDamage>
+        <earlyStopWhiteDamage>30</earlyStopWhiteDamage>
+        <explosionMapWhiteDamage>35</explosionMapWhiteDamage>
+        <explosionMapBlackDamage>20</explosionMapBlackDamage>
+        <explosionUserWhiteDamage>120</explosionUserWhiteDamage>
+        <explosionUserBlackDamage>80</explosionUserBlackDamage>
+        <postExplosionCooldownTicks>15000</postExplosionCooldownTicks>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>30</threshold>
+            <label>Observation Level: I</label>
+            <text>Ending prayer before twenty seconds have passed incurs immediate White and Black retribution against the worshiper. Only sustained devotion awakens its restorative grace.</text>
+          </li>
+          <li>
+            <threshold>90</threshold>
+            <label>Observation Level: II</label>
+            <text>Once prayer surpasses twenty seconds, the Flesh Idol radiates a miracle every three seconds, knitting fresh wounds and soothing mental trauma across the entire colony.</text>
+          </li>
+          <li>
+            <threshold>180</threshold>
+            <label>Observation Level: III</label>
+            <text>Warning: Stop praying before eighty seconds have elapsed. At ninety seconds, the idol violently detonates, scathing every human mind across the map before falling dormant.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>WAW</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- T-09-85 We Can Change Anything -->
+  <ThingDef ParentName="LC_ToolEntityBase">
+    <defName>WeCanChangeAnything</defName>
+    <label>We Can Change Anything</label>
+    <description>An unsettling white iron maiden (T-09-85) lined inside with dense steel spikes and smiling in jagged red pixels once shut. Stepping into its chamber converts pain and vitality directly into raw Enkephalin Boxes.\n\nOnce the door slams shut, the subject normally cannot leave on their own. The longer the machine grinds on, the faster it outputs energy—ending in a final burst upon total consumption.</description>
+    <uiIconPath>UI/CodexEntries/WeCanChangeAnything_MenuIcon</uiIconPath>
+    <comps>
+      <li Class="LCAbnormalities.WeCanChangeAnything.CompProperties_WeCanChangeAnything">
+        <toolMode>Continuous</toolMode>
+        <studyMetric>UseSeconds</studyMetric>
+        <continuousTickInterval>60</continuousTickInterval>
+        <maxContinuousDurationTicks>0</maxContinuousDurationTicks>
+        <allowManualStopContinuous>false</allowManualStopContinuous>
+        <enclosesUserInside>true</enclosesUserInside>
+        <useLabelKey>LC_WeCanChangeAnything_UseFloatMenu</useLabelKey>
+        <useGizmoLabelKey>LC_WeCanChangeAnything_UseGizmoLabel</useGizmoLabelKey>
+        <useGizmoDescKey>LC_WeCanChangeAnything_UseGizmoDesc</useGizmoDescKey>
+        <useIconPath>UI/CodexEntries/WeCanChangeAnything_MenuIcon</useIconPath>
+        <eggDef>WeCanChangeAnythingEgg</eggDef>
+        <expStatusType>Fortitude</expStatusType>
+        <expGainPerContinuousSecond>0.03</expGainPerContinuousSecond>
+        <stage1Damage>5</stage1Damage>
+        <stage2Damage>9</stage2Damage>
+        <stage3Damage>14</stage3Damage>
+        <stage2StartSeconds>10</stage2StartSeconds>
+        <stage3StartSeconds>25</stage3StartSeconds>
+        <deathBurstBoxes>10</deathBurstBoxes>
+        <lethalExecuteHealthThreshold>0.2</lethalExecuteHealthThreshold>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>10</threshold>
+            <label>Observation Level: I</label>
+            <text>When a humanlike enters We Can Change Anything, the casing snaps shut around them and begins extracting Enkephalin Boxes in steady pulses.</text>
+          </li>
+          <li>
+            <threshold>30</threshold>
+            <label>Observation Level: II</label>
+            <text>Pain and output escalate through three accelerating stages over time. Unless explicitly permitted by colony rules, the occupant cannot release themselves once locked inside.</text>
+          </li>
+          <li>
+            <threshold>70</threshold>
+            <label>Observation Level: III</label>
+            <text>When the subject finally expires inside the chamber, the iron maiden yields a massive final burst of Enkephalin Boxes as blood seeps through its seams.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>ZAYIN</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- T-09-97 Old Belief and Promise -->
+  <ThingDef ParentName="LC_ToolEntityBase">
+    <defName>OldBeliefAndPromise</defName>
+    <label>Old Belief and Promise</label>
+    <description>Two interlocking puzzle lizards cradling a luminescent crystal sphere (T-09-97), suspended like an oracle's pendulum. Whispering an oath while presenting an equipped weapon can permanently bless its strike (+25%, rising to +40% on a second blessing).\n\nYet faith is fickle: those who test the orb risk sudden betrayal that shatters ordinary weapons cleanly into nothingness—and scars the minds of any E.G.O wielder who dares too much.</description>
+    <uiIconPath>UI/CodexEntries/OldBeliefAndPromise_MenuIcon</uiIconPath>
+    <comps>
+      <li Class="LCAbnormalities.OldBeliefAndPromise.CompProperties_OldBeliefAndPromise">
+        <toolMode>SingleUse</toolMode>
+        <studyMetric>UseCount</studyMetric>
+        <useDurationTicks>150</useDurationTicks>
+        <cooldownTicks>1200</cooldownTicks>
+        <useLabelKey>LC_OldBelief_UseFloatMenu</useLabelKey>
+        <useGizmoLabelKey>LC_OldBelief_UseGizmoLabel</useGizmoLabelKey>
+        <useGizmoDescKey>LC_OldBelief_UseGizmoDesc</useGizmoDescKey>
+        <useIconPath>UI/CodexEntries/OldBeliefAndPromise_MenuIcon</useIconPath>
+        <eggDef>OldBeliefAndPromiseEgg</eggDef>
+        <soundUsing>LC_Promise_Doing</soundUsing>
+        <expStatusType>Prudence</expStatusType>
+        <expGainOnUse>0.25</expGainOnUse>
+        <tier1Multiplier>1.25</tier1Multiplier>
+        <tier2Multiplier>1.40</tier2Multiplier>
+        <tier1BetrayalChance>0.20</tier1BetrayalChance>
+        <tier2BetrayalChance>0.45</tier2BetrayalChance>
+        <betrayalWhiteDamage>22</betrayalWhiteDamage>
+        <protectedEgoBacklashWhite>32</protectedEgoBacklashWhite>
+        <protectedEgoBacklashBlack>18</protectedEgoBacklashBlack>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>1</threshold>
+            <label>Observation Level: I</label>
+            <text>Swearing upon the sphere imbues an employee's equipped primary weapon with a permanent +25% damage blessing across both conventional arms and E.G.O gear.</text>
+          </li>
+          <li>
+            <threshold>3</threshold>
+            <label>Observation Level: II</label>
+            <text>Re-oathing an already blessed weapon can exalt it to +40% damage, yet the sphere's betrayal rate rises sharply from 20% to 45%.</text>
+          </li>
+          <li>
+            <threshold>7</threshold>
+            <label>Observation Level: III</label>
+            <text>When the oracle betrays an oath, non-E.G.O weapons are erased outright. By default, authored E.G.O weapons resist annihilation and instead deliver heavy mental and erosion backlash.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>ZAYIN</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

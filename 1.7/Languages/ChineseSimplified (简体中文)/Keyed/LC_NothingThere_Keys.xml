@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <LC_NothingThere_ImmuneMote>免疫（红伤）</LC_NothingThere_ImmuneMote>
+  <LC_NothingThere_KilledLabel>一无所有已被镇压</LC_NothingThere_KilledLabel>
+  <LC_NothingThere_KilledText>一无所有扭曲的血肉与骸骨终于坍缩，化作一枚跳动着苍蓝眼眸的血肉卵核留在地面。</LC_NothingThere_KilledText>
+  <LC_NothingThere_LifestealText>拟态吸血 +</LC_NothingThere_LifestealText>
+  <LC_NothingThere_Goodbye>再见。</LC_NothingThere_Goodbye>
+  <LC_NothingThere_TargetMustBeAlive>目标必须处于存活状态。</LC_NothingThere_TargetMustBeAlive>
+  <LC_NothingThere_CannotTargetAlly>不能将己方单位设为「再见。」的目标。</LC_NothingThere_CannotTargetAlly>
+  <LC_NothingThere_LowStatWarning>警告：{0} 的勇气或正义等级低于 IV 级——极度危险，可能遭到一无所有剥皮并立即引发突破收容！</LC_NothingThere_LowStatWarning>
+
+  <LC_NothingThere_Voice_Hello>你好？</LC_NothingThere_Voice_Hello>
+  <LC_NothingThere_Voice_ILoveYou>我爱你。</LC_NothingThere_Voice_ILoveYou>
+  <LC_NothingThere_Voice_Help>救命！</LC_NothingThere_Voice_Help>
+  <LC_NothingThere_Voice_Manager>主管……</LC_NothingThere_Voice_Manager>
+  <LC_NothingThere_Morphing>正在蜕变……</LC_NothingThere_Morphing>
+
+  <LC_NothingThere_HatchedLabel>警报：一无所有完全体苏醒</LC_NothingThere_HatchedLabel>
+  <LC_NothingThere_HatchedText>搏动的血肉卵茧彻底裂开，一无所有以完全体姿态矗立于大地！它已完全免疫红伤攻击，请立即集中白、黑、蓝伤火力将其镇压！</LC_NothingThere_HatchedText>
+  <LC_NothingThere_SkinStolenContainedLabel>警告：一无所有在收容内披上员工外皮</LC_NothingThere_SkinStolenContainedLabel>
+  <LC_NothingThere_SkinStolenContainedText>{0} 在收容单元内遭到一无所有剥皮杀害，目前它已披上其外壳并在收容室内反复低语“我爱你。”。\n切勿再派遣勇气低于 IV 级的人员接近，否则将立即触发窃皮突破！</LC_NothingThere_SkinStolenContainedText>
+  <LC_NothingThere_SkinStolenLabel>警报：一无所有剥取了员工外壳</LC_NothingThere_SkinStolenLabel>
+  <LC_NothingThere_SkinStolenText>{0} 在收容单元内遭到一无所有残忍剥皮并穿戴躯壳。一无所有已突破收容！</LC_NothingThere_SkinStolenText>
+
+  <LC_NothingThere_Biosignature>生物特征识别码</LC_NothingThere_Biosignature>
+  <LC_NothingThere_Inspect_Contained>状态：收容态（人畜无害的肉狗伪装）</LC_NothingThere_Inspect_Contained>
+  <LC_NothingThere_Inspect_ContainedDisguised>状态：收容态（穿戴窃取外壳中——谨慎派遣勇气 IV 级以上人员）</LC_NothingThere_Inspect_ContainedDisguised>
+  <LC_NothingThere_Inspect_Form1>状态：第一阶段 —— 窃皮伪装</LC_NothingThere_Inspect_Form1>
+  <LC_NothingThere_Inspect_Form2>状态：第二阶段 —— 搏动肉茧（完全免疫红伤）</LC_NothingThere_Inspect_Form2>
+  <LC_NothingThere_Inspect_Form3>状态：第三阶段 —— 完全体觉醒（完全免疫红伤）</LC_NothingThere_Inspect_Form3>
+  <LC_NothingThere_Inspect_DisguiseVictim>窃取外壳：{0}</LC_NothingThere_Inspect_DisguiseVictim>
+  <LC_NothingThere_Inspect_HatchProgress>卵茧孵化进度：{0}%</LC_NothingThere_Inspect_HatchProgress>
+
+</LanguageData>

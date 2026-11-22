@@ -7,6 +7,10 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
 
+    <!-- Unified Collection Settings -->
+    <Compile Include="Settings\Setting_LCAbnormalities.cs" />
+    <Compile Include="Settings\LCAbnormalitiesMod.cs" />
+
     <!-- OneSin -->
     <Compile Include="OneSin\Comp\CompOneSin.cs" />
     <Compile Include="OneSin\Comp\CompProperties_OneSin.cs" />
@@ -89,6 +93,54 @@
     <Compile Include="BurrowingHeaven\Things\HangingHeadRecord.cs" />
     <Compile Include="BurrowingHeaven\Things\LC_BurrowingHeavenPawn.cs" />
     <Compile Include="BurrowingHeaven\Util\EffectUtil.cs" />
+
+    <!-- PortraitOfAnotherWorld -->
+    <Compile Include="PortraitOfAnotherWorld\Comp\CompPortraitOfAnotherWorld.cs" />
+    <Compile Include="PortraitOfAnotherWorld\Comp\HediffComp_PortraitLink.cs" />
+    <Compile Include="PortraitOfAnotherWorld\Def\HediffDefOf.cs" />
+
+    <!-- SevenSin -->
+    <Compile Include="SevenSin\Comp\CompProperties_SevenSinEntity.cs" />
+    <Compile Include="SevenSin\Comp\CompSevenSinEntity.cs" />
+    <Compile Include="SevenSin\Defs\PawnKindDefOf.cs" />
+    <Compile Include="SevenSin\Things\LC_SevenSinPawn.cs" />
+
+    <!-- FleshIdol -->
+    <Compile Include="FleshIdol\Comp\CompFleshIdol.cs" />
+
+    <!-- WeCanChangeAnything -->
+    <Compile Include="WeCanChangeAnything\Comp\CompWeCanChangeAnything.cs" />
+
+    <!-- OldBeliefAndPromise -->
+    <Compile Include="OldBeliefAndPromise\Comp\CompOldBeliefAndPromise.cs" />
+
+    <!-- NothingThere -->
+    <Compile Include="NothingThere\Combat\DamageWorker_MimicryLifesteal.cs" />
+    <Compile Include="NothingThere\Combat\Projectile_NothingThereBoneSpike.cs" />
+    <Compile Include="NothingThere\Comp\CompAbilityEffect_MimicryGoodbye.cs" />
+    <Compile Include="NothingThere\Comp\CompMimicrySuit.cs" />
+    <Compile Include="NothingThere\Comp\CompNothingThere.cs" />
+    <Compile Include="NothingThere\Comp\CompProperties_AbilityMimicryGoodbye.cs" />
+    <Compile Include="NothingThere\Comp\CompProperties_MimicrySuit.cs" />
+    <Compile Include="NothingThere\Comp\CompProperties_NothingThere.cs" />
+    <Compile Include="NothingThere\Comp\CompProperties_Studiable_NothingThere.cs" />
+    <Compile Include="NothingThere\Comp\CompStudiable_NothingThere.cs" />
+    <Compile Include="NothingThere\Comp\HediffComp_MimicrySuitRegen.cs" />
+    <Compile Include="NothingThere\Def\AbilityDefOf.cs" />
+    <Compile Include="NothingThere\Def\AnimationDefOf.cs" />
+    <Compile Include="NothingThere\Def\DamageDefOf.cs" />
+    <Compile Include="NothingThere\Def\HediffDefOf.cs" />
+    <Compile Include="NothingThere\Def\PawnKindDefOf.cs" />
+    <Compile Include="NothingThere\Def\SoundDefOf.cs" />
+    <Compile Include="NothingThere\Def\ThingDefOf.cs" />
+    <Compile Include="NothingThere\Effect\DyingNothingThere.cs" />
+    <Compile Include="NothingThere\Job\JobGiver_NothingThereHunt.cs" />
+    <Compile Include="NothingThere\Job\ThinkNode_ConditionalNothingThereForm.cs" />
+    <Compile Include="NothingThere\Job\ThinkNode_ConditionalNothingThereSkillLock.cs" />
+    <Compile Include="NothingThere\Render\PawnRenderNode_NothingTherePart.cs" />
+    <Compile Include="NothingThere\Things\LC_NothingTherePawn.cs" />
+    <Compile Include="NothingThere\Things\NothingThereForm.cs" />
+    <Compile Include="NothingThere\Util\EffectUtil.cs" />
 
     <ProjectReference Include="..\..\..\..\LC Anomaly Core\Source\1.7\LCAnomalyCore\LCAnomalyCore.csproj"><Private>false</Private></ProjectReference>
   </ItemGroup>

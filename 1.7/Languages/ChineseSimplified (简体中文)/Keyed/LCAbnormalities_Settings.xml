@@ -3,4 +3,43 @@
 
   <Setting_LCAbnormalities_Label>LC 异想体合集</Setting_LCAbnormalities_Label>
 
+  <LCAbn_Settings_ExtractionHeader>异想体抽取池开关</LCAbn_Settings_ExtractionHeader>
+  <LCAbn_Settings_ExtractionNote>关闭某项后，不会移除存档中已存在的个体，仅阻止后续通过提取或 Cogito 注射获取该异想体。</LCAbn_Settings_ExtractionNote>
+  <LCAbn_Settings_EnableOneSin>启用 一罪与百善（ZAYIN）</LCAbn_Settings_EnableOneSin>
+  <LCAbn_Settings_EnableSevenSin>启用 罪种实体 / 七宗罪（ZAYIN）</LCAbn_Settings_EnableSevenSin>
+  <LCAbn_Settings_EnableWeCanChangeAnything>启用 我们可以改变一切（ZAYIN 工具型）</LCAbn_Settings_EnableWeCanChangeAnything>
+  <LCAbn_Settings_EnableOldBelief>启用 古老的信念与承诺（ZAYIN 工具型）</LCAbn_Settings_EnableOldBelief>
+  <LCAbn_Settings_EnableMeatLantern>启用 肉食提灯（TETH）</LCAbn_Settings_EnableMeatLantern>
+  <LCAbn_Settings_EnableLaetitia>启用 蕾蒂希娅（HE）</LCAbn_Settings_EnableLaetitia>
+  <LCAbn_Settings_EnablePortrait>启用 异界肖像（HE 工具型）</LCAbn_Settings_EnablePortrait>
+  <LCAbn_Settings_EnableBurrowingHeaven>启用 穿刺乐园（WAW）</LCAbn_Settings_EnableBurrowingHeaven>
+  <LCAbn_Settings_EnableFleshIdol>启用 血肉偶像（WAW 工具型）</LCAbn_Settings_EnableFleshIdol>
+  <LCAbn_Settings_EnableNothingThere>启用 一无所有（ALEPH）</LCAbn_Settings_EnableNothingThere>
+
+  <LCAbn_Settings_PortraitHeader>异界肖像专属调节</LCAbn_Settings_PortraitHeader>
+  <LCAbn_Settings_PortraitAllowNonColonist>允许囚犯与友方访客成为替死替身</LCAbn_Settings_PortraitAllowNonColonist>
+  <LCAbn_Settings_PortraitAllowNonColonistDesc>开启后，地图上的囚犯与非敌对人类访客也可被画作随机标记为替死替身，而不再局限于本派系殖民者与奴隶。</LCAbn_Settings_PortraitAllowNonColonistDesc>
+  <LCAbn_Settings_PortraitTransferMult>转移伤害放大倍率：x{0}</LCAbn_Settings_PortraitTransferMult>
+  <LCAbn_Settings_PortraitTransferMultDesc>调整异界肖像将伤害转嫁给替死替身时施加的伤害缩放比例。</LCAbn_Settings_PortraitTransferMultDesc>
+
+  <LCAbn_Settings_ToolAbnormalitiesHeader>工具型异想体专属调节</LCAbn_Settings_ToolAbnormalitiesHeader>
+  <LCAbn_Settings_IronMaidenAllowCancel>允许中途退出“我们可以改变一切”</LCAbn_Settings_IronMaidenAllowCancel>
+  <LCAbn_Settings_IronMaidenAllowCancelDesc>开启后，殖民者进入“我们可以改变一切”铁处女腔室后可由玩家手动叫停离开，而不必被锁死直到榨干死亡。</LCAbn_Settings_IronMaidenAllowCancelDesc>
+  <LCAbn_Settings_OldBeliefDestroyEgo>古老的信念与承诺背叛允许摧毁 E.G.O 武器</LCAbn_Settings_OldBeliefDestroyEgo>
+  <LCAbn_Settings_OldBeliefDestroyEgoDesc>默认仅普通武器会在背叛时彻底销毁，E.G.O 武器则改为清空赐福并重创使用者心智；勾选此项后 E.G.O 武器同样可能被直接湮灭。</LCAbn_Settings_OldBeliefDestroyEgoDesc>
+
+  <LCAbn_Settings_BurrowingHeavenHeader>穿刺乐园专属调节</LCAbn_Settings_BurrowingHeavenHeader>
+  <LCAbn_Settings_BurrowingHeavenTeleport>允许出逃后脱离视线瞬移</LCAbn_Settings_BurrowingHeavenTeleport>
+  <LCAbn_Settings_BurrowingHeavenTeleportDesc>开启后，处于突破收容状态的穿刺乐园在脱离玩家视线爆发穿刺后，会瞬移至其他目标附近。</LCAbn_Settings_BurrowingHeavenTeleportDesc>
+  <LCAbn_Settings_BurrowingHeavenGrace>脱离视线宽限时间倍率：x{0}</LCAbn_Settings_BurrowingHeavenGrace>
+  <LCAbn_Settings_BurrowingHeavenGraceDesc>调整穿刺乐园在失去玩家视线注视后，触发掉计数或穿刺爆发前的宽限与间隔时长。</LCAbn_Settings_BurrowingHeavenGraceDesc>
+
+  <LCAbn_Settings_NothingThereHeader>一无所有（O-06-20）专属调节</LCAbn_Settings_NothingThereHeader>
+  <LCAbn_Settings_NothingThereAllowDisguise>突破收容时允许第一阶段伪装形态</LCAbn_Settings_NothingThereAllowDisguise>
+  <LCAbn_Settings_NothingThereAllowDisguiseDesc>开启后，一无所有突破收容时会先进入第一阶段窃皮伪装形态，随后蜕变为肉茧与完全体；关闭后将直接蜕变为肉茧形态。</LCAbn_Settings_NothingThereAllowDisguiseDesc>
+  <LCAbn_Settings_NothingThereHatchSeconds>二阶段肉茧孵化时间：{0} 秒</LCAbn_Settings_NothingThereHatchSeconds>
+  <LCAbn_Settings_NothingThereHatchSecondsDesc>调整一无所有在第二阶段肉茧形态下保持静止并孵化出第三阶段完全体所需的实时秒数。</LCAbn_Settings_NothingThereHatchSecondsDesc>
+
+  <LCAbn_Settings_ResetDefaults>恢复默认设置</LCAbn_Settings_ResetDefaults>
+
 </LanguageData>

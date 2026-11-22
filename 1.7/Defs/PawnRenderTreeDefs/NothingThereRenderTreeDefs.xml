@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderTreeDef>
+    <defName>NothingThere</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+
+        <!-- Form 0 / Contained & Undisguised Form 1: Dog Rig (Lv1.fbx) -->
+        <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+          <debugLabel>DogRoot</debugLabel>
+          <tagDef>NothingThere_DogRoot</tagDef>
+          <role>FormRoot_Dog</role>
+          <useGraphic>false</useGraphic>
+          <formScale>2.925</formScale>
+          <flipOnWest>true</flipOnWest>
+          <children>
+            <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+              <debugLabel>DogBackLeg</debugLabel>
+              <tagDef>NothingThere_DogBackLeg</tagDef>
+              <role>DogPart</role>
+              <texPath>Things/Pawn/NothingThere/Parts/Dog_BackLeg</texPath>
+              <texPathLeft>Things/Pawn/NothingThere/Parts/Left/Dog_BackLeg</texPathLeft>
+              <baseLayer>8</baseLayer>
+            </li>
+            <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+              <debugLabel>DogSpiderLeg1</debugLabel>
+              <tagDef>NothingThere_DogSpiderLeg1</tagDef>
+              <role>DogPart</role>
+              <texPath>Things/Pawn/NothingThere/Parts/Dog_SpiderLeg1</texPath>
+              <texPathLeft>Things/Pawn/NothingThere/Parts/Left/Dog_SpiderLeg1</texPathLeft>
+              <baseLayer>8.4</baseLayer>
+            </li>
+            <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+              <debugLabel>DogSpiderLeg2</debugLabel>
+              <tagDef>NothingThere_DogSpiderLeg2</tagDef>
+              <role>DogPart</role>
+              <texPath>Things/Pawn/NothingThere/Parts/Dog_SpiderLeg2</texPath>
+              <texPathLeft>Things/Pawn/NothingThere/Parts/Left/Dog_SpiderLeg2</texPathLeft>
+              <baseLayer>8.6</baseLayer>
+            </li>
+            <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+              <debugLabel>DogBody</debugLabel>
+              <tagDef>NothingThere_DogBody</tagDef>
+              <role>DogPart</role>
+              <texPath>Things/Pawn/NothingThere/Parts/Dog_Body</texPath>
+              <texPathLeft>Things/Pawn/NothingThere/Parts/Left/Dog_Body</texPathLeft>
+              <baseLayer>10</baseLayer>
+              <children>
+                <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                  <debugLabel>DogTail</debugLabel>
+                  <tagDef>NothingThere_DogTail</tagDef>
+                  <role>DogPart</role>
+                  <texPath>Things/Pawn/NothingThere/Parts/Dog_Tail</texPath>
+                  <texPathLeft>Things/Pawn/NothingThere/Parts/Left/Dog_Tail</texPathLeft>
+                  <baseLayer>7</baseLayer>
+                </li>
+                <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                  <debugLabel>DogHeadArm</debugLabel>
+                  <tagDef>NothingThere_DogHeadArm</tagDef>
+                  <role>DogPart</role>
+                  <texPath>Things/Pawn/NothingThere/Parts/Dog_HeadArm</texPath>
+                  <texPathLeft>Things/Pawn/NothingThere/Parts/Left/Dog_HeadArm</texPathLeft>
+                  <baseLayer>9</baseLayer>
+                </li>
+                <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                  <debugLabel>DogGuts</debugLabel>
+                  <tagDef>NothingThere_DogGuts</tagDef>
+                  <role>DogPart</role>
+                  <texPath>Things/Pawn/NothingThere/Parts/Dog_Guts</texPath>
+                  <texPathLeft>Things/Pawn/NothingThere/Parts/Left/Dog_Guts</texPathLeft>
+                  <useTransparentShader>true</useTransparentShader>
+                  <baseLayer>10.5</baseLayer>
+                </li>
+                <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                  <debugLabel>DogEyeBig</debugLabel>
+                  <tagDef>NothingThere_DogEyeBig</tagDef>
+                  <role>DogEye</role>
+                  <texPath>Things/Pawn/NothingThere/Parts/Dog_EyeBig</texPath>
+                  <texPathLeft>Things/Pawn/NothingThere/Parts/Left/Dog_EyeBig</texPathLeft>
+                  <eyePivotUV>(0.798, 0.495)</eyePivotUV>
+                  <eyeCenterOffsetUV>(-0.0108, 0.0137)</eyeCenterOffsetUV>
+                  <eyeOrbitRadius>(0.0060, 0.0080)</eyeOrbitRadius>
+                  <eyeRotAmplitude>6</eyeRotAmplitude>
+                  <eyePeriodTicks>103</eyePeriodTicks>
+                  <eyePhaseOffset>0.0</eyePhaseOffset>
+                  <baseLayer>11.5</baseLayer>
+                </li>
+                <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                  <debugLabel>DogEyeSec</debugLabel>
+                  <tagDef>NothingThere_DogEyeSec</tagDef>
+                  <role>DogEye</role>
+                  <texPath>Things/Pawn/NothingThere/Parts/Dog_EyeSec</texPath>
+                  <texPathLeft>Things/Pawn/NothingThere/Parts/Left/Dog_EyeSec</texPathLeft>
+                  <eyePivotUV>(0.498, 0.537)</eyePivotUV>
+                  <eyeCenterOffsetUV>(0.0058, 0.0020)</eyeCenterOffsetUV>
+                  <eyeOrbitRadius>(0.0032, 0.0055)</eyeOrbitRadius>
+                  <eyeRotAmplitude>5</eyeRotAmplitude>
+                  <eyePeriodTicks>89</eyePeriodTicks>
+                  <eyePhaseOffset>1.7</eyePhaseOffset>
+                  <baseLayer>11.5</baseLayer>
+                </li>
+                <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                  <debugLabel>DogEyeThird</debugLabel>
+                  <tagDef>NothingThere_DogEyeThird</tagDef>
+                  <role>DogEye</role>
+                  <texPath>Things/Pawn/NothingThere/Parts/Dog_EyeThird</texPath>
+                  <texPathLeft>Things/Pawn/NothingThere/Parts/Left/Dog_EyeThird</texPathLeft>
+                  <eyePivotUV>(0.747, 0.574)</eyePivotUV>
+                  <eyeCenterOffsetUV>(0.0000, -0.0015)</eyeCenterOffsetUV>
+                  <eyeOrbitRadius>(0.0028, 0.0015)</eyeOrbitRadius>
+                  <eyeRotAmplitude>4</eyeRotAmplitude>
+                  <eyePeriodTicks>127</eyePeriodTicks>
+                  <eyePhaseOffset>3.4</eyePhaseOffset>
+                  <baseLayer>11.5</baseLayer>
+                </li>
+                <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                  <debugLabel>DogEyeFourth</debugLabel>
+                  <tagDef>NothingThere_DogEyeFourth</tagDef>
+                  <role>DogEye</role>
+                  <texPath>Things/Pawn/NothingThere/Parts/Dog_EyeFourth</texPath>
+                  <texPathLeft>Things/Pawn/NothingThere/Parts/Left/Dog_EyeFourth</texPathLeft>
+                  <eyePivotUV>(0.682, 0.595)</eyePivotUV>
+                  <eyeCenterOffsetUV>(0.0010, -0.0010)</eyeCenterOffsetUV>
+                  <eyeOrbitRadius>(0.0010, 0.0010)</eyeOrbitRadius>
+                  <eyeRotAmplitude>2</eyeRotAmplitude>
+                  <eyePeriodTicks>73</eyePeriodTicks>
+                  <eyePhaseOffset>5.1</eyePhaseOffset>
+                  <baseLayer>11.5</baseLayer>
+                </li>
+                <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                  <debugLabel>DogTongue</debugLabel>
+                  <tagDef>NothingThere_DogTongue</tagDef>
+                  <role>DogPart</role>
+                  <texPath>Things/Pawn/NothingThere/Parts/Dog_Tongue</texPath>
+                  <texPathLeft>Things/Pawn/NothingThere/Parts/Left/Dog_Tongue</texPathLeft>
+                  <baseLayer>12</baseLayer>
+                </li>
+              </children>
+            </li>
+            <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+              <debugLabel>DogFrontLeg</debugLabel>
+              <tagDef>NothingThere_DogFrontLeg</tagDef>
+              <role>DogPart</role>
+              <texPath>Things/Pawn/NothingThere/Parts/Dog_FrontLeg</texPath>
+              <texPathLeft>Things/Pawn/NothingThere/Parts/Left/Dog_FrontLeg</texPathLeft>
+              <baseLayer>13</baseLayer>
+            </li>
+          </children>
+        </li>
+
+        <!-- Form 1 Disguised: Stolen Colonist Portrait + Twitching Seam -->
+        <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+          <debugLabel>DisguiseRoot</debugLabel>
+          <tagDef>NothingThere_DisguiseRoot</tagDef>
+          <role>FormRoot_Disguise</role>
+          <useGraphic>false</useGraphic>
+          <formScale>2.175</formScale>
+          <flipOnWest>false</flipOnWest>
+          <children>
+            <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+              <debugLabel>DisguiseBody</debugLabel>
+              <tagDef>NothingThere_DisguiseBody</tagDef>
+              <role>DisguiseBody</role>
+              <texPath>Things/Pawn/NothingThere/NothingThere_Form1</texPath>
+              <baseLayer>10</baseLayer>
+              <flipOnWest>false</flipOnWest>
+            </li>
+            <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+              <debugLabel>DisguiseSeam</debugLabel>
+              <tagDef>NothingThere_DisguiseSeam</tagDef>
+              <role>DisguiseSeam</role>
+              <texPath>Things/Pawn/NothingThere/NothingThere_Form1_Seam</texPath>
+              <useTransparentShader>true</useTransparentShader>
+              <baseLayer>12</baseLayer>
+              <flipOnWest>false</flipOnWest>
+            </li>
+          </children>
+        </li>
+
+        <!-- Form 2: Flesh Cocoon Rig (NothingEgg.fbx) -->
+        <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+          <debugLabel>CocoonRoot</debugLabel>
+          <tagDef>NothingThere_CocoonRoot</tagDef>
+          <role>FormRoot_Cocoon</role>
+          <useGraphic>false</useGraphic>
+          <formScale>3.075</formScale>
+          <flipOnWest>false</flipOnWest>
+          <children>
+            <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+              <debugLabel>CocoonBody</debugLabel>
+              <tagDef>NothingThere_CocoonBody</tagDef>
+              <role>CocoonPart</role>
+              <texPath>Things/Pawn/NothingThere/Parts/Cocoon_Body</texPath>
+              <flipOnWest>false</flipOnWest>
+              <baseLayer>10</baseLayer>
+              <children>
+                <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                  <debugLabel>CocoonEye1</debugLabel>
+                  <tagDef>NothingThere_CocoonEye1</tagDef>
+                  <role>CocoonPart</role>
+                  <texPath>Things/Pawn/NothingThere/Parts/Cocoon_Eye1</texPath>
+                  <flipOnWest>false</flipOnWest>
+                  <baseLayer>12</baseLayer>
+                </li>
+                <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                  <debugLabel>CocoonEye2</debugLabel>
+                  <tagDef>NothingThere_CocoonEye2</tagDef>
+                  <role>CocoonPart</role>
+                  <texPath>Things/Pawn/NothingThere/Parts/Cocoon_Eye2</texPath>
+                  <flipOnWest>false</flipOnWest>
+                  <baseLayer>12</baseLayer>
+                </li>
+                <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                  <debugLabel>CocoonEye3</debugLabel>
+                  <tagDef>NothingThere_CocoonEye3</tagDef>
+                  <role>CocoonPart</role>
+                  <texPath>Things/Pawn/NothingThere/Parts/Cocoon_Eye3</texPath>
+                  <flipOnWest>false</flipOnWest>
+                  <baseLayer>12</baseLayer>
+                </li>
+              </children>
+            </li>
+          </children>
+        </li>
+
+        <!-- Form 3: Awakened True Form Rig (Lv2.fbx) -->
+        <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+          <debugLabel>TrueRoot</debugLabel>
+          <tagDef>NothingThere_TrueRoot</tagDef>
+          <role>FormRoot_True</role>
+          <useGraphic>false</useGraphic>
+          <formScale>4.95</formScale>
+          <flipOnWest>true</flipOnWest>
+          <children>
+            <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+              <debugLabel>TrueBackLeg</debugLabel>
+              <tagDef>NothingThere_TrueBackLeg</tagDef>
+              <role>TruePart</role>
+              <texPath>Things/Pawn/NothingThere/Parts/True_BackLeg</texPath>
+              <texPathLeft>Things/Pawn/NothingThere/Parts/Left/True_BackLeg</texPathLeft>
+              <baseLayer>6</baseLayer>
+            </li>
+            <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+              <debugLabel>TrueFrontLeg</debugLabel>
+              <tagDef>NothingThere_TrueFrontLeg</tagDef>
+              <role>TruePart</role>
+              <texPath>Things/Pawn/NothingThere/Parts/True_FrontLeg</texPath>
+              <texPathLeft>Things/Pawn/NothingThere/Parts/Left/True_FrontLeg</texPathLeft>
+              <baseLayer>8</baseLayer>
+            </li>
+            <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+              <debugLabel>TrueTorso</debugLabel>
+              <tagDef>NothingThere_TrueTorso</tagDef>
+              <role>TruePart</role>
+              <texPath>Things/Pawn/NothingThere/Parts/True_Torso</texPath>
+              <texPathLeft>Things/Pawn/NothingThere/Parts/Left/True_Torso</texPathLeft>
+              <baseLayer>10</baseLayer>
+              <children>
+                <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                  <debugLabel>TrueBackArm</debugLabel>
+                  <tagDef>NothingThere_TrueBackArm</tagDef>
+                  <role>TruePart</role>
+                  <texPath>Things/Pawn/NothingThere/Parts/True_BackArm</texPath>
+                  <texPathLeft>Things/Pawn/NothingThere/Parts/Left/True_BackArm</texPathLeft>
+                  <baseLayer>7</baseLayer>
+                  <children>
+                    <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                      <debugLabel>TrueEyeArm1</debugLabel>
+                      <tagDef>NothingThere_TrueEyeArm1</tagDef>
+                      <role>TrueEye</role>
+                      <texPath>Things/Pawn/NothingThere/Parts/True_EyeArm1</texPath>
+                      <texPathLeft>Things/Pawn/NothingThere/Parts/Left/True_EyeArm1</texPathLeft>
+                      <eyePivotUV>(0.613, 0.560)</eyePivotUV>
+                      <eyeCenterOffsetUV>(0, 0)</eyeCenterOffsetUV>
+                      <eyeOrbitRadius>(0.0007, 0.0006)</eyeOrbitRadius>
+                      <eyeRotAmplitude>0</eyeRotAmplitude>
+                      <eyePeriodTicks>67</eyePeriodTicks>
+                      <eyePhaseOffset>2.8</eyePhaseOffset>
+                      <baseLayer>7.4</baseLayer>
+                    </li>
+                    <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                      <debugLabel>TrueEyeArm2</debugLabel>
+                      <tagDef>NothingThere_TrueEyeArm2</tagDef>
+                      <role>TrueEye</role>
+                      <texPath>Things/Pawn/NothingThere/Parts/True_EyeArm2</texPath>
+                      <texPathLeft>Things/Pawn/NothingThere/Parts/Left/True_EyeArm2</texPathLeft>
+                      <eyePivotUV>(0.616, 0.570)</eyePivotUV>
+                      <eyeCenterOffsetUV>(0, 0)</eyeCenterOffsetUV>
+                      <eyeOrbitRadius>(0.0007, 0.0006)</eyeOrbitRadius>
+                      <eyeRotAmplitude>0</eyeRotAmplitude>
+                      <eyePeriodTicks>79</eyePeriodTicks>
+                      <eyePhaseOffset>4.9</eyePhaseOffset>
+                      <baseLayer>7.6</baseLayer>
+                    </li>
+                  </children>
+                </li>
+                <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                  <debugLabel>TrueEyeChest</debugLabel>
+                  <tagDef>NothingThere_TrueEyeChest</tagDef>
+                  <role>TrueEye</role>
+                  <texPath>Things/Pawn/NothingThere/Parts/True_EyeChest</texPath>
+                  <texPathLeft>Things/Pawn/NothingThere/Parts/Left/True_EyeChest</texPathLeft>
+                  <eyePivotUV>(0.561, 0.653)</eyePivotUV>
+                  <eyeCenterOffsetUV>(-0.0045, 0.0000)</eyeCenterOffsetUV>
+                  <eyeOrbitRadius>(0.0030, 0.0030)</eyeOrbitRadius>
+                  <eyeRotAmplitude>5</eyeRotAmplitude>
+                  <eyePeriodTicks>83</eyePeriodTicks>
+                  <eyePhaseOffset>3.9</eyePhaseOffset>
+                  <baseLayer>10.5</baseLayer>
+                </li>
+                <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                  <debugLabel>TrueEyeShoulder</debugLabel>
+                  <tagDef>NothingThere_TrueEyeShoulder</tagDef>
+                  <role>TrueEye</role>
+                  <texPath>Things/Pawn/NothingThere/Parts/True_EyeShoulder</texPath>
+                  <texPathLeft>Things/Pawn/NothingThere/Parts/Left/True_EyeShoulder</texPathLeft>
+                  <eyePivotUV>(0.424, 0.729)</eyePivotUV>
+                  <eyeCenterOffsetUV>(0.0030, -0.0025)</eyeCenterOffsetUV>
+                  <eyeOrbitRadius>(0.0075, 0.0052)</eyeOrbitRadius>
+                  <eyeRotAmplitude>6</eyeRotAmplitude>
+                  <eyePeriodTicks>131</eyePeriodTicks>
+                  <eyePhaseOffset>1.2</eyePhaseOffset>
+                  <baseLayer>10.5</baseLayer>
+                </li>
+                <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                  <debugLabel>TrueIntestines</debugLabel>
+                  <tagDef>NothingThere_TrueIntestines</tagDef>
+                  <role>TruePart</role>
+                  <texPath>Things/Pawn/NothingThere/Parts/True_Intestines</texPath>
+                  <texPathLeft>Things/Pawn/NothingThere/Parts/Left/True_Intestines</texPathLeft>
+                  <baseLayer>11</baseLayer>
+                </li>
+                <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                  <debugLabel>TrueHead</debugLabel>
+                  <tagDef>NothingThere_TrueHead</tagDef>
+                  <role>TruePart</role>
+                  <texPath>Things/Pawn/NothingThere/Parts/True_Head</texPath>
+                  <texPathLeft>Things/Pawn/NothingThere/Parts/Left/True_Head</texPathLeft>
+                  <baseLayer>12</baseLayer>
+                  <children>
+                    <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                      <debugLabel>TrueHeadHand</debugLabel>
+                      <tagDef>NothingThere_TrueHeadHand</tagDef>
+                      <role>TruePart</role>
+                      <texPath>Things/Pawn/NothingThere/Parts/True_HeadHand</texPath>
+                      <texPathLeft>Things/Pawn/NothingThere/Parts/Left/True_HeadHand</texPathLeft>
+                      <baseLayer>9</baseLayer>
+                    </li>
+                    <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                      <debugLabel>TrueEyeHeadLeft</debugLabel>
+                      <tagDef>NothingThere_TrueEyeHeadLeft</tagDef>
+                      <role>TrueEye</role>
+                      <texPath>Things/Pawn/NothingThere/Parts/True_EyeHeadLeft</texPath>
+                      <texPathLeft>Things/Pawn/NothingThere/Parts/Left/True_EyeHeadLeft</texPathLeft>
+                      <eyePivotUV>(0.619, 0.771)</eyePivotUV>
+                      <eyeCenterOffsetUV>(-0.0028, 0.0005)</eyeCenterOffsetUV>
+                      <eyeOrbitRadius>(0.0008, 0.0012)</eyeOrbitRadius>
+                      <eyeRotAmplitude>1.5</eyeRotAmplitude>
+                      <eyePeriodTicks>97</eyePeriodTicks>
+                      <eyePhaseOffset>0.4</eyePhaseOffset>
+                      <baseLayer>12.5</baseLayer>
+                    </li>
+                    <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                      <debugLabel>TrueEyeHeadRight</debugLabel>
+                      <tagDef>NothingThere_TrueEyeHeadRight</tagDef>
+                      <role>TrueEye</role>
+                      <texPath>Things/Pawn/NothingThere/Parts/True_EyeHeadRight</texPath>
+                      <texPathLeft>Things/Pawn/NothingThere/Parts/Left/True_EyeHeadRight</texPathLeft>
+                      <eyePivotUV>(0.526, 0.781)</eyePivotUV>
+                      <eyeCenterOffsetUV>(0.0045, -0.0030)</eyeCenterOffsetUV>
+                      <eyeOrbitRadius>(0.0022, 0.0032)</eyeOrbitRadius>
+                      <eyeRotAmplitude>4</eyeRotAmplitude>
+                      <eyePeriodTicks>113</eyePeriodTicks>
+                      <eyePhaseOffset>2.1</eyePhaseOffset>
+                      <baseLayer>12.5</baseLayer>
+                    </li>
+                  </children>
+                </li>
+                <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                  <debugLabel>TrueFrontArmUpper</debugLabel>
+                  <tagDef>NothingThere_TrueFrontArmUpper</tagDef>
+                  <role>TruePart</role>
+                  <texPath>Things/Pawn/NothingThere/Parts/True_FrontArmUpper</texPath>
+                  <texPathLeft>Things/Pawn/NothingThere/Parts/Left/True_FrontArmUpper</texPathLeft>
+                  <baseLayer>14</baseLayer>
+                  <children>
+                    <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                      <debugLabel>TrueFrontArmMace</debugLabel>
+                      <tagDef>NothingThere_TrueFrontArmMace</tagDef>
+                      <role>TrueMace</role>
+                      <texPath>Things/Pawn/NothingThere/Parts/True_FrontArmMace</texPath>
+                      <texPathLeft>Things/Pawn/NothingThere/Parts/Left/True_FrontArmMace</texPathLeft>
+                      <baseLayer>15</baseLayer>
+                    </li>
+                    <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
+                      <debugLabel>TrueGoodbyeBlade</debugLabel>
+                      <tagDef>NothingThere_TrueGoodbyeBlade</tagDef>
+                      <role>TrueGoodbyeBlade</role>
+                      <texPath>Things/Pawn/NothingThere/Parts/True_GoodbyeBlade</texPath>
+                      <texPathLeft>Things/Pawn/NothingThere/Parts/Left/True_GoodbyeBlade</texPathLeft>
+                      <useTransparentShader>true</useTransparentShader>
+                      <baseLayer>16</baseLayer>
+                    </li>
+                  </children>
+                </li>
+              </children>
+            </li>
+          </children>
+        </li>
+
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

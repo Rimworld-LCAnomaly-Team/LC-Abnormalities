@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <LC_WeCanChangeAnything_UseFloatMenu>Enter {0}</LC_WeCanChangeAnything_UseFloatMenu>
+  <LC_WeCanChangeAnything_UseGizmoLabel>Enter Chamber...</LC_WeCanChangeAnything_UseGizmoLabel>
+  <LC_WeCanChangeAnything_UseGizmoDesc>Select a colonist to step inside {0} and convert life force into Enkephalin Boxes.</LC_WeCanChangeAnything_UseGizmoDesc>
+  <LC_WeCanChangeAnything_VictimConverted>{0} has been consumed inside We Can Change Anything, yielding {1} final Enkephalin Boxes.</LC_WeCanChangeAnything_VictimConverted>
+  <LC_WeCanChangeAnything_InspectStats>Produced: {0} Enkephalin Boxes (Subjects converted: {1})</LC_WeCanChangeAnything_InspectStats>
+</LanguageData>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PortraitOfAnotherWorld.label>异界肖像</PortraitOfAnotherWorld.label>
+  <PortraitOfAnotherWorld.description>一幅华丽却毫无生气的古旧油画（O-09-91），空白画布会映出凝视者的灵魂。当殖民者与之绑定后，施加在其身上的各类伤害都会被画作转嫁给一名随机标记的替死替身。\n\n替身死亡时，画作会渗出鲜血并立即寻找下一位替代者；若当时没有任何活着的替身可用，契约会崩碎并对幸存者造成沉重的侵蚀反噬。</PortraitOfAnotherWorld.description>
+  <PortraitOfAnotherWorld.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察记录：I</PortraitOfAnotherWorld.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <PortraitOfAnotherWorld.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>当员工凝视异界肖像时，其身影会浮现在画框之中，同时附近另一名人类会被随机标记为替死替身。\n此后受庇护者所受的大部分直接物理与精神打击都将转移至该替身。</PortraitOfAnotherWorld.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <PortraitOfAnotherWorld.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察记录：II</PortraitOfAnotherWorld.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <PortraitOfAnotherWorld.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>通过肖像转嫁给替身的伤害会产生轻微放大。\n若画作在已绑定的状态下被他人改写契约，前一任受庇护者将因灵魂剥离而承受精神冲击。</PortraitOfAnotherWorld.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <PortraitOfAnotherWorld.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察记录：III</PortraitOfAnotherWorld.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <PortraitOfAnotherWorld.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>每当被标记的替身死亡，肖像都会被鲜血浸染并强制更换设施内的下一位替死目标。\n一旦找不到可用替身，肖像契约就会当场崩溃，并对原本受庇护的员工爆发高额黑伤反噬。</PortraitOfAnotherWorld.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+
+  <FleshIdol.label>血肉偶像</FleshIdol.label>
+  <FleshIdol.description>一尊缠绕着血肉、齿轮与金属残骸的诡异十字架（T-09-79）。凡是跪伏其前虔诚祈祷之人，皆可引动奇迹——或召唤灭顶之灾。\n\n持续祈祷 20 秒至 80 秒之间停止，可周期性为全殖民地恢复伤势与精神状态；若未满 20 秒提前终止将遭到猛烈反噬；若祈祷超过 90 秒则会引爆贯穿全图的毁灭性冲击波。</FleshIdol.description>
+  <FleshIdol.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察记录：I</FleshIdol.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <FleshIdol.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>在祈祷未满二十秒时便匆忙起身离开，祈祷者会立刻承受惨重的精神与侵蚀反噬。唯有坚持祈祷二十秒以上方能唤醒神迹。</FleshIdol.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <FleshIdol.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察记录：II</FleshIdol.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <FleshIdol.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>祈祷突破二十秒大关后，血肉偶像每隔三秒便会释放一次全图治疗脉动，同时修复殖民者的伤口并安抚精神崩溃损伤。</FleshIdol.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <FleshIdol.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察记录：III</FleshIdol.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <FleshIdol.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>严正警告：切忌在八十秒之后继续祈祷。一旦突破九十秒阈值，偶像将瞬间引爆，重创全图所有人类单位并进入漫长的沉寂冷却。</FleshIdol.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+
+  <WeCanChangeAnything.label>我们可以改变一切</WeCanChangeAnything.label>
+  <WeCanChangeAnything.description>一座令人不安的纯白铁处女装置（T-09-85），内部布满冷冽钢刺，闭合并紧锁后会浮现鲜红像素笑脸。任何步入其中的生灵，都会把自身痛苦与生机直接压榨为脑啡肽箱。\n\n在默认收容规则下，铁处女一旦合拢便无法由人类主动打开；随着压榨阶段递增，能源产量节节攀升，并在主体陨命一刻喷薄而出。</WeCanChangeAnything.description>
+  <WeCanChangeAnything.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察记录：I</WeCanChangeAnything.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <WeCanChangeAnything.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>当人类受试者步入我们可以改变一切时，双开铁壳便会咔嗒合拢，随脉冲节奏不断向外吐出脑啡肽箱。</WeCanChangeAnything.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <WeCanChangeAnything.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察记录：II</WeCanChangeAnything.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <WeCanChangeAnything.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>装置的痛苦频率与产能会随时间流逝进入三段加速曲线。除非在模组设置中特意放行，否则使用者无法半途停止工作。</WeCanChangeAnything.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <WeCanChangeAnything.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察记录：III</WeCanChangeAnything.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <WeCanChangeAnything.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>当内部乘员终于被彻底压榨至死时，鲜血将浸透铁处女接缝，并一次性涌出大量脑啡肽箱作为最终答卷。</WeCanChangeAnything.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+
+  <OldBeliefAndPromise.label>古老的信念与承诺</OldBeliefAndPromise.label>
+  <OldBeliefAndPromise.description>由三根黑绳悬垂着的异色拼图双蜥与莹润晶球（T-09-97）。手持武器对晶球起誓，有机会为其赋予永久伤害赐福（初阶 +25%，二阶 +40%）。\n\n然而信奉总是伴随猜忌：越贪求恩典，晶球背叛的概率越高——一旦背叛，常规武器将瞬间湮灭，而受保护的 E.G.O 武装则会剥去赐福并反噬持有者心智。</OldBeliefAndPromise.description>
+  <OldBeliefAndPromise.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察记录：I</OldBeliefAndPromise.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <OldBeliefAndPromise.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>向晶球祈愿可将员工手持主武器的基础输出永久提高 25%，该赐福同时兼容原版常规武器、第三方武器与模组 E.G.O 装备。</OldBeliefAndPromise.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <OldBeliefAndPromise.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察记录：II</OldBeliefAndPromise.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <OldBeliefAndPromise.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>已经蒙受赐福的武器可再度祈愿升华为 +40% 伤害上限，但晶球的背叛几率也会从 20% 陡增至 45%。</OldBeliefAndPromise.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <OldBeliefAndPromise.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察记录：III</OldBeliefAndPromise.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <OldBeliefAndPromise.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>当承诺落空导致背叛时，普通武器会当场化为乌有；默认规则下模组原创 E.G.O 武器不会损毁，但会清空赐福并对使用者反噬高额白伤与黑伤。</OldBeliefAndPromise.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+
+</LanguageData>

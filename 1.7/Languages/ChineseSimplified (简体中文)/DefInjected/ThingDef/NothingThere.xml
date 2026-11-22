@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Race & Containment Entity -->
+  <NothingThere.label>一无所有</NothingThere.label>
+  <NothingThere.description>栖息于收容单元中的 ALEPH 级异想体，由无数被吞噬人类残留的血肉、眼珠、牙齿与扭曲骸骨构筑而成。\n它会模仿所有接近者的声音与躯壳；一旦工作出现差错或由能力不足者接触，便会当场剥皮伪装并逐步蜕变为免疫物理红伤的完全体，以一声“再见。”劈开眼前一切。</NothingThere.description>
+  <NothingThere.tools.flesh_blade.label>血肉骨刃</NothingThere.tools.flesh_blade.label>
+
+  <NothingThere.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</NothingThere.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <NothingThere.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>工作成功率遵循原版算法：基础成功率 × 勇气等级 × 0.2。\n洞察与压迫工作产出率恒定为 0%，请优先派遣高勇气员工进行“沟通”或“本能”工作。\n工作速度 +3%</NothingThere.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+
+  <NothingThere.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</NothingThere.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <NothingThere.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>当未伪装状态下、正义等级低于 IV 级的工作人员完成工作时，“一无所有”不会杀害员工，而是直接清零逆卡巴拉计数器并突破收容。\n工作成功率 +3%</NothingThere.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+
+  <NothingThere.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</NothingThere.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <NothingThere.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>若工作结果为“差”或正义 IV 级以上员工在收容单元内阵亡/陷入恐慌，“一无所有”将剥取其外壳并于收容单元内拟态伪装、反复呢喃“我爱你。”；一旦在拟态伪装状态下仍有勇气 III 级以下员工进入，便会当场遭剥皮并立刻突破收容！\n工作速度 +3%</NothingThere.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+
+  <NothingThere.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</NothingThere.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <NothingThere.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>镇压警告：突破收容后，“一无所有”会依次经历高速游走的 30 秒第一阶段、完全免疫红伤的 30 秒第二阶段肉茧，最终破茧觉醒为完全免疫红伤的完全体！完全体拥有肉锤重砸、贯穿直线的高伤爪刺与致命范围处决技“再见。”，并在 10 秒未受击后开启持续再生（血量低于 30% 时速度翻倍）。\n工作成功率 +3%\nALEPH 级 E.G.O 饰品、武器与护甲“拟态”已解锁。</NothingThere.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+  <!-- Egg -->
+  <NothingThereEgg.label>一无所有卵</NothingThereEgg.label>
+  <NothingThereEgg.description>ALEPH 级异想体“一无所有”被镇压后坍缩而成的血肉卵核，三只苍蓝异色眼眸仍在卵壳上微微转动。</NothingThereEgg.description>
+  <NothingThereEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>一无所有已收容</NothingThereEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <NothingThereEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将“一无所有卵”束缚到收容平台后，搏动的血肉重新凝结并蛰伏其中。\n请务必仅指派勇气与正义均达 IV 级以上的精英工作人员前去接触。</NothingThereEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <NothingThereEgg.comps.CompUsable.useLabel>砸碎{0_label}</NothingThereEgg.comps.CompUsable.useLabel>
+  <NothingThereEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了一无所有的血肉卵核，致密的血肉消融后留下了一批 PE-Box。</NothingThereEgg.comps.CompUsable.useMessage>
+  <NothingThereEgg.comps.LC_CompEgg.activateDescString>砸碎一无所有卵以回收脑啡肽能源箱。</NothingThereEgg.comps.LC_CompEgg.activateDescString>
+  <NothingThereEgg.comps.LC_CompEgg.activateLabelString>砸碎...</NothingThereEgg.comps.LC_CompEgg.activateLabelString>
+  <NothingThereEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎一无所有卵</NothingThereEgg.comps.LC_CompEgg.activatingStringPending>
+  <NothingThereEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</NothingThereEgg.comps.LC_CompEgg.guiLabelString>
+
+  <!-- Projectile -->
+  <NothingThere_BoneSpikeProj.label>血肉骨刺</NothingThere_BoneSpikeProj.label>
+
+  <!-- E.G.O Equipment -->
+  <EgoWeapon_NothingThere.label>E.G.O. 武器（拟态）</EgoWeapon_NothingThere.label>
+  <EgoWeapon_NothingThere.description>以“一无所有”蠕动的血肉、锯齿骸骨与监视眼眸铸就的 ALEPH 级大剑。\n每次挥砍都会掠夺血肉生物的生命力来愈合持握者的创伤，主动技能更能重现“一无所有”致命的「再见。」重劈。\n“它看起来就像许多早已死去的员工——却依然渴望向你靠近。”</EgoWeapon_NothingThere.description>
+  <EgoWeapon_NothingThere.tools.flesh_edge.label>血肉重刃</EgoWeapon_NothingThere.tools.flesh_edge.label>
+  <EgoWeapon_NothingThere.tools.serrated_cleaver.label>锯齿斩肉斧</EgoWeapon_NothingThere.tools.serrated_cleaver.label>
+
+  <Apparel_NothingThereSuit.label>E.G.O. 护甲（拟态）</Apparel_NothingThereSuit.label>
+  <Apparel_NothingThereSuit.description>将鲜红搏动的血肉披覆于领结衬衣之外、胸口嵌有一只眨动绿眸的 ALEPH 级防具。\n它在提供极高物理护甲与 0.2 红伤极强抗性的同时，还能源源不断地催化穿戴者自身的细胞再生。</Apparel_NothingThereSuit.description>
+
+  <Accessory_NothingThere.label>E.G.O. 饰品（拟态）</Accessory_NothingThere.label>
+  <Accessory_NothingThere.description>嵌在右颊上的三只苍蓝异色眼眸，即使在战斗间隙仍会各自异步眨动，仿佛随时准备换上一副崭新的人皮外壳。</Accessory_NothingThere.description>
+
+</LanguageData>

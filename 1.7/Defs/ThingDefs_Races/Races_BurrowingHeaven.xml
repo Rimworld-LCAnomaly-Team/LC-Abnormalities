@@ -60,6 +60,8 @@
       <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
         <lookForTargetOnEscape>false</lookForTargetOnEscape>
         <hasAnimation>true</hasAnimation>
+        <heldDrawScale>0.54</heldDrawScale>
+        <heldDrawOffset>(0, 0, -0.35)</heldDrawOffset>
       </li>
       <li Class="BurrowingHeaven.Comp.CompProperties_Studiable_BurrowingHeaven">
         <frequencyTicks>60000</frequencyTicks>

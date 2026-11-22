@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <LC_FleshIdol_UseFloatMenu>Pray to {0}</LC_FleshIdol_UseFloatMenu>
+  <LC_FleshIdol_UseGizmoLabel>Begin Prayer...</LC_FleshIdol_UseGizmoLabel>
+  <LC_FleshIdol_UseGizmoDesc>Select a colonist to kneel in continuous prayer before {0}. Stop prayer between 20s and 80s to heal the colony safely.</LC_FleshIdol_UseGizmoDesc>
+  <LC_FleshIdol_StopGizmoLabel>Cease Prayer</LC_FleshIdol_StopGizmoLabel>
+  <LC_FleshIdol_StopGizmoDesc>Order {0} to cease praying to Flesh Idol. Warning: Stopping before 20s invites retribution!</LC_FleshIdol_StopGizmoDesc>
+
+  <LC_FleshIdol_MiracleStarted>{0}'s flesh begins to pulse warmly—the healing miracle has awakened! (Remember to stop before 80s.)</LC_FleshIdol_MiracleStarted>
+  <LC_FleshIdol_MiracleEnded>{0}'s prayer concludes safely within the grace window.</LC_FleshIdol_MiracleEnded>
+  <LC_FleshIdol_OverloadWarning>Warning: {0} is trembling violently! End the prayer immediately before 90s!</LC_FleshIdol_OverloadWarning>
+  <LC_FleshIdol_EarlyStopPunish>{0} abandoned prayer to Flesh Idol too soon and suffered vicious spiritual backlash!</LC_FleshIdol_EarlyStopPunish>
+  <LC_FleshIdol_ExplosionLetterLabel>Flesh Idol Detonation</LC_FleshIdol_ExplosionLetterLabel>
+  <LC_FleshIdol_ExplosionLetterDesc>Over-devotion past ninety seconds caused {0} to erupt in a catastrophic psychic and erosive shockwave across the map!</LC_FleshIdol_ExplosionLetterDesc>
+
+  <LC_FleshIdol_InspectCooldown>Dormant after detonation: {0}</LC_FleshIdol_InspectCooldown>
+  <LC_FleshIdol_PhaseWarmup>Prayer warming up: {0}s / {1}s minimum</LC_FleshIdol_PhaseWarmup>
+  <LC_FleshIdol_PhaseMiracle>Miracle active: {0}s (cease before {1}s!)</LC_FleshIdol_PhaseMiracle>
+  <LC_FleshIdol_PhaseOverload>CRITICAL OVERLOAD: {0}s / {1}s detonation!</LC_FleshIdol_PhaseOverload>
+  <LC_FleshIdol_PhaseIdle>Miracle heal pulses triggered: {0}</LC_FleshIdol_PhaseIdle>
+</LanguageData>

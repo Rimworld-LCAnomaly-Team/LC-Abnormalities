@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>FleshIdol</defName>
+    <label>Flesh Idol</label>
+    <description>Flesh Idol (T-09-79) is a grotesque cross encrusted with pulsating tissue and clockwork fragments.\nThose who endure twenty seconds of earnest prayer draw forth a colony-wide healing miracle, yet premature abandonment brings swift agony and over-devotion ends in a facility-wide detonation.</description>
+    <uiIconPath>UI/CodexEntries/FleshIdol</uiIconPath>
+    <category>WAW</category>
+    <orderInCategory>850</orderInCategory>
+    <linkedThings>
+      <li>FleshIdol</li>
+      <li>FleshIdolEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

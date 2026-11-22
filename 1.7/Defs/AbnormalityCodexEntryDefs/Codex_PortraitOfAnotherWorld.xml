@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>PortraitOfAnotherWorld</defName>
+    <label>Portrait of Another World</label>
+    <description>Portrait of Another World (O-09-91) is an antique framed canvas that captures the likeness of whoever steps before it and binds another unlucky soul in their stead.\nWhile protected by the portrait, wounds and psychic trauma are carried away to the marked substitute until either the bond is severed or the canvas turns red with tragedy.</description>
+    <uiIconPath>UI/CodexEntries/PortraitOfAnotherWorld</uiIconPath>
+    <category>HE</category>
+    <orderInCategory>850</orderInCategory>
+    <linkedThings>
+      <li>PortraitOfAnotherWorld</li>
+      <li>PortraitOfAnotherWorldEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="Apparel_NothingThereSuit" ParentName="LC_Apparel_EGO">
+    <defName>Apparel_NothingThereSuit</defName>
+    <label>E.G.O. Suit (Mimicry)</label>
+    <description>An ALEPH-grade coat of pulsating crimson flesh draped over a twisted white collar and tie, blinking silently through a jagged eye on its chest.\nWhile shielding the wearer from brutal physical trauma, the suit's living tissue continuously regenerates the wearer's wounds.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/NothingThereSuit/NothingThereSuit</texPath>
+    </graphicData>
+    <statBases>
+      <ArmorRating_Sharp>1.35</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.90</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.85</ArmorRating_Heat>
+      <Insulation_Cold>28</Insulation_Cold>
+      <Insulation_Heat>28</Insulation_Heat>
+      <Mass>6</Mass>
+      <EquipDelay>10</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MeleeDamageFactor>0.12</MeleeDamageFactor>
+      <IncomingDamageFactor>-0.08</IncomingDamageFactor>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Legs</li>
+        <li>Arms</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Feet</li>
+        <li>Hands</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/NothingThereSuit/NothingThereSuit</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <useDeflectMetalEffect>false</useDeflectMetalEffect>
+      <soundWear>Wear_PowerArmor</soundWear>
+      <soundRemove>Remove_PowerArmor</soundRemove>
+    </apparel>
+    <comps>
+      <li Class="NothingThere.Comp.CompProperties_MimicrySuit" />
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorApparelExtension">
+        <riskLevel>ALEPH</riskLevel>
+        <redResistance>0.2</redResistance>
+        <whiteResistance>0.5</whiteResistance>
+        <blackResistance>0.5</blackResistance>
+        <paleResistance>1.0</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

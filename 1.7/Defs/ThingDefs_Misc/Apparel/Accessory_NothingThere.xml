@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="Accessory_NothingThere" ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_NothingThere</defName>
+    <label>Accessory (Mimicry)</label>
+    <description>A cluster of pale alien eyes embedded into the wearer's right cheek, blinking asynchronously.\nThey seem to gaze outward for threats—or search for another human shell to wear.</description>
+    <thingCategories>
+      <li>LC_Apparel_Accessory_EGO</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/NothingThereAccessory</texPath>
+    </graphicData>
+    <statBases>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <apparel>
+      <layers>
+        <li>LC_AccessoryCheek</li>
+      </layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/NothingThereAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <IncomingDamageFactor>-0.08</IncomingDamageFactor>
+      <InjuryHealingFactor>0.10</InjuryHealingFactor>
+      <MentalBreakThreshold>-0.05</MentalBreakThreshold>
+    </equippedStatOffsets>
+    <tradeTags>
+      <li>LC_Apparel_Accessory</li>
+    </tradeTags>
+  </ThingDef>
+
+</Defs>

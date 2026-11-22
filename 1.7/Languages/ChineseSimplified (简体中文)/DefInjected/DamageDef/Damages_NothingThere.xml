@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <LC_NothingThere_RedSlash.label>拟态斩击</LC_NothingThere_RedSlash.label>
+  <LC_NothingThere_RedSlash.deathMessage>{0}被一无所有一刀两断。</LC_NothingThere_RedSlash.deathMessage>
+
+  <LC_NothingThere_BoneSpike.label>骨刺贯穿</LC_NothingThere_BoneSpike.label>
+  <LC_NothingThere_BoneSpike.deathMessage>{0}被一无所有射出的骨刺贯通要害。</LC_NothingThere_BoneSpike.deathMessage>
+
+  <LC_Mimicry_RedLifesteal.label>拟态撕裂</LC_Mimicry_RedLifesteal.label>
+  <LC_Mimicry_RedLifesteal.deathMessage>{0}被“拟态”劈砍撕裂。</LC_Mimicry_RedLifesteal.deathMessage>
+
+</LanguageData>

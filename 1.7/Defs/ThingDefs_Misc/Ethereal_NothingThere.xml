@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
+    <defName>DyingNothingThere</defName>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>ALEPH</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <thingClass>NothingThere.Effect.DyingNothingThere</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>NothingThere_BoneSpikeProj</defName>
+    <label>flesh bone spike</label>
+    <thingClass>NothingThere.Combat.Projectile_NothingThereBoneSpike</thingClass>
+    <graphicData>
+      <texPath>Things/Pawn/NothingThere/NothingThere_BoneSpike</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.75, 2.25)</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>LC_NothingThere_BoneSpike</damageDef>
+      <damageAmountBase>52</damageAmountBase>
+      <armorPenetrationBase>0.65</armorPenetrationBase>
+      <speed>62</speed>
+      <arcHeightFactor>0</arcHeightFactor>
+      <soundImpact>NothingThere_BoneSpikeHit</soundImpact>
+    </projectile>
+  </ThingDef>
+
+</Defs>

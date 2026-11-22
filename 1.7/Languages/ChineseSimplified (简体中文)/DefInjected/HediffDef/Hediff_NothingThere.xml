@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <LC_NothingThere_Form1Buff.label>拟态高速追猎</LC_NothingThere_Form1Buff.label>
+  <LC_NothingThere_Form1Buff.description>一无所有处于第一阶段出逃状态，正以倍增的移动速度高速追猎目标。</LC_NothingThere_Form1Buff.description>
+
+  <LC_NothingThere_TrueFormBuff.label>完全体觉醒</LC_NothingThere_TrueFormBuff.label>
+  <LC_NothingThere_TrueFormBuff.description>一无所有破茧而出觉醒为完全体，移动速度与命中率大幅提升，并且完全免疫物理与红伤。</LC_NothingThere_TrueFormBuff.description>
+
+  <LC_MimicrySuitRegen.label>拟态再生</LC_MimicrySuitRegen.label>
+  <LC_MimicrySuitRegen.description>穿戴的 E.G.O 护甲“拟态”正在以活跃的血肉组织持续愈合穿戴者的外伤。</LC_MimicrySuitRegen.description>
+
+</LanguageData>

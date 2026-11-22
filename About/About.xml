@@ -10,9 +10,14 @@
 
 Included abnormalities:
 - One Sin and Hundreds of Good Deeds (ZAYIN)
+- Peccatulum / SevenSin Entities (ZAYIN)
+- We Can Change Anything (ZAYIN Tool)
+- Old Belief and Promise (ZAYIN Tool)
 - Meat Lantern (TETH)
 - Laetitia (HE)
-- The Burrowing Heaven (WAW)</description>
+- Portrait of Another World (HE Tool)
+- The Burrowing Heaven (WAW)
+- Flesh Idol (WAW Tool)</description>
   <url>https://github.com/Rimworld-LCAnomaly-Team/LC-Abnormalities</url>
   <modDependencies>
     <li>
@@ -29,5 +34,7 @@ Included abnormalities:
     <li>DarthCY.LC.Laetitia</li>
     <li>DarthCY.LC.MeatLantern</li>
     <li>DarthCY.LC.BurrowingHeaven</li>
+    <li>DarthCY.LC.PortraitOfAnotherWorld</li>
+    <li>DarthCY.LC.SevenSinEntity</li>
   </incompatibleWith>
 </ModMetaData>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_NothingThere_RedSlash</defName>
+    <label>Mimicry cleave</label>
+    <deathMessage>{0} was bisected by Nothing There.</deathMessage>
+    <hediff>Cut</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Red</damageType>
+        <riskLevel>ALEPH</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_NothingThere_BoneSpike</defName>
+    <label>bone spike</label>
+    <deathMessage>{0} was skewered by Nothing There's bone spike.</deathMessage>
+    <hediff>Stab</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Red</damageType>
+        <riskLevel>ALEPH</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Mimicry_RedLifesteal</defName>
+    <label>Mimicry rend</label>
+    <workerClass>NothingThere.Combat.DamageWorker_MimicryLifesteal</workerClass>
+    <deathMessage>{0} was torn apart by Mimicry.</deathMessage>
+    <hediff>Cut</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Red</damageType>
+        <riskLevel>ALEPH</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>LC_MimicryCleave</defName>
+    <label>cleave</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef>
+    <defName>LC_MimicryCleave</defName>
+    <requiredCapacity>LC_MimicryCleave</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>LC_Mimicry_RedLifesteal</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Slash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+</Defs>

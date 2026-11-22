@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <LC_PortraitProtected.label>异界肖像庇护</LC_PortraitProtected.label>
+  <LC_PortraitProtected.description>正受到异界肖像的保护，即将承受的伤害会被截获并转移至画作标记的替死替身。</LC_PortraitProtected.description>
+
+  <LC_PortraitSubstitute.label>异界肖像替身</LC_PortraitSubstitute.label>
+  <LC_PortraitSubstitute.description>已被异界肖像标记为替死替身，将代替受庇护者承受全部转移伤害；死亡后会令画作染红。</LC_PortraitSubstitute.description>
+
+</LanguageData>

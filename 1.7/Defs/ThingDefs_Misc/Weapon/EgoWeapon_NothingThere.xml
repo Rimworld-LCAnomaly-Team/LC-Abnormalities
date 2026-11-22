@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_BaseMeleeWeapon_EGO">
+    <defName>EgoWeapon_NothingThere</defName>
+    <label>E.G.O. Weapon (Mimicry)</label>
+    <description>A terrifying greatsword forged from the mangled flesh, serrated bone, and watching eyes of Nothing There.\nEvery slash drinks the spilled blood of living foes to mend its wielder's own wounds, and its heavy cleave can echo Nothing There's infamous "Goodbye."\n"It looks just like many fallen employees—and still yearns to be closer to you."</description>
+    <descriptionHyperlinks>
+      <AbilityDef>Mimicry_Goodbye</AbilityDef>
+    </descriptionHyperlinks>
+    <thingClass>ThingWithComps</thingClass>
+    <weaponClasses>
+      <li>MeleePiercer</li>
+    </weaponClasses>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/EgoWeapon_NothingThere</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.4, 2.4)</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>3.5</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>flesh edge</label>
+        <capacities>
+          <li>LC_MimicryCleave</li>
+        </capacities>
+        <power>28</power>
+        <armorPenetration>0.55</armorPenetration>
+        <cooldownTime>1.17</cooldownTime>
+      </li>
+      <li>
+        <label>serrated cleaver</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>LC_MimicryCleave</li>
+        </capacities>
+        <power>36</power>
+        <armorPenetration>0.65</armorPenetration>
+        <cooldownTime>1.55</cooldownTime>
+      </li>
+    </tools>
+    <!-- 覆盖 BaseWeapon 的 CompEquippable，避免与 CompEquippableAbility 重复注册近战 Verb LoadID -->
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_EquippableAbility">
+        <abilityDef>Mimicry_Goodbye</abilityDef>
+      </li>
+      <li Class="CompProperties_Styleable"/>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Red</damageType>
+        <riskLevel>ALEPH</riskLevel>
+        <damageMultiplier>1</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

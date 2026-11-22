@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Legacy compatibility tags -->
+  <PawnRenderNodeTagDef><defName>NothingThere_Body</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_Seam</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_Blade</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_DogBackLimbs</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_DogGutsTail</defName></PawnRenderNodeTagDef>
+
+  <!-- Dog / Contained form parts -->
+  <PawnRenderNodeTagDef><defName>NothingThere_DogRoot</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_DogBackLeg</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_DogSpiderLeg1</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_DogSpiderLeg2</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_DogTail</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_DogGuts</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_DogBody</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_DogTongue</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_DogFrontLeg</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_DogHeadArm</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_DogEyeBig</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_DogEyeSec</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_DogEyeThird</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_DogEyeFourth</defName></PawnRenderNodeTagDef>
+
+  <!-- Form 1 Disguise parts -->
+  <PawnRenderNodeTagDef><defName>NothingThere_DisguiseRoot</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_DisguiseBody</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_DisguiseSeam</defName></PawnRenderNodeTagDef>
+
+  <!-- Form 2 Cocoon parts -->
+  <PawnRenderNodeTagDef><defName>NothingThere_CocoonRoot</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_CocoonBody</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_CocoonEye1</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_CocoonEye2</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_CocoonEye3</defName></PawnRenderNodeTagDef>
+
+  <!-- Form 3 True Form parts -->
+  <PawnRenderNodeTagDef><defName>NothingThere_TrueRoot</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_TrueBackLeg</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_TrueBackArm</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_TrueEyeArm1</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_TrueEyeArm2</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_TrueFrontLeg</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_TrueTorso</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_TrueEyeChest</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_TrueEyeShoulder</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_TrueIntestines</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_TrueHead</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_TrueEyeHeadLeft</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_TrueEyeHeadRight</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_TrueHeadHand</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_TrueFrontArmUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_TrueFrontArmMace</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>NothingThere_TrueGoodbyeBlade</defName></PawnRenderNodeTagDef>
+
+</Defs>

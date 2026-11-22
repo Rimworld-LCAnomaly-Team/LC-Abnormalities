@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="LC_EntityBase" Name="BaseNothingThere" Abstract="True">
+    <thingClass>NothingThere.Things.LC_NothingTherePawn</thingClass>
+    <statBases>
+      <MoveSpeed>4.0</MoveSpeed>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>100</ComfyTemperatureMax>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <LC_MinimumContainmentStrength>90</LC_MinimumContainmentStrength>
+      <StaggerDurationFactor>0</StaggerDurationFactor>
+      <ToxicResistance>1</ToxicResistance>
+      <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+    </statBases>
+    <race>
+      <body>NothingThere</body>
+      <baseBodySize>2.4</baseBodySize>
+      <baseHealthScale>7.5</baseHealthScale>
+      <intelligence>ToolUser</intelligence>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <fleshType>LC_AbnormalityMechanical</fleshType>
+      <foodType>None</foodType>
+      <hasCorpse>false</hasCorpse>
+      <lifeExpectancy>1000</lifeExpectancy>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <soundCallIntervalRange>120~240</soundCallIntervalRange>
+      <disableIgniteVerb>true</disableIgniteVerb>
+      <trainability>None</trainability>
+      <lifeStageAges>
+        <li>
+          <def>LC_EntityFullyFormed</def>
+          <soundDeath>NothingThere_Death</soundDeath>
+        </li>
+      </lifeStageAges>
+      <hediffGiverSets>
+      </hediffGiverSets>
+    </race>
+    <tools>
+      <li>
+        <label>flesh blade</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>1.7</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>NothingThere_BladeArmGroup</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <soundMeleeHit>NothingThere_Attack</soundMeleeHit>
+      </li>
+      <li>
+        <label>flesh claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>NothingThere_ClawArmGroup</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <soundMeleeHit>NothingThere_Attack</soundMeleeHit>
+      </li>
+      <li>
+        <label>gnashing jaws</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.6</chanceFactor>
+        <soundMeleeHit>NothingThere_Attack</soundMeleeHit>
+      </li>
+      <li>
+        <label>flesh slam</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2.0</cooldownTime>
+        <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.35</chanceFactor>
+        <soundMeleeHit>NothingThere_Attack</soundMeleeHit>
+      </li>
+    </tools>
+    <comps>
+      <li Class="NothingThere.Comp.CompProperties_NothingThere">
+        <qliphothCountMax>1</qliphothCountMax>
+        <studySucessRateBase>0</studySucessRateBase>
+        <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>true</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <soundWorking>NothingThere_WorkLoop</soundWorking>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <lookForTargetOnEscape>true</lookForTargetOnEscape>
+        <hasAnimation>true</hasAnimation>
+        <heldDrawScale>0.88</heldDrawScale>
+        <heldDrawOffset>(0, 0, -0.06)</heldDrawOffset>
+      </li>
+      <li Class="NothingThere.Comp.CompProperties_Studiable_NothingThere">
+        <frequencyTicks>60000</frequencyTicks>
+        <studyTimesPeriod>1</studyTimesPeriod>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>ALEPH</abnormalityCategoryDef>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>0.3</redResistance>
+        <whiteResistance>0.4</whiteResistance>
+        <blackResistance>0.4</blackResistance>
+        <paleResistance>0.8</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseNothingThere">
+    <defName>NothingThere</defName>
+    <label>Nothing There</label>
+    <description>An ALEPH Abnormality shrouded inside an unstable heap of stolen flesh, eyes, teeth, and distorted limbs.\nIt obsessively mimics the voice and skin of anyone weak-willed enough to enter its unit. Once breached, it advances through three dreadful phases until only "Goodbye." remains.</description>
+    <uiIconPath>UI/CodexEntries/NothingThere</uiIconPath>
+    <race>
+      <renderTree>NothingThere</renderTree>
+      <thinkTreeMain>NothingThere</thinkTreeMain>
+      <thinkTreeConstant>NothingThereConstant</thinkTreeConstant>
+    </race>
+    <comps>
+      <li Class="LCAnomalyCore.Comp.CompProperties_PeBoxProduce">
+        <peBoxDef>EnkephalinBox</peBoxDef>
+        <amountProdueMax>33</amountProdueMax>
+        <boxTexOffsetZ>0.052</boxTexOffsetZ>
+        <amountProdueRangeNormal>17~26</amountProdueRangeNormal>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
+        <accessoryDef>Accessory_NothingThere</accessoryDef>
+        <accessoryChance>0.01</accessoryChance>
+        <unlockLevel>4</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
+        <weaponExtracted>EgoWeapon_NothingThere</weaponExtracted>
+        <weaponIconPath>UI/Commands/ExtractEGO_NothingThere_Weapon</weaponIconPath>
+        <amountMaxWeapon>1</amountMaxWeapon>
+        <weaponExtractedNeed>222</weaponExtractedNeed>
+        <armorExtracted>Apparel_NothingThereSuit</armorExtracted>
+        <armorIconPath>UI/Commands/ExtractEGO_NothingThere_Armor</armorIconPath>
+        <amountMaxArmor>1</amountMaxArmor>
+        <armorExtractedNeed>120</armorExtractedNeed>
+        <unlockLevel>4</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>8</threshold>
+            <label>Observation Level: I</label>
+            <text>Work success rate is scaled by the agent's Fortitude Level (Base Rate x Fortitude Level x 0.2).\nInsight and Repression always yield 0%; Attachment and Fortitude-V Instinct perform best.\nWork Speed +3%</text>
+          </li>
+          <li>
+            <threshold>14</threshold>
+            <label>Observation Level: II</label>
+            <text>If an undisguised employee with Justice below Level IV finishes work with Nothing There, it breaches containment directly without killing the worker.\nSuccess Rate +3%</text>
+          </li>
+          <li>
+            <threshold>20</threshold>
+            <label>Observation Level: III</label>
+            <text>If work yields a Bad result or kills a Justice IV+ agent inside containment, Nothing There flays them and wears their skin inside the cell, muttering "I love you."\nOnce disguised inside containment, any Fortitude III or below agent who enters panics, is flayed, and triggers a disguised breach!\nWork Speed +3%</text>
+          </li>
+          <li>
+            <threshold>26</threshold>
+            <label>Observation Level: IV</label>
+            <text>SUPPRESSION WARNING: Nothing There morphs through a fast 30s Form I, a 30s Red-immune Flesh Cocoon, and its Red-immune True Form wielding Mace Smash (ramp-up special), piercing Bone Spear, devastating "Goodbye." cleave, and out-of-combat regeneration (doubling below 30% HP).\nSuccess Rate +3%\nUnlocks the ALEPH E.G.O. Gift, Weapon, and Suit 'Mimicry'.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

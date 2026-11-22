@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PortraitOfAnotherWorldEgg.label>异界肖像收容蛋</PortraitOfAnotherWorldEgg.label>
+  <PortraitOfAnotherWorldEgg.description>封存着异界肖像（O-09-91）的工具型异想体收容胶囊。将其安置到收容平台上即可展开画作供殖民者交互，也可直接砸碎以回收脑啡肽箱。</PortraitOfAnotherWorldEgg.description>
+  <PortraitOfAnotherWorldEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>异界肖像已收容</PortraitOfAnotherWorldEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <PortraitOfAnotherWorldEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef} 将异界肖像收容蛋安放在收容平台上，画作已在收容单元内显形。</PortraitOfAnotherWorldEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <PortraitOfAnotherWorldEgg.comps.CompUsable.useLabel>砸碎{0_label}</PortraitOfAnotherWorldEgg.comps.CompUsable.useLabel>
+  <PortraitOfAnotherWorldEgg.comps.CompUsable.useMessage>{PAWN_nameDef} 将异界肖像收容蛋砸碎，从中回收了若干脑啡肽箱。</PortraitOfAnotherWorldEgg.comps.CompUsable.useMessage>
+  <PortraitOfAnotherWorldEgg.comps.LC_CompEgg.activateDescString>砸碎异界肖像收容蛋以回收脑啡肽箱。</PortraitOfAnotherWorldEgg.comps.LC_CompEgg.activateDescString>
+  <PortraitOfAnotherWorldEgg.comps.LC_CompEgg.activateLabelString>砸碎...</PortraitOfAnotherWorldEgg.comps.LC_CompEgg.activateLabelString>
+  <PortraitOfAnotherWorldEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎异界肖像收容蛋</PortraitOfAnotherWorldEgg.comps.LC_CompEgg.activatingStringPending>
+  <PortraitOfAnotherWorldEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</PortraitOfAnotherWorldEgg.comps.LC_CompEgg.guiLabelString>
+
+  <FleshIdolEgg.label>血肉偶像收容蛋</FleshIdolEgg.label>
+  <FleshIdolEgg.description>封存着血肉偶像（T-09-79）的工具型异想体收容胶囊。将其安置到收容平台上即可展开偶像供殖民者祈祷，也可直接砸碎以回收脑啡肽箱。</FleshIdolEgg.description>
+  <FleshIdolEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>血肉偶像已收容</FleshIdolEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <FleshIdolEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef} 将血肉偶像收容蛋安放在收容平台上，偶像已在收容单元内显形。</FleshIdolEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <FleshIdolEgg.comps.CompUsable.useLabel>砸碎{0_label}</FleshIdolEgg.comps.CompUsable.useLabel>
+  <FleshIdolEgg.comps.CompUsable.useMessage>{PAWN_nameDef} 将血肉偶像收容蛋砸碎，从中回收了若干脑啡肽箱。</FleshIdolEgg.comps.CompUsable.useMessage>
+  <FleshIdolEgg.comps.LC_CompEgg.activateDescString>砸碎血肉偶像收容蛋以回收脑啡肽箱。</FleshIdolEgg.comps.LC_CompEgg.activateDescString>
+  <FleshIdolEgg.comps.LC_CompEgg.activateLabelString>砸碎...</FleshIdolEgg.comps.LC_CompEgg.activateLabelString>
+  <FleshIdolEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎血肉偶像收容蛋</FleshIdolEgg.comps.LC_CompEgg.activatingStringPending>
+  <FleshIdolEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</FleshIdolEgg.comps.LC_CompEgg.guiLabelString>
+
+  <WeCanChangeAnythingEgg.label>我们可以改变一切收容蛋</WeCanChangeAnythingEgg.label>
+  <WeCanChangeAnythingEgg.description>封存着我们可以改变一切（T-09-85）的工具型异想体收容胶囊。将其安置到收容平台上即可部署铁处女装置，也可直接砸碎以回收脑啡肽箱。</WeCanChangeAnythingEgg.description>
+  <WeCanChangeAnythingEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>我们可以改变一切已收容</WeCanChangeAnythingEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <WeCanChangeAnythingEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef} 将我们可以改变一切收容蛋安放在收容平台上，铁处女装置已在收容单元内显形。</WeCanChangeAnythingEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <WeCanChangeAnythingEgg.comps.CompUsable.useLabel>砸碎{0_label}</WeCanChangeAnythingEgg.comps.CompUsable.useLabel>
+  <WeCanChangeAnythingEgg.comps.CompUsable.useMessage>{PAWN_nameDef} 将我们可以改变一切收容蛋砸碎，从中回收了若干脑啡肽箱。</WeCanChangeAnythingEgg.comps.CompUsable.useMessage>
+  <WeCanChangeAnythingEgg.comps.LC_CompEgg.activateDescString>砸碎我们可以改变一切收容蛋以回收脑啡肽箱。</WeCanChangeAnythingEgg.comps.LC_CompEgg.activateDescString>
+  <WeCanChangeAnythingEgg.comps.LC_CompEgg.activateLabelString>砸碎...</WeCanChangeAnythingEgg.comps.LC_CompEgg.activateLabelString>
+  <WeCanChangeAnythingEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎我们可以改变一切收容蛋</WeCanChangeAnythingEgg.comps.LC_CompEgg.activatingStringPending>
+  <WeCanChangeAnythingEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</WeCanChangeAnythingEgg.comps.LC_CompEgg.guiLabelString>
+
+  <OldBeliefAndPromiseEgg.label>古老的信念与承诺收容蛋</OldBeliefAndPromiseEgg.label>
+  <OldBeliefAndPromiseEgg.description>封存着古老的信念与承诺（T-09-97）的工具型异想体收容胶囊。将其安置到收容平台上即可展开晶球悬锤供武器起誓，也可直接砸碎以回收脑啡肽箱。</OldBeliefAndPromiseEgg.description>
+  <OldBeliefAndPromiseEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>古老的信念与承诺已收容</OldBeliefAndPromiseEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <OldBeliefAndPromiseEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef} 将古老的信念与承诺收容蛋安放在收容平台上，晶球悬锤已在收容单元内显形。</OldBeliefAndPromiseEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <OldBeliefAndPromiseEgg.comps.CompUsable.useLabel>砸碎{0_label}</OldBeliefAndPromiseEgg.comps.CompUsable.useLabel>
+  <OldBeliefAndPromiseEgg.comps.CompUsable.useMessage>{PAWN_nameDef} 将古老的信念与承诺收容蛋砸碎，从中回收了若干脑啡肽箱。</OldBeliefAndPromiseEgg.comps.CompUsable.useMessage>
+  <OldBeliefAndPromiseEgg.comps.LC_CompEgg.activateDescString>砸碎古老的信念与承诺收容蛋以回收脑啡肽箱。</OldBeliefAndPromiseEgg.comps.LC_CompEgg.activateDescString>
+  <OldBeliefAndPromiseEgg.comps.LC_CompEgg.activateLabelString>砸碎...</OldBeliefAndPromiseEgg.comps.LC_CompEgg.activateLabelString>
+  <OldBeliefAndPromiseEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎古老的信念与承诺收容蛋</OldBeliefAndPromiseEgg.comps.LC_CompEgg.activatingStringPending>
+  <OldBeliefAndPromiseEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</OldBeliefAndPromiseEgg.comps.LC_CompEgg.guiLabelString>
+
+</LanguageData>

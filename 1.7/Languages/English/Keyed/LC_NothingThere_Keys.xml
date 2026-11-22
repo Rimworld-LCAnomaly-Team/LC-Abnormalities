@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <LC_NothingThere_ImmuneMote>IMMUNE</LC_NothingThere_ImmuneMote>
+  <LC_NothingThere_KilledLabel>Nothing There Suppressed</LC_NothingThere_KilledLabel>
+  <LC_NothingThere_KilledText>Nothing There's towering mass of stolen flesh and jagged bone collapsed into a pulsating three-eyed egg.</LC_NothingThere_KilledText>
+  <LC_NothingThere_LifestealText>Mimicry +</LC_NothingThere_LifestealText>
+  <LC_NothingThere_Goodbye>Goodbye.</LC_NothingThere_Goodbye>
+  <LC_NothingThere_TargetMustBeAlive>Target must be alive.</LC_NothingThere_TargetMustBeAlive>
+  <LC_NothingThere_CannotTargetAlly>Cannot target an allied pawn.</LC_NothingThere_CannotTargetAlly>
+  <LC_NothingThere_LowStatWarning>WARNING: {0} is below Fortitude IV or Justice IV—they risk being flayed by Nothing There and triggering a containment breach!</LC_NothingThere_LowStatWarning>
+
+  <LC_NothingThere_Voice_Hello>Hello?</LC_NothingThere_Voice_Hello>
+  <LC_NothingThere_Voice_ILoveYou>I love you.</LC_NothingThere_Voice_ILoveYou>
+  <LC_NothingThere_Voice_Help>Help!</LC_NothingThere_Voice_Help>
+  <LC_NothingThere_Voice_Manager>Manager...</LC_NothingThere_Voice_Manager>
+  <LC_NothingThere_Morphing>Morphing...</LC_NothingThere_Morphing>
+
+  <LC_NothingThere_HatchedLabel>Nothing There Awakened</LC_NothingThere_HatchedLabel>
+  <LC_NothingThere_HatchedText>The pulsating flesh cocoon split open, unleashing Nothing There in its invincible True Form! It is completely immune to Red damage—strike with White, Black, or Pale weapons!</LC_NothingThere_HatchedText>
+  <LC_NothingThere_SkinStolenContainedLabel>Nothing There Wore an Agent's Skin Inside Containment</LC_NothingThere_SkinStolenContainedLabel>
+  <LC_NothingThere_SkinStolenContainedText>{0} was killed inside Nothing There's containment unit, and the Abnormality is now wearing their skin while repeating "I love you."\nDo NOT send anyone below Fortitude Level IV inside or it will immediately breach wearing fresh skin!</LC_NothingThere_SkinStolenContainedText>
+  <LC_NothingThere_SkinStolenLabel>Nothing There Flayed an Employee</LC_NothingThere_SkinStolenLabel>
+  <LC_NothingThere_SkinStolenText>{0} was violently flayed inside Nothing There's containment unit, and the Abnormality is now roaming the facility wearing their skin!</LC_NothingThere_SkinStolenText>
+
+  <LC_NothingThere_Biosignature>Biosignature</LC_NothingThere_Biosignature>
+  <LC_NothingThere_Inspect_Contained>Phase: Contained Shell</LC_NothingThere_Inspect_Contained>
+  <LC_NothingThere_Inspect_ContainedDisguised>Phase: Contained (Wearing Stolen Skin)</LC_NothingThere_Inspect_ContainedDisguised>
+  <LC_NothingThere_Inspect_Form1>Phase: Form I - Stolen Skin Disguise</LC_NothingThere_Inspect_Form1>
+  <LC_NothingThere_Inspect_Form2>Phase: Form II - Flesh Cocoon (Red Immune)</LC_NothingThere_Inspect_Form2>
+  <LC_NothingThere_Inspect_Form3>Phase: Form III - True Form (Red Immune)</LC_NothingThere_Inspect_Form3>
+  <LC_NothingThere_Inspect_DisguiseVictim>Disguised As: {0}</LC_NothingThere_Inspect_DisguiseVictim>
+  <LC_NothingThere_Inspect_HatchProgress>Cocoon Hatch Progress: {0}%</LC_NothingThere_Inspect_HatchProgress>
+
+</LanguageData>

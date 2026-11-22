@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ZAYIN -->
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>SevenSinEntity_ZAYIN</defName>
+    <label>Peccatulum (ZAYIN)</label>
+    <description>Distorted entities born from unstable Cogito injections—Gluttony, Lust, Melancholy, Pride, Sloth, and Wrath. Each ZAYIN-class Peccatulum embodies a distinct sin, four-color combat affinity, and lethal breach reflex when left uncontained.</description>
+    <uiIconPath>UI/CodexEntries/SevenSinEntity</uiIconPath>
+    <category>ZAYIN</category>
+    <orderInCategory>800</orderInCategory>
+    <linkedThings>
+      <li>GluttonyEntity</li>
+      <li>LustEntity</li>
+      <li>MelancholyEntity</li>
+      <li>PrideEntity</li>
+      <li>SlothEntity</li>
+      <li>WrathEntity</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+</Defs>

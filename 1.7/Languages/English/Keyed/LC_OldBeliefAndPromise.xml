@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <LC_OldBelief_UseFloatMenu>Swear upon {0}</LC_OldBelief_UseFloatMenu>
+  <LC_OldBelief_UseGizmoLabel>Bless Weapon...</LC_OldBelief_UseGizmoLabel>
+  <LC_OldBelief_UseGizmoDesc>Select an armed colonist to beseech {0} for a permanent weapon damage blessing.</LC_OldBelief_UseGizmoDesc>
+  <LC_OldBelief_NoWeapon>Must equip a primary weapon</LC_OldBelief_NoWeapon>
+  <LC_OldBelief_AlreadyMaxBlessed>{0} already holds the highest blessing</LC_OldBelief_AlreadyMaxBlessed>
+  <LC_OldBelief_BlessSuccess>Old Belief and Promise blessed {0} ({1} damage)!</LC_OldBelief_BlessSuccess>
+  <LC_OldBelief_BlessUpgraded>Old Belief and Promise exalted {0}'s blessing to {1} damage!</LC_OldBelief_BlessUpgraded>
+  <LC_OldBelief_BetrayalDestroyed>Betrayal! Old Belief and Promise shattered {0}'s {1} into dust!</LC_OldBelief_BetrayalDestroyed>
+  <LC_OldBelief_BetrayalBacklash>Betrayal! {0}'s {1} lost its blessing and unleashed heavy backlash!</LC_OldBelief_BetrayalBacklash>
+  <LC_OldBelief_InspectStats>Blessings granted: {0} / Betrayals: {1}</LC_OldBelief_InspectStats>
+</LanguageData>

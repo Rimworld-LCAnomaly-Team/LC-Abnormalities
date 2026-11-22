@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <LC_FleshIdol_UseFloatMenu>向 {0} 祈祷</LC_FleshIdol_UseFloatMenu>
+  <LC_FleshIdol_UseGizmoLabel>开始祈祷…</LC_FleshIdol_UseGizmoLabel>
+  <LC_FleshIdol_UseGizmoDesc>指派一名殖民者持续跪拜向 {0} 祈祷。在 20 秒至 80 秒之间停止祈祷可安全触发全图奇迹治疗。</LC_FleshIdol_UseGizmoDesc>
+  <LC_FleshIdol_StopGizmoLabel>停止祈祷</LC_FleshIdol_StopGizmoLabel>
+  <LC_FleshIdol_StopGizmoDesc>命令 {0} 停止向血肉偶像祈祷。警告：未满 20 秒强行中止将遭反噬！</LC_FleshIdol_StopGizmoDesc>
+
+  <LC_FleshIdol_MiracleStarted>{0} 渗出温暖的脉动——全殖民地治愈奇迹已降临！（请务必在 80 秒前停止）</LC_FleshIdol_MiracleStarted>
+  <LC_FleshIdol_MiracleEnded>{0} 的虔诚祈祷在安全窗口内圆满结束。</LC_FleshIdol_MiracleEnded>
+  <LC_FleshIdol_OverloadWarning>危险：{0} 正发出濒临崩溃的嘶鸣！请在 90 秒到来前立刻终止祈祷！</LC_FleshIdol_OverloadWarning>
+  <LC_FleshIdol_EarlyStopPunish>{0} 在祈祷未满 20 秒时提前中断，遭到了血肉偶像的严厉反噬！</LC_FleshIdol_EarlyStopPunish>
+  <LC_FleshIdol_ExplosionLetterLabel>血肉偶像自爆</LC_FleshIdol_ExplosionLetterLabel>
+  <LC_FleshIdol_ExplosionLetterDesc>祈祷时间超过了九十秒的极限，{0} 爆发了贯穿全图的剧烈精神与侵蚀冲击波！</LC_FleshIdol_ExplosionLetterDesc>
+
+  <LC_FleshIdol_InspectCooldown>爆裂后沉寂冷却：{0}</LC_FleshIdol_InspectCooldown>
+  <LC_FleshIdol_PhaseWarmup>祈祷蓄能中：{0} 秒 / 最低 {1} 秒</LC_FleshIdol_PhaseWarmup>
+  <LC_FleshIdol_PhaseMiracle>神迹治愈中：{0} 秒（须在 {1} 秒前结束！）</LC_FleshIdol_PhaseMiracle>
+  <LC_FleshIdol_PhaseOverload>极度危险：{0} 秒 / {1} 秒引爆！</LC_FleshIdol_PhaseOverload>
+  <LC_FleshIdol_PhaseIdle>已累计触发神迹脉冲：{0} 次</LC_FleshIdol_PhaseIdle>
+</LanguageData>

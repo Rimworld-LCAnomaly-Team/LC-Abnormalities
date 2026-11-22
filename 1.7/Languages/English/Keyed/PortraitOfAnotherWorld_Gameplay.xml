@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <LC_Portrait_UseFloatMenu>Enter {0}</LC_Portrait_UseFloatMenu>
+  <LC_Portrait_UseGizmoLabel>Bind Subject...</LC_Portrait_UseGizmoLabel>
+  <LC_Portrait_UseGizmoDesc>Select a colonist to become protected by {0}, transferring their incoming damage to a marked substitute.</LC_Portrait_UseGizmoDesc>
+  <LC_Portrait_AlreadyBound>Already protected by this portrait</LC_Portrait_AlreadyBound>
+  <LC_Portrait_NoSubstitute>No eligible substitute available</LC_Portrait_NoSubstitute>
+  <LC_Portrait_BoundMessage>{0} gazed into Portrait of Another World. {1} has been marked as the substitute.</LC_Portrait_BoundMessage>
+  <LC_Portrait_RedirectedFloating>Redirected ({0})</LC_Portrait_RedirectedFloating>
+  <LC_Portrait_SubstituteReplaced>Substitute {0} perished! The Portrait stained crimson and marked {1} as the new substitute.</LC_Portrait_SubstituteReplaced>
+  <LC_Portrait_BondCollapsed>Substitute {0} perished with no replacement remaining! The pact shattered, unleashing Black backlash on {1}!</LC_Portrait_BondCollapsed>
+  <LC_Portrait_UnbindLabel>Sever Pact</LC_Portrait_UnbindLabel>
+  <LC_Portrait_UnbindDesc>Forcefully sever the current bond with Portrait of Another World, inflicting minor mental shock on the protected subject.</LC_Portrait_UnbindDesc>
+  <LC_Portrait_UnboundMessage>The Portrait's bond with {0} has been severed.</LC_Portrait_UnboundMessage>
+  <LC_Portrait_InspectUnbound>Bond: None</LC_Portrait_InspectUnbound>
+  <LC_Portrait_InspectBound>Protected: {0} -> Substitute: {1}</LC_Portrait_InspectBound>
+  <LC_Portrait_InspectCrimson>Portrait state: Stained crimson</LC_Portrait_InspectCrimson>
+  <LC_Portrait_InspectRedirected>Total damage redirected: {0}</LC_Portrait_InspectRedirected>
+  <LC_Portrait_TipProtected>Protected by Portrait of Another World\nSubstitute: {0}</LC_Portrait_TipProtected>
+  <LC_Portrait_TipSubstitute>Marked as substitute by Portrait of Another World\nAbsorbing damage for: {0}</LC_Portrait_TipSubstitute>
+  <LC_Portrait_TipUnlinked>Bound to Portrait of Another World</LC_Portrait_TipUnlinked>
+</LanguageData>

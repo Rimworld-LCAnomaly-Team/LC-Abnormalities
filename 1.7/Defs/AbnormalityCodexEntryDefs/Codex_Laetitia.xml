@@ -8,6 +8,11 @@
     <uiIconPath>UI/CodexEntries/Laetitia</uiIconPath>
     <category>HE</category>
     <orderInCategory>800</orderInCategory>
+    <linkedThings>
+      <li>Laetitia</li>
+      <li>LaetitiaMonster</li>
+      <li>LaetitiaEgg</li>
+    </linkedThings>
   </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
 
 </Defs>

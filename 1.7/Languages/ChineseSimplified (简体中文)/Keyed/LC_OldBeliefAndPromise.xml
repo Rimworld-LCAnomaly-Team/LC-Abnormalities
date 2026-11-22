@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <LC_OldBelief_UseFloatMenu>向 {0} 起誓</LC_OldBelief_UseFloatMenu>
+  <LC_OldBelief_UseGizmoLabel>武器赐福…</LC_OldBelief_UseGizmoLabel>
+  <LC_OldBelief_UseGizmoDesc>指派一名手持主武器的殖民者向 {0} 起誓，为其武器赋予永久伤害强化。</LC_OldBelief_UseGizmoDesc>
+  <LC_OldBelief_NoWeapon>必须装备主武器</LC_OldBelief_NoWeapon>
+  <LC_OldBelief_AlreadyMaxBlessed>{0} 已达到最高赐福阶位</LC_OldBelief_AlreadyMaxBlessed>
+  <LC_OldBelief_BlessSuccess>古老的信念与承诺赐福了 {0}（伤害 {1}）！</LC_OldBelief_BlessSuccess>
+  <LC_OldBelief_BlessUpgraded>古老的信念与承诺将 {0} 的赐福升华至 {1} 伤害！</LC_OldBelief_BlessUpgraded>
+  <LC_OldBelief_BetrayalDestroyed>契约背叛！古老的信念与承诺当场摧毁了 {0} 手中的 {1}！</LC_OldBelief_BetrayalDestroyed>
+  <LC_OldBelief_BetrayalBacklash>契约背叛！{0} 手中的 {1} 失去了赐福并遭受剧烈精神与侵蚀反噬！</LC_OldBelief_BetrayalBacklash>
+  <LC_OldBelief_InspectStats>累计赐福：{0} 次 / 背叛：{1} 次</LC_OldBelief_InspectStats>
+</LanguageData>

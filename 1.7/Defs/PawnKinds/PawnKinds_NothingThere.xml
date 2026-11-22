@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.PawnKindDef_AbnormalityEntity>
+    <defName>NothingThere</defName>
+    <label>Nothing There</label>
+    <race>NothingThere</race>
+    <canMeleeAttack>true</canMeleeAttack>
+    <defaultFactionType>LC_Abnormalities</defaultFactionType>
+    <preventIdeo>true</preventIdeo>
+    <overrideDebugActionCategory>Entity</overrideDebugActionCategory>
+    <forceDeathOnDowned>true</forceDeathOnDowned>
+    <combatPower>650</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/NothingThere/NothingThere_Contained</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2</drawSize>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>UI/CodexEntries/NothingThere</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>ALEPH</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.PawnKindDef_AbnormalityEntity>
+
+</Defs>

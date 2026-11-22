@@ -1,4 +1,5 @@
 using BurrowingHeaven.Things;
+using LCAbnormalities.Settings;
 using LCAnomalyCore.Comp;
 using LCAnomalyCore.Comp.Pawns;
 using LCAnomalyCore.Util;
@@ -168,9 +169,11 @@ namespace BurrowingHeaven.Comp
             if (outside)
             {
                 unmonitoredWorkTicks++;
-                int threshold = hasTriggeredWorkDropThisSession
+                float graceMult = Mathf.Clamp(LCAbnormalitiesMod.Settings?.BurrowingHeavenSightGraceMultiplier ?? 1f, 0.5f, 3f);
+                int baseThreshold = hasTriggeredWorkDropThisSession
                     ? Props.workUnmonitoredIntervalTicks
                     : Props.workUnmonitoredGraceTicks;
+                int threshold = Mathf.Max(15, Mathf.RoundToInt(baseThreshold * graceMult));
 
                 if (unmonitoredWorkTicks >= threshold)
                 {
@@ -207,9 +210,11 @@ namespace BurrowingHeaven.Comp
             if (outside)
             {
                 unmonitoredBreachTicks++;
-                int threshold = hasTriggeredBreachCycle
+                float graceMult = Mathf.Clamp(LCAbnormalitiesMod.Settings?.BurrowingHeavenSightGraceMultiplier ?? 1f, 0.5f, 3f);
+                int baseThreshold = hasTriggeredBreachCycle
                     ? Props.breachUnwatchedBurstIntervalTicks
                     : Props.breachUnwatchedGraceTicks;
+                int threshold = Mathf.Max(15, Mathf.RoundToInt(baseThreshold * graceMult));
 
                 if (unmonitoredBreachTicks >= threshold)
                 {
@@ -228,7 +233,8 @@ namespace BurrowingHeaven.Comp
                         Def.SoundDefOf.BurrowingHeaven_attack?.PlayOneShot(SoundInfo.InMap(SelfPawn));
                     }
 
-                    bool teleported = Props.breachTeleportOnUnwatched && TryTeleportNearVictim();
+                    bool allowTeleport = LCAbnormalitiesMod.Settings?.BurrowingHeavenAllowUnwatchedTeleport ?? true;
+                    bool teleported = Props.breachTeleportOnUnwatched && allowTeleport && TryTeleportNearVictim();
 
                     Def.SoundDefOf.BurrowingHeaven_scream?.PlayOneShotOnCamera();
                     if (teleported)

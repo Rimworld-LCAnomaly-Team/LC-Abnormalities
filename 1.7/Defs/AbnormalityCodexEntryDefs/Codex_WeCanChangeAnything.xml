@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>WeCanChangeAnything</defName>
+    <label>We Can Change Anything</label>
+    <description>We Can Change Anything (T-09-85) is a grinning white iron maiden promising transformation.\nAny soul placed inside continuously converts biological torment into Enkephalin Boxes at an accelerating rate until nothing remains.</description>
+    <uiIconPath>UI/CodexEntries/WeCanChangeAnything</uiIconPath>
+    <category>ZAYIN</category>
+    <orderInCategory>850</orderInCategory>
+    <linkedThings>
+      <li>WeCanChangeAnything</li>
+      <li>WeCanChangeAnythingEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ShaderDef>
+    <defName>LC_PortraitOfAnotherWorld</defName>
+    <shaderProgram>
+      <fragmentShaderFileName>LC_PortraitOfAnotherWorld.frag.glsl</fragmentShaderFileName>
+      <transparent>true</transparent>
+      <depthWrite>false</depthWrite>
+      <renderQueue>2905</renderQueue>
+      <textureWrapOverrides>
+        <li>
+          <key>_MainTex</key>
+          <value>Clamp</value>
+        </li>
+      </textureWrapOverrides>
+    </shaderProgram>
+  </ShaderDef>
+
+</Defs>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <LC_WeCanChangeAnything_UseFloatMenu>步入 {0}</LC_WeCanChangeAnything_UseFloatMenu>
+  <LC_WeCanChangeAnything_UseGizmoLabel>进入腔室…</LC_WeCanChangeAnything_UseGizmoLabel>
+  <LC_WeCanChangeAnything_UseGizmoDesc>指派一名殖民者进入 {0} 的铁处女腔室，将痛苦与生命直接转化为脑啡肽箱。</LC_WeCanChangeAnything_UseGizmoDesc>
+  <LC_WeCanChangeAnything_VictimConverted>{0} 已被“我们可以改变一切”彻底榨干，腔室喷涌出最后 {1} 个脑啡肽箱。</LC_WeCanChangeAnything_VictimConverted>
+  <LC_WeCanChangeAnything_InspectStats>累计产出：{0} 个脑啡肽箱（已转化 {1} 人）</LC_WeCanChangeAnything_InspectStats>
+</LanguageData>

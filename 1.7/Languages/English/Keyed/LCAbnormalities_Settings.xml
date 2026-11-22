@@ -3,4 +3,43 @@
 
   <Setting_LCAbnormalities_Label>LC Abnormalities</Setting_LCAbnormalities_Label>
 
+  <LCAbn_Settings_ExtractionHeader>Abnormality Extraction Pool</LCAbn_Settings_ExtractionHeader>
+  <LCAbn_Settings_ExtractionNote>Disabling an Abnormality prevents it from being obtained through future extractions or Cogito injections. Existing individuals in your save remain unaffected.</LCAbn_Settings_ExtractionNote>
+  <LCAbn_Settings_EnableOneSin>Enable One Sin and Hundreds of Good Deeds (ZAYIN)</LCAbn_Settings_EnableOneSin>
+  <LCAbn_Settings_EnableSevenSin>Enable Peccatulum / SevenSin Entities (ZAYIN)</LCAbn_Settings_EnableSevenSin>
+  <LCAbn_Settings_EnableWeCanChangeAnything>Enable We Can Change Anything (ZAYIN Tool)</LCAbn_Settings_EnableWeCanChangeAnything>
+  <LCAbn_Settings_EnableOldBelief>Enable Old Belief and Promise (ZAYIN Tool)</LCAbn_Settings_EnableOldBelief>
+  <LCAbn_Settings_EnableMeatLantern>Enable Meat Lantern (TETH)</LCAbn_Settings_EnableMeatLantern>
+  <LCAbn_Settings_EnableLaetitia>Enable Laetitia (HE)</LCAbn_Settings_EnableLaetitia>
+  <LCAbn_Settings_EnablePortrait>Enable Portrait of Another World (HE Tool)</LCAbn_Settings_EnablePortrait>
+  <LCAbn_Settings_EnableBurrowingHeaven>Enable The Burrowing Heaven (WAW)</LCAbn_Settings_EnableBurrowingHeaven>
+  <LCAbn_Settings_EnableFleshIdol>Enable Flesh Idol (WAW Tool)</LCAbn_Settings_EnableFleshIdol>
+  <LCAbn_Settings_EnableNothingThere>Enable Nothing There (ALEPH)</LCAbn_Settings_EnableNothingThere>
+
+  <LCAbn_Settings_PortraitHeader>Portrait of Another World</LCAbn_Settings_PortraitHeader>
+  <LCAbn_Settings_PortraitAllowNonColonist>Allow prisoners and visitors as substitutes</LCAbn_Settings_PortraitAllowNonColonist>
+  <LCAbn_Settings_PortraitAllowNonColonistDesc>When enabled, prisoners and friendly non-hostile humanlikes on the map can also be randomly marked as substitutes instead of only player colonists and slaves.</LCAbn_Settings_PortraitAllowNonColonistDesc>
+  <LCAbn_Settings_PortraitTransferMult>Transferred damage multiplier: x{0}</LCAbn_Settings_PortraitTransferMult>
+  <LCAbn_Settings_PortraitTransferMultDesc>Scales how much incoming damage is dealt to the marked substitute when the Portrait redirects harm from the bound ward.</LCAbn_Settings_PortraitTransferMultDesc>
+
+  <LCAbn_Settings_ToolAbnormalitiesHeader>Tool Abnormalities</LCAbn_Settings_ToolAbnormalitiesHeader>
+  <LCAbn_Settings_IronMaidenAllowCancel>Allow canceling We Can Change Anything</LCAbn_Settings_IronMaidenAllowCancel>
+  <LCAbn_Settings_IronMaidenAllowCancelDesc>When enabled, colonists ordered into We Can Change Anything can be pulled back out early instead of staying trapped until death.</LCAbn_Settings_IronMaidenAllowCancelDesc>
+  <LCAbn_Settings_OldBeliefDestroyEgo>Old Belief betrayal can destroy E.G.O weapons</LCAbn_Settings_OldBeliefDestroyEgo>
+  <LCAbn_Settings_OldBeliefDestroyEgoDesc>By default, authored E.G.O weapons only lose their blessing and inflict backlash on betrayal instead of being destroyed like ordinary weapons. Enable this to enforce strict annihilation on E.G.O weapons too.</LCAbn_Settings_OldBeliefDestroyEgoDesc>
+
+  <LCAbn_Settings_BurrowingHeavenHeader>The Burrowing Heaven</LCAbn_Settings_BurrowingHeavenHeader>
+  <LCAbn_Settings_BurrowingHeavenTeleport>Allow unwatched breach teleportation</LCAbn_Settings_BurrowingHeavenTeleport>
+  <LCAbn_Settings_BurrowingHeavenTeleportDesc>When enabled, an escaped Burrowing Heaven that remains outside your camera view will teleport near a target after bursting.</LCAbn_Settings_BurrowingHeavenTeleportDesc>
+  <LCAbn_Settings_BurrowingHeavenGrace>Unwatched sight grace multiplier: x{0}</LCAbn_Settings_BurrowingHeavenGrace>
+  <LCAbn_Settings_BurrowingHeavenGraceDesc>Scales how long The Burrowing Heaven waits while unwatched before dropping its Qliphoth Counter or triggering a breach burst.</LCAbn_Settings_BurrowingHeavenGraceDesc>
+
+  <LCAbn_Settings_NothingThereHeader>Nothing There (O-06-20)</LCAbn_Settings_NothingThereHeader>
+  <LCAbn_Settings_NothingThereAllowDisguise>Allow Form I disguised breach phase</LCAbn_Settings_NothingThereAllowDisguise>
+  <LCAbn_Settings_NothingThereAllowDisguiseDesc>When enabled, Nothing There first enters its eerie Form I disguised phase before morphing into a cocoon and True Form. Disabling this skips directly to Form II.</LCAbn_Settings_NothingThereAllowDisguiseDesc>
+  <LCAbn_Settings_NothingThereHatchSeconds>Form II cocoon hatch time: {0}s</LCAbn_Settings_NothingThereHatchSeconds>
+  <LCAbn_Settings_NothingThereHatchSecondsDesc>Real-time seconds required for Nothing There's immobile Form II cocoon to hatch into its invincible True Form.</LCAbn_Settings_NothingThereHatchSecondsDesc>
+
+  <LCAbn_Settings_ResetDefaults>Reset to defaults</LCAbn_Settings_ResetDefaults>
+
 </LanguageData>

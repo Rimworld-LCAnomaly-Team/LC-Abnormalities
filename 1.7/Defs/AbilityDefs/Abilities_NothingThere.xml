@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef ParentName="AbilityTouchBase">
+    <defName>Mimicry_Goodbye</defName>
+    <label>Goodbye.</label>
+    <description>Swing Mimicry in a devastating downward arc, unleashing massive ALEPH Red trauma upon the target while devouring part of the spilled vitality to mend the wielder's wounds.</description>
+    <iconPath>UI/WeaponSkills/NothingThere/Mimicry_Goodbye</iconPath>
+    <cooldownTicksRange>1200</cooldownTicksRange>
+    <displayOrder>120</displayOrder>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <range>-1</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.15</warmupTime>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>true</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="NothingThere.Comp.CompProperties_AbilityMimicryGoodbye">
+        <damageRange>65~95</damageRange>
+        <armorPenetration>0.75</armorPenetration>
+        <lifestealRatio>0.35</lifestealRatio>
+      </li>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>BloodSplash</fleckDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>
