@@ -8,6 +8,7 @@
   <LC_BurrowingHeaven_WorkWatchWarning>正在对穿刺乐园进行工作，请保持摄像机注视！</LC_BurrowingHeaven_WorkWatchWarning>
   <LC_BurrowingHeaven_LostSightWork>穿刺乐园脱离了你的注视！逆卡巴拉计数器下降了。</LC_BurrowingHeaven_LostSightWork>
   <LC_BurrowingHeaven_LostSightBreach>穿刺乐园在无人注视时疯狂扩张并贯穿了附近的生命！</LC_BurrowingHeaven_LostSightBreach>
+  <LC_BurrowingHeaven_LostSightBreachTeleport>穿刺乐园在无人注视时发动了穿刺爆发，并瞬移到了新的位置！</LC_BurrowingHeaven_LostSightBreachTeleport>
   <LC_BurrowingHeaven_SightStatusWatched>注视状态：被注视中（安全）</LC_BurrowingHeaven_SightStatusWatched>
   <LC_BurrowingHeaven_SightStatusUnwatched>注视状态：脱离注视（危险！）</LC_BurrowingHeaven_SightStatusUnwatched>
   <LC_BurrowingHeaven_SightStatusIdle>注视状态：休眠中</LC_BurrowingHeaven_SightStatusIdle>

@@ -49,16 +49,12 @@
         <workUnmonitoredGraceTicks>90</workUnmonitoredGraceTicks>
         <workUnmonitoredIntervalTicks>180</workUnmonitoredIntervalTicks>
         <workMeltdownStrikeDamage>35</workMeltdownStrikeDamage>
-        <breachWatchedAttackIntervalTicks>150</breachWatchedAttackIntervalTicks>
-        <breachWatchedAttackRadius>4.5</breachWatchedAttackRadius>
-        <breachWatchedAttackDamage>16</breachWatchedAttackDamage>
-        <breachUnwatchedGraceTicks>60</breachUnwatchedGraceTicks>
-        <breachUnwatchedBurstIntervalTicks>120</breachUnwatchedBurstIntervalTicks>
-        <breachUnwatchedBaseRadius>18</breachUnwatchedBaseRadius>
-        <breachUnwatchedRadiusStep>8</breachUnwatchedRadiusStep>
-        <breachUnwatchedMaxRadius>42</breachUnwatchedMaxRadius>
+        <breachAttackWhileWatched>false</breachAttackWhileWatched>
+        <breachTeleportOnUnwatched>true</breachTeleportOnUnwatched>
+        <breachUnwatchedGraceTicks>90</breachUnwatchedGraceTicks>
+        <breachUnwatchedBurstIntervalTicks>180</breachUnwatchedBurstIntervalTicks>
+        <breachUnwatchedOutdoorRadius>18</breachUnwatchedOutdoorRadius>
         <breachUnwatchedBurstDamage>28</breachUnwatchedBurstDamage>
-        <breachUnwatchedMaxTargets>6</breachUnwatchedMaxTargets>
         <breachUnwatchedHealAmount>12</breachUnwatchedHealAmount>
       </li>
       <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">

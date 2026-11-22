@@ -29,7 +29,7 @@ namespace BurrowingHeaven.Comp
         private static readonly float[] DefaultSlotTiltAngles = { -18f, 16f, 22f, -20f, 12f, -14f };
 
         private int unmonitoredBreachTicks = 0;
-        private int unmonitoredBreachStacks = 0;
+        private bool hasTriggeredBreachCycle = false;
         private int watchedAttackCooldown = 60;
 
         private List<HangingHeadRecord> hangingHeads = new List<HangingHeadRecord>();
@@ -84,7 +84,7 @@ namespace BurrowingHeaven.Comp
             }
 
             unmonitoredBreachTicks = 0;
-            unmonitoredBreachStacks = 0;
+            hasTriggeredBreachCycle = false;
             watchedAttackCooldown = 60;
         }
 
@@ -194,7 +194,7 @@ namespace BurrowingHeaven.Comp
         }
 
         /// <summary>
-        /// 出逃状态下根据注视状态执行近距离防御反击或全图无人注视穿刺爆发。
+        /// 出逃状态下被注视时静止不动（除非配置开启近距离反击），脱离注视则爆发全房间/18格穿刺伤害并瞬移至其他目标附近。
         /// </summary>
         public void TickBreachCombat()
         {
@@ -207,64 +207,71 @@ namespace BurrowingHeaven.Comp
             if (outside)
             {
                 unmonitoredBreachTicks++;
-                int threshold = unmonitoredBreachStacks == 0
-                    ? Props.breachUnwatchedGraceTicks
-                    : Props.breachUnwatchedBurstIntervalTicks;
+                int threshold = hasTriggeredBreachCycle
+                    ? Props.breachUnwatchedBurstIntervalTicks
+                    : Props.breachUnwatchedGraceTicks;
 
                 if (unmonitoredBreachTicks >= threshold)
                 {
                     unmonitoredBreachTicks = 0;
-                    unmonitoredBreachStacks = Mathf.Min(unmonitoredBreachStacks + 1, 4);
-
-                    float radius = Mathf.Min(
-                        Props.breachUnwatchedMaxRadius,
-                        Props.breachUnwatchedBaseRadius + (unmonitoredBreachStacks - 1) * Props.breachUnwatchedRadiusStep);
-
-                    Def.SoundDefOf.BurrowingHeaven_scream?.PlayOneShotOnCamera();
-                    Messages.Message(
-                        "LC_BurrowingHeaven_LostSightBreach".Translate(),
-                        new LookTargets(parent),
-                        MessageTypeDefOf.ThreatBig,
-                        historical: false);
+                    hasTriggeredBreachCycle = true;
 
                     HealOnUnmonitoredBurst();
 
-                    List<Pawn> targets = FindValidTargetsInRadius(radius, Props.breachUnwatchedMaxTargets);
+                    List<Pawn> targets = FindUnwatchedBurstTargets();
+                    for (int i = 0; i < targets.Count; i++)
+                    {
+                        StrikeTarget(targets[i], Props.breachUnwatchedBurstDamage, applyStun: true);
+                    }
                     if (targets.Count > 0)
                     {
-                        for (int i = 0; i < targets.Count; i++)
-                        {
-                            StrikeTarget(targets[i], Props.breachUnwatchedBurstDamage, applyStun: true);
-                        }
+                        Def.SoundDefOf.BurrowingHeaven_attack?.PlayOneShot(SoundInfo.InMap(SelfPawn));
+                    }
+
+                    bool teleported = Props.breachTeleportOnUnwatched && TryTeleportNearVictim();
+
+                    Def.SoundDefOf.BurrowingHeaven_scream?.PlayOneShotOnCamera();
+                    if (teleported)
+                    {
                         Def.SoundDefOf.BurrowingHeaven_attack?.PlayOneShot(SoundInfo.InMap(SelfPawn));
                     }
 
                     SelfPawn.PlayAttackAnimation();
-                }
-            }
-            else
-            {
-                unmonitoredBreachTicks = 0;
-                unmonitoredBreachStacks = 0;
 
-                watchedAttackCooldown--;
-                if (watchedAttackCooldown <= 0)
+                    Messages.Message(
+                        (teleported
+                            ? "LC_BurrowingHeaven_LostSightBreachTeleport"
+                            : "LC_BurrowingHeaven_LostSightBreach").Translate(),
+                        new LookTargets(SelfPawn),
+                        MessageTypeDefOf.ThreatBig,
+                        historical: false);
+                }
+                return;
+            }
+
+            unmonitoredBreachTicks = 0;
+            hasTriggeredBreachCycle = false;
+
+            if (!Props.breachAttackWhileWatched)
+                return;
+
+            watchedAttackCooldown--;
+            if (watchedAttackCooldown <= 0)
+            {
+                List<Pawn> targets = FindValidTargetsInRadius(Props.breachWatchedAttackRadius, 2);
+                if (targets.Count > 0)
                 {
-                    List<Pawn> targets = FindValidTargetsInRadius(Props.breachWatchedAttackRadius, 2);
-                    if (targets.Count > 0)
+                    for (int i = 0; i < targets.Count; i++)
                     {
-                        for (int i = 0; i < targets.Count; i++)
-                        {
-                            StrikeTarget(targets[i], Props.breachWatchedAttackDamage, applyStun: false);
-                        }
-                        Def.SoundDefOf.BurrowingHeaven_attack?.PlayOneShot(SoundInfo.InMap(SelfPawn));
-                        SelfPawn.PlayAttackAnimation();
-                        watchedAttackCooldown = Props.breachWatchedAttackIntervalTicks;
+                        StrikeTarget(targets[i], Props.breachWatchedAttackDamage, applyStun: false);
                     }
-                    else
-                    {
-                        watchedAttackCooldown = 30;
-                    }
+                    Def.SoundDefOf.BurrowingHeaven_attack?.PlayOneShot(SoundInfo.InMap(SelfPawn));
+                    SelfPawn.PlayAttackAnimation();
+                    watchedAttackCooldown = Props.breachWatchedAttackIntervalTicks;
+                }
+                else
+                {
+                    watchedAttackCooldown = 30;
                 }
             }
         }
@@ -300,6 +307,192 @@ namespace BurrowingHeaven.Comp
             currentStudier = null;
         }
 
+        private static bool IsProperIndoorRoom(Room room)
+        {
+            return room != null
+                && room.ProperRoom
+                && !room.PsychologicallyOutdoors
+                && !room.TouchesMapEdge
+                && !room.IsDoorway;
+        }
+
+        private bool IsValidTargetCandidate(Pawn candidate)
+        {
+            return candidate != null
+                && candidate != SelfPawn
+                && candidate.Spawned
+                && !candidate.Dead
+                && candidate.Faction != SelfPawn.Faction;
+        }
+
+        private List<Pawn> FindUnwatchedBurstTargets()
+        {
+            var results = new List<Pawn>();
+            Map map = parent.MapHeld;
+            if (map == null)
+                return results;
+
+            Room currentRoom = parent.PositionHeld.GetRoom(map);
+            bool useFullRoom = IsProperIndoorRoom(currentRoom);
+            float radiusSq = Props.breachUnwatchedOutdoorRadius * Props.breachUnwatchedOutdoorRadius;
+
+            IReadOnlyList<Pawn> allPawns = map.mapPawns.AllPawnsSpawned;
+            for (int i = 0; i < allPawns.Count; i++)
+            {
+                Pawn candidate = allPawns[i];
+                if (!IsValidTargetCandidate(candidate))
+                    continue;
+
+                if (useFullRoom)
+                {
+                    if (candidate.PositionHeld.GetRoom(map) == currentRoom)
+                        results.Add(candidate);
+                }
+                else if (candidate.PositionHeld.DistanceToSquared(parent.PositionHeld) <= radiusSq)
+                {
+                    results.Add(candidate);
+                }
+            }
+
+            return results;
+        }
+
+        private bool TryTeleportNearVictim()
+        {
+            Map map = SelfPawn?.Map;
+            if (map == null || !SelfPawn.Spawned)
+                return false;
+
+            Pawn anchor = SelectTeleportAnchor(map);
+            if (anchor == null)
+                return false;
+
+            if (!TryFindTeleportCellNear(anchor, map, out IntVec3 destCell))
+                return false;
+
+            IntVec3 oldPos = SelfPawn.Position;
+            AbnormalityUtility.Burst(oldPos, map);
+            FilthMaker.TryMakeFilth(oldPos, map, RimWorld.ThingDefOf.Filth_Blood, SelfPawn.LabelShort, 1);
+
+            SelfPawn.Position = destCell;
+            SelfPawn.Notify_Teleported(endCurrentJob: true, resetTweenedPos: true);
+            map.attackTargetsCache.UpdateTarget(SelfPawn);
+
+            AbnormalityUtility.Burst(destCell, map);
+            return true;
+        }
+
+        private Pawn SelectTeleportAnchor(Map map)
+        {
+            var tier1PlayerAway = new List<Pawn>();
+            var tier2PlayerAny = new List<Pawn>();
+            var tier3HumanlikeAny = new List<Pawn>();
+            var tier4Fallback = new List<Pawn>();
+
+            Room selfRoom = SelfPawn.Position.GetRoom(map);
+            IReadOnlyList<Pawn> allPawns = map.mapPawns.AllPawnsSpawned;
+            for (int i = 0; i < allPawns.Count; i++)
+            {
+                Pawn candidate = allPawns[i];
+                if (!IsValidTargetCandidate(candidate) || candidate.PositionHeld == SelfPawn.Position)
+                    continue;
+
+                bool isPlayerHumanlike = candidate.Faction == Faction.OfPlayer
+                    && candidate.RaceProps != null
+                    && candidate.RaceProps.Humanlike;
+
+                if (isPlayerHumanlike && !candidate.Downed)
+                {
+                    bool differentRoom = selfRoom == null || candidate.PositionHeld.GetRoom(map) != selfRoom;
+                    if (differentRoom || candidate.PositionHeld.DistanceToSquared(SelfPawn.Position) > 64f)
+                    {
+                        tier1PlayerAway.Add(candidate);
+                        continue;
+                    }
+                }
+
+                if (isPlayerHumanlike)
+                {
+                    tier2PlayerAny.Add(candidate);
+                }
+                else if (candidate.RaceProps != null && candidate.RaceProps.Humanlike)
+                {
+                    tier3HumanlikeAny.Add(candidate);
+                }
+                else
+                {
+                    tier4Fallback.Add(candidate);
+                }
+            }
+
+            if (tier1PlayerAway.Count > 0) return tier1PlayerAway.RandomElement();
+            if (tier2PlayerAny.Count > 0) return tier2PlayerAny.RandomElement();
+            if (tier3HumanlikeAny.Count > 0) return tier3HumanlikeAny.RandomElement();
+            if (tier4Fallback.Count > 0) return tier4Fallback.RandomElement();
+            return null;
+        }
+
+        private bool IsValidTeleportCell(IntVec3 c, Map map)
+        {
+            return c.InBounds(map)
+                && c.Standable(map)
+                && !c.Fogged(map)
+                && c != SelfPawn.Position
+                && c.GetFirstPawn(map) == null
+                && c.GetEdifice(map) == null;
+        }
+
+        private bool TryFindTeleportCellNear(Pawn anchor, Map map, out IntVec3 destCell)
+        {
+            destCell = IntVec3.Invalid;
+            IntVec3 anchorPos = anchor.PositionHeld;
+            Room anchorRoom = anchorPos.GetRoom(map);
+
+            if (IsProperIndoorRoom(anchorRoom))
+            {
+                var preferredCells = new List<IntVec3>();
+                var roomCells = new List<IntVec3>();
+                foreach (IntVec3 cell in anchorRoom.Cells)
+                {
+                    if (!IsValidTeleportCell(cell, map))
+                        continue;
+
+                    roomCells.Add(cell);
+                    float distSq = cell.DistanceToSquared(anchorPos);
+                    if (distSq >= 4f && distSq <= 64f)
+                        preferredCells.Add(cell);
+                }
+
+                if (preferredCells.Count > 0)
+                {
+                    destCell = preferredCells.RandomElement();
+                    return true;
+                }
+                if (roomCells.Count > 0)
+                {
+                    destCell = roomCells.RandomElement();
+                    return true;
+                }
+            }
+
+            if (CellFinder.TryFindRandomCellNear(
+                anchorPos,
+                map,
+                9,
+                c => IsValidTeleportCell(c, map) && c.DistanceToSquared(anchorPos) >= 9f,
+                out destCell))
+            {
+                return true;
+            }
+
+            return CellFinder.TryFindRandomCellNear(
+                anchorPos,
+                map,
+                12,
+                c => IsValidTeleportCell(c, map),
+                out destCell);
+        }
+
         private List<Pawn> FindValidTargetsInRadius(float radius, int maxTargets)
         {
             var results = new List<Pawn>();
@@ -312,10 +505,7 @@ namespace BurrowingHeaven.Comp
             for (int i = 0; i < allPawns.Count; i++)
             {
                 Pawn candidate = allPawns[i];
-                if (candidate == null || candidate == SelfPawn || !candidate.Spawned || candidate.Dead)
-                    continue;
-
-                if (candidate.Faction == SelfPawn.Faction)
+                if (!IsValidTargetCandidate(candidate))
                     continue;
 
                 if (candidate.PositionHeld.DistanceToSquared(parent.PositionHeld) <= radiusSq)
@@ -578,7 +768,7 @@ namespace BurrowingHeaven.Comp
             Scribe_References.Look(ref currentStudier, "currentStudier");
 
             Scribe_Values.Look(ref unmonitoredBreachTicks, "unmonitoredBreachTicks", 0);
-            Scribe_Values.Look(ref unmonitoredBreachStacks, "unmonitoredBreachStacks", 0);
+            Scribe_Values.Look(ref hasTriggeredBreachCycle, "hasTriggeredBreachCycle", false);
             Scribe_Values.Look(ref watchedAttackCooldown, "watchedAttackCooldown", 60);
 
             Scribe_Collections.Look(ref hangingHeads, "hangingHeads", LookMode.Deep);
