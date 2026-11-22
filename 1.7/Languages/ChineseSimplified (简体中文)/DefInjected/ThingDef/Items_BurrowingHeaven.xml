@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <BurrowingHeavenEgg.label>穿刺乐园蛋</BurrowingHeavenEgg.label>
+  <BurrowingHeavenEgg.description>异想体死亡后的原始形态，呈现出特殊的蛋形。</BurrowingHeavenEgg.description>
+
+  <BurrowingHeavenEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>穿刺乐园重生</BurrowingHeavenEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <BurrowingHeavenEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>在{PAWN_nameDef}将穿刺乐园的蛋束缚至收容平台后，里面的穿刺乐园重生了。\n穿刺乐园被镇压时肉体会消散，仅留下穿刺乐园的蛋。</BurrowingHeavenEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+
+  <BurrowingHeavenEgg.comps.CompUsable.useLabel>砸碎{0_label}</BurrowingHeavenEgg.comps.CompUsable.useLabel>
+  <BurrowingHeavenEgg.comps.CompUsable.useMessage>{PAWN_nameDef}将穿刺乐园的蛋砸碎了。它消散后露出了一些PeBox。</BurrowingHeavenEgg.comps.CompUsable.useMessage>
+  <BurrowingHeavenEgg.comps.LC_CompEgg.activateDescString>砸碎穿刺乐园的蛋以防止它复活成一只新的穿刺乐园。</BurrowingHeavenEgg.comps.LC_CompEgg.activateDescString>
+  <BurrowingHeavenEgg.comps.LC_CompEgg.activateLabelString>砸碎...</BurrowingHeavenEgg.comps.LC_CompEgg.activateLabelString>
+  <BurrowingHeavenEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎穿刺乐园的蛋</BurrowingHeavenEgg.comps.LC_CompEgg.activatingStringPending>
+  <BurrowingHeavenEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</BurrowingHeavenEgg.comps.LC_CompEgg.guiLabelString>
+
+</LanguageData>

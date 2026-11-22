@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>LC Abnormalities</name>
+  <author>DarthCY</author>
+  <packageId>DarthCY.LC.Abnormalities</packageId>
+  <supportedVersions>
+    <li>1.7</li>
+  </supportedVersions>
+  <description>Consolidated Lobotomy Corporation abnormality content pack for RimWorld 1.7. Requires LC Anomaly Core and does not require the Anomaly DLC.
+
+Included abnormalities:
+- One Sin and Hundreds of Good Deeds (ZAYIN)
+- Meat Lantern (TETH)
+- Laetitia (HE)
+- The Burrowing Heaven (WAW)</description>
+  <url>https://github.com/Rimworld-LCAnomaly-Team/LC-Abnormalities</url>
+  <modDependencies>
+    <li>
+      <packageId>DarthCY.LC.AnomalyCore</packageId>
+      <displayName>LC Anomaly Core</displayName>
+      <downloadUrl>https://github.com/DarthCY-K/LC-Anomaly-Core/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>DarthCY.LC.AnomalyCore</li>
+  </loadAfter>
+  <incompatibleWith>
+    <li>DarthCY.LC.OneSin</li>
+    <li>DarthCY.LC.Laetitia</li>
+    <li>DarthCY.LC.MeatLantern</li>
+    <li>DarthCY.LC.BurrowingHeaven</li>
+  </incompatibleWith>
+</ModMetaData>

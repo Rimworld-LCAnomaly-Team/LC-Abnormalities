@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <BurrowingHeaven.label>穿刺乐园</BurrowingHeaven.label>
+  <BurrowingHeaven.description>穿刺乐园（O-04-72）是一个外形酷似树木的异想体，它拥有一根从地面长出的主干，以及两条分叉成细小枝节的骨架状翼形肢体。其主体呈红色。\n在三个主要部分交汇之处，生有一只带有红色虹膜的黄色眼睛，身体的其他部位也分布着较小的眼睛。</BurrowingHeaven.description>
+
+  <BurrowingHeaven.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</BurrowingHeaven.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <BurrowingHeaven.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>对“穿刺乐园”进行工作时，主管必须让其收容单元始终保持在视野范围内……</BurrowingHeaven.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+
+  <BurrowingHeaven.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</BurrowingHeaven.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <BurrowingHeaven.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>在工作过程中，若收容单元离开摄像机视野，逆卡巴拉计数器便会下降。\n若在异象发生后仍未注视“穿刺乐园”的收容单元，计数器将继续下降。</BurrowingHeaven.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+
+  <BurrowingHeaven.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</BurrowingHeaven.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <BurrowingHeaven.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>当工作结果为良或优时，逆卡巴拉计数器会增加。根据工作结果，似乎一次最多可以增加三格计数。</BurrowingHeaven.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+
+  <BurrowingHeaven.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</BurrowingHeaven.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <BurrowingHeaven.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>警告：在镇压该异想体的过程中，切勿移开视线。</BurrowingHeaven.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+</LanguageData>

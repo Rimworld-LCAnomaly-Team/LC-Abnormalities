@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
+    <defName>DyingBurrowingHeaven</defName>
+    <modExtensions><li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory"><abnormalityCategoryDef>WAW</abnormalityCategoryDef></li></modExtensions>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <thingClass>BurrowingHeaven.Effect.DyingBurrowingHeaven</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
+
+</Defs>
