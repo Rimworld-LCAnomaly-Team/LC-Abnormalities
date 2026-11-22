@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_BurrowingHeaven_BlackDamage</defName>
+    <label>Burrowing Heaven impale</label>
+    <deathMessage>{0} was impaled by The Burrowing Heaven.</deathMessage>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Black</damageType>
+        <riskLevel>WAW</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+</Defs>

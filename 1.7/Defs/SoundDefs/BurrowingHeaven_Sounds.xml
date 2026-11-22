@@ -39,6 +39,24 @@
   </SoundDef>
 
   <SoundDef>
+    <defName>BurrowingHeaven_scream</defName>
+    <context>Any</context>
+    <subSounds>
+      <li>
+        <onCamera>true</onCamera>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/BurrowingHeaven/Scream</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>40</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <sustainLoop>false</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
     <defName>BurrowingHeaven_Death</defName>
     <context>MapOnly</context>
     <subSounds>

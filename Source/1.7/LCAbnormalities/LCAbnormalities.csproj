@@ -77,7 +77,12 @@
     <!-- BurrowingHeaven -->
     <Compile Include="BurrowingHeaven\Comp\CompBurrowingHeavenPawn.cs" />
     <Compile Include="BurrowingHeaven\Comp\CompProperties_BurrowingHeaven.cs" />
+    <Compile Include="BurrowingHeaven\Comp\CompProperties_Studiable_BurrowingHeaven.cs" />
+    <Compile Include="BurrowingHeaven\Comp\CompStudiable_BurrowingHeaven.cs" />
+    <Compile Include="BurrowingHeaven\Def\AnimationDefOf.cs" />
+    <Compile Include="BurrowingHeaven\Def\DamageDefOf.cs" />
     <Compile Include="BurrowingHeaven\Def\PawnKindDefOf.cs" />
+    <Compile Include="BurrowingHeaven\Def\SoundDefOf.cs" />
     <Compile Include="BurrowingHeaven\Def\ThingDefOf.cs" />
     <Compile Include="BurrowingHeaven\Effect\DyingBurrowingHeaven.cs" />
     <Compile Include="BurrowingHeaven\Things\LC_BurrowingHeavenPawn.cs" />
