@@ -101,4 +101,54 @@
     </modExtensions>
   </LCAnomalyCore.Defs.PawnKindDef_AbnormalityEntity>
 
+  <LCAnomalyCore.Defs.PawnKindDef_AbnormalityEntity ParentName="LC_ToolEntityKindBase">
+    <defName>HeartOfAspiration</defName>
+    <label>The Heart of Aspiration</label>
+    <race>HeartOfAspiration</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Building/HeartOfAspiration/HeartOfAspiration</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>1.8</drawSize>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>UI/CodexEntries/HeartOfAspiration_MenuIcon</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>1.5</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>TETH</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.PawnKindDef_AbnormalityEntity>
+
+  <LCAnomalyCore.Defs.PawnKindDef_AbnormalityEntity ParentName="LC_ToolEntityKindBase">
+    <defName>NotesFromCrazedResearcher</defName>
+    <label>Notes from a Crazed Researcher</label>
+    <race>NotesFromCrazedResearcher</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Building/NotesFromCrazedResearcher/NotesFromCrazedResearcher</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>1.8</drawSize>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>UI/CodexEntries/NotesFromCrazedResearcher_MenuIcon</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>1.5</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.PawnKindDef_AbnormalityEntity>
+
 </Defs>

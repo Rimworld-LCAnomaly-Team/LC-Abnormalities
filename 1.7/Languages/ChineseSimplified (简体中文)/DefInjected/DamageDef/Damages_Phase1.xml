@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <LC_Wingbeat_RedLifesteal.label>振翅撕裂</LC_Wingbeat_RedLifesteal.label>
+  <LC_Wingbeat_RedLifesteal.deathMessage>{0}被“振翅”撕碎。</LC_Wingbeat_RedLifesteal.deathMessage>
+
+  <LC_Soda_RedHeal.label>苏打冲击</LC_Soda_RedHeal.label>
+  <LC_Soda_RedHeal.deathMessage>{0}被苏打汽水能量弹击毙。</LC_Soda_RedHeal.deathMessage>
+
+</LanguageData>

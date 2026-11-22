@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <SoundDef>
+    <defName>LC_ScorchedGirl_Escape</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/ScorchedGirl/ScorchedGirl_Escape</clipPath></li></grains>
+        <volumeRange>32~40</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_ScorchedGirl_Fuse</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/ScorchedGirl/ScorchedGirl_Fuse</clipPath></li></grains>
+        <volumeRange>25</volumeRange>
+        <distRange>15~75</distRange>
+        <sustainRelease>3</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_ScorchedGirl_Explode</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/ScorchedGirl/ScorchedGirl_Explode</clipPath></li></grains>
+        <volumeRange>38~48</volumeRange>
+        <pitchRange>0.95~1.04</pitchRange>
+        <distRange>0~95</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_ScorchedGirl_SmallExplode</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/ScorchedGirl/ScorchedGirl_SmallExplode</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_DerFreischutz_Portal</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/DerFreischutz/Freischutz_Portal</clipPath></li></grains>
+        <volumeRange>32~40</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_DerFreischutz_Shoot</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/DerFreischutz/Freischutz_Shoot</clipPath></li></grains>
+        <volumeRange>34~44</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~90</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_DerFreischutz_Bullet</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/DerFreischutz/Freischutz_bullet</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Funeral_Attack</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FuneralOfDeadButterflies/Butterfly_Attack</clipPath></li></grains>
+        <volumeRange>26~34</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Funeral_Open</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FuneralOfDeadButterflies/Butterfly_open</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Funeral_Skill</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FuneralOfDeadButterflies/Butterfly_Skill</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Funeral_Close</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FuneralOfDeadButterflies/Butterfly_Close</clipPath></li></grains>
+        <volumeRange>24~32</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_SnowQueen_Kiss1</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/SnowQueen/SnowQueen_Kiss1</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_SnowQueen_EnergyFreeze</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/SnowQueen/SnowQueen_EnergyFreeze</clipPath></li></grains>
+        <volumeRange>32~40</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_SnowQueen_EnergyMelt</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/SnowQueen/SnowQueen_EnergyMelt</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_SnowQueen_Fight</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/SnowQueen/SnowQueen_Fight</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_SnowQueen_Win</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/SnowQueen/SnowQueen_Win</clipPath></li></grains>
+        <volumeRange>32~40</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_SnowQueen_Lose</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/SnowQueen/SnowQueen_Lose</clipPath></li></grains>
+        <volumeRange>34~42</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_ResearcherNote_Start</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Building/NotesFromCrazedResearcher/NoteBook_Start</clipPath></li></grains>
+        <volumeRange>24~32</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~65</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_ResearcherNote_Finish</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Building/NotesFromCrazedResearcher/NoteBook_Finish</clipPath></li></grains>
+        <volumeRange>24~32</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~65</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

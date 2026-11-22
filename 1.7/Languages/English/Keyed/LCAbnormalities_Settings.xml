@@ -15,6 +15,16 @@
   <LCAbn_Settings_EnableBurrowingHeaven>Enable The Burrowing Heaven (WAW)</LCAbn_Settings_EnableBurrowingHeaven>
   <LCAbn_Settings_EnableFleshIdol>Enable Flesh Idol (WAW Tool)</LCAbn_Settings_EnableFleshIdol>
   <LCAbn_Settings_EnableNothingThere>Enable Nothing There (ALEPH)</LCAbn_Settings_EnableNothingThere>
+  <LCAbn_Settings_EnableFairyFestival>Enable Fairy Festival (ZAYIN)</LCAbn_Settings_EnableFairyFestival>
+  <LCAbn_Settings_EnableWellCheers>Enable Opened Can of WellCheers (ZAYIN)</LCAbn_Settings_EnableWellCheers>
+  <LCAbn_Settings_EnablePunishingBird>Enable Punishing Bird (TETH)</LCAbn_Settings_EnablePunishingBird>
+  <LCAbn_Settings_EnableVoidDream>Enable Void Dream (TETH)</LCAbn_Settings_EnableVoidDream>
+  <LCAbn_Settings_EnableHeartOfAspiration>Enable The Heart of Aspiration (TETH Tool)</LCAbn_Settings_EnableHeartOfAspiration>
+  <LCAbn_Settings_EnableScorchedGirl>Enable Scorched Girl (TETH)</LCAbn_Settings_EnableScorchedGirl>
+  <LCAbn_Settings_EnableDerFreischutz>Enable Der Freischütz (HE)</LCAbn_Settings_EnableDerFreischutz>
+  <LCAbn_Settings_EnableFuneralOfDeadButterflies>Enable Funeral of the Dead Butterflies (HE)</LCAbn_Settings_EnableFuneralOfDeadButterflies>
+  <LCAbn_Settings_EnableSnowQueen>Enable The Snow Queen (HE)</LCAbn_Settings_EnableSnowQueen>
+  <LCAbn_Settings_EnableNotesFromCrazedResearcher>Enable Notes from a Crazed Researcher (HE Tool)</LCAbn_Settings_EnableNotesFromCrazedResearcher>
 
   <LCAbn_Settings_PortraitHeader>Portrait of Another World</LCAbn_Settings_PortraitHeader>
   <LCAbn_Settings_PortraitAllowNonColonist>Allow prisoners and visitors as substitutes</LCAbn_Settings_PortraitAllowNonColonist>

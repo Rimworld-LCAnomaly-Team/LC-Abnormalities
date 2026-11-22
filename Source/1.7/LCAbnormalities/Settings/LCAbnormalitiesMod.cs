@@ -90,6 +90,16 @@ namespace LCAbnormalities.Settings
             listing.CheckboxLabeled("LCAbn_Settings_EnableBurrowingHeaven".Translate(), ref Settings.EnableBurrowingHeaven);
             listing.CheckboxLabeled("LCAbn_Settings_EnableFleshIdol".Translate(), ref Settings.EnableFleshIdol);
             listing.CheckboxLabeled("LCAbn_Settings_EnableNothingThere".Translate(), ref Settings.EnableNothingThere);
+            listing.CheckboxLabeled("LCAbn_Settings_EnableFairyFestival".Translate(), ref Settings.EnableFairyFestival);
+            listing.CheckboxLabeled("LCAbn_Settings_EnableWellCheers".Translate(), ref Settings.EnableWellCheers);
+            listing.CheckboxLabeled("LCAbn_Settings_EnablePunishingBird".Translate(), ref Settings.EnablePunishingBird);
+            listing.CheckboxLabeled("LCAbn_Settings_EnableVoidDream".Translate(), ref Settings.EnableVoidDream);
+            listing.CheckboxLabeled("LCAbn_Settings_EnableHeartOfAspiration".Translate(), ref Settings.EnableHeartOfAspiration);
+            listing.CheckboxLabeled("LCAbn_Settings_EnableScorchedGirl".Translate(), ref Settings.EnableScorchedGirl);
+            listing.CheckboxLabeled("LCAbn_Settings_EnableDerFreischutz".Translate(), ref Settings.EnableDerFreischutz);
+            listing.CheckboxLabeled("LCAbn_Settings_EnableFuneralOfDeadButterflies".Translate(), ref Settings.EnableFuneralOfDeadButterflies);
+            listing.CheckboxLabeled("LCAbn_Settings_EnableSnowQueen".Translate(), ref Settings.EnableSnowQueen);
+            listing.CheckboxLabeled("LCAbn_Settings_EnableNotesFromCrazedResearcher".Translate(), ref Settings.EnableNotesFromCrazedResearcher);
         }
 
         private static void DrawMeatLanternSection(Listing_Standard listing)
@@ -193,6 +203,7 @@ namespace LCAbnormalities.Settings
     {
         static LCAbnormalitiesBootstrap()
         {
+            LCAbnormalities.Shared.LCAbnormalitiesEvents.EnsureRegistered();
             ExtractUtil.RegisterEligibilityFilter(def => LCAbnormalitiesMod.Settings?.IsDefEnabledForExtraction(def) ?? true);
         }
     }

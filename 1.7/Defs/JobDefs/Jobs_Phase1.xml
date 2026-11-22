@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>LC_WakeVoidDreamSleeper</defName>
+    <driverClass>LCAbnormalities.VoidDream.JobDriver_WakeVoidDreamSleeper</driverClass>
+    <reportString>waking TargetA from void sleep.</reportString>
+    <casualInterruptible>true</casualInterruptible>
+  </JobDef>
+
+</Defs>

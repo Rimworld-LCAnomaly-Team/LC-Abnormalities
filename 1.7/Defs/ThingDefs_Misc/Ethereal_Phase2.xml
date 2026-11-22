@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
+    <defName>DyingScorchedGirl</defName>
+    <label>Scorched Girl (Dissolving)</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <thingClass>LCAbnormalities.Shared.DyingAbnormality</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <modExtensions>
+      <li Class="LCAbnormalities.Shared.EggReturnExtension">
+        <eggDef>ScorchedGirlEgg</eggDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
+    <defName>DyingDerFreischutz</defName>
+    <label>Der Freischütz (Dissolving)</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <thingClass>LCAbnormalities.Shared.DyingAbnormality</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <modExtensions>
+      <li Class="LCAbnormalities.Shared.EggReturnExtension">
+        <eggDef>DerFreischutzEgg</eggDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
+    <defName>DyingFuneralOfDeadButterflies</defName>
+    <label>Funeral of the Dead Butterflies (Dissolving)</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <thingClass>LCAbnormalities.Shared.DyingAbnormality</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <modExtensions>
+      <li Class="LCAbnormalities.Shared.EggReturnExtension">
+        <eggDef>FuneralOfDeadButterfliesEgg</eggDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
+    <defName>DyingSnowQueen</defName>
+    <label>The Snow Queen (Dissolving)</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <thingClass>LCAbnormalities.Shared.DyingAbnormality</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <modExtensions>
+      <li Class="LCAbnormalities.Shared.EggReturnExtension">
+        <eggDef>SnowQueenEgg</eggDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
+
+</Defs>

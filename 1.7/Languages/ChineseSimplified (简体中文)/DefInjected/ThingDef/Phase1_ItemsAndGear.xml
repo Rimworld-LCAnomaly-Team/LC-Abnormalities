@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Fairy Festival -->
+  <FairyFestival.label>精灵盛宴</FairyFestival.label>
+  <FairyFestival.description>一群闪烁微光、羽翼如蝉纱般透亮的仁慈妖精（F-04-83）。它们总是不倦地为指派给自己的员工疗伤抚慰。\n\n然而这份温柔充满排他性：凡身负精灵祝佑却转头去照料任何其他异想体的背叛者，都会在闪光中遭瞬间撕碎分食。</FairyFestival.description>
+  <FairyFestival.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</FairyFestival.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <FairyFestival.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>完成对精灵盛宴的工作后，员工将获赠“精灵的照料”，温和修复外伤与精神压力。\n工作速度 +2% 与成功率 +2%。</FairyFestival.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <FairyFestival.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</FairyFestival.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <FairyFestival.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>严重警告：只要“精灵的照料”尚在生效，千万别让该员工去接触任何其他异想体——哪怕只是开始工作，也会当场惨遭啃噬殆尽。\nE.G.O饰品“振翅”已解锁。</FairyFestival.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <FairyFestival.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</FairyFestival.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <FairyFestival.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>本能与沟通工作最能取悦精灵群，洞察与压迫则更容易引发磕碰。\nZAYIN 级 E.G.O 武器与护甲“振翅”已解锁。</FairyFestival.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <FairyFestival.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</FairyFestival.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <FairyFestival.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>只要专一守信直至祝福退去，精灵盛宴便是殖民地中最温柔可靠的治疗者。\n工作速度 +8% 与成功率 +8%。</FairyFestival.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+  <DyingFairyFestival.label>精灵盛宴（消散中）</DyingFairyFestival.label>
+
+  <FairyFestivalEgg.label>精灵盛宴收容蛋</FairyFestivalEgg.label>
+  <FairyFestivalEgg.description>精灵盛宴（F-04-83）还原后的原始蛰伏卵体。</FairyFestivalEgg.description>
+  <FairyFestivalEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>精灵盛宴重生</FairyFestivalEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <FairyFestivalEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将精灵盛宴收容蛋安置在收容平台上，萤光妖精们再次从中振翅苏醒。</FairyFestivalEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <FairyFestivalEgg.comps.CompUsable.useLabel>砸碎{0_label}</FairyFestivalEgg.comps.CompUsable.useLabel>
+  <FairyFestivalEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了精灵盛宴收容蛋，回收了一批脑啡肽箱。</FairyFestivalEgg.comps.CompUsable.useMessage>
+  <FairyFestivalEgg.comps.LC_CompEgg.activateDescString>砸碎精灵盛宴收容蛋以回收脑啡肽箱。</FairyFestivalEgg.comps.LC_CompEgg.activateDescString>
+  <FairyFestivalEgg.comps.LC_CompEgg.activateLabelString>砸碎...</FairyFestivalEgg.comps.LC_CompEgg.activateLabelString>
+  <FairyFestivalEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎精灵盛宴收容蛋</FairyFestivalEgg.comps.LC_CompEgg.activatingStringPending>
+  <FairyFestivalEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</FairyFestivalEgg.comps.LC_CompEgg.guiLabelString>
+
+  <EgoWeapon_FairyFestival.label>E.G.O. 武器（振翅）</EgoWeapon_FairyFestival.label>
+  <EgoWeapon_FairyFestival.description>以半透明妖精蝉翼与利齿凝铸而成的轻灵短杖（ZAYIN）。\n每当斩中血肉生物时，都会顺着荧光丝线吸取生命来愈合握持者的伤口。</EgoWeapon_FairyFestival.description>
+  <EgoWeapon_FairyFestival.tools.wingblade.label>妖精翼刃</EgoWeapon_FairyFestival.tools.wingblade.label>
+  <Apparel_FairyFestivalSuit.label>E.G.O. 护甲（振翅）</Apparel_FairyFestivalSuit.label>
+  <Apparel_FairyFestivalSuit.description>由柔亮草绿精灵丝编织的轻盈长袍（ZAYIN），略微提升行动与作业敏捷度。</Apparel_FairyFestivalSuit.description>
+  <Accessory_FairyFestival.label>E.G.O. 饰品（振翅）</Accessory_FairyFestival.label>
+  <Accessory_FairyFestival.description>泛着莹润微光的精灵手套，能让穿戴者照料异想体与灵巧作业更为顺畅。</Accessory_FairyFestival.description>
+
+  <!-- WellCheers -->
+  <WellCheers.label>韦尔奇牌汽水机</WellCheers.label>
+  <WellCheers.description>一架由戴着水手帽的活泼小虾打理的粉彩汽水售货机（F-05-52）。\n工作评价为“优”或“良”时会奉上红（疗伤）、蓝（安神）或紫（双效）汽水；若评估落入“差”，饮下毒化汽水的员工将直接陷入深海失温昏睡并遭受精神冲击。</WellCheers.description>
+  <WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>优良工作会随机奉上樱桃红（修复外伤）、深海蓝（恢复精神）或暮紫混合罐装汽水。</WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>若工作结果为“差”，饮用劣质汽水会导致员工当场深度失温昏迷并承受精神白伤。\nE.G.O饰品“苏打”已解锁。</WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>小虾船员偏爱干脆利落的本能与洞察工作，厌恶犹豫不决的压迫手段。\nZAYIN 级 E.G.O 武器与护甲“苏打”已解锁。</WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>伴随海鸥与汽水摇晃声，它是少有能稳定产出双效恢复补给的 ZAYIN 机器。\n工作速度 +8% 与成功率 +8%。</WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+  <DyingWellCheers.label>韦尔奇牌汽水机（消散中）</DyingWellCheers.label>
+
+  <WellCheersEgg.label>韦尔奇汽水机收容蛋</WellCheersEgg.label>
+  <WellCheersEgg.description>韦尔奇牌汽水机（F-05-52）还原后的原始蛰伏卵体。</WellCheersEgg.description>
+  <WellCheersEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>韦尔奇牌汽水机已收容</WellCheersEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <WellCheersEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将韦尔奇汽水机收容蛋安置在收容平台上，冰镇售货机随之嗡鸣启动。</WellCheersEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <WellCheersEgg.comps.CompUsable.useLabel>砸碎{0_label}</WellCheersEgg.comps.CompUsable.useLabel>
+  <WellCheersEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了韦尔奇汽水机收容蛋，回收了一批脑啡肽箱。</WellCheersEgg.comps.CompUsable.useMessage>
+  <WellCheersEgg.comps.LC_CompEgg.activateDescString>砸碎韦尔奇汽水机收容蛋以回收脑啡肽箱。</WellCheersEgg.comps.LC_CompEgg.activateDescString>
+  <WellCheersEgg.comps.LC_CompEgg.activateLabelString>砸碎...</WellCheersEgg.comps.LC_CompEgg.activateLabelString>
+  <WellCheersEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎韦尔奇汽水机收容蛋</WellCheersEgg.comps.LC_CompEgg.activatingStringPending>
+  <WellCheersEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</WellCheersEgg.comps.LC_CompEgg.guiLabelString>
+
+  <EgoWeapon_WellCheers.label>E.G.O. 武器（苏打）</EgoWeapon_WellCheers.label>
+  <EgoWeapon_WellCheers.description>嘶嘶冒着汽泡的粉彩碳酸卡宾枪（ZAYIN）。\n命中敌人时有概率四溅汽水微粒，顺带治愈射手些许伤势与精神负荷。</EgoWeapon_WellCheers.description>
+  <EgoWeapon_WellCheers.tools.stock.label>枪托</EgoWeapon_WellCheers.tools.stock.label>
+  <Bullet_EgoWeapon_WellCheers.label>苏打 E.G.O. 能量弹</Bullet_EgoWeapon_WellCheers.label>
+  <Apparel_WellCheersSuit.label>E.G.O. 护甲（苏打）</Apparel_WellCheersSuit.label>
+  <Apparel_WellCheersSuit.description>清新蓝红水手风工作服（ZAYIN），兼具不错的物理防寒与防暑效果。</Apparel_WellCheersSuit.description>
+  <Accessory_WellCheers.label>E.G.O. 饰品（苏打）</Accessory_WellCheers.label>
+  <Accessory_WellCheers.description>别在衣领旁的俏皮海虾徽章，总能提振佩戴者的士气。</Accessory_WellCheers.description>
+
+  <!-- Punishing Bird -->
+  <PunishingBird.label>惩戒鸟</PunishingBird.label>
+  <PunishingBird.description>一只雪白娇小、腹生朱红圆斑的雀鸟（O-02-56）。\n当逆卡巴拉计数器归零出逃后，它只会在设施内轻轻啄人并在大约 45 秒后自行化蛋归返——除非有人敢攻击它！一旦受击，其胸腹会撕裂开布满森白巨齿的血盆大口，免疫一切常规伤害并以恐怖极速执行致命吞咬。</PunishingBird.description>
+  <PunishingBird.tools.beak.label>尖喙</PunishingBird.tools.beak.label>
+  <PunishingBird.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</PunishingBird.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <PunishingBird.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>逆卡巴拉计数器上限为 4。突破后它会先温柔地在殖民地徘徊轻啄几下，片刻后自行还原为收容蛋。</PunishingBird.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <PunishingBird.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</PunishingBird.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <PunishingBird.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>绝对禁令：切勿向出逃中的惩戒鸟开火或攻击！一旦受伤它立刻狂暴裂口（全四色抗性变为 0.1，高速追击并咬出 75–100 点高穿甲红伤）。\nE.G.O饰品“喙”已解锁。</PunishingBird.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <PunishingBird.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</PunishingBird.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <PunishingBird.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>洞察与沟通工作最能讨好它，但压迫工作往往招致反感与劣评。\nTETH 级 E.G.O 武器与护甲“喙”已解锁。</PunishingBird.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <PunishingBird.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</PunishingBird.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <PunishingBird.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>当这只执拗的小裁判落下天平重罚之后，它便会心满意足地自行退场化蛋。\n工作速度 +10% 与成功率 +10%。</PunishingBird.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+  <DyingPunishingBird.label>惩戒鸟（消散中）</DyingPunishingBird.label>
+
+  <PunishingBirdEgg.label>惩戒鸟收容蛋</PunishingBirdEgg.label>
+  <PunishingBirdEgg.description>惩戒鸟（O-02-56）归于沉寂后的原始卵体。</PunishingBirdEgg.description>
+  <PunishingBirdEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>惩戒鸟已收容</PunishingBirdEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <PunishingBirdEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将惩戒鸟收容蛋安置在收容平台上，雪白雀鸟再次乖巧地蹲踞其间。</PunishingBirdEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <PunishingBirdEgg.comps.CompUsable.useLabel>砸碎{0_label}</PunishingBirdEgg.comps.CompUsable.useLabel>
+  <PunishingBirdEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了惩戒鸟收容蛋，回收了一批脑啡肽箱。</PunishingBirdEgg.comps.CompUsable.useMessage>
+  <PunishingBirdEgg.comps.LC_CompEgg.activateDescString>砸碎惩戒鸟收容蛋以回收脑啡肽箱。</PunishingBirdEgg.comps.LC_CompEgg.activateDescString>
+  <PunishingBirdEgg.comps.LC_CompEgg.activateLabelString>砸碎...</PunishingBirdEgg.comps.LC_CompEgg.activateLabelString>
+  <PunishingBirdEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎惩戒鸟收容蛋</PunishingBirdEgg.comps.LC_CompEgg.activatingStringPending>
+  <PunishingBirdEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</PunishingBirdEgg.comps.LC_CompEgg.guiLabelString>
+
+  <EgoWeapon_PunishingBird.label>E.G.O. 武器（喙）</EgoWeapon_PunishingBird.label>
+  <EgoWeapon_PunishingBird.description>仿照惩戒鸟纤细鸟喙雕刻而成的洁白速射手枪（TETH），出膛迅疾、连点精准。</EgoWeapon_PunishingBird.description>
+  <EgoWeapon_PunishingBird.tools.grip.label>握把</EgoWeapon_PunishingBird.tools.grip.label>
+  <Bullet_EgoWeapon_PunishingBird.label>喙 E.G.O. 穿甲弹</Bullet_EgoWeapon_PunishingBird.label>
+  <Apparel_PunishingBirdSuit.label>E.G.O. 护甲（喙）</Apparel_PunishingBirdSuit.label>
+  <Apparel_PunishingBirdSuit.description>镶着猩红绒边警示带的洁白羽衣风外套（TETH），物理与精神防护均衡而轻快。</Apparel_PunishingBirdSuit.description>
+  <Accessory_PunishingBird.label>E.G.O. 饰品（喙）</Accessory_PunishingBird.label>
+  <Accessory_PunishingBird.description>一枚戴在发间的洁白小羽毛饰扣，令身手更加敏捷灵巧。</Accessory_PunishingBird.description>
+
+  <!-- Void Dream -->
+  <VoidDream.label>虚空之梦</VoidDream.label>
+  <VoidDream.description>一只紫绒覆体、胸口隐约眨动着鲜红三眼的嗜睡绵羊（T-02-99）。\n若指派自律 I 级的低修养员工前去接触，计数器就会骤减；一旦突破收容，它会陡然变成高大的三眼怪鸡，周期发出催眠啼鸣令附近人类沉睡乃至遭遇噩梦爆炸。</VoidDream.description>
+  <VoidDream.tools.dream_beak.label>梦魇尖啄</VoidDream.tools.dream_beak.label>
+  <VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>切勿派遣自律等级为 I 级或更低的员工接触虚空之梦，否则结束时必将扣除逆卡巴拉计数器。</VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>突破收容后它会变身为诡谲的三眼巨鸡，并反复鸣叫令 10 格范围内所有人类陷入昏睡。\nE.G.O饰品“梦乡”已解锁。</VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>一旦有殖民者昏睡，请选中其并点击“唤醒沉睡者”在 60 秒内晃醒，否则将直接爆发高额白黑双伤噩梦。\nTETH 级 E.G.O 武器与护甲“梦乡”已解锁。</VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>沟通工作始终能安抚这头漂泊于虚梦间的绵羊。\n工作速度 +10% 与成功率 +10%。</VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+  <DyingVoidDream.label>虚空之梦（消散中）</DyingVoidDream.label>
+
+  <VoidDreamEgg.label>虚空之梦收容蛋</VoidDreamEgg.label>
+  <VoidDreamEgg.description>虚空之梦（T-02-99）被镇压后凝聚而成的紫色梦境卵核。</VoidDreamEgg.description>
+  <VoidDreamEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>虚空之梦已收容</VoidDreamEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <VoidDreamEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将虚空之梦收容蛋安放在收容平台上，酣睡的小紫羊重新蜷缩在单元之中。</VoidDreamEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <VoidDreamEgg.comps.CompUsable.useLabel>砸碎{0_label}</VoidDreamEgg.comps.CompUsable.useLabel>
+  <VoidDreamEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了虚空之梦收容蛋，回收了一批脑啡肽箱。</VoidDreamEgg.comps.CompUsable.useMessage>
+  <VoidDreamEgg.comps.LC_CompEgg.activateDescString>砸碎虚空之梦收容蛋以回收脑啡肽箱。</VoidDreamEgg.comps.LC_CompEgg.activateDescString>
+  <VoidDreamEgg.comps.LC_CompEgg.activateLabelString>砸碎...</VoidDreamEgg.comps.LC_CompEgg.activateLabelString>
+  <VoidDreamEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎虚空之梦收容蛋</VoidDreamEgg.comps.LC_CompEgg.activatingStringPending>
+  <VoidDreamEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</VoidDreamEgg.comps.LC_CompEgg.guiLabelString>
+
+  <EgoWeapon_VoidDream.label>E.G.O. 武器（梦乡）</EgoWeapon_VoidDream.label>
+  <EgoWeapon_VoidDream.description>镶嵌着圆睁赤瞳的暮紫卡宾枪（TETH），发射沉重而诡异的精神白伤射线。</EgoWeapon_VoidDream.description>
+  <EgoWeapon_VoidDream.tools.stock.label>枪托</EgoWeapon_VoidDream.tools.stock.label>
+  <Bullet_EgoWeapon_VoidDream.label>梦乡 E.G.O. 射线弹</Bullet_EgoWeapon_VoidDream.label>
+  <Apparel_VoidDreamSuit.label>E.G.O. 护甲（梦乡）</Apparel_VoidDreamSuit.label>
+  <Apparel_VoidDreamSuit.description>绣满鎏金星辰与睡眠魔眼的厚实紫呢风衣（TETH），具备良好的精神与黑伤抗性。</Apparel_VoidDreamSuit.description>
+  <Accessory_VoidDream.label>E.G.O. 饰品（梦乡）</Accessory_VoidDream.label>
+  <Accessory_VoidDream.description>一对毛茸茸的梦羊角饰，可柔化外界心灵冲击并降低精神崩溃阈值。</Accessory_VoidDream.description>
+
+  <!-- The Heart of Aspiration -->
+  <HeartOfAspiration.label>渴望之心</HeartOfAspiration.label>
+  <HeartOfAspiration.description>一颗仍在金属支架与琉璃腔中悸动不止的仿生心脏（T-09-77）。\n殖民者可将其借用佩戴于身侧，在战斗中换取激增的移速、工作速度与近战爆发——但若空转满 60 秒或未沾敌人鲜血便草草归还，心脏便会反噬宿主陷入狂暴。</HeartOfAspiration.description>
+  <HeartOfAspiration.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</HeartOfAspiration.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <HeartOfAspiration.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>佩戴渴望之心后，员工的移动速度、作业速度、近战伤害与止痛能力都将伴随激越心律显著上升。</HeartOfAspiration.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <HeartOfAspiration.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</HeartOfAspiration.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <HeartOfAspiration.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>警告：佩戴后若未能在 60 秒内对敌人造成有效伤害，或在未见血前便直接归还收容平台，渴望之心就会引发剧烈红白反噬并令使用者陷入狂暴。</HeartOfAspiration.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <HeartOfAspiration.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</HeartOfAspiration.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <HeartOfAspiration.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>只要在佩戴期间顺利在战斗中击伤过敌人，渴望便会暂歇，员工即可安全走回平台将其放回。</HeartOfAspiration.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+
+  <HeartOfAspirationEgg.label>渴望之心收容蛋</HeartOfAspirationEgg.label>
+  <HeartOfAspirationEgg.description>封存着渴望之心（T-09-77）的工具型异想体收容胶囊。将其绑上收容平台即可借用佩戴，或砸碎换取脑啡肽箱。</HeartOfAspirationEgg.description>
+  <HeartOfAspirationEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>渴望之心已收容</HeartOfAspirationEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <HeartOfAspirationEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将渴望之心收容蛋安放在收容平台上，搏动的金红心脏已静置于架台之中。</HeartOfAspirationEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <HeartOfAspirationEgg.comps.CompUsable.useLabel>砸碎{0_label}</HeartOfAspirationEgg.comps.CompUsable.useLabel>
+  <HeartOfAspirationEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了渴望之心收容蛋，回收了若干脑啡肽箱。</HeartOfAspirationEgg.comps.CompUsable.useMessage>
+  <HeartOfAspirationEgg.comps.LC_CompEgg.activateDescString>砸碎渴望之心收容蛋以回收脑啡肽箱。</HeartOfAspirationEgg.comps.LC_CompEgg.activateDescString>
+  <HeartOfAspirationEgg.comps.LC_CompEgg.activateLabelString>砸碎...</HeartOfAspirationEgg.comps.LC_CompEgg.activateLabelString>
+  <HeartOfAspirationEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎渴望之心收容蛋</HeartOfAspirationEgg.comps.LC_CompEgg.activatingStringPending>
+  <HeartOfAspirationEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</HeartOfAspirationEgg.comps.LC_CompEgg.guiLabelString>
+
+</LanguageData>

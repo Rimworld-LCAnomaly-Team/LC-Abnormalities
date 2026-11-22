@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>HeartOfAspiration</defName>
+    <label>The Heart of Aspiration</label>
+    <description>The Heart of Aspiration (T-09-77) is an equippable TETH Tool Abnormality.\nBorrowing the racing heart grants surge-speed and combat ferocity, yet failing to spill enemy blood within 60 seconds—or returning it peacefully too soon—drives its wearer berserk.</description>
+    <uiIconPath>UI/CodexEntries/HeartOfAspiration</uiIconPath>
+    <category>TETH</category>
+    <orderInCategory>850</orderInCategory>
+    <linkedThings>
+      <li>HeartOfAspiration</li>
+      <li>HeartOfAspirationEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <FairyFestival.label>精灵盛宴</FairyFestival.label>
+  <FairyFestival.description>精灵盛宴（F-04-83）是一群散发光辉的 ZAYIN 级仁慈妖精。\n它们会细心照料并治愈指派给自己的员工——可一旦受照料的员工胆敢去研究任何其他异想体，妖精便会因善妒而在顷刻间将其撕碎分食。</FairyFestival.description>
+
+  <WellCheers.label>韦尔奇牌汽水机</WellCheers.label>
+  <WellCheers.description>一尊由快乐虾船员看管的粉彩自动售货机（F-05-52），源源不断供应冰爽的樱桃与海盐汽水。\n优良工作会随机奖励治愈创伤或安抚精神的美味罐装；糟糕的工作结果则会让饮用者坠入失温沉睡与精神冲击。</WellCheers.description>
+
+  <PunishingBird.label>惩戒鸟</PunishingBird.label>
+  <PunishingBird.description>一只生有圆润雪白绒羽、胸前点缀鲜红斑纹的娇小 TETH 级雀鸟（O-02-56）。\n一旦突破收容，千万不要攻击它——它只会温和啄人几下便自行化蛋归位；可若有人敢动手挑衅，其胸腹会瞬间裂成满口利齿的血盆大口展开高速处决。</PunishingBird.description>
+
+  <VoidDream.label>虚空之梦</VoidDream.label>
+  <VoidDream.description>一只藏着第三只鲜红眼睛的紫绒睡梦绵羊（T-02-99）。\n低自律员工前去工作极易惊扰它；突破收容后它会蜕变为诡异的巨型三眼公鸡，以催眠啼鸣使周围人类昏睡，若 60 秒内无人摇醒便会引发致命噩梦冲击。</VoidDream.description>
+
+  <HeartOfAspiration.label>渴望之心</HeartOfAspiration.label>
+  <HeartOfAspiration.description>一只时刻剧烈搏动的 TETH 级可佩戴工具型异想体（T-09-77）。\n佩戴者能获得爆发般的移速、攻速与近战威力；然而一旦在 60 秒空转内未能对敌人造成有效战斗伤害，或尚未见血就企图将其归还，心跳便会反噬宿主使其陷入狂暴。</HeartOfAspiration.description>
+
+</LanguageData>

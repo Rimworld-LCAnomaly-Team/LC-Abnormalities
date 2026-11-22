@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <LC_Tool_EquipFloatMenu>佩戴{0}</LC_Tool_EquipFloatMenu>
+
+  <LC_FairyFestival_CareMsg>精灵盛宴留下一缕温柔的祝佑守护着 {0}。</LC_FairyFestival_CareMsg>
+  <LC_FairyFestival_DevouredLetterLabel>精灵的妒忌吞噬</LC_FairyFestival_DevouredLetterLabel>
+  <LC_FairyFestival_DevouredLetterText>{0} 身负“精灵的照料”却胆敢前去照料其他异想体（{1}）——违背了精灵的独占誓约，在荧光闪耀中惨遭群聚吞食！</LC_FairyFestival_DevouredLetterText>
+
+  <LC_WellCheers_RedCanMsg>{0} 饮下了樱桃红“韦尔奇汽水”，体表伤势迅速愈合。</LC_WellCheers_RedCanMsg>
+  <LC_WellCheers_BlueCanMsg>{0} 饮下了深海蓝“韦尔奇汽水”，精神压力得以抚平。</LC_WellCheers_BlueCanMsg>
+  <LC_WellCheers_PurpleCanMsg>{0} 饮下了暮紫混酿“韦尔奇汽水”，身心皆感到舒畅振奋。</LC_WellCheers_PurpleCanMsg>
+  <LC_WellCheers_BadDrinkMsg>劣质罐装令 {0} 昏迷于深海寒梦之中，并承受失温与精神打击！</LC_WellCheers_BadDrinkMsg>
+
+  <LC_PunishingBird_EscapedLabel>突破收容：惩戒鸟</LC_PunishingBird_EscapedLabel>
+  <LC_PunishingBird_EscapedText>{0} 溜出了收容单元！切勿攻击它——只要无人挑衅，它轻啄几下后就会自行安静化蛋。</LC_PunishingBird_EscapedText>
+  <LC_PunishingBird_KilledLabel>镇压成功：惩戒鸟</LC_PunishingBird_KilledLabel>
+  <LC_PunishingBird_KilledText>{0} 已被成功镇压并还原为收容蛋。</LC_PunishingBird_KilledText>
+  <LC_PunishingBird_EnragedMsg>惩戒鸟遭到攻击！它的胸腹骤然裂开巨口，全速扑向冒犯者！</LC_PunishingBird_EnragedMsg>
+  <LC_PunishingBird_PunishMsg>惩戒鸟以巨口狠狠咬噬了 {0}，随后心满意足地化蛋归返。</LC_PunishingBird_PunishMsg>
+  <LC_PunishingBird_ReturnMsg>惩戒鸟啄累了，乖巧地自己滚回成了收容蛋。</LC_PunishingBird_ReturnMsg>
+
+  <LC_VoidDream_EscapedLabel>突破收容：虚空之梦</LC_VoidDream_EscapedLabel>
+  <LC_VoidDream_EscapedText>{0} 化作了三眼公鸡形态突破收容！请务必在 60 秒内唤醒被催眠的殖民者。</LC_VoidDream_EscapedText>
+  <LC_VoidDream_KilledLabel>镇压成功：虚空之梦</LC_VoidDream_KilledLabel>
+  <LC_VoidDream_KilledText>{0} 已被镇压并还原为收容蛋。</LC_VoidDream_KilledText>
+  <LC_VoidDream_LowTemperanceMsg>{0} 的自律等级过低，惊扰了虚空之梦并降低了逆卡巴拉计数器！</LC_VoidDream_LowTemperanceMsg>
+  <LC_VoidDream_SleepMsg>虚空之梦的催眠啼鸣使 {0} 陷入了沉睡！</LC_VoidDream_SleepMsg>
+  <LC_VoidDream_SecondCrowMsg>二次啼鸣刺穿了 {0} 的梦境，引爆了惨烈的噩梦冲击！</LC_VoidDream_SecondCrowMsg>
+  <LC_VoidDream_SleepCountdownTip>噩梦爆发倒计时：{0} 秒</LC_VoidDream_SleepCountdownTip>
+  <LC_VoidDream_NightmareMsg>无人及时拍醒 {0}——虚空噩梦在其脑海中剧烈炸裂！</LC_VoidDream_NightmareMsg>
+  <LC_VoidDream_WakeGizmoLabel>唤醒沉睡者</LC_VoidDream_WakeGizmoLabel>
+  <LC_VoidDream_WakeGizmoDesc>指派一名殖民者在噩梦爆发前把 {0} 摇醒。</LC_VoidDream_WakeGizmoDesc>
+  <LC_VoidDream_WokeMsg>{1} 及时把 {0} 从虚空睡梦中晃醒了。</LC_VoidDream_WokeMsg>
+
+  <LC_HeartOfAspiration_EquipGizmoLabel>借用心跳...</LC_HeartOfAspiration_EquipGizmoLabel>
+  <LC_HeartOfAspiration_EquipGizmoDesc>选择一名殖民者佩戴渴望之心以获得强力战斗增幅；须在 60 秒内并于归还前在战斗中击伤敌人。</LC_HeartOfAspiration_EquipGizmoDesc>
+  <LC_HeartOfAspiration_ReturnGizmoLabel>归还渴望之心</LC_HeartOfAspiration_ReturnGizmoLabel>
+  <LC_HeartOfAspiration_ReturnGizmoDesc>命令 {0} 走回平台归还渴望之心。</LC_HeartOfAspiration_ReturnGizmoDesc>
+  <LC_HeartOfAspiration_EquipMsg>{0} 佩戴了渴望之心，请在 60 秒内投入战斗！</LC_HeartOfAspiration_EquipMsg>
+  <LC_HeartOfAspiration_RestlessMsg>渴望之心在 {0} 胸口狂跳不止——请尽快在战斗中见血！</LC_HeartOfAspiration_RestlessMsg>
+  <LC_HeartOfAspiration_BerserkMsg>{0} 久未接战，渴望之心的暴虐悸动令其彻底陷入狂暴！</LC_HeartOfAspiration_BerserkMsg>
+  <LC_HeartOfAspiration_PrematureReturnMsg>{0} 未见丝毫血腥便强行归还渴望之心，被暴走搏动反噬狂暴！</LC_HeartOfAspiration_PrematureReturnMsg>
+  <LC_HeartOfAspiration_SafeReturnMsg>{0} 在战场上满足了渴望，安全归还了渴望之心。</LC_HeartOfAspiration_SafeReturnMsg>
+  <LC_HeartOfAspiration_StatusSatisfied>已满足血腥渴望，可安全归还</LC_HeartOfAspiration_StatusSatisfied>
+  <LC_HeartOfAspiration_StatusRestless>渴望鲜血（空转 {0} / {1} 秒）</LC_HeartOfAspiration_StatusRestless>
+  <LC_HeartOfAspiration_MentalReason>渴望之心未获满足的狂暴反噬</LC_HeartOfAspiration_MentalReason>
+
+</LanguageData>

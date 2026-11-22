@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>LC_DuelSnowQueen</defName>
+    <driverClass>LCAbnormalities.SnowQueen.JobDriver_DuelSnowQueen</driverClass>
+    <reportString>dueling The Snow Queen to rescue captive.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+</Defs>

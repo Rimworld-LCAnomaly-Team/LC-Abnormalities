@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>LC_SnowQueenKiss</defName>
+    <label>The Snow Queen's Kiss</label>
+    <description>A frost-petal kiss left by The Snow Queen.\nGetting another Bad work result on The Snow Queen while marked will seal the employee inside her ice coffin—or win a duel to melt it away.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.55, 0.85, 1.0)</defaultLabelColor>
+    <isBad>true</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>-0.15</MoveSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>LC_FrostSlow</defName>
+    <label>Glacial Chill</label>
+    <description>Numbed by Frost Splinter, sharply reducing movement speed for 5 seconds.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.52, 0.88, 1.0)</defaultLabelColor>
+    <isBad>true</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>0.60</MoveSpeed>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>300</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>LC_ResearcherNoteBuff</defName>
+    <label>Crazed Research Insights</label>
+    <description>Possessed by the frantic brilliance of Notes from a Crazed Researcher.\nGreatly speeds up work and Abnormality study, yet triggers a lethal blast at 100 cumulative damage or on premature return.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.90, 0.72, 0.35)</defaultLabelColor>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <statFactors>
+          <WorkSpeedGlobal>1.50</WorkSpeedGlobal>
+          <LC_AbnormalityStudyRate>1.50</LC_AbnormalityStudyRate>
+          <MoveSpeed>1.20</MoveSpeed>
+          <GlobalLearningFactor>1.25</GlobalLearningFactor>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="LCAbnormalities.NotesFromCrazedResearcher.HediffCompProperties_ResearcherNote">
+        <maxCumulativeDamage>100</maxCumulativeDamage>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
+  </HediffDef>
+
+</Defs>

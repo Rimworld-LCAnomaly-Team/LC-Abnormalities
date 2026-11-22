@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.PawnKindDef_AbnormalityEntity>
+    <defName>SnowQueen</defName>
+    <label>The Snow Queen</label>
+    <race>SnowQueen</race>
+    <canMeleeAttack>false</canMeleeAttack>
+    <defaultFactionType>LC_Abnormalities</defaultFactionType>
+    <preventIdeo>true</preventIdeo>
+    <overrideDebugActionCategory>Entity</overrideDebugActionCategory>
+    <forceDeathOnDowned>true</forceDeathOnDowned>
+    <combatPower>140</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/SnowQueen/SnowQueen</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>1.9</drawSize>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>UI/CodexEntries/SnowQueen</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>1.7</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.PawnKindDef_AbnormalityEntity>
+
+</Defs>

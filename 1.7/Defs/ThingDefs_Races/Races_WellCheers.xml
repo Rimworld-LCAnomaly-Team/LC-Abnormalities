@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_EntityBase">
+    <defName>WellCheers</defName>
+    <label>Opened Can of WellCheers</label>
+    <description>A pastel vending machine tended by cheerful shrimp mariners (F-05-52) offering ice-cold cans of grape and cherry soda.\n\nGood or normal work rewards workers with random revitalizing sodas—red to mend flesh, blue to restore sanity, or purple for both. Yet a poorly tended machine leaves the drinker freezing inside an eerie nightmare slumber.</description>
+    <uiIconPath>UI/CodexEntries/WellCheers</uiIconPath>
+    <thingClass>LCAbnormalities.Shared.LC_StandardEntityPawn</thingClass>
+    <statBases>
+      <MoveSpeed>0</MoveSpeed>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>100</ComfyTemperatureMax>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <LC_MinimumContainmentStrength>0</LC_MinimumContainmentStrength>
+      <StaggerDurationFactor>0</StaggerDurationFactor>
+      <ToxicResistance>1</ToxicResistance>
+    </statBases>
+    <race>
+      <body>OneSin</body>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>1</baseHealthScale>
+      <intelligence>ToolUser</intelligence>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <fleshType>LC_AbnormalityMechanical</fleshType>
+      <foodType>None</foodType>
+      <hasCorpse>false</hasCorpse>
+      <lifeExpectancy>1000</lifeExpectancy>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <disableIgniteVerb>true</disableIgniteVerb>
+      <trainability>None</trainability>
+      <renderTree>WellCheers</renderTree>
+      <thinkTreeMain>Phase1PassiveEntityMain</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+      <lifeStageAges>
+        <li>
+          <def>LC_EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="LCAbnormalities.WellCheers.CompProperties_WellCheers">
+        <qliphothCountMax>-1</qliphothCountMax>
+        <studySucessRateBase>0.0</studySucessRateBase>
+        <shouldNotifyWhenEscape>false</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>false</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <allowRoamingOutsideContainment>false</allowRoamingOutsideContainment>
+        <dyingFxDef>DyingWellCheers</dyingFxDef>
+        <workDamageDef>LC_RedDamage</workDamageDef>
+        <workDamageRange>1~2</workDamageRange>
+        <instinctProbs>
+          <li>0.7</li><li>0.7</li><li>0.6</li><li>0.6</li><li>0.6</li>
+        </instinctProbs>
+        <insightProbs>
+          <li>0.7</li><li>0.7</li><li>0.6</li><li>0.6</li><li>0.6</li>
+        </insightProbs>
+        <attachmentProbs>
+          <li>0.5</li><li>0.5</li><li>0.4</li><li>0.4</li><li>0.4</li>
+        </attachmentProbs>
+        <repressionProbs>
+          <li>0.5</li><li>0.5</li><li>0.4</li><li>0.4</li><li>0.4</li>
+        </repressionProbs>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <lookForTargetOnEscape>false</lookForTargetOnEscape>
+        <hasAnimation>false</hasAnimation>
+      </li>
+      <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
+        <frequencyTicks>60000</frequencyTicks>
+        <studyTimesPeriod>1</studyTimesPeriod>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <speedOffsetsByProgress>
+          <li>0</li><li>0.02</li><li>0.04</li><li>0.06</li><li>0.08</li>
+        </speedOffsetsByProgress>
+        <successOffsetsByProgress>
+          <li>0</li><li>0.02</li><li>0.04</li><li>0.06</li><li>0.08</li>
+        </successOffsetsByProgress>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_PeBoxProduce">
+        <peBoxDef>EnkephalinBox</peBoxDef>
+        <amountProdueRangeNormal>5~7</amountProdueRangeNormal>
+        <amountProdueMax>10</amountProdueMax>
+        <boxTexOffsetZ>0.178</boxTexOffsetZ>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
+        <accessoryDef>Accessory_WellCheers</accessoryDef>
+        <accessoryChance>0.05</accessoryChance>
+        <unlockLevel>2</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
+        <weaponExtracted>EgoWeapon_WellCheers</weaponExtracted>
+        <weaponIconPath>UI/Commands/ExtractEGO_WellCheers_Weapon</weaponIconPath>
+        <amountMaxWeapon>4</amountMaxWeapon>
+        <weaponExtractedNeed>15</weaponExtractedNeed>
+        <armorExtracted>Apparel_WellCheersSuit</armorExtracted>
+        <armorIconPath>UI/Commands/ExtractEGO_WellCheers_Armor</armorIconPath>
+        <amountMaxArmor>4</amountMaxArmor>
+        <armorExtractedNeed>10</armorExtractedNeed>
+        <unlockLevel>3</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>1</threshold>
+            <label>Observation Level: I</label>
+            <text>Good and Normal work dispense one of three canned drinks: Cherry Red heals wounds, Deep Sea Blue restores sanity, and Twilight Purple offers both.</text>
+          </li>
+          <li>
+            <threshold>3</threshold>
+            <label>Observation Level: II</label>
+            <text>Should work yield a Bad result, whoever drinks from the spiked can falls into deep hypothermia slumber and suffers White mental shock.\nUnlocks the E.G.O. Gift 'Soda'.</text>
+          </li>
+          <li>
+            <threshold>6</threshold>
+            <label>Observation Level: III</label>
+            <text>The vending crew favor straightforward Instinct and Insight work over hesitant Attachment or Repression.\nUnlocks the ZAYIN E.G.O. Weapon and Suit 'Soda'.</text>
+          </li>
+          <li>
+            <threshold>10</threshold>
+            <label>Observation Level: IV</label>
+            <text>Listening quietly to the shrimp crew's sea shanties keeps the harvest brimming with sweet soda.\nWork Speed +8% &amp; Success Rate +8%.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>ZAYIN</abnormalityCategoryDef>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>1.0</redResistance>
+        <whiteResistance>1.0</whiteResistance>
+        <blackResistance>1.0</blackResistance>
+        <paleResistance>2.0</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

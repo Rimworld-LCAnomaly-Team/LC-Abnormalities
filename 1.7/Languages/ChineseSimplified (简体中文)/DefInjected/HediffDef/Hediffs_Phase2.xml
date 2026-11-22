@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <LC_SnowQueenKiss.label>冰雪女皇之吻</LC_SnowQueenKiss.label>
+  <LC_SnowQueenKiss.description>冰雪女皇留下的冻霜花印。\n携带此状态时若再次对冰雪女皇取得“差”工作结果，将被立刻封印进冰棺之中；也可通过决斗胜利消除。</LC_SnowQueenKiss.description>
+
+  <LC_FrostSlow.label>极寒迟缓</LC_FrostSlow.label>
+  <LC_FrostSlow.description>被“霜之碎片”长矛冻结筋脉，5 秒内移动速度显著降至 60%。</LC_FrostSlow.description>
+
+  <LC_ResearcherNoteBuff.label>狂热手札增幅</LC_ResearcherNoteBuff.label>
+  <LC_ResearcherNoteBuff.description>正随身携带癫狂研究员的笔记。\n大幅加快常规作业与异想体研究速率；累计受伤满 100 点或在未满 30 秒且未完成 1 次研究前强行归还将引爆手札。</LC_ResearcherNoteBuff.description>
+
+</LanguageData>

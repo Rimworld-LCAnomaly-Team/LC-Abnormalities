@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>PunishingBird</defName>
+    <label>Punishing Bird</label>
+    <description>Punishing Bird (O-02-56) is a deceptively tiny TETH songbird.\nShould it breach containment, leave it completely unharmed to peck mildly and depart. Any retaliatory attack splits its belly wide open into a relentless, armored jaw of execution.</description>
+    <uiIconPath>UI/CodexEntries/PunishingBird</uiIconPath>
+    <category>TETH</category>
+    <orderInCategory>810</orderInCategory>
+    <linkedThings>
+      <li>PunishingBird</li>
+      <li>PunishingBirdEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

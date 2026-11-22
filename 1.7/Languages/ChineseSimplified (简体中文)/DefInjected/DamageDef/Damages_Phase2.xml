@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <LC_SolemnLament_Dual.label>圣宣齐射</LC_SolemnLament_Dual.label>
+  <LC_SolemnLament_Dual.deathMessage>{0}在“圣宣”的双色安魂曲中长眠。</LC_SolemnLament_Dual.deathMessage>
+
+  <LC_FrostSplinter_WhiteSlow.label>寒霜刺击</LC_FrostSplinter_WhiteSlow.label>
+  <LC_FrostSplinter_WhiteSlow.deathMessage>{0}被“霜之碎片”刺穿冻结。</LC_FrostSplinter_WhiteSlow.deathMessage>
+
+</LanguageData>

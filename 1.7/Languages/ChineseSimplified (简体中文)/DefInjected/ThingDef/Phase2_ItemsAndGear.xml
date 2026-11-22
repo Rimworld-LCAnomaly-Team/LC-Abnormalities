@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Scorched Girl -->
+  <ScorchedGirl.label>焦化少女</ScorchedGirl.label>
+  <ScorchedGirl.description>浑身焦黑、胸口被巨大火柴贯穿的哀泣少女（F-01-02）。\n工作评价为“良”时亦有 50% 概率扣除逆卡巴拉计数器，而“差”必将引燃突破；突破后她会携带着 20 秒导火索全力冲向最近的人类，一旦靠近或倒计时归零即爆发烈焰红伤并自毁化蛋。</ScorchedGirl.description>
+  <ScorchedGirl.tools.ember_punch.label>炽烬挥击</ScorchedGirl.tools.ember_punch.label>
+  <ScorchedGirl.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</ScorchedGirl.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <ScorchedGirl.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>切忌派遣“沟通”工作（高自律下成功率降至 0%）。优先选用“洞察”或“压迫”稳住她的情绪。</ScorchedGirl.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <ScorchedGirl.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</ScorchedGirl.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <ScorchedGirl.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>“良”结果有 50% 几率、“差”结果必然使逆卡巴拉计数器（上限 2）下滑。\nE.G.O饰品“终末火柴之光”已解锁。</ScorchedGirl.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <ScorchedGirl.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</ScorchedGirl.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <ScorchedGirl.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>突破后她会引燃 20 秒导火索冲向最近的人类并自爆打出高额群体红伤。务必趁她靠近前以远程火力击溃！\nTETH 级 E.G.O 火炮与护甲“终末火柴之光”已解锁。</ScorchedGirl.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <ScorchedGirl.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</ScorchedGirl.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <ScorchedGirl.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>若在引爆前率先将她击杀镇压，便能安全还原为收容蛋，免除基地火海浩劫。\n工作速度 +10% 与成功率 +10%。</ScorchedGirl.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+  <DyingScorchedGirl.label>焦化少女（消散中）</DyingScorchedGirl.label>
+
+  <ScorchedGirlEgg.label>焦化少女收容蛋</ScorchedGirlEgg.label>
+  <ScorchedGirlEgg.description>焦化少女（F-01-02）熄灭余烬后的焦炭卵壳。</ScorchedGirlEgg.description>
+  <ScorchedGirlEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>焦化少女已收容</ScorchedGirlEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <ScorchedGirlEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将焦化少女收容蛋安置在收容平台上，引信微弱的火光暂时熄灭在单元之内。</ScorchedGirlEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <ScorchedGirlEgg.comps.CompUsable.useLabel>砸碎{0_label}</ScorchedGirlEgg.comps.CompUsable.useLabel>
+  <ScorchedGirlEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了焦化少女收容蛋，回收了一批脑啡肽箱。</ScorchedGirlEgg.comps.CompUsable.useMessage>
+  <ScorchedGirlEgg.comps.LC_CompEgg.activateDescString>砸碎焦化少女收容蛋以回收脑啡肽箱。</ScorchedGirlEgg.comps.LC_CompEgg.activateDescString>
+  <ScorchedGirlEgg.comps.LC_CompEgg.activateLabelString>砸碎...</ScorchedGirlEgg.comps.LC_CompEgg.activateLabelString>
+  <ScorchedGirlEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎焦化少女收容蛋</ScorchedGirlEgg.comps.LC_CompEgg.activatingStringPending>
+  <ScorchedGirlEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</ScorchedGirlEgg.comps.LC_CompEgg.guiLabelString>
+
+  <EgoWeapon_ScorchedGirl.label>E.G.O. 武器（终末火柴之光）</EgoWeapon_ScorchedGirl.label>
+  <EgoWeapon_ScorchedGirl.description>积蓄着暴烈红焰与灼热灰烬的焦黑加农炮（TETH），炮弹落地后在 2.4 格范围内爆出炽烈红伤火团。</EgoWeapon_ScorchedGirl.description>
+  <EgoWeapon_ScorchedGirl.tools.barrel.label>炮管</EgoWeapon_ScorchedGirl.tools.barrel.label>
+  <Bullet_EgoWeapon_ScorchedGirl.label>终末火柴炽焰弹</Bullet_EgoWeapon_ScorchedGirl.label>
+  <Apparel_ScorchedGirlSuit.label>E.G.O. 护甲（终末火柴之光）</Apparel_ScorchedGirlSuit.label>
+  <Apparel_ScorchedGirlSuit.description>以燃尽炭衣与赤红内衬缝制的外套（TETH），兼具极高的耐火保温与 0.6 红伤防护。</Apparel_ScorchedGirlSuit.description>
+  <Accessory_ScorchedGirl.label>E.G.O. 饰品（终末火柴之光）</Accessory_ScorchedGirl.label>
+  <Accessory_ScorchedGirl.description>别在鬓角、永不熄灭的微型火柴头，令佩戴者步伐迅捷并增添近战威势。</Accessory_ScorchedGirl.description>
+
+  <!-- Der Freischutz -->
+  <DerFreischutz.label>魔弹射手</DerFreischutz.label>
+  <DerFreischutz.description>隐于蓝色硝烟与披风之下、以魔法长枪缔结血契的孤傲猎手（F-01-69）。\n他永远不会实体越狱；只需支付 10 单位独立 PE-Box，即可指定地图任意方位发出贯穿全图所有敌我单位的 52 点高穿甲黑伤魔弹。但务必铭记恶魔条约：第 7 发子弹必将背叛雇主射向己方殖民者！</DerFreischutz.description>
+  <DerFreischutz.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</DerFreischutz.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <DerFreischutz.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>唯有正义 III 级及以上员工执行“压迫”才能稳定产箱（60%）；派正义 I–II 级员工前往则会触发反感扣除逆卡巴拉计数器。</DerFreischutz.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <DerFreischutz.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</DerFreischutz.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <DerFreischutz.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>通过收容平台上的“请托射击”，花费 10 个独立 PE-Box 即可朝全图任意坐标射出一发贯穿直线所有目标的强力黑伤魔弹（谨防误伤己方人员）。</DerFreischutz.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <DerFreischutz.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</DerFreischutz.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <DerFreischutz.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>警告：请托发射的第 7 发子弹必定无视指令，直接穿过随机一名殖民者！计数器归零熔毁时亦会射出失控流弹。\nE.G.O饰品“魔弹”已解锁。</DerFreischutz.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <DerFreischutz.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</DerFreischutz.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <DerFreischutz.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>那杆贯穿万物的魔弹步枪同样从不分辨敌我——善加走位，方能驾驭这份 WAW 级远程神威。\nWAW 级 E.G.O 武器与 HE 级护甲“魔弹”已解锁。</DerFreischutz.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+  <DyingDerFreischutz.label>魔弹射手（消散中）</DyingDerFreischutz.label>
+
+  <DerFreischutzEgg.label>魔弹射手收容蛋</DerFreischutzEgg.label>
+  <DerFreischutzEgg.description>魔弹射手（F-01-69）消散后留下的深蓝硝烟卵核。</DerFreischutzEgg.description>
+  <DerFreischutzEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>魔弹射手已收容</DerFreischutzEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <DerFreischutzEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将魔弹射手收容蛋束缚在收容平台上，冷峻的恶魔枪手随之现身于单元之内。</DerFreischutzEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <DerFreischutzEgg.comps.CompUsable.useLabel>砸碎{0_label}</DerFreischutzEgg.comps.CompUsable.useLabel>
+  <DerFreischutzEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了魔弹射手收容蛋，回收了一批脑啡肽箱。</DerFreischutzEgg.comps.CompUsable.useMessage>
+  <DerFreischutzEgg.comps.LC_CompEgg.activateDescString>砸碎魔弹射手收容蛋以回收脑啡肽箱。</DerFreischutzEgg.comps.LC_CompEgg.activateDescString>
+  <DerFreischutzEgg.comps.LC_CompEgg.activateLabelString>砸碎...</DerFreischutzEgg.comps.LC_CompEgg.activateLabelString>
+  <DerFreischutzEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎魔弹射手收容蛋</DerFreischutzEgg.comps.LC_CompEgg.activatingStringPending>
+  <DerFreischutzEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</DerFreischutzEgg.comps.LC_CompEgg.guiLabelString>
+
+  <EgoWeapon_DerFreischutz.label>E.G.O. 武器（魔弹）</EgoWeapon_DerFreischutz.label>
+  <EgoWeapon_DerFreischutz.description>来自深渊契约的 WAW 级长管魔导狙击步枪。\n拥有高达 44 格的恐怖射程，每次扣动扳机都会射出直线贯穿弹道上一切敌我生灵的高穿甲黑伤子弹。</EgoWeapon_DerFreischutz.description>
+  <EgoWeapon_DerFreischutz.tools.barrel.label>长枪管</EgoWeapon_DerFreischutz.tools.barrel.label>
+  <Bullet_EgoWeapon_DerFreischutz.label>魔弹 E.G.O. 贯穿弹</Bullet_EgoWeapon_DerFreischutz.label>
+  <MagicBullet_Request.label>契约贯穿魔弹</MagicBullet_Request.label>
+  <Apparel_DerFreischutzSuit.label>E.G.O. 护甲（魔弹）</Apparel_DerFreischutzSuit.label>
+  <Apparel_DerFreischutzSuit.description>镌刻鎏金符纹与沉厚肩饰的靛蓝风衣（HE），红/白/黑三色抗性均衡优异，并略微缩短瞄准延迟。</Apparel_DerFreischutzSuit.description>
+  <Accessory_DerFreischutz.label>E.G.O. 饰品（魔弹）</Accessory_DerFreischutz.label>
+  <Accessory_DerFreischutz.description>冷冽冒烟的猎手烟斗，显著加快装填瞄准与步伐，却会让灵魂更易承伤与崩解。</Accessory_DerFreischutz.description>
+
+  <!-- Funeral of Dead Butterflies -->
+  <FuneralOfDeadButterflies.label>亡蝶葬仪</FuneralOfDeadButterflies.label>
+  <FuneralOfDeadButterflies.description>身着黑色正装、背负沉重素白蝶棺的静默送葬人（T-01-68）。\n他只允许勇武适中且富于正义者近身（勇气 > III 或正义 &lt; III 必降计数）；突破收容后将反复发射白黑双色群蝶弹雨，并每 10 秒大开棺门释放大范围双伤蝶潮。</FuneralOfDeadButterflies.description>
+  <FuneralOfDeadButterflies.tools.coffin_strike.label>蝶棺重击</FuneralOfDeadButterflies.tools.coffin_strike.label>
+  <FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>请严格筛选工作人员：指派勇气 IV 以上或正义 II 以下的员工必然扣除其逆卡巴拉计数器（上限 2）。</FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>“沟通”工作对其始终无效（0%）；派遣勇气 I–III、正义 III 以上的员工执行“压迫”最稳妥。\nE.G.O饰品“圣宣”已解锁。</FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>出逃时他对白伤较为脆弱（1.5 倍率），红伤抗性较高（0.5 倍率），且开棺会炸出 6.5 格白黑双伤风暴，请集中白伤火力尽快镇压。</FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>那双名为“圣宣”的黑白色手枪将永远为死者送去最后的安息。\nWAW 级 E.G.O 武器与 HE 级护甲“圣宣”已解锁。</FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+  <DyingFuneralOfDeadButterflies.label>亡蝶葬仪（消散中）</DyingFuneralOfDeadButterflies.label>
+
+  <FuneralOfDeadButterfliesEgg.label>亡蝶葬仪收容蛋</FuneralOfDeadButterfliesEgg.label>
+  <FuneralOfDeadButterfliesEgg.description>亡蝶葬仪（T-01-68）重归安息后的黑曜卵体。</FuneralOfDeadButterfliesEgg.description>
+  <FuneralOfDeadButterfliesEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>亡蝶葬仪已收容</FuneralOfDeadButterfliesEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <FuneralOfDeadButterfliesEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将亡蝶葬仪收容蛋安置在收容平台上，背棺的送葬者沉默矗立于内。</FuneralOfDeadButterfliesEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <FuneralOfDeadButterfliesEgg.comps.CompUsable.useLabel>砸碎{0_label}</FuneralOfDeadButterfliesEgg.comps.CompUsable.useLabel>
+  <FuneralOfDeadButterfliesEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了亡蝶葬仪收容蛋，回收了一批脑啡肽箱。</FuneralOfDeadButterfliesEgg.comps.CompUsable.useMessage>
+  <FuneralOfDeadButterfliesEgg.comps.LC_CompEgg.activateDescString>砸碎亡蝶葬仪收容蛋以回收脑啡肽箱。</FuneralOfDeadButterfliesEgg.comps.LC_CompEgg.activateDescString>
+  <FuneralOfDeadButterfliesEgg.comps.LC_CompEgg.activateLabelString>砸碎...</FuneralOfDeadButterfliesEgg.comps.LC_CompEgg.activateLabelString>
+  <FuneralOfDeadButterfliesEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎亡蝶葬仪收容蛋</FuneralOfDeadButterfliesEgg.comps.LC_CompEgg.activatingStringPending>
+  <FuneralOfDeadButterfliesEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</FuneralOfDeadButterfliesEgg.comps.LC_CompEgg.guiLabelString>
+
+  <EgoWeapon_FuneralOfDeadButterflies.label>E.G.O. 武器（圣宣）</EgoWeapon_FuneralOfDeadButterflies.label>
+  <EgoWeapon_FuneralOfDeadButterflies.description>白黑双色对枪（WAW）。\n一只倾诉无尽悼念（白伤），另一只执行沉默处刑（黑伤），每次命中有如双翼交错般同时结算双重异想体伤害。</EgoWeapon_FuneralOfDeadButterflies.description>
+  <EgoWeapon_FuneralOfDeadButterflies.tools.grip.label>握把</EgoWeapon_FuneralOfDeadButterflies.tools.grip.label>
+  <Bullet_EgoWeapon_FuneralOfDeadButterflies.label>圣宣 E.G.O. 蝶弹</Bullet_EgoWeapon_FuneralOfDeadButterflies.label>
+  <Apparel_FuneralOfDeadButterfliesSuit.label>E.G.O. 护甲（圣宣）</Apparel_FuneralOfDeadButterfliesSuit.label>
+  <Apparel_FuneralOfDeadButterfliesSuit.description>裁工考究的黑丝丧服大衣（HE），对黑伤侵蚀有着高达 0.5 倍率的卓越抗性。</Apparel_FuneralOfDeadButterfliesSuit.description>
+  <Accessory_FuneralOfDeadButterflies.label>E.G.O. 饰品（圣宣）</Accessory_FuneralOfDeadButterflies.label>
+  <Accessory_FuneralOfDeadButterflies.description>黑白蝴蝶交织的丧仪挽章，稳定心神并小幅加速异想体作业。</Accessory_FuneralOfDeadButterflies.description>
+
+  <!-- Snow Queen -->
+  <SnowQueen.label>冰雪女皇</SnowQueen.label>
+  <SnowQueen.description>坐在剔透坚冰王座上等待挑战者的冷艳女王（F-01-37）。\n工作评价若落入“差”，她会首先印下霜吻；再错一次便会直接将那名员工关入冰晶棺椁开启 90 秒处刑倒计时——唯有在平台点击“决斗救援”派高勇气勇者赢下试炼，方可溶化坚冰救回同伴并双获 E.G.O 赠礼！</SnowQueen.description>
+  <SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>切忌选用“压迫”工作（恒为 0%）。高智慧员工执行“洞察”与“沟通”最容易收获她冰冷的青睐。</SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>工作结果首次为“差”时获得霜吻标记；若身带霜吻时再度取得“差”，该员工将立刻被封冻入冰棺 90 秒。\nE.G.O饰品“霜之碎片”已解锁。</SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>选中收容平台点击“决斗救援...”派遣高勇气勇者前往迎战（I~V 胜率为 25%/45%/65%/85%/95%）：胜利全员获救并双双领受饰品，败北或超时则同归于尽！</SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>当春日终于溶化了她冰雪的宫殿，只留下一杆透彻冰晶长枪。\nHE 级 E.G.O 长矛与护甲“霜之碎片”已解锁。</SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+  <DyingSnowQueen.label>冰雪女皇（消散中）</DyingSnowQueen.label>
+
+  <SnowQueenEgg.label>冰雪女皇收容蛋</SnowQueenEgg.label>
+  <SnowQueenEgg.description>冰雪女皇（F-01-37）消融沉眠后凝成的澄澈蓝冰卵。</SnowQueenEgg.description>
+  <SnowQueenEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>冰雪女皇已收容</SnowQueenEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <SnowQueenEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将冰雪女皇收容蛋安置在收容平台上，寒霜随晶冠在单元内悄悄绽放。</SnowQueenEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <SnowQueenEgg.comps.CompUsable.useLabel>砸碎{0_label}</SnowQueenEgg.comps.CompUsable.useLabel>
+  <SnowQueenEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了冰雪女皇收容蛋，回收了一批脑啡肽箱。</SnowQueenEgg.comps.CompUsable.useMessage>
+  <SnowQueenEgg.comps.LC_CompEgg.activateDescString>砸碎冰雪女皇收容蛋以回收脑啡肽箱。</SnowQueenEgg.comps.LC_CompEgg.activateDescString>
+  <SnowQueenEgg.comps.LC_CompEgg.activateLabelString>砸碎...</SnowQueenEgg.comps.LC_CompEgg.activateLabelString>
+  <SnowQueenEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎冰雪女皇收容蛋</SnowQueenEgg.comps.LC_CompEgg.activatingStringPending>
+  <SnowQueenEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</SnowQueenEgg.comps.LC_CompEgg.guiLabelString>
+
+  <EgoWeapon_SnowQueen.label>E.G.O. 武器（霜之碎片）</EgoWeapon_SnowQueen.label>
+  <EgoWeapon_SnowQueen.description>由极地冰晶凝成的优雅长枪（HE）。每次刺击在造成凌厉白伤的同时会为敌人附加 5 秒“极寒迟缓”，使其步履维艰。</EgoWeapon_SnowQueen.description>
+  <EgoWeapon_SnowQueen.tools.frost_lance.label>冰晶矛尖</EgoWeapon_SnowQueen.tools.frost_lance.label>
+  <Apparel_SnowQueenSuit.label>E.G.O. 护甲（霜之碎片）</Apparel_SnowQueenSuit.label>
+  <Apparel_SnowQueenSuit.description>雪白冰丝披肩礼服（HE），极耐严寒并具备 0.6 白伤与 0.8 黑伤优秀抗性。</Apparel_SnowQueenSuit.description>
+  <Accessory_SnowQueen.label>E.G.O. 饰品（霜之碎片）</Accessory_SnowQueen.label>
+  <Accessory_SnowQueen.description>唯有战胜冰雪女皇决斗试炼的勇者才配获赐的霜花徽章，显著加固生命恢复与意志定力。</Accessory_SnowQueen.description>
+
+  <!-- Notes from a Crazed Researcher -->
+  <NotesFromCrazedResearcher.label>癫狂研究员的笔记</NotesFromCrazedResearcher.label>
+  <NotesFromCrazedResearcher.description>一位彻底陷落于异想体狂想中的先驱所留下的厚重皮面笔记（T-09-78）。\n指派殖民者随身借阅期间，其常规作业速度与异想体研究速率都将暴增 +50%；但切记铁律——佩戴后若累计承受达 100 点伤害，或在未持有满 30 秒且未完成至少 1 次研究的情况下擅自放回，整本手札都会轰然爆裂摧毁宿主。</NotesFromCrazedResearcher.description>
+  <NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>随身携带着癫狂研究员的笔记期间，佩戴者的工作速度、异想体研究速度与学习速度都会得到惊人幅度的狂飙提升。</NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>危险警告：持有笔记期间若累计受到达到 100 点任何来源伤害，笔记便会当场引爆成覆盖 4.5 格范围的高额黑红爆炸，直接炸死携带者！</NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>安全归还铁律：必须在持有笔记超过 30 秒且佩戴者亲自完成至少 1 次任意异想体研究工作后方可安全放回，否则归还瞬间即刻爆裂。</NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+
+  <NotesFromCrazedResearcherEgg.label>癫狂研究员笔记收容蛋</NotesFromCrazedResearcherEgg.label>
+  <NotesFromCrazedResearcherEgg.description>封存着癫狂研究员的笔记（T-09-78）的工具型异想体收容胶囊。绑上收容平台即可供研究者随身借阅，或砸碎回收脑啡肽箱。</NotesFromCrazedResearcherEgg.description>
+  <NotesFromCrazedResearcherEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>癫狂研究员的笔记已收容</NotesFromCrazedResearcherEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <NotesFromCrazedResearcherEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将癫狂研究员笔记收容蛋安放在收容平台上，那本密密麻麻写满批注的手札已摊开于架上。</NotesFromCrazedResearcherEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <NotesFromCrazedResearcherEgg.comps.CompUsable.useLabel>砸碎{0_label}</NotesFromCrazedResearcherEgg.comps.CompUsable.useLabel>
+  <NotesFromCrazedResearcherEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了癫狂研究员笔记收容蛋，回收了一批脑啡肽箱。</NotesFromCrazedResearcherEgg.comps.CompUsable.useMessage>
+  <NotesFromCrazedResearcherEgg.comps.LC_CompEgg.activateDescString>砸碎癫狂研究员笔记收容蛋以回收脑啡肽箱。</NotesFromCrazedResearcherEgg.comps.LC_CompEgg.activateDescString>
+  <NotesFromCrazedResearcherEgg.comps.LC_CompEgg.activateLabelString>砸碎...</NotesFromCrazedResearcherEgg.comps.LC_CompEgg.activateLabelString>
+  <NotesFromCrazedResearcherEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎癫狂研究员笔记收容蛋</NotesFromCrazedResearcherEgg.comps.LC_CompEgg.activatingStringPending>
+  <NotesFromCrazedResearcherEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</NotesFromCrazedResearcherEgg.comps.LC_CompEgg.guiLabelString>
+
+</LanguageData>

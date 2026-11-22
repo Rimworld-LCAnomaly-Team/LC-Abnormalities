@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <ScorchedGirl.label>焦化少女</ScorchedGirl.label>
+  <ScorchedGirl.description>被一根庞大燃烧火柴贯穿身躯的焦黑哭泣少女（F-01-02）。\n一旦突破收容便会点燃 20 秒导火索冲向最近的人类并剧烈炸裂，必须趁她尚未接近时用远程火力尽快镇压。</ScorchedGirl.description>
+
+  <DerFreischutz.label>魔弹射手</DerFreischutz.label>
+  <DerFreischutz.description>身披靛蓝斗篷、怀抱诅咒长枪的阴郁猎手（F-01-69）。\n可支付 10 单位独立 PE-Box 请求他发射贯穿全图敌我的黑伤魔弹；然而切记，契约规定的第 7 发子弹永远会掉转枪口射向随机殖民者。</DerFreischutz.description>
+
+  <FuneralOfDeadButterflies.label>亡蝶葬仪</FuneralOfDeadButterflies.label>
+  <FuneralOfDeadButterflies.description>背负着素白蝶棺、哀悼无数逝去员工的冷峻送葬者（T-01-68）。\n勇气过高或正义过低的工作者都会令其躁动出逃；突破后以白黑双伤蝴蝶弹幕与 10 秒周期开棺冲击惩戒生灵。</FuneralOfDeadButterflies.description>
+
+  <SnowQueen.label>冰雪女皇</SnowQueen.label>
+  <SnowQueen.description>栖居在苍蓝冰晶冠冕下的高傲冰雪女皇（F-01-37）。\n两次糟糕工作便会将员工彻底封冻在冰棺之中，唯有派遣高勇气勇者在 90 秒内决斗获胜方可救出同伴并双双赢得她的极寒赠礼。</SnowQueen.description>
+
+  <NotesFromCrazedResearcher.label>癫狂研究员的笔记</NotesFromCrazedResearcher.label>
+  <NotesFromCrazedResearcher.description>写满偏执笔迹的 HE 级可佩戴研究手札（T-09-78）。\n随身携带有 +50% 工作与研究速率的超凡奇效，但只要累计受伤达 100 点或在未满 30 秒且未完成 1 次研究时提前归还，手札便会轰然炸碎宿主。</NotesFromCrazedResearcher.description>
+
+</LanguageData>

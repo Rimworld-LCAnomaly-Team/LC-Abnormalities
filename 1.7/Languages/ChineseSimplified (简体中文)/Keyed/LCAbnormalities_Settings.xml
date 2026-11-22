@@ -15,6 +15,16 @@
   <LCAbn_Settings_EnableBurrowingHeaven>启用 穿刺乐园（WAW）</LCAbn_Settings_EnableBurrowingHeaven>
   <LCAbn_Settings_EnableFleshIdol>启用 血肉偶像（WAW 工具型）</LCAbn_Settings_EnableFleshIdol>
   <LCAbn_Settings_EnableNothingThere>启用 一无所有（ALEPH）</LCAbn_Settings_EnableNothingThere>
+  <LCAbn_Settings_EnableFairyFestival>启用 精灵盛宴（ZAYIN）</LCAbn_Settings_EnableFairyFestival>
+  <LCAbn_Settings_EnableWellCheers>启用 韦尔奇牌汽水机（ZAYIN）</LCAbn_Settings_EnableWellCheers>
+  <LCAbn_Settings_EnablePunishingBird>启用 惩戒鸟（TETH）</LCAbn_Settings_EnablePunishingBird>
+  <LCAbn_Settings_EnableVoidDream>启用 虚空之梦（TETH）</LCAbn_Settings_EnableVoidDream>
+  <LCAbn_Settings_EnableHeartOfAspiration>启用 渴望之心（TETH 工具型）</LCAbn_Settings_EnableHeartOfAspiration>
+  <LCAbn_Settings_EnableScorchedGirl>启用 焦化少女（TETH）</LCAbn_Settings_EnableScorchedGirl>
+  <LCAbn_Settings_EnableDerFreischutz>启用 魔弹射手（HE）</LCAbn_Settings_EnableDerFreischutz>
+  <LCAbn_Settings_EnableFuneralOfDeadButterflies>启用 亡蝶葬仪（HE）</LCAbn_Settings_EnableFuneralOfDeadButterflies>
+  <LCAbn_Settings_EnableSnowQueen>启用 冰雪女皇（HE）</LCAbn_Settings_EnableSnowQueen>
+  <LCAbn_Settings_EnableNotesFromCrazedResearcher>启用 癫狂研究员的笔记（HE 工具型）</LCAbn_Settings_EnableNotesFromCrazedResearcher>
 
   <LCAbn_Settings_PortraitHeader>异界肖像专属调节</LCAbn_Settings_PortraitHeader>
   <LCAbn_Settings_PortraitAllowNonColonist>允许囚犯与友方访客成为替死替身</LCAbn_Settings_PortraitAllowNonColonist>

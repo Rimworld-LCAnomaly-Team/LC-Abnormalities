@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_BaseRangedWeapon_EGO">
+    <defName>EgoWeapon_FuneralOfDeadButterflies</defName>
+    <label>E.G.O. Weapon (Solemn Lament)</label>
+    <description>Black and white twin handguns sculpted in mourning tribute (WAW).\nOne pistol condemns the body with Black erosion, the other weeps White anguish—delivering dual trauma with every trigger pull.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/EgoWeapon_FuneralOfDeadButterflies</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.9, 1.9)</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Autopistol</soundInteract>
+    <statBases>
+      <Mass>2.2</Mass>
+      <AccuracyTouch>0.88</AccuracyTouch>
+      <AccuracyShort>0.86</AccuracyShort>
+      <AccuracyMedium>0.78</AccuracyMedium>
+      <AccuracyLong>0.62</AccuracyLong>
+      <RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_EgoWeapon_FuneralOfDeadButterflies</defaultProjectile>
+        <warmupTime>0.45</warmupTime>
+        <range>25</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <soundCast>LC_Funeral_Attack</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>7</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>White</damageType>
+        <riskLevel>WAW</riskLevel>
+        <damageMultiplier>1</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_BaseBullet_EGO">
+    <defName>Bullet_EgoWeapon_FuneralOfDeadButterflies</defName>
+    <label>Solemn Lament dual bolt</label>
+    <projectile>
+      <damageDef>LC_SolemnLament_Dual</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <armorPenetrationBase>0.35</armorPenetrationBase>
+      <stoppingPower>1.0</stoppingPower>
+      <speed>115</speed>
+    </projectile>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+</Defs>

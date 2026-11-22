@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_EntityBase">
+    <defName>SnowQueen</defName>
+    <label>The Snow Queen</label>
+    <description>An ethereal ice queen crowned in pale sapphire crystal (F-01-37).\n\nHer first Bad work leaves an icy Kiss upon the worker; a second Bad work seals them inside a crystalline ice coffin on a 90-second timer. Dispatch a high-Fortitude champion to "Duel for Rescue"—victory frees the captive and rewards both with the Snow Queen's E.G.O. Gift, while defeat claims them both.</description>
+    <uiIconPath>UI/CodexEntries/SnowQueen</uiIconPath>
+    <thingClass>LCAbnormalities.SnowQueen.LC_SnowQueenPawn</thingClass>
+    <statBases>
+      <MoveSpeed>0</MoveSpeed>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-200</ComfyTemperatureMin>
+      <ComfyTemperatureMax>100</ComfyTemperatureMax>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <LC_MinimumContainmentStrength>45</LC_MinimumContainmentStrength>
+      <StaggerDurationFactor>0</StaggerDurationFactor>
+      <ToxicResistance>1</ToxicResistance>
+    </statBases>
+    <race>
+      <body>OneSin</body>
+      <baseBodySize>1.2</baseBodySize>
+      <baseHealthScale>4.0</baseHealthScale>
+      <intelligence>ToolUser</intelligence>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <fleshType>LC_AbnormalityOrganic</fleshType>
+      <foodType>None</foodType>
+      <hasCorpse>false</hasCorpse>
+      <lifeExpectancy>1000</lifeExpectancy>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <disableIgniteVerb>true</disableIgniteVerb>
+      <trainability>None</trainability>
+      <renderTree>SnowQueen</renderTree>
+      <thinkTreeMain>Phase2PassiveEntityMain</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+      <lifeStageAges>
+        <li>
+          <def>LC_EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="LCAbnormalities.SnowQueen.CompProperties_SnowQueen">
+        <qliphothCountMax>-1</qliphothCountMax>
+        <studySucessRateBase>0.0</studySucessRateBase>
+        <shouldNotifyWhenEscape>false</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>false</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <allowRoamingOutsideContainment>false</allowRoamingOutsideContainment>
+        <dyingFxDef>DyingSnowQueen</dyingFxDef>
+        <workDamageDef>LC_WhiteDamage</workDamageDef>
+        <workDamageRange>4~5</workDamageRange>
+        <instinctProbs>
+          <li>0.30</li><li>0.30</li><li>0.40</li><li>0.40</li><li>0.50</li>
+        </instinctProbs>
+        <insightProbs>
+          <li>0.50</li><li>0.50</li><li>0.60</li><li>0.60</li><li>0.70</li>
+        </insightProbs>
+        <attachmentProbs>
+          <li>0.40</li><li>0.40</li><li>0.50</li><li>0.50</li><li>0.60</li>
+        </attachmentProbs>
+        <repressionProbs>
+          <li>0.0</li><li>0.0</li><li>0.0</li><li>0.0</li><li>0.0</li>
+        </repressionProbs>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <lookForTargetOnEscape>false</lookForTargetOnEscape>
+        <hasAnimation>false</hasAnimation>
+      </li>
+      <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
+        <frequencyTicks>60000</frequencyTicks>
+        <studyTimesPeriod>1</studyTimesPeriod>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <speedOffsetsByProgress>
+          <li>0</li><li>0.03</li><li>0.05</li><li>0.08</li><li>0.10</li>
+        </speedOffsetsByProgress>
+        <successOffsetsByProgress>
+          <li>0</li><li>0.03</li><li>0.05</li><li>0.08</li><li>0.10</li>
+        </successOffsetsByProgress>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_PeBoxProduce">
+        <peBoxDef>EnkephalinBox</peBoxDef>
+        <amountProdueRangeNormal>8~13</amountProdueRangeNormal>
+        <amountProdueMax>18</amountProdueMax>
+        <boxTexOffsetZ>0.0742</boxTexOffsetZ>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
+        <accessoryDef>Accessory_SnowQueen</accessoryDef>
+        <accessoryChance>0.03</accessoryChance>
+        <unlockLevel>2</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
+        <weaponExtracted>EgoWeapon_SnowQueen</weaponExtracted>
+        <weaponIconPath>UI/Commands/ExtractEGO_SnowQueen_Weapon</weaponIconPath>
+        <amountMaxWeapon>2</amountMaxWeapon>
+        <weaponExtractedNeed>35</weaponExtractedNeed>
+        <armorExtracted>Apparel_SnowQueenSuit</armorExtracted>
+        <armorIconPath>UI/Commands/ExtractEGO_SnowQueen_Armor</armorIconPath>
+        <amountMaxArmor>2</amountMaxArmor>
+        <armorExtractedNeed>26</armorExtractedNeed>
+        <unlockLevel>3</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>3</threshold>
+            <label>Observation Level: I</label>
+            <text>Never choose Repression (0% success rate). Insight and Attachment by experienced agents yield consistent success.</text>
+          </li>
+          <li>
+            <threshold>7</threshold>
+            <label>Observation Level: II</label>
+            <text>A Bad result inflicts The Snow Queen's Kiss; a second Bad result freezes that worker inside an ice coffin for 90 seconds.\nUnlocks the E.G.O. Gift 'Frost Splinter'.</text>
+          </li>
+          <li>
+            <threshold>12</threshold>
+            <label>Observation Level: III</label>
+            <text>Click "Duel for Rescue" on the platform to send a challenger (Fortitude win rate: 25%/45%/65%/85%/95%). Winning frees the captive and awards the Snow Queen's Gift to both!</text>
+          </li>
+          <li>
+            <threshold>17</threshold>
+            <label>Observation Level: IV</label>
+            <text>When spring melts her palace, only a pale crystal lance and frost-silk coat remain.\nUnlocks the HE E.G.O. Spear and Suit 'Frost Splinter'.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>1.3</redResistance>
+        <whiteResistance>0.6</whiteResistance>
+        <blackResistance>0.8</blackResistance>
+        <paleResistance>1.5</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

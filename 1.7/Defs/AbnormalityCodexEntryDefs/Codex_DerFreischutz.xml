@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>DerFreischutz</defName>
+    <label>Der Freischütz</label>
+    <description>Der Freischütz (F-01-69) is an eerie marksman bound to a magic bullet contract.\nSpend 10 IndiPE-Boxes to unleash a map-spanning piercing Black shot—remembering that the seventh bullet always betrays its contractor to strike a colonist.</description>
+    <uiIconPath>UI/CodexEntries/DerFreischutz</uiIconPath>
+    <category>HE</category>
+    <orderInCategory>810</orderInCategory>
+    <linkedThings>
+      <li>DerFreischutz</li>
+      <li>DerFreischutzEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_EntityBase">
+    <defName>PunishingBird</defName>
+    <label>Punishing Bird</label>
+    <description>A tiny, plump white finch (O-02-56) sporting a bright crimson belly spot.\n\nWhen its Qliphoth Counter hits zero, it hops harmlessly about the facility giving gentle pecks before returning on its own—unless someone strikes it. Once provoked, its chest splits wide into a monstrous tooth-lined maw that tears through armor at terrifying speed.</description>
+    <uiIconPath>UI/CodexEntries/PunishingBird</uiIconPath>
+    <thingClass>LCAbnormalities.PunishingBird.LC_PunishingBirdPawn</thingClass>
+    <statBases>
+      <MoveSpeed>4.6</MoveSpeed>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>100</ComfyTemperatureMax>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <LC_MinimumContainmentStrength>25</LC_MinimumContainmentStrength>
+      <StaggerDurationFactor>0</StaggerDurationFactor>
+      <ToxicResistance>1</ToxicResistance>
+    </statBases>
+    <race>
+      <body>OneSin</body>
+      <baseBodySize>0.85</baseBodySize>
+      <baseHealthScale>1.6</baseHealthScale>
+      <intelligence>ToolUser</intelligence>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <fleshType>LC_AbnormalityOrganic</fleshType>
+      <foodType>None</foodType>
+      <hasCorpse>false</hasCorpse>
+      <lifeExpectancy>1000</lifeExpectancy>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <disableIgniteVerb>true</disableIgniteVerb>
+      <trainability>None</trainability>
+      <renderTree>PunishingBird</renderTree>
+      <thinkTreeMain>PunishingBirdMain</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+      <lifeStageAges>
+        <li>
+          <def>LC_EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+    <tools>
+      <li>
+        <label>beak</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>1.2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <soundMeleeHit>LC_PunishingBird_Hit</soundMeleeHit>
+      </li>
+    </tools>
+    <comps>
+      <li Class="LCAbnormalities.PunishingBird.CompProperties_PunishingBird">
+        <qliphothCountMax>4</qliphothCountMax>
+        <studySucessRateBase>0.0</studySucessRateBase>
+        <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>true</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
+        <dyingFxDef>DyingPunishingBird</dyingFxDef>
+        <workDamageDef>LC_RedDamage</workDamageDef>
+        <workDamageRange>2~4</workDamageRange>
+        <escapedLetterLabelKey>LC_PunishingBird_EscapedLabel</escapedLetterLabelKey>
+        <escapedLetterTextKey>LC_PunishingBird_EscapedText</escapedLetterTextKey>
+        <killedLetterLabelKey>LC_PunishingBird_KilledLabel</killedLetterLabelKey>
+        <killedLetterTextKey>LC_PunishingBird_KilledText</killedLetterTextKey>
+        <instinctProbs>
+          <li>0.40</li><li>0.40</li><li>0.40</li><li>0.45</li><li>0.45</li>
+        </instinctProbs>
+        <insightProbs>
+          <li>0.60</li><li>0.60</li><li>0.60</li><li>0.60</li><li>0.60</li>
+        </insightProbs>
+        <attachmentProbs>
+          <li>0.55</li><li>0.55</li><li>0.50</li><li>0.50</li><li>0.50</li>
+        </attachmentProbs>
+        <repressionProbs>
+          <li>0.30</li><li>0.20</li><li>0.10</li><li>0.0</li><li>0.0</li>
+        </repressionProbs>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <lookForTargetOnEscape>false</lookForTargetOnEscape>
+        <hasAnimation>false</hasAnimation>
+      </li>
+      <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
+        <frequencyTicks>60000</frequencyTicks>
+        <studyTimesPeriod>1</studyTimesPeriod>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <speedOffsetsByProgress>
+          <li>0</li><li>0.03</li><li>0.05</li><li>0.07</li><li>0.10</li>
+        </speedOffsetsByProgress>
+        <successOffsetsByProgress>
+          <li>0</li><li>0.03</li><li>0.05</li><li>0.07</li><li>0.10</li>
+        </successOffsetsByProgress>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_PeBoxProduce">
+        <peBoxDef>EnkephalinBox</peBoxDef>
+        <amountProdueRangeNormal>5~8</amountProdueRangeNormal>
+        <amountProdueMax>12</amountProdueMax>
+        <boxTexOffsetZ>0.147</boxTexOffsetZ>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
+        <accessoryDef>Accessory_PunishingBird</accessoryDef>
+        <accessoryChance>0.05</accessoryChance>
+        <unlockLevel>2</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
+        <weaponExtracted>EgoWeapon_PunishingBird</weaponExtracted>
+        <weaponIconPath>UI/Commands/ExtractEGO_PunishingBird_Weapon</weaponIconPath>
+        <amountMaxWeapon>3</amountMaxWeapon>
+        <weaponExtractedNeed>20</weaponExtractedNeed>
+        <armorExtracted>Apparel_PunishingBirdSuit</armorExtracted>
+        <armorIconPath>UI/Commands/ExtractEGO_PunishingBird_Armor</armorIconPath>
+        <amountMaxArmor>3</amountMaxArmor>
+        <armorExtractedNeed>15</armorExtractedNeed>
+        <unlockLevel>3</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>2</threshold>
+            <label>Observation Level: I</label>
+            <text>When its Qliphoth Counter (Max 4) reaches zero, Punishing Bird flies out to harmlessly peck at personnel before returning on its own after ~45 seconds.</text>
+          </li>
+          <li>
+            <threshold>5</threshold>
+            <label>Observation Level: II</label>
+            <text>STRICT ORDER: Never shoot or attack an escaped Punishing Bird. Taking any damage triggers its enraged Maw Form (x0.1 all resistances, rapid charge, 75–100 Red bite execution).\nUnlocks the E.G.O. Gift 'Beak'.</text>
+          </li>
+          <li>
+            <threshold>9</threshold>
+            <label>Observation Level: III</label>
+            <text>Insight and Attachment safely appease the bird, whereas Repression invites dismal failure.\nUnlocks the TETH E.G.O. Weapon and Suit 'Beak'.</text>
+          </li>
+          <li>
+            <threshold>13</threshold>
+            <label>Observation Level: IV</label>
+            <text>Even its furious punishment vanishes quickly back into its containment shell once justice is delivered.\nWork Speed +10% &amp; Success Rate +10%.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>TETH</abnormalityCategoryDef>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>2.0</redResistance>
+        <whiteResistance>2.0</whiteResistance>
+        <blackResistance>2.0</blackResistance>
+        <paleResistance>2.0</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

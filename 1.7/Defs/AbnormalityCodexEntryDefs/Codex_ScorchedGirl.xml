@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>ScorchedGirl</defName>
+    <label>Scorched Girl</label>
+    <description>Scorched Girl (F-01-02) is an ember-wreathed TETH Abnormality.\nOnce her fuse ignites upon breaching containment, she sprints toward the nearest person and detonates in a fiery Red blast within 20 seconds unless suppressed beforehand.</description>
+    <uiIconPath>UI/CodexEntries/ScorchedGirl</uiIconPath>
+    <category>TETH</category>
+    <orderInCategory>830</orderInCategory>
+    <linkedThings>
+      <li>ScorchedGirl</li>
+      <li>ScorchedGirlEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

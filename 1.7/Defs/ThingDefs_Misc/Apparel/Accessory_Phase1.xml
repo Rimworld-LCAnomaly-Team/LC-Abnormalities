@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_FairyFestival</defName>
+    <label>Accessory (Wingbeat)</label>
+    <description>Delicate fairy-dust gloves that hum with fluttering warmth, hastening containment tasks and delicate handiwork.</description>
+    <thingCategories>
+      <li>LC_Apparel_Accessory_EGO</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/FairyFestivalAccessory</texPath>
+    </graphicData>
+    <statBases>
+      <Beauty>4</Beauty>
+    </statBases>
+    <apparel>
+      <layers>
+        <li>LC_AccessoryGlove</li>
+      </layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/FairyFestivalAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <LC_AbnormalityStudyRate>0.06</LC_AbnormalityStudyRate>
+      <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <tradeTags>
+      <li>LC_Apparel_Accessory</li>
+    </tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_WellCheers</defName>
+    <label>Accessory (Soda)</label>
+    <description>A cheerful shrimp pin gleaming faintly beside the collar, buoying spirits through long shifts.</description>
+    <thingCategories>
+      <li>LC_Apparel_Accessory_EGO</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/WellCheersAccessory</texPath>
+    </graphicData>
+    <statBases>
+      <Beauty>5</Beauty>
+    </statBases>
+    <apparel>
+      <layers>
+        <li>LC_AccessoryCheek</li>
+      </layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/WellCheersAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <MentalBreakThreshold>-0.03</MentalBreakThreshold>
+      <SocialImpact>0.06</SocialImpact>
+    </equippedStatOffsets>
+    <tradeTags>
+      <li>LC_Apparel_Accessory</li>
+    </tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_PunishingBird</defName>
+    <label>Accessory (Beak)</label>
+    <description>A miniature snowy feather-charm perched in the hair, keeping the wearer fleet-footed and sharp.</description>
+    <thingCategories>
+      <li>LC_Apparel_Accessory_EGO</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/PunishingBirdAccessory</texPath>
+    </graphicData>
+    <statBases>
+      <Beauty>3</Beauty>
+    </statBases>
+    <apparel>
+      <layers>
+        <li>LC_AccessoryHead</li>
+      </layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/PunishingBirdAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <MoveSpeed>0.12</MoveSpeed>
+      <MeleeHitChance>0.15</MeleeHitChance>
+    </equippedStatOffsets>
+    <tradeTags>
+      <li>LC_Apparel_Accessory</li>
+    </tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_VoidDream</defName>
+    <label>Accessory (Dreamy)</label>
+    <description>A sleepy horned lamb crest that muffles waking clamor and softens psychic dread.</description>
+    <thingCategories>
+      <li>LC_Apparel_Accessory_EGO</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/VoidDreamAccessory</texPath>
+    </graphicData>
+    <statBases>
+      <Beauty>4</Beauty>
+    </statBases>
+    <apparel>
+      <layers>
+        <li>LC_AccessoryHat</li>
+      </layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/VoidDreamAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <MentalBreakThreshold>-0.06</MentalBreakThreshold>
+      <PsychicSensitivity>-0.08</PsychicSensitivity>
+    </equippedStatOffsets>
+    <tradeTags>
+      <li>LC_Apparel_Accessory</li>
+    </tradeTags>
+  </ThingDef>
+
+</Defs>

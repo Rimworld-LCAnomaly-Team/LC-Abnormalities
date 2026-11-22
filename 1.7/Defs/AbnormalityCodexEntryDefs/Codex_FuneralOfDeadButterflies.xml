@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>FuneralOfDeadButterflies</defName>
+    <label>The Funeral of the Dead Butterflies</label>
+    <description>The Funeral of the Dead Butterflies (T-01-68) mourns the facility's endless casualties.\nBreaching when workers exceed Fortitude III or fall short of Justice III, it alternates dual White/Black salvos with wide butterfly bursts.</description>
+    <uiIconPath>UI/CodexEntries/FuneralOfDeadButterflies</uiIconPath>
+    <category>HE</category>
+    <orderInCategory>820</orderInCategory>
+    <linkedThings>
+      <li>FuneralOfDeadButterflies</li>
+      <li>FuneralOfDeadButterfliesEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

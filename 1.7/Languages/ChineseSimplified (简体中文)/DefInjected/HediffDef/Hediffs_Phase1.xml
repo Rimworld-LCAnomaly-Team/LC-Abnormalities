@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <LC_FairyCare.label>精灵的照料</LC_FairyCare.label>
+  <LC_FairyCare.description>受到精灵盛宴温柔守护与周期性治疗的状态。\n\n严重警告：携此状态期间若开始照料任何其他异想体，将立刻遭到精灵群暴怒分食。</LC_FairyCare.description>
+
+  <LC_WellCheers_Red.label>红罐樱桃汽水</LC_WellCheers_Red.label>
+  <LC_WellCheers_Red.description>饮下韦尔奇樱桃味红罐汽水后的焕发状态，略微舒缓痛楚并促进伤口愈合。</LC_WellCheers_Red.description>
+
+  <LC_WellCheers_Blue.label>蓝罐深海苏打</LC_WellCheers_Blue.label>
+  <LC_WellCheers_Blue.description>饮下韦尔奇海盐蓝罐汽水后的澄明状态，稳定精神并提升工作效率。</LC_WellCheers_Blue.description>
+
+  <LC_WellCheers_Purple.label>紫罐暮色特调</LC_WellCheers_Purple.label>
+  <LC_WellCheers_Purple.description>饮下韦尔奇混酿紫罐汽水后的愉悦状态，温和提振步伐与意志。</LC_WellCheers_Purple.description>
+
+  <LC_WellCheers_DeepSleep.label>深海冰眠</LC_WellCheers_DeepSleep.label>
+  <LC_WellCheers_DeepSleep.description>误饮劣质韦尔奇汽水引发的昏沉沉睡，整个人意识陷入冰冷海底般彻底昏迷。</LC_WellCheers_DeepSleep.description>
+
+  <LC_PunishingBirdEnragedBuff.label>暴怒惩戒</LC_PunishingBirdEnragedBuff.label>
+  <LC_PunishingBirdEnragedBuff.description>惩戒鸟因遭攻击而彻底狂暴，移动速度飙升并开启高额护盾形态。</LC_PunishingBirdEnragedBuff.description>
+
+  <LC_VoidDreamSleep.label>虚空催眠</LC_VoidDreamSleep.label>
+  <LC_VoidDreamSleep.description>被虚空之梦的啼鸣拉入深度沉睡。\n必须在 60 秒内由同事上前唤醒，否则噩梦爆发将重创心智。</LC_VoidDreamSleep.description>
+
+  <LC_HeartOfAspirationBuff.label>渴望悸动</LC_HeartOfAspirationBuff.label>
+  <LC_HeartOfAspirationBuff.description>正佩戴渴望之心。\n获得大幅移速、攻速、工作速度与近战伤害加成；若 60 秒空转或未见血直接归还将遭暴虐狂暴反噬。</LC_HeartOfAspirationBuff.description>
+
+</LanguageData>

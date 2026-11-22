@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEgg ParentName="ResourceBase">
+    <defName>ScorchedGirlEgg</defName>
+    <label>Scorched Girl Egg</label>
+    <description>The charred stasis egg of Scorched Girl (F-01-02).</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Special/ScorchedGirlEgg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <genericMarketSellable>false</genericMarketSellable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <MarketValue>0</MarketValue>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <LC_MinimumContainmentStrength>35</LC_MinimumContainmentStrength>
+    </statBases>
+    <thingCategories><li>LC_Entity_Egg</li></thingCategories>
+    <descriptionHyperlinks><PawnKindDef>ScorchedGirl</PawnKindDef></descriptionHyperlinks>
+    <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+    <comps>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <heldPawnKind>ScorchedGirl</heldPawnKind>
+        <capturedLetterLabel>Scorched Girl Contained</capturedLetterLabel>
+        <capturedLetterText>{PAWN_nameDef} bound the Scorched Girl egg onto the holding platform, extinguishing her match inside.</capturedLetterText>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Smash {0_label}</useLabel>
+        <useMessage>{PAWN_nameDef} smashed the Scorched Girl egg into Enkephalin Boxes.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound"><soundOnUsed>ChunkRock_Drop</soundOnUsed></li>
+      <li Class="CompProperties_UseEffectDestroySelf"><leavings><EnkephalinBox>14</EnkephalinBox></leavings></li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Abnormality" />
+      <li Class="LCAnomalyCore.Comp.LC_CompProperties_InteractableEgg">
+        <compClass>LCAnomalyCore.Comp.LC_CompEgg</compClass>
+        <ticksToActivate>0</ticksToActivate>
+        <activateTexPath>UI/Commands/SmashScorchedGirlEgg</activateTexPath>
+        <activateLabelString>Smash...</activateLabelString>
+        <activateDescString>Smash the Scorched Girl egg.</activateDescString>
+        <activatingStringPending>smashing Scorched Girl egg</activatingStringPending>
+        <guiLabelString>Choose who should do this</guiLabelString>
+        <showMustBeActivatedByColonist>false</showMustBeActivatedByColonist>
+        <shouldTransferBioSignature>true</shouldTransferBioSignature>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>TETH</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEgg ParentName="ResourceBase">
+    <defName>DerFreischutzEgg</defName>
+    <label>Der Freischütz Egg</label>
+    <description>The midnight stasis egg of Der Freischütz (F-01-69).</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Special/DerFreischutzEgg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <genericMarketSellable>false</genericMarketSellable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <MarketValue>0</MarketValue>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <LC_MinimumContainmentStrength>55</LC_MinimumContainmentStrength>
+    </statBases>
+    <thingCategories><li>LC_Entity_Egg</li></thingCategories>
+    <descriptionHyperlinks><PawnKindDef>DerFreischutz</PawnKindDef></descriptionHyperlinks>
+    <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+    <comps>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <heldPawnKind>DerFreischutz</heldPawnKind>
+        <capturedLetterLabel>Der Freischütz Contained</capturedLetterLabel>
+        <capturedLetterText>{PAWN_nameDef} secured the Der Freischütz egg onto the holding platform, sealing the dark marksman's pact inside.</capturedLetterText>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Smash {0_label}</useLabel>
+        <useMessage>{PAWN_nameDef} smashed the Der Freischütz egg into Enkephalin Boxes.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound"><soundOnUsed>ChunkRock_Drop</soundOnUsed></li>
+      <li Class="CompProperties_UseEffectDestroySelf"><leavings><EnkephalinBox>20</EnkephalinBox></leavings></li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Abnormality" />
+      <li Class="LCAnomalyCore.Comp.LC_CompProperties_InteractableEgg">
+        <compClass>LCAnomalyCore.Comp.LC_CompEgg</compClass>
+        <ticksToActivate>0</ticksToActivate>
+        <activateTexPath>UI/Commands/SmashDerFreischutzEgg</activateTexPath>
+        <activateLabelString>Smash...</activateLabelString>
+        <activateDescString>Smash the Der Freischütz egg.</activateDescString>
+        <activatingStringPending>smashing Der Freischütz egg</activatingStringPending>
+        <guiLabelString>Choose who should do this</guiLabelString>
+        <showMustBeActivatedByColonist>false</showMustBeActivatedByColonist>
+        <shouldTransferBioSignature>true</shouldTransferBioSignature>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEgg ParentName="ResourceBase">
+    <defName>FuneralOfDeadButterfliesEgg</defName>
+    <label>Funeral of Dead Butterflies Egg</label>
+    <description>The solemn stasis egg of The Funeral of the Dead Butterflies (T-01-68).</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Special/FuneralOfDeadButterfliesEgg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <genericMarketSellable>false</genericMarketSellable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <MarketValue>0</MarketValue>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <LC_MinimumContainmentStrength>50</LC_MinimumContainmentStrength>
+    </statBases>
+    <thingCategories><li>LC_Entity_Egg</li></thingCategories>
+    <descriptionHyperlinks><PawnKindDef>FuneralOfDeadButterflies</PawnKindDef></descriptionHyperlinks>
+    <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+    <comps>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <heldPawnKind>FuneralOfDeadButterflies</heldPawnKind>
+        <capturedLetterLabel>Funeral of Dead Butterflies Contained</capturedLetterLabel>
+        <capturedLetterText>{PAWN_nameDef} secured the Funeral of Dead Butterflies egg onto the holding platform as pale wings stilled within.</capturedLetterText>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Smash {0_label}</useLabel>
+        <useMessage>{PAWN_nameDef} smashed the Funeral of Dead Butterflies egg into Enkephalin Boxes.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound"><soundOnUsed>ChunkRock_Drop</soundOnUsed></li>
+      <li Class="CompProperties_UseEffectDestroySelf"><leavings><EnkephalinBox>20</EnkephalinBox></leavings></li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Abnormality" />
+      <li Class="LCAnomalyCore.Comp.LC_CompProperties_InteractableEgg">
+        <compClass>LCAnomalyCore.Comp.LC_CompEgg</compClass>
+        <ticksToActivate>0</ticksToActivate>
+        <activateTexPath>UI/Commands/SmashFuneralOfDeadButterfliesEgg</activateTexPath>
+        <activateLabelString>Smash...</activateLabelString>
+        <activateDescString>Smash the Funeral of Dead Butterflies egg.</activateDescString>
+        <activatingStringPending>smashing Funeral egg</activatingStringPending>
+        <guiLabelString>Choose who should do this</guiLabelString>
+        <showMustBeActivatedByColonist>false</showMustBeActivatedByColonist>
+        <shouldTransferBioSignature>true</shouldTransferBioSignature>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEgg ParentName="ResourceBase">
+    <defName>SnowQueenEgg</defName>
+    <label>The Snow Queen Egg</label>
+    <description>The frost-carved stasis egg of The Snow Queen (F-01-37).</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Special/SnowQueenEgg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <genericMarketSellable>false</genericMarketSellable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <MarketValue>0</MarketValue>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <LC_MinimumContainmentStrength>45</LC_MinimumContainmentStrength>
+    </statBases>
+    <thingCategories><li>LC_Entity_Egg</li></thingCategories>
+    <descriptionHyperlinks><PawnKindDef>SnowQueen</PawnKindDef></descriptionHyperlinks>
+    <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+    <comps>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <heldPawnKind>SnowQueen</heldPawnKind>
+        <capturedLetterLabel>The Snow Queen Contained</capturedLetterLabel>
+        <capturedLetterText>{PAWN_nameDef} bound The Snow Queen egg onto the holding platform, waking her crystalline palace.</capturedLetterText>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Smash {0_label}</useLabel>
+        <useMessage>{PAWN_nameDef} smashed The Snow Queen egg into Enkephalin Boxes.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound"><soundOnUsed>ChunkRock_Drop</soundOnUsed></li>
+      <li Class="CompProperties_UseEffectDestroySelf"><leavings><EnkephalinBox>20</EnkephalinBox></leavings></li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Abnormality" />
+      <li Class="LCAnomalyCore.Comp.LC_CompProperties_InteractableEgg">
+        <compClass>LCAnomalyCore.Comp.LC_CompEgg</compClass>
+        <ticksToActivate>0</ticksToActivate>
+        <activateTexPath>UI/Commands/SmashSnowQueenEgg</activateTexPath>
+        <activateLabelString>Smash...</activateLabelString>
+        <activateDescString>Smash The Snow Queen egg.</activateDescString>
+        <activatingStringPending>smashing Snow Queen egg</activatingStringPending>
+        <guiLabelString>Choose who should do this</guiLabelString>
+        <showMustBeActivatedByColonist>false</showMustBeActivatedByColonist>
+        <shouldTransferBioSignature>true</shouldTransferBioSignature>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
+
+</Defs>

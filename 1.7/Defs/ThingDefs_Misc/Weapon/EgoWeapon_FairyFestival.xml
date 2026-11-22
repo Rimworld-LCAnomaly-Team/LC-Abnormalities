@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_BaseMeleeWeapon_EGO">
+    <defName>EgoWeapon_FairyFestival</defName>
+    <label>E.G.O. Weapon (Wingbeat)</label>
+    <description>Gossamer fairy wings and jagged fangs condensed into a shimmering mace (ZAYIN).\nEach strike against living flesh drains a ribbon of vitality back into the wielder's bruised body.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/EgoWeapon_FairyFestival</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.8, 1.8)</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>1.8</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>wingblade</label>
+        <capacities>
+          <li>LC_WingbeatCleave</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.35</cooldownTime>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Red</damageType>
+        <riskLevel>ZAYIN</riskLevel>
+        <damageMultiplier>1</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_EntityBase">
+    <defName>FuneralOfDeadButterflies</defName>
+    <label>The Funeral of the Dead Butterflies</label>
+    <description>A tall, solemn undertaker bearing a strapped white-butterfly coffin upon his back (T-01-68).\n\nBoth over-bold workers (Fortitude IV+) and timid ones (Justice II-) stir his sorrow, dropping his Qliphoth Counter (Max 2). When breached, he alternates dual White/Black salvos with a 10-second coffin eruption of pale butterflies.</description>
+    <uiIconPath>UI/CodexEntries/FuneralOfDeadButterflies</uiIconPath>
+    <thingClass>LCAbnormalities.FuneralOfDeadButterflies.LC_FuneralOfDeadButterfliesPawn</thingClass>
+    <statBases>
+      <MoveSpeed>3.8</MoveSpeed>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>100</ComfyTemperatureMax>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <LC_MinimumContainmentStrength>50</LC_MinimumContainmentStrength>
+      <StaggerDurationFactor>0</StaggerDurationFactor>
+      <ToxicResistance>1</ToxicResistance>
+    </statBases>
+    <race>
+      <body>OneSin</body>
+      <baseBodySize>1.25</baseBodySize>
+      <baseHealthScale>4.2</baseHealthScale>
+      <intelligence>ToolUser</intelligence>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <fleshType>LC_AbnormalityOrganic</fleshType>
+      <foodType>None</foodType>
+      <hasCorpse>false</hasCorpse>
+      <lifeExpectancy>1000</lifeExpectancy>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <disableIgniteVerb>true</disableIgniteVerb>
+      <trainability>None</trainability>
+      <renderTree>FuneralOfDeadButterflies</renderTree>
+      <thinkTreeMain>FuneralOfDeadButterfliesMain</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+      <lifeStageAges>
+        <li>
+          <def>LC_EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+    <tools>
+      <li>
+        <label>coffin strike</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>12</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
+    <comps>
+      <li Class="LCAbnormalities.FuneralOfDeadButterflies.CompProperties_FuneralOfDeadButterflies">
+        <qliphothCountMax>2</qliphothCountMax>
+        <studySucessRateBase>0.0</studySucessRateBase>
+        <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>true</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
+        <dyingFxDef>DyingFuneralOfDeadButterflies</dyingFxDef>
+        <workDamageDef>LC_WhiteDamage</workDamageDef>
+        <workDamageRange>4~6</workDamageRange>
+        <escapedLetterLabelKey>LC_Funeral_EscapedLabel</escapedLetterLabelKey>
+        <escapedLetterTextKey>LC_Funeral_EscapedText</escapedLetterTextKey>
+        <killedLetterLabelKey>LC_Funeral_KilledLabel</killedLetterLabelKey>
+        <killedLetterTextKey>LC_Funeral_KilledText</killedLetterTextKey>
+        <instinctProbs>
+          <li>0.50</li><li>0.45</li><li>0.40</li><li>0.0</li><li>0.0</li>
+        </instinctProbs>
+        <insightProbs>
+          <li>0.50</li><li>0.50</li><li>0.50</li><li>0.50</li><li>0.50</li>
+        </insightProbs>
+        <attachmentProbs>
+          <li>0.0</li><li>0.0</li><li>0.0</li><li>0.0</li><li>0.0</li>
+        </attachmentProbs>
+        <repressionProbs>
+          <li>0.0</li><li>0.0</li><li>0.60</li><li>0.60</li><li>0.60</li>
+        </repressionProbs>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <lookForTargetOnEscape>true</lookForTargetOnEscape>
+        <hasAnimation>false</hasAnimation>
+      </li>
+      <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
+        <frequencyTicks>60000</frequencyTicks>
+        <studyTimesPeriod>1</studyTimesPeriod>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <speedOffsetsByProgress>
+          <li>0</li><li>0.03</li><li>0.05</li><li>0.08</li><li>0.10</li>
+        </speedOffsetsByProgress>
+        <successOffsetsByProgress>
+          <li>0</li><li>0.03</li><li>0.05</li><li>0.08</li><li>0.10</li>
+        </successOffsetsByProgress>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_PeBoxProduce">
+        <peBoxDef>EnkephalinBox</peBoxDef>
+        <amountProdueRangeNormal>7~10</amountProdueRangeNormal>
+        <amountProdueMax>16</amountProdueMax>
+        <boxTexOffsetZ>0.11</boxTexOffsetZ>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
+        <accessoryDef>Accessory_FuneralOfDeadButterflies</accessoryDef>
+        <accessoryChance>0.03</accessoryChance>
+        <unlockLevel>2</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
+        <weaponExtracted>EgoWeapon_FuneralOfDeadButterflies</weaponExtracted>
+        <weaponIconPath>UI/Commands/ExtractEGO_FuneralOfDeadButterflies_Weapon</weaponIconPath>
+        <amountMaxWeapon>2</amountMaxWeapon>
+        <weaponExtractedNeed>50</weaponExtractedNeed>
+        <armorExtracted>Apparel_FuneralOfDeadButterfliesSuit</armorExtracted>
+        <armorIconPath>UI/Commands/ExtractEGO_FuneralOfDeadButterflies_Armor</armorIconPath>
+        <amountMaxArmor>2</amountMaxArmor>
+        <armorExtractedNeed>28</armorExtractedNeed>
+        <unlockLevel>4</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>3</threshold>
+            <label>Observation Level: I</label>
+            <text>Strict Virtue Window: Sending an agent with Fortitude IV+ or Justice II- lowers his Qliphoth Counter (Max 2).</text>
+          </li>
+          <li>
+            <threshold>7</threshold>
+            <label>Observation Level: II</label>
+            <text>Attachment always yields 0%, whereas Repression by Justice III+ agents performs reliably.\nUnlocks the E.G.O. Gift 'Solemn Lament'.</text>
+          </li>
+          <li>
+            <threshold>11</threshold>
+            <label>Observation Level: III</label>
+            <text>Resistant to Red trauma (0.5) yet vulnerable to White attacks (1.5), he erupts every 10 seconds with a 6.5-cell open-coffin White+Black burst. Focus White fire while shielding sanity.</text>
+          </li>
+          <li>
+            <threshold>16</threshold>
+            <label>Observation Level: IV</label>
+            <text>Those who mourn dutifully may borrow the Undertaker's twin WAW pistols.\nUnlocks the WAW E.G.O. Weapon and HE Suit 'Solemn Lament'.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>0.5</redResistance>
+        <whiteResistance>1.5</whiteResistance>
+        <blackResistance>1.0</blackResistance>
+        <paleResistance>2.0</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

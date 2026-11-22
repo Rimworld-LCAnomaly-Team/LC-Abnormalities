@@ -230,4 +230,119 @@
     </modExtensions>
   </ThingDef>
 
+  <!-- T-09-77 The Heart of Aspiration -->
+  <ThingDef ParentName="LC_ToolEntityBase">
+    <defName>HeartOfAspiration</defName>
+    <label>The Heart of Aspiration</label>
+    <description>A pulsating bronze-and-crystal artificial heart (T-09-77) whose luminous chambers pump ceaseless ambition.\n\nA colonist may equip this heart to gain explosive combat speed, melee power, and vitality—provided they quench its craving by striking enemies in combat before returning it. Returning it without bloodshed, or idling for 60 seconds, drives the bearer berserk.</description>
+    <uiIconPath>UI/CodexEntries/HeartOfAspiration_MenuIcon</uiIconPath>
+    <descriptionHyperlinks>
+      <HediffDef>LC_HeartOfAspirationBuff</HediffDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="LCAbnormalities.HeartOfAspiration.CompProperties_HeartOfAspiration">
+        <toolMode>Equippable</toolMode>
+        <studyMetric>UseSeconds</studyMetric>
+        <useDurationTicks>90</useDurationTicks>
+        <equipTickInterval>60</equipTickInterval>
+        <useLabelKey>LC_Tool_EquipFloatMenu</useLabelKey>
+        <useGizmoLabelKey>LC_HeartOfAspiration_EquipGizmoLabel</useGizmoLabelKey>
+        <useGizmoDescKey>LC_HeartOfAspiration_EquipGizmoDesc</useGizmoDescKey>
+        <returnLabelKey>LC_Tool_ReturnFloatMenu</returnLabelKey>
+        <returnGizmoLabelKey>LC_Tool_ReturnGizmoLabel</returnGizmoLabelKey>
+        <returnGizmoDescKey>LC_Tool_ReturnGizmoDesc</returnGizmoDescKey>
+        <equipHediffDef>LC_HeartOfAspirationBuff</equipHediffDef>
+        <emptyPlatformTexPath>Things/Building/HeartOfAspiration/HeartOfAspiration_Empty</emptyPlatformTexPath>
+        <useIconPath>UI/CodexEntries/HeartOfAspiration_MenuIcon</useIconPath>
+        <eggDef>HeartOfAspirationEgg</eggDef>
+        <expStatusType>Fortitude</expStatusType>
+        <expGainPerContinuousSecond>0.03</expGainPerContinuousSecond>
+        <restlessSeconds>45</restlessSeconds>
+        <berserkSeconds>60</berserkSeconds>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>30</threshold>
+            <label>Observation Level: I</label>
+            <text>When equipped, The Heart of Aspiration sharply boosts Move Speed, Melee Damage, Work Speed, and pain tolerance while racing faster every second.</text>
+          </li>
+          <li>
+            <threshold>90</threshold>
+            <label>Observation Level: II</label>
+            <text>WARNING: If 60 seconds pass without landing effective combat damage—or if returned prematurely before drawing blood—its irregular pulse triggers immediate Berserk backlash.</text>
+          </li>
+          <li>
+            <threshold>180</threshold>
+            <label>Observation Level: III</label>
+            <text>Once the bearer spills enemy blood in combat, the heart rests content and can be safely returned to its pedestal without penalty.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>TETH</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- T-09-78 Notes from a Crazed Researcher -->
+  <ThingDef ParentName="LC_ToolEntityBase">
+    <defName>NotesFromCrazedResearcher</defName>
+    <label>Notes from a Crazed Researcher</label>
+    <description>A frantic leather notebook scrawled with feverish diagrams and containment theories (T-09-78).\n\nCarrying it unlocks extraordinary work and abnormality study efficiency (+50% Work &amp; Study Speed, +20% Move Speed), yet two curses loom: taking 100 cumulative damage, or returning the notes before 30 seconds AND 1 completed abnormality study, detonates the notebook cleanly in the bearer's hands.</description>
+    <uiIconPath>UI/CodexEntries/NotesFromCrazedResearcher_MenuIcon</uiIconPath>
+    <descriptionHyperlinks>
+      <HediffDef>LC_ResearcherNoteBuff</HediffDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="LCAbnormalities.NotesFromCrazedResearcher.CompProperties_NotesFromCrazedResearcher">
+        <toolMode>Equippable</toolMode>
+        <studyMetric>UseSeconds</studyMetric>
+        <useDurationTicks>90</useDurationTicks>
+        <equipTickInterval>60</equipTickInterval>
+        <useLabelKey>LC_Tool_EquipFloatMenu</useLabelKey>
+        <useGizmoLabelKey>LC_ResearcherNote_EquipGizmoLabel</useGizmoLabelKey>
+        <useGizmoDescKey>LC_ResearcherNote_EquipGizmoDesc</useGizmoDescKey>
+        <returnLabelKey>LC_Tool_ReturnFloatMenu</returnLabelKey>
+        <returnGizmoLabelKey>LC_ResearcherNote_ReturnGizmoLabel</returnGizmoLabelKey>
+        <returnGizmoDescKey>LC_ResearcherNote_ReturnGizmoDesc</returnGizmoDescKey>
+        <equipHediffDef>LC_ResearcherNoteBuff</equipHediffDef>
+        <emptyPlatformTexPath>Things/Building/NotesFromCrazedResearcher/NotesFromCrazedResearcher_Empty</emptyPlatformTexPath>
+        <useIconPath>UI/CodexEntries/NotesFromCrazedResearcher_MenuIcon</useIconPath>
+        <eggDef>NotesFromCrazedResearcherEgg</eggDef>
+        <expStatusType>Prudence</expStatusType>
+        <expGainPerContinuousSecond>0.03</expGainPerContinuousSecond>
+        <minSafeReturnTicks>1800</minSafeReturnTicks>
+        <maxCumulativeDamage>100</maxCumulativeDamage>
+        <explosionRadius>4.5</explosionRadius>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>30</threshold>
+            <label>Observation Level: I</label>
+            <text>Carrying the notebook accelerates Work Speed, Abnormality Study Speed, Learning Speed, and Move Speed markedly.</text>
+          </li>
+          <li>
+            <threshold>90</threshold>
+            <label>Observation Level: II</label>
+            <text>DANGER: Any wearer who accumulates 100 damage while carrying the notes immediately explodes in a fatal 4.5-cell Black/Red detonation.</text>
+          </li>
+          <li>
+            <threshold>180</threshold>
+            <label>Observation Level: III</label>
+            <text>SAFE RETURN RULE: Hold the notes for at least 30 seconds AND complete at least 1 Abnormality study job before returning them—otherwise they detonate upon placement.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
 </Defs>

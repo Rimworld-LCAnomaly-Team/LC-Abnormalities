@@ -25,6 +25,16 @@ namespace LCAbnormalities.Settings
         public bool EnableWeCanChangeAnything = true;
         public bool EnableOldBeliefAndPromise = true;
         public bool EnableNothingThere = true;
+        public bool EnableFairyFestival = true;
+        public bool EnableWellCheers = true;
+        public bool EnablePunishingBird = true;
+        public bool EnableVoidDream = true;
+        public bool EnableHeartOfAspiration = true;
+        public bool EnableScorchedGirl = true;
+        public bool EnableDerFreischutz = true;
+        public bool EnableFuneralOfDeadButterflies = true;
+        public bool EnableSnowQueen = true;
+        public bool EnableNotesFromCrazedResearcher = true;
 
         public bool BurrowingHeavenAllowUnwatchedTeleport = true;
         public float BurrowingHeavenSightGraceMultiplier = 1.0f;
@@ -53,6 +63,16 @@ namespace LCAbnormalities.Settings
             Scribe_Values.Look(ref EnableWeCanChangeAnything, "EnableWeCanChangeAnything", true);
             Scribe_Values.Look(ref EnableOldBeliefAndPromise, "EnableOldBeliefAndPromise", true);
             Scribe_Values.Look(ref EnableNothingThere, "EnableNothingThere", true);
+            Scribe_Values.Look(ref EnableFairyFestival, "EnableFairyFestival", true);
+            Scribe_Values.Look(ref EnableWellCheers, "EnableWellCheers", true);
+            Scribe_Values.Look(ref EnablePunishingBird, "EnablePunishingBird", true);
+            Scribe_Values.Look(ref EnableVoidDream, "EnableVoidDream", true);
+            Scribe_Values.Look(ref EnableHeartOfAspiration, "EnableHeartOfAspiration", true);
+            Scribe_Values.Look(ref EnableScorchedGirl, "EnableScorchedGirl", true);
+            Scribe_Values.Look(ref EnableDerFreischutz, "EnableDerFreischutz", true);
+            Scribe_Values.Look(ref EnableFuneralOfDeadButterflies, "EnableFuneralOfDeadButterflies", true);
+            Scribe_Values.Look(ref EnableSnowQueen, "EnableSnowQueen", true);
+            Scribe_Values.Look(ref EnableNotesFromCrazedResearcher, "EnableNotesFromCrazedResearcher", true);
 
             Scribe_Values.Look(ref BurrowingHeavenAllowUnwatchedTeleport, "BurrowingHeavenAllowUnwatchedTeleport", true);
             Scribe_Values.Look(ref BurrowingHeavenSightGraceMultiplier, "BurrowingHeavenSightGraceMultiplier", 1.0f);
@@ -132,6 +152,56 @@ namespace LCAbnormalities.Settings
                 return EnableNothingThere;
             }
 
+            if (defName.IndexOf("FairyFestival", StringComparison.Ordinal) >= 0)
+            {
+                return EnableFairyFestival;
+            }
+
+            if (defName.IndexOf("WellCheers", StringComparison.Ordinal) >= 0)
+            {
+                return EnableWellCheers;
+            }
+
+            if (defName.IndexOf("PunishingBird", StringComparison.Ordinal) >= 0)
+            {
+                return EnablePunishingBird;
+            }
+
+            if (defName.IndexOf("VoidDream", StringComparison.Ordinal) >= 0)
+            {
+                return EnableVoidDream;
+            }
+
+            if (defName.IndexOf("HeartOfAspiration", StringComparison.Ordinal) >= 0)
+            {
+                return EnableHeartOfAspiration;
+            }
+
+            if (defName.IndexOf("ScorchedGirl", StringComparison.Ordinal) >= 0)
+            {
+                return EnableScorchedGirl;
+            }
+
+            if (defName.IndexOf("DerFreischutz", StringComparison.Ordinal) >= 0)
+            {
+                return EnableDerFreischutz;
+            }
+
+            if (defName.IndexOf("FuneralOfDeadButterflies", StringComparison.Ordinal) >= 0)
+            {
+                return EnableFuneralOfDeadButterflies;
+            }
+
+            if (defName.IndexOf("SnowQueen", StringComparison.Ordinal) >= 0)
+            {
+                return EnableSnowQueen;
+            }
+
+            if (defName.IndexOf("NotesFromCrazedResearcher", StringComparison.Ordinal) >= 0)
+            {
+                return EnableNotesFromCrazedResearcher;
+            }
+
             if (def is PawnKindDef_AnomalyEntity_SevenSin
                 || defName == "GluttonyEntity"
                 || defName == "LustEntity"
@@ -159,6 +229,16 @@ namespace LCAbnormalities.Settings
             EnableWeCanChangeAnything = true;
             EnableOldBeliefAndPromise = true;
             EnableNothingThere = true;
+            EnableFairyFestival = true;
+            EnableWellCheers = true;
+            EnablePunishingBird = true;
+            EnableVoidDream = true;
+            EnableHeartOfAspiration = true;
+            EnableScorchedGirl = true;
+            EnableDerFreischutz = true;
+            EnableFuneralOfDeadButterflies = true;
+            EnableSnowQueen = true;
+            EnableNotesFromCrazedResearcher = true;
 
             If_ShowVampireText = true;
             If_ShowVampireHealPartText = false;

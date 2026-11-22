@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_BaseRangedWeapon_EGO">
+    <defName>EgoWeapon_WellCheers</defName>
+    <label>E.G.O. Weapon (Soda)</label>
+    <description>A pastel carbonated carbine humming with tiny fizzing bubbles (ZAYIN).\nEven as its bolts rupture targets, stray soda mist has a habit of soothing its shooter's aches and nerves.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/EgoWeapon_WellCheers</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.8, 1.8)</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <Mass>2.8</Mass>
+      <AccuracyTouch>0.78</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.80</AccuracyMedium>
+      <AccuracyLong>0.65</AccuracyLong>
+      <RangedWeapon_Cooldown>1.1</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_EgoWeapon_WellCheers</defaultProjectile>
+        <warmupTime>0.9</warmupTime>
+        <range>24</range>
+        <soundCast>Shot_Rifle_EgoBase</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>7</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>7</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Red</damageType>
+        <riskLevel>ZAYIN</riskLevel>
+        <damageMultiplier>1</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_BaseBullet_EGO">
+    <defName>Bullet_EgoWeapon_WellCheers</defName>
+    <label>Soda E.G.O. bolt</label>
+    <projectile>
+      <damageDef>LC_Soda_RedHeal</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <stoppingPower>1.0</stoppingPower>
+      <speed>95</speed>
+    </projectile>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+</Defs>

@@ -297,4 +297,152 @@
     </modExtensions>
   </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
 
+  <!-- T-09-77 The Heart of Aspiration Egg -->
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEgg ParentName="ResourceBase">
+    <defName>HeartOfAspirationEgg</defName>
+    <label>The Heart of Aspiration Egg</label>
+    <description>The sealed stasis pod of The Heart of Aspiration (T-09-77). Bind it to a Holding Platform to make it available for combat equipping, or smash it to harvest Enkephalin Boxes.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Special/HeartOfAspirationEgg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <genericMarketSellable>false</genericMarketSellable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <MarketValue>0</MarketValue>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <LC_MinimumContainmentStrength>0</LC_MinimumContainmentStrength>
+    </statBases>
+    <thingCategories>
+      <li>LC_Entity_Egg</li>
+    </thingCategories>
+    <descriptionHyperlinks>
+      <PawnKindDef>HeartOfAspiration</PawnKindDef>
+    </descriptionHyperlinks>
+    <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+    <comps>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <heldPawnKind>HeartOfAspiration</heldPawnKind>
+        <capturedLetterLabel>Heart of Aspiration Contained</capturedLetterLabel>
+        <capturedLetterText>{PAWN_nameDef} secured The Heart of Aspiration egg onto a holding platform, placing the throbbing vessel on display.</capturedLetterText>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Smash {0_label}</useLabel>
+        <useMessage>{PAWN_nameDef} smashed The Heart of Aspiration egg, dissolving it into Enkephalin Boxes.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>ChunkRock_Drop</soundOnUsed>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf">
+        <leavings>
+          <EnkephalinBox>14</EnkephalinBox>
+        </leavings>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Abnormality" />
+      <li Class="LCAnomalyCore.Comp.LC_CompProperties_InteractableEgg">
+        <compClass>LCAnomalyCore.Comp.LC_CompEgg</compClass>
+        <ticksToActivate>0</ticksToActivate>
+        <activateTexPath>UI/CodexEntries/HeartOfAspiration_MenuIcon</activateTexPath>
+        <activateLabelString>Smash...</activateLabelString>
+        <activateDescString>Smash The Heart of Aspiration egg.</activateDescString>
+        <activatingStringPending>smashing Heart of Aspiration egg</activatingStringPending>
+        <guiLabelString>Choose who should do this</guiLabelString>
+        <showMustBeActivatedByColonist>false</showMustBeActivatedByColonist>
+        <shouldTransferBioSignature>true</shouldTransferBioSignature>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>TETH</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
+
+  <!-- T-09-78 Notes from a Crazed Researcher Egg -->
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEgg ParentName="ResourceBase">
+    <defName>NotesFromCrazedResearcherEgg</defName>
+    <label>Notes from a Crazed Researcher Egg</label>
+    <description>The sealed stasis pod of Notes from a Crazed Researcher (T-09-78). Bind it to a Holding Platform to make it available for researchers, or smash it to harvest Enkephalin Boxes.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Special/NotesFromCrazedResearcherEgg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <genericMarketSellable>false</genericMarketSellable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <MarketValue>0</MarketValue>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <LC_MinimumContainmentStrength>0</LC_MinimumContainmentStrength>
+    </statBases>
+    <thingCategories>
+      <li>LC_Entity_Egg</li>
+    </thingCategories>
+    <descriptionHyperlinks>
+      <PawnKindDef>NotesFromCrazedResearcher</PawnKindDef>
+    </descriptionHyperlinks>
+    <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+    <comps>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <heldPawnKind>NotesFromCrazedResearcher</heldPawnKind>
+        <capturedLetterLabel>Crazed Researcher's Notes Contained</capturedLetterLabel>
+        <capturedLetterText>{PAWN_nameDef} secured the Notes from a Crazed Researcher egg onto a holding platform, opening the frantic leather journal inside.</capturedLetterText>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Smash {0_label}</useLabel>
+        <useMessage>{PAWN_nameDef} smashed the Notes from a Crazed Researcher egg, dissolving it into Enkephalin Boxes.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>ChunkRock_Drop</soundOnUsed>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf">
+        <leavings>
+          <EnkephalinBox>18</EnkephalinBox>
+        </leavings>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Abnormality" />
+      <li Class="LCAnomalyCore.Comp.LC_CompProperties_InteractableEgg">
+        <compClass>LCAnomalyCore.Comp.LC_CompEgg</compClass>
+        <ticksToActivate>0</ticksToActivate>
+        <activateTexPath>UI/CodexEntries/NotesFromCrazedResearcher_MenuIcon</activateTexPath>
+        <activateLabelString>Smash...</activateLabelString>
+        <activateDescString>Smash the Notes from a Crazed Researcher egg.</activateDescString>
+        <activatingStringPending>smashing Crazed Researcher's Notes egg</activatingStringPending>
+        <guiLabelString>Choose who should do this</guiLabelString>
+        <showMustBeActivatedByColonist>false</showMustBeActivatedByColonist>
+        <shouldTransferBioSignature>true</shouldTransferBioSignature>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
+
 </Defs>

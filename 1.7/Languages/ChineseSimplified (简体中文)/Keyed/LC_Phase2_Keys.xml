@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <LC_ScorchedGirl_EscapedLabel>突破收容：焦化少女</LC_ScorchedGirl_EscapedLabel>
+  <LC_ScorchedGirl_EscapedText>{0} 点燃身上的巨型火柴突破了收容！请在 20 秒内将其远程击落，绝不能让她靠近殖民者！</LC_ScorchedGirl_EscapedText>
+  <LC_ScorchedGirl_KilledLabel>镇压成功：焦化少女</LC_ScorchedGirl_KilledLabel>
+  <LC_ScorchedGirl_KilledText>{0} 在火柴彻底引爆前已被及时击溃。</LC_ScorchedGirl_KilledText>
+  <LC_ScorchedGirl_DetonatedMsg>焦化少女在耀眼的烈焰红伤大爆炸中化为收容蛋！</LC_ScorchedGirl_DetonatedMsg>
+
+  <LC_DerFreischutz_LowJusticeMsg>{0} 的正义等级过低惹怒了魔弹射手，逆卡巴拉计数器下降！</LC_DerFreischutz_LowJusticeMsg>
+  <LC_DerFreischutz_MeltdownLabel>魔弹射手：失控流弹</LC_DerFreischutz_MeltdownLabel>
+  <LC_DerFreischutz_MeltdownText>魔弹射手的逆卡巴拉计数器跌至归零！他朝设施内部胡乱扣动扳机，射出了一发贯穿全图的失控魔弹。</LC_DerFreischutz_MeltdownText>
+  <LC_DerFreischutz_SeventhShotMsg>命运在第七发魔弹扭曲——枪口陡然转向射向了 {0}！</LC_DerFreischutz_SeventhShotMsg>
+  <LC_DerFreischutz_RequestShotLabel>请托射击 ({0} PE)</LC_DerFreischutz_RequestShotLabel>
+  <LC_DerFreischutz_RequestShotDesc>消耗 {0} 个独立 PE-Box，指派魔弹射手发射贯穿全图所有敌我单位的高额黑伤魔弹。（当前第 {1} / 7 发；每第七发必会射向己方随机殖民者！）</LC_DerFreischutz_RequestShotDesc>
+  <LC_DerFreischutz_NotEnoughPeBox>需要 {0} 个独立 PE-Box（当前 {1} 个）</LC_DerFreischutz_NotEnoughPeBox>
+  <LC_DerFreischutz_InspectCounter>魔弹契约计数：第 {0} / 7 发</LC_DerFreischutz_InspectCounter>
+
+  <LC_Funeral_EscapedLabel>突破收容：亡蝶葬仪</LC_Funeral_EscapedLabel>
+  <LC_Funeral_EscapedText>{0} 携棺而出突破了收容！请警惕他的双枪远程齐射与白黑双伤蝴蝶爆发。</LC_Funeral_EscapedText>
+  <LC_Funeral_KilledLabel>镇压成功：亡蝶葬仪</LC_Funeral_KilledLabel>
+  <LC_Funeral_KilledText>{0} 已被成功镇压并还原为收容蛋。</LC_Funeral_KilledText>
+  <LC_Funeral_BadVirtueMsg>{0} 的勇气或正义等级违背了亡蝶葬仪禁忌，逆卡巴拉计数器下降！</LC_Funeral_BadVirtueMsg>
+
+  <LC_SnowQueen_FirstKissMsg>冰雪女皇在 {0} 身上印下了一枚冰霜之吻，切勿再度对其取得“差”工作结果！</LC_SnowQueen_FirstKissMsg>
+  <LC_SnowQueen_FrozenLetterLabel>冰棺封冻：{0}</LC_SnowQueen_FrozenLetterLabel>
+  <LC_SnowQueen_FrozenLetterText>连续两次糟糕工作令 {0} 被冰雪女皇封进了冰晶棺椁！请在 90 秒倒计时归零前派人进行“决斗救援”。</LC_SnowQueen_FrozenLetterText>
+  <LC_SnowQueen_FreezeTimeoutMsg>90 秒救援倒计时归零——{0} 随冰棺一同碎裂陨落！</LC_SnowQueen_FreezeTimeoutMsg>
+  <LC_SnowQueen_DuelWinLetterLabel>决斗胜利：营救成功</LC_SnowQueen_DuelWinLetterLabel>
+  <LC_SnowQueen_DuelWinLetterText>{0} 战胜了冰雪女皇的试炼，成功救出 {1}！二人都获赠了冰雪女皇的 E.G.O 饰品。</LC_SnowQueen_DuelWinLetterText>
+  <LC_SnowQueen_DuelLossLetterLabel>决斗败北</LC_SnowQueen_DuelLossLetterLabel>
+  <LC_SnowQueen_DuelLossLetterText>{0} 未能通过冰雪女皇的试炼，与 {1} 一同葬身于致命冰霜冲击之中。</LC_SnowQueen_DuelLossLetterText>
+  <LC_SnowQueen_DuelGizmoLabel>决斗救援...</LC_SnowQueen_DuelGizmoLabel>
+  <LC_SnowQueen_DuelGizmoDesc>挑选一名殖民者前去与冰雪女皇决斗以解救 {0}。胜率取决于挑战者的勇气等级。</LC_SnowQueen_DuelGizmoDesc>
+  <LC_SnowQueen_DuelOption>{0}（勇气胜率 {1}%）</LC_SnowQueen_DuelOption>
+  <LC_SnowQueen_InspectFrozen>被冰封殖民者：{0}（剩余 {1} 秒）</LC_SnowQueen_InspectFrozen>
+
+  <LC_ResearcherNote_EquipGizmoLabel>借阅笔记...</LC_ResearcherNote_EquipGizmoLabel>
+  <LC_ResearcherNote_EquipGizmoDesc>指派殖民者随身携带癫狂研究员的笔记（+50% 工作与研究速度）。须至少持有满 30 秒且完成 1 次研究后再归还，且累计受伤满 100 点会立刻爆炸。</LC_ResearcherNote_EquipGizmoDesc>
+  <LC_ResearcherNote_ReturnGizmoLabel>归还笔记</LC_ResearcherNote_ReturnGizmoLabel>
+  <LC_ResearcherNote_ReturnGizmoDesc>命令 {0} 走回平台归还癫狂研究员的笔记。</LC_ResearcherNote_ReturnGizmoDesc>
+  <LC_ResearcherNote_EquipMsg>{0} 带走了癫狂研究员的笔记。请确保研究满 1 次且持有满 30 秒后再归还，同时避免受伤累计达 100 点！</LC_ResearcherNote_EquipMsg>
+  <LC_ResearcherNote_PrematureExplodeMsg>{0} 在未满足 30 秒与 1 次研究要求前匆忙归还了笔记，本子当场发生致命爆炸！</LC_ResearcherNote_PrematureExplodeMsg>
+  <LC_ResearcherNote_DamageExplodeMsg>{0} 携带着癫狂研究员的笔记累计承受了 100 点伤害，笔记骤然剧烈引爆！</LC_ResearcherNote_DamageExplodeMsg>
+  <LC_ResearcherNote_SafeReturnMsg>{0} 满足了癫狂研究员的所有笔记要求，平平安安地将其放回平台。</LC_ResearcherNote_SafeReturnMsg>
+  <LC_ResearcherNote_ExplodeLetterLabel>致命爆燃：癫狂研究员的笔记</LC_ResearcherNote_ExplodeLetterLabel>
+  <LC_ResearcherNote_StatusInspect>累计受伤上限：{0} / {1} | 已完成研究：{2} 次</LC_ResearcherNote_StatusInspect>
+  <LC_ResearcherNote_HediffTip>累计承受伤害：{0} / {1} | 已完成研究：{2} 次（安全归还需持有满 30 秒且完成 ≥1 次研究）</LC_ResearcherNote_HediffTip>
+
+</LanguageData>

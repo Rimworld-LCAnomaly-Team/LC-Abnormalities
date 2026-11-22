@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <LC_Tool_EquipFloatMenu>Equip {0}</LC_Tool_EquipFloatMenu>
+
+  <LC_FairyFestival_CareMsg>Fairy Festival's warm care lingers around {0}.</LC_FairyFestival_CareMsg>
+  <LC_FairyFestival_DevouredLetterLabel>Devoured by the Fairies</LC_FairyFestival_DevouredLetterLabel>
+  <LC_FairyFestival_DevouredLetterText>{0} carried Fairy's Care while approaching {1}—breaking the fairies' jealous oath. In a flash of iridescent wings, {0} was torn apart and devoured.</LC_FairyFestival_DevouredLetterText>
+
+  <LC_WellCheers_RedCanMsg>{0} drank a Cherry Red WellCheers soda, mending surface wounds.</LC_WellCheers_RedCanMsg>
+  <LC_WellCheers_BlueCanMsg>{0} drank a Deep Sea Blue WellCheers soda, soothing mental strain.</LC_WellCheers_BlueCanMsg>
+  <LC_WellCheers_PurpleCanMsg>{0} drank a Twilight Purple WellCheers soda, uplifting body and mind.</LC_WellCheers_PurpleCanMsg>
+  <LC_WellCheers_BadDrinkMsg>The tainted can drugged {0} into freezing hypothermic slumber and jarred their mind.</LC_WellCheers_BadDrinkMsg>
+
+  <LC_PunishingBird_EscapedLabel>Breach: Punishing Bird</LC_PunishingBird_EscapedLabel>
+  <LC_PunishingBird_EscapedText>{0} slipped out of containment! Hold your fire—do not attack it unless you wish to awaken its crimson maw.</LC_PunishingBird_EscapedText>
+  <LC_PunishingBird_KilledLabel>Suppressed: Punishing Bird</LC_PunishingBird_KilledLabel>
+  <LC_PunishingBird_KilledText>{0} has dissolved back into an abnormality egg.</LC_PunishingBird_KilledText>
+  <LC_PunishingBird_EnragedMsg>Punishing Bird was provoked! Its chest splits wide in towering fury!</LC_PunishingBird_EnragedMsg>
+  <LC_PunishingBird_PunishMsg>Punishing Bird's crimson maw snapped shut upon {0} before vanishing into dormancy.</LC_PunishingBird_PunishMsg>
+  <LC_PunishingBird_ReturnMsg>Punishing Bird grew tired of pecking and returned quietly into its egg.</LC_PunishingBird_ReturnMsg>
+
+  <LC_VoidDream_EscapedLabel>Breach: Void Dream</LC_VoidDream_EscapedLabel>
+  <LC_VoidDream_EscapedText>{0} morphed into its three-eyed rooster form and breached containment! Wake anyone put to sleep within 60 seconds.</LC_VoidDream_EscapedText>
+  <LC_VoidDream_KilledLabel>Suppressed: Void Dream</LC_VoidDream_KilledLabel>
+  <LC_VoidDream_KilledText>{0} collapsed into an abnormality egg.</LC_VoidDream_KilledText>
+  <LC_VoidDream_LowTemperanceMsg>{0}'s low Temperance disturbed Void Dream, lowering its Qliphoth Counter!</LC_VoidDream_LowTemperanceMsg>
+  <LC_VoidDream_SleepMsg>Void Dream's hypnotic crow lulled {0} into a deep coma!</LC_VoidDream_SleepMsg>
+  <LC_VoidDream_SecondCrowMsg>A second crow tore through {0}'s slumbering nightmare!</LC_VoidDream_SecondCrowMsg>
+  <LC_VoidDream_SleepCountdownTip>Wake before nightmare shock: {0}s</LC_VoidDream_SleepCountdownTip>
+  <LC_VoidDream_NightmareMsg>No one woke {0} in time—Void Dream's nightmare erupted inside their skull!</LC_VoidDream_NightmareMsg>
+  <LC_VoidDream_WakeGizmoLabel>Wake Sleeper</LC_VoidDream_WakeGizmoLabel>
+  <LC_VoidDream_WakeGizmoDesc>Order a colonist to shake {0} awake before nightmare shock triggers.</LC_VoidDream_WakeGizmoDesc>
+  <LC_VoidDream_WokeMsg>{1} shook {0} awake from the void nightmare.</LC_VoidDream_WokeMsg>
+
+  <LC_HeartOfAspiration_EquipGizmoLabel>Borrow Heart...</LC_HeartOfAspiration_EquipGizmoLabel>
+  <LC_HeartOfAspiration_EquipGizmoDesc>Choose a colonist to equip The Heart of Aspiration for combat buffs. They must shed enemy blood within 60 seconds and before returning it.</LC_HeartOfAspiration_EquipGizmoDesc>
+  <LC_HeartOfAspiration_ReturnGizmoLabel>Return Heart</LC_HeartOfAspiration_ReturnGizmoLabel>
+  <LC_HeartOfAspiration_ReturnGizmoDesc>Order {0} to return The Heart of Aspiration to its pedestal.</LC_HeartOfAspiration_ReturnGizmoDesc>
+  <LC_HeartOfAspiration_EquipMsg>{0} borrowed The Heart of Aspiration. Shed enemy blood within 60 seconds!</LC_HeartOfAspiration_EquipMsg>
+  <LC_HeartOfAspiration_RestlessMsg>The Heart of Aspiration pounds furiously in {0}'s chest—draw enemy blood soon!</LC_HeartOfAspiration_RestlessMsg>
+  <LC_HeartOfAspiration_BerserkMsg>{0} failed to satiate The Heart of Aspiration in time and snapped into a berserk rage!</LC_HeartOfAspiration_BerserkMsg>
+  <LC_HeartOfAspiration_PrematureReturnMsg>{0} returned The Heart of Aspiration without shedding blood—its frustrated pulse drove them berserk!</LC_HeartOfAspiration_PrematureReturnMsg>
+  <LC_HeartOfAspiration_SafeReturnMsg>{0} satisfied The Heart of Aspiration in battle and safely returned it.</LC_HeartOfAspiration_SafeReturnMsg>
+  <LC_HeartOfAspiration_StatusSatisfied>Bloodshed satiated—safe to return.</LC_HeartOfAspiration_StatusSatisfied>
+  <LC_HeartOfAspiration_StatusRestless>Hungers for battle ({0}s / {1}s idle)</LC_HeartOfAspiration_StatusRestless>
+  <LC_HeartOfAspiration_MentalReason>The Heart of Aspiration's unquenched frenzy</LC_HeartOfAspiration_MentalReason>
+
+</LanguageData>

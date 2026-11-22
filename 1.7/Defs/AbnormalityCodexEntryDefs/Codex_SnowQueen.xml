@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>SnowQueen</defName>
+    <label>The Snow Queen</label>
+    <description>The Snow Queen (F-01-37) seals repeatedly failed workers inside a crystalline ice coffin.\nSend a courageous champion to win her duel within 90 seconds to rescue the prisoner and earn the Snow Queen's frost-blossom E.G.O. Gift.</description>
+    <uiIconPath>UI/CodexEntries/SnowQueen</uiIconPath>
+    <category>HE</category>
+    <orderInCategory>830</orderInCategory>
+    <linkedThings>
+      <li>SnowQueen</li>
+      <li>SnowQueenEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

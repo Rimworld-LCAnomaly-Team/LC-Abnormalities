@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_EntityBase">
+    <defName>FairyFestival</defName>
+    <label>Fairy Festival</label>
+    <description>A gathering of glowing, gossamer-winged fairies (F-04-83) that tirelessly dote upon the staff assigned to them, tending bruises and calming weary minds.\n\nYet their care is a jealous feast: whoever accepts their blessing and then dares tend to any other Abnormality is mercilessly torn apart and devoured.</description>
+    <uiIconPath>UI/CodexEntries/FairyFestival</uiIconPath>
+    <thingClass>LCAbnormalities.Shared.LC_StandardEntityPawn</thingClass>
+    <statBases>
+      <MoveSpeed>0</MoveSpeed>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>100</ComfyTemperatureMax>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <LC_MinimumContainmentStrength>0</LC_MinimumContainmentStrength>
+      <StaggerDurationFactor>0</StaggerDurationFactor>
+      <ToxicResistance>1</ToxicResistance>
+    </statBases>
+    <race>
+      <body>OneSin</body>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>1</baseHealthScale>
+      <intelligence>ToolUser</intelligence>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <fleshType>LC_AbnormalityOrganic</fleshType>
+      <foodType>None</foodType>
+      <hasCorpse>false</hasCorpse>
+      <lifeExpectancy>1000</lifeExpectancy>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <disableIgniteVerb>true</disableIgniteVerb>
+      <trainability>None</trainability>
+      <renderTree>FairyFestival</renderTree>
+      <thinkTreeMain>Phase1PassiveEntityMain</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+      <lifeStageAges>
+        <li>
+          <def>LC_EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="LCAbnormalities.FairyFestival.CompProperties_FairyFestival">
+        <qliphothCountMax>-1</qliphothCountMax>
+        <studySucessRateBase>0.0</studySucessRateBase>
+        <shouldNotifyWhenEscape>false</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>false</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <allowRoamingOutsideContainment>false</allowRoamingOutsideContainment>
+        <dyingFxDef>DyingFairyFestival</dyingFxDef>
+        <workDamageDef>LC_RedDamage</workDamageDef>
+        <workDamageRange>1~2</workDamageRange>
+        <instinctProbs>
+          <li>0.7</li><li>0.7</li><li>0.7</li><li>0.7</li><li>0.7</li>
+        </instinctProbs>
+        <insightProbs>
+          <li>0.5</li><li>0.4</li><li>0.3</li><li>0.3</li><li>0.3</li>
+        </insightProbs>
+        <attachmentProbs>
+          <li>0.7</li><li>0.6</li><li>0.5</li><li>0.5</li><li>0.5</li>
+        </attachmentProbs>
+        <repressionProbs>
+          <li>0.5</li><li>0.4</li><li>0.3</li><li>0.3</li><li>0.3</li>
+        </repressionProbs>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <lookForTargetOnEscape>false</lookForTargetOnEscape>
+        <hasAnimation>false</hasAnimation>
+      </li>
+      <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
+        <frequencyTicks>60000</frequencyTicks>
+        <studyTimesPeriod>1</studyTimesPeriod>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <speedOffsetsByProgress>
+          <li>0</li><li>0.02</li><li>0.04</li><li>0.06</li><li>0.08</li>
+        </speedOffsetsByProgress>
+        <successOffsetsByProgress>
+          <li>0</li><li>0.02</li><li>0.04</li><li>0.06</li><li>0.08</li>
+        </successOffsetsByProgress>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_PeBoxProduce">
+        <peBoxDef>EnkephalinBox</peBoxDef>
+        <amountProdueRangeNormal>3~5</amountProdueRangeNormal>
+        <amountProdueMax>10</amountProdueMax>
+        <boxTexOffsetZ>0.178</boxTexOffsetZ>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
+        <accessoryDef>Accessory_FairyFestival</accessoryDef>
+        <accessoryChance>0.05</accessoryChance>
+        <unlockLevel>2</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
+        <weaponExtracted>EgoWeapon_FairyFestival</weaponExtracted>
+        <weaponIconPath>UI/Commands/ExtractEGO_FairyFestival_Weapon</weaponIconPath>
+        <amountMaxWeapon>4</amountMaxWeapon>
+        <weaponExtractedNeed>15</weaponExtractedNeed>
+        <armorExtracted>Apparel_FairyFestivalSuit</armorExtracted>
+        <armorIconPath>UI/Commands/ExtractEGO_FairyFestival_Armor</armorIconPath>
+        <amountMaxArmor>4</amountMaxArmor>
+        <armorExtractedNeed>10</armorExtractedNeed>
+        <unlockLevel>3</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>1</threshold>
+            <label>Observation Level: I</label>
+            <text>Upon completing work, the fairies bestow their caring touch, gently knitting surface wounds and soothing strained nerves.\nWork Speed +2% &amp; Success Rate +2%.</text>
+          </li>
+          <li>
+            <threshold>3</threshold>
+            <label>Observation Level: II</label>
+            <text>WARNING: Anyone carrying Fairy's Care will steadily heal, but should they start working with ANY other Abnormality before recovery ends, the fairies will violently devour them on the spot.\nUnlocks the E.G.O. Gift 'Wingbeat'.</text>
+          </li>
+          <li>
+            <threshold>6</threshold>
+            <label>Observation Level: III</label>
+            <text>Instinct and Attachment consistently pacify the swarm while Insight and Repression test their patience.\nUnlocks the ZAYIN E.G.O. Weapon and Suit 'Wingbeat'.</text>
+          </li>
+          <li>
+            <threshold>10</threshold>
+            <label>Observation Level: IV</label>
+            <text>So long as every worker stays faithful until the care fades, Fairy Festival remains one of the safest restorative ZAYIN entities.\nWork Speed +8% &amp; Success Rate +8%.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>ZAYIN</abnormalityCategoryDef>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>1.0</redResistance>
+        <whiteResistance>1.0</whiteResistance>
+        <blackResistance>1.0</blackResistance>
+        <paleResistance>2.0</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

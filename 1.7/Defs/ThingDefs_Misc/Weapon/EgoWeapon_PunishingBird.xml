@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_BaseRangedWeapon_EGO">
+    <defName>EgoWeapon_PunishingBird</defName>
+    <label>E.G.O. Weapon (Beak)</label>
+    <description>A sleek white sidearm carved in the likeness of Punishing Bird's slender bill (TETH).\nExceptionally light and rapid-firing, it punishes careless targets with relentless accuracy.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/EgoWeapon_PunishingBird</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.6, 1.6)</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Autopistol</soundInteract>
+    <statBases>
+      <Mass>1.6</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.86</AccuracyShort>
+      <AccuracyMedium>0.74</AccuracyMedium>
+      <AccuracyLong>0.55</AccuracyLong>
+      <RangedWeapon_Cooldown>0.65</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_EgoWeapon_PunishingBird</defaultProjectile>
+        <warmupTime>0.35</warmupTime>
+        <range>22</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shot_Autopistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>7</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Red</damageType>
+        <riskLevel>TETH</riskLevel>
+        <damageMultiplier>1</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_BaseBullet_EGO">
+    <defName>Bullet_EgoWeapon_PunishingBird</defName>
+    <label>Beak E.G.O. bullet</label>
+    <projectile>
+      <damageAmountBase>8</damageAmountBase>
+      <armorPenetrationBase>0.28</armorPenetrationBase>
+      <stoppingPower>0.8</stoppingPower>
+      <speed>115</speed>
+    </projectile>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+</Defs>

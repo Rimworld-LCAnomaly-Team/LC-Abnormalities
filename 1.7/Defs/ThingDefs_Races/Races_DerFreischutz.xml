@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_EntityBase">
+    <defName>DerFreischutz</defName>
+    <label>Der Freischütz</label>
+    <description>A grim, smoking marksman cloaked in midnight indigo (F-01-69) wielding an enchanted long-barreled rifle.\n\nHe never physically escapes containment; instead, for 10 IndiPE-Boxes he fires a piercing Magic Bullet across the entire map, skewering enemy and ally alike. Beware the seventh shot—it infallibly bends toward one of your own colonists.</description>
+    <uiIconPath>UI/CodexEntries/DerFreischutz</uiIconPath>
+    <thingClass>LCAbnormalities.DerFreischutz.LC_DerFreischutzPawn</thingClass>
+    <statBases>
+      <MoveSpeed>0</MoveSpeed>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>100</ComfyTemperatureMax>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <LC_MinimumContainmentStrength>55</LC_MinimumContainmentStrength>
+      <StaggerDurationFactor>0</StaggerDurationFactor>
+      <ToxicResistance>1</ToxicResistance>
+    </statBases>
+    <race>
+      <body>OneSin</body>
+      <baseBodySize>1.2</baseBodySize>
+      <baseHealthScale>4.0</baseHealthScale>
+      <intelligence>ToolUser</intelligence>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <fleshType>LC_AbnormalityOrganic</fleshType>
+      <foodType>None</foodType>
+      <hasCorpse>false</hasCorpse>
+      <lifeExpectancy>1000</lifeExpectancy>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <disableIgniteVerb>true</disableIgniteVerb>
+      <trainability>None</trainability>
+      <renderTree>DerFreischutz</renderTree>
+      <thinkTreeMain>Phase2PassiveEntityMain</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+      <lifeStageAges>
+        <li>
+          <def>LC_EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="LCAbnormalities.DerFreischutz.CompProperties_DerFreischutz">
+        <qliphothCountMax>3</qliphothCountMax>
+        <studySucessRateBase>0.0</studySucessRateBase>
+        <shouldNotifyWhenEscape>false</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>false</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <allowRoamingOutsideContainment>false</allowRoamingOutsideContainment>
+        <dyingFxDef>DyingDerFreischutz</dyingFxDef>
+        <workDamageDef>LC_BlackDamage</workDamageDef>
+        <workDamageRange>3~4</workDamageRange>
+        <instinctProbs>
+          <li>0.40</li><li>0.40</li><li>0.40</li><li>0.40</li><li>0.40</li>
+        </instinctProbs>
+        <insightProbs>
+          <li>0.50</li><li>0.50</li><li>0.50</li><li>0.50</li><li>0.50</li>
+        </insightProbs>
+        <attachmentProbs>
+          <li>0.30</li><li>0.30</li><li>0.30</li><li>0.30</li><li>0.30</li>
+        </attachmentProbs>
+        <repressionProbs>
+          <li>0.0</li><li>0.0</li><li>0.60</li><li>0.60</li><li>0.60</li>
+        </repressionProbs>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <lookForTargetOnEscape>false</lookForTargetOnEscape>
+        <hasAnimation>false</hasAnimation>
+      </li>
+      <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
+        <frequencyTicks>60000</frequencyTicks>
+        <studyTimesPeriod>1</studyTimesPeriod>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <speedOffsetsByProgress>
+          <li>0</li><li>0.03</li><li>0.05</li><li>0.08</li><li>0.10</li>
+        </speedOffsetsByProgress>
+        <successOffsetsByProgress>
+          <li>0</li><li>0.03</li><li>0.05</li><li>0.08</li><li>0.10</li>
+        </successOffsetsByProgress>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_PeBoxProduce">
+        <peBoxDef>EnkephalinBox</peBoxDef>
+        <amountProdueRangeNormal>7~11</amountProdueRangeNormal>
+        <amountProdueMax>18</amountProdueMax>
+        <boxTexOffsetZ>0.0742</boxTexOffsetZ>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
+        <accessoryDef>Accessory_DerFreischutz</accessoryDef>
+        <accessoryChance>0.03</accessoryChance>
+        <unlockLevel>3</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
+        <weaponExtracted>EgoWeapon_DerFreischutz</weaponExtracted>
+        <weaponIconPath>UI/Commands/ExtractEGO_DerFreischutz_Weapon</weaponIconPath>
+        <amountMaxWeapon>2</amountMaxWeapon>
+        <weaponExtractedNeed>55</weaponExtractedNeed>
+        <armorExtracted>Apparel_DerFreischutzSuit</armorExtracted>
+        <armorIconPath>UI/Commands/ExtractEGO_DerFreischutz_Armor</armorIconPath>
+        <amountMaxArmor>2</amountMaxArmor>
+        <armorExtractedNeed>30</armorExtractedNeed>
+        <unlockLevel>4</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>3</threshold>
+            <label>Observation Level: I</label>
+            <text>Only Justice III+ agents succeed on Repression (60%), and sending Justice I–II workers drops his Qliphoth Counter (Max 3).</text>
+          </li>
+          <li>
+            <threshold>7</threshold>
+            <label>Observation Level: II</label>
+            <text>Spend 10 IndiPE-Box via "Request Magic Bullet" to fire a map-spanning piercing Black shot (52 dmg, AP 0.8)—hitting allies in its line of fire too.</text>
+          </li>
+          <li>
+            <threshold>12</threshold>
+            <label>Observation Level: III</label>
+            <text>WARNING: Every 7th requested bullet ignores aiming orders and curves toward a random colonist! If Qliphoth reaches 0, he fires a stray shot without escaping.\nUnlocks the E.G.O. Gift 'Magic Bullet'.</text>
+          </li>
+          <li>
+            <threshold>17</threshold>
+            <label>Observation Level: IV</label>
+            <text>The WAW sniper rifle and HE trenchcoat of the Dark Huntsman are yours to command—along with their price.\nUnlocks the WAW E.G.O. Weapon and HE Suit 'Magic Bullet'.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>0.8</redResistance>
+        <whiteResistance>0.8</whiteResistance>
+        <blackResistance>0.8</blackResistance>
+        <paleResistance>1.5</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

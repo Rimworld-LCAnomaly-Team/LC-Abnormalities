@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <SoundDef>
+    <defName>LC_FairyFestival_Special</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/FairyFestival/Fairy_Special</clipPath>
+          </li>
+        </grains>
+        <volumeRange>24~32</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~65</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_FairyFestival_Dead</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/FairyFestival/Fairy_Dead</clipPath>
+          </li>
+        </grains>
+        <volumeRange>32~42</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_WellCheers_Drink</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/WellCheers/WellCheers_Drink01</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/WellCheers/WellCheers_Drink02</clipPath>
+          </li>
+        </grains>
+        <volumeRange>24~32</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~65</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_WellCheers_Sleep</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/WellCheers/WellCheers_Sleep</clipPath>
+          </li>
+        </grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_PunishingBird_Hit</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/PunishingBird/SmallBird_Hit</clipPath>
+          </li>
+        </grains>
+        <volumeRange>24~32</volumeRange>
+        <pitchRange>0.95~1.06</pitchRange>
+        <distRange>0~65</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_PunishingBird_Open</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/PunishingBird/SmallBird_Open</clipPath>
+          </li>
+        </grains>
+        <volumeRange>34~44</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_VoidDream_Change</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/VoidDream/Dreamy_Change</clipPath>
+          </li>
+        </grains>
+        <volumeRange>30~40</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_VoidDream_Shout</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/VoidDream/Dreamy_Shout</clipPath>
+          </li>
+        </grains>
+        <volumeRange>30~40</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_VoidDream_Skill</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/VoidDream/Dreamy_Skill</clipPath>
+          </li>
+        </grains>
+        <volumeRange>25~33</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_HeartOfAspiration_Beat</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Building/HeartOfAspiration/HeartOfAspiration_Beat</clipPath>
+          </li>
+        </grains>
+        <volumeRange>18~26</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~55</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

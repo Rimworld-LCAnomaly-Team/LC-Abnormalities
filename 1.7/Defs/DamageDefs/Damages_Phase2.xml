@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_SolemnLament_Dual</defName>
+    <label>solemn lament volley</label>
+    <workerClass>LCAbnormalities.FuneralOfDeadButterflies.DamageWorker_SolemnLament</workerClass>
+    <deathMessage>{0} was laid to rest by Solemn Lament.</deathMessage>
+    <hediff>Cut</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>White</damageType>
+        <riskLevel>WAW</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_FrostSplinter_WhiteSlow</defName>
+    <label>frost lance pierce</label>
+    <workerClass>LCAbnormalities.SnowQueen.DamageWorker_FrostSplinter</workerClass>
+    <deathMessage>{0} was shattered by Frost Splinter.</deathMessage>
+    <hediff>Cut</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>White</damageType>
+        <riskLevel>HE</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>LC_FrostSplinterCleave</defName>
+    <label>frost thrust</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef>
+    <defName>LC_FrostSplinterCleave</defName>
+    <requiredCapacity>LC_FrostSplinterCleave</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>LC_FrostSplinter_WhiteSlow</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Poke_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Poke_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Poke_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Poke_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+</Defs>

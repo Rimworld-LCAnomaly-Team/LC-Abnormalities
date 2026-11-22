@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Wingbeat_RedLifesteal</defName>
+    <label>wingbeat rend</label>
+    <workerClass>LCAbnormalities.FairyFestival.DamageWorker_WingbeatLifesteal</workerClass>
+    <deathMessage>{0} was torn apart by Wingbeat.</deathMessage>
+    <hediff>Cut</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Red</damageType>
+        <riskLevel>ZAYIN</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>LC_WingbeatCleave</defName>
+    <label>wingbeat strike</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef>
+    <defName>LC_WingbeatCleave</defName>
+    <requiredCapacity>LC_WingbeatCleave</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>LC_Wingbeat_RedLifesteal</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Slash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Soda_RedHeal</defName>
+    <label>soda blast</label>
+    <workerClass>LCAbnormalities.WellCheers.DamageWorker_SodaHeal</workerClass>
+    <deathMessage>{0} was dissolved by carbonated E.G.O. bolts.</deathMessage>
+    <hediff>Bruise</hediff>
+    <armorCategory>Blunt</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Red</damageType>
+        <riskLevel>ZAYIN</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+</Defs>

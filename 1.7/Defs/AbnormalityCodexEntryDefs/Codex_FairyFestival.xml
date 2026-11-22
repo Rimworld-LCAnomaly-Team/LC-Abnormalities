@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>FairyFestival</defName>
+    <label>Fairy Festival</label>
+    <description>Fairy Festival (F-04-83) is a luminous ZAYIN swarm of benevolent fairies.\nThey tenderly mend the wounds and nerves of those who care for them—until that worker dares approach any other Abnormality, whereupon the fairies tear them apart in possessive fury.</description>
+    <uiIconPath>UI/CodexEntries/FairyFestival</uiIconPath>
+    <category>ZAYIN</category>
+    <orderInCategory>810</orderInCategory>
+    <linkedThings>
+      <li>FairyFestival</li>
+      <li>FairyFestivalEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

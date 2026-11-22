@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_BaseRangedWeapon_EGO">
+    <defName>EgoWeapon_ScorchedGirl</defName>
+    <label>E.G.O. Weapon (Fourth Match Flame)</label>
+    <description>A blackened matchlock cannon brimming with stubborn embers (TETH).\nLaunches explosive flame shells that scorch clusters of targets with Red fire blasts.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/EgoWeapon_ScorchedGirl</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.0, 2.0)</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <Mass>4.5</Mass>
+      <AccuracyTouch>0.72</AccuracyTouch>
+      <AccuracyShort>0.80</AccuracyShort>
+      <AccuracyMedium>0.82</AccuracyMedium>
+      <AccuracyLong>0.68</AccuracyLong>
+      <RangedWeapon_Cooldown>2.2</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_EgoWeapon_ScorchedGirl</defaultProjectile>
+        <ai_AvoidFriendlyFireRadius>2.6</ai_AvoidFriendlyFireRadius>
+        <warmupTime>1.4</warmupTime>
+        <range>25</range>
+        <soundCast>Shot_Rifle_EgoBase</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>10</power>
+        <cooldownTime>2.0</cooldownTime>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Red</damageType>
+        <riskLevel>TETH</riskLevel>
+        <damageMultiplier>1</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_BaseBullet_EGO">
+    <defName>Bullet_EgoWeapon_ScorchedGirl</defName>
+    <label>Fourth Match Flame shell</label>
+    <thingClass>LCAbnormalities.ScorchedGirl.Projectile_FourthMatchFlame</thingClass>
+    <projectile>
+      <damageDef>LC_RedDamage</damageDef>
+      <damageAmountBase>32</damageAmountBase>
+      <armorPenetrationBase>0.35</armorPenetrationBase>
+      <explosionRadius>2.4</explosionRadius>
+      <stoppingPower>2.0</stoppingPower>
+      <speed>70</speed>
+    </projectile>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_FourthMatchFlame</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+</Defs>

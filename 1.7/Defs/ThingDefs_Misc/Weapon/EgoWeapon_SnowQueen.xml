@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_BaseMeleeWeapon_EGO">
+    <defName>EgoWeapon_SnowQueen</defName>
+    <label>E.G.O. Weapon (Frost Splinter)</label>
+    <description>A jagged spear of eternal glacier crystal extracted from The Snow Queen (HE).\nIts frigid White thrusts numb living victims, slowing their movement with clinging frost.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/EgoWeapon_SnowQueen</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.1, 2.1)</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>2.6</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>frost lance</label>
+        <capacities>
+          <li>LC_FrostSplinterCleave</li>
+        </capacities>
+        <power>17</power>
+        <cooldownTime>1.45</cooldownTime>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>White</damageType>
+        <riskLevel>HE</riskLevel>
+        <damageMultiplier>1</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_ScorchedGirl</defName>
+    <label>Accessory (Fourth Match Flame)</label>
+    <description>A flickering matchstick ember hairpiece that never burns out, sharpening melee reflexes.</description>
+    <thingCategories><li>LC_Apparel_Accessory_EGO</li></thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/ScorchedGirlAccessory</texPath>
+    </graphicData>
+    <statBases><Beauty>2</Beauty></statBases>
+    <apparel>
+      <layers><li>LC_AccessoryHead</li></layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups><li>FullHead</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/ScorchedGirlAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <MeleeDamageFactor>0.08</MeleeDamageFactor>
+      <MoveSpeed>0.10</MoveSpeed>
+    </equippedStatOffsets>
+    <tradeTags><li>LC_Apparel_Accessory</li></tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_DerFreischutz</defName>
+    <label>Accessory (Magic Bullet)</label>
+    <description>An obsidian-blue pipe and huntsman glare.\nSharpens aim speed and sprint pace—at the cost of slightly heightened fragility and mental tension.</description>
+    <thingCategories><li>LC_Apparel_Accessory_EGO</li></thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/DerFreischutzAccessory</texPath>
+    </graphicData>
+    <statBases><Beauty>4</Beauty></statBases>
+    <apparel>
+      <layers><li>LC_AccessoryMouth</li></layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups><li>FullHead</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/DerFreischutzAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <MoveSpeed>0.16</MoveSpeed>
+      <AimingDelayFactor>-0.10</AimingDelayFactor>
+      <ShootingAccuracyPawn>0.30</ShootingAccuracyPawn>
+      <IncomingDamageFactor>0.05</IncomingDamageFactor>
+      <MentalBreakThreshold>0.04</MentalBreakThreshold>
+    </equippedStatOffsets>
+    <tradeTags><li>LC_Apparel_Accessory</li></tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_FuneralOfDeadButterflies</defName>
+    <label>Accessory (Solemn Lament)</label>
+    <description>A solemn white-and-black mourning armband honoring countless fallen employees.</description>
+    <thingCategories><li>LC_Apparel_Accessory_EGO</li></thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/FuneralOfDeadButterfliesAccessory</texPath>
+    </graphicData>
+    <statBases><Beauty>5</Beauty></statBases>
+    <apparel>
+      <layers><li>LC_AccessoryCheek</li></layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups><li>FullHead</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/FuneralOfDeadButterfliesAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <LC_AbnormalityStudyRate>0.08</LC_AbnormalityStudyRate>
+      <MentalBreakThreshold>-0.06</MentalBreakThreshold>
+    </equippedStatOffsets>
+    <tradeTags><li>LC_Apparel_Accessory</li></tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_SnowQueen</defName>
+    <label>Accessory (Frost Splinter)</label>
+    <description>A translucent frost-flower brooch bestowed upon champions who vanquished The Snow Queen's duel, hardening both vitality and resolve.</description>
+    <thingCategories><li>LC_Apparel_Accessory_EGO</li></thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/SnowQueenAccessory</texPath>
+    </graphicData>
+    <statBases><Beauty>8</Beauty></statBases>
+    <apparel>
+      <layers><li>LC_AccessoryHat</li></layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups><li>FullHead</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/SnowQueenAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <IncomingDamageFactor>-0.06</IncomingDamageFactor>
+      <MentalBreakThreshold>-0.08</MentalBreakThreshold>
+      <InjuryHealingFactor>0.12</InjuryHealingFactor>
+    </equippedStatOffsets>
+    <tradeTags><li>LC_Apparel_Accessory</li></tradeTags>
+  </ThingDef>
+
+</Defs>

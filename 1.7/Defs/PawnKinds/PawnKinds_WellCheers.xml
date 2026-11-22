@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.PawnKindDef_AbnormalityEntity>
+    <defName>WellCheers</defName>
+    <label>Opened Can of WellCheers</label>
+    <race>WellCheers</race>
+    <canMeleeAttack>false</canMeleeAttack>
+    <defaultFactionType>LC_Abnormalities</defaultFactionType>
+    <preventIdeo>true</preventIdeo>
+    <overrideDebugActionCategory>Entity</overrideDebugActionCategory>
+    <forceDeathOnDowned>true</forceDeathOnDowned>
+    <combatPower>20</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/WellCheers/WellCheers</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>1.8</drawSize>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>UI/CodexEntries/WellCheers</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>1.6</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>ZAYIN</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.PawnKindDef_AbnormalityEntity>
+
+</Defs>

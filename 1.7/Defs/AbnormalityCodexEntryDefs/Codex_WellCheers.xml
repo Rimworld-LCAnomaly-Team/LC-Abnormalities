@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>WellCheers</defName>
+    <label>Opened Can of WellCheers</label>
+    <description>Opened Can of WellCheers (F-05-52) is a bright beverage dispenser tended by tiny shrimp fishermen.\nSatisfactory work yields Red, Blue, or Purple cans that heal flesh or restore sanity; poor work puts the drinker into freezing hypothermic slumber.</description>
+    <uiIconPath>UI/CodexEntries/WellCheers</uiIconPath>
+    <category>ZAYIN</category>
+    <orderInCategory>820</orderInCategory>
+    <linkedThings>
+      <li>WellCheers</li>
+      <li>WellCheersEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

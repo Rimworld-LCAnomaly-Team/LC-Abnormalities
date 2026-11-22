@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>VoidDream</defName>
+    <label>Void Dream</label>
+    <description>Void Dream (T-02-99) is a drowsy three-eyed dream creature.\nUndisciplined workers anger it quickly; upon escaping, it swells into a shrieking rooster whose eerie crow drops nearby humans into deep nightmare coma until shaken awake by allies.</description>
+    <uiIconPath>UI/CodexEntries/VoidDream</uiIconPath>
+    <category>TETH</category>
+    <orderInCategory>820</orderInCategory>
+    <linkedThings>
+      <li>VoidDream</li>
+      <li>VoidDreamEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>
