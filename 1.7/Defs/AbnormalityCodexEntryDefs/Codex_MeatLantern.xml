@@ -12,6 +12,11 @@
     <uiIconPath>UI/CodexEntries/MeatLantern</uiIconPath>
     <category>TETH</category>
     <orderInCategory>800</orderInCategory>
+    <linkedThings>
+      <li>MeatLanternContained</li>
+      <li>MeatLanternEscaped</li>
+      <li>MeatLanternEgg</li>
+    </linkedThings>
   </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
 
 </Defs>

@@ -10,13 +10,16 @@
   <LC_MeatLantern_VampireAmountThrowText>Vampire: </LC_MeatLantern_VampireAmountThrowText>
   <LC_MeatLantern_VampireBodypartThrowText>, HealBody: </LC_MeatLantern_VampireBodypartThrowText>
 
-  <SuckAmount>Suck Amount: </SuckAmount>
-  <StunTime>Stun Time: </StunTime>
+  <SuckAmount>Suck Amount</SuckAmount>
+  <StunTime>Stun Time</StunTime>
 
-  <LetterLabelMeatLanternKilled>MeatLantern Killed</LetterLabelMeatLanternKilled>
-  <LetterMeatLanternKilled>MeatLantern has been killed!</LetterMeatLanternKilled>
+  <LetterLabelMeatLanternKilled>Meat Lantern Suppressed</LetterLabelMeatLanternKilled>
+  <LetterMeatLanternKilled>Meat Lantern has been suppressed!\nIts body has dissolved, leaving only an Abnormal Egg. You may capture and study the egg, or smash it directly.</LetterMeatLanternKilled>
 
-  <ExtractMeatLanternCompleteLabel>Extract MeatLantern</ExtractMeatLanternCompleteLabel>
-  <ExtractMeatLanternCompleteText>.</ExtractMeatLanternCompleteText>
+  <ExtractMeatLanternCompleteLabel>Extract Meat Lantern</ExtractMeatLanternCompleteLabel>
+  <ExtractMeatLanternCompleteText>Meat Lantern has been extracted and contained.</ExtractMeatLanternCompleteText>
+
+  <LC_MeatLantern_CannotTargetAlly>Cannot use Whirlwind Om-Nom-Nom! on an allied target.</LC_MeatLantern_CannotTargetAlly>
+  <LC_MeatLantern_TargetMustBeAlive>Must target a living, conscious target.</LC_MeatLantern_TargetMustBeAlive>
 
 </LanguageData>

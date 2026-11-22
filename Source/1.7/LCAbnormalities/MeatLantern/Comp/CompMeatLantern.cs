@@ -15,7 +15,7 @@ namespace MeatLantern.Comp
     {
         #region 变量
 
-        public MeatLanternState meatLanternState;
+        public MeatLanternState meatLanternState = MeatLanternState.Wait;
 
         /// <summary>
         /// 下一次吞噬的时间
@@ -35,6 +35,8 @@ namespace MeatLantern.Comp
             base.PostExposeData();
 
             Scribe_Values.Look(ref nextEat, "nextEat", -99999);
+            Scribe_Values.Look(ref meatLanternState, "meatLanternState", MeatLanternState.Wait);
+            Scribe_Values.Look(ref tempStudyTick, "tempStudyTick", 0);
         }
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
@@ -65,11 +67,10 @@ namespace MeatLantern.Comp
         /// </summary>
         public override void Notify_Holded()
         {
-            AbnormalityCodexEntryDef entry = DefDatabase<AbnormalityCodexEntryDef>.GetNamedSilentFail("MeatLantern");
-            if (entry != null)
+            base.Notify_Holded();
+            if (parent != null)
             {
-                entry.Visible = true;
-                entry.Discovered = true;
+                AbnormalityUtility.Discover(parent.def);
             }
         }
 
@@ -86,7 +87,7 @@ namespace MeatLantern.Comp
             tempStudyTick = 0;
 
             //如果肉食提灯研究时间少于40s，逆卡巴拉计数器会立即减少
-            if (time < 40)
+            if (!parent.Destroyed && time < 40)
                 QliphothCountCurrent--;
         }
 
@@ -103,18 +104,21 @@ namespace MeatLantern.Comp
             MeatLanternUtility.OnMeatLanternEat((Pawn)parent, victims);
 
             nextEat = Find.TickManager.TicksGame + Props.eatCooldownTick;
-            ((Pawn)parent).mindState.enemyTarget = null;
+            Pawn selfPawn = parent as Pawn;
+            if (selfPawn?.mindState != null)
+            {
+                selfPawn.mindState.enemyTarget = null;
+            }
         }
 
         /// <summary>
         /// 设置状态
         /// </summary>
         /// <param name="state">状态</param>
-
         public void SetState(MeatLanternState state)
         {
             meatLanternState = state;
-            ((Pawn)parent).jobs.EndCurrentJob(JobCondition.InterruptForced);
+            (parent as Pawn)?.jobs?.EndCurrentJob(JobCondition.InterruptForced);
         }
 
         /// <summary>

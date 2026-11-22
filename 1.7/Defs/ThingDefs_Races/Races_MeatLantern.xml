@@ -19,7 +19,7 @@
       <intelligence>ToolUser</intelligence>
       <needsRest>false</needsRest>
       <hasGenders>false</hasGenders>
-      <!-- <fleshType>None</fleshType> -->
+      <fleshType>LC_AbnormalityOrganic</fleshType>
       <foodType>None</foodType>
       <hasCorpse>false</hasCorpse>
       <lifeExpectancy>1000</lifeExpectancy>
@@ -67,7 +67,7 @@
   <ThingDef ParentName="BaseMeatLantern">
     <defName>MeatLanternContained</defName>
     <label>Meat Lantern</label>
-    <description>.</description>
+    <description>Meat Lantern (O-04-84) is a small, fluffy white creature with two round black eyes peeking from beneath the floor.\nIt dangles a bioluminescent flower in front of itself like an anglerfish's lure while the rest of its massive maw remains hidden underground.</description>
     <uiIconPath>UI/CodexEntries/MeatLantern_Contained_MenuIcon</uiIconPath>
     <race>
       <renderTree>MeatLanternContained</renderTree>
@@ -102,22 +102,22 @@
           <li>
             <threshold>3</threshold>
             <label>Observation Level: I</label>
-            <text>When the work result was Bad, the Qliphoth Counter lowered.\nSuccess Rate +5%</text>
+            <text>When the work result was Bad, the Qliphoth Counter lowered.\nSuccess Rate +6%</text>
           </li>
           <li>
             <threshold>5</threshold>
             <label>Observation Level: II</label>
-            <text>When the work took less than 40 seconds to complete, the Qliphoth Counter lowered (WIP).\nSpeed Rate +5 (WIP)\nUnlocks the E.G.O. Gift 'Lantern'.</text>
+            <text>When the work took less than 40 seconds to complete, the Qliphoth Counter lowered immediately.\nWork Speed +4%\nUnlocks the E.G.O. Gift 'Lantern'.</text>
           </li>
           <li>
             <threshold>10</threshold>
             <label>Observation Level: III</label>
-            <text>The facility’s systems and the employees will be unable to detect the Abnormality when it escapes.\nThus the manager will need to manually pinpoint it and order suppression directly.\nSuccess Rate +5%\nUnlocks the E.G.O. Weapon and Suit 'Lantern'.</text>
+            <text>The facility’s systems and the employees will be unable to detect the Abnormality when it escapes.\nThus the manager will need to manually pinpoint it and order suppression directly.\nSuccess Rate +6%\nUnlocks the E.G.O. Weapon and Suit 'Lantern'.</text>
           </li>
           <li>
             <threshold>12</threshold>
             <label>Observation Level: IV</label>
-            <text>Speed Rate +5 (WIP)</text>
+            <text>Do not send overly fast or Temperance-boosted workers who finish work in under 40 seconds.\nWhen ambushing outside containment, it deals heavy Red damage to anyone wandering near its glowing lure.\nWork Speed +4%</text>
           </li>
         </studyNotes>
       </li>
@@ -128,9 +128,10 @@
   <ThingDef ParentName="BaseMeatLantern">
     <defName>MeatLanternEscaped</defName>
     <label>Meat Lantern</label>
-    <description>.</description>
+    <description>Meat Lantern (O-04-84) lying in ambush beneath the floor. Only its eyes and bioluminescent flower lure are visible on the surface—anyone stepping within reach is devoured in a sudden surge of jagged teeth.</description>
     <uiIconPath>UI/CodexEntries/MeatLantern_Escaped_MenuIcon</uiIconPath>
     <race>
+      <baseHealthScale>1.6</baseHealthScale>
       <renderTree>MeatLanternEscaped</renderTree>
       <thinkTreeMain>MeatLanternContained</thinkTreeMain>
       <thinkTreeConstant>MeatLanternConstant</thinkTreeConstant>

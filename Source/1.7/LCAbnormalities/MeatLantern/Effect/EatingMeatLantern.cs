@@ -44,11 +44,23 @@ namespace MeatLantern.Effect
             Destroy();
         }
 
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Collections.Look(ref victims, "victims", LookMode.Reference);
+            Scribe_References.Look(ref selfPawn, "selfPawn");
+        }
+
         /// <summary>
         /// 生成吞噬特效（fleck + sound）
         /// </summary>
         private void DoEatEffect(Pawn selfPawn)
         {
+            if (selfPawn == null || selfPawn.Map == null || !selfPawn.Position.InBounds(selfPawn.Map))
+            {
+                return;
+            }
+
             Vector3 temp = selfPawn.Position.ToVector3();
 
             Vector3 loc = new()

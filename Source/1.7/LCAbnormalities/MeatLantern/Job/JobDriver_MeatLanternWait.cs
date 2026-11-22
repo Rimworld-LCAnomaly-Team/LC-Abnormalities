@@ -12,6 +12,8 @@ namespace MeatLantern.Job
     /// </summary>
     public class JobDriver_MeatLanternWait : JobDriver
     {
+        private const float AmbushScanRadius = 1.8f;
+
         private CompMeatLantern Comp => pawn.TryGetComp<CompMeatLantern>();
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
@@ -21,22 +23,25 @@ namespace MeatLantern.Job
 
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            //Log.Message($"肉食提灯：进入等待行为树");
-
             Toil toil = ToilMaker.MakeToil("MakeNewToils");
-            toil.tickAction = (Action)Delegate.Combine(toil.tickAction, (Action)delegate
+            toil.tickAction = delegate
             {
+                if (Comp == null || pawn.Map == null || !pawn.IsHashIntervalTick(15))
+                {
+                    return;
+                }
+
                 if (Find.TickManager.TicksGame >= Comp.nextEat)
                 {
-                    Pawn pawn = MeatLanternUtility.GetClosestTargetInRadius(base.pawn, 1f);
-                    if (pawn != null)
+                    Pawn target = MeatLanternUtility.GetClosestTargetInRadius(base.pawn, AmbushScanRadius);
+                    if (target != null)
                     {
-                        base.pawn.mindState.enemyTarget = pawn;
+                        base.pawn.mindState.enemyTarget = target;
                         Comp.meatLanternState = MeatLanternState.Attack;
                         EndJobWith(JobCondition.InterruptForced);
                     }
                 }
-            });
+            };
             toil.defaultCompleteMode = ToilCompleteMode.Never;
             yield return toil;
         }

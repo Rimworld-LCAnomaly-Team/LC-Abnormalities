@@ -4,7 +4,7 @@
   <ThingDef Name="Apparel_MeatLanternSuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_MeatLanternSuit</defName>
     <label>E.G.O. Suit (Meat Lantern)</label>
-    <description>.</description>
+    <description>Its glowing body easily illuminates the darkness, and its pale green luminescence is ideal for luring unsuspecting prey.\nBeneath the gentle glow, jagged white fangs bristle across the coat.</description>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/MeatLanternSuit/MeatLanternSuit</texPath>
     </graphicData>
@@ -45,9 +45,9 @@
       <li Class="LCAnomalyCore.ModExtensions.FourColorApparelExtension">
         <riskLevel>TETH</riskLevel>
         <redResistance>0.8</redResistance>
-        <whiteResistance>0.8</whiteResistance>
-        <blackResistance>0.8</blackResistance>
-        <paleResistance>1.5</paleResistance>
+        <whiteResistance>0.7</whiteResistance>
+        <blackResistance>1.2</blackResistance>
+        <paleResistance>2.0</paleResistance>
       </li>
     </modExtensions>
   </ThingDef>

@@ -25,10 +25,22 @@ namespace MeatLantern.Comp
 
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
-            var pawn = target.Pawn;
-
-            if (pawn == null)
+            Pawn pawn = target.Pawn;
+            if (pawn == null || pawn.Dead || pawn.Downed)
             {
+                if (throwMessages && pawn != null)
+                {
+                    Messages.Message("LC_MeatLantern_TargetMustBeAlive".Translate(), pawn, MessageTypeDefOf.RejectInput, historical: false);
+                }
+                return false;
+            }
+
+            if (parent?.pawn != null && pawn.Faction != null && pawn.Faction == parent.pawn.Faction)
+            {
+                if (throwMessages)
+                {
+                    Messages.Message("LC_MeatLantern_CannotTargetAlly".Translate(), pawn, MessageTypeDefOf.RejectInput, historical: false);
+                }
                 return false;
             }
 
@@ -37,7 +49,7 @@ namespace MeatLantern.Comp
 
         public override bool AICanTargetNow(LocalTargetInfo target)
         {
-            return true;
+            return Valid(target, false) && parent?.pawn != null && target.Pawn.HostileTo(parent.pawn);
         }
     }
 }

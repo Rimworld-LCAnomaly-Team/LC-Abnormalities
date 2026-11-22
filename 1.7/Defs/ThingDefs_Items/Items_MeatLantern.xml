@@ -4,7 +4,7 @@
   <LCAnomalyCore.Defs.ThingDef_AbnormalityEgg ParentName="ResourceBase">
     <defName>MeatLanternEgg</defName>
     <label>Meat Lantern Egg</label>
-    <description>.</description>
+    <description>The original form of Meat Lantern after suppression, presenting an anomalous egg shape.</description>
     <thingClass>ThingWithComps</thingClass>
     <graphicData>
       <texPath>Things/Item/Special/MeatLanternEgg</texPath>
@@ -32,8 +32,8 @@
     <comps>
       <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
         <heldPawnKind>MeatLanternContained</heldPawnKind>
-        <capturedLetterLabel>Meat Lantern Preformed</capturedLetterLabel>
-        <capturedLetterText>.</capturedLetterText>
+        <capturedLetterLabel>Meat Lantern Reborn</capturedLetterLabel>
+        <capturedLetterText>After {PAWN_nameDef} bound the Meat Lantern egg to the holding platform, the Meat Lantern inside awakened once more.\nWhen suppressed, Meat Lantern dissolves and leaves behind only this egg, which may revert back into its active form at any time.</capturedLetterText>
       </li>
       <li Class="CompProperties_AttachPoints">
         <points>
@@ -88,6 +88,11 @@
         </targetingParameters>
       </li>
     </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>TETH</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
   </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
 
 </Defs>

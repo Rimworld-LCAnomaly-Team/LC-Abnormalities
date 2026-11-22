@@ -4,7 +4,7 @@
   <ThingDef Name="Accessory_MeatLantern" ParentName="LC_Apparel_AccessoryBase">
     <defName>Accessory_MeatLantern</defName>
     <label>Accessory (Meat Lantern)</label>
-    <description>.</description>
+    <description>A terrifying jaw lined with sharp teeth protruding from the wearer's face—just like the predator lurking beneath a lantern lure.</description>
     <thingCategories>
       <li>LC_Apparel_Accessory_EGO</li>
     </thingCategories>

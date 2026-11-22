@@ -1,6 +1,5 @@
 ﻿using MeatLantern.Comp;
 using MeatLantern.Utility;
-using RimWorld;
 using System.Collections.Generic;
 using Verse;
 using Verse.AI;
@@ -21,39 +20,38 @@ namespace MeatLantern.Job
 
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            //Log.Message($"肉食提灯：进入攻击行为树");
-
-            //如果这些条件满足就执行失败
             this.FailOnDespawnedOrNull(TargetIndex.A);
-            this.FailOnDespawnedOrNull(TargetIndex.B);
-
-            if (base.pawn.mindState.enemyTarget != null)
+            AddFinishAction(delegate
             {
-                List<Pawn> victims = MeatLanternUtility.ScanForTarget_NewTemp(base.pawn, 2);
-
-                if (victims != null && victims.Count > 0)
+                if (Comp != null)
                 {
-                    //Log.Message($"肉食提灯：准备攻击，受害者数量为：{victims.Count}");
-                    Comp.Eat(victims);
+                    Comp.meatLanternState = MeatLanternState.Wait;
                 }
-            }
-            Comp.meatLanternState = MeatLanternState.Wait;
-            EndJobWith(JobCondition.InterruptForced);
+            });
 
-            yield break;
+            yield return Toils_General.Do(delegate
+            {
+                if (Comp == null || pawn.Map == null)
+                {
+                    return;
+                }
+
+                if (pawn.mindState?.enemyTarget != null)
+                {
+                    List<Pawn> victims = MeatLanternUtility.ScanForTarget_NewTemp(pawn, 2.2f);
+                    if (victims != null && victims.Count > 0)
+                    {
+                        Comp.Eat(victims);
+                    }
+                }
+
+                Comp.meatLanternState = MeatLanternState.Wait;
+            });
         }
 
         public override bool IsContinuation(Verse.AI.Job j)
         {
             return job.GetTarget(TargetIndex.A) == j.GetTarget(TargetIndex.A);
-        }
-
-        public override void Notify_PatherFailed()
-        {
-            job.SetTarget(TargetIndex.A, RevenantUtility.GetClosestTargetInRadius(pawn, 20f));
-            pawn.mindState.enemyTarget = job.GetTarget(TargetIndex.A).Pawn;
-
-            base.Notify_PatherFailed();
         }
     }
 }

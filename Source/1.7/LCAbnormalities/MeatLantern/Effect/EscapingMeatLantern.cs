@@ -13,6 +13,8 @@ namespace MeatLantern.Effect
     /// </summary>
     public class EscapingMeatLantern : LC_FX_Standard
     {
+        private Effecter drillEffecter;
+
         public override void InitWith(Pawn targetPawn)
         {
             DoDefaultFX();
@@ -21,46 +23,77 @@ namespace MeatLantern.Effect
         public void InitWithEscaping(Pawn targetPawn)
         {
             this.isEscaping = true;
-            var comp = targetPawn.TryGetComp<CompMeatLantern>();
-
-            //传递生物特征
-            bioSignature = comp.biosignature;
+            var comp = targetPawn?.TryGetComp<CompMeatLantern>();
+            if (comp != null)
+            {
+                //传递生物特征
+                bioSignature = comp.biosignature;
+            }
 
             //销毁未出逃提灯
-            targetPawn.Destroy();
+            if (targetPawn != null && !targetPawn.Destroyed)
+            {
+                targetPawn.Destroy();
+            }
 
             DoDefaultFX();
         }
 
         private void DoDefaultFX()
         {
-            //播放血肉特效，记录动画播放完的时间
-            Effecter effecter = EffecterDefOf.Drill.SpawnMaintained(base.Position, base.Map);
-            completeTick = base.TickSpawned + effecter.ticksLeft + 120;
-            Def.SoundDefOf.MeatLantern_Escape.PlayOneShot(new TargetInfo(base.Position, base.Map));
+            completeTick = base.TickSpawned + 120;
+
+            if (base.Map != null && base.Position.InBounds(base.Map))
+            {
+                drillEffecter = EffecterDefOf.Drill.Spawn(base.Position, base.Map);
+                AbnormalityUtility.Burst(base.Position, base.Map, 1.5f);
+                Def.SoundDefOf.MeatLantern_Escape.PlayOneShot(new TargetInfo(base.Position, base.Map));
+            }
 
             hasInited = true;
+        }
+
+        protected override void Tick()
+        {
+            if (hasInited && Spawned && base.Map != null)
+            {
+                drillEffecter ??= EffecterDefOf.Drill.Spawn(base.Position, base.Map);
+                drillEffecter?.EffectTick(this, this);
+            }
+
+            base.Tick();
+        }
+
+        public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
+        {
+            drillEffecter?.Cleanup();
+            drillEffecter = null;
+            base.DeSpawn(mode);
         }
 
         public override void Complete()
         {
             if (!hasInited)
             {
-                //Log.Warning($"特效：在未初始化时尝试生成特效对象{Def.ThingDefOf.EscapingMeatLantern.label.Translate()}，对象即将被销毁以避免错误。");
                 Destroy();
                 return;
             }
 
             //生成逃脱收容的肉食提灯
-            Pawn pawn = PawnGenerator.GeneratePawn(Def.PawnKindDefOf.MeatLanternEscaped, LCContainmentUtility.AbnormalityFaction);
-            GenSpawn.Spawn(pawn, TryFindTargetCell(50), base.MapHeld);
-            CompMeatLantern compMeatLantern = pawn.TryGetComp<CompMeatLantern>();
-            compMeatLantern.SetState(MeatLanternState.Wait);
-
-            if (isEscaping)
+            if (base.MapHeld != null)
             {
-                //传递生物特征
-                compMeatLantern.biosignature = bioSignature;
+                Pawn pawn = PawnGenerator.GeneratePawn(Def.PawnKindDefOf.MeatLanternEscaped, LCContainmentUtility.AbnormalityFaction);
+                GenSpawn.Spawn(pawn, TryFindTargetCell(50), base.MapHeld);
+                CompMeatLantern compMeatLantern = pawn.TryGetComp<CompMeatLantern>();
+                if (compMeatLantern != null)
+                {
+                    compMeatLantern.SetState(MeatLanternState.Wait);
+                    if (isEscaping)
+                    {
+                        //传递生物特征
+                        compMeatLantern.biosignature = bioSignature;
+                    }
+                }
             }
 
             //销毁自己
@@ -75,6 +108,10 @@ namespace MeatLantern.Effect
         private IntVec3 TryFindTargetCell(int radius)
         {
             IntVec3 pos = base.Position;
+            if (base.MapHeld == null)
+            {
+                return pos;
+            }
 
             bool found = CellFinder.TryFindRandomReachableNearbyCell(
                 base.Position, base.MapHeld
