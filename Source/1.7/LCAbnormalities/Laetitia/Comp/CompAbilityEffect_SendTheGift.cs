@@ -15,35 +15,51 @@ namespace Laetitia.Comp
 
             if (target.Pawn != null)
             {
-                var hediff = target.Pawn.health.GetOrAddHediff(Def.HediffDefOf.LaetitiaGiftAggresive);
-                hediff.Severity = 1;
+                Hediff hediff = target.Pawn.health.GetOrAddHediff(Def.HediffDefOf.LaetitiaGiftAggresive);
+                if (hediff != null)
+                {
+                    hediff.Severity = 1f;
+                    hediff.TryGetComp<HediffComp_LaetitiaGiftAggresive>()?.MarkFromEgoWeapon(Pawn);
+                }
             }
         }
 
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
-            var pawn = target.Pawn;
-            if (pawn != null)
+            Pawn pawn = target.Pawn;
+            if (pawn == null || pawn.Dead || pawn.Downed || !pawn.RaceProps.Humanlike)
             {
-                if (pawn.RaceProps.Humanlike)
-                    return true;
-                else
-                    return false;
-            }
-            else
-            {
+                if (throwMessages && pawn != null)
+                {
+                    Messages.Message("Laetitia_TargetMustBeLivingHumanlike".Translate(), pawn, MessageTypeDefOf.RejectInput, historical: false);
+                }
                 return false;
             }
+
+            if (Pawn != null && pawn.Faction != null && pawn.Faction == Pawn.Faction)
+            {
+                if (throwMessages)
+                {
+                    Messages.Message("Laetitia_CannotTargetAlly".Translate(), pawn, MessageTypeDefOf.RejectInput, historical: false);
+                }
+                return false;
+            }
+
+            if (pawn.health?.hediffSet?.HasHediff(Def.HediffDefOf.LaetitiaGiftAggresive) == true)
+            {
+                if (throwMessages)
+                {
+                    Messages.Message("Laetitia_TargetAlreadyGifted".Translate(pawn.LabelShortCap), pawn, MessageTypeDefOf.RejectInput, historical: false);
+                }
+                return false;
+            }
+
+            return true;
         }
 
         public override bool AICanTargetNow(LocalTargetInfo target)
         {
-            if (target.Pawn != null && target.Pawn.Faction != Pawn.Faction)
-            {
-                return true;
-            }
-
-            return false;
+            return Valid(target, false) && Pawn != null && target.Pawn.HostileTo(Pawn);
         }
     }
 }

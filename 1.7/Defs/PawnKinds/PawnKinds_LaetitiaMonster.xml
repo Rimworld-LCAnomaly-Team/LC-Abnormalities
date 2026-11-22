@@ -18,7 +18,7 @@
     <abilities>
       <li>LaetitiaMonster_Attack</li>
     </abilities>
-    <combatPower>1</combatPower>
+    <combatPower>110</combatPower>
     <lifeStages>
       <li>
         <bodyGraphicData>

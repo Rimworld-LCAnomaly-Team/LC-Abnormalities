@@ -34,8 +34,8 @@
     <comps>
       <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
         <heldPawnKind>Laetitia</heldPawnKind>
-        <capturedLetterLabel>Laetitia Preformed</capturedLetterLabel>
-        <capturedLetterText>.</capturedLetterText>
+        <capturedLetterLabel>Laetitia Reborn</capturedLetterLabel>
+        <capturedLetterText>After {PAWN_nameDef} bound the Laetitia egg to the holding platform, Laetitia awakened inside once more.\nWhen suppressed, Laetitia dissolves and leaves behind only this egg.</capturedLetterText>
       </li>
       <li Class="CompProperties_AttachPoints">
         <points>

@@ -4,4 +4,14 @@
   <LetterLabelLaetitiaKilled>蕾蒂希娅消逝</LetterLabelLaetitiaKilled>
   <LetterLaetitiaKilled>蕾蒂希娅已进入不活跃状态！\n蕾蒂希娅的躯体已经消散，只留下了异想体蛋。可收集并调查它的蛋，或者直接将其摧毁。</LetterLaetitiaKilled>
 
+  <Laetitia_GiftReceived>{0} 收到了来自蕾蒂希娅的“礼物”。一天内请勿派其去研究其他异想体！</Laetitia_GiftReceived>
+  <Laetitia_GiftReceivedBad>{0} 与蕾蒂希娅的工作结果不佳，但仍被强行塞入了一颗“礼物”——请勿派其接近其他异想体，也不要让其再次在蕾蒂希娅工作上失败！</Laetitia_GiftReceivedBad>
+  <Laetitia_GiftApproachWarning>警告：携带蕾蒂希娅礼物的 {0} 正在接近 {1}！若不立即取消该研究任务，礼物将会破体爆开！</Laetitia_GiftApproachWarning>
+  <Laetitia_GiftBurstLetterLabel>礼物爆裂</Laetitia_GiftBurstLetterLabel>
+  <Laetitia_GiftBurstLetterText>来自蕾蒂希娅的“礼物”在 {0} 体内猛然爆开，一只“小女孩的朋友”破体而出！</Laetitia_GiftBurstLetterText>
+  <Laetitia_AggressiveGiftBurst>{0} 体内的攻击性礼物发生爆裂，产生了剧烈的黑伤冲击！</Laetitia_AggressiveGiftBurst>
+  <Laetitia_CannotTargetAlly>不能对友方目标使用“送出礼物”。</Laetitia_CannotTargetAlly>
+  <Laetitia_TargetAlreadyGifted>{0} 已经携带了攻击性的蕾蒂希娅的礼物。</Laetitia_TargetAlreadyGifted>
+  <Laetitia_TargetMustBeLivingHumanlike>必须选择存活且未倒地的类人目标。</Laetitia_TargetMustBeLivingHumanlike>
+
 </LanguageData>

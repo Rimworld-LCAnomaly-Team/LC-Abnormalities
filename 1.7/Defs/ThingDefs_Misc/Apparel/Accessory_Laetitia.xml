@@ -4,7 +4,7 @@
   <ThingDef Name="Accessory_Laetitia" ParentName="LC_Apparel_AccessoryBase">
     <defName>Accessory_Laetitia</defName>
     <label>Accessory (Laetitia)</label>
-    <description>.</description>
+    <description>A red bonnet adorned with golden jingle bells.\nA tiny, earnest keepsake left by a lonely girl who wished her friends would never leave her side.</description>
     <thingCategories>
       <li>LC_Apparel_Accessory_EGO</li>
     </thingCategories>

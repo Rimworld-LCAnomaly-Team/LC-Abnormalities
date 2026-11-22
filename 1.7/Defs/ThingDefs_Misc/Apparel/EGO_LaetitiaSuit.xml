@@ -47,9 +47,9 @@
     <modExtensions>
       <li Class="LCAnomalyCore.ModExtensions.FourColorApparelExtension">
         <riskLevel>HE</riskLevel>
-        <redResistance>0.8</redResistance>
-        <whiteResistance>0.8</whiteResistance>
-        <blackResistance>0.5</blackResistance>
+        <redResistance>0.7</redResistance>
+        <whiteResistance>0.7</whiteResistance>
+        <blackResistance>0.7</blackResistance>
         <paleResistance>1.5</paleResistance>
       </li>
     </modExtensions>

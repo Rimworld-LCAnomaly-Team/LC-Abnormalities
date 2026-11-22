@@ -3,7 +3,9 @@
   <ThingDef ParentName="LC_EntityBase" Name="BaseLaetitiaMonster" Abstract="True">
     <thingClass>Laetitia.Things.LC_LaetitiaMonsterPawn</thingClass>
     <statBases>
-      <MoveSpeed>2</MoveSpeed>
+      <MoveSpeed>3.8</MoveSpeed>
+      <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
       <Flammability>0</Flammability>
       <ComfyTemperatureMin>-100</ComfyTemperatureMin>
       <ComfyTemperatureMax>100</ComfyTemperatureMax>
@@ -14,7 +16,7 @@
     <race>
       <body>LaetitiaMonster</body>
       <baseBodySize>3</baseBodySize>
-      <baseHealthScale>2</baseHealthScale>
+      <baseHealthScale>2.5</baseHealthScale>
       <intelligence>ToolUser</intelligence>
       <needsRest>false</needsRest>
       <hasGenders>false</hasGenders>
@@ -40,7 +42,7 @@
   <ThingDef ParentName="BaseLaetitiaMonster">
     <defName>LaetitiaMonster</defName>
     <label>Little Witch's Friend</label>
-    <description>.</description>
+    <description>A grotesque arachnid entity gestated inside a gift from Laetitia. Moving swiftly on chitinous limbs, it bursts from unlucky carriers and pierces nearby targets with vicious Red attacks.</description>
     <uiIconPath>UI/CodexEntries/LaetitiaMonster</uiIconPath>
     <race>
       <renderTree>LaetitiaMonster</renderTree>
@@ -51,10 +53,10 @@
       <li>
         <label>Head</label>
         <capacities>
-          <li>Blunt</li>
+          <li>Stab</li>
         </capacities>
-        <power>0</power>
-        <cooldownTime>2</cooldownTime>
+        <power>10</power>
+        <cooldownTime>1.8</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <soundMeleeHit>Pawn_Melee_Punch_HitPawn</soundMeleeHit>

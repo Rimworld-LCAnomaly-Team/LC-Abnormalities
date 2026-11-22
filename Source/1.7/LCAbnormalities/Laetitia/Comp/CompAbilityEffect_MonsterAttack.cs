@@ -8,26 +8,39 @@ namespace Laetitia.Comp
     {
         public new CompProperties_AbilityMonsterAttack Props => (CompProperties_AbilityMonsterAttack)props;
 
-        public DamageInfo AttackDInfo;
-        public DamageInfo StunDInfo;
-
-        public override void Initialize(AbilityCompProperties props)
+        /// <summary>
+        /// 每次攻击现算红伤伤害信息，避免全生命周期复用同一次随机骰值。
+        /// </summary>
+        public DamageInfo CreateAttackDamageInfo()
         {
-            base.Initialize(props);
+            return new DamageInfo(
+                LCAnomalyCore.Defs.DamageDefOf.LC_RedDamage,
+                Props.damageRange.RandomInRange,
+                Props.armorPenetrationRange.RandomInRange,
+                -1f,
+                parent.pawn);
+        }
 
-            AttackDInfo = new DamageInfo(LCAnomalyCore.Defs.DamageDefOf.LC_BlackDamage,
-                Props.damageRange.RandomInRange, Props.armorPenetrationRange.RandomInRange, -1f, parent.pawn);
-            StunDInfo = new DamageInfo(DamageDefOf.Stun, Props.stunTimeRange.RandomInRange, 0, -1f, parent.pawn);
+        /// <summary>
+        /// 每次攻击现算眩晕伤害信息。
+        /// </summary>
+        public DamageInfo CreateStunDamageInfo()
+        {
+            return new DamageInfo(
+                DamageDefOf.Stun,
+                Props.stunTimeRange.RandomInRange,
+                0f,
+                -1f,
+                parent.pawn);
         }
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
             Pawn pawn = target.Pawn;
-            if (pawn != null)
+            if (pawn != null && parent.pawn is LC_LaetitiaMonsterPawn monster)
             {
-                ((LC_LaetitiaMonsterPawn)parent.pawn).SetTargetAndDir(pawn);
-                //MeatLanternUtility.DoBiteOnPawn(pawn, parent.pawn, Props.damageRange, Props.armorPenetration, Props.suckPercent, Props.stunPercent);
+                monster.SetTargetAndDir(pawn);
             }
         }
 
@@ -38,25 +51,24 @@ namespace Laetitia.Comp
 
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
-            var pawn = target.Pawn;
-
-            if (pawn == null)
+            Pawn pawn = target.Pawn;
+            if (pawn == null || pawn.Dead || !pawn.Spawned)
             {
                 return false;
             }
 
-            return true;
+            return parent?.pawn == null || pawn.HostileTo(parent.pawn);
         }
 
         public override bool AICanTargetNow(LocalTargetInfo target)
         {
             Pawn pawn = target.Pawn;
-            if (pawn == null)
+            if (pawn == null || pawn.Dead || !pawn.Spawned)
             {
                 return false;
             }
 
-            return true;
+            return parent?.pawn == null || pawn.HostileTo(parent.pawn);
         }
     }
 }

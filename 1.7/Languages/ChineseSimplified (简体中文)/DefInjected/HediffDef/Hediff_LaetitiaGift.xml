@@ -2,11 +2,11 @@
 <LanguageData>
 
   <LaetitiaGift.label>蕾蒂希娅的礼物</LaetitiaGift.label>
-  <LaetitiaGift.description>当工作结果为良时，蕾蒂希娅会给该员工赠送礼物，之后该员工头上会显示出一个红心。\n如果员工持有蕾蒂西娅的礼物且被指派去进行其他异想体（包括工具）的工作，当员工走到了距离收容单元指定的距离时，如果仍没有取消对其指派的工作，则这名员工会被炸开的礼物杀死，且会在死亡位置生成一只蜘蛛（小女孩的朋友）。</LaetitiaGift.description>
-  <LaetitiaGift.descriptionShort>这个单位在工作中被赠与了蕾蒂希娅的礼物，该状态将会持续一天。</LaetitiaGift.descriptionShort>
+  <LaetitiaGift.description>当工作结果为“良”或“差”时，蕾蒂希娅会给该员工赠送礼物，并在其头顶显示一颗红心（若员工已携带礼物却再次取得“差”结果，礼物会立刻爆开）。\n如果携带蕾蒂希娅礼物的员工被派去对其他异想体（包括工具）进行工作，且在走到收容平台附近指定距离时仍未取消工作，礼物便会炸开杀死这名员工，并在死亡位置孵化出一只“小女孩的朋友”。</LaetitiaGift.description>
+  <LaetitiaGift.labelNoun>这个单位在工作中被赠与了蕾蒂希娅的礼物，该状态将会持续一天。</LaetitiaGift.labelNoun>
 
   <LaetitiaGiftAggresive.label>蕾蒂希娅的礼物（攻击性）</LaetitiaGiftAggresive.label>
-  <LaetitiaGiftAggresive.description>不同于工作中获得的礼物，该状态将会很快结束。\n在结束之时，该人会被杀死，且数个小女孩的朋友将会生成在死亡地点。</LaetitiaGiftAggresive.description>
-  <LaetitiaGiftAggresive.descriptionShort>这个单位被EGO武器赋予了攻击性的蕾蒂希娅的礼物，该状态将会很快结束。</LaetitiaGiftAggresive.descriptionShort>
+  <LaetitiaGiftAggresive.description>不同于工作中获得的礼物，这种攻击性礼物会在短时间内引爆。\n在倒计时结束、目标倒地或死亡时，会爆发高额黑伤；若目标因此倒地或死亡，其体内会孵化出1~2只临时存在的敌对“小女孩的朋友”。</LaetitiaGiftAggresive.description>
+  <LaetitiaGiftAggresive.labelNoun>这个单位被E.G.O武器赋予了攻击性的蕾蒂希娅的礼物，该状态将会很快结束。</LaetitiaGiftAggresive.labelNoun>
 
 </LanguageData>

@@ -200,7 +200,7 @@
         <li>
           <def>Bone2</def>
           <customLabel>Bone2</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.02</coverage>
           <groups>
             <li>Bone2</li>
           </groups>
@@ -208,15 +208,31 @@
         <li>
           <def>Bone3</def>
           <customLabel>Bone3</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.02</coverage>
           <groups>
             <li>Bone3</li>
           </groups>
         </li>
         <li>
+          <def>r1_1</def>
+          <customLabel>r1_1</customLabel>
+          <coverage>0.02</coverage>
+          <groups>
+            <li>r1_1</li>
+          </groups>
+        </li>
+        <li>
+          <def>r1_2</def>
+          <customLabel>r1_2</customLabel>
+          <coverage>0.02</coverage>
+          <groups>
+            <li>r1_2</li>
+          </groups>
+        </li>
+        <li>
           <def>r3_1</def>
           <customLabel>r3_1</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.02</coverage>
           <groups>
             <li>r3_1</li>
           </groups>
@@ -224,7 +240,7 @@
         <li>
           <def>r3_2</def>
           <customLabel>r3_2</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.02</coverage>
           <groups>
             <li>r3_2</li>
           </groups>
@@ -233,7 +249,7 @@
         <li>
           <def>r4_1</def>
           <customLabel>r4_1</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.02</coverage>
           <groups>
             <li>r4_1</li>
           </groups>
@@ -241,7 +257,7 @@
         <li>
           <def>r4_2</def>
           <customLabel>r4_2</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.02</coverage>
           <groups>
             <li>r4_2</li>
           </groups>
@@ -249,7 +265,7 @@
         <li>
           <def>r4_3</def>
           <customLabel>r4_3</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.02</coverage>
           <groups>
             <li>r4_3</li>
           </groups>
@@ -258,7 +274,7 @@
         <li>
           <def>r5_1</def>
           <customLabel>r5_1</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.02</coverage>
           <groups>
             <li>r5_1</li>
           </groups>
@@ -266,7 +282,7 @@
         <li>
           <def>r5_2</def>
           <customLabel>r5_2</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.02</coverage>
           <groups>
             <li>r5_2</li>
           </groups>
@@ -275,7 +291,7 @@
         <li>
           <def>r2_1</def>
           <customLabel>r2_1</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.02</coverage>
           <groups>
             <li>r2_1</li>
           </groups>
@@ -283,7 +299,7 @@
         <li>
           <def>r2_2</def>
           <customLabel>r2_2</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.02</coverage>
           <groups>
             <li>r2_2</li>
           </groups>

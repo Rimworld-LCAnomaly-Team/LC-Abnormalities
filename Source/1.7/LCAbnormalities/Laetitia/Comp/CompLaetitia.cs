@@ -22,10 +22,15 @@ namespace Laetitia.Comp
         }
 
         /// <summary>
-        /// 绑定到收容平台后恢复机械待机动画。
+        /// 绑定到收容平台后解锁图鉴并恢复机械待机动画。
         /// </summary>
         public override void Notify_Holded()
         {
+            base.Notify_Holded();
+            if (parent != null)
+            {
+                AbnormalityUtility.Discover(parent.def);
+            }
             (parent as LC_LaetitiaPawn)?.SetIdleAnimation();
         }
 
@@ -97,14 +102,52 @@ namespace Laetitia.Comp
 
         protected override void StudyEvent_Normal(Pawn studier)
         {
-            Hediff hediff = studier?.health.GetOrAddHediff(Def.HediffDefOf.LaetitiaGift);
-            if (hediff != null)
+            if (studier != null && !studier.Dead)
             {
-                hediff.Severity = 1f;
+                Hediff hediff = studier.health?.GetOrAddHediff(Def.HediffDefOf.LaetitiaGift);
+                if (hediff != null)
+                {
+                    hediff.Severity = 1f;
+                }
+
+                (parent as LC_LaetitiaPawn)?.PlayGiftAnimation();
+                Messages.Message(
+                    "Laetitia_GiftReceived".Translate(studier.LabelShortCap),
+                    studier,
+                    MessageTypeDefOf.CautionInput,
+                    historical: false);
             }
 
-            (parent as LC_LaetitiaPawn)?.PlayGiftAnimation();
             base.StudyEvent_Normal(studier);
+        }
+
+        protected override void StudyEvent_Bad(Pawn studier)
+        {
+            if (studier != null && !studier.Dead)
+            {
+                Hediff existingGift = studier.health?.hediffSet?.GetFirstHediffOfDef(Def.HediffDefOf.LaetitiaGift);
+                if (existingGift != null)
+                {
+                    existingGift.TryGetComp<HediffComp_LaetitiaGift>()?.TurnIntoMonster();
+                }
+                else
+                {
+                    Hediff hediff = studier.health?.GetOrAddHediff(Def.HediffDefOf.LaetitiaGift);
+                    if (hediff != null)
+                    {
+                        hediff.Severity = 1f;
+                    }
+
+                    (parent as LC_LaetitiaPawn)?.PlayGiftAnimation();
+                    Messages.Message(
+                        "Laetitia_GiftReceivedBad".Translate(studier.LabelShortCap),
+                        studier,
+                        MessageTypeDefOf.NegativeEvent,
+                        historical: false);
+                }
+            }
+
+            base.StudyEvent_Bad(studier);
         }
     }
 }

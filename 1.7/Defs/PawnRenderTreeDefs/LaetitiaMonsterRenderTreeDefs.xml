@@ -18,7 +18,7 @@
               <tagDef>Bone2</tagDef>
               <texPath>Things/Pawn/LaetitiaMonster/Attachments/eyes</texPath>
               <useRottenColor>true</useRottenColor>
-              <baseLayer>4</baseLayer>
+              <baseLayer>10</baseLayer>
               <offset>0,0</offset>
               <drawSize>2.5,2.5</drawSize>
             </li>
@@ -27,7 +27,7 @@
               <tagDef>Bone3</tagDef>
               <texPath>Things/Pawn/LaetitiaMonster/Attachments/mouth</texPath>
               <useRottenColor>true</useRottenColor>
-              <baseLayer>4</baseLayer>
+              <baseLayer>9</baseLayer>
               <offset>0,0</offset>
               <drawSize>2.5,2.5</drawSize>
             </li>
@@ -36,7 +36,7 @@
               <tagDef>r3_1</tagDef>
               <texPath>Things/Pawn/LaetitiaMonster/Attachments/r3_1</texPath>
               <useRottenColor>true</useRottenColor>
-              <baseLayer>4</baseLayer>
+              <baseLayer>5</baseLayer>
               <offset>0,0</offset>
               <drawSize>2.5,2.5</drawSize>
               <children>
@@ -45,7 +45,7 @@
                   <tagDef>r3_2</tagDef>
                   <texPath>Things/Pawn/LaetitiaMonster/Attachments/r3_2</texPath>
                   <useRottenColor>true</useRottenColor>
-                  <baseLayer>4</baseLayer>
+                  <baseLayer>6</baseLayer>
                   <offset>0,0</offset>
                   <drawSize>1,1</drawSize>
                 </li>
@@ -65,7 +65,7 @@
                   <tagDef>r4_2</tagDef>
                   <texPath>Things/Pawn/LaetitiaMonster/Attachments/r4_2</texPath>
                   <useRottenColor>true</useRottenColor>
-                  <baseLayer>4</baseLayer>
+                  <baseLayer>5</baseLayer>
                   <offset>0,0</offset>
                   <drawSize>1,1</drawSize>
                   <children>
@@ -74,7 +74,7 @@
                       <tagDef>r4_3</tagDef>
                       <texPath>Things/Pawn/LaetitiaMonster/Attachments/r4_3</texPath>
                       <useRottenColor>true</useRottenColor>
-                      <baseLayer>4</baseLayer>
+                      <baseLayer>6</baseLayer>
                       <offset>0,0</offset>
                       <drawSize>1,1</drawSize>
                     </li>
@@ -95,7 +95,7 @@
                   <debugLabel>r5_2</debugLabel>
                   <tagDef>r5_2</tagDef>
                   <texPath>Things/Pawn/LaetitiaMonster/Attachments/r5_2</texPath>
-                  <baseLayer>4</baseLayer>
+                  <baseLayer>5</baseLayer>
                   <offset>0,0</offset>
                   <drawSize>1,1</drawSize>
                 </li>
@@ -106,7 +106,7 @@
               <tagDef>r1_1</tagDef>
               <texPath>Things/Pawn/LaetitiaMonster/Attachments/r1_1</texPath>
               <useRottenColor>true</useRottenColor>
-              <baseLayer>4</baseLayer>
+              <baseLayer>7</baseLayer>
               <offset>0,0</offset>
               <drawSize>2.5,2.5</drawSize>
               <children>
@@ -115,7 +115,7 @@
                   <tagDef>r1_2</tagDef>
                   <texPath>Things/Pawn/LaetitiaMonster/Attachments/r1_2</texPath>
                   <useRottenColor>true</useRottenColor>
-                  <baseLayer>4</baseLayer>
+                  <baseLayer>8</baseLayer>
                   <offset>0,0</offset>
                   <drawSize>1,1</drawSize>
                 </li>
@@ -126,7 +126,7 @@
               <tagDef>r2_1</tagDef>
               <texPath>Things/Pawn/LaetitiaMonster/Attachments/r2_1</texPath>
               <useRottenColor>true</useRottenColor>
-              <baseLayer>4</baseLayer>
+              <baseLayer>6</baseLayer>
               <offset>0,0</offset>
               <drawSize>2.5,2.5</drawSize>
               <children>
@@ -134,7 +134,7 @@
                   <debugLabel>r2_2</debugLabel>
                   <tagDef>r2_2</tagDef>
                   <texPath>Things/Pawn/LaetitiaMonster/Attachments/r2_2</texPath>
-                  <baseLayer>4</baseLayer>
+                  <baseLayer>7</baseLayer>
                   <offset>0,0</offset>
                   <drawSize>1,1</drawSize>
                 </li>

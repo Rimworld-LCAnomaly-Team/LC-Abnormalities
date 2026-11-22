@@ -15,6 +15,12 @@ namespace Laetitia.Things
         {
         }
 
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref giftAnimationEndTick, "giftAnimationEndTick", -1);
+        }
+
         protected override void Tick()
         {
             //收容状态下丢下就出逃

@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-  <LetterLabelLaetitiaKilled>Laetitia Inactived</LetterLabelLaetitiaKilled>
+  <LetterLabelLaetitiaKilled>Laetitia Inactivated</LetterLabelLaetitiaKilled>
   <LetterLaetitiaKilled>Laetitia has entered an inactive state!\nLaetitia's body has dissipated, leaving only the Abnormal Egg. You can collect and investigate its egg, or directly destroy it.</LetterLaetitiaKilled>
+
+  <Laetitia_GiftReceived>{0} received a "gift" from Laetitia. Do not assign them to study other Abnormalities for the next day!</Laetitia_GiftReceived>
+  <Laetitia_GiftReceivedBad>{0} failed to please Laetitia during work, yet still received a "gift". Keep them away from other Abnormalities and avoid failing work on Laetitia again!</Laetitia_GiftReceivedBad>
+  <Laetitia_GiftApproachWarning>Warning: {0} is carrying Laetitia's gift and approaching {1}! Cancel this work immediately or the gift will burst!</Laetitia_GiftApproachWarning>
+  <Laetitia_GiftBurstLetterLabel>Gift Detonated</Laetitia_GiftBurstLetterLabel>
+  <Laetitia_GiftBurstLetterText>Laetitia's "gift" burst out from inside {0}'s body, unleashing a Little Witch's Friend!</Laetitia_GiftBurstLetterText>
+  <Laetitia_AggressiveGiftBurst>The aggressive gift inside {0} detonated in a burst of Black damage!</Laetitia_AggressiveGiftBurst>
+  <Laetitia_CannotTargetAlly>Cannot use Send The Gift on an allied target.</Laetitia_CannotTargetAlly>
+  <Laetitia_TargetAlreadyGifted>{0} already carries an aggressive gift from Laetitia.</Laetitia_TargetAlreadyGifted>
+  <Laetitia_TargetMustBeLivingHumanlike>Must target a living, conscious humanlike pawn.</Laetitia_TargetMustBeLivingHumanlike>
 
 </LanguageData>

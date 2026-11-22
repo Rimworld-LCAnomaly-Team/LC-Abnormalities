@@ -155,7 +155,7 @@
             <li>
               <def>Laetitia_BodyUpper</def>
               <customLabel>BodyUpper</customLabel>
-              <coverage>0.77</coverage>
+              <coverage>0.08</coverage>
               <groups>
                 <li>Laetitia_BodyUpper</li>
               </groups>
@@ -163,7 +163,7 @@
             <li>
               <def>Laetitia_EyeLeft</def>
               <customLabel>EyeLeft</customLabel>
-              <coverage>0.77</coverage>
+              <coverage>0.08</coverage>
               <groups>
                 <li>Laetitia_EyeLeft</li>
               </groups>
@@ -171,7 +171,7 @@
             <li>
               <def>Laetitia_EyeRight</def>
               <customLabel>EyeRight</customLabel>
-              <coverage>0.77</coverage>
+              <coverage>0.08</coverage>
               <groups>
                 <li>Laetitia_EyeRight</li>
               </groups>
@@ -179,7 +179,7 @@
             <li>
               <def>Laetitia_Head</def>
               <customLabel>Head</customLabel>
-              <coverage>0.77</coverage>
+              <coverage>0.08</coverage>
               <groups>
                 <li>Laetitia_Head</li>
               </groups>
@@ -187,7 +187,7 @@
             <li>
               <def>Laetitia_ArmLeft</def>
               <customLabel>ArmLeft</customLabel>
-              <coverage>0.77</coverage>
+              <coverage>0.08</coverage>
               <groups>
                 <li>Laetitia_ArmLeft</li>
               </groups>
@@ -195,7 +195,7 @@
             <li>
               <def>Laetitia_ArmRight</def>
               <customLabel>ArmRight</customLabel>
-              <coverage>0.77</coverage>
+              <coverage>0.08</coverage>
               <groups>
                 <li>Laetitia_ArmRight</li>
               </groups>
@@ -203,7 +203,7 @@
             <li>
               <def>Laetitia_Skirt</def>
               <customLabel>Skirt</customLabel>
-              <coverage>0.77</coverage>
+              <coverage>0.08</coverage>
               <groups>
                 <li>Laetitia_Skirt</li>
               </groups>
@@ -211,7 +211,7 @@
             <li>
               <def>Laetitia_LegLeft</def>
               <customLabel>LegLeft</customLabel>
-              <coverage>0.77</coverage>
+              <coverage>0.08</coverage>
               <groups>
                 <li>Laetitia_LegLeft</li>
               </groups>
@@ -219,7 +219,7 @@
             <li>
               <def>Laetitia_LegRight</def>
               <customLabel>LegRight</customLabel>
-              <coverage>0.77</coverage>
+              <coverage>0.08</coverage>
               <groups>
                 <li>Laetitia_LegRight</li>
               </groups>

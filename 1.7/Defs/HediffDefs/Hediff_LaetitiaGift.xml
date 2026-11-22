@@ -5,8 +5,8 @@
   <HediffDef>
     <defName>LaetitiaGift</defName>
     <label>Laetitia's Gift</label>
-    <labelNoun>This one was given a gift from Laetizia during work, and this hediff will last for one day.</labelNoun>
-    <description>When the work result is normal, Laetitia will give the employee a gift, and then a red heart will appear on the employee's head.\nIf an employee holds a gift from Laetitia and is assigned to work on other abnormality (including tools), and the assigned work is not cancelled when the employee reaches the designated distance from the holding platform, the employee will be killed by the exploded gift and a spider (the little girl's friend) will be generated at the death position.</description>
+    <labelNoun>This one was given a gift from Laetitia during work, and this hediff will last for one day.</labelNoun>
+    <description>When a work result is Normal or Bad, Laetitia will give the employee a gift, and a red heart will appear above the employee's head (if an employee already carries a gift and gets a Bad result, it bursts immediately).\nIf an employee carries Laetitia's gift and approaches another Abnormality's holding platform to work on it without cancelling in time, the gift will explode, killing the carrier and spawning a Little Witch's Friend.</description>
     <hediffClass>Hediff_High</hediffClass>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
@@ -20,10 +20,10 @@
         <parentTagDef>Body</parentTagDef>
         <overrideMeshSize>1</overrideMeshSize>
         <drawSize>0.8</drawSize>
-        <colorType>Skin</colorType>
+        <colorType>Custom</colorType>
         <rotDrawMode>Fresh, Rotting</rotDrawMode>
-        <useSkinShader>true</useSkinShader>
-        <useRottenColor>true</useRottenColor>
+        <useSkinShader>false</useSkinShader>
+        <useRottenColor>false</useRottenColor>
         <offsetRangeZ>0~0</offsetRangeZ>
         <durationTicksRange>600~600</durationTicksRange>
         <nextSpasmTicksRange>600~600</nextSpasmTicksRange>
@@ -52,14 +52,14 @@
 
   <HediffDef>
     <defName>LaetitiaGiftAggresive</defName>
-    <label>Laetitia's Gift (Aggresive)</label>
-    <labelNoun>This one has been gifted aggressively by E.G.O.Laetitia, and this hediff will soon end.</labelNoun>
-    <description>Unlike gifts obtained at work, this hediff will soon come to an end.\nAt the end, this one will be killed and several little girls' friends will be generated at the place of death.</description>
+    <label>Laetitia's Gift (Aggressive)</label>
+    <labelNoun>This one has been gifted aggressively by E.G.O. Laetitia, and this hediff will soon end.</labelNoun>
+    <description>Unlike gifts obtained during work, this aggressive gift expires rapidly.\nWhen it expires or the target is downed or killed, it unleashes a heavy Black damage burst. If the target falls, one or two temporary hostile Little Witch's Friends burst forth from the body.</description>
     <hediffClass>Hediff_High</hediffClass>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
-    <isBad>false</isBad>
+    <isBad>true</isBad>
     <renderNodeProperties>
       <li Class="LCAnomalyCore.Render.PawnRenderNodeProperties_HediffUpHead">
         <texPaths>
@@ -68,10 +68,10 @@
         <parentTagDef>Body</parentTagDef>
         <overrideMeshSize>1</overrideMeshSize>
         <drawSize>0.8</drawSize>
-        <colorType>Skin</colorType>
+        <colorType>Custom</colorType>
         <rotDrawMode>Fresh, Rotting</rotDrawMode>
-        <useSkinShader>true</useSkinShader>
-        <useRottenColor>true</useRottenColor>
+        <useSkinShader>false</useSkinShader>
+        <useRottenColor>false</useRottenColor>
         <offsetRangeZ>0~0</offsetRangeZ>
         <durationTicksRange>600~600</durationTicksRange>
         <nextSpasmTicksRange>600~600</nextSpasmTicksRange>

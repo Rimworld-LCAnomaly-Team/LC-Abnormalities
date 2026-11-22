@@ -8,7 +8,10 @@ namespace Laetitia.Effect
     {
         public override void InitWith(Pawn targetPawn)
         {
-            LCAnomalyCore.Util.AbnormalityUtility.Burst(Position, Map, 2f);
+            if (Map != null && Position.InBounds(Map))
+            {
+                LCAnomalyCore.Util.AbnormalityUtility.Burst(Position, Map, 2f);
+            }
             completeTick = TickSpawned + 60;
 
             hasInited = true;
@@ -24,11 +27,17 @@ namespace Laetitia.Effect
             }
             //生成扭曲血肉脏污
             ThingDef filthDef = RimWorld.ThingDefOf.Filth_Blood;
-            if (filthDef != null && FilthMaker.TryMakeFilth(base.PositionHeld, base.Map, filthDef))
+            if (filthDef != null
+                && base.Map != null
+                && base.PositionHeld.InBounds(base.Map)
+                && FilthMaker.TryMakeFilth(base.PositionHeld, base.Map, filthDef))
             {
                 //清除1格以内的植物
                 foreach (IntVec3 item in CellRect.CenteredOn(base.PositionHeld, 1))
                 {
+                    if (!item.InBounds(base.Map))
+                        continue;
+
                     Plant plant = item.GetPlant(base.Map);
                     if (plant != null && plant.MaxHitPoints < 100)
                     {

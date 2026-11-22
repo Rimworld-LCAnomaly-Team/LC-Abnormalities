@@ -731,6 +731,11 @@
               <tick>35</tick>
               <offset>(-0.05,0,0)</offset>
             </li>
+            <li>
+              <tick>40</tick>
+              <offset>(0,0,0)</offset>
+              <scale>(1,1,1)</scale>
+            </li>
           </keyframes>
         </value>
       </li>

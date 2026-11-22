@@ -1,0 +1,11 @@
+{
+  "TextureModID": "darthcy.lc.abnormalities",
+  "ItemDefName": "EgoWeapon_Laetitia",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.2,
+  "OffY": 0.0,
+  "ScaleX": 2.0,
+  "ScaleY": 2.0,
+  "HandsMode": 2
+}

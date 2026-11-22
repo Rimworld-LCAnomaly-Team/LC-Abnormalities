@@ -93,22 +93,22 @@
           <li>
             <threshold>3</threshold>
             <label>Observation Level: I</label>
-            <text>When the work result was Normal, Laetitia gave a heartfelt gift to the empolyee.</text>
+            <text>When the work result was Normal or Bad, Laetitia gave a heartfelt gift to the employee.</text>
           </li>
           <li>
             <threshold>5</threshold>
             <label>Observation Level: II</label>
-            <text>When the empolyee was assigned to work with a different Abnormality instead of Laetitia, a ███████ eventually burst out of their body at a certain point.\nUnlocks the E.G.O. Gift 'Laetitia'.</text>
+            <text>When the employee was assigned to work with a different Abnormality instead of Laetitia, a ███████ eventually burst out of their body at a certain point.\nUnlocks the E.G.O. Gift 'Laetitia'.</text>
           </li>
           <li>
             <threshold>10</threshold>
             <label>Observation Level: III</label>
-            <text>When the assignment was canceled before the ███████ was born, nothing strange occurred to the employee’s body.\nUnlocks the E.G.O. Weapon and Suit 'Lantern'.</text>
+            <text>When the assignment was canceled before the ███████ was born, nothing strange occurred to the employee’s body.\nUnlocks the E.G.O. Weapon and Suit 'Laetitia'.</text>
           </li>
           <li>
             <threshold>12</threshold>
             <label>Observation Level: IV</label>
-            <text>WIP</text>
+            <text>Laetitia's gift fades after one day. Never assign a gifted employee to Bad-prone work or other Abnormalities—should they fail work on Laetitia again while holding a gift, Little Witch's Friend bursts out immediately and deals lethal Red damage.</text>
           </li>
         </studyNotes>
       </li>
