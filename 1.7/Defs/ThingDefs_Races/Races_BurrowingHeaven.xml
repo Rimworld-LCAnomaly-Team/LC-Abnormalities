@@ -40,7 +40,7 @@
     </race>
     <comps>
       <li Class="BurrowingHeaven.Comp.CompProperties_BurrowingHeaven">
-        <qliphothCountMax>3</qliphothCountMax>
+        <qliphothCountMax>2</qliphothCountMax>
         <studySucessRateBase>0.2</studySucessRateBase>
         <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
         <ifProvideWarningPoints>true</ifProvideWarningPoints>
@@ -87,24 +87,24 @@
     <comps>
       <li Class="LCAnomalyCore.Comp.CompProperties_PeBoxProduce">
         <peBoxDef>EnkephalinBox</peBoxDef>
-        <amountProdueMax>24</amountProdueMax>
+        <amountProdueMax>18</amountProdueMax>
         <boxTexOffsetZ>0.0742</boxTexOffsetZ>
-        <amountProdueRangeNormal>6~12</amountProdueRangeNormal>
+        <amountProdueRangeNormal>6~10</amountProdueRangeNormal>
       </li>
       <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
         <accessoryDef>Accessory_BurrowingHeaven</accessoryDef>
-        <accessoryChance>0.03</accessoryChance>
+        <accessoryChance>0.04</accessoryChance>
         <unlockLevel>2</unlockLevel>
       </li>
       <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
         <weaponExtracted>EgoWeapon_BurrowingHeaven</weaponExtracted>
         <weaponIconPath>UI/Commands/ExtractEGO_BurrowingHeaven_Weapon</weaponIconPath>
-        <amountMaxWeapon>3</amountMaxWeapon>
-        <weaponExtractedNeed>40</weaponExtractedNeed>
+        <amountMaxWeapon>1</amountMaxWeapon>
+        <weaponExtractedNeed>45</weaponExtractedNeed>
         <armorExtracted>Apparel_BurrowingHeavenSuit</armorExtracted>
         <armorIconPath>UI/Commands/ExtractEGO_BurrowingHeaven_Armor</armorIconPath>
-        <amountMaxArmor>2</amountMaxArmor>
-        <armorExtractedNeed>50</armorExtractedNeed>
+        <amountMaxArmor>3</amountMaxArmor>
+        <armorExtractedNeed>30</armorExtractedNeed>
         <unlockLevel>3</unlockLevel>
       </li>
       <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
@@ -112,22 +112,22 @@
           <li>
             <threshold>6</threshold>
             <label>Observation Level: I</label>
-            <text>Work with The Burrowing Heaven must be done while the manager has the Containment Unit in sight.</text>
+            <text>Work with The Burrowing Heaven must be done while the manager has the Containment Unit in sight.\nSuccess Rate +4%</text>
           </li>
           <li>
             <threshold>8</threshold>
             <label>Observation Level: II</label>
-            <text>During the work process, when the Containment Unit went out of the camera’s sight, the Qliphoth Counter lowered.\nWhen The Burrowing Heaven’s Containment Unit remained unmonitored after the phenomenon, the Counter continued to lower.</text>
+            <text>During the work process, when the Containment Unit went out of the camera’s sight, the Qliphoth Counter lowered.\nWhen The Burrowing Heaven’s Containment Unit remained unmonitored after the phenomenon, the Counter continued to lower.\nWork Speed +4%\nUnlocks the E.G.O. Gift 'Heaven'.</text>
           </li>
           <li>
             <threshold>10</threshold>
             <label>Observation Level: III</label>
-            <text>When the work result was Normal or Good, the Qliphoth Counter increased. It can increase by up to two levels on a Good result.</text>
+            <text>When the work result was Normal or Good, the Qliphoth Counter increased. It can increase by up to two levels on a Good result.\nSuccess Rate +4%\nUnlocks the E.G.O. Weapon and Suit 'Heaven'.</text>
           </li>
           <li>
             <threshold>12</threshold>
             <label>Observation Level: IV</label>
-            <text>WARNING: Do not stop looking at the Abnormality while its suppression is in progress.</text>
+            <text>WARNING: Do not stop looking at the Abnormality while its suppression is in progress. Repression work yields the highest success rate, whereas Instinct work is completely futile.\nWork Speed +4%</text>
           </li>
         </studyNotes>
       </li>

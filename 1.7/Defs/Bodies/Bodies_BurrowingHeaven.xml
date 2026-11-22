@@ -105,7 +105,7 @@
         <li>
           <def>BurrowingHeaven_body_main</def>
           <customLabel>BurrowingHeaven_body_main</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.03</coverage>
           <groups>
             <li>BurrowingHeaven_body_main</li>
           </groups>
@@ -114,7 +114,7 @@
         <li>
           <def>BurrowingHeaven_body_front_l</def>
           <customLabel>BurrowingHeaven_body_front_l</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.03</coverage>
           <groups>
             <li>BurrowingHeaven_body_front</li>
           </groups>
@@ -122,7 +122,7 @@
         <li>
           <def>BurrowingHeaven_body_front_r</def>
           <customLabel>BurrowingHeaven_body_front_r</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.03</coverage>
           <groups>
             <li>BurrowingHeaven_body_front</li>
           </groups>
@@ -131,7 +131,7 @@
         <li>
           <def>BurrowingHeaven_body_back_l</def>
           <customLabel>BurrowingHeaven_body_back_l</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.03</coverage>
           <groups>
             <li>BurrowingHeaven_body_back</li>
           </groups>
@@ -139,7 +139,7 @@
         <li>
           <def>BurrowingHeaven_body_back_r</def>
           <customLabel>BurrowingHeaven_body_back_r</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.03</coverage>
           <groups>
             <li>BurrowingHeaven_body_back</li>
           </groups>
@@ -148,7 +148,7 @@
         <li>
           <def>BurrowingHeaven_eye_main_bottom</def>
           <customLabel>BurrowingHeaven_eye_main_bottom</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.03</coverage>
           <groups>
             <li>BurrowingHeaven_eye_main</li>
           </groups>
@@ -156,7 +156,7 @@
         <li>
           <def>BurrowingHeaven_eye_main_middle</def>
           <customLabel>BurrowingHeaven_eye_main_middle</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.03</coverage>
           <groups>
             <li>BurrowingHeaven_eye_main</li>
           </groups>
@@ -164,7 +164,7 @@
         <li>
           <def>BurrowingHeaven_eye_main_top</def>
           <customLabel>BurrowingHeaven_eye_main_top</customLabel>
-          <coverage>0.77</coverage>
+          <coverage>0.03</coverage>
           <groups>
             <li>BurrowingHeaven_eye_main</li>
           </groups>

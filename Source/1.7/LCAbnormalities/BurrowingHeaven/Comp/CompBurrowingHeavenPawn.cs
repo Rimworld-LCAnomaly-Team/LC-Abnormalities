@@ -545,8 +545,8 @@ namespace BurrowingHeaven.Comp
                 ? HangingHeadRecord.CreateFrom(target, -1, 0f)
                 : null;
 
-            DamageDef blackDamage = Def.DamageDefOf.LC_BurrowingHeaven_BlackDamage ?? LCAnomalyCore.Defs.DamageDefOf.LC_BlackDamage;
-            DamageInfo dinfo = new DamageInfo(blackDamage, damageAmount, instigator: SelfPawn);
+            DamageDef burstDamage = Def.DamageDefOf.LC_BurrowingHeaven_BlackDamage ?? LCAnomalyCore.Defs.DamageDefOf.LC_RedDamage;
+            DamageInfo dinfo = new DamageInfo(burstDamage, damageAmount, instigator: SelfPawn);
             AbnormalityUtility.Burst(deathPos, deathMap);
             target.TakeDamage(dinfo);
 
@@ -655,67 +655,63 @@ namespace BurrowingHeaven.Comp
             switch (workType)
             {
                 case EAnomalyWorkType.Instinct:
-                    switch (studier.GetPawnStatusELevel(EPawnStatus.Fortitude))
-                    {
-                        case EPawnLevel.I:
-                        case EPawnLevel.II:
-                            workTypeRate = 0.25f;
-                            break;
-                        case EPawnLevel.III:
-                            workTypeRate = 0.30f;
-                            break;
-                        default:
-                            workTypeRate = 0.35f;
-                            break;
-                    }
+                    // 原作 LookAtMe_stat: 本能各等级均为 0%
+                    workTypeRate = 0.0f;
                     break;
 
                 case EAnomalyWorkType.Insight:
+                    // 原作 LookAtMe_stat: 洞察 I=30%, II/III=40%, IV/V=50%
                     switch (studier.GetPawnStatusELevel(EPawnStatus.Prudence))
                     {
                         case EPawnLevel.I:
-                            workTypeRate = 0.45f;
+                            workTypeRate = 0.30f;
                             break;
                         case EPawnLevel.II:
-                            workTypeRate = 0.50f;
-                            break;
                         case EPawnLevel.III:
-                            workTypeRate = 0.55f;
+                            workTypeRate = 0.40f;
                             break;
                         default:
-                            workTypeRate = 0.60f;
+                            workTypeRate = 0.50f;
                             break;
                     }
                     break;
 
                 case EAnomalyWorkType.Attachment:
+                    // 原作 LookAtMe_stat: 沟通 I/II/III=40%, IV=30%, V=20%
                     switch (studier.GetPawnStatusELevel(EPawnStatus.Temperance))
                     {
                         case EPawnLevel.I:
                         case EPawnLevel.II:
+                        case EPawnLevel.III:
                             workTypeRate = 0.40f;
                             break;
-                        case EPawnLevel.III:
-                            workTypeRate = 0.45f;
+                        case EPawnLevel.IV:
+                            workTypeRate = 0.30f;
                             break;
                         default:
-                            workTypeRate = 0.50f;
+                            workTypeRate = 0.20f;
                             break;
                     }
                     break;
 
                 case EAnomalyWorkType.Repression:
+                    // 原作 LookAtMe_stat: 压迫 I=40%, II=45%, III=50%, IV=55%, V=60%
                     switch (studier.GetPawnStatusELevel(EPawnStatus.Justice))
                     {
                         case EPawnLevel.I:
+                            workTypeRate = 0.40f;
+                            break;
                         case EPawnLevel.II:
-                            workTypeRate = 0.20f;
+                            workTypeRate = 0.45f;
                             break;
                         case EPawnLevel.III:
-                            workTypeRate = 0.25f;
+                            workTypeRate = 0.50f;
+                            break;
+                        case EPawnLevel.IV:
+                            workTypeRate = 0.55f;
                             break;
                         default:
-                            workTypeRate = 0.30f;
+                            workTypeRate = 0.60f;
                             break;
                     }
                     break;

@@ -19,11 +19,20 @@ namespace BurrowingHeaven.Things
         {
         }
 
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref ShouldCheckInsight, "shouldCheckInsight", false);
+            Scribe_Values.Look(ref isOutOfSight, "isOutOfSight", false);
+            Scribe_Values.Look(ref attackAnimTicksRemaining, "attackAnimTicksRemaining", 0);
+        }
+
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
             if (SelfEntityComp != null && SelfEntityComp.Escaped)
             {
+                ShouldCheckInsight = true;
                 SetBreachAnimation();
             }
             else

@@ -13,14 +13,21 @@ namespace BurrowingHeaven.Util
         /// <param name="map">地图</param>
         public static void OnBurrowingHeavenDeath(Pawn pawn, Map map)
         {
+            Map targetMap = map ?? pawn?.MapHeld;
+            IntVec3 targetPos = pawn?.PositionHeld ?? IntVec3.Invalid;
+            if (pawn == null || targetMap == null || !targetPos.InBounds(targetMap))
+            {
+                Log.Warning($"Unable to create BurrowingHeaven death effect for {pawn}: no valid map position.");
+                return;
+            }
+
             Find.LetterStack.ReceiveLetter("LetterLabelBurrowingHeavenKilled".Translate()
                 , "LetterBurrowingHeavenKilled".Translate()
                 , LetterDefOf.PositiveEvent
-                , new LookTargets(pawn.PositionHeld, pawn.MapHeld));
+                , new LookTargets(targetPos, targetMap));
 
-            ((DyingBurrowingHeaven)GenSpawn
-                .Spawn(Def.ThingDefOf.DyingBurrowingHeaven, pawn.Position, map))
-                .InitWith(pawn);
+            var dying = GenSpawn.Spawn(Def.ThingDefOf.DyingBurrowingHeaven, targetPos, targetMap) as DyingBurrowingHeaven;
+            dying?.InitWith(pawn);
         }
     }
 }

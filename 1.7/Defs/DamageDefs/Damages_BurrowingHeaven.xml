@@ -7,7 +7,7 @@
     <deathMessage>{0} was impaled by The Burrowing Heaven.</deathMessage>
     <modExtensions>
       <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
-        <damageType>Black</damageType>
+        <damageType>Red</damageType>
         <riskLevel>WAW</riskLevel>
       </li>
     </modExtensions>

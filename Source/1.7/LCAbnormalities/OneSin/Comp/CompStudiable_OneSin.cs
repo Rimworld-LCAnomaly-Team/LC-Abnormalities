@@ -10,6 +10,9 @@ namespace OneSin.Comp
         /// <inheritdoc />
         public override float GetWorkSpeedOffset()
         {
+            if (CompStudyUnlocks == null)
+                return 0f;
+
             if (CompStudyUnlocks.Completed)
             {
                 return 0.1f;
@@ -19,12 +22,15 @@ namespace OneSin.Comp
                 return 0.05f;
             }
 
-            return 0;
+            return 0f;
         }
 
         /// <inheritdoc />
         public override float GetWorkSuccessRateOffset()
         {
+            if (CompStudyUnlocks == null)
+                return 0f;
+
             if (CompStudyUnlocks.Progress >= 3)
             {
                 return 0.1f;
@@ -34,7 +40,7 @@ namespace OneSin.Comp
                 return 0.05f;
             }
 
-            return 0;
+            return 0f;
         }
     }
 }

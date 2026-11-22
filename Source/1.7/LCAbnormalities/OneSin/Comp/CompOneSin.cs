@@ -1,12 +1,15 @@
 ﻿using LCAnomalyCore.Comp;
 using LCAnomalyCore.Comp.Pawns;
 using LCAnomalyCore.Util;
+using RimWorld;
+using System.Collections.Generic;
+using UnityEngine;
 using Verse;
 
 namespace OneSin.Comp
 {
     /// <summary>
-    /// 提供“一罪与百善”的死亡、出逃和工作成功率逻辑。
+    /// 提供“一罪与百善”的死亡、出逃、精神祝福与工作成功率逻辑。
     /// </summary>
     public class CompOneSin : CompAbnormality
     {
@@ -27,7 +30,77 @@ namespace OneSin.Comp
         /// <inheritdoc />
         public override void Notify_Holded()
         {
-            //CheckIsDiscovered();
+            base.Notify_Holded();
+            if (parent != null)
+            {
+                AbnormalityUtility.Discover(parent.def);
+            }
+        }
+
+        /// <inheritdoc />
+        protected override void StudyEvent_Good(Pawn studier)
+        {
+            bool producedMaxPeBox = PeBoxComp != null && PeBoxProducedTemp >= PeBoxComp.Props.amountProdueMax;
+
+            base.StudyEvent_Good(studier);
+
+            if (producedMaxPeBox)
+            {
+                List<Pawn> colonists = parent.MapHeld?.mapPawns?.FreeColonistsSpawned;
+                if (colonists != null)
+                {
+                    for (int i = colonists.Count - 1; i >= 0; i--)
+                    {
+                        RestoreMentalHealth(colonists[i], 0.6f, 0.12f);
+                    }
+                }
+
+                Messages.Message(
+                    "LC_OneSin_MaxPeBoxBlessing".Translate(studier?.LabelShortCap ?? parent.LabelCap),
+                    new LookTargets(parent.PositionHeld, parent.MapHeld),
+                    MessageTypeDefOf.PositiveEvent,
+                    historical: false);
+            }
+            else if (studier != null && !studier.Dead)
+            {
+                RestoreMentalHealth(studier, 0.5f, 0.10f);
+                Messages.Message(
+                    "LC_OneSin_GoodWorkBlessing".Translate(studier.LabelShortCap),
+                    studier,
+                    MessageTypeDefOf.PositiveEvent,
+                    historical: false);
+            }
+        }
+
+        private static void RestoreMentalHealth(Pawn pawn, float spFractionRestore, float moodBoost)
+        {
+            if (pawn == null || pawn.Dead)
+                return;
+
+            Hediff mentalDamage = pawn.health?.hediffSet?.GetFirstHediffOfDef(LCAnomalyCore.Defs.HediffDefOf.LC_MentalDamage);
+            if (mentalDamage != null)
+            {
+                mentalDamage.Severity -= spFractionRestore;
+                if (mentalDamage.Severity <= 0.0001f)
+                {
+                    pawn.health.RemoveHediff(mentalDamage);
+                    if (pawn.InMentalState && pawn.MentalState != null)
+                    {
+                        pawn.MentalState.RecoverFromState();
+                    }
+                }
+            }
+
+            Need_Mood mood = pawn.needs?.mood;
+            if (mood != null)
+            {
+                mood.CurLevel = Mathf.Clamp01(mood.CurLevel + moodBoost);
+            }
+
+            if (pawn.Spawned && pawn.Map != null && pawn.Position.InBounds(pawn.Map))
+            {
+                FleckMaker.ThrowMetaIcon(pawn.Position, pawn.Map, FleckDefOf.HealingCross, 0.42f);
+            }
         }
 
         #endregion 触发事件

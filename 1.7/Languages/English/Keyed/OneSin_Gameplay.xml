@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-  <LetterLabelOneSinKilled>OneSin Inactived</LetterLabelOneSinKilled>
-  <LetterOneSinKilled>OneSin has entered an inactive state!\nOneSin's body has dissipated, leaving only the Abnormal Egg. You can collect and investigate its egg, or directly destroy it.</LetterOneSinKilled>
+  <LetterLabelOneSinKilled>One Sin Inactivated</LetterLabelOneSinKilled>
+  <LetterOneSinKilled>One Sin has entered an inactive state!\nOne Sin's body has dissipated, leaving only the Abnormal Egg. You can collect and investigate its egg, or directly destroy it.</LetterOneSinKilled>
+
+  <LC_OneSin_GoodWorkBlessing>{0} felt a refreshing sense of absolution from One Sin, soothing their mental strain.</LC_OneSin_GoodWorkBlessing>
+  <LC_OneSin_MaxPeBoxBlessing>{0} produced the maximum number of PE-Boxes with One Sin, sending a wave of serene benediction that restores the mental state of every colonist!</LC_OneSin_MaxPeBoxBlessing>
 
 </LanguageData>

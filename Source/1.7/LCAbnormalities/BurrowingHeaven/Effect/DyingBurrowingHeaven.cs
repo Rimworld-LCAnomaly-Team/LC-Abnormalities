@@ -6,18 +6,23 @@ using Verse;
 namespace BurrowingHeaven.Effect
 {
     /// <summary>
-    /// 蕾蒂希娅死亡特效对象
+    /// 穿刺乐园死亡特效对象
     /// </summary>
     public class DyingBurrowingHeaven : LC_FX_Standard
     {
         public override void InitWith(Pawn targetPawn)
         {
-            var comp = targetPawn.TryGetComp<CompBurrowingHeaven>();
+            var comp = targetPawn?.TryGetComp<CompBurrowingHeaven>();
+            if (comp != null)
+            {
+                //传递生物特征
+                bioSignature = comp.biosignature;
+            }
 
-            //传递生物特征，播放effecter特效，记录动画播放完的时间
-            bioSignature = comp.biosignature;
-
-            LCAnomalyCore.Util.AbnormalityUtility.Burst(Position, Map, 2f);
+            if (Map != null && Position.InBounds(Map))
+            {
+                LCAnomalyCore.Util.AbnormalityUtility.Burst(Position, Map, 2f);
+            }
             completeTick = base.TickSpawned + 60;
 
             hasInited = true;
@@ -27,16 +32,23 @@ namespace BurrowingHeaven.Effect
         {
             if (!hasInited)
             {
-                //Log.Warning($"特效：在未初始化时尝试生成特效对象{Def.ThingDefOf.DyingMeatLantern.label.Translate()}，对象即将被销毁以避免错误。");
                 Destroy();
                 return;
             }
+
             //生成扭曲血肉脏污
-            if (FilthMaker.TryMakeFilth(base.PositionHeld, base.Map, RimWorld.ThingDefOf.Filth_Blood))
+            ThingDef filthDef = RimWorld.ThingDefOf.Filth_Blood;
+            if (filthDef != null
+                && base.Map != null
+                && base.PositionHeld.InBounds(base.Map)
+                && FilthMaker.TryMakeFilth(base.PositionHeld, base.Map, filthDef))
             {
                 //清除1格以内的植物
                 foreach (IntVec3 item in CellRect.CenteredOn(base.PositionHeld, 1))
                 {
+                    if (!item.InBounds(base.Map))
+                        continue;
+
                     Plant plant = item.GetPlant(base.Map);
                     if (plant != null && plant.MaxHitPoints < 100)
                     {
@@ -46,9 +58,12 @@ namespace BurrowingHeaven.Effect
             }
 
             //生成蛋，销毁自己
-            Thing thing = ThingMaker.MakeThing(Def.ThingDefOf.BurrowingHeavenEgg);
-            LCAnomalyCore.Util.AbnormalityUtility.TransferSignature(thing, bioSignature);
-            GenSpawn.Spawn(thing, base.PositionHeld, base.MapHeld);
+            if (base.MapHeld != null && base.PositionHeld.InBounds(base.MapHeld))
+            {
+                Thing thing = ThingMaker.MakeThing(Def.ThingDefOf.BurrowingHeavenEgg);
+                LCAnomalyCore.Util.AbnormalityUtility.TransferSignature(thing, bioSignature);
+                GenSpawn.Spawn(thing, base.PositionHeld, base.MapHeld);
+            }
             Destroy();
         }
     }

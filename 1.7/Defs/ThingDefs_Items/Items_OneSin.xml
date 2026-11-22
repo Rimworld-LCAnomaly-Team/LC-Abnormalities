@@ -34,8 +34,8 @@
     <comps>
       <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
         <heldPawnKind>OneSin</heldPawnKind>
-        <capturedLetterLabel>One Sin Preformed</capturedLetterLabel>
-        <capturedLetterText>.</capturedLetterText>
+        <capturedLetterLabel>One Sin Reborn</capturedLetterLabel>
+        <capturedLetterText>After {PAWN_nameDef} bound the One Sin egg to the holding platform, One Sin materialized inside once more.\nWhen suppressed, One Sin dissolves and leaves behind only this egg.</capturedLetterText>
       </li>
       <li Class="CompProperties_Usable">
         <useJob>SmashThing</useJob>

@@ -35,8 +35,8 @@
     <comps>
       <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
         <heldPawnKind>BurrowingHeaven</heldPawnKind>
-        <capturedLetterLabel>Burrowing Heaven Preformed</capturedLetterLabel>
-        <capturedLetterText>.</capturedLetterText>
+        <capturedLetterLabel>Burrowing Heaven Reborn</capturedLetterLabel>
+        <capturedLetterText>After {PAWN_nameDef} bound The Burrowing Heaven egg to the holding platform, The Burrowing Heaven sprouted inside once more.\nWhen suppressed, it dissolves and leaves behind only this egg.</capturedLetterText>
       </li>
       <li Class="CompProperties_AttachPoints">
         <points>
@@ -72,6 +72,7 @@
           <EnkephalinBox>20</EnkephalinBox>
         </leavings>
       </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Abnormality"/>
       <li Class="LCAnomalyCore.Comp.LC_CompProperties_InteractableEgg">
         <compClass>LCAnomalyCore.Comp.LC_CompEgg</compClass>
         <ticksToActivate>0</ticksToActivate>

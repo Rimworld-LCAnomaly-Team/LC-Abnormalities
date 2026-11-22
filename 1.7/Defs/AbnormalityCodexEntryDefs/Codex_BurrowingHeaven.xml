@@ -8,6 +8,10 @@
     <uiIconPath>UI/CodexEntries/BurrowingHeaven</uiIconPath>
     <category>WAW</category>
     <orderInCategory>800</orderInCategory>
+    <linkedThings>
+      <li>BurrowingHeaven</li>
+      <li>BurrowingHeavenEgg</li>
+    </linkedThings>
   </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
 
 </Defs>

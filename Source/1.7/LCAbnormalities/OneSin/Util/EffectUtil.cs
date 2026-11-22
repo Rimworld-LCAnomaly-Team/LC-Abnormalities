@@ -16,14 +16,21 @@ namespace OneSin.Util
         /// <param name="map">地图</param>
         public static void OnOneSinDeath(Pawn pawn, Map map)
         {
+            Map targetMap = map ?? pawn?.MapHeld;
+            IntVec3 targetPos = pawn?.PositionHeld ?? IntVec3.Invalid;
+            if (pawn == null || targetMap == null || !targetPos.InBounds(targetMap))
+            {
+                Log.Warning($"Unable to create OneSin death effect for {pawn}: no valid map position.");
+                return;
+            }
+
             Find.LetterStack.ReceiveLetter("LetterLabelOneSinKilled".Translate()
                 , "LetterOneSinKilled".Translate()
                 , LetterDefOf.PositiveEvent
-                , new LookTargets(pawn.PositionHeld, map));
+                , new LookTargets(targetPos, targetMap));
 
-            ((DyingOneSin)GenSpawn
-                .Spawn(Def.ThingDefOf.DyingOneSin, pawn.Position, map))
-                .InitWith(pawn);
+            var dying = GenSpawn.Spawn(Def.ThingDefOf.DyingOneSin, targetPos, targetMap) as DyingOneSin;
+            dying?.InitWith(pawn);
         }
     }
 }

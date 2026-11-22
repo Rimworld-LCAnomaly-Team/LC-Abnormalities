@@ -4,4 +4,7 @@
   <LetterLabelOneSinKilled>一罪与百善消逝</LetterLabelOneSinKilled>
   <LetterOneSinKilled>一罪与百善已进入不活跃状态！\n一罪与百善的躯体已经消散，只留下了异想体蛋。可收集并调查它的蛋，或者直接将其摧毁。</LetterOneSinKilled>
 
+  <LC_OneSin_GoodWorkBlessing>{0}在“一罪与百善”的宽恕中感到了灵魂的释然，精神创伤有所缓和。</LC_OneSin_GoodWorkBlessing>
+  <LC_OneSin_MaxPeBoxBlessing>{0}从“一罪与百善”中产出了满额PE-Box，仁慈的祝福拂过整座殖民地，大幅恢复了所有殖民者的精神状态！</LC_OneSin_MaxPeBoxBlessing>
+
 </LanguageData>

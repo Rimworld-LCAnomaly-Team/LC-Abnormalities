@@ -4,7 +4,7 @@
   <ThingDef Name="Accessory_OneSin" ParentName="LC_Apparel_AccessoryBase">
     <defName>Accessory_OneSin</defName>
     <label>Accessory (OneSin)</label>
-    <description>.</description>
+    <description>A small crown of woven thorns worn upon the head.\nThough its prick faintly stings, it calms troubled thoughts and anchors the wearer's mind.</description>
     <thingCategories>
       <li>LC_Apparel_Accessory_EGO</li>
     </thingCategories>

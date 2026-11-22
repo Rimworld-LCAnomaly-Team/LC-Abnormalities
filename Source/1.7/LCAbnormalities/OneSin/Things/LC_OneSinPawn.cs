@@ -1,4 +1,5 @@
 ﻿using LCAnomalyCore.Comp;
+using OneSin.Comp;
 
 namespace OneSin.Things
 {
@@ -7,11 +8,26 @@ namespace OneSin.Things
     /// </summary>
     public class LC_OneSinPawn : LC_EntityBasePawn
     {
+        protected override void Tick()
+        {
+            // 收容状态下脱离收容平台落地即消散化蛋
+            if (Spawned && CarriedBy == null)
+            {
+                GetComp<CompOneSin>()?.Notify_Escaped();
+                return;
+            }
+
+            base.Tick();
+        }
+
         /// <inheritdoc />
         public override void TickHolded()
         {
-            if (Drawer.renderer.CurAnimation != Def.AnimationDefOf.OneSin_Idle)
+            base.TickHolded();
+            if (Drawer?.renderer != null && Drawer.renderer.CurAnimation != Def.AnimationDefOf.OneSin_Idle)
+            {
                 Drawer.renderer.SetAnimation(Def.AnimationDefOf.OneSin_Idle);
+            }
         }
     }
 }

@@ -4,7 +4,7 @@
   <ThingDef Name="Apparel_OneSinSuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_OneSinSuit</defName>
     <label>E.G.O.Suit (OneSin)</label>
-    <description>Conventional firearms were ineffective against Abnormalities; using them was as futile as cutting water with a knife.\nThat was when we asked ourselves: “If Abnormalities are materialized from the unconsciousness, it may be possible to extract a piece of it back from them and turn it into a weapon.\n\nResults varied depending on the observer.\nThe crown of thorns will sometimes protect the wielder’s soul. The thorns may momentarily hurt as they anchor your soul to reality.\n\nThis suit will be no better than rags to those who have no sense of guilt.</description>
+    <description>Conventional firearms were ineffective against Abnormalities; using them was as futile as cutting water with a knife.\nThat was when we asked ourselves: “If Abnormalities are materialized from the unconsciousness, it may be possible to extract a piece of it back from them and turn it into a weapon.”\n\nResults varied depending on the observer.\nThe crown of thorns will sometimes protect the wielder’s soul. The thorns may momentarily hurt as they anchor your soul to reality.\n\nThis suit will be no better than rags to those who have no sense of guilt.</description>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/OneSinSuit/OneSinSuit</texPath>
     </graphicData>
