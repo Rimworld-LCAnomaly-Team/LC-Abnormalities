@@ -22,7 +22,19 @@ namespace BurrowingHeaven.Things
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            SetIdleAnimation();
+            if (SelfEntityComp != null && SelfEntityComp.Escaped)
+            {
+                SetBreachAnimation();
+            }
+            else
+            {
+                SetIdleAnimation();
+            }
+
+            if (respawningAfterLoad && SelfEntityComp?.HangingHeadCount > 0)
+            {
+                Drawer?.renderer?.SetAllGraphicsDirty();
+            }
         }
 
         public bool IsOutsidePlayerCamera()
@@ -52,6 +64,14 @@ namespace BurrowingHeaven.Things
             if (attackAnimTicksRemaining <= 0)
             {
                 SetAnimationIfNeeded(Def.AnimationDefOf.BurrowingHeaven_Work);
+            }
+        }
+
+        public void SetBreachAnimation()
+        {
+            if (attackAnimTicksRemaining <= 0)
+            {
+                SetAnimationIfNeeded(Def.AnimationDefOf.BurrowingHeaven_Breach);
             }
         }
 
@@ -93,10 +113,26 @@ namespace BurrowingHeaven.Things
                 attackAnimTicksRemaining--;
                 if (attackAnimTicksRemaining == 0)
                 {
-                    SetIdleAnimation();
+                    ResumeBaselineAnimation();
                 }
             }
             else if (Drawer.renderer.CurAnimation == null)
+            {
+                ResumeBaselineAnimation();
+            }
+        }
+
+        private void ResumeBaselineAnimation()
+        {
+            if (SelfEntityComp != null && SelfEntityComp.Escaped)
+            {
+                SetBreachAnimation();
+            }
+            else if (SelfEntityComp != null && SelfEntityComp.IsBeingStudiedNow)
+            {
+                SetWorkAnimation();
+            }
+            else
             {
                 SetIdleAnimation();
             }

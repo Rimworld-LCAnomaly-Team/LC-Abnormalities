@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="Accessory_BurrowingHeaven" ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_BurrowingHeaven</defName>
+    <label>Accessory (Heaven)</label>
+    <description>A jagged crown of crimson thorns and unblinking amber eyes braided into the wearer's hair.\nThe tiny eyes mirror whatever the wearer gazes upon, sharpening their focus while demanding vigilance.</description>
+    <thingCategories>
+      <li>LC_Apparel_Accessory_EGO</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/BurrowingHeavenAccessory</texPath>
+    </graphicData>
+    <statBases>
+      <Beauty>3</Beauty>
+    </statBases>
+    <apparel>
+      <layers>
+        <li>LC_AccessoryHead</li>
+      </layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/BurrowingHeavenAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <LC_AbnormalityStudyRate>0.08</LC_AbnormalityStudyRate>
+      <MentalBreakThreshold>-0.04</MentalBreakThreshold>
+      <MeleeHitChance>1.00</MeleeHitChance>
+    </equippedStatOffsets>
+    <tradeTags>
+      <li>LC_Apparel_Accessory</li>
+    </tradeTags>
+  </ThingDef>
+
+</Defs>

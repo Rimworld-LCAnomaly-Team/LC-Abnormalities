@@ -1,0 +1,14 @@
+{
+  "TextureModID": "darthcy.lc.abnormalities",
+  "ItemDefName": "EgoWeapon_BurrowingHeaven",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.25,
+  "OffY": -0.05,
+  "ScaleX": 2.3,
+  "ScaleY": 2.3,
+  "HandsMode": 2,
+  "BladeStart": 0.55,
+  "BladeEnd": 1.25,
+  "MeleeWeaponType": 7
+}

@@ -8,6 +8,7 @@ namespace BurrowingHeaven.Def
     {
         public static AnimationDef BurrowingHeaven_Idle;
         public static AnimationDef BurrowingHeaven_Work;
+        public static AnimationDef BurrowingHeaven_Breach;
         public static AnimationDef BurrowingHeaven_Attack;
 
         static AnimationDefOf()

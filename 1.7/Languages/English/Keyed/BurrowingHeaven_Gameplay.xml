@@ -11,5 +11,7 @@
   <LC_BurrowingHeaven_SightStatusWatched>Observation: Watched (Safe)</LC_BurrowingHeaven_SightStatusWatched>
   <LC_BurrowingHeaven_SightStatusUnwatched>Observation: Unwatched (DANGER!)</LC_BurrowingHeaven_SightStatusUnwatched>
   <LC_BurrowingHeaven_SightStatusIdle>Observation: Dormant</LC_BurrowingHeaven_SightStatusIdle>
+  <LC_BurrowingHeaven_VictimImpaled>{0} was decapitated by The Burrowing Heaven and hung upon its branches!</LC_BurrowingHeaven_VictimImpaled>
+  <LC_BurrowingHeaven_HangingHeads>Hanging heads ({0}/{1}): {2}</LC_BurrowingHeaven_HangingHeads>
 
 </LanguageData>

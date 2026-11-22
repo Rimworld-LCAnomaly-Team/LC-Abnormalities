@@ -95,12 +95,12 @@
         <boxTexOffsetZ>0.0742</boxTexOffsetZ>
         <amountProdueRangeNormal>6~12</amountProdueRangeNormal>
       </li>
-      <!-- <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
+      <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
         <accessoryDef>Accessory_BurrowingHeaven</accessoryDef>
         <accessoryChance>0.03</accessoryChance>
         <unlockLevel>2</unlockLevel>
-      </li> -->
-      <!-- <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
         <weaponExtracted>EgoWeapon_BurrowingHeaven</weaponExtracted>
         <weaponIconPath>UI/Commands/ExtractEGO_BurrowingHeaven_Weapon</weaponIconPath>
         <amountMaxWeapon>3</amountMaxWeapon>
@@ -110,7 +110,7 @@
         <amountMaxArmor>2</amountMaxArmor>
         <armorExtractedNeed>50</armorExtractedNeed>
         <unlockLevel>3</unlockLevel>
-      </li> -->
+      </li>
       <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
         <studyNotes>
           <li>

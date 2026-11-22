@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_BaseMeleeWeapon_EGO">
+    <defName>EgoWeapon_BurrowingHeaven</defName>
+    <label>E.G.O. Weapon (Heaven)</label>
+    <description>The Burrowing Heaven's form is warped into a twin-pronged crimson spear veined like living tendrils.\nThose who grip it feel an unsettling compulsion to never take their eyes off their target.\n"Your attention itself feeds the roots that pierce the sky."</description>
+    <thingClass>ThingWithComps</thingClass>
+    <weaponClasses>
+      <li>MeleePiercer</li>
+    </weaponClasses>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/EgoWeapon_BurrowingHeaven</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.3, 2.3)</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>2.5</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>shaft</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.4</cooldownTime>
+      </li>
+      <li>
+        <label>twin prongs</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>28</power>
+        <armorPenetration>0.42</armorPenetration>
+        <cooldownTime>1.65</cooldownTime>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Red</damageType>
+        <riskLevel>WAW</riskLevel>
+        <damageMultiplier>1</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

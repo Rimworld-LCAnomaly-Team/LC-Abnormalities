@@ -4,6 +4,7 @@ using LCAnomalyCore.Comp.Pawns;
 using LCAnomalyCore.Util;
 using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -24,9 +25,36 @@ namespace BurrowingHeaven.Comp
         private bool hasTriggeredWorkDropThisSession = false;
         private Pawn currentStudier = null;
 
+        public const int MaxHangingHeadSlots = 6;
+        private static readonly float[] DefaultSlotTiltAngles = { -18f, 16f, 22f, -20f, 12f, -14f };
+
         private int unmonitoredBreachTicks = 0;
         private int unmonitoredBreachStacks = 0;
         private int watchedAttackCooldown = 60;
+
+        private List<HangingHeadRecord> hangingHeads = new List<HangingHeadRecord>();
+        private int nextHangingHeadSlot = 0;
+
+        public int HangingHeadCount => hangingHeads?.Count ?? 0;
+
+        public bool IsBeingStudiedNow =>
+            lastStudyingTick >= 0
+            && Find.TickManager != null
+            && Find.TickManager.TicksGame - lastStudyingTick <= 5
+            && !Escaped;
+
+        public HangingHeadRecord GetHangingHead(int slotIndex)
+        {
+            if (hangingHeads == null)
+                return null;
+
+            for (int i = 0; i < hangingHeads.Count; i++)
+            {
+                if (hangingHeads[i] != null && hangingHeads[i].slotIndex == slotIndex)
+                    return hangingHeads[i];
+            }
+            return null;
+        }
 
         #endregion 变量
 
@@ -52,6 +80,7 @@ namespace BurrowingHeaven.Comp
             if (SelfPawn != null)
             {
                 SelfPawn.ShouldCheckInsight = true;
+                SelfPawn.SetBreachAnimation();
             }
 
             unmonitoredBreachTicks = 0;
@@ -319,15 +348,87 @@ namespace BurrowingHeaven.Comp
             if (target == null || target.Dead || !target.Spawned)
                 return;
 
+            bool wasAliveHumanlike = target.RaceProps != null && target.RaceProps.Humanlike;
+            IntVec3 deathPos = target.PositionHeld;
+            Map deathMap = target.MapHeld;
+            HangingHeadRecord preSnapshot = wasAliveHumanlike
+                ? HangingHeadRecord.CreateFrom(target, -1, 0f)
+                : null;
+
             DamageDef blackDamage = Def.DamageDefOf.LC_BurrowingHeaven_BlackDamage ?? LCAnomalyCore.Defs.DamageDefOf.LC_BlackDamage;
             DamageInfo dinfo = new DamageInfo(blackDamage, damageAmount, instigator: SelfPawn);
-            AbnormalityUtility.Burst(target.PositionHeld, target.MapHeld);
+            AbnormalityUtility.Burst(deathPos, deathMap);
             target.TakeDamage(dinfo);
 
             if (applyStun && !target.Dead)
             {
                 DamageInfo stunDinfo = new DamageInfo(RimWorld.DamageDefOf.Stun, 1f, instigator: SelfPawn);
                 target.TakeDamage(stunDinfo);
+            }
+
+            if (wasAliveHumanlike && target.Dead && preSnapshot != null)
+            {
+                HandleHumanlikeKill(target, preSnapshot, deathPos, deathMap, dinfo);
+            }
+        }
+
+        private void HandleHumanlikeKill(Pawn victim, HangingHeadRecord snapshot, IntVec3 deathPos, Map deathMap, DamageInfo killDinfo)
+        {
+            DecapitateVictim(victim, killDinfo);
+
+            if (hangingHeads == null)
+                hangingHeads = new List<HangingHeadRecord>();
+
+            int slot = nextHangingHeadSlot % MaxHangingHeadSlots;
+            nextHangingHeadSlot = (slot + 1) % MaxHangingHeadSlots;
+
+            snapshot.slotIndex = slot;
+            snapshot.tiltAngle = DefaultSlotTiltAngles[slot] + Rand.Range(-6f, 6f);
+
+            int existingIdx = hangingHeads.FindIndex(r => r != null && r.slotIndex == slot);
+            if (existingIdx >= 0)
+            {
+                hangingHeads[existingIdx] = snapshot;
+            }
+            else
+            {
+                hangingHeads.Add(snapshot);
+            }
+
+            SelfPawn?.Drawer?.renderer?.SetAllGraphicsDirty();
+
+            if (deathMap != null && deathPos.InBounds(deathMap))
+            {
+                FilthMaker.TryMakeFilth(deathPos, deathMap, RimWorld.ThingDefOf.Filth_Blood, victim.LabelShort, 4);
+                ThingDef killTreeDef = Def.ThingDefOf.BurrowingHeaven_KillTree;
+                if (killTreeDef != null && deathPos.GetFirstThing(deathMap, killTreeDef) == null)
+                {
+                    GenSpawn.Spawn(killTreeDef, deathPos, deathMap);
+                }
+            }
+
+            Messages.Message(
+                "LC_BurrowingHeaven_VictimImpaled".Translate(snapshot.victimName),
+                new LookTargets(parent.PositionHeld, parent.MapHeld),
+                MessageTypeDefOf.NegativeEvent,
+                historical: true);
+        }
+
+        private static void DecapitateVictim(Pawn victim, DamageInfo killDinfo)
+        {
+            BodyPartRecord headPart = victim?.health?.hediffSet?
+                .GetNotMissingParts()
+                .FirstOrDefault(p => p.def == RimWorld.BodyPartDefOf.Head);
+
+            if (headPart == null)
+                return;
+
+            if (HediffMaker.MakeHediff(RimWorld.HediffDefOf.MissingBodyPart, victim, headPart) is Hediff_MissingPart missingHead)
+            {
+                missingHead.lastInjury = RimWorld.HediffDefOf.Cut;
+                missingHead.IsFresh = true;
+                victim.health.AddHediff(missingHead, headPart, killDinfo);
+                victim.Drawer?.renderer?.SetAllGraphicsDirty();
             }
         }
 
@@ -479,6 +580,14 @@ namespace BurrowingHeaven.Comp
             Scribe_Values.Look(ref unmonitoredBreachTicks, "unmonitoredBreachTicks", 0);
             Scribe_Values.Look(ref unmonitoredBreachStacks, "unmonitoredBreachStacks", 0);
             Scribe_Values.Look(ref watchedAttackCooldown, "watchedAttackCooldown", 60);
+
+            Scribe_Collections.Look(ref hangingHeads, "hangingHeads", LookMode.Deep);
+            Scribe_Values.Look(ref nextHangingHeadSlot, "nextHangingHeadSlot", 0);
+
+            if (Scribe.mode == LoadSaveMode.PostLoadInit && hangingHeads == null)
+            {
+                hangingHeads = new List<HangingHeadRecord>();
+            }
         }
 
         public override string CompInspectStringExtra()
@@ -489,7 +598,13 @@ namespace BurrowingHeaven.Comp
                     : "LC_BurrowingHeaven_SightStatusWatched".Translate())
                 : "LC_BurrowingHeaven_SightStatusIdle".Translate();
 
-            return "LC_BurrowingHeaven_Biosignature".Translate() + ": " + BiosignatureName + "\n" + status;
+            string result = "LC_BurrowingHeaven_Biosignature".Translate() + ": " + BiosignatureName + "\n" + status;
+            if (hangingHeads != null && hangingHeads.Count > 0)
+            {
+                string names = string.Join(", ", hangingHeads.Where(h => h != null).Select(h => h.victimName));
+                result += "\n" + "LC_BurrowingHeaven_HangingHeads".Translate(hangingHeads.Count, MaxHangingHeadSlots, names);
+            }
+            return result;
         }
 
         #endregion 持久化与UI

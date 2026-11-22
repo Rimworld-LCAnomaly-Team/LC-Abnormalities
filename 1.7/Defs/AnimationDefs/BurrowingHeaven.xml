@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- Idle: slow eerie wing sway and subtle iris drift -->
+  <!-- Idle: Spine Default (180t = 3.0s) calibrated asymmetric branch sway + eye pulse -->
   <AnimationDef>
     <defName>BurrowingHeaven_Idle</defName>
-    <durationTicks>120</durationTicks>
+    <durationTicks>180</durationTicks>
     <startOnRandomTick>true</startOnRandomTick>
     <playWhenDowned>true</playWhenDowned>
     <keyframeParts>
@@ -12,10 +12,11 @@
         <key>BurrowingHeaven_body_main</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.43, -0.42)</pivot>
           <keyframes>
-            <li><tick>0</tick><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
-            <li><tick>60</tick><offset>(0,0,0.03)</offset><scale>(1.02,1,1.02)</scale></li>
-            <li><tick>120</tick><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
+            <li><tick>0</tick><scale>(1,1,1)</scale></li>
+            <li><tick>90</tick><scale>(1.015,1,1.03)</scale></li>
+            <li><tick>180</tick><scale>(1,1,1)</scale></li>
           </keyframes>
         </value>
       </li>
@@ -23,10 +24,11 @@
         <key>BurrowingHeaven_body_front_l</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.25, 1.36)</pivot>
           <keyframes>
-            <li><tick>0</tick><angle>0</angle><offset>(0,0,0)</offset></li>
-            <li><tick>60</tick><angle>-3.5</angle><offset>(-0.02,0,0.02)</offset></li>
-            <li><tick>120</tick><angle>0</angle><offset>(0,0,0)</offset></li>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>80</tick><angle>-4.51</angle></li>
+            <li><tick>180</tick><angle>0</angle></li>
           </keyframes>
         </value>
       </li>
@@ -34,10 +36,11 @@
         <key>BurrowingHeaven_body_front_r</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.57, 1.36)</pivot>
           <keyframes>
-            <li><tick>0</tick><angle>0</angle><offset>(0,0,0)</offset></li>
-            <li><tick>60</tick><angle>3.5</angle><offset>(0.02,0,0.02)</offset></li>
-            <li><tick>120</tick><angle>0</angle><offset>(0,0,0)</offset></li>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>80</tick><angle>1.95</angle></li>
+            <li><tick>180</tick><angle>0</angle></li>
           </keyframes>
         </value>
       </li>
@@ -45,10 +48,11 @@
         <key>BurrowingHeaven_body_back_l</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.30, 1.49)</pivot>
           <keyframes>
-            <li><tick>0</tick><angle>0</angle><offset>(0,0,0)</offset></li>
-            <li><tick>60</tick><angle>2.5</angle><offset>(-0.015,0,-0.015)</offset></li>
-            <li><tick>120</tick><angle>0</angle><offset>(0,0,0)</offset></li>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>90</tick><angle>3.2</angle></li>
+            <li><tick>180</tick><angle>0</angle></li>
           </keyframes>
         </value>
       </li>
@@ -56,10 +60,11 @@
         <key>BurrowingHeaven_body_back_r</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.59, 1.40)</pivot>
           <keyframes>
-            <li><tick>0</tick><angle>0</angle><offset>(0,0,0)</offset></li>
-            <li><tick>60</tick><angle>-2.5</angle><offset>(0.015,0,-0.015)</offset></li>
-            <li><tick>120</tick><angle>0</angle><offset>(0,0,0)</offset></li>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>90</tick><angle>-2.8</angle></li>
+            <li><tick>180</tick><angle>0</angle></li>
           </keyframes>
         </value>
       </li>
@@ -67,10 +72,11 @@
         <key>BurrowingHeaven_eye_main_bottom</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.40, 1.35)</pivot>
           <keyframes>
-            <li><tick>0</tick><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
-            <li><tick>60</tick><offset>(0,0,0.02)</offset><scale>(1.03,1,1.03)</scale></li>
-            <li><tick>120</tick><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
+            <li><tick>0</tick><scale>(1,1,1)</scale></li>
+            <li><tick>90</tick><scale>(1.15,1,1.15)</scale></li>
+            <li><tick>180</tick><scale>(1,1,1)</scale></li>
           </keyframes>
         </value>
       </li>
@@ -78,11 +84,12 @@
         <key>BurrowingHeaven_eye_main_middle</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.40, 1.35)</pivot>
           <keyframes>
             <li><tick>0</tick><offset>(0,0,0)</offset></li>
-            <li><tick>30</tick><offset>(-0.02,0,0.01)</offset></li>
-            <li><tick>90</tick><offset>(0.02,0,-0.01)</offset></li>
-            <li><tick>120</tick><offset>(0,0,0)</offset></li>
+            <li><tick>45</tick><offset>(-0.02,0,0.012)</offset></li>
+            <li><tick>135</tick><offset>(0.02,0,-0.01)</offset></li>
+            <li><tick>180</tick><offset>(0,0,0)</offset></li>
           </keyframes>
         </value>
       </li>
@@ -90,18 +97,20 @@
         <key>BurrowingHeaven_eye_main_top</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.40, 1.35)</pivot>
           <keyframes>
             <li><tick>0</tick><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
-            <li><tick>30</tick><offset>(-0.03,0,0.015)</offset><scale>(1.05,1,1.05)</scale></li>
-            <li><tick>90</tick><offset>(0.03,0,-0.015)</offset><scale>(0.96,1,0.96)</scale></li>
-            <li><tick>120</tick><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
+            <li><tick>45</tick><offset>(-0.015,0,0.01)</offset><scale>(1.08,1,1.08)</scale></li>
+            <li><tick>90</tick><offset>(0,0,0)</offset><scale>(1.18,1,1.18)</scale></li>
+            <li><tick>135</tick><offset>(0.015,0,-0.008)</offset><scale>(1.05,1,1.05)</scale></li>
+            <li><tick>180</tick><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
           </keyframes>
         </value>
       </li>
     </keyframeParts>
   </AnimationDef>
 
-  <!-- Work: tense faster branch sway and rapid eye tracking oscillation -->
+  <!-- Work: tense faster branch sway and nervous eye tracking -->
   <AnimationDef>
     <defName>BurrowingHeaven_Work</defName>
     <durationTicks>90</durationTicks>
@@ -112,12 +121,13 @@
         <key>BurrowingHeaven_body_main</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.43, -0.42)</pivot>
           <keyframes>
-            <li><tick>0</tick><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
-            <li><tick>22</tick><offset>(0,0,0.04)</offset><scale>(1.04,1,1.04)</scale></li>
-            <li><tick>45</tick><offset>(0,0,0)</offset><scale>(0.98,1,0.98)</scale></li>
-            <li><tick>67</tick><offset>(0,0,0.04)</offset><scale>(1.04,1,1.04)</scale></li>
-            <li><tick>90</tick><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
+            <li><tick>0</tick><scale>(1,1,1)</scale></li>
+            <li><tick>22</tick><scale>(1.03,1,1.05)</scale></li>
+            <li><tick>45</tick><scale>(0.98,1,0.99)</scale></li>
+            <li><tick>67</tick><scale>(1.03,1,1.05)</scale></li>
+            <li><tick>90</tick><scale>(1,1,1)</scale></li>
           </keyframes>
         </value>
       </li>
@@ -125,11 +135,12 @@
         <key>BurrowingHeaven_body_front_l</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.25, 1.36)</pivot>
           <keyframes>
             <li><tick>0</tick><angle>0</angle></li>
-            <li><tick>22</tick><angle>-6</angle></li>
-            <li><tick>45</tick><angle>2</angle></li>
-            <li><tick>67</tick><angle>-5</angle></li>
+            <li><tick>22</tick><angle>-8.5</angle></li>
+            <li><tick>45</tick><angle>3.0</angle></li>
+            <li><tick>67</tick><angle>-7.0</angle></li>
             <li><tick>90</tick><angle>0</angle></li>
           </keyframes>
         </value>
@@ -138,11 +149,12 @@
         <key>BurrowingHeaven_body_front_r</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.57, 1.36)</pivot>
           <keyframes>
             <li><tick>0</tick><angle>0</angle></li>
-            <li><tick>22</tick><angle>6</angle></li>
-            <li><tick>45</tick><angle>-2</angle></li>
-            <li><tick>67</tick><angle>5</angle></li>
+            <li><tick>22</tick><angle>7.5</angle></li>
+            <li><tick>45</tick><angle>-2.5</angle></li>
+            <li><tick>67</tick><angle>6.0</angle></li>
             <li><tick>90</tick><angle>0</angle></li>
           </keyframes>
         </value>
@@ -151,10 +163,11 @@
         <key>BurrowingHeaven_body_back_l</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.30, 1.49)</pivot>
           <keyframes>
             <li><tick>0</tick><angle>0</angle></li>
-            <li><tick>30</tick><angle>5</angle></li>
-            <li><tick>60</tick><angle>-3</angle></li>
+            <li><tick>30</tick><angle>6.5</angle></li>
+            <li><tick>60</tick><angle>-4.0</angle></li>
             <li><tick>90</tick><angle>0</angle></li>
           </keyframes>
         </value>
@@ -163,10 +176,11 @@
         <key>BurrowingHeaven_body_back_r</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.59, 1.40)</pivot>
           <keyframes>
             <li><tick>0</tick><angle>0</angle></li>
-            <li><tick>30</tick><angle>-5</angle></li>
-            <li><tick>60</tick><angle>3</angle></li>
+            <li><tick>30</tick><angle>-6.5</angle></li>
+            <li><tick>60</tick><angle>4.0</angle></li>
             <li><tick>90</tick><angle>0</angle></li>
           </keyframes>
         </value>
@@ -175,9 +189,10 @@
         <key>BurrowingHeaven_eye_main_bottom</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.40, 1.35)</pivot>
           <keyframes>
             <li><tick>0</tick><scale>(1,1,1)</scale></li>
-            <li><tick>45</tick><scale>(1.08,1,1.08)</scale></li>
+            <li><tick>45</tick><scale>(1.24,1,1.24)</scale></li>
             <li><tick>90</tick><scale>(1,1,1)</scale></li>
           </keyframes>
         </value>
@@ -186,6 +201,7 @@
         <key>BurrowingHeaven_eye_main_middle</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.40, 1.35)</pivot>
           <keyframes>
             <li><tick>0</tick><offset>(0,0,0)</offset></li>
             <li><tick>15</tick><offset>(-0.04,0,0.02)</offset></li>
@@ -201,13 +217,14 @@
         <key>BurrowingHeaven_eye_main_top</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.40, 1.35)</pivot>
           <keyframes>
             <li><tick>0</tick><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
-            <li><tick>15</tick><offset>(-0.05,0,0.025)</offset><scale>(1.1,1,1.1)</scale></li>
+            <li><tick>15</tick><offset>(-0.05,0,0.025)</offset><scale>(1.14,1,1.14)</scale></li>
             <li><tick>30</tick><offset>(0.05,0,0.025)</offset><scale>(0.92,1,0.92)</scale></li>
-            <li><tick>45</tick><offset>(0,0,-0.035)</offset><scale>(1.12,1,1.12)</scale></li>
-            <li><tick>60</tick><offset>(-0.04,0,-0.025)</offset><scale>(0.95,1,0.95)</scale></li>
-            <li><tick>75</tick><offset>(0.04,0,0.015)</offset><scale>(1.08,1,1.08)</scale></li>
+            <li><tick>45</tick><offset>(0,0,-0.035)</offset><scale>(1.22,1,1.22)</scale></li>
+            <li><tick>60</tick><offset>(-0.04,0,-0.025)</offset><scale>(0.96,1,0.96)</scale></li>
+            <li><tick>75</tick><offset>(0.04,0,0.015)</offset><scale>(1.10,1,1.10)</scale></li>
             <li><tick>90</tick><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
           </keyframes>
         </value>
@@ -215,7 +232,115 @@
     </keyframeParts>
   </AnimationDef>
 
-  <!-- Attack: sharp outward branch thrust and eye scale pulse -->
+  <!-- Breach: Spine Change-inspired wide menacing flare posture during containment breach -->
+  <AnimationDef>
+    <defName>BurrowingHeaven_Breach</defName>
+    <durationTicks>180</durationTicks>
+    <startOnRandomTick>false</startOnRandomTick>
+    <playWhenDowned>false</playWhenDowned>
+    <keyframeParts>
+      <li>
+        <key>BurrowingHeaven_body_main</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.43, -0.42)</pivot>
+          <keyframes>
+            <li><tick>0</tick><scale>(1.04,1,1.06)</scale></li>
+            <li><tick>90</tick><scale>(1.09,1,1.12)</scale></li>
+            <li><tick>180</tick><scale>(1.04,1,1.06)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BurrowingHeaven_body_front_l</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.25, 1.36)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-14</angle><offset>(-0.06,0,0.04)</offset><scale>(1.08,1,1.08)</scale></li>
+            <li><tick>90</tick><angle>-22</angle><offset>(-0.10,0,0.07)</offset><scale>(1.14,1,1.14)</scale></li>
+            <li><tick>180</tick><angle>-14</angle><offset>(-0.06,0,0.04)</offset><scale>(1.08,1,1.08)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BurrowingHeaven_body_front_r</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.57, 1.36)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>14</angle><offset>(0.06,0,0.04)</offset><scale>(1.08,1,1.08)</scale></li>
+            <li><tick>90</tick><angle>22</angle><offset>(0.10,0,0.07)</offset><scale>(1.14,1,1.14)</scale></li>
+            <li><tick>180</tick><angle>14</angle><offset>(0.06,0,0.04)</offset><scale>(1.08,1,1.08)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BurrowingHeaven_body_back_l</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.30, 1.49)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>16</angle><offset>(-0.08,0,-0.04)</offset><scale>(1.10,1,1.10)</scale></li>
+            <li><tick>90</tick><angle>24</angle><offset>(-0.14,0,-0.08)</offset><scale>(1.18,1,1.18)</scale></li>
+            <li><tick>180</tick><angle>16</angle><offset>(-0.08,0,-0.04)</offset><scale>(1.10,1,1.10)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BurrowingHeaven_body_back_r</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.59, 1.40)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-16</angle><offset>(0.08,0,-0.04)</offset><scale>(1.10,1,1.10)</scale></li>
+            <li><tick>90</tick><angle>-24</angle><offset>(0.14,0,-0.08)</offset><scale>(1.18,1,1.18)</scale></li>
+            <li><tick>180</tick><angle>-16</angle><offset>(0.08,0,-0.04)</offset><scale>(1.10,1,1.10)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BurrowingHeaven_eye_main_bottom</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.40, 1.35)</pivot>
+          <keyframes>
+            <li><tick>0</tick><scale>(1.18,1,1.18)</scale></li>
+            <li><tick>90</tick><scale>(1.36,1,1.36)</scale></li>
+            <li><tick>180</tick><scale>(1.18,1,1.18)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BurrowingHeaven_eye_main_middle</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.40, 1.35)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><scale>(1.10,1,1.10)</scale></li>
+            <li><tick>45</tick><offset>(-0.04,0,0.02)</offset><scale>(1.20,1,1.20)</scale></li>
+            <li><tick>90</tick><offset>(0,0,-0.02)</offset><scale>(1.28,1,1.28)</scale></li>
+            <li><tick>135</tick><offset>(0.04,0,0.02)</offset><scale>(1.20,1,1.20)</scale></li>
+            <li><tick>180</tick><offset>(0,0,0)</offset><scale>(1.10,1,1.10)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BurrowingHeaven_eye_main_top</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.40, 1.35)</pivot>
+          <keyframes>
+            <li><tick>0</tick><scale>(1.18,1,1.18)</scale></li>
+            <li><tick>90</tick><scale>(1.42,1,1.42)</scale></li>
+            <li><tick>180</tick><scale>(1.18,1,1.18)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- Attack: sharp recoil and outward impaling flare -->
   <AnimationDef>
     <defName>BurrowingHeaven_Attack</defName>
     <durationTicks>36</durationTicks>
@@ -226,11 +351,12 @@
         <key>BurrowingHeaven_body_main</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.43, -0.42)</pivot>
           <keyframes>
             <li><tick>0</tick><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
-            <li><tick>8</tick><offset>(0,0,-0.06)</offset><scale>(0.92,1,0.92)</scale></li>
-            <li><tick>14</tick><offset>(0,0,0.12)</offset><scale>(1.15,1,1.15)</scale></li>
-            <li><tick>24</tick><offset>(0,0,0.05)</offset><scale>(1.05,1,1.05)</scale></li>
+            <li><tick>8</tick><offset>(0,0,-0.04)</offset><scale>(0.94,1,0.92)</scale></li>
+            <li><tick>14</tick><offset>(0,0,0.10)</offset><scale>(1.14,1,1.18)</scale></li>
+            <li><tick>24</tick><offset>(0,0,0.04)</offset><scale>(1.05,1,1.06)</scale></li>
             <li><tick>36</tick><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
           </keyframes>
         </value>
@@ -239,11 +365,12 @@
         <key>BurrowingHeaven_body_front_l</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.25, 1.36)</pivot>
           <keyframes>
             <li><tick>0</tick><angle>0</angle><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
-            <li><tick>8</tick><angle>8</angle><offset>(0.04,0,-0.03)</offset><scale>(0.95,1,0.95)</scale></li>
-            <li><tick>14</tick><angle>-16</angle><offset>(-0.14,0,0.08)</offset><scale>(1.18,1,1.18)</scale></li>
-            <li><tick>26</tick><angle>-6</angle><offset>(-0.05,0,0.03)</offset><scale>(1.06,1,1.06)</scale></li>
+            <li><tick>8</tick><angle>12</angle><offset>(0.04,0,-0.03)</offset><scale>(0.94,1,0.94)</scale></li>
+            <li><tick>14</tick><angle>-26</angle><offset>(-0.16,0,0.10)</offset><scale>(1.22,1,1.22)</scale></li>
+            <li><tick>26</tick><angle>-10</angle><offset>(-0.06,0,0.04)</offset><scale>(1.08,1,1.08)</scale></li>
             <li><tick>36</tick><angle>0</angle><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
           </keyframes>
         </value>
@@ -252,11 +379,12 @@
         <key>BurrowingHeaven_body_front_r</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.57, 1.36)</pivot>
           <keyframes>
             <li><tick>0</tick><angle>0</angle><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
-            <li><tick>8</tick><angle>-8</angle><offset>(-0.04,0,-0.03)</offset><scale>(0.95,1,0.95)</scale></li>
-            <li><tick>14</tick><angle>16</angle><offset>(0.14,0,0.08)</offset><scale>(1.18,1,1.18)</scale></li>
-            <li><tick>26</tick><angle>6</angle><offset>(0.05,0,0.03)</offset><scale>(1.06,1,1.06)</scale></li>
+            <li><tick>8</tick><angle>-12</angle><offset>(-0.04,0,-0.03)</offset><scale>(0.94,1,0.94)</scale></li>
+            <li><tick>14</tick><angle>26</angle><offset>(0.16,0,0.10)</offset><scale>(1.22,1,1.22)</scale></li>
+            <li><tick>26</tick><angle>10</angle><offset>(0.06,0,0.04)</offset><scale>(1.08,1,1.08)</scale></li>
             <li><tick>36</tick><angle>0</angle><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
           </keyframes>
         </value>
@@ -265,11 +393,12 @@
         <key>BurrowingHeaven_body_back_l</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.30, 1.49)</pivot>
           <keyframes>
-            <li><tick>0</tick><angle>0</angle><offset>(0,0,0)</offset></li>
-            <li><tick>8</tick><angle>-6</angle><offset>(0.03,0,0.02)</offset></li>
-            <li><tick>14</tick><angle>14</angle><offset>(-0.12,0,-0.08)</offset></li>
-            <li><tick>36</tick><angle>0</angle><offset>(0,0,0)</offset></li>
+            <li><tick>0</tick><angle>0</angle><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
+            <li><tick>8</tick><angle>-10</angle><offset>(0.03,0,0.02)</offset><scale>(0.95,1,0.95)</scale></li>
+            <li><tick>14</tick><angle>28</angle><offset>(-0.18,0,-0.10)</offset><scale>(1.24,1,1.24)</scale></li>
+            <li><tick>36</tick><angle>0</angle><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
           </keyframes>
         </value>
       </li>
@@ -277,11 +406,12 @@
         <key>BurrowingHeaven_body_back_r</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.59, 1.40)</pivot>
           <keyframes>
-            <li><tick>0</tick><angle>0</angle><offset>(0,0,0)</offset></li>
-            <li><tick>8</tick><angle>6</angle><offset>(-0.03,0,0.02)</offset></li>
-            <li><tick>14</tick><angle>-14</angle><offset>(0.12,0,-0.08)</offset></li>
-            <li><tick>36</tick><angle>0</angle><offset>(0,0,0)</offset></li>
+            <li><tick>0</tick><angle>0</angle><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
+            <li><tick>8</tick><angle>10</angle><offset>(-0.03,0,0.02)</offset><scale>(0.95,1,0.95)</scale></li>
+            <li><tick>14</tick><angle>-28</angle><offset>(0.18,0,-0.10)</offset><scale>(1.24,1,1.24)</scale></li>
+            <li><tick>36</tick><angle>0</angle><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
           </keyframes>
         </value>
       </li>
@@ -289,9 +419,10 @@
         <key>BurrowingHeaven_eye_main_bottom</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.40, 1.35)</pivot>
           <keyframes>
             <li><tick>0</tick><scale>(1,1,1)</scale></li>
-            <li><tick>14</tick><scale>(1.25,1,1.25)</scale></li>
+            <li><tick>14</tick><scale>(1.38,1,1.38)</scale></li>
             <li><tick>36</tick><scale>(1,1,1)</scale></li>
           </keyframes>
         </value>
@@ -300,9 +431,10 @@
         <key>BurrowingHeaven_eye_main_top</key>
         <value>
           <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.40, 1.35)</pivot>
           <keyframes>
             <li><tick>0</tick><scale>(1,1,1)</scale></li>
-            <li><tick>14</tick><scale>(1.35,1,1.35)</scale></li>
+            <li><tick>14</tick><scale>(1.48,1,1.48)</scale></li>
             <li><tick>36</tick><scale>(1,1,1)</scale></li>
           </keyframes>
         </value>

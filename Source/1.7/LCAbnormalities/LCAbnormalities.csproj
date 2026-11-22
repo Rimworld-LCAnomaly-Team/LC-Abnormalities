@@ -85,6 +85,8 @@
     <Compile Include="BurrowingHeaven\Def\SoundDefOf.cs" />
     <Compile Include="BurrowingHeaven\Def\ThingDefOf.cs" />
     <Compile Include="BurrowingHeaven\Effect\DyingBurrowingHeaven.cs" />
+    <Compile Include="BurrowingHeaven\Render\BurrowingHeavenTrophyHeadRender.cs" />
+    <Compile Include="BurrowingHeaven\Things\HangingHeadRecord.cs" />
     <Compile Include="BurrowingHeaven\Things\LC_BurrowingHeavenPawn.cs" />
     <Compile Include="BurrowingHeaven\Util\EffectUtil.cs" />
 

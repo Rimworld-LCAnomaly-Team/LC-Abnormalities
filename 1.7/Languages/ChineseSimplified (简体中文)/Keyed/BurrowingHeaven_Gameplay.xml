@@ -11,5 +11,7 @@
   <LC_BurrowingHeaven_SightStatusWatched>注视状态：被注视中（安全）</LC_BurrowingHeaven_SightStatusWatched>
   <LC_BurrowingHeaven_SightStatusUnwatched>注视状态：脱离注视（危险！）</LC_BurrowingHeaven_SightStatusUnwatched>
   <LC_BurrowingHeaven_SightStatusIdle>注视状态：休眠中</LC_BurrowingHeaven_SightStatusIdle>
+  <LC_BurrowingHeaven_VictimImpaled>{0}被穿刺乐园斩首并挂在了猩红枝干上！</LC_BurrowingHeaven_VictimImpaled>
+  <LC_BurrowingHeaven_HangingHeads>枝干悬首（{0}/{1}）：{2}</LC_BurrowingHeaven_HangingHeads>
 
 </LanguageData>

@@ -13,6 +13,7 @@
           <useRottenColor>true</useRottenColor>
           <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
           <children>
+            <!-- Central blood-red trunk rooted on the floor -->
             <li Class="LCAnomalyCore.Render.PawnRenderNodeProperties_StillState">
               <debugLabel>BurrowingHeaven_body_main</debugLabel>
               <tagDef>BurrowingHeaven_body_main</tagDef>
@@ -20,10 +21,11 @@
               <useRottenColor>true</useRottenColor>
               <baseLayer>4</baseLayer>
               <offset>0,0</offset>
-              <drawSize>3,3</drawSize>
+              <overrideMeshSize>(4.5, 4.5)</overrideMeshSize>
+              <drawSize>1,1</drawSize>
             </li>
 
-            <!-- body_front_l -->
+            <!-- body_front_l + Trophy slots 0 & 4 (attached to branch pivot transform) -->
             <li Class="LCAnomalyCore.Render.PawnRenderNodeProperties_StillState">
               <debugLabel>BurrowingHeaven_body_front_l</debugLabel>
               <tagDef>BurrowingHeaven_body_front_l</tagDef>
@@ -31,9 +33,71 @@
               <useRottenColor>true</useRottenColor>
               <baseLayer>6</baseLayer>
               <offset>0,0</offset>
-              <drawSize>3,3</drawSize>
+              <overrideMeshSize>(4.5, 4.5)</overrideMeshSize>
+              <drawSize>1,1</drawSize>
+              <children>
+                <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                  <debugLabel>BurrowingHeaven_TrophyHead_Slot0</debugLabel>
+                  <slotIndex>0</slotIndex>
+                  <layerKind>Head</layerKind>
+                  <localOffset>(-1.26, 0, 1.28)</localOffset>
+                  <defaultTiltAngle>-18</defaultTiltAngle>
+                  <headScale>0.80</headScale>
+                  <baseLayer>6.20</baseLayer>
+                  <children>
+                    <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                      <debugLabel>BurrowingHeaven_TrophyBlood_Slot0</debugLabel>
+                      <slotIndex>0</slotIndex>
+                      <layerKind>NeckBlood</layerKind>
+                      <baseLayer>6.22</baseLayer>
+                    </li>
+                    <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                      <debugLabel>BurrowingHeaven_TrophyBeard_Slot0</debugLabel>
+                      <slotIndex>0</slotIndex>
+                      <layerKind>Beard</layerKind>
+                      <baseLayer>6.26</baseLayer>
+                    </li>
+                    <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                      <debugLabel>BurrowingHeaven_TrophyHair_Slot0</debugLabel>
+                      <slotIndex>0</slotIndex>
+                      <layerKind>Hair</layerKind>
+                      <baseLayer>6.30</baseLayer>
+                    </li>
+                  </children>
+                </li>
+                <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                  <debugLabel>BurrowingHeaven_TrophyHead_Slot4</debugLabel>
+                  <slotIndex>4</slotIndex>
+                  <layerKind>Head</layerKind>
+                  <localOffset>(-0.62, 0, 1.48)</localOffset>
+                  <defaultTiltAngle>12</defaultTiltAngle>
+                  <headScale>0.78</headScale>
+                  <baseLayer>6.40</baseLayer>
+                  <children>
+                    <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                      <debugLabel>BurrowingHeaven_TrophyBlood_Slot4</debugLabel>
+                      <slotIndex>4</slotIndex>
+                      <layerKind>NeckBlood</layerKind>
+                      <baseLayer>6.42</baseLayer>
+                    </li>
+                    <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                      <debugLabel>BurrowingHeaven_TrophyBeard_Slot4</debugLabel>
+                      <slotIndex>4</slotIndex>
+                      <layerKind>Beard</layerKind>
+                      <baseLayer>6.46</baseLayer>
+                    </li>
+                    <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                      <debugLabel>BurrowingHeaven_TrophyHair_Slot4</debugLabel>
+                      <slotIndex>4</slotIndex>
+                      <layerKind>Hair</layerKind>
+                      <baseLayer>6.50</baseLayer>
+                    </li>
+                  </children>
+                </li>
+              </children>
             </li>
-            <!-- body_front_r -->
+
+            <!-- body_front_r + Trophy slots 1 & 5 -->
             <li Class="LCAnomalyCore.Render.PawnRenderNodeProperties_StillState">
               <debugLabel>BurrowingHeaven_body_front_r</debugLabel>
               <tagDef>BurrowingHeaven_body_front_r</tagDef>
@@ -41,10 +105,71 @@
               <useRottenColor>true</useRottenColor>
               <baseLayer>6</baseLayer>
               <offset>0,0</offset>
-              <drawSize>3,3</drawSize>
+              <overrideMeshSize>(4.5, 4.5)</overrideMeshSize>
+              <drawSize>1,1</drawSize>
+              <children>
+                <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                  <debugLabel>BurrowingHeaven_TrophyHead_Slot1</debugLabel>
+                  <slotIndex>1</slotIndex>
+                  <layerKind>Head</layerKind>
+                  <localOffset>(1.15, 0, 1.34)</localOffset>
+                  <defaultTiltAngle>16</defaultTiltAngle>
+                  <headScale>0.80</headScale>
+                  <baseLayer>6.20</baseLayer>
+                  <children>
+                    <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                      <debugLabel>BurrowingHeaven_TrophyBlood_Slot1</debugLabel>
+                      <slotIndex>1</slotIndex>
+                      <layerKind>NeckBlood</layerKind>
+                      <baseLayer>6.22</baseLayer>
+                    </li>
+                    <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                      <debugLabel>BurrowingHeaven_TrophyBeard_Slot1</debugLabel>
+                      <slotIndex>1</slotIndex>
+                      <layerKind>Beard</layerKind>
+                      <baseLayer>6.26</baseLayer>
+                    </li>
+                    <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                      <debugLabel>BurrowingHeaven_TrophyHair_Slot1</debugLabel>
+                      <slotIndex>1</slotIndex>
+                      <layerKind>Hair</layerKind>
+                      <baseLayer>6.30</baseLayer>
+                    </li>
+                  </children>
+                </li>
+                <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                  <debugLabel>BurrowingHeaven_TrophyHead_Slot5</debugLabel>
+                  <slotIndex>5</slotIndex>
+                  <layerKind>Head</layerKind>
+                  <localOffset>(0.56, 0, 1.52)</localOffset>
+                  <defaultTiltAngle>-14</defaultTiltAngle>
+                  <headScale>0.78</headScale>
+                  <baseLayer>6.40</baseLayer>
+                  <children>
+                    <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                      <debugLabel>BurrowingHeaven_TrophyBlood_Slot5</debugLabel>
+                      <slotIndex>5</slotIndex>
+                      <layerKind>NeckBlood</layerKind>
+                      <baseLayer>6.42</baseLayer>
+                    </li>
+                    <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                      <debugLabel>BurrowingHeaven_TrophyBeard_Slot5</debugLabel>
+                      <slotIndex>5</slotIndex>
+                      <layerKind>Beard</layerKind>
+                      <baseLayer>6.46</baseLayer>
+                    </li>
+                    <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                      <debugLabel>BurrowingHeaven_TrophyHair_Slot5</debugLabel>
+                      <slotIndex>5</slotIndex>
+                      <layerKind>Hair</layerKind>
+                      <baseLayer>6.50</baseLayer>
+                    </li>
+                  </children>
+                </li>
+              </children>
             </li>
 
-            <!-- body_back_l -->
+            <!-- body_back_l + Trophy slot 2 -->
             <li Class="LCAnomalyCore.Render.PawnRenderNodeProperties_StillState">
               <debugLabel>BurrowingHeaven_body_back_l</debugLabel>
               <tagDef>BurrowingHeaven_body_back_l</tagDef>
@@ -52,9 +177,42 @@
               <useRottenColor>true</useRottenColor>
               <baseLayer>5</baseLayer>
               <offset>0,0</offset>
-              <drawSize>3,3</drawSize>
+              <overrideMeshSize>(4.5, 4.5)</overrideMeshSize>
+              <drawSize>1,1</drawSize>
+              <children>
+                <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                  <debugLabel>BurrowingHeaven_TrophyHead_Slot2</debugLabel>
+                  <slotIndex>2</slotIndex>
+                  <layerKind>Head</layerKind>
+                  <localOffset>(-1.42, 0, -0.26)</localOffset>
+                  <defaultTiltAngle>22</defaultTiltAngle>
+                  <headScale>0.78</headScale>
+                  <baseLayer>5.20</baseLayer>
+                  <children>
+                    <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                      <debugLabel>BurrowingHeaven_TrophyBlood_Slot2</debugLabel>
+                      <slotIndex>2</slotIndex>
+                      <layerKind>NeckBlood</layerKind>
+                      <baseLayer>5.22</baseLayer>
+                    </li>
+                    <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                      <debugLabel>BurrowingHeaven_TrophyBeard_Slot2</debugLabel>
+                      <slotIndex>2</slotIndex>
+                      <layerKind>Beard</layerKind>
+                      <baseLayer>5.26</baseLayer>
+                    </li>
+                    <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                      <debugLabel>BurrowingHeaven_TrophyHair_Slot2</debugLabel>
+                      <slotIndex>2</slotIndex>
+                      <layerKind>Hair</layerKind>
+                      <baseLayer>5.30</baseLayer>
+                    </li>
+                  </children>
+                </li>
+              </children>
             </li>
-            <!-- body_back_r -->
+
+            <!-- body_back_r + Trophy slot 3 -->
             <li Class="LCAnomalyCore.Render.PawnRenderNodeProperties_StillState">
               <debugLabel>BurrowingHeaven_body_back_r</debugLabel>
               <tagDef>BurrowingHeaven_body_back_r</tagDef>
@@ -62,7 +220,39 @@
               <useRottenColor>true</useRottenColor>
               <baseLayer>5</baseLayer>
               <offset>0,0</offset>
-              <drawSize>3,3</drawSize>
+              <overrideMeshSize>(4.5, 4.5)</overrideMeshSize>
+              <drawSize>1,1</drawSize>
+              <children>
+                <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                  <debugLabel>BurrowingHeaven_TrophyHead_Slot3</debugLabel>
+                  <slotIndex>3</slotIndex>
+                  <layerKind>Head</layerKind>
+                  <localOffset>(1.55, 0, -0.28)</localOffset>
+                  <defaultTiltAngle>-20</defaultTiltAngle>
+                  <headScale>0.78</headScale>
+                  <baseLayer>5.20</baseLayer>
+                  <children>
+                    <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                      <debugLabel>BurrowingHeaven_TrophyBlood_Slot3</debugLabel>
+                      <slotIndex>3</slotIndex>
+                      <layerKind>NeckBlood</layerKind>
+                      <baseLayer>5.22</baseLayer>
+                    </li>
+                    <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                      <debugLabel>BurrowingHeaven_TrophyBeard_Slot3</debugLabel>
+                      <slotIndex>3</slotIndex>
+                      <layerKind>Beard</layerKind>
+                      <baseLayer>5.26</baseLayer>
+                    </li>
+                    <li Class="BurrowingHeaven.Render.PawnRenderNodeProperties_BurrowingHeavenTrophyHead">
+                      <debugLabel>BurrowingHeaven_TrophyHair_Slot3</debugLabel>
+                      <slotIndex>3</slotIndex>
+                      <layerKind>Hair</layerKind>
+                      <baseLayer>5.30</baseLayer>
+                    </li>
+                  </children>
+                </li>
+              </children>
             </li>
 
             <!-- eye_main -->
@@ -73,7 +263,8 @@
               <useRottenColor>true</useRottenColor>
               <baseLayer>7</baseLayer>
               <offset>0,0</offset>
-              <drawSize>3,3</drawSize>
+              <overrideMeshSize>(4.5, 4.5)</overrideMeshSize>
+              <drawSize>1,1</drawSize>
               <children>
                 <!-- middle -->
                 <li Class="LCAnomalyCore.Render.PawnRenderNodeProperties_StillState">
@@ -83,6 +274,7 @@
                   <useRottenColor>true</useRottenColor>
                   <baseLayer>8</baseLayer>
                   <offset>0,0</offset>
+                  <overrideMeshSize>(4.5, 4.5)</overrideMeshSize>
                   <drawSize>1,1</drawSize>
                 </li>
                 <!-- top -->
@@ -93,6 +285,7 @@
                   <useRottenColor>true</useRottenColor>
                   <baseLayer>9</baseLayer>
                   <offset>0,0</offset>
+                  <overrideMeshSize>(4.5, 4.5)</overrideMeshSize>
                   <drawSize>1,1</drawSize>
                 </li>
               </children>
