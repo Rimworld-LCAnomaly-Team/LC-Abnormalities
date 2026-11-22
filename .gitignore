@@ -403,3 +403,6 @@ FodyWeavers.xsd
 **/obj/
 **/bin/
 *.pdb
+
+# Local reference assets (unpacked third-party references, never commit or publish)
+.local-refs/
