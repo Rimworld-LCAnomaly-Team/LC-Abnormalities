@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderDef>
+    <defName>LC_BigBirdBlackoutAura</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_BigBirdVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_BigBirdBlackoutAura.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <transparent>true</transparent>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3140</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_BigBirdLanternWave</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_BigBirdVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_BigBirdLanternWave.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3155</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_BigBirdEyeMark</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_BigBirdVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_BigBirdEyeMark.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <transparent>true</transparent>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3158</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_BigBirdBiteBurst</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_BigBirdVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_BigBirdBiteBurst.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <transparent>true</transparent>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3160</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+</Defs>

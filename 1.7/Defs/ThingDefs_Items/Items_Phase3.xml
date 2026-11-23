@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEgg ParentName="ResourceBase">
+    <defName>AllAroundHelperEgg</defName>
+    <label>All-Around Helper Egg</label>
+    <description>The enameled stasis egg of All-Around Helper (T-05-41).</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Special/AllAroundHelperEgg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <genericMarketSellable>false</genericMarketSellable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <MarketValue>0</MarketValue>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <LC_MinimumContainmentStrength>50</LC_MinimumContainmentStrength>
+    </statBases>
+    <thingCategories><li>LC_Entity_Egg</li></thingCategories>
+    <descriptionHyperlinks><PawnKindDef>AllAroundHelper</PawnKindDef></descriptionHyperlinks>
+    <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+    <comps>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <heldPawnKind>AllAroundHelper</heldPawnKind>
+        <capturedLetterLabel>All-Around Helper Contained</capturedLetterLabel>
+        <capturedLetterText>{PAWN_nameDef} secured the All-Around Helper egg onto the holding platform, silencing its whirring rotors inside.</capturedLetterText>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Smash {0_label}</useLabel>
+        <useMessage>{PAWN_nameDef} smashed the All-Around Helper egg into Enkephalin Boxes.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound"><soundOnUsed>ChunkRock_Drop</soundOnUsed></li>
+      <li Class="CompProperties_UseEffectDestroySelf"><leavings><EnkephalinBox>20</EnkephalinBox></leavings></li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Abnormality" />
+      <li Class="LCAnomalyCore.Comp.LC_CompProperties_InteractableEgg">
+        <compClass>LCAnomalyCore.Comp.LC_CompEgg</compClass>
+        <ticksToActivate>0</ticksToActivate>
+        <activateTexPath>UI/Commands/SmashAllAroundHelperEgg</activateTexPath>
+        <activateLabelString>Smash...</activateLabelString>
+        <activateDescString>Smash the All-Around Helper egg.</activateDescString>
+        <activatingStringPending>smashing All-Around Helper egg</activatingStringPending>
+        <guiLabelString>Choose who should do this</guiLabelString>
+        <showMustBeActivatedByColonist>false</showMustBeActivatedByColonist>
+        <shouldTransferBioSignature>true</shouldTransferBioSignature>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEgg ParentName="ResourceBase">
+    <defName>JudgementBirdEgg</defName>
+    <label>Judgement Bird Egg</label>
+    <description>The bandaged stasis egg of Judgement Bird (O-02-62).</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Special/JudgementBirdEgg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <genericMarketSellable>false</genericMarketSellable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <MarketValue>0</MarketValue>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <LC_MinimumContainmentStrength>85</LC_MinimumContainmentStrength>
+    </statBases>
+    <thingCategories><li>LC_Entity_Egg</li></thingCategories>
+    <descriptionHyperlinks><PawnKindDef>JudgementBird</PawnKindDef></descriptionHyperlinks>
+    <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+    <comps>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <heldPawnKind>JudgementBird</heldPawnKind>
+        <capturedLetterLabel>Judgement Bird Contained</capturedLetterLabel>
+        <capturedLetterText>{PAWN_nameDef} bound the Judgement Bird egg onto the holding platform, steadying its crooked scale inside.</capturedLetterText>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Smash {0_label}</useLabel>
+        <useMessage>{PAWN_nameDef} smashed the Judgement Bird egg into Enkephalin Boxes.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound"><soundOnUsed>ChunkRock_Drop</soundOnUsed></li>
+      <li Class="CompProperties_UseEffectDestroySelf"><leavings><EnkephalinBox>28</EnkephalinBox></leavings></li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Abnormality" />
+      <li Class="LCAnomalyCore.Comp.LC_CompProperties_InteractableEgg">
+        <compClass>LCAnomalyCore.Comp.LC_CompEgg</compClass>
+        <ticksToActivate>0</ticksToActivate>
+        <activateTexPath>UI/Commands/SmashJudgementBirdEgg</activateTexPath>
+        <activateLabelString>Smash...</activateLabelString>
+        <activateDescString>Smash the Judgement Bird egg.</activateDescString>
+        <activatingStringPending>smashing Judgement Bird egg</activatingStringPending>
+        <guiLabelString>Choose who should do this</guiLabelString>
+        <showMustBeActivatedByColonist>false</showMustBeActivatedByColonist>
+        <shouldTransferBioSignature>true</shouldTransferBioSignature>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>WAW</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEgg ParentName="ResourceBase">
+    <defName>BigBirdEgg</defName>
+    <label>Big Bird Egg</label>
+    <description>The lantern-lit stasis egg of Big Bird (O-02-40).</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Special/BigBirdEgg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <genericMarketSellable>false</genericMarketSellable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <MarketValue>0</MarketValue>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <LC_MinimumContainmentStrength>90</LC_MinimumContainmentStrength>
+    </statBases>
+    <thingCategories><li>LC_Entity_Egg</li></thingCategories>
+    <descriptionHyperlinks><PawnKindDef>BigBird</PawnKindDef></descriptionHyperlinks>
+    <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+    <comps>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <heldPawnKind>BigBird</heldPawnKind>
+        <capturedLetterLabel>Big Bird Contained</capturedLetterLabel>
+        <capturedLetterText>{PAWN_nameDef} secured the Big Bird egg onto the holding platform, dimming its myriad watchful eyes inside.</capturedLetterText>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Smash {0_label}</useLabel>
+        <useMessage>{PAWN_nameDef} smashed the Big Bird egg into Enkephalin Boxes.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound"><soundOnUsed>ChunkRock_Drop</soundOnUsed></li>
+      <li Class="CompProperties_UseEffectDestroySelf"><leavings><EnkephalinBox>28</EnkephalinBox></leavings></li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Abnormality" />
+      <li Class="LCAnomalyCore.Comp.LC_CompProperties_InteractableEgg">
+        <compClass>LCAnomalyCore.Comp.LC_CompEgg</compClass>
+        <ticksToActivate>0</ticksToActivate>
+        <activateTexPath>UI/Commands/SmashBigBirdEgg</activateTexPath>
+        <activateLabelString>Smash...</activateLabelString>
+        <activateDescString>Smash the Big Bird egg.</activateDescString>
+        <activatingStringPending>smashing Big Bird egg</activatingStringPending>
+        <guiLabelString>Choose who should do this</guiLabelString>
+        <showMustBeActivatedByColonist>false</showMustBeActivatedByColonist>
+        <shouldTransferBioSignature>true</shouldTransferBioSignature>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>WAW</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEgg ParentName="ResourceBase">
+    <defName>LittleRedRidingHoodedMercenaryEgg</defName>
+    <label>Little Red Riding Hooded Mercenary Egg</label>
+    <description>The crimson-wrapped stasis egg of Little Red Riding Hooded Mercenary (F-01-57).</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Special/LittleRedRidingHoodedMercenaryEgg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <genericMarketSellable>false</genericMarketSellable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <MarketValue>0</MarketValue>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <LC_MinimumContainmentStrength>80</LC_MinimumContainmentStrength>
+    </statBases>
+    <thingCategories><li>LC_Entity_Egg</li></thingCategories>
+    <descriptionHyperlinks><PawnKindDef>LittleRedRidingHoodedMercenary</PawnKindDef></descriptionHyperlinks>
+    <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+    <comps>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <heldPawnKind>LittleRedRidingHoodedMercenary</heldPawnKind>
+        <capturedLetterLabel>Little Red Riding Hooded Mercenary Contained</capturedLetterLabel>
+        <capturedLetterText>{PAWN_nameDef} secured the Little Red Riding Hooded Mercenary egg onto the holding platform, sealing the scarred huntress inside.</capturedLetterText>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Smash {0_label}</useLabel>
+        <useMessage>{PAWN_nameDef} smashed the Little Red Riding Hooded Mercenary egg into Enkephalin Boxes.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound"><soundOnUsed>ChunkRock_Drop</soundOnUsed></li>
+      <li Class="CompProperties_UseEffectDestroySelf"><leavings><EnkephalinBox>28</EnkephalinBox></leavings></li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Abnormality" />
+      <li Class="LCAnomalyCore.Comp.LC_CompProperties_InteractableEgg">
+        <compClass>LCAnomalyCore.Comp.LC_CompEgg</compClass>
+        <ticksToActivate>0</ticksToActivate>
+        <activateTexPath>UI/Commands/SmashLittleRedRidingHoodedMercenaryEgg</activateTexPath>
+        <activateLabelString>Smash...</activateLabelString>
+        <activateDescString>Smash the Little Red Riding Hooded Mercenary egg.</activateDescString>
+        <activatingStringPending>smashing Little Red Riding Hooded Mercenary egg</activatingStringPending>
+        <guiLabelString>Choose who should do this</guiLabelString>
+        <showMustBeActivatedByColonist>false</showMustBeActivatedByColonist>
+        <shouldTransferBioSignature>true</shouldTransferBioSignature>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>WAW</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEgg ParentName="ResourceBase">
+    <defName>SchadenfreudeEgg</defName>
+    <label>Schadenfreude Egg</label>
+    <description>The iron-keyhole stasis egg of Schadenfreude (O-05-76).</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Special/SchadenfreudeEgg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <genericMarketSellable>false</genericMarketSellable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <MarketValue>0</MarketValue>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <LC_MinimumContainmentStrength>55</LC_MinimumContainmentStrength>
+    </statBases>
+    <thingCategories><li>LC_Entity_Egg</li></thingCategories>
+    <descriptionHyperlinks><PawnKindDef>Schadenfreude</PawnKindDef></descriptionHyperlinks>
+    <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+    <comps>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <heldPawnKind>Schadenfreude</heldPawnKind>
+        <capturedLetterLabel>Schadenfreude Contained</capturedLetterLabel>
+        <capturedLetterText>{PAWN_nameDef} locked the Schadenfreude egg onto the holding platform, sealing the watchful keyhole inside.</capturedLetterText>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Smash {0_label}</useLabel>
+        <useMessage>{PAWN_nameDef} smashed the Schadenfreude egg into Enkephalin Boxes.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound"><soundOnUsed>ChunkRock_Drop</soundOnUsed></li>
+      <li Class="CompProperties_UseEffectDestroySelf"><leavings><EnkephalinBox>20</EnkephalinBox></leavings></li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Abnormality" />
+      <li Class="LCAnomalyCore.Comp.LC_CompProperties_InteractableEgg">
+        <compClass>LCAnomalyCore.Comp.LC_CompEgg</compClass>
+        <ticksToActivate>0</ticksToActivate>
+        <activateTexPath>UI/Commands/SmashSchadenfreudeEgg</activateTexPath>
+        <activateLabelString>Smash...</activateLabelString>
+        <activateDescString>Smash the Schadenfreude egg.</activateDescString>
+        <activatingStringPending>smashing Schadenfreude egg</activatingStringPending>
+        <guiLabelString>Choose who should do this</guiLabelString>
+        <showMustBeActivatedByColonist>false</showMustBeActivatedByColonist>
+        <shouldTransferBioSignature>true</shouldTransferBioSignature>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
+
+</Defs>

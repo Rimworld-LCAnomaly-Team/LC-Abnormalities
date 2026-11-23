@@ -31,17 +31,46 @@
 
   <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
     <defName>DyingFuneralOfDeadButterflies</defName>
-    <label>Funeral of the Dead Butterflies (Dissolving)</label>
+    <label>Funeral of the Dead Butterflies (Entering Coffin)</label>
     <selectable>false</selectable>
     <tickerType>Normal</tickerType>
-    <thingClass>LCAbnormalities.Shared.DyingAbnormality</thingClass>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>LCAbnormalities.FuneralOfDeadButterflies.DyingFuneralOfDeadButterflies</thingClass>
     <drawOffscreen>true</drawOffscreen>
     <modExtensions>
       <li Class="LCAbnormalities.Shared.EggReturnExtension">
         <eggDef>FuneralOfDeadButterfliesEgg</eggDef>
+        <spawnFilth>false</spawnFilth>
       </li>
     </modExtensions>
   </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_SolemnLamentButterflyBloom</defName>
+    <label>Solemn Lament butterfly bloom</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>LCAbnormalities.FuneralOfDeadButterflies.SolemnLamentButterflyBloom</thingClass>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_SolemnLamentButterflyFlutter</defName>
+    <label>Solemn Lament fluttering butterfly</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>LCAbnormalities.FuneralOfDeadButterflies.SolemnLamentButterflyFlutter</thingClass>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
 
   <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
     <defName>DyingSnowQueen</defName>

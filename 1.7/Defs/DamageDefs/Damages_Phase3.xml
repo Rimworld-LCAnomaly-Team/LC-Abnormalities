@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_GrinderMk4_Saw</defName>
+    <label>grinder sawblade</label>
+    <workerClass>LCAbnormalities.AllAroundHelper.DamageWorker_GrinderMk4</workerClass>
+    <deathMessage>{0} was shredded by Grinder Mk4.</deathMessage>
+    <hediff>Cut</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Red</damageType>
+        <riskLevel>HE</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>LC_GrinderMk4Cleave</defName>
+    <label>buzzsaw slice</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef>
+    <defName>LC_GrinderMk4Cleave</defName>
+    <requiredCapacity>LC_GrinderMk4Cleave</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>LC_GrinderMk4_Saw</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Slash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Justitia_PaleSlash</defName>
+    <label>justitia pale verdict</label>
+    <workerClass>LCAbnormalities.JudgementBird.DamageWorker_Justitia</workerClass>
+    <deathMessage>{0} was judged by Justitia.</deathMessage>
+    <hediff>Cut</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Pale</damageType>
+        <riskLevel>ALEPH</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>LC_JustitiaCleave</defName>
+    <label>pale verdict slash</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef>
+    <defName>LC_JustitiaCleave</defName>
+    <requiredCapacity>LC_JustitiaCleave</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>LC_Justitia_PaleSlash</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Slash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Lamp_BlackCrush</defName>
+    <label>lamp black crush</label>
+    <workerClass>LCAbnormalities.BigBird.DamageWorker_Lamp</workerClass>
+    <deathMessage>{0} was crushed beneath Lamp.</deathMessage>
+    <hediff>Crush</hediff>
+    <armorCategory>Blunt</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Black</damageType>
+        <riskLevel>WAW</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>LC_LampCrush</defName>
+    <label>lantern smash</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef>
+    <defName>LC_LampCrush</defName>
+    <requiredCapacity>LC_LampCrush</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>LC_Lamp_BlackCrush</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Smash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Smash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Smash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Smash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_CrimsonScar_RedShot</defName>
+    <label>crimson scar strike</label>
+    <workerClass>LCAbnormalities.LittleRedRidingHoodedMercenary.DamageWorker_CrimsonScar</workerClass>
+    <deathMessage>{0} was hunted down by Crimson Scar.</deathMessage>
+    <hediff>Cut</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Red</damageType>
+        <riskLevel>WAW</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>LC_CrimsonScarSlash</defName>
+    <label>crimson sickle slash</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef>
+    <defName>LC_CrimsonScarSlash</defName>
+    <requiredCapacity>LC_CrimsonScarSlash</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>LC_CrimsonScar_RedShot</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Slash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Gaze_SawDamage</defName>
+    <label>gaze saw rend</label>
+    <workerClass>LCAbnormalities.Schadenfreude.DamageWorker_Gaze</workerClass>
+    <deathMessage>{0} was torn apart by Gaze.</deathMessage>
+    <hediff>Cut</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Red</damageType>
+        <riskLevel>HE</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>LC_GazeSawShred</defName>
+    <label>gaze buzzsaw shred</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef>
+    <defName>LC_GazeSawShred</defName>
+    <requiredCapacity>LC_GazeSawShred</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>LC_Gaze_SawDamage</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Slash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+</Defs>

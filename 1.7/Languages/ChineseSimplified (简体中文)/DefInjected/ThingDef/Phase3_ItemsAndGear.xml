@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- T-05-41 All-Around Helper -->
+  <AllAroundHelper.label>小帮手</AllAroundHelper.label>
+  <AllAroundHelper.description>外形圆润洁白、标榜“轻松清扫一切污渍”的家政机械（T-05-41）。\n工作评价为“良”时有 50% 概率扣除逆卡巴拉计数器，“差”则必定扣除；归零后外壳弹开露出高速旋转锯刃，反复蓄力直线冲锋撕碎沿途一切生灵。</AllAroundHelper.description>
+  <AllAroundHelper.tools.rotary_sawblade.label>旋转锯刃</AllAroundHelper.tools.rotary_sawblade.label>
+  <AllAroundHelper.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</AllAroundHelper.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <AllAroundHelper.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>切忌执行“洞察”工作（恒为 0%）。选用“本能”或“压迫”可稳定产出脑啡肽箱。</AllAroundHelper.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <AllAroundHelper.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</AllAroundHelper.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <AllAroundHelper.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>“良”结果有 50% 概率、“差”结果必然使逆卡巴拉计数器（上限 2）下滑。\nE.G.O饰品“研磨机 Mk4”已解锁。</AllAroundHelper.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <AllAroundHelper.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</AllAroundHelper.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <AllAroundHelper.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>突破后它会周期性蓄力拉响蜂鸣，随后展开电锯沿直线高速冲锋并顺劈路径上所有目标。</AllAroundHelper.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <AllAroundHelper.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</AllAroundHelper.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <AllAroundHelper.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>小帮手对红伤有较高抗性（0.5 倍率），但极度畏惧黑伤与蓝伤（2.0 倍率）。\nHE 级 E.G.O 电锯与护甲“研磨机 Mk4”已解锁。</AllAroundHelper.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+  <DyingAllAroundHelper.label>小帮手（消散中）</DyingAllAroundHelper.label>
+  <AllAroundHelperEgg.label>小帮手收容蛋</AllAroundHelperEgg.label>
+  <AllAroundHelperEgg.description>小帮手（T-05-41）停机后凝结的白瓷卵核。</AllAroundHelperEgg.description>
+  <AllAroundHelperEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>小帮手已收容</AllAroundHelperEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <AllAroundHelperEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将小帮手收容蛋安置在收容平台上，尖锐的电机轰鸣随之归于平静。</AllAroundHelperEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <AllAroundHelperEgg.comps.CompUsable.useLabel>砸碎{0_label}</AllAroundHelperEgg.comps.CompUsable.useLabel>
+  <AllAroundHelperEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了小帮手收容蛋，回收了一批脑啡肽箱。</AllAroundHelperEgg.comps.CompUsable.useMessage>
+  <AllAroundHelperEgg.comps.LC_CompEgg.activateDescString>砸碎小帮手收容蛋以回收脑啡肽箱。</AllAroundHelperEgg.comps.LC_CompEgg.activateDescString>
+  <AllAroundHelperEgg.comps.LC_CompEgg.activateLabelString>砸碎...</AllAroundHelperEgg.comps.LC_CompEgg.activateLabelString>
+  <AllAroundHelperEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎小帮手收容蛋</AllAroundHelperEgg.comps.LC_CompEgg.activatingStringPending>
+  <AllAroundHelperEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</AllAroundHelperEgg.comps.LC_CompEgg.guiLabelString>
+
+  <EgoWeapon_AllAroundHelper.label>E.G.O. 武器（研磨机 Mk4）</EgoWeapon_AllAroundHelper.label>
+  <EgoWeapon_AllAroundHelper.description>提取自小帮手的高转速红伤电锯（HE），攻速迅捷，并在命中时顺劈目标身旁的敌对单位。</EgoWeapon_AllAroundHelper.description>
+  <EgoWeapon_AllAroundHelper.tools.rotary_sawblade.label>旋转锯刃</EgoWeapon_AllAroundHelper.tools.rotary_sawblade.label>
+  <Apparel_AllAroundHelperSuit.label>E.G.O. 护甲（研磨机 Mk4）</Apparel_AllAroundHelperSuit.label>
+  <Apparel_AllAroundHelperSuit.description>洁白耐刮的复合陶瓷防割工装（HE），具备 0.6 倍率红伤防护与小幅移速加成。</Apparel_AllAroundHelperSuit.description>
+  <Accessory_AllAroundHelper.label>E.G.O. 饰品（研磨机 Mk4）</Accessory_AllAroundHelper.label>
+  <Accessory_AllAroundHelper.description>闪耀红光的机械光学目镜，小幅提升全局工作与异想体作业效率。</Accessory_AllAroundHelper.description>
+
+  <!-- O-02-62 Judgement Bird -->
+  <JudgementBird.label>审判鸟</JudgementBird.label>
+  <JudgementBird.description>全身裹满苍白绷带、手执永远倾向一侧的黄铜天平的高挑鸟形审判者（O-02-62）。\n它是设施中首个蓝伤来源——直接按最大生命比例削减灵魂且无视常规护甲。逆卡巴拉计数器归零后，它会静默游荡并周期性倾斜天平，向周围所有人类降下苍白裁决。</JudgementBird.description>
+  <JudgementBird.tools.unjust_scale.label>不公天平</JudgementBird.tools.unjust_scale.label>
+  <JudgementBird.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</JudgementBird.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <JudgementBird.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>工作失败将造成无视常规护甲的蓝伤。切忌选择“压迫”（恒为 0%），请派遣高等级“洞察”或“沟通”专家作业。</JudgementBird.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <JudgementBird.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</JudgementBird.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <JudgementBird.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>“良”结果有 50% 概率、“差”结果必然扣除逆卡巴拉计数器（上限 2）。\nE.G.O饰品“正义裁决者”已解锁。</JudgementBird.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <JudgementBird.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</JudgementBird.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <JudgementBird.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>突破后审判鸟会周期性倾斜天平，对 8.5 格内的所有人类降下蓝伤审判；然而它自身对蓝伤极为脆弱（2.0 倍率）。</JudgementBird.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <JudgementBird.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</JudgementBird.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <JudgementBird.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>黑森林三鸟之一。尽管本体评级为 WAW，其提取的“正义裁决者”却是货真价实的 ALEPH 级套装——提供首个蓝伤武器与 0.5 全色抗性护甲！</JudgementBird.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+  <DyingJudgementBird.label>审判鸟（消散中）</DyingJudgementBird.label>
+  <LC_JudgementCastAuraFX.label>审判鸟蓄力领域</LC_JudgementCastAuraFX.label>
+  <LC_JudgementPaleWaveFX.label>审判鸟苍白灵魂冲击波</LC_JudgementPaleWaveFX.label>
+  <LC_JudgementGallowsFX.label>审判鸟绞刑架</LC_JudgementGallowsFX.label>
+  <LC_JudgementBandageFX.label>审判鸟飘散绷带</LC_JudgementBandageFX.label>
+  <LC_JustitiaSlashFX.label>正义裁决者苍白月牙斩击</LC_JustitiaSlashFX.label>
+  <LC_JustitiaComboFX.label>正义裁决者连斩裁决</LC_JustitiaComboFX.label>
+  <JudgementBirdEgg.label>审判鸟收容蛋</JudgementBirdEgg.label>
+  <JudgementBirdEgg.description>审判鸟（O-02-62）缠绕着苍白绷带的静默卵核。</JudgementBirdEgg.description>
+  <JudgementBirdEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>审判鸟已收容</JudgementBirdEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <JudgementBirdEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将审判鸟收容蛋束缚在收容平台上，倾斜的天平暂时停止了摆动。</JudgementBirdEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <JudgementBirdEgg.comps.CompUsable.useLabel>砸碎{0_label}</JudgementBirdEgg.comps.CompUsable.useLabel>
+  <JudgementBirdEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了审判鸟收容蛋，回收了一批脑啡肽箱。</JudgementBirdEgg.comps.CompUsable.useMessage>
+  <JudgementBirdEgg.comps.LC_CompEgg.activateDescString>砸碎审判鸟收容蛋以回收脑啡肽箱。</JudgementBirdEgg.comps.LC_CompEgg.activateDescString>
+  <JudgementBirdEgg.comps.LC_CompEgg.activateLabelString>砸碎...</JudgementBirdEgg.comps.LC_CompEgg.activateLabelString>
+  <JudgementBirdEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎审判鸟收容蛋</JudgementBirdEgg.comps.LC_CompEgg.activatingStringPending>
+  <JudgementBirdEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</JudgementBirdEgg.comps.LC_CompEgg.guiLabelString>
+
+  <EgoWeapon_JudgementBird.label>E.G.O. 武器（正义裁决者）</EgoWeapon_JudgementBird.label>
+  <EgoWeapon_JudgementBird.description>缠绕着绷带与天平徽记的 ALEPH 级苍白裁决长刃。\n造成无视常规护甲的百分比蓝伤，每次挥砍均可顺劈周围最多 2 名敌对目标。</EgoWeapon_JudgementBird.description>
+  <EgoWeapon_JudgementBird.tools.pale_verdict_blade.label>苍白裁决刃</EgoWeapon_JudgementBird.tools.pale_verdict_blade.label>
+  <Apparel_JudgementBirdSuit.label>E.G.O. 护甲（正义裁决者）</Apparel_JudgementBirdSuit.label>
+  <Apparel_JudgementBirdSuit.description>以黑曜长袍与绷带披肩织就的 ALEPH 级神圣护甲。\n提供极为珍贵的红/白/黑/蓝全 0.5 倍率抗性，是殖民地首个可靠的抗蓝伤防具。</Apparel_JudgementBirdSuit.description>
+  <Accessory_JudgementBird.label>E.G.O. 饰品（正义裁决者）</Accessory_JudgementBird.label>
+  <Accessory_JudgementBird.description>蒙蔽双眼的洁白亚麻布带，赋予佩戴者惊人的移速、近战精准度与敏捷起手。</Accessory_JudgementBird.description>
+
+  <!-- O-02-40 Big Bird -->
+  <BigBird.label>大鸟</BigBird.label>
+  <BigBird.description>浑身缀满无数金黄双瞳、手提不灭古灯的巨型黑羽守望者（O-02-40）。\n同地图每有 5 名人类死亡便会扣除 1 点逆卡巴拉计数器（上限 5）；“优”工作恢复 +1，“差”扣除 -1。突破后它会举起目灯魅惑附近生灵走向巨喙，务必及时点击“唤醒清醒”拯救受控者！</BigBird.description>
+  <BigBird.tools.enormous_beak.label>庞大巨喙</BigBird.tools.enormous_beak.label>
+  <BigBird.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</BigBird.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <BigBird.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>“沟通”与“本能”工作能稳定安抚大鸟，取得“优”评价还可恢复 +1 逆卡巴拉计数器（上限 5）。尽量避免“压迫”。</BigBird.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <BigBird.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</BigBird.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <BigBird.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>地图任意角落每累计死亡 5 名人类，其逆卡巴拉计数器便会下滑 1 点——袭击与考验期间务必严密监控。\nE.G.O饰品“目灯”已解锁。</BigBird.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <BigBird.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</BigBird.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <BigBird.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>突破后大鸟的黄金目灯会周期性魅惑附近人类，吸引他们自投罗网遭受致命黑伤撕咬。选中被魅惑的殖民者并点击“唤醒清醒”即可挣脱！</BigBird.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <BigBird.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</BigBird.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <BigBird.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>黑森林三鸟之一。对黑伤抗性极高（0.5 倍率），但较弱于白伤（1.2 倍率）与蓝伤（1.5 倍率）。\nWAW 级 E.G.O 重锤与护甲“目灯”已解锁。</BigBird.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+  <DyingBigBird.label>大鸟（消散中）</DyingBigBird.label>
+  <BigBirdEgg.label>大鸟收容蛋</BigBirdEgg.label>
+  <BigBirdEgg.description>大鸟（O-02-40）熄灭灯火后凝结的黑羽金瞳卵核。</BigBirdEgg.description>
+  <BigBirdEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>大鸟已收容</BigBirdEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <BigBirdEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将大鸟收容蛋安置在收容平台上，无数金色眼眸在黑暗中缓缓闭合。</BigBirdEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <BigBirdEgg.comps.CompUsable.useLabel>砸碎{0_label}</BigBirdEgg.comps.CompUsable.useLabel>
+  <BigBirdEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了大鸟收容蛋，回收了一批脑啡肽箱。</BigBirdEgg.comps.CompUsable.useMessage>
+  <BigBirdEgg.comps.LC_CompEgg.activateDescString>砸碎大鸟收容蛋以回收脑啡肽箱。</BigBirdEgg.comps.LC_CompEgg.activateDescString>
+  <BigBirdEgg.comps.LC_CompEgg.activateLabelString>砸碎...</BigBirdEgg.comps.LC_CompEgg.activateLabelString>
+  <BigBirdEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎大鸟收容蛋</BigBirdEgg.comps.LC_CompEgg.activatingStringPending>
+  <BigBirdEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</BigBirdEgg.comps.LC_CompEgg.guiLabelString>
+
+  <EgoWeapon_BigBird.label>E.G.O. 武器（目灯）</EgoWeapon_BigBird.label>
+  <EgoWeapon_BigBird.description>以大鸟无数金瞳与黄铜灯笼锻造的 WAW 级重型黑伤战锤。\n挥动沉重但威力惊人，重击会激荡 2 格范围的黑金侵蚀冲击波，并有 25% 概率施加“目灯凝视”——令目标眩晕迟缓且承受额外黑伤侵蚀易伤。</EgoWeapon_BigBird.description>
+  <EgoWeapon_BigBird.tools.lantern_hammerhead.label>目灯锤头</EgoWeapon_BigBird.tools.lantern_hammerhead.label>
+  <Apparel_BigBirdSuit.label>E.G.O. 护甲（目灯）</Apparel_BigBirdSuit.label>
+  <Apparel_BigBirdSuit.description>饰以金眸刺绣的厚重黑羽大衣（WAW），拥有高达 0.4 倍率的超强黑伤防护与优秀白伤抗性。</Apparel_BigBirdSuit.description>
+  <Accessory_BigBird.label>E.G.O. 饰品（目灯）</Accessory_BigBird.label>
+  <Accessory_BigBird.description>隐隐闪烁着金瞳微光的头冠饰物，减轻承伤并提升作业与研究效率。</Accessory_BigBird.description>
+
+  <!-- F-01-57 Little Red Riding Hooded Mercenary -->
+  <LittleRedRidingHoodedMercenary.label>小红帽雇佣兵</LittleRedRidingHoodedMercenary.label>
+  <LittleRedRidingHoodedMercenary.description>身披血红兜帽、左手手炮右手弯镰的冷酷异想体猎手（F-01-57）。\n收容期间，可在平台上支付 15 单位独立 PE-Box 雇佣她作为友军出击猎杀任意敌对目标；然而糟糕工作或其他异想体越狱都会消耗她的逆卡巴拉计数器（上限 3），归零时她将陷入敌对暴走！</LittleRedRidingHoodedMercenary.description>
+  <LittleRedRidingHoodedMercenary.tools.crimson_sickle.label>赤红镰刃</LittleRedRidingHoodedMercenary.tools.crimson_sickle.label>
+  <LittleRedRidingHoodedMercenary.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</LittleRedRidingHoodedMercenary.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <LittleRedRidingHoodedMercenary.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>切忌选用“沟通”工作（恒为 0%）。选用“洞察”或让 III 级以上老手执行“本能”最为稳妥。</LittleRedRidingHoodedMercenary.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <LittleRedRidingHoodedMercenary.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</LittleRedRidingHoodedMercenary.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <LittleRedRidingHoodedMercenary.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>“差”评价或同地图任意其他异想体越狱都会扣除其逆卡巴拉计数器（上限 3）。\nE.G.O饰品“赤红疤痕”已解锁。</LittleRedRidingHoodedMercenary.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <LittleRedRidingHoodedMercenary.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</LittleRedRidingHoodedMercenary.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <LittleRedRidingHoodedMercenary.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>收容状态下支付 15 PE-Box 即可委托她作为友军猎杀地图任意敌对单位；战斗途中可随时点击“召回雇佣兵”，或在清剿敌军后自动返回收容室。</LittleRedRidingHoodedMercenary.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <LittleRedRidingHoodedMercenary.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</LittleRedRidingHoodedMercenary.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <LittleRedRidingHoodedMercenary.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>兼具中距红伤手炮与近战弯镰的 WAW 级武器“赤红疤痕”拥有越战越勇特性：持握者血量越低，伤害增幅越高（最高 +50%）！</LittleRedRidingHoodedMercenary.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+  <DyingLittleRedRidingHoodedMercenary.label>小红帽雇佣兵（消散中）</DyingLittleRedRidingHoodedMercenary.label>
+  <LC_LittleRedSlashFX.label>小红帽猩红弯镰斩击</LC_LittleRedSlashFX.label>
+  <LC_LittleRedShotgunConeFX.label>小红帽霰弹枪口火光锥</LC_LittleRedShotgunConeFX.label>
+  <LC_LittleRedHuntMarkFX.label>小红帽猎杀标记</LC_LittleRedHuntMarkFX.label>
+  <LC_LittleRedThrownSickleFX.label>小红帽回旋飞镰</LC_LittleRedThrownSickleFX.label>
+  <LC_LittleRedImpactFX.label>小红帽猩红命中冲击</LC_LittleRedImpactFX.label>
+  <LittleRedRidingHoodedMercenaryEgg.label>小红帽雇佣兵收容蛋</LittleRedRidingHoodedMercenaryEgg.label>
+  <LittleRedRidingHoodedMercenaryEgg.description>小红帽雇佣兵（F-01-57）退散后凝结的绯红布带卵核。</LittleRedRidingHoodedMercenaryEgg.description>
+  <LittleRedRidingHoodedMercenaryEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>小红帽雇佣兵已收容</LittleRedRidingHoodedMercenaryEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <LittleRedRidingHoodedMercenaryEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将小红帽雇佣兵收容蛋安置在收容平台上，布满伤痕的红衣猎手靠墙拭起了弯镰。</LittleRedRidingHoodedMercenaryEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <LittleRedRidingHoodedMercenaryEgg.comps.CompUsable.useLabel>砸碎{0_label}</LittleRedRidingHoodedMercenaryEgg.comps.CompUsable.useLabel>
+  <LittleRedRidingHoodedMercenaryEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了小红帽雇佣兵收容蛋，回收了一批脑啡肽箱。</LittleRedRidingHoodedMercenaryEgg.comps.CompUsable.useMessage>
+  <LittleRedRidingHoodedMercenaryEgg.comps.LC_CompEgg.activateDescString>砸碎小红帽雇佣兵收容蛋以回收脑啡肽箱。</LittleRedRidingHoodedMercenaryEgg.comps.LC_CompEgg.activateDescString>
+  <LittleRedRidingHoodedMercenaryEgg.comps.LC_CompEgg.activateLabelString>砸碎...</LittleRedRidingHoodedMercenaryEgg.comps.LC_CompEgg.activateLabelString>
+  <LittleRedRidingHoodedMercenaryEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎小红帽雇佣兵收容蛋</LittleRedRidingHoodedMercenaryEgg.comps.LC_CompEgg.activatingStringPending>
+  <LittleRedRidingHoodedMercenaryEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</LittleRedRidingHoodedMercenaryEgg.comps.LC_CompEgg.guiLabelString>
+
+  <EgoWeapon_LittleRedRidingHoodedMercenary.label>E.G.O. 武器（赤红疤痕）</EgoWeapon_LittleRedRidingHoodedMercenary.label>
+  <EgoWeapon_LittleRedRidingHoodedMercenary.description>集霰弹手炮与猩红弯镰于一体的 WAW 级红伤武器。\n中距点射与贴身斩击俱佳，且随着持握者生命值下降不断放大伤害（最高 +50%）。</EgoWeapon_LittleRedRidingHoodedMercenary.description>
+  <EgoWeapon_LittleRedRidingHoodedMercenary.tools.crimson_sickle.label>赤红镰刃</EgoWeapon_LittleRedRidingHoodedMercenary.tools.crimson_sickle.label>
+  <Bullet_EgoWeapon_LittleRedRidingHoodedMercenary.label>赤红疤痕霰弹</Bullet_EgoWeapon_LittleRedRidingHoodedMercenary.label>
+  <Apparel_LittleRedRidingHoodedMercenarySuit.label>E.G.O. 护甲（赤红疤痕）</Apparel_LittleRedRidingHoodedMercenarySuit.label>
+  <Apparel_LittleRedRidingHoodedMercenarySuit.description>专为猎杀异想体缝制的猩红战术兜帽斗篷（WAW），红/白/黑抗性均为 0.6 倍率，并显著提高移速与攻防精准。</Apparel_LittleRedRidingHoodedMercenarySuit.description>
+  <Accessory_LittleRedRidingHoodedMercenary.label>E.G.O. 饰品（赤红疤痕）</Accessory_LittleRedRidingHoodedMercenary.label>
+  <Accessory_LittleRedRidingHoodedMercenary.description>掩住脸颊旧疤的残破红巾，提高生存韧性、步伐速度与瞄准起手。</Accessory_LittleRedRidingHoodedMercenary.description>
+
+  <!-- D-09-104 Backward Clock -->
+  <BackwardClock.label>逆流时钟</BackwardClock.label>
+  <BackwardClock.description>缀有四枚辉光真空管的古旧时间仪器（D-09-104），铭刻着逆转灾难的终极代价。\n综合等级 III 级及以上员工可逐次将其从 0 充能至 4 格；满充能（4/4）后仅 V 级员工可拉下倒流拉杆——以自身彻底湮灭为代价，瞬间镇压同地图所有非 ALEPH 级突破异想体与考验实体，并重置全部非 ALEPH 逆卡巴拉计数器！</BackwardClock.description>
+  <BackwardClock.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</BackwardClock.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <BackwardClock.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>唯有综合等级 III 级及以上的员工才能拨动逆流时钟表盘，每次操作推进 1 格充能，最高 4/4 格。</BackwardClock.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <BackwardClock.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</BackwardClock.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <BackwardClock.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>当四枚真空管尽数泛起炽烈红光（4/4）时，只有综合等级 V 级的员工才有资格拉下时光倒流拉杆。</BackwardClock.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <BackwardClock.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</BackwardClock.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <BackwardClock.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>发动时光倒流会永远抹除启动者自身，同时立刻镇压同地图所有非 ALEPH 级突破异想体与考验单位，并复原非 ALEPH 收容单元的逆卡巴拉计数器。</BackwardClock.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+
+  <BackwardClockEgg.label>逆流时钟收容蛋</BackwardClockEgg.label>
+  <BackwardClockEgg.description>逆流时钟（D-09-104）的静止收容蛋。安置在收容平台上即可部署这台应急重置工具，或砸碎以回收脑啡肽箱。</BackwardClockEgg.description>
+  <BackwardClockEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>逆流时钟已收容</BackwardClockEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <BackwardClockEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将逆流时钟收容蛋固定在收容平台上，四枚真空管发出低沉的嗡鸣。</BackwardClockEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <BackwardClockEgg.comps.CompUsable.useLabel>砸碎{0_label}</BackwardClockEgg.comps.CompUsable.useLabel>
+  <BackwardClockEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了逆流时钟收容蛋，回收了一批脑啡肽箱。</BackwardClockEgg.comps.CompUsable.useMessage>
+  <BackwardClockEgg.comps.LC_CompEgg.activateDescString>砸碎逆流时钟收容蛋以回收脑啡肽箱。</BackwardClockEgg.comps.LC_CompEgg.activateDescString>
+  <BackwardClockEgg.comps.LC_CompEgg.activateLabelString>砸碎...</BackwardClockEgg.comps.LC_CompEgg.activateLabelString>
+  <BackwardClockEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎逆流时钟收容蛋</BackwardClockEgg.comps.LC_CompEgg.activatingStringPending>
+  <BackwardClockEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</BackwardClockEgg.comps.LC_CompEgg.guiLabelString>
+
+  <!-- O-05-76 Schadenfreude -->
+  <Schadenfreude.label>幸灾乐祸</Schadenfreude.label>
+  <Schadenfreude.description>表面装有老旧光学镜头、中央锁孔里暗藏窥视之眼的锈蚀铁盒（O-05-76）。\n它的特性与“穿刺乐园”截然相反：员工对其作业时切勿将摄像机停留在它身上，否则逆卡巴拉计数器（上限 2）将迅速下滑；突破收容后，只要处于玩家视野内它就会弹开机械钻锯高速追杀生灵，而移出镜头则立刻缩回铁盒静止不动。</Schadenfreude.description>
+  <Schadenfreude.tools.mechanical_drill_saw.label>机械钻锯</Schadenfreude.tools.mechanical_drill_saw.label>
+  <Schadenfreude.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</Schadenfreude.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <Schadenfreude.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>切忌执行“本能”工作（恒为 0%）。派遣员工执行“压迫”或“洞察”最为稳妥——别忘了在开始作业前把镜头移开！</Schadenfreude.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <Schadenfreude.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</Schadenfreude.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <Schadenfreude.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>作业期间持续注视约 3.5 秒或取得“差”评价都会扣除其逆卡巴拉计数器（上限 2）。\nE.G.O饰品“凝视”已解锁。</Schadenfreude.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <Schadenfreude.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</Schadenfreude.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <Schadenfreude.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>突破后若处于你的视野内，它会展开钻腿疯狂撕裂目标（抗性 R 1.2 / W 0.5 / B 1.0 / P 1.5）；移开镜头则立刻缩回铁盒完全静止（高防抗性 R 0.6 / W 0.2 / B 0.5 / P 0.7）。</Schadenfreude.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <Schadenfreude.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</Schadenfreude.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <Schadenfreude.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>切勿向锁孔里张望——它只因你目睹的痛苦而欢欣。\nHE 级 E.G.O 锯刃长柄与护甲“凝视”已解锁。</Schadenfreude.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+  <DyingSchadenfreude.label>幸灾乐祸（消散中）</DyingSchadenfreude.label>
+  <LC_SchadenfreudeWatchAuraFX.label>幸灾乐祸监控光圈</LC_SchadenfreudeWatchAuraFX.label>
+  <LC_SchadenfreudeKeyholePulseFX.label>幸灾乐祸锁孔注视波</LC_SchadenfreudeKeyholePulseFX.label>
+  <LC_SchadenfreudeSawVortexFX.label>幸灾乐祸双电锯气旋</LC_SchadenfreudeSawVortexFX.label>
+  <LC_SchadenfreudeDrillThrustFX.label>幸灾乐祸钻腿突刺</LC_SchadenfreudeDrillThrustFX.label>
+  <LC_SchadenfreudeBloodBurstFX.label>幸灾乐祸血雾飞溅</LC_SchadenfreudeBloodBurstFX.label>
+  <LC_GazeSawSlashFX.label>凝视猩红锯齿斩击</LC_GazeSawSlashFX.label>
+  <LC_GazeFlurryFX.label>凝视高速锯盘连切</LC_GazeFlurryFX.label>
+  <SchadenfreudeEgg.label>幸灾乐祸收容蛋</SchadenfreudeEgg.label>
+  <SchadenfreudeEgg.description>幸灾乐祸（O-05-76）合上锁孔后凝结的铁灰卵核。</SchadenfreudeEgg.description>
+  <SchadenfreudeEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>幸灾乐祸已收容</SchadenfreudeEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <SchadenfreudeEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将幸灾乐祸收容蛋锁在收容平台上，锁孔中那只冰冷的眼睛悄然睁开。</SchadenfreudeEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <SchadenfreudeEgg.comps.CompUsable.useLabel>砸碎{0_label}</SchadenfreudeEgg.comps.CompUsable.useLabel>
+  <SchadenfreudeEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了幸灾乐祸收容蛋，回收了一批脑啡肽箱。</SchadenfreudeEgg.comps.CompUsable.useMessage>
+  <SchadenfreudeEgg.comps.LC_CompEgg.activateDescString>砸碎幸灾乐祸收容蛋以回收脑啡肽箱。</SchadenfreudeEgg.comps.LC_CompEgg.activateDescString>
+  <SchadenfreudeEgg.comps.LC_CompEgg.activateLabelString>砸碎...</SchadenfreudeEgg.comps.LC_CompEgg.activateLabelString>
+  <SchadenfreudeEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎幸灾乐祸收容蛋</SchadenfreudeEgg.comps.LC_CompEgg.activatingStringPending>
+  <SchadenfreudeEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</SchadenfreudeEgg.comps.LC_CompEgg.guiLabelString>
+
+  <EgoWeapon_Schadenfreude.label>E.G.O. 武器（凝视）</EgoWeapon_Schadenfreude.label>
+  <EgoWeapon_Schadenfreude.description>提取自幸灾乐祸的 HE 级猩红长柄旋转锯刃。\n高速切割敌人并附加可叠加的“凝视撕裂”易伤状态，同时追加锯齿撕扯红伤。</EgoWeapon_Schadenfreude.description>
+  <EgoWeapon_Schadenfreude.tools.gaze_buzzsaw.label>凝视锯盘</EgoWeapon_Schadenfreude.tools.gaze_buzzsaw.label>
+  <Apparel_SchadenfreudeSuit.label>E.G.O. 护甲（凝视）</Apparel_SchadenfreudeSuit.label>
+  <Apparel_SchadenfreudeSuit.description>以黑铁锁孔纹路裁剪的战术大衣（HE），具备稳固的 0.8 白伤防护并提高移速与近战威力。</Apparel_SchadenfreudeSuit.description>
+  <Accessory_Schadenfreude.label>E.G.O. 饰品（凝视）</Accessory_Schadenfreude.label>
+  <Accessory_Schadenfreude.description>宛如血肉筋络缠绕于右手的猩红护手，略微增强防御韧性、移速与近战杀伤力。</Accessory_Schadenfreude.description>
+
+</LanguageData>

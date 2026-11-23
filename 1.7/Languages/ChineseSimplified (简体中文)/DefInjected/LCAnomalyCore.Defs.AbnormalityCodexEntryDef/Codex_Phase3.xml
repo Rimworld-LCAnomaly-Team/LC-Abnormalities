@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <AllAroundHelper.label>小帮手</AllAroundHelper.label>
+  <AllAroundHelper.description>曾以“轻松清扫一切污渍”畅销的球形家政机械（T-05-41），如今却将鲜血也视作待清扫的灰尘。\n突破收容后会展开隐藏的旋转锯刃，周期性蓄力发动高速红伤冲锋。</AllAroundHelper.description>
+
+  <JudgementBird.label>审判鸟</JudgementBird.label>
+  <JudgementBird.description>以缠满绷带的瘦长身躯与永远失衡的黄铜天平审判一切生灵（O-02-62）。\n它是设施首个无视常规护甲的百分比灵魂蓝伤来源，也是黑森林三鸟之一；其提取出的 E.G.O “正义裁决者”高达 ALEPH 级，提供首个蓝伤武器与 0.5 全抗护甲。</JudgementBird.description>
+
+  <BigBird.label>大鸟</BigBird.label>
+  <BigBird.description>手提永恒金色目灯、以无数金瞳守望设施的庞然羽兽（O-02-40）。\n同地图每死亡 5 名人类便会扣除 1 点逆卡巴拉计数器；突破后会用目灯魅惑附近生灵走向巨喙。黑森林三鸟之一。</BigBird.description>
+
+  <LittleRedRidingHoodedMercenary.label>小红帽雇佣兵</LittleRedRidingHoodedMercenary.label>
+  <LittleRedRidingHoodedMercenary.description>身披猩红斗篷、伤痕累累的 WAW 级冷酷猎手（F-01-57）。\n收容期间可支付 15 单位独立 PE-Box 雇佣她作为友军猎杀地图任意敌对目标；但需当心其他异想体越狱会消耗她的逆卡巴拉计数器直至敌对突破。</LittleRedRidingHoodedMercenary.description>
+
+  <BackwardClock.label>逆流时钟</BackwardClock.label>
+  <BackwardClock.description>带有四枚辉光真空管的 WAW 级应急重置工具型异想体（D-09-104）。\n需 III 级以上员工分四次充能至 4/4；危急时刻派遣 V 级员工牺牲自身发动时光倒流，可瞬间镇压同地图所有非 ALEPH 级突破异想体与考验实体。</BackwardClock.description>
+
+  <Schadenfreude.label>幸灾乐祸</Schadenfreude.label>
+  <Schadenfreude.description>嵌有复古镜头与窥视锁孔的铁盒异想体（O-05-76），以你的视线为食。\n作业期间切勿将镜头停留在它身上；若其突破收容，移开镜头即可令它立刻缩回铁盒静止不动。</Schadenfreude.description>
+
+</LanguageData>

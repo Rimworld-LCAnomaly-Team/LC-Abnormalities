@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderDef>
+    <defName>LC_FairyBlessingAura</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_FairyVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_FairyBlessingAura.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3154</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_FairyDevourFeast</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_FairyVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_FairyDevourFeast.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <transparent>true</transparent>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3161</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_FairyWingSlash</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_FairyVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_FairyWingSlash.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3159</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+</Defs>

@@ -25,6 +25,12 @@
   <LCAbn_Settings_EnableFuneralOfDeadButterflies>启用 亡蝶葬仪（HE）</LCAbn_Settings_EnableFuneralOfDeadButterflies>
   <LCAbn_Settings_EnableSnowQueen>启用 冰雪女皇（HE）</LCAbn_Settings_EnableSnowQueen>
   <LCAbn_Settings_EnableNotesFromCrazedResearcher>启用 癫狂研究员的笔记（HE 工具型）</LCAbn_Settings_EnableNotesFromCrazedResearcher>
+  <LCAbn_Settings_EnableAllAroundHelper>启用 小帮手（HE）</LCAbn_Settings_EnableAllAroundHelper>
+  <LCAbn_Settings_EnableJudgementBird>启用 审判鸟（WAW）</LCAbn_Settings_EnableJudgementBird>
+  <LCAbn_Settings_EnableBigBird>启用 大鸟（WAW）</LCAbn_Settings_EnableBigBird>
+  <LCAbn_Settings_EnableLittleRedRidingHoodedMercenary>启用 小红帽雇佣兵（WAW）</LCAbn_Settings_EnableLittleRedRidingHoodedMercenary>
+  <LCAbn_Settings_EnableBackwardClock>启用 逆流时钟（WAW 工具型）</LCAbn_Settings_EnableBackwardClock>
+  <LCAbn_Settings_EnableSchadenfreude>启用 幸灾乐祸（HE）</LCAbn_Settings_EnableSchadenfreude>
 
   <LCAbn_Settings_PortraitHeader>异界肖像专属调节</LCAbn_Settings_PortraitHeader>
   <LCAbn_Settings_PortraitAllowNonColonist>允许囚犯与友方访客成为替死替身</LCAbn_Settings_PortraitAllowNonColonist>

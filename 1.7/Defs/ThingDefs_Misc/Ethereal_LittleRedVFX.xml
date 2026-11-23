@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_LittleRedSlashFX</defName>
+    <label>Little Red crimson slash</label>
+    <thingClass>LCAbnormalities.LittleRedRidingHoodedMercenary.Thing_LittleRedSlash</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <seeThroughFog>false</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_LittleRedShotgunConeFX</defName>
+    <label>Little Red crimson blast cone</label>
+    <thingClass>LCAbnormalities.LittleRedRidingHoodedMercenary.Thing_LittleRedShotgunCone</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <seeThroughFog>false</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_LittleRedHuntMarkFX</defName>
+    <label>Little Red hunter's mark</label>
+    <thingClass>LCAbnormalities.LittleRedRidingHoodedMercenary.Thing_LittleRedHuntMark</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_LittleRedThrownSickleFX</defName>
+    <label>Little Red thrown hooked sickle</label>
+    <thingClass>LCAbnormalities.LittleRedRidingHoodedMercenary.Thing_LittleRedThrownSickle</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_LittleRedImpactFX</defName>
+    <label>Little Red crimson impact burst</label>
+    <thingClass>LCAbnormalities.LittleRedRidingHoodedMercenary.Thing_LittleRedImpactBurst</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <seeThroughFog>false</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+</Defs>

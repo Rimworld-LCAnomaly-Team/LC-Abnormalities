@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ==================== 1. CONTAINED IDLE (Perch + Perched Songbird) ==================== -->
+  <!-- Combines SmallBirdPerch.fbx (smallbird_횃대_animation, 2.0s) and SmallBirdDef.fbx (smallbird_default_Baked + default2/3) -->
+  <AnimationDef>
+    <defName>PunishingBird_Idle</defName>
+    <durationTicks>120</durationTicks>
+    <startOnRandomTick>true</startOnRandomTick>
+    <playWhenDowned>true</playWhenDowned>
+    <keyframeParts>
+      <!-- Gentle pendulum sway of the perch chain (smallbird_횃대_animation: +2.7deg <-> -5.2deg) -->
+      <li>
+        <key>PunishingBird_PerchChain</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.195, 0.361)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-2.7</angle></li>
+            <li><tick>60</tick><angle>5.2</angle></li>
+            <li><tick>120</tick><angle>-2.7</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Secondary lagging swing of the hanging dagger (0deg <-> -5.1deg) -->
+      <li>
+        <key>PunishingBird_PerchBlade</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.195, 0.266)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>65</tick><angle>5.1</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Perched bird subtle breathing, occasional belly twitch, and curious tilt -->
+      <li>
+        <key>PunishingBird_Body</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.500, 0.275)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+            <li><tick>22</tick><offset>(0,0,0.010)</offset><angle>-3.5</angle><scale>(0.985,1,1.020)</scale></li>
+            <li><tick>44</tick><offset>(-0.012,0,0.004)</offset><angle>-6.0</angle><scale>(1.020,1,0.985)</scale></li>
+            <li><tick>54</tick><offset>(-0.014,0,0.018)</offset><angle>4.5</angle><scale>(0.975,1,1.032)</scale></li>
+            <li><tick>68</tick><offset>(0.006,0,-0.004)</offset><angle>2.0</angle><scale>(1.030,1,0.972)</scale></li>
+            <li><tick>82</tick><offset>(0,0,0.008)</offset><angle>-2.0</angle><scale>(0.990,1,1.015)</scale></li>
+            <li><tick>96</tick><offset>(0,0,0.000)</offset><angle>0.5</angle><scale>(1.018,1,0.988)</scale></li>
+            <li><tick>120</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Curious head-tilt and glance (smallbird_default_Baked + default2_Baked) -->
+      <li>
+        <key>PunishingBird_Face</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.700, 0.663)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+            <li><tick>20</tick><offset>(-0.010,0,0.008)</offset><angle>10</angle></li>
+            <li><tick>42</tick><offset>(-0.032,0,0.012)</offset><angle>-14</angle></li>
+            <li><tick>56</tick><offset>(-0.025,0,0.015)</offset><angle>16</angle></li>
+            <li><tick>72</tick><offset>(-0.014,0,0.010)</offset><angle>-10</angle></li>
+            <li><tick>92</tick><offset>(0.004,0,0.002)</offset><angle>5</angle></li>
+            <li><tick>120</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Gentle folded-wing ruffle synced with curious hop -->
+      <li>
+        <key>PunishingBird_FoldedWing</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.512, 0.570)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>44</tick><angle>0</angle></li>
+            <li><tick>52</tick><angle>10</angle></li>
+            <li><tick>60</tick><angle>-5</angle></li>
+            <li><tick>68</tick><angle>7</angle></li>
+            <li><tick>78</tick><angle>0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 2. CONTAINED DURING WORK ==================== -->
+  <!-- Livelier head tilts and playful hop-squishes while an employee works on Punishing Bird -->
+  <AnimationDef>
+    <defName>PunishingBird_Work</defName>
+    <durationTicks>60</durationTicks>
+    <playWhenDowned>true</playWhenDowned>
+    <keyframeParts>
+      <li>
+        <key>PunishingBird_PerchChain</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.195, 0.361)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-3.2</angle></li>
+            <li><tick>30</tick><angle>6.0</angle></li>
+            <li><tick>60</tick><angle>-3.2</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_PerchBlade</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.195, 0.266)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>34</tick><angle>6.2</angle></li>
+            <li><tick>60</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_Body</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.500, 0.275)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+            <li><tick>14</tick><offset>(-0.012,0,0.032)</offset><angle>-7</angle><scale>(0.965,1,1.045)</scale></li>
+            <li><tick>28</tick><offset>(0.010,0,-0.008)</offset><angle>6</angle><scale>(1.040,1,0.960)</scale></li>
+            <li><tick>44</tick><offset>(-0.008,0,0.028)</offset><angle>-5</angle><scale>(0.975,1,1.035)</scale></li>
+            <li><tick>60</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_Face</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.700, 0.663)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+            <li><tick>14</tick><offset>(-0.025,0,0.014)</offset><angle>-20</angle></li>
+            <li><tick>28</tick><offset>(-0.012,0,0.008)</offset><angle>22</angle></li>
+            <li><tick>44</tick><offset>(-0.028,0,0.016)</offset><angle>-18</angle></li>
+            <li><tick>60</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_FoldedWing</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.512, 0.570)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>14</tick><angle>14</angle></li>
+            <li><tick>28</tick><angle>-8</angle></li>
+            <li><tick>44</tick><angle>12</angle></li>
+            <li><tick>60</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 3. ESCAPED CALM FLY / MOVE (smallbird_fly_Baked, 20t = 0.333s) ==================== -->
+  <!-- Paired with 5-frame flapping sprites (FlyWingFront_1..5 & FlyWingBack_1..5 @ 4 ticks/frame) -->
+  <AnimationDef>
+    <defName>PunishingBird_Fly</defName>
+    <durationTicks>20</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>PunishingBird_BirdRoot</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0.22)</offset></li>
+            <li><tick>10</tick><offset>(0,0,0.12)</offset></li>
+            <li><tick>20</tick><offset>(0,0,0.22)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_Body</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.500, 0.500)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>2</angle><scale>(1.015,1,0.985)</scale></li>
+            <li><tick>11</tick><angle>9</angle><scale>(0.980,1,1.025)</scale></li>
+            <li><tick>20</tick><angle>2</angle><scale>(1.015,1,0.985)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_Face</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.700, 0.663)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>11</tick><angle>-14</angle></li>
+            <li><tick>20</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_FlyWingFront</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.320, 0.570)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+            <li><tick>7</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+            <li><tick>14</tick><offset>(0.055,0,-0.055)</offset><angle>-16</angle></li>
+            <li><tick>20</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_FlyWingBack</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.375, 0.575)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+            <li><tick>7</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+            <li><tick>14</tick><offset>(0.055,0,-0.065)</offset><angle>-16</angle></li>
+            <li><tick>20</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_Feet</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.500, 0.179)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>8</angle></li>
+            <li><tick>10</tick><angle>18</angle></li>
+            <li><tick>20</tick><angle>8</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 4. ESCAPED CALM HOVER / IDLE (30t = 0.50s) ==================== -->
+  <AnimationDef>
+    <defName>PunishingBird_FlyIdle</defName>
+    <durationTicks>30</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>PunishingBird_BirdRoot</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0.18)</offset></li>
+            <li><tick>15</tick><offset>(0,0,0.11)</offset></li>
+            <li><tick>30</tick><offset>(0,0,0.18)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_Body</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.500, 0.500)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-1</angle></li>
+            <li><tick>15</tick><angle>4</angle></li>
+            <li><tick>30</tick><angle>-1</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_FlyWingFront</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.320, 0.570)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+            <li><tick>18</tick><offset>(0.035,0,-0.035)</offset><angle>-12</angle></li>
+            <li><tick>30</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_FlyWingBack</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.375, 0.575)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+            <li><tick>18</tick><offset>(0.035,0,-0.040)</offset><angle>-12</angle></li>
+            <li><tick>30</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 5. CALM PECK ATTACK (FlyAttack, 46t = 0.767s) ==================== -->
+  <!-- Exact SmallBirdDef.fbx FlyAttack arc: flutter back & rear up -> dive-peck lunge at tick 23 -> recover -->
+  <AnimationDef>
+    <defName>PunishingBird_Peck</defName>
+    <durationTicks>46</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>PunishingBird_BirdRoot</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0.18)</offset></li>
+            <li><tick>8</tick><offset>(-0.10,0,0.28)</offset></li>
+            <li><tick>15</tick><offset>(-0.16,0,0.42)</offset></li>
+            <li><tick>23</tick><offset>(0.42,0,0.06)</offset></li>
+            <li><tick>28</tick><offset>(0.34,0,0.08)</offset></li>
+            <li><tick>46</tick><offset>(0,0,0.18)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_Body</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.500, 0.500)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle><scale>(1,1,1)</scale></li>
+            <li><tick>15</tick><angle>-18</angle><scale>(0.95,1,1.06)</scale></li>
+            <li><tick>23</tick><angle>22</angle><scale>(1.10,1,0.92)</scale></li>
+            <li><tick>30</tick><angle>10</angle><scale>(1.03,1,0.98)</scale></li>
+            <li><tick>46</tick><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_Face</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.700, 0.663)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>15</tick><angle>-12</angle></li>
+            <li><tick>23</tick><angle>14</angle></li>
+            <li><tick>46</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_FlyWingFront</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.320, 0.570)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>15</tick><angle>-22</angle></li>
+            <li><tick>23</tick><angle>14</angle></li>
+            <li><tick>46</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_FlyWingBack</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.375, 0.575)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>15</tick><angle>-22</angle></li>
+            <li><tick>23</tick><angle>14</angle></li>
+            <li><tick>46</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 6. ENRAGED CHASE FLY (smallbird_attack_fly_Baked + attack_loop, 20t) ==================== -->
+  <!-- Solid crimson body hurtling forward with its four massive chest jaws cracked menacingly open & pulsing -->
+  <AnimationDef>
+    <defName>PunishingBird_EnragedFly</defName>
+    <durationTicks>20</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>PunishingBird_BirdRoot</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0.24)</offset></li>
+            <li><tick>10</tick><offset>(0,0,0.12)</offset></li>
+            <li><tick>20</tick><offset>(0,0,0.24)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_Body</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.500, 0.500)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-14</angle><scale>(1.04,1,0.97)</scale></li>
+            <li><tick>10</tick><angle>-6</angle><scale>(0.97,1,1.04)</scale></li>
+            <li><tick>20</tick><angle>-14</angle><scale>(1.04,1,0.97)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_FlyWingFront</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.320, 0.570)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>4</angle></li>
+            <li><tick>10</tick><offset>(0.06,0,-0.06)</offset><angle>-20</angle></li>
+            <li><tick>20</tick><offset>(0,0,0)</offset><angle>4</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_FlyWingBack</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.375, 0.575)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>4</angle></li>
+            <li><tick>10</tick><offset>(0.06,0,-0.07)</offset><angle>-20</angle></li>
+            <li><tick>20</tick><offset>(0,0,0)</offset><angle>4</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Four fleshy jaws half-extended & aggressively chattering while chasing the offender -->
+      <li>
+        <key>PunishingBird_JawEat1</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.541, 0.503)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>8</angle><scale>(0.52,1,0.52)</scale></li>
+            <li><tick>10</tick><angle>-6</angle><scale>(0.62,1,0.62)</scale></li>
+            <li><tick>20</tick><angle>8</angle><scale>(0.52,1,0.52)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_JawEat2</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.537, 0.482)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>4</angle><scale>(0.50,1,0.50)</scale></li>
+            <li><tick>10</tick><angle>-8</angle><scale>(0.60,1,0.60)</scale></li>
+            <li><tick>20</tick><angle>4</angle><scale>(0.50,1,0.50)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_JawEat3</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.528, 0.461)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-6</angle><scale>(0.50,1,0.50)</scale></li>
+            <li><tick>10</tick><angle>6</angle><scale>(0.60,1,0.60)</scale></li>
+            <li><tick>20</tick><angle>-6</angle><scale>(0.50,1,0.50)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_JawEat4</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.509, 0.452)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-10</angle><scale>(0.52,1,0.52)</scale></li>
+            <li><tick>10</tick><angle>6</angle><scale>(0.62,1,0.62)</scale></li>
+            <li><tick>20</tick><angle>-10</angle><scale>(0.52,1,0.52)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 7. ENRAGED MAW EXECUTION BITE (42t = 0.70s) ==================== -->
+  <!-- Combines smallbird_attack_start -> instantAttackPrev -> CHOMP IMPACT (tick 18) -> instantAttackEnd -> attack_end -->
+  <AnimationDef>
+    <defName>PunishingBird_EnragedAttack</defName>
+    <durationTicks>42</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>PunishingBird_BirdRoot</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0.22)</offset></li>
+            <li><tick>12</tick><offset>(-0.22,0,0.34)</offset></li>
+            <li><tick>18</tick><offset>(0.28,0,0.16)</offset></li>
+            <li><tick>24</tick><offset>(0.22,0,0.18)</offset></li>
+            <li><tick>42</tick><offset>(0,0,0.20)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_Body</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.500, 0.500)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-12</angle><scale>(1,1,1)</scale></li>
+            <li><tick>12</tick><angle>-32</angle><scale>(0.94,1,1.08)</scale></li>
+            <li><tick>18</tick><angle>14</angle><scale>(1.14,1,0.90)</scale></li>
+            <li><tick>25</tick><angle>4</angle><scale>(1.05,1,0.96)</scale></li>
+            <li><tick>42</tick><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_FlyWingFront</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.320, 0.570)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>12</tick><angle>-26</angle></li>
+            <li><tick>18</tick><angle>16</angle></li>
+            <li><tick>42</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>PunishingBird_FlyWingBack</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.375, 0.575)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>12</tick><angle>-26</angle></li>
+            <li><tick>18</tick><angle>16</angle></li>
+            <li><tick>42</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Upper Outer Jaw (Eat1, +41.6deg): rips wide open (-12deg, scale 0.94) -> SLAMS SHUT (+36deg) at tick 18 -> retracts -->
+      <li>
+        <key>PunishingBird_JawEat1</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.541, 0.503)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>6</angle><scale>(0.55,1,0.55)</scale></li>
+            <li><tick>12</tick><angle>-12</angle><scale>(0.94,1,0.94)</scale></li>
+            <li><tick>18</tick><angle>36</angle><scale>(0.96,1,0.96)</scale></li>
+            <li><tick>24</tick><angle>32</angle><scale>(0.90,1,0.90)</scale></li>
+            <li><tick>34</tick><angle>16</angle><scale>(0.38,1,0.38)</scale></li>
+            <li><tick>42</tick><angle>10</angle><scale>(0.05,1,0.05)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Upper Inner Jaw (Eat2, +27.5deg): rips wide open (-10deg) -> SLAMS SHUT (+25deg) at tick 18 -> retracts -->
+      <li>
+        <key>PunishingBird_JawEat2</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.537, 0.482)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>2</angle><scale>(0.55,1,0.55)</scale></li>
+            <li><tick>12</tick><angle>-10</angle><scale>(0.94,1,0.94)</scale></li>
+            <li><tick>18</tick><angle>25</angle><scale>(0.96,1,0.96)</scale></li>
+            <li><tick>24</tick><angle>22</angle><scale>(0.90,1,0.90)</scale></li>
+            <li><tick>34</tick><angle>12</angle><scale>(0.36,1,0.36)</scale></li>
+            <li><tick>42</tick><angle>8</angle><scale>(0.05,1,0.05)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Lower Inner Jaw (Eat3, -49.1deg): rips wide open (+10deg) -> SLAMS SHUT (-42deg) at tick 18 -> retracts -->
+      <li>
+        <key>PunishingBird_JawEat3</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.528, 0.461)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-4</angle><scale>(0.55,1,0.55)</scale></li>
+            <li><tick>12</tick><angle>10</angle><scale>(0.94,1,0.94)</scale></li>
+            <li><tick>18</tick><angle>-42</angle><scale>(0.96,1,0.96)</scale></li>
+            <li><tick>24</tick><angle>-38</angle><scale>(0.90,1,0.90)</scale></li>
+            <li><tick>34</tick><angle>-20</angle><scale>(0.36,1,0.36)</scale></li>
+            <li><tick>42</tick><angle>-10</angle><scale>(0.05,1,0.05)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Lower Outer Jaw (Eat4, -61.9deg): rips wide open (+12deg) -> SLAMS SHUT (-54deg) at tick 18 -> retracts -->
+      <li>
+        <key>PunishingBird_JawEat4</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.509, 0.452)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-6</angle><scale>(0.55,1,0.55)</scale></li>
+            <li><tick>12</tick><angle>12</angle><scale>(0.94,1,0.94)</scale></li>
+            <li><tick>18</tick><angle>-54</angle><scale>(0.96,1,0.96)</scale></li>
+            <li><tick>24</tick><angle>-50</angle><scale>(0.90,1,0.90)</scale></li>
+            <li><tick>34</tick><angle>-26</angle><scale>(0.38,1,0.38)</scale></li>
+            <li><tick>42</tick><angle>-12</angle><scale>(0.05,1,0.05)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+</Defs>

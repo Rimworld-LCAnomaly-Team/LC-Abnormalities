@@ -345,4 +345,54 @@
     </modExtensions>
   </ThingDef>
 
+  <!-- D-09-104 Backward Clock -->
+  <ThingDef ParentName="LC_ToolEntityBase">
+    <defName>BackwardClock</defName>
+    <label>Backward Clock</label>
+    <description>An antique vacuum-tube chronometer (D-09-104) whose four Nixie bulbs count down toward an impossible second chance.\n\nLevel III+ employees may charge the dial one stage at a time (0→4). Once fully charged (4/4), only a Level V employee may trigger Time Rewind: erasing themselves from existence to instantly suppress all non-ALEPH breached Abnormalities and Ordeals on the map and restore non-ALEPH Qliphoth Counters.</description>
+    <uiIconPath>UI/CodexEntries/BackwardClock_MenuIcon</uiIconPath>
+    <comps>
+      <li Class="LCAbnormalities.BackwardClock.CompProperties_BackwardClock">
+        <toolMode>SingleUse</toolMode>
+        <studyMetric>UseCount</studyMetric>
+        <useDurationTicks>150</useDurationTicks>
+        <cooldownTicks>600</cooldownTicks>
+        <useLabelKey>LC_BackwardClock_UseFloatMenu</useLabelKey>
+        <useGizmoLabelKey>LC_BackwardClock_UseGizmoLabel</useGizmoLabelKey>
+        <useGizmoDescKey>LC_BackwardClock_UseGizmoDesc</useGizmoDescKey>
+        <useIconPath>UI/CodexEntries/BackwardClock_MenuIcon</useIconPath>
+        <eggDef>BackwardClockEgg</eggDef>
+        <expStatusType>Prudence</expStatusType>
+        <expGainOnUse>0.30</expGainOnUse>
+        <maxCharges>4</maxCharges>
+        <minChargeEmployeeLevel>3</minChargeEmployeeLevel>
+        <minActivateEmployeeLevel>5</minActivateEmployeeLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>1</threshold>
+            <label>Observation Level: I</label>
+            <text>Only employees of Level III or higher can wind Backward Clock's vacuum tubes, advancing its charge by 1 per operation up to 4/4.</text>
+          </li>
+          <li>
+            <threshold>3</threshold>
+            <label>Observation Level: II</label>
+            <text>At full charge (4/4), all four bulbs blaze crimson. Only a Level V employee possesses the resolve to pull the rewind lever.</text>
+          </li>
+          <li>
+            <threshold>5</threshold>
+            <label>Observation Level: III</label>
+            <text>Triggering Time Rewind erases the activating employee forever, instantaneously suppresses every non-ALEPH breached Abnormality and Ordeal on the map, and restores all non-ALEPH Qliphoth Counters.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>WAW</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
 </Defs>

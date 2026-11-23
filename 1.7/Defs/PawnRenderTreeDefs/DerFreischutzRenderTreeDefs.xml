@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Articulated Lobotomy Corporation Spine hierarchy (matan.txt) -->
+  <PawnRenderTreeDef>
+    <defName>DerFreischutz</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li Class="LCAbnormalities.DerFreischutz.PawnRenderNodeProperties_DerFreischutzPart">
+          <debugLabel>DerFreischutzRoot</debugLabel>
+          <tagDef>DerFreischutz_Root</tagDef>
+          <isRoot>true</isRoot>
+          <useGraphic>false</useGraphic>
+          <formScale>2.2</formScale>
+          <children>
+            <!-- bone (l reg) -->
+            <li Class="LCAbnormalities.DerFreischutz.PawnRenderNodeProperties_DerFreischutzPart">
+              <debugLabel>Legs</debugLabel>
+              <tagDef>DerFreischutz_Legs</tagDef>
+              <texPath>Things/Pawn/DerFreischutz/Parts/DF_Legs</texPath>
+              <texPathLeft>Things/Pawn/DerFreischutz/Parts/Left/DF_Legs</texPathLeft>
+              <baseLayer>10</baseLayer>
+              <children>
+                <!-- bone2 (body 2) -->
+                <li Class="LCAbnormalities.DerFreischutz.PawnRenderNodeProperties_DerFreischutzPart">
+                  <debugLabel>Waist</debugLabel>
+                  <tagDef>DerFreischutz_Waist</tagDef>
+                  <texPath>Things/Pawn/DerFreischutz/Parts/DF_Waist</texPath>
+                  <texPathLeft>Things/Pawn/DerFreischutz/Parts/Left/DF_Waist</texPathLeft>
+                  <baseLayer>11</baseLayer>
+                  <children>
+                    <!-- bone3 (body) -->
+                    <li Class="LCAbnormalities.DerFreischutz.PawnRenderNodeProperties_DerFreischutzPart">
+                      <debugLabel>Torso</debugLabel>
+                      <tagDef>DerFreischutz_Torso</tagDef>
+                      <texPath>Things/Pawn/DerFreischutz/Parts/DF_Torso</texPath>
+                      <texPathLeft>Things/Pawn/DerFreischutz/Parts/Left/DF_Torso</texPathLeft>
+                      <baseLayer>9</baseLayer>
+                      <children>
+                        <!-- back + 22 attached to bone3 -->
+                        <li Class="LCAbnormalities.DerFreischutz.PawnRenderNodeProperties_DerFreischutzPart">
+                          <debugLabel>BackCloak</debugLabel>
+                          <tagDef>DerFreischutz_BackCloak</tagDef>
+                          <texPath>Things/Pawn/DerFreischutz/Parts/DF_BackCloak</texPath>
+                          <texPathLeft>Things/Pawn/DerFreischutz/Parts/Left/DF_BackCloak</texPathLeft>
+                          <baseLayer>4</baseLayer>
+                        </li>
+                        <!-- bone4 (head) -->
+                        <li Class="LCAbnormalities.DerFreischutz.PawnRenderNodeProperties_DerFreischutzPart">
+                          <debugLabel>Head</debugLabel>
+                          <tagDef>DerFreischutz_Head</tagDef>
+                          <texPath>Things/Pawn/DerFreischutz/Parts/DF_Head</texPath>
+                          <texPathLeft>Things/Pawn/DerFreischutz/Parts/Left/DF_Head</texPathLeft>
+                          <baseLayer>5</baseLayer>
+                        </li>
+                        <!-- bone8 -> bone9 (back arm) -->
+                        <li Class="LCAbnormalities.DerFreischutz.PawnRenderNodeProperties_DerFreischutzPart">
+                          <debugLabel>BackArmUpper</debugLabel>
+                          <tagDef>DerFreischutz_BackArmUpper</tagDef>
+                          <texPath>Things/Pawn/DerFreischutz/Parts/DF_BackArmUpper</texPath>
+                          <texPathLeft>Things/Pawn/DerFreischutz/Parts/Left/DF_BackArmUpper</texPathLeft>
+                          <baseLayer>7</baseLayer>
+                          <children>
+                            <li Class="LCAbnormalities.DerFreischutz.PawnRenderNodeProperties_DerFreischutzPart">
+                              <debugLabel>BackArmLower</debugLabel>
+                              <tagDef>DerFreischutz_BackArmLower</tagDef>
+                              <texPath>Things/Pawn/DerFreischutz/Parts/DF_BackArmLower</texPath>
+                              <texPathLeft>Things/Pawn/DerFreischutz/Parts/Left/DF_BackArmLower</texPathLeft>
+                              <baseLayer>8</baseLayer>
+                            </li>
+                          </children>
+                        </li>
+                        <!-- bone5 (11 shoulder mantle) -->
+                        <li Class="LCAbnormalities.DerFreischutz.PawnRenderNodeProperties_DerFreischutzPart">
+                          <debugLabel>ShoulderCape</debugLabel>
+                          <tagDef>DerFreischutz_ShoulderCape</tagDef>
+                          <texPath>Things/Pawn/DerFreischutz/Parts/DF_ShoulderCape</texPath>
+                          <texPathLeft>Things/Pawn/DerFreischutz/Parts/Left/DF_ShoulderCape</texPathLeft>
+                          <baseLayer>12</baseLayer>
+                        </li>
+                        <!-- bone10 -> bone11 (front arm + rifle) -->
+                        <li Class="LCAbnormalities.DerFreischutz.PawnRenderNodeProperties_DerFreischutzPart">
+                          <debugLabel>FrontArm</debugLabel>
+                          <tagDef>DerFreischutz_FrontArm</tagDef>
+                          <texPath>Things/Pawn/DerFreischutz/Parts/DF_FrontArm</texPath>
+                          <texPathLeft>Things/Pawn/DerFreischutz/Parts/Left/DF_FrontArm</texPathLeft>
+                          <baseLayer>14</baseLayer>
+                          <children>
+                            <li Class="LCAbnormalities.DerFreischutz.PawnRenderNodeProperties_DerFreischutzPart">
+                              <debugLabel>Rifle</debugLabel>
+                              <tagDef>DerFreischutz_Rifle</tagDef>
+                              <texPath>Things/Pawn/DerFreischutz/Parts/DF_Rifle</texPath>
+                              <texPathLeft>Things/Pawn/DerFreischutz/Parts/Left/DF_Rifle</texPathLeft>
+                              <baseLayer>13</baseLayer>
+                            </li>
+                          </children>
+                        </li>
+                        <!-- bone6 -> bone7 (cape upper + lower) -->
+                        <li Class="LCAbnormalities.DerFreischutz.PawnRenderNodeProperties_DerFreischutzPart">
+                          <debugLabel>CapeUpper</debugLabel>
+                          <tagDef>DerFreischutz_CapeUpper</tagDef>
+                          <texPath>Things/Pawn/DerFreischutz/Parts/DF_CapeUpper</texPath>
+                          <texPathLeft>Things/Pawn/DerFreischutz/Parts/Left/DF_CapeUpper</texPathLeft>
+                          <baseLayer>15</baseLayer>
+                          <children>
+                            <li Class="LCAbnormalities.DerFreischutz.PawnRenderNodeProperties_DerFreischutzPart">
+                              <debugLabel>CapeLower</debugLabel>
+                              <tagDef>DerFreischutz_CapeLower</tagDef>
+                              <texPath>Things/Pawn/DerFreischutz/Parts/DF_CapeLower</texPath>
+                              <texPathLeft>Things/Pawn/DerFreischutz/Parts/Left/DF_CapeLower</texPathLeft>
+                              <baseLayer>16</baseLayer>
+                            </li>
+                          </children>
+                        </li>
+                      </children>
+                    </li>
+                  </children>
+                </li>
+              </children>
+            </li>
+          </children>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

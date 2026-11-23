@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>LC_BigBirdApproach</defName>
+    <driverClass>LCAbnormalities.BigBird.JobDriver_BigBirdApproach</driverClass>
+    <reportString>drawn toward Big Bird's lantern.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+</Defs>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_BaseMeleeWeapon_EGO">
+    <defName>EgoWeapon_BigBird</defName>
+    <label>E.G.O. Weapon (Lamp)</label>
+    <description>A colossal brass lantern-hammer forged from Big Bird's watchful eyes (WAW).\nSwings slowly but crushes targets with heavy Black damage across a 2-cell shockwave, with a 25% chance to afflict Lantern Gaze—dazzling foes and deepening incoming Black damage by 25%.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/EgoWeapon_BigBird</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.2, 2.2)</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>4.2</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>lantern hammerhead</label>
+        <capacities>
+          <li>LC_LampCrush</li>
+        </capacities>
+        <power>28</power>
+        <cooldownTime>2.05</cooldownTime>
+        <soundMeleeHit>LC_Lamp_Hammer</soundMeleeHit>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Black</damageType>
+        <riskLevel>WAW</riskLevel>
+        <damageMultiplier>1</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

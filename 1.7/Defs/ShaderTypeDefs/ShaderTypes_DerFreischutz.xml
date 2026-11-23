@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderTypeDef>
+    <defName>LC_MagicBulletDarkRift</defName>
+    <shaderPath>Map/LC_MagicBulletDarkRift</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_MagicBulletBeam</defName>
+    <shaderPath>Map/LC_MagicBulletBeam</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_MagicBulletPortal</defName>
+    <shaderPath>Map/LC_MagicBulletPortal</shaderPath>
+  </ShaderTypeDef>
+
+</Defs>

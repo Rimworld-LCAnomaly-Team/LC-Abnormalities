@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_EntityBase">
+    <defName>Schadenfreude</defName>
+    <label>Schadenfreude</label>
+    <description>A rusted iron box mounted with antique camera lenses and a single keyhole through which an unblinking eye peers out (O-05-76).\n\nThe polar opposite of The Burrowing Heaven: NEVER keep your camera focused on Schadenfreude while an employee works on it, or its Qliphoth Counter (max 2) will plummet. Once breached, it springs open into a bladed mechanical terror whenever viewed on-screen—yet freezes motionless inside its armored casing the instant you look away.</description>
+    <uiIconPath>UI/CodexEntries/Schadenfreude</uiIconPath>
+    <thingClass>LCAbnormalities.Schadenfreude.LC_SchadenfreudePawn</thingClass>
+    <statBases>
+      <MoveSpeed>4.6</MoveSpeed>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-200</ComfyTemperatureMin>
+      <ComfyTemperatureMax>150</ComfyTemperatureMax>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <LC_MinimumContainmentStrength>55</LC_MinimumContainmentStrength>
+      <StaggerDurationFactor>0.15</StaggerDurationFactor>
+      <ToxicResistance>1</ToxicResistance>
+    </statBases>
+    <tools>
+      <li>
+        <label>mechanical drill saw</label>
+        <capacities><li>Cut</li></capacities>
+        <power>18</power>
+        <cooldownTime>1.30</cooldownTime>
+      </li>
+    </tools>
+    <race>
+      <body>OneSin</body>
+      <baseBodySize>1.45</baseBodySize>
+      <baseHealthScale>6.5</baseHealthScale>
+      <intelligence>ToolUser</intelligence>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <fleshType>LC_AbnormalityOrganic</fleshType>
+      <foodType>None</foodType>
+      <hasCorpse>false</hasCorpse>
+      <lifeExpectancy>1000</lifeExpectancy>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <disableIgniteVerb>true</disableIgniteVerb>
+      <trainability>None</trainability>
+      <renderTree>Schadenfreude</renderTree>
+      <thinkTreeMain>SchadenfreudeMain</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+      <lifeStageAges>
+        <li>
+          <def>LC_EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="LCAbnormalities.Schadenfreude.CompProperties_Schadenfreude">
+        <qliphothCountMax>2</qliphothCountMax>
+        <studySucessRateBase>0.0</studySucessRateBase>
+        <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>true</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
+        <dyingFxDef>DyingSchadenfreude</dyingFxDef>
+        <workDamageDef>LC_RedDamage</workDamageDef>
+        <workDamageRange>3~6</workDamageRange>
+        <escapedLetterLabelKey>LC_Schadenfreude_EscapedLabel</escapedLetterLabelKey>
+        <escapedLetterTextKey>LC_Schadenfreude_EscapedText</escapedLetterTextKey>
+        <killedLetterLabelKey>LC_Schadenfreude_SuppressedLabel</killedLetterLabelKey>
+        <killedLetterTextKey>LC_Schadenfreude_SuppressedText</killedLetterTextKey>
+        <instinctProbs>
+          <li>0.0</li><li>0.0</li><li>0.0</li><li>0.0</li><li>0.0</li>
+        </instinctProbs>
+        <insightProbs>
+          <li>0.30</li><li>0.40</li><li>0.40</li><li>0.50</li><li>0.50</li>
+        </insightProbs>
+        <attachmentProbs>
+          <li>0.40</li><li>0.40</li><li>0.40</li><li>0.30</li><li>0.20</li>
+        </attachmentProbs>
+        <repressionProbs>
+          <li>0.40</li><li>0.45</li><li>0.50</li><li>0.55</li><li>0.60</li>
+        </repressionProbs>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <lookForTargetOnEscape>true</lookForTargetOnEscape>
+        <hasAnimation>true</hasAnimation>
+        <heldDrawScale>1.0</heldDrawScale>
+        <heldDrawOffset>(0, 0, -0.04)</heldDrawOffset>
+      </li>
+      <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
+        <frequencyTicks>60000</frequencyTicks>
+        <studyTimesPeriod>1</studyTimesPeriod>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <speedOffsetsByProgress>
+          <li>0</li><li>0.04</li><li>0.04</li><li>0.08</li><li>0.08</li>
+        </speedOffsetsByProgress>
+        <successOffsetsByProgress>
+          <li>0</li><li>0.04</li><li>0.04</li><li>0.08</li><li>0.08</li>
+        </successOffsetsByProgress>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_PeBoxProduce">
+        <peBoxDef>EnkephalinBox</peBoxDef>
+        <amountProdueRangeNormal>6~10</amountProdueRangeNormal>
+        <amountProdueMax>18</amountProdueMax>
+        <boxTexOffsetZ>0.0742</boxTexOffsetZ>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
+        <accessoryDef>Accessory_Schadenfreude</accessoryDef>
+        <accessoryChance>0.04</accessoryChance>
+        <unlockLevel>2</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
+        <weaponExtracted>EgoWeapon_Schadenfreude</weaponExtracted>
+        <weaponIconPath>UI/Commands/ExtractEGO_Schadenfreude_Weapon</weaponIconPath>
+        <amountMaxWeapon>1</amountMaxWeapon>
+        <weaponExtractedNeed>45</weaponExtractedNeed>
+        <armorExtracted>Apparel_SchadenfreudeSuit</armorExtracted>
+        <armorIconPath>UI/Commands/ExtractEGO_Schadenfreude_Armor</armorIconPath>
+        <amountMaxArmor>3</amountMaxArmor>
+        <armorExtractedNeed>30</armorExtractedNeed>
+        <unlockLevel>3</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>3</threshold>
+            <label>Observation Level: I</label>
+            <text>Never assign Instinct work (0% success rate). Repression and Insight yield steady results—just remember to pan your camera away before work begins!</text>
+          </li>
+          <li>
+            <threshold>7</threshold>
+            <label>Observation Level: II</label>
+            <text>Watching Schadenfreude on screen for more than ~3.5 seconds during work drops its Qliphoth Counter (max 2), as does any Bad work result.\nUnlocks the E.G.O. Gift 'Gaze'.</text>
+          </li>
+          <li>
+            <threshold>12</threshold>
+            <label>Observation Level: III</label>
+            <text>When breached, looking at Schadenfreude awakens its deadly rotary saws (R 1.2 / W 0.5 / B 1.0 / P 1.5). Panning your camera away freezes it completely motionless inside its iron box (R 0.6 / W 0.2 / B 0.5 / P 0.7).</text>
+          </li>
+          <li>
+            <threshold>18</threshold>
+            <label>Observation Level: IV</label>
+            <text>Do not stare into the keyhole—it only delights in suffering you witness.\nUnlocks the HE E.G.O. Saw Polearm and Suit 'Gaze'.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>0.6</redResistance>
+        <whiteResistance>0.2</whiteResistance>
+        <blackResistance>0.5</blackResistance>
+        <paleResistance>0.7</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

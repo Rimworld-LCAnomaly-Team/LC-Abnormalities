@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderTypeDef>
+    <defName>LC_BigBirdBlackoutAura</defName>
+    <shaderPath>Map/LC_BigBirdBlackoutAura</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_BigBirdLanternWave</defName>
+    <shaderPath>Map/LC_BigBirdLanternWave</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_BigBirdEyeMark</defName>
+    <shaderPath>Map/LC_BigBirdEyeMark</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_BigBirdBiteBurst</defName>
+    <shaderPath>Map/LC_BigBirdBiteBurst</shaderPath>
+  </ShaderTypeDef>
+
+</Defs>

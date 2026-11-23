@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_BaseMeleeWeapon_EGO">
+    <defName>EgoWeapon_AllAroundHelper</defName>
+    <label>E.G.O. Weapon (Grinder Mk4)</label>
+    <description>A high-RPM rotary buzzsaw extracted from All-Around Helper (HE).\nSlices rapidly with Red damage and shreds nearby foes around the primary target.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/EgoWeapon_AllAroundHelper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.05, 2.05)</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>2.8</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>rotary sawblade</label>
+        <capacities>
+          <li>LC_GrinderMk4Cleave</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>1.15</cooldownTime>
+        <soundMeleeHit>LC_GrinderMk4_Hit</soundMeleeHit>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Red</damageType>
+        <riskLevel>HE</riskLevel>
+        <damageMultiplier>1</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

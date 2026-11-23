@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- 黑森林三鸟联动预警 -->
+  <LC_ThreeBirds_ResonanceWarning>惩戒鸟、审判鸟与大鸟同时突破了收容！黑森林深处传来令人窒息的死寂回响……</LC_ThreeBirds_ResonanceWarning>
+
+  <!-- T-05-41 小帮手 -->
+  <LC_AllAroundHelper_EscapedLabel>小帮手突破收容！</LC_AllAroundHelper_EscapedLabel>
+  <LC_AllAroundHelper_EscapedText>{0}弹开了外壳并启动高速清扫狂暴模式！请当心它的旋转锯刃直线冲锋。</LC_AllAroundHelper_EscapedText>
+  <LC_AllAroundHelper_SuppressedLabel>小帮手已被镇压</LC_AllAroundHelper_SuppressedLabel>
+  <LC_AllAroundHelper_SuppressedText>{0}已停止运转并还原为收容蛋。</LC_AllAroundHelper_SuppressedText>
+
+  <!-- O-02-62 审判鸟 -->
+  <LC_JudgementBird_EscapedLabel>审判鸟突破收容！</LC_JudgementBird_EscapedLabel>
+  <LC_JudgementBird_EscapedText>{0}已脱离收容！它倾斜的不公天平将对周围人类造成无视常规护甲的百分比蓝伤审判。</LC_JudgementBird_EscapedText>
+  <LC_JudgementBird_SuppressedLabel>审判鸟已被镇压</LC_JudgementBird_SuppressedLabel>
+  <LC_JudgementBird_SuppressedText>{0}已重归沉寂并还原为收容蛋。</LC_JudgementBird_SuppressedText>
+  <LC_JudgementBird_ScaleTiltMsg>审判鸟倾斜了不公的天平——苍白灵魂审判席卷了周围生灵！</LC_JudgementBird_ScaleTiltMsg>
+
+  <!-- O-02-40 大鸟 -->
+  <LC_BigBird_EscapedLabel>大鸟突破收容！</LC_BigBird_EscapedLabel>
+  <LC_BigBird_EscapedText>{0}提着金黄目灯走出了收容单元！请及时点击被魅惑殖民者的“唤醒清醒”按钮，避免他们步入巨喙之中。</LC_BigBird_EscapedText>
+  <LC_BigBird_SuppressedLabel>大鸟已被镇压</LC_BigBird_SuppressedLabel>
+  <LC_BigBird_SuppressedText>{0}的灯火熄灭，化为收容蛋静静躺落在地。</LC_BigBird_SuppressedText>
+  <LC_BigBird_EnchantedMsg>{0}被大鸟的目灯魅惑，正身不由己地走向它！请立即使用“唤醒清醒”打断魅惑。</LC_BigBird_EnchantedMsg>
+  <LC_BigBird_BiteMsg>大鸟张开巨喙猛然咬向了{0}！</LC_BigBird_BiteMsg>
+  <LC_BigBird_SnapOutGizmoLabel>唤醒清醒</LC_BigBird_SnapOutGizmoLabel>
+  <LC_BigBird_SnapOutGizmoDesc>立即摇醒该殖民者，解除大鸟目灯施加的魅惑牵引状态。</LC_BigBird_SnapOutGizmoDesc>
+
+  <!-- F-01-57 小红帽雇佣兵 -->
+  <LC_LittleRed_EscapedLabel>小红帽雇佣兵突破收容！</LC_LittleRed_EscapedLabel>
+  <LC_LittleRed_EscapedText>{0}已陷入敌对狂暴并破笼而出！当心她的霰弹枪点射与赤红镰刃连斩。</LC_LittleRed_EscapedText>
+  <LC_LittleRed_SuppressedLabel>小红帽雇佣兵已被镇压</LC_LittleRed_SuppressedLabel>
+  <LC_LittleRed_SuppressedText>{0}已被制服并还原为收容蛋。</LC_LittleRed_SuppressedText>
+  <LC_LittleRed_EscapeCounterDropMsg>其他异想体突破收容令{0}躁动不安（逆卡巴拉计数器：{1}）。</LC_LittleRed_EscapeCounterDropMsg>
+  <LC_LittleRed_HiredMsg>小红帽雇佣兵接下了委托，正作为友军前去猎杀{0}！</LC_LittleRed_HiredMsg>
+  <LC_LittleRed_HireLabel>委托猎杀（{0} PE）</LC_LittleRed_HireLabel>
+  <LC_LittleRed_HireDesc>支付 {0} 单位独立 PE-Box，雇佣小红帽雇佣兵作为友军出击猎杀地图上的任意敌对目标。</LC_LittleRed_HireDesc>
+  <LC_LittleRed_NotEnoughPeBox>需要 {0} 单位独立 PE-Box（当前仅 {1}）。</LC_LittleRed_NotEnoughPeBox>
+  <LC_LittleRed_InspectPlatform>雇佣猎杀委托费：{0} PE-Box</LC_LittleRed_InspectPlatform>
+  <LC_LittleRed_RecallLabel>召回雇佣兵</LC_LittleRed_RecallLabel>
+  <LC_LittleRed_RecallDesc>命令小红帽雇佣兵结束本次委托并直接返回原先的收容平台。</LC_LittleRed_RecallDesc>
+
+  <!-- D-09-104 逆流时钟 -->
+  <LC_BackwardClock_UseFloatMenu>操作{0}</LC_BackwardClock_UseFloatMenu>
+  <LC_BackwardClock_UseGizmoLabel>充能 / 发动倒流...</LC_BackwardClock_UseGizmoLabel>
+  <LC_BackwardClock_UseGizmoDesc>派遣 III 级及以上员工为逆流时钟逐级充能（0→4）；满充能（4/4）后可派遣 V 级员工牺牲自身发动时光倒流。</LC_BackwardClock_UseGizmoDesc>
+  <LC_BackwardClock_NeedLv3>充能需要综合等级 III 及以上员工</LC_BackwardClock_NeedLv3>
+  <LC_BackwardClock_NeedLv5>发动时光倒流需要综合等级 V 员工</LC_BackwardClock_NeedLv5>
+  <LC_BackwardClock_ChargedMsg>{0}转动了逆流时钟的表盘（充能进度：{1}/{2}）。</LC_BackwardClock_ChargedMsg>
+  <LC_BackwardClock_FullyChargedMsg>{0}使逆流时钟达到满充能（{1}/{2}）！现可由 V 级员工启动时光倒流。</LC_BackwardClock_FullyChargedMsg>
+  <LC_BackwardClock_UnknownUser>一名员工</LC_BackwardClock_UnknownUser>
+  <LC_BackwardClock_RewindLabel>逆流时钟：时光倒流已发动</LC_BackwardClock_RewindLabel>
+  <LC_BackwardClock_RewindText>{0}拉下了逆流时钟的终末拉杆，从这条时间线中彻底消失。\n\n刺目的逆流光波横扫整座设施：共瞬间镇压了 {1} 个非 ALEPH 级突破异想体/考验单位，并重置了所有非 ALEPH 级收容单元的逆卡巴拉计数器。</LC_BackwardClock_RewindText>
+  <LC_BackwardClock_InspectReady>已就绪 — 需 V 级员工发动</LC_BackwardClock_InspectReady>
+  <LC_BackwardClock_InspectCharging>充能中 — 需 III 级以上员工</LC_BackwardClock_InspectCharging>
+  <LC_BackwardClock_InspectCharge>充能：{0}/{1}（{2}） | 已发动倒流：{3} 次</LC_BackwardClock_InspectCharge>
+
+  <!-- O-05-76 幸灾乐祸 -->
+  <LC_Schadenfreude_EscapedLabel>幸灾乐祸突破收容！</LC_Schadenfreude_EscapedLabel>
+  <LC_Schadenfreude_EscapedText>{0}已脱离收容！请立即将镜头移开——只要不看着它，它就会缩回铁盒保持静止；一旦进入你的视野，它将弹开机械钻锯高速追杀生灵！</LC_Schadenfreude_EscapedText>
+  <LC_Schadenfreude_SuppressedLabel>幸灾乐祸已被镇压</LC_Schadenfreude_SuppressedLabel>
+  <LC_Schadenfreude_SuppressedText>{0}锁孔中的眼睛缓缓闭合，还原为收容蛋。</LC_Schadenfreude_SuppressedText>
+  <LC_Schadenfreude_WorkWarning>员工正在对幸灾乐祸作业——请将摄像机移出它的收容室，切勿注视！</LC_Schadenfreude_WorkWarning>
+  <LC_Schadenfreude_WatchedWorkDropMsg>你在作业期间持续注视了{0}！它的逆卡巴拉计数器下降了。</LC_Schadenfreude_WatchedWorkDropMsg>
+  <LC_Schadenfreude_InspectWatched>注视状态：正在被注视（危险——作业时请移开镜头！）</LC_Schadenfreude_InspectWatched>
+  <LC_Schadenfreude_InspectUnwatched>注视状态：脱离注视（安全）</LC_Schadenfreude_InspectUnwatched>
+
+</LanguageData>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderTreeDef>
+    <defName>BigBird</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+
+        <!-- O-02-40 Big Bird articulated multi-part rig (BigBird.fbx) -->
+        <li Class="LCAbnormalities.BigBird.PawnRenderNodeProperties_BigBirdPart">
+          <debugLabel>BigBirdRoot</debugLabel>
+          <tagDef>BigBird_Root</tagDef>
+          <role>Root</role>
+          <useGraphic>false</useGraphic>
+          <formScale>2.85</formScale>
+          <containedScale>2.35</containedScale>
+          <containedOffset>(0, 0, -0.08)</containedOffset>
+          <flipOnWest>true</flipOnWest>
+          <children>
+
+            <!-- Articulated Back Leg (behind body) -->
+            <li Class="LCAbnormalities.BigBird.PawnRenderNodeProperties_BigBirdPart">
+              <debugLabel>BackThigh</debugLabel>
+              <tagDef>BigBird_BackThigh</tagDef>
+              <role>BackThigh</role>
+              <texPath>Things/Pawn/BigBird/Parts/BackThigh</texPath>
+              <texPathLeft>Things/Pawn/BigBird/Parts/Left/BackThigh</texPathLeft>
+              <baseLayer>6.0</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.BigBird.PawnRenderNodeProperties_BigBirdPart">
+                  <debugLabel>BackShinFoot</debugLabel>
+                  <tagDef>BigBird_BackShinFoot</tagDef>
+                  <role>BackShinFoot</role>
+                  <texPath>Things/Pawn/BigBird/Parts/BackShinFoot</texPath>
+                  <texPathLeft>Things/Pawn/BigBird/Parts/Left/BackShinFoot</texPathLeft>
+                  <baseLayer>6.5</baseLayer>
+                </li>
+              </children>
+            </li>
+
+            <!-- Main Feathered Body (with 17 glowing eyeballs; swaps to Attract / Deadshot variants) -->
+            <li Class="LCAbnormalities.BigBird.PawnRenderNodeProperties_BigBirdPart">
+              <debugLabel>Body</debugLabel>
+              <tagDef>BigBird_Body</tagDef>
+              <role>Body</role>
+              <texPath>Things/Pawn/BigBird/Parts/Body_Normal</texPath>
+              <texPathLeft>Things/Pawn/BigBird/Parts/Left/Body_Normal</texPathLeft>
+              <alternateTexPaths>
+                <li>Things/Pawn/BigBird/Parts/Body_Attract</li>
+                <li>Things/Pawn/BigBird/Parts/Body_Deadshot</li>
+              </alternateTexPaths>
+              <alternateTexPathsLeft>
+                <li>Things/Pawn/BigBird/Parts/Left/Body_Attract</li>
+                <li>Things/Pawn/BigBird/Parts/Left/Body_Deadshot</li>
+              </alternateTexPathsLeft>
+              <baseLayer>10.0</baseLayer>
+              <children>
+
+                <!-- 17 Concentric Pupils (independently glances in Idle / Attract / Deadshot) -->
+                <li Class="LCAbnormalities.BigBird.PawnRenderNodeProperties_BigBirdPart">
+                  <debugLabel>EyePupils</debugLabel>
+                  <tagDef>BigBird_EyePupils</tagDef>
+                  <role>EyePupils</role>
+                  <texPath>Things/Pawn/BigBird/Parts/EyePupils</texPath>
+                  <texPathLeft>Things/Pawn/BigBird/Parts/Left/EyePupils</texPathLeft>
+                  <baseLayer>10.4</baseLayer>
+                </li>
+
+                <!-- Blinking Feathered Eyelids (Half / Closed) -->
+                <li Class="LCAbnormalities.BigBird.PawnRenderNodeProperties_BigBirdPart">
+                  <debugLabel>Eyelids</debugLabel>
+                  <tagDef>BigBird_Eyelids</tagDef>
+                  <role>Eyelids</role>
+                  <texPath>Things/Pawn/BigBird/Parts/Eyelids_Half</texPath>
+                  <texPathLeft>Things/Pawn/BigBird/Parts/Left/Eyelids_Half</texPathLeft>
+                  <alternateTexPaths>
+                    <li>Things/Pawn/BigBird/Parts/Eyelids_Closed</li>
+                  </alternateTexPaths>
+                  <alternateTexPathsLeft>
+                    <li>Things/Pawn/BigBird/Parts/Left/Eyelids_Closed</li>
+                  </alternateTexPathsLeft>
+                  <baseLayer>10.8</baseLayer>
+                </li>
+
+                <!-- Sinister Crimson Fanged Maw Interior (shown only during Deadshot jaw-open) -->
+                <li Class="LCAbnormalities.BigBird.PawnRenderNodeProperties_BigBirdPart">
+                  <debugLabel>MouthInterior</debugLabel>
+                  <tagDef>BigBird_MouthInterior</tagDef>
+                  <role>MouthInterior</role>
+                  <texPath>Things/Pawn/BigBird/Parts/MouthInterior</texPath>
+                  <texPathLeft>Things/Pawn/BigBird/Parts/Left/MouthInterior</texPathLeft>
+                  <useTransparentShader>true</useTransparentShader>
+                  <baseLayer>11.1</baseLayer>
+                </li>
+
+                <!-- Hinged Lower Beak -->
+                <li Class="LCAbnormalities.BigBird.PawnRenderNodeProperties_BigBirdPart">
+                  <debugLabel>LowerBeak</debugLabel>
+                  <tagDef>BigBird_LowerBeak</tagDef>
+                  <role>LowerBeak</role>
+                  <texPath>Things/Pawn/BigBird/Parts/LowerBeak</texPath>
+                  <texPathLeft>Things/Pawn/BigBird/Parts/Left/LowerBeak</texPathLeft>
+                  <baseLayer>11.4</baseLayer>
+                </li>
+
+                <!-- Hinged Upper Beak -->
+                <li Class="LCAbnormalities.BigBird.PawnRenderNodeProperties_BigBirdPart">
+                  <debugLabel>UpperBeak</debugLabel>
+                  <tagDef>BigBird_UpperBeak</tagDef>
+                  <role>UpperBeak</role>
+                  <texPath>Things/Pawn/BigBird/Parts/UpperBeak</texPath>
+                  <texPathLeft>Things/Pawn/BigBird/Parts/Left/UpperBeak</texPathLeft>
+                  <baseLayer>11.6</baseLayer>
+                </li>
+
+                <!-- Articulated Front Leg -->
+                <li Class="LCAbnormalities.BigBird.PawnRenderNodeProperties_BigBirdPart">
+                  <debugLabel>FrontThigh</debugLabel>
+                  <tagDef>BigBird_FrontThigh</tagDef>
+                  <role>FrontThigh</role>
+                  <texPath>Things/Pawn/BigBird/Parts/FrontThigh</texPath>
+                  <texPathLeft>Things/Pawn/BigBird/Parts/Left/FrontThigh</texPathLeft>
+                  <baseLayer>12.0</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.BigBird.PawnRenderNodeProperties_BigBirdPart">
+                      <debugLabel>FrontShinFoot</debugLabel>
+                      <tagDef>BigBird_FrontShinFoot</tagDef>
+                      <role>FrontShinFoot</role>
+                      <texPath>Things/Pawn/BigBird/Parts/FrontShinFoot</texPath>
+                      <texPathLeft>Things/Pawn/BigBird/Parts/Left/FrontShinFoot</texPathLeft>
+                      <baseLayer>12.5</baseLayer>
+                    </li>
+                  </children>
+                </li>
+
+                <!-- Articulated Arm + Forearm/Claws + Eternal Lantern & Flickering Flame -->
+                <li Class="LCAbnormalities.BigBird.PawnRenderNodeProperties_BigBirdPart">
+                  <debugLabel>UpperArm</debugLabel>
+                  <tagDef>BigBird_UpperArm</tagDef>
+                  <role>UpperArm</role>
+                  <texPath>Things/Pawn/BigBird/Parts/UpperArm</texPath>
+                  <texPathLeft>Things/Pawn/BigBird/Parts/Left/UpperArm</texPathLeft>
+                  <baseLayer>13.0</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.BigBird.PawnRenderNodeProperties_BigBirdPart">
+                      <debugLabel>ForearmHand</debugLabel>
+                      <tagDef>BigBird_ForearmHand</tagDef>
+                      <role>ForearmHand</role>
+                      <texPath>Things/Pawn/BigBird/Parts/ForearmHand</texPath>
+                      <texPathLeft>Things/Pawn/BigBird/Parts/Left/ForearmHand</texPathLeft>
+                      <baseLayer>14.2</baseLayer>
+                      <children>
+                        <li Class="LCAbnormalities.BigBird.PawnRenderNodeProperties_BigBirdPart">
+                          <debugLabel>Lantern</debugLabel>
+                          <tagDef>BigBird_Lantern</tagDef>
+                          <role>Lantern</role>
+                          <texPath>Things/Pawn/BigBird/Parts/Lantern</texPath>
+                          <texPathLeft>Things/Pawn/BigBird/Parts/Left/Lantern</texPathLeft>
+                          <useTransparentShader>true</useTransparentShader>
+                          <baseLayer>13.8</baseLayer>
+                          <children>
+                            <li Class="LCAbnormalities.BigBird.PawnRenderNodeProperties_BigBirdPart">
+                              <debugLabel>LanternFlame</debugLabel>
+                              <tagDef>BigBird_LanternFlame</tagDef>
+                              <role>LanternFlame</role>
+                              <texPath>Things/Pawn/BigBird/Parts/LanternFlame</texPath>
+                              <texPathLeft>Things/Pawn/BigBird/Parts/Left/LanternFlame</texPathLeft>
+                              <useGlowShader>true</useGlowShader>
+                              <baseLayer>13.5</baseLayer>
+                            </li>
+                          </children>
+                        </li>
+                      </children>
+                    </li>
+                  </children>
+                </li>
+
+              </children>
+            </li>
+
+          </children>
+        </li>
+
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

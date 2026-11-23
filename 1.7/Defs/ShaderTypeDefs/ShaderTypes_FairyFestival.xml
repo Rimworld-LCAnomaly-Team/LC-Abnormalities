@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderTypeDef>
+    <defName>LC_FairyBlessingAura</defName>
+    <shaderPath>Map/LC_FairyBlessingAura</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_FairyDevourFeast</defName>
+    <shaderPath>Map/LC_FairyDevourFeast</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_FairyWingSlash</defName>
+    <shaderPath>Map/LC_FairyWingSlash</shaderPath>
+  </ShaderTypeDef>
+
+</Defs>

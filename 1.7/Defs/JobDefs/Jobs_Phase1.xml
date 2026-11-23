@@ -8,4 +8,11 @@
     <casualInterruptible>true</casualInterruptible>
   </JobDef>
 
+  <JobDef>
+    <defName>LC_DrinkWellCheers</defName>
+    <driverClass>LCAbnormalities.WellCheers.JobDriver_DrinkWellCheers</driverClass>
+    <reportString>getting soda from TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
 </Defs>

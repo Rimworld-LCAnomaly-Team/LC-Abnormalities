@@ -57,12 +57,211 @@
   </SoundDef>
 
   <SoundDef>
-    <defName>LC_DerFreischutz_Portal</defName>
+    <defName>LC_ScorchedGirl_WorkLoop</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/ScorchedGirl/ScorchedGirl_Escape</clipPath></li></grains>
+        <volumeRange>18~24</volumeRange>
+        <distRange>12~60</distRange>
+        <sustainRelease>3</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_ScorchedGirl_Weeping</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/ScorchedGirl/ScorchedGirl_Escape</clipPath></li></grains>
+        <volumeRange>26~32</volumeRange>
+        <distRange>15~75</distRange>
+        <sustainRelease>3</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_ScorchedGirl_Enter</defName>
     <context>MapOnly</context>
     <subSounds>
       <li>
-        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/DerFreischutz/Freischutz_Portal</clipPath></li></grains>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/ScorchedGirl/ScorchedGirl_Enter</clipPath></li></grains>
+        <volumeRange>24~32</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~65</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_ScorchedGirl_MatchStrike</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/ScorchedGirl/ScorchedGirl_MatchStrike</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.95~1.06</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_ScorchedGirl_Walk</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/ScorchedGirl/ScorchedGirl_Walk</clipPath></li></grains>
+        <volumeRange>22~28</volumeRange>
+        <pitchRange>0.92~1.08</pitchRange>
+        <distRange>0~55</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_ScorchedGirl_Prime</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/ScorchedGirl/ScorchedGirl_Prime</clipPath></li></grains>
+        <volumeRange>34~42</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_ScorchedGirl_Death</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/ScorchedGirl/ScorchedGirl_Death</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_ScorchedGirl_Cannon</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/ScorchedGirl/ScorchedGirl_Cannon</clipPath></li></grains>
         <volumeRange>32~40</volumeRange>
+        <pitchRange>0.95~1.06</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_DerFreischutz_WorkLoop</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/DerFreischutz/Freischutz_WorkLoop</clipPath></li></grains>
+        <volumeRange>14~18</volumeRange>
+        <distRange>10~55</distRange>
+        <sustainRelease>2</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_DerFreischutz_Reload</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/DerFreischutz/Freischutz_Reload</clipPath></li></grains>
+        <volumeRange>24~30</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~65</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_DerFreischutz_Cocking</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/DerFreischutz/Freischutz_Cocking</clipPath></li></grains>
+        <volumeRange>20~26</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~60</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_DerFreischutz_Create</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/DerFreischutz/Freischutz_Create</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_DerFreischutz_CursedCreate</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/DerFreischutz/Freischutz_Create</clipPath></li></grains>
+        <volumeRange>34~42</volumeRange>
+        <pitchRange>0.78~0.86</pitchRange>
+        <distRange>0~110</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_DerFreischutz_WeaponCharge</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/DerFreischutz/Freischutz_Create</clipPath></li></grains>
+        <volumeRange>16~22</volumeRange>
+        <pitchRange>1.04~1.12</pitchRange>
+        <distRange>0~65</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_DerFreischutz_Portal</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/DerFreischutz/Freischutz_Portal</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
         <pitchRange>0.96~1.04</pitchRange>
         <distRange>0~85</distRange>
       </li>
@@ -72,12 +271,27 @@
   <SoundDef>
     <defName>LC_DerFreischutz_Shoot</defName>
     <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
     <subSounds>
       <li>
         <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/DerFreischutz/Freischutz_Shoot</clipPath></li></grains>
-        <volumeRange>34~44</volumeRange>
+        <volumeRange>36~44</volumeRange>
         <pitchRange>0.96~1.04</pitchRange>
-        <distRange>0~90</distRange>
+        <distRange>0~110</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_DerFreischutz_Shot</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/DerFreischutz/Freischutz_Shot</clipPath></li></grains>
+        <volumeRange>32~40</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~95</distRange>
       </li>
     </subSounds>
   </SoundDef>
@@ -85,12 +299,44 @@
   <SoundDef>
     <defName>LC_DerFreischutz_Bullet</defName>
     <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
     <subSounds>
       <li>
         <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/DerFreischutz/Freischutz_bullet</clipPath></li></grains>
-        <volumeRange>28~36</volumeRange>
-        <pitchRange>0.95~1.05</pitchRange>
+        <volumeRange>24~30</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
         <distRange>0~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_DerFreischutz_PierceHit</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/DerFreischutz/Freischutz_Portal</clipPath></li></grains>
+        <volumeRange>22~28</volumeRange>
+        <pitchRange>1.12~1.28</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Funeral_WorkLoop</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FuneralOfDeadButterflies/Butterfly_Skill</clipPath></li></grains>
+        <volumeRange>14~18</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>10~55</distRange>
+        <sustainRelease>3</sustainRelease>
       </li>
     </subSounds>
   </SoundDef>
@@ -98,6 +344,8 @@
   <SoundDef>
     <defName>LC_Funeral_Attack</defName>
     <context>MapOnly</context>
+    <maxSimultaneous>6</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
     <subSounds>
       <li>
         <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FuneralOfDeadButterflies/Butterfly_Attack</clipPath></li></grains>
@@ -111,6 +359,7 @@
   <SoundDef>
     <defName>LC_Funeral_Open</defName>
     <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
     <subSounds>
       <li>
         <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FuneralOfDeadButterflies/Butterfly_open</clipPath></li></grains>
@@ -123,13 +372,17 @@
 
   <SoundDef>
     <defName>LC_Funeral_Skill</defName>
+    <sustain>true</sustain>
     <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
     <subSounds>
       <li>
         <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FuneralOfDeadButterflies/Butterfly_Skill</clipPath></li></grains>
-        <volumeRange>30~38</volumeRange>
+        <volumeRange>30~36</volumeRange>
         <pitchRange>0.96~1.04</pitchRange>
         <distRange>0~80</distRange>
+        <sustainRelease>1.5</sustainRelease>
       </li>
     </subSounds>
   </SoundDef>
@@ -137,11 +390,88 @@
   <SoundDef>
     <defName>LC_Funeral_Close</defName>
     <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
     <subSounds>
       <li>
         <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FuneralOfDeadButterflies/Butterfly_Close</clipPath></li></grains>
-        <volumeRange>24~32</volumeRange>
+        <volumeRange>26~34</volumeRange>
         <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Funeral_Dead</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FuneralOfDeadButterflies/Butterfly_Dead</clipPath></li></grains>
+        <volumeRange>32~40</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_SolemnLament_Interact</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FuneralOfDeadButterflies/SolemnLament_Interact</clipPath></li></grains>
+        <volumeRange>24~30</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~45</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_SolemnLament_Shoot</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>6</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/FuneralOfDeadButterflies/SolemnLament_Shot_01</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/FuneralOfDeadButterflies/SolemnLament_Shot_02</clipPath></li>
+        </grains>
+        <volumeRange>26~34</volumeRange>
+        <pitchRange>0.95~1.06</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_SolemnLament_BloomWhite</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>6</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FuneralOfDeadButterflies/Butterfly_Attack</clipPath></li></grains>
+        <volumeRange>20~26</volumeRange>
+        <pitchRange>1.04~1.10</pitchRange>
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_SolemnLament_BloomBlack</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>6</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FuneralOfDeadButterflies/Butterfly_Attack</clipPath></li></grains>
+        <volumeRange>20~26</volumeRange>
+        <pitchRange>0.84~0.90</pitchRange>
         <distRange>0~70</distRange>
       </li>
     </subSounds>

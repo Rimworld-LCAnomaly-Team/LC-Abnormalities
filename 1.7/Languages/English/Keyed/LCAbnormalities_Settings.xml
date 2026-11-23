@@ -25,6 +25,12 @@
   <LCAbn_Settings_EnableFuneralOfDeadButterflies>Enable Funeral of the Dead Butterflies (HE)</LCAbn_Settings_EnableFuneralOfDeadButterflies>
   <LCAbn_Settings_EnableSnowQueen>Enable The Snow Queen (HE)</LCAbn_Settings_EnableSnowQueen>
   <LCAbn_Settings_EnableNotesFromCrazedResearcher>Enable Notes from a Crazed Researcher (HE Tool)</LCAbn_Settings_EnableNotesFromCrazedResearcher>
+  <LCAbn_Settings_EnableAllAroundHelper>Enable All-Around Helper (HE)</LCAbn_Settings_EnableAllAroundHelper>
+  <LCAbn_Settings_EnableJudgementBird>Enable Judgement Bird (WAW)</LCAbn_Settings_EnableJudgementBird>
+  <LCAbn_Settings_EnableBigBird>Enable Big Bird (WAW)</LCAbn_Settings_EnableBigBird>
+  <LCAbn_Settings_EnableLittleRedRidingHoodedMercenary>Enable Little Red Riding Hooded Mercenary (WAW)</LCAbn_Settings_EnableLittleRedRidingHoodedMercenary>
+  <LCAbn_Settings_EnableBackwardClock>Enable Backward Clock (WAW Tool)</LCAbn_Settings_EnableBackwardClock>
+  <LCAbn_Settings_EnableSchadenfreude>Enable Schadenfreude (HE)</LCAbn_Settings_EnableSchadenfreude>
 
   <LCAbn_Settings_PortraitHeader>Portrait of Another World</LCAbn_Settings_PortraitHeader>
   <LCAbn_Settings_PortraitAllowNonColonist>Allow prisoners and visitors as substitutes</LCAbn_Settings_PortraitAllowNonColonist>

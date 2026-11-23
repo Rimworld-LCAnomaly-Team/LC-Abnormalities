@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderTypeDef>
+    <defName>LC_VoidDreamOrb</defName>
+    <shaderPath>Map/LC_VoidDreamOrb</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_VoidDreamCrowWave</defName>
+    <shaderPath>Map/LC_VoidDreamCrowWave</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_VoidDreamSleepCloud</defName>
+    <shaderPath>Map/LC_VoidDreamSleepCloud</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_VoidDreamNightmareBurst</defName>
+    <shaderPath>Map/LC_VoidDreamNightmareBurst</shaderPath>
+  </ShaderTypeDef>
+
+</Defs>

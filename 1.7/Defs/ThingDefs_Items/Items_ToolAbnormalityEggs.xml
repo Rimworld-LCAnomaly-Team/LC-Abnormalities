@@ -445,4 +445,78 @@
     </modExtensions>
   </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
 
+  <!-- D-09-104 Backward Clock Egg -->
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEgg ParentName="ResourceBase">
+    <defName>BackwardClockEgg</defName>
+    <label>Backward Clock Egg</label>
+    <description>The sealed stasis pod of Backward Clock (D-09-104). Bind it to a Holding Platform to deploy the chronometer for charging and emergency time rewind, or smash it to harvest Enkephalin Boxes.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Special/BackwardClockEgg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <stackLimit>1</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <genericMarketSellable>false</genericMarketSellable>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <MarketValue>0</MarketValue>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+      <LC_MinimumContainmentStrength>0</LC_MinimumContainmentStrength>
+    </statBases>
+    <thingCategories>
+      <li>LC_Entity_Egg</li>
+    </thingCategories>
+    <descriptionHyperlinks>
+      <PawnKindDef>BackwardClock</PawnKindDef>
+    </descriptionHyperlinks>
+    <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+    <comps>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <heldPawnKind>BackwardClock</heldPawnKind>
+        <capturedLetterLabel>Backward Clock Contained</capturedLetterLabel>
+        <capturedLetterText>{PAWN_nameDef} secured the Backward Clock egg onto a holding platform, awakening its humming vacuum tubes inside.</capturedLetterText>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>SmashThing</useJob>
+        <useLabel>Smash {0_label}</useLabel>
+        <useMessage>{PAWN_nameDef} smashed the Backward Clock egg, dissolving it into Enkephalin Boxes.</useMessage>
+        <useDuration>300</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>ChunkRock_Drop</soundOnUsed>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf">
+        <leavings>
+          <EnkephalinBox>24</EnkephalinBox>
+        </leavings>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Abnormality" />
+      <li Class="LCAnomalyCore.Comp.LC_CompProperties_InteractableEgg">
+        <compClass>LCAnomalyCore.Comp.LC_CompEgg</compClass>
+        <ticksToActivate>0</ticksToActivate>
+        <activateTexPath>UI/CodexEntries/BackwardClock_MenuIcon</activateTexPath>
+        <activateLabelString>Smash...</activateLabelString>
+        <activateDescString>Smash the Backward Clock egg.</activateDescString>
+        <activatingStringPending>smashing Backward Clock egg</activatingStringPending>
+        <guiLabelString>Choose who should do this</guiLabelString>
+        <showMustBeActivatedByColonist>false</showMustBeActivatedByColonist>
+        <shouldTransferBioSignature>true</shouldTransferBioSignature>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>WAW</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEgg>
+
 </Defs>

@@ -4,13 +4,14 @@
   <ThingDef ParentName="LC_BaseRangedWeapon_EGO">
     <defName>EgoWeapon_FuneralOfDeadButterflies</defName>
     <label>E.G.O. Weapon (Solemn Lament)</label>
-    <description>Black and white twin handguns sculpted in mourning tribute (WAW).\nOne pistol condemns the body with Black erosion, the other weeps White anguish—delivering dual trauma with every trigger pull.</description>
+    <description>Black and white twin handguns sculpted in mourning tribute (WAW).\nOne pistol condemns the body with Black erosion, the other weeps White anguish—blossoming mourning butterflies upon the target with every trigger pull.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/EgoWeapon_FuneralOfDeadButterflies</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(1.9, 1.9)</drawSize>
+      <drawSize>(1.0, 1.0)</drawSize>
     </graphicData>
-    <soundInteract>Interact_Autopistol</soundInteract>
+    <uiIconScale>1.25</uiIconScale>
+    <soundInteract>LC_SolemnLament_Interact</soundInteract>
     <statBases>
       <Mass>2.2</Mass>
       <AccuracyTouch>0.88</AccuracyTouch>
@@ -28,9 +29,8 @@
         <range>25</range>
         <burstShotCount>2</burstShotCount>
         <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
-        <soundCast>LC_Funeral_Attack</soundCast>
-        <soundCastTail>GunTail_Light</soundCastTail>
-        <muzzleFlashScale>7</muzzleFlashScale>
+        <soundCast>LC_SolemnLament_Shoot</soundCast>
+        <muzzleFlashScale>0</muzzleFlashScale>
       </li>
     </verbs>
     <tools>
@@ -52,17 +52,19 @@
 
   <ThingDef ParentName="LC_BaseBullet_EGO">
     <defName>Bullet_EgoWeapon_FuneralOfDeadButterflies</defName>
-    <label>Solemn Lament dual bolt</label>
+    <label>Solemn Lament butterfly volley</label>
+    <thingClass>LCAbnormalities.FuneralOfDeadButterflies.Projectile_SolemnLament</thingClass>
     <projectile>
       <damageDef>LC_SolemnLament_Dual</damageDef>
       <damageAmountBase>8</damageAmountBase>
       <armorPenetrationBase>0.35</armorPenetrationBase>
       <stoppingPower>1.0</stoppingPower>
-      <speed>115</speed>
+      <speed>220</speed>
     </projectile>
     <graphicData>
-      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <texPath>Things/Projectile/Projectile_SolemnLament</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.5, 0.5)</drawSize>
     </graphicData>
   </ThingDef>
 

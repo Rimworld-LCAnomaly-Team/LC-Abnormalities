@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_BaseMeleeWeapon_EGO">
+    <defName>EgoWeapon_JudgementBird</defName>
+    <label>E.G.O. Weapon (Justitia)</label>
+    <description>A bandaged greatsword of inexorable judgement extracted from Judgement Bird (ALEPH).\nDelivers Pale soul damage that bypasses conventional armor as a percentage of target vitality, cleaving up to two nearby enemies in every arc.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/EgoWeapon_JudgementBird</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.2, 2.2)</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>3.4</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>pale verdict blade</label>
+        <capacities>
+          <li>LC_JustitiaCleave</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.35</cooldownTime>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Pale</damageType>
+        <riskLevel>ALEPH</riskLevel>
+        <damageMultiplier>1</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

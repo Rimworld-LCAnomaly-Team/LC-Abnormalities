@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_HelperChargeTelegraphFX</defName>
+    <label>All-Around Helper charge telegraph</label>
+    <thingClass>LCAbnormalities.AllAroundHelper.Thing_HelperChargeTelegraph</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_HelperSawVortexFX</defName>
+    <label>All-Around Helper saw vortex</label>
+    <thingClass>LCAbnormalities.AllAroundHelper.Thing_HelperSawVortex</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_HelperDashTrailFX</defName>
+    <label>All-Around Helper dash trail</label>
+    <thingClass>LCAbnormalities.AllAroundHelper.Thing_HelperDashTrail</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_GrinderSawSlashFX</defName>
+    <label>Grinder Mk4 sawtooth slash</label>
+    <thingClass>LCAbnormalities.AllAroundHelper.Thing_GrinderSawSlash</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_GrinderFlurryFX</defName>
+    <label>Grinder Mk4 rotary flurry</label>
+    <thingClass>LCAbnormalities.AllAroundHelper.Thing_GrinderMk4FlurryRunner</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_HelperSparkBurstFX</defName>
+    <label>All-Around Helper electrical spark</label>
+    <thingClass>LCAbnormalities.AllAroundHelper.Thing_HelperSparkBurst</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+</Defs>

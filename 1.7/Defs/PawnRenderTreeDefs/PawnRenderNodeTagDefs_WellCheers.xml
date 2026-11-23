@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderNodeTagDef>
+    <defName>WellCheers_Root</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>WellCheers_Machine</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>WellCheers_Can</defName>
+  </PawnRenderNodeTagDef>
+
+  <!-- Left shrimp mariner -->
+  <PawnRenderNodeTagDef>
+    <defName>WellCheers_ShrimpL_Body</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>WellCheers_ShrimpL_Leg</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>WellCheers_ShrimpL_ArmBack</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>WellCheers_ShrimpL_ArmFront</defName>
+  </PawnRenderNodeTagDef>
+
+  <!-- Right shrimp mariner -->
+  <PawnRenderNodeTagDef>
+    <defName>WellCheers_ShrimpR_Body</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>WellCheers_ShrimpR_Leg</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>WellCheers_ShrimpR_ArmBack</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>WellCheers_ShrimpR_ArmFront</defName>
+  </PawnRenderNodeTagDef>
+
+</Defs>

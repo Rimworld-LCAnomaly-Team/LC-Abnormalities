@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Articulated Lobotomy Corporation Spine hierarchy (F-01-57 RedHood / skeleton #223196.txt) -->
+  <PawnRenderTreeDef>
+    <defName>LittleRedRidingHoodedMercenary</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.PawnRenderNodeProperties_LittleRedPart">
+          <debugLabel>LittleRedRoot</debugLabel>
+          <tagDef>LittleRed_Root</tagDef>
+          <role>Root</role>
+          <useGraphic>false</useGraphic>
+          <formScale>2.25</formScale>
+          <containedScale>2.05</containedScale>
+          <children>
+            <!-- Pelvis root translation carrier (bone + bone2) -->
+            <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.PawnRenderNodeProperties_LittleRedPart">
+              <debugLabel>Pelvis</debugLabel>
+              <tagDef>LittleRed_Pelvis</tagDef>
+              <role>Pelvis</role>
+              <useGraphic>false</useGraphic>
+              <children>
+                <!-- Back / far leg (bone19 -> bone20) -->
+                <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.PawnRenderNodeProperties_LittleRedPart">
+                  <debugLabel>BackLegUpper</debugLabel>
+                  <tagDef>LittleRed_BackLegUpper</tagDef>
+                  <role>Limb</role>
+                  <texPath>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/LR_BackLegUpper</texPath>
+                  <texPathLeft>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/Left/LR_BackLegUpper</texPathLeft>
+                  <baseLayer>7</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.PawnRenderNodeProperties_LittleRedPart">
+                      <debugLabel>BackLegLower</debugLabel>
+                      <tagDef>LittleRed_BackLegLower</tagDef>
+                      <role>Limb</role>
+                      <texPath>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/LR_BackLegLower</texPath>
+                      <texPathLeft>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/Left/LR_BackLegLower</texPathLeft>
+                      <baseLayer>6</baseLayer>
+                    </li>
+                  </children>
+                </li>
+                <!-- Front / near leg (bone15 -> bone16) -->
+                <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.PawnRenderNodeProperties_LittleRedPart">
+                  <debugLabel>FrontLegUpper</debugLabel>
+                  <tagDef>LittleRed_FrontLegUpper</tagDef>
+                  <role>Limb</role>
+                  <texPath>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/LR_FrontLegUpper</texPath>
+                  <texPathLeft>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/Left/LR_FrontLegUpper</texPathLeft>
+                  <baseLayer>9</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.PawnRenderNodeProperties_LittleRedPart">
+                      <debugLabel>FrontLegLower</debugLabel>
+                      <tagDef>LittleRed_FrontLegLower</tagDef>
+                      <role>Limb</role>
+                      <texPath>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/LR_FrontLegLower</texPath>
+                      <texPathLeft>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/Left/LR_FrontLegLower</texPathLeft>
+                      <baseLayer>8</baseLayer>
+                    </li>
+                  </children>
+                </li>
+                <!-- Buckled torso (bone2..bone4) -->
+                <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.PawnRenderNodeProperties_LittleRedPart">
+                  <debugLabel>Torso</debugLabel>
+                  <tagDef>LittleRed_Torso</tagDef>
+                  <role>Torso</role>
+                  <texPath>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/LR_Torso</texPath>
+                  <texPathLeft>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/Left/LR_Torso</texPathLeft>
+                  <baseLayer>10</baseLayer>
+                  <children>
+                    <!-- Blood-splattered tattered crimson cloak (bone57) -->
+                    <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.PawnRenderNodeProperties_LittleRedPart">
+                      <debugLabel>Cape</debugLabel>
+                      <tagDef>LittleRed_Cape</tagDef>
+                      <role>Cape</role>
+                      <texPath>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/LR_Cape</texPath>
+                      <texPathLeft>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/Left/LR_Cape</texPathLeft>
+                      <baseLayer>2</baseLayer>
+                    </li>
+                    <!-- Far / gun arm (bone12 -> bone13 -> bone54) -->
+                    <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.PawnRenderNodeProperties_LittleRedPart">
+                      <debugLabel>BackArmUpper</debugLabel>
+                      <tagDef>LittleRed_BackArmUpper</tagDef>
+                      <role>Limb</role>
+                      <texPath>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/LR_BackArmUpper</texPath>
+                      <texPathLeft>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/Left/LR_BackArmUpper</texPathLeft>
+                      <baseLayer>4</baseLayer>
+                      <children>
+                        <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.PawnRenderNodeProperties_LittleRedPart">
+                          <debugLabel>BackArmLower</debugLabel>
+                          <tagDef>LittleRed_BackArmLower</tagDef>
+                          <role>Limb</role>
+                          <texPath>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/LR_BackArmLower</texPath>
+                          <texPathLeft>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/Left/LR_BackArmLower</texPathLeft>
+                          <baseLayer>5</baseLayer>
+                          <children>
+                            <!-- Sawed-off crimson blunderbuss (shown outside containment / combat) -->
+                            <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.PawnRenderNodeProperties_LittleRedPart">
+                              <debugLabel>Gun</debugLabel>
+                              <tagDef>LittleRed_Gun</tagDef>
+                              <role>Gun</role>
+                              <texPath>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/LR_Gun</texPath>
+                              <texPathLeft>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/Left/LR_Gun</texPathLeft>
+                              <baseLayer>3</baseLayer>
+                            </li>
+                          </children>
+                        </li>
+                      </children>
+                    </li>
+                    <!-- Hooded head with glowing yellow eye, wolf-tooth mask, and enraged scarred variant -->
+                    <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.PawnRenderNodeProperties_LittleRedPart">
+                      <debugLabel>Head</debugLabel>
+                      <tagDef>LittleRed_Head</tagDef>
+                      <role>Head</role>
+                      <texPath>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/LR_Head</texPath>
+                      <texPathLeft>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/Left/LR_Head</texPathLeft>
+                      <enragedTexPath>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/LR_Head_Enraged</enragedTexPath>
+                      <enragedTexPathLeft>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/Left/LR_Head_Enraged</enragedTexPathLeft>
+                      <baseLayer>11</baseLayer>
+                      <children>
+                        <!-- Hood interior shadow shown while calm/contained -->
+                        <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.PawnRenderNodeProperties_LittleRedPart">
+                          <debugLabel>HoodShadow</debugLabel>
+                          <tagDef>LittleRed_HoodShadow</tagDef>
+                          <role>HoodShadow</role>
+                          <texPath>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/LR_HoodShadow</texPath>
+                          <texPathLeft>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/Left/LR_HoodShadow</texPathLeft>
+                          <baseLayer>12</baseLayer>
+                        </li>
+                      </children>
+                    </li>
+                    <!-- Near / sickle arm (bone7 -> bone8 -> bone55 -> Axe_spin) -->
+                    <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.PawnRenderNodeProperties_LittleRedPart">
+                      <debugLabel>FrontArmUpper</debugLabel>
+                      <tagDef>LittleRed_FrontArmUpper</tagDef>
+                      <role>Limb</role>
+                      <texPath>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/LR_FrontArmUpper</texPath>
+                      <texPathLeft>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/Left/LR_FrontArmUpper</texPathLeft>
+                      <baseLayer>14</baseLayer>
+                      <children>
+                        <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.PawnRenderNodeProperties_LittleRedPart">
+                          <debugLabel>FrontArmLower</debugLabel>
+                          <tagDef>LittleRed_FrontArmLower</tagDef>
+                          <role>Limb</role>
+                          <texPath>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/LR_FrontArmLower</texPath>
+                          <texPathLeft>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/Left/LR_FrontArmLower</texPathLeft>
+                          <baseLayer>15</baseLayer>
+                          <children>
+                            <!-- Folding crimson sickle handle + unfolding blade (hidden when contained or thrown in flight) -->
+                            <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.PawnRenderNodeProperties_LittleRedPart">
+                              <debugLabel>SickleHandle</debugLabel>
+                              <tagDef>LittleRed_SickleHandle</tagDef>
+                              <role>Sickle</role>
+                              <texPath>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/LR_SickleHandle</texPath>
+                              <texPathLeft>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/Left/LR_SickleHandle</texPathLeft>
+                              <baseLayer>13</baseLayer>
+                              <children>
+                                <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.PawnRenderNodeProperties_LittleRedPart">
+                                  <debugLabel>SickleBlade</debugLabel>
+                                  <tagDef>LittleRed_SickleBlade</tagDef>
+                                  <role>Sickle</role>
+                                  <texPath>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/LR_SickleBlade</texPath>
+                                  <texPathLeft>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/Left/LR_SickleBlade</texPathLeft>
+                                  <baseLayer>12</baseLayer>
+                                </li>
+                              </children>
+                            </li>
+                          </children>
+                        </li>
+                      </children>
+                    </li>
+                    <!-- Tattered shoulder mantle (Hood_r / bone6) -->
+                    <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.PawnRenderNodeProperties_LittleRedPart">
+                      <debugLabel>ShoulderCape</debugLabel>
+                      <tagDef>LittleRed_ShoulderCape</tagDef>
+                      <role>Cape</role>
+                      <texPath>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/LR_ShoulderCape</texPath>
+                      <texPathLeft>Things/Pawn/LittleRedRidingHoodedMercenary/Parts/Left/LR_ShoulderCape</texPathLeft>
+                      <baseLayer>16</baseLayer>
+                    </li>
+                  </children>
+                </li>
+              </children>
+            </li>
+          </children>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

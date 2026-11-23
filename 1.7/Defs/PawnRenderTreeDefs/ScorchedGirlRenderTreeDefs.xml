@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderTreeDef>
+    <defName>ScorchedGirl</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+
+        <li Class="LCAbnormalities.ScorchedGirl.PawnRenderNodeProperties_ScorchedGirlPart">
+          <debugLabel>ScorchedGirlRoot</debugLabel>
+          <tagDef>ScorchedGirl_Root</tagDef>
+          <role>Root</role>
+          <useGraphic>false</useGraphic>
+          <formScale>2.05</formScale>
+          <flipOnWest>true</flipOnWest>
+          <children>
+
+            <!-- Back Leg (Upper -> Lower) -->
+            <li Class="LCAbnormalities.ScorchedGirl.PawnRenderNodeProperties_ScorchedGirlPart">
+              <debugLabel>LegBUpper</debugLabel>
+              <tagDef>ScorchedGirl_LegBUpper</tagDef>
+              <role>StaticPart</role>
+              <texPath>Things/Pawn/ScorchedGirl/Parts/Leg_B_Upper</texPath>
+              <texPathLeft>Things/Pawn/ScorchedGirl/Parts/Left/Leg_B_Upper</texPathLeft>
+              <baseLayer>6</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.ScorchedGirl.PawnRenderNodeProperties_ScorchedGirlPart">
+                  <debugLabel>LegBLower</debugLabel>
+                  <tagDef>ScorchedGirl_LegBLower</tagDef>
+                  <role>StaticPart</role>
+                  <texPath>Things/Pawn/ScorchedGirl/Parts/Leg_B_Lower</texPath>
+                  <texPathLeft>Things/Pawn/ScorchedGirl/Parts/Left/Leg_B_Lower</texPathLeft>
+                  <baseLayer>6.2</baseLayer>
+                </li>
+              </children>
+            </li>
+
+            <!-- Front Leg (Upper -> Lower) -->
+            <li Class="LCAbnormalities.ScorchedGirl.PawnRenderNodeProperties_ScorchedGirlPart">
+              <debugLabel>LegFUpper</debugLabel>
+              <tagDef>ScorchedGirl_LegFUpper</tagDef>
+              <role>StaticPart</role>
+              <texPath>Things/Pawn/ScorchedGirl/Parts/Leg_F_Upper</texPath>
+              <texPathLeft>Things/Pawn/ScorchedGirl/Parts/Left/Leg_F_Upper</texPathLeft>
+              <baseLayer>7</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.ScorchedGirl.PawnRenderNodeProperties_ScorchedGirlPart">
+                  <debugLabel>LegFLower</debugLabel>
+                  <tagDef>ScorchedGirl_LegFLower</tagDef>
+                  <role>StaticPart</role>
+                  <texPath>Things/Pawn/ScorchedGirl/Parts/Leg_F_Lower</texPath>
+                  <texPathLeft>Things/Pawn/ScorchedGirl/Parts/Left/Leg_F_Lower</texPathLeft>
+                  <baseLayer>7.2</baseLayer>
+                </li>
+              </children>
+            </li>
+
+            <!-- Torso Group (Matchstick + Charred Dress + Flame) -->
+            <li Class="LCAbnormalities.ScorchedGirl.PawnRenderNodeProperties_ScorchedGirlPart">
+              <debugLabel>TorsoGroup</debugLabel>
+              <tagDef>ScorchedGirl_Torso</tagDef>
+              <role>GroupRoot</role>
+              <useGraphic>false</useGraphic>
+              <children>
+                <li Class="LCAbnormalities.ScorchedGirl.PawnRenderNodeProperties_ScorchedGirlPart">
+                  <debugLabel>MatchBack</debugLabel>
+                  <tagDef>ScorchedGirl_MatchBack</tagDef>
+                  <role>StaticPart</role>
+                  <texPath>Things/Pawn/ScorchedGirl/Parts/Match_Back</texPath>
+                  <texPathLeft>Things/Pawn/ScorchedGirl/Parts/Left/Match_Back</texPathLeft>
+                  <baseLayer>8</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.ScorchedGirl.PawnRenderNodeProperties_ScorchedGirlPart">
+                  <debugLabel>MatchHead</debugLabel>
+                  <tagDef>ScorchedGirl_MatchHead</tagDef>
+                  <role>StaticPart</role>
+                  <texPath>Things/Pawn/ScorchedGirl/Parts/Match_Head</texPath>
+                  <texPathLeft>Things/Pawn/ScorchedGirl/Parts/Left/Match_Head</texPathLeft>
+                  <baseLayer>8.5</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.ScorchedGirl.PawnRenderNodeProperties_ScorchedGirlPart">
+                  <debugLabel>Body</debugLabel>
+                  <tagDef>ScorchedGirl_Body</tagDef>
+                  <role>BoilPart</role>
+                  <texPath>Things/Pawn/ScorchedGirl/Parts/Body_1</texPath>
+                  <texPathLeft>Things/Pawn/ScorchedGirl/Parts/Left/Body_1</texPathLeft>
+                  <frameTexPaths>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Body_1</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Body_2</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Body_3</li>
+                  </frameTexPaths>
+                  <frameTexPathsLeft>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/Body_1</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/Body_2</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/Body_3</li>
+                  </frameTexPathsLeft>
+                  <boilFrameTicks>7</boilFrameTicks>
+                  <baseLayer>10</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.ScorchedGirl.PawnRenderNodeProperties_ScorchedGirlPart">
+                  <debugLabel>Flame</debugLabel>
+                  <tagDef>ScorchedGirl_Flame</tagDef>
+                  <role>Flame</role>
+                  <texPath>Things/Pawn/ScorchedGirl/Parts/Flame_1</texPath>
+                  <texPathLeft>Things/Pawn/ScorchedGirl/Parts/Left/Flame_1</texPathLeft>
+                  <frameTexPaths>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Flame_1</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Flame_2</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Flame_3</li>
+                  </frameTexPaths>
+                  <frameTexPathsLeft>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/Flame_1</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/Flame_2</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/Flame_3</li>
+                  </frameTexPathsLeft>
+                  <boilFrameTicks>5</boilFrameTicks>
+                  <useTransparentShader>true</useTransparentShader>
+                  <flamePivotUV>(0.320, 0.524)</flamePivotUV>
+                  <baseLayer>11</baseLayer>
+                </li>
+              </children>
+            </li>
+
+            <!-- Head Group (Pigtails + Charred Head + Eyes + Mouth) -->
+            <li Class="LCAbnormalities.ScorchedGirl.PawnRenderNodeProperties_ScorchedGirlPart">
+              <debugLabel>HeadGroup</debugLabel>
+              <tagDef>ScorchedGirl_Head</tagDef>
+              <role>GroupRoot</role>
+              <useGraphic>false</useGraphic>
+              <children>
+                <li Class="LCAbnormalities.ScorchedGirl.PawnRenderNodeProperties_ScorchedGirlPart">
+                  <debugLabel>TailB</debugLabel>
+                  <tagDef>ScorchedGirl_TailB</tagDef>
+                  <role>BoilPart</role>
+                  <texPath>Things/Pawn/ScorchedGirl/Parts/TailB_1</texPath>
+                  <texPathLeft>Things/Pawn/ScorchedGirl/Parts/Left/TailB_1</texPathLeft>
+                  <frameTexPaths>
+                    <li>Things/Pawn/ScorchedGirl/Parts/TailB_1</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/TailB_2</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/TailB_3</li>
+                  </frameTexPaths>
+                  <frameTexPathsLeft>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/TailB_1</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/TailB_2</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/TailB_3</li>
+                  </frameTexPathsLeft>
+                  <boilFrameTicks>8</boilFrameTicks>
+                  <baseLayer>11.5</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.ScorchedGirl.PawnRenderNodeProperties_ScorchedGirlPart">
+                  <debugLabel>HeadMesh</debugLabel>
+                  <tagDef>ScorchedGirl_HeadMesh</tagDef>
+                  <role>BoilPart</role>
+                  <texPath>Things/Pawn/ScorchedGirl/Parts/Head_1</texPath>
+                  <texPathLeft>Things/Pawn/ScorchedGirl/Parts/Left/Head_1</texPathLeft>
+                  <frameTexPaths>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Head_1</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Head_2</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Head_3</li>
+                  </frameTexPaths>
+                  <frameTexPathsLeft>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/Head_1</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/Head_2</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/Head_3</li>
+                  </frameTexPathsLeft>
+                  <boilFrameTicks>7</boilFrameTicks>
+                  <baseLayer>12</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.ScorchedGirl.PawnRenderNodeProperties_ScorchedGirlPart">
+                  <debugLabel>TailF</debugLabel>
+                  <tagDef>ScorchedGirl_TailF</tagDef>
+                  <role>BoilPart</role>
+                  <texPath>Things/Pawn/ScorchedGirl/Parts/TailF_1</texPath>
+                  <texPathLeft>Things/Pawn/ScorchedGirl/Parts/Left/TailF_1</texPathLeft>
+                  <frameTexPaths>
+                    <li>Things/Pawn/ScorchedGirl/Parts/TailF_1</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/TailF_2</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/TailF_3</li>
+                  </frameTexPaths>
+                  <frameTexPathsLeft>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/TailF_1</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/TailF_2</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/TailF_3</li>
+                  </frameTexPathsLeft>
+                  <boilFrameTicks>8</boilFrameTicks>
+                  <baseLayer>12.5</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.ScorchedGirl.PawnRenderNodeProperties_ScorchedGirlPart">
+                  <debugLabel>Eye</debugLabel>
+                  <tagDef>ScorchedGirl_Eye</tagDef>
+                  <role>Eye</role>
+                  <texPath>Things/Pawn/ScorchedGirl/Parts/Eye_1</texPath>
+                  <texPathLeft>Things/Pawn/ScorchedGirl/Parts/Left/Eye_1</texPathLeft>
+                  <frameTexPaths>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Eye_1</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Eye_2</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Eye_3</li>
+                  </frameTexPaths>
+                  <frameTexPathsLeft>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/Eye_1</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/Eye_2</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/Eye_3</li>
+                  </frameTexPathsLeft>
+                  <closingEyeTexPath>Things/Pawn/ScorchedGirl/Parts/Eye_Closing</closingEyeTexPath>
+                  <closingEyeTexPathLeft>Things/Pawn/ScorchedGirl/Parts/Left/Eye_Closing</closingEyeTexPathLeft>
+                  <attackEyeTexPath>Things/Pawn/ScorchedGirl/Parts/Eye_Attack</attackEyeTexPath>
+                  <attackEyeTexPathLeft>Things/Pawn/ScorchedGirl/Parts/Left/Eye_Attack</attackEyeTexPathLeft>
+                  <boilFrameTicks>8</boilFrameTicks>
+                  <useTransparentShader>true</useTransparentShader>
+                  <baseLayer>13</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.ScorchedGirl.PawnRenderNodeProperties_ScorchedGirlPart">
+                  <debugLabel>Mouth</debugLabel>
+                  <tagDef>ScorchedGirl_Mouth</tagDef>
+                  <role>Mouth</role>
+                  <texPath>Things/Pawn/ScorchedGirl/Parts/Mouth_1</texPath>
+                  <texPathLeft>Things/Pawn/ScorchedGirl/Parts/Left/Mouth_1</texPathLeft>
+                  <frameTexPaths>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Mouth_1</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Mouth_2</li>
+                  </frameTexPaths>
+                  <frameTexPathsLeft>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/Mouth_1</li>
+                    <li>Things/Pawn/ScorchedGirl/Parts/Left/Mouth_2</li>
+                  </frameTexPathsLeft>
+                  <boilFrameTicks>10</boilFrameTicks>
+                  <useTransparentShader>true</useTransparentShader>
+                  <baseLayer>13</baseLayer>
+                </li>
+              </children>
+            </li>
+
+          </children>
+        </li>
+
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

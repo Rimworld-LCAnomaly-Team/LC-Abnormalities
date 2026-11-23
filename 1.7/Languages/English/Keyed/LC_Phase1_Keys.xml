@@ -10,7 +10,21 @@
   <LC_WellCheers_RedCanMsg>{0} drank a Cherry Red WellCheers soda, mending surface wounds.</LC_WellCheers_RedCanMsg>
   <LC_WellCheers_BlueCanMsg>{0} drank a Deep Sea Blue WellCheers soda, soothing mental strain.</LC_WellCheers_BlueCanMsg>
   <LC_WellCheers_PurpleCanMsg>{0} drank a Twilight Purple WellCheers soda, uplifting body and mind.</LC_WellCheers_PurpleCanMsg>
-  <LC_WellCheers_BadDrinkMsg>The tainted can drugged {0} into freezing hypothermic slumber and jarred their mind.</LC_WellCheers_BadDrinkMsg>
+  <LC_WellCheers_BadDrinkMsg>The tainted can drugged {0} into freezing hypothermic slumber as surging waves and a fishing boat swept across the chamber!</LC_WellCheers_BadDrinkMsg>
+  <LC_WellCheers_FlavorRed>Cherry Red</LC_WellCheers_FlavorRed>
+  <LC_WellCheers_FlavorBlue>Deep Sea Blue</LC_WellCheers_FlavorBlue>
+  <LC_WellCheers_FlavorPurple>Twilight Purple</LC_WellCheers_FlavorPurple>
+  <LC_WellCheers_DrinkOnCooldown>Cooldown: {0}</LC_WellCheers_DrinkOnCooldown>
+  <LC_WellCheers_DrinkMenuBase>Drink from {0}</LC_WellCheers_DrinkMenuBase>
+  <LC_WellCheers_DrinkMenuDisabled>Drink from {0} ({1})</LC_WellCheers_DrinkMenuDisabled>
+  <LC_WellCheers_DrinkRedOption>Drink WellCheers: Cherry Red (Heal)</LC_WellCheers_DrinkRedOption>
+  <LC_WellCheers_DrinkBlueOption>Drink WellCheers: Deep Sea Blue (Sanity)</LC_WellCheers_DrinkBlueOption>
+  <LC_WellCheers_DrinkPurpleOption>Drink WellCheers: Twilight Purple (Balanced)</LC_WellCheers_DrinkPurpleOption>
+  <LC_WellCheers_DrinkGizmoLabel>Dispense soda...</LC_WellCheers_DrinkGizmoLabel>
+  <LC_WellCheers_DrinkGizmoDesc>Choose a colonist to directly grab and drink a free {0} soda from WellCheers (independent cooldown; beware bad cans).</LC_WellCheers_DrinkGizmoDesc>
+  <LC_WellCheers_DrinkColonistOption>{0} drinks {1} WellCheers</LC_WellCheers_DrinkColonistOption>
+  <LC_WellCheers_InspectReady>Current flavor: {0} (Direct drink ready)</LC_WellCheers_InspectReady>
+  <LC_WellCheers_InspectCooldown>Current flavor: {0} (Direct drink cooldown: {1})</LC_WellCheers_InspectCooldown>
 
   <LC_PunishingBird_EscapedLabel>Breach: Punishing Bird</LC_PunishingBird_EscapedLabel>
   <LC_PunishingBird_EscapedText>{0} slipped out of containment! Hold your fire—do not attack it unless you wish to awaken its crimson maw.</LC_PunishingBird_EscapedText>
@@ -21,11 +35,13 @@
   <LC_PunishingBird_ReturnMsg>Punishing Bird grew tired of pecking and returned quietly into its egg.</LC_PunishingBird_ReturnMsg>
 
   <LC_VoidDream_EscapedLabel>Breach: Void Dream</LC_VoidDream_EscapedLabel>
-  <LC_VoidDream_EscapedText>{0} morphed into its three-eyed rooster form and breached containment! Wake anyone put to sleep within 60 seconds.</LC_VoidDream_EscapedText>
+  <LC_VoidDream_EscapedText>{0} floated out of containment launching hypnotic dream orbs! If left unharmed for 60s it will quietly return to its egg, but attacking it triggers its grotesque rooster transformation. Wake anyone put to sleep within 60 seconds.</LC_VoidDream_EscapedText>
+  <LC_VoidDream_TransformMsg>Void Dream was attacked! Amid a burst of billowing wool clouds, it morphed into a towering multi-eyed rooster!</LC_VoidDream_TransformMsg>
+  <LC_VoidDream_ReturnMsg>Void Dream drifted peacefully for a while before dissolving gently back into its egg.</LC_VoidDream_ReturnMsg>
   <LC_VoidDream_KilledLabel>Suppressed: Void Dream</LC_VoidDream_KilledLabel>
   <LC_VoidDream_KilledText>{0} collapsed into an abnormality egg.</LC_VoidDream_KilledText>
   <LC_VoidDream_LowTemperanceMsg>{0}'s low Temperance disturbed Void Dream, lowering its Qliphoth Counter!</LC_VoidDream_LowTemperanceMsg>
-  <LC_VoidDream_SleepMsg>Void Dream's hypnotic crow lulled {0} into a deep coma!</LC_VoidDream_SleepMsg>
+  <LC_VoidDream_SleepMsg>Void Dream's hypnosis lulled {0} into a deep coma atop a floating dream cloud!</LC_VoidDream_SleepMsg>
   <LC_VoidDream_SecondCrowMsg>A second crow tore through {0}'s slumbering nightmare!</LC_VoidDream_SecondCrowMsg>
   <LC_VoidDream_SleepCountdownTip>Wake before nightmare shock: {0}s</LC_VoidDream_SleepCountdownTip>
   <LC_VoidDream_NightmareMsg>No one woke {0} in time—Void Dream's nightmare erupted inside their skull!</LC_VoidDream_NightmareMsg>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderDef>
+    <defName>LC_HelperChargeTelegraph</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_HelperVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_HelperChargeTelegraph.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3154</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_HelperSawVortex</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_HelperVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_HelperSawVortex.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3158</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_GrinderSawSlash</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_HelperVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_GrinderSawSlash.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3160</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+</Defs>

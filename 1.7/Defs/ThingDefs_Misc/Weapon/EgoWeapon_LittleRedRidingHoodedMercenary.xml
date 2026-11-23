@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_BaseRangedWeapon_EGO">
+    <defName>EgoWeapon_LittleRedRidingHoodedMercenary</defName>
+    <label>E.G.O. Weapon (Crimson Scar)</label>
+    <description>A paired hand-cannon and crimson sickle extracted from Little Red Riding Hooded Mercenary (WAW).\nExcels at both mid-range Red gunfire and close-quarters slashing, scaling up to +50% bonus damage—and unleashing blood-red berserk shockwaves and cleaves—as its wielder's health falls.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/EgoWeapon_LittleRedRidingHoodedMercenary</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.25, 1.25)</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <soundInteract>LC_LittleRed_Change</soundInteract>
+    <statBases>
+      <Mass>3.1</Mass>
+      <AccuracyTouch>0.86</AccuracyTouch>
+      <AccuracyShort>0.84</AccuracyShort>
+      <AccuracyMedium>0.74</AccuracyMedium>
+      <AccuracyLong>0.55</AccuracyLong>
+      <RangedWeapon_Cooldown>1.05</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>LCAbnormalities.LittleRedRidingHoodedMercenary.Verb_ShootCrimsonScar</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_EgoWeapon_LittleRedRidingHoodedMercenary</defaultProjectile>
+        <warmupTime>0.60</warmupTime>
+        <range>22</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+        <soundCast>LC_LittleRed_Gun</soundCast>
+        <muzzleFlashScale>7</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>crimson sickle</label>
+        <capacities>
+          <li>LC_CrimsonScarSlash</li>
+        </capacities>
+        <power>21</power>
+        <cooldownTime>1.35</cooldownTime>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Red</damageType>
+        <riskLevel>WAW</riskLevel>
+        <damageMultiplier>1</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_BaseBullet_EGO">
+    <defName>Bullet_EgoWeapon_LittleRedRidingHoodedMercenary</defName>
+    <label>Crimson Scar buckshot</label>
+    <thingClass>LCAbnormalities.LittleRedRidingHoodedMercenary.Projectile_CrimsonScarShot</thingClass>
+    <projectile>
+      <damageDef>LC_CrimsonScar_RedShot</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <armorPenetrationBase>0.42</armorPenetrationBase>
+      <stoppingPower>1.3</stoppingPower>
+      <speed>125</speed>
+    </projectile>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_CrimsonScar</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>(0.85, 1.35)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+</Defs>

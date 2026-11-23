@@ -1,0 +1,14 @@
+{
+  "TextureModID": "darthcy.lc.abnormalities",
+  "ItemDefName": "EgoWeapon_BigBird",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.34,
+  "OffY": -0.05,
+  "ScaleX": 2.2,
+  "ScaleY": 2.2,
+  "HandsMode": 1,
+  "BladeStart": 0.42,
+  "BladeEnd": 1.18,
+  "MeleeWeaponType": 1
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderDef>
+    <defName>LC_SchadenfreudeKeyholeAura</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_SchadenfreudeVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_SchadenfreudeKeyholeAura.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3155</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_SchadenfreudeSawShred</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_SchadenfreudeVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_SchadenfreudeSawShred.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3159</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_GazeSawSlash</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_SchadenfreudeVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_GazeSawSlash.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3161</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+</Defs>

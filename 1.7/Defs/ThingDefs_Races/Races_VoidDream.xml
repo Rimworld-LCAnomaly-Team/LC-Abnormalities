@@ -4,7 +4,7 @@
   <ThingDef ParentName="LC_EntityBase">
     <defName>VoidDream</defName>
     <label>Void Dream</label>
-    <description>A drowsy violet dream-sheep (T-02-99) whose woolen body conceals an uncanny crimson third eye.\n\nIf an undisciplined agent (Temperance I) dares tend it, its Qliphoth Counter drops. Once breached, it morphs into a towering three-eyed rooster whose hypnotic crow plunges nearby humans into a fatal nightmare slumber unless shaken awake by allies.</description>
+    <description>A drowsy violet dream-sheep (T-02-99) whose fluffy wool conceals glowing emerald and magenta eyes.\n\nIf an undisciplined agent (Temperance I) dares tend it, its Qliphoth Counter drops. When breached, it drifts peacefully as a floating sheep launching hypnotic dream orbs—if left unharmed it eventually returns to its egg, but attacking it triggers a wool-cloud metamorphosis into a towering rooster whose multi-pulse hypnotic crow plunges nearby humans into a fatal nightmare slumber.</description>
     <uiIconPath>UI/CodexEntries/VoidDream</uiIconPath>
     <thingClass>LCAbnormalities.VoidDream.LC_VoidDreamPawn</thingClass>
     <statBases>
@@ -60,6 +60,12 @@
         <ifProvideWarningPoints>true</ifProvideWarningPoints>
         <customWarningPoints>-1</customWarningPoints>
         <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
+        <crowIntervalTicks>420</crowIntervalTicks>
+        <crowRadius>10</crowRadius>
+        <orbIntervalTicks>210</orbIntervalTicks>
+        <orbRange>14</orbRange>
+        <orbVolleyCount>4</orbVolleyCount>
+        <sheepCalmReturnTicks>3600</sheepCalmReturnTicks>
         <dyingFxDef>DyingVoidDream</dyingFxDef>
         <workDamageDef>LC_BlackDamage</workDamageDef>
         <workDamageRange>1~3</workDamageRange>
@@ -82,7 +88,7 @@
       </li>
       <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
         <lookForTargetOnEscape>true</lookForTargetOnEscape>
-        <hasAnimation>false</hasAnimation>
+        <hasAnimation>true</hasAnimation>
       </li>
       <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
         <frequencyTicks>60000</frequencyTicks>
@@ -127,12 +133,12 @@
           <li>
             <threshold>5</threshold>
             <label>Observation Level: II</label>
-            <text>When Void Dream breaches, it transforms into a grotesque rooster whose periodic crow puts nearby humans to sleep.\nUnlocks the E.G.O. Gift 'Dreaming Current'.</text>
+            <text>When Void Dream breaches, it floats as a sheep launching hypnotic light orbs (and returns peacefully if left unharmed for 60s). Attacking it triggers a wool-cloud transformation into a grotesque rooster whose periodic crow puts nearby humans to sleep.\nUnlocks the E.G.O. Gift 'Engulfing Dream'.</text>
           </li>
           <li>
             <threshold>9</threshold>
             <label>Observation Level: III</label>
-            <text>Select any sleeping victim and click "Wake Sleeper" within 60 seconds—before nightmare shock or a second crow claims their sanity.\nUnlocks the TETH E.G.O. Weapon and Suit 'Dreamy'.</text>
+            <text>Select any sleeping victim and click "Wake Sleeper" within 60 seconds—before nightmare shock or a second crow claims their sanity.\nUnlocks the TETH E.G.O. Weapon and Suit 'Engulfing Dream'.</text>
           </li>
           <li>
             <threshold>13</threshold>

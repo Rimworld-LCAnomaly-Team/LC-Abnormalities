@@ -29,6 +29,26 @@
     </modExtensions>
   </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
 
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_FX_WellCheersSeaWave</defName>
+    <label>WellCheers sea wave</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <thingClass>LCAbnormalities.WellCheers.LC_FX_WellCheersSeaWave</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_FX_WellCheersBubble</defName>
+    <label>WellCheers fizz</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <thingClass>LCAbnormalities.WellCheers.LC_FX_WellCheersBubble</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+  </ThingDef>
+
   <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
     <defName>DyingPunishingBird</defName>
     <label>Punishing Bird (Dissolving)</label>

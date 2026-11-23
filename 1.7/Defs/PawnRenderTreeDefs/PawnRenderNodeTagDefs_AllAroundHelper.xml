@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderNodeTagDef><defName>AllAroundHelper_Root</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>AllAroundHelper_SawRotor</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>AllAroundHelper_LegLeft</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>AllAroundHelper_LegRight</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>AllAroundHelper_ArmUL</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>AllAroundHelper_BladeUL</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>AllAroundHelper_ArmUR</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>AllAroundHelper_BladeUR</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>AllAroundHelper_ArmDL</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>AllAroundHelper_BladeDL</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>AllAroundHelper_ArmDR</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>AllAroundHelper_BladeDR</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>AllAroundHelper_Body</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>AllAroundHelper_Face</defName></PawnRenderNodeTagDef>
+
+</Defs>

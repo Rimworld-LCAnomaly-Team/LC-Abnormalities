@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.PawnKindDef_AbnormalityEntity>
+    <defName>BigBird</defName>
+    <label>Big Bird</label>
+    <race>BigBird</race>
+    <canMeleeAttack>true</canMeleeAttack>
+    <defaultFactionType>LC_Abnormalities</defaultFactionType>
+    <preventIdeo>true</preventIdeo>
+    <overrideDebugActionCategory>Entity</overrideDebugActionCategory>
+    <forceDeathOnDowned>true</forceDeathOnDowned>
+    <combatPower>360</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/BigBird/BigBird</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2.4</drawSize>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>UI/CodexEntries/BigBird</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>1.9</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>WAW</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.PawnKindDef_AbnormalityEntity>
+
+</Defs>

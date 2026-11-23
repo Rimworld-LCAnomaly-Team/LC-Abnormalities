@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Black Forest Three Birds Resonance -->
+  <LC_ThreeBirds_ResonanceWarning>Punishing Bird, Judgement Bird, and Big Bird have all breached simultaneously! An ominous stillness descends over the Black Forest...</LC_ThreeBirds_ResonanceWarning>
+
+  <!-- T-05-41 All-Around Helper -->
+  <LC_AllAroundHelper_EscapedLabel>All-Around Helper Breached!</LC_AllAroundHelper_EscapedLabel>
+  <LC_AllAroundHelper_EscapedText>{0} has snapped open its chassis and entered cleaning rampage mode! Beware its high-speed rotary saw dashes.</LC_AllAroundHelper_EscapedText>
+  <LC_AllAroundHelper_SuppressedLabel>All-Around Helper Suppressed</LC_AllAroundHelper_SuppressedLabel>
+  <LC_AllAroundHelper_SuppressedText>{0} has powered down and reverted to its containment egg.</LC_AllAroundHelper_SuppressedText>
+
+  <!-- O-02-62 Judgement Bird -->
+  <LC_JudgementBird_EscapedLabel>Judgement Bird Breached!</LC_JudgementBird_EscapedLabel>
+  <LC_JudgementBird_EscapedText>{0} has escaped containment! Its crooked brass scale deals percentage Pale damage that bypasses conventional armor.</LC_JudgementBird_EscapedText>
+  <LC_JudgementBird_SuppressedLabel>Judgement Bird Suppressed</LC_JudgementBird_SuppressedLabel>
+  <LC_JudgementBird_SuppressedText>{0} has been silenced and returned to its containment egg.</LC_JudgementBird_SuppressedText>
+  <LC_JudgementBird_ScaleTiltMsg>Judgement Bird's crooked scale tilts — Pale judgement washes over nearby souls!</LC_JudgementBird_ScaleTiltMsg>
+
+  <!-- O-02-40 Big Bird -->
+  <LC_BigBird_EscapedLabel>Big Bird Breached!</LC_BigBird_EscapedLabel>
+  <LC_BigBird_EscapedText>{0} has emerged from containment with its golden lantern ablaze! Snap entranced colonists out of their trance before they reach its jaws.</LC_BigBird_EscapedText>
+  <LC_BigBird_SuppressedLabel>Big Bird Suppressed</LC_BigBird_SuppressedLabel>
+  <LC_BigBird_SuppressedText>{0}'s lantern has dimmed as it collapses back into its containment egg.</LC_BigBird_SuppressedText>
+  <LC_BigBird_EnchantedMsg>{0} is entranced by Big Bird's glowing lantern and is walking toward it! Use "Snap Out of Trance" to free them.</LC_BigBird_EnchantedMsg>
+  <LC_BigBird_BiteMsg>Big Bird clamped its massive jaws down upon {0}!</LC_BigBird_BiteMsg>
+  <LC_BigBird_SnapOutGizmoLabel>Snap Out of Trance</LC_BigBird_SnapOutGizmoLabel>
+  <LC_BigBird_SnapOutGizmoDesc>Immediately shake this colonist awake from Big Bird's hypnotic lantern enchantment.</LC_BigBird_SnapOutGizmoDesc>
+
+  <!-- F-01-57 Little Red Riding Hooded Mercenary -->
+  <LC_LittleRed_EscapedLabel>Little Red Riding Hooded Mercenary Breached!</LC_LittleRed_EscapedLabel>
+  <LC_LittleRed_EscapedText>{0} has broken free in a hostile fury! Expect rapid scattergun blasts and crimson sickle cleaves.</LC_LittleRed_EscapedText>
+  <LC_LittleRed_SuppressedLabel>Little Red Riding Hooded Mercenary Suppressed</LC_LittleRed_SuppressedLabel>
+  <LC_LittleRed_SuppressedText>{0} has been subdued and reverted to her containment egg.</LC_LittleRed_SuppressedText>
+  <LC_LittleRed_EscapeCounterDropMsg>Another Abnormality breached — {0} grows restless (Qliphoth Counter: {1}).</LC_LittleRed_EscapeCounterDropMsg>
+  <LC_LittleRed_HiredMsg>Little Red Riding Hooded Mercenary accepted the contract and is hunting {0}!</LC_LittleRed_HiredMsg>
+  <LC_LittleRed_HireLabel>Hire Mercenary ({0} PE)</LC_LittleRed_HireLabel>
+  <LC_LittleRed_HireDesc>Pay {0} individual PE-Boxes to deploy Little Red Riding Hooded Mercenary as an allied hunter targeting any hostile threat on the map.</LC_LittleRed_HireDesc>
+  <LC_LittleRed_NotEnoughPeBox>Requires {0} individual PE-Boxes (current: {1}).</LC_LittleRed_NotEnoughPeBox>
+  <LC_LittleRed_InspectPlatform>Mercenary contract fee: {0} PE-Box</LC_LittleRed_InspectPlatform>
+  <LC_LittleRed_RecallLabel>Recall Mercenary</LC_LittleRed_RecallLabel>
+  <LC_LittleRed_RecallDesc>Order Little Red Riding Hooded Mercenary to end her hunt and return directly to her holding platform.</LC_LittleRed_RecallDesc>
+
+  <!-- D-09-104 Backward Clock -->
+  <LC_BackwardClock_UseFloatMenu>Operate {0}</LC_BackwardClock_UseFloatMenu>
+  <LC_BackwardClock_UseGizmoLabel>Charge / Activate Clock...</LC_BackwardClock_UseGizmoLabel>
+  <LC_BackwardClock_UseGizmoDesc>Order a Level III+ employee to wind Backward Clock (0→4), or a Level V employee to sacrifice themselves at 4/4 charge to trigger Time Rewind.</LC_BackwardClock_UseGizmoDesc>
+  <LC_BackwardClock_NeedLv3>Requires Level III+ employee to charge</LC_BackwardClock_NeedLv3>
+  <LC_BackwardClock_NeedLv5>Requires Level V employee to trigger Time Rewind</LC_BackwardClock_NeedLv5>
+  <LC_BackwardClock_ChargedMsg>{0} wound Backward Clock (Charge: {1}/{2}).</LC_BackwardClock_ChargedMsg>
+  <LC_BackwardClock_FullyChargedMsg>{0} brought Backward Clock to full charge ({1}/{2})! Ready for Level V Time Rewind.</LC_BackwardClock_FullyChargedMsg>
+  <LC_BackwardClock_UnknownUser>An employee</LC_BackwardClock_UnknownUser>
+  <LC_BackwardClock_RewindLabel>Backward Clock: Time Rewound</LC_BackwardClock_RewindLabel>
+  <LC_BackwardClock_RewindText>{0} pulled Backward Clock's final lever and vanished from the timeline.\n\nA blinding temporal pulse swept the facility: {1} non-ALEPH breached Abnormalities/Ordeals were instantly suppressed, and all non-ALEPH Qliphoth Counters were restored.</LC_BackwardClock_RewindText>
+  <LC_BackwardClock_InspectReady>READY — Level V Activation</LC_BackwardClock_InspectReady>
+  <LC_BackwardClock_InspectCharging>Charging — Level III+ Required</LC_BackwardClock_InspectCharging>
+  <LC_BackwardClock_InspectCharge>Charge: {0}/{1} ({2}) | Rewinds: {3}</LC_BackwardClock_InspectCharge>
+
+  <!-- O-05-76 Schadenfreude -->
+  <LC_Schadenfreude_EscapedLabel>Schadenfreude Breached!</LC_Schadenfreude_EscapedLabel>
+  <LC_Schadenfreude_EscapedText>{0} has escaped containment! Pan your camera AWAY from it to freeze it motionless inside its iron box—looking at it unleashes its mechanical drill saws!</LC_Schadenfreude_EscapedText>
+  <LC_Schadenfreude_SuppressedLabel>Schadenfreude Suppressed</LC_Schadenfreude_SuppressedLabel>
+  <LC_Schadenfreude_SuppressedText>{0}'s keyhole eye has shut as it collapses back into its containment egg.</LC_Schadenfreude_SuppressedText>
+  <LC_Schadenfreude_WorkWarning>An employee is working on Schadenfreude — pan your camera AWAY from its containment cell!</LC_Schadenfreude_WorkWarning>
+  <LC_Schadenfreude_WatchedWorkDropMsg>You stared at {0} during work! Its Qliphoth Counter dropped.</LC_Schadenfreude_WatchedWorkDropMsg>
+  <LC_Schadenfreude_InspectWatched>Gaze status: WATCHED (DANGER — look away during work!)</LC_Schadenfreude_InspectWatched>
+  <LC_Schadenfreude_InspectUnwatched>Gaze status: Unwatched (Safe)</LC_Schadenfreude_InspectUnwatched>
+
+</LanguageData>

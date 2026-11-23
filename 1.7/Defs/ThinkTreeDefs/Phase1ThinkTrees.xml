@@ -45,9 +45,13 @@
         <li Class="ThinkNode_Subtree">
           <treeDef>Downed</treeDef>
         </li>
-        <li Class="JobGiver_AIFightEnemies">
-          <targetAcquireRadius>28</targetAcquireRadius>
-          <targetKeepRadius>35</targetKeepRadius>
+        <li Class="LCAbnormalities.VoidDream.ThinkNode_ConditionalVoidDreamRooster">
+          <subNodes>
+            <li Class="JobGiver_AIFightEnemies">
+              <targetAcquireRadius>28</targetAcquireRadius>
+              <targetKeepRadius>35</targetKeepRadius>
+            </li>
+          </subNodes>
         </li>
         <li Class="JobGiver_WanderAnywhere">
           <maxDanger>Deadly</maxDanger>

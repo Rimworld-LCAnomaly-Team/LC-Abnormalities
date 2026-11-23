@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderTypeDef>
+    <defName>LC_JudgementPaleField</defName>
+    <shaderPath>Map/LC_JudgementPaleField</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_JudgementScaleGlow</defName>
+    <shaderPath>Map/LC_JudgementScaleGlow</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_JustitiaPaleSlash</defName>
+    <shaderPath>Map/LC_JustitiaPaleSlash</shaderPath>
+  </ShaderTypeDef>
+
+</Defs>

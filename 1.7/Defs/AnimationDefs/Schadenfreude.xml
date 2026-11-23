@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ==================== 1. DORMANT / CONTAINED BOX IDLE (LookAtMe default_box, 120t = 2.0s) ==================== -->
+  <!-- Unblinking iron keyhole box resting quietly while its photorealistic eye glances & blinks and antique lenses micro-focus -->
+  <AnimationDef>
+    <defName>Schadenfreude_Box_Idle</defName>
+    <durationTicks>120</durationTicks>
+    <startOnRandomTick>true</startOnRandomTick>
+    <playWhenDowned>true</playWhenDowned>
+    <keyframeParts>
+      <li>
+        <key>Schadenfreude_BodyBox</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5039, 0.5469)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,-0.045)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+            <li><tick>60</tick><offset>(0,0,-0.036)</offset><angle>0.6</angle><scale>(0.994,1,1.008)</scale></li>
+            <li><tick>120</tick><offset>(0,0,-0.045)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_Eye</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5020, 0.6094)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset></li>
+            <li><tick>24</tick><offset>(-0.016,0,0.002)</offset></li>
+            <li><tick>52</tick><offset>(-0.016,0,0.002)</offset></li>
+            <li><tick>70</tick><offset>(0.018,0,-0.002)</offset></li>
+            <li><tick>98</tick><offset>(0.018,0,-0.002)</offset></li>
+            <li><tick>120</tick><offset>(0,0,0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_LensBig</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3750, 0.7070)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle><scale>(1,1,1)</scale></li>
+            <li><tick>45</tick><angle>-2.5</angle><scale>(1.022,1,1.022)</scale></li>
+            <li><tick>85</tick><angle>2.0</angle><scale>(0.990,1,0.990)</scale></li>
+            <li><tick>120</tick><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_LensSmall</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6328, 0.4805)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle><scale>(1,1,1)</scale></li>
+            <li><tick>60</tick><angle>3.5</angle><scale>(1.028,1,1.028)</scale></li>
+            <li><tick>120</tick><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 2. CONTAINED WATCHED-WORK AGITATION (60t = 1.0s) ==================== -->
+  <!-- Player camera is watching Schadenfreude during work: iron box shudders violently, lenses flare, eye darts furiously -->
+  <AnimationDef>
+    <defName>Schadenfreude_Box_WorkWatched</defName>
+    <durationTicks>60</durationTicks>
+    <playWhenDowned>true</playWhenDowned>
+    <keyframeParts>
+      <li>
+        <key>Schadenfreude_BodyBox</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5039, 0.5469)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,-0.042)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+            <li><tick>10</tick><offset>(-0.014,0,-0.032)</offset><angle>-3.6</angle><scale>(1.025,1,0.978)</scale></li>
+            <li><tick>20</tick><offset>(0.015,0,-0.026)</offset><angle>3.8</angle><scale>(0.978,1,1.028)</scale></li>
+            <li><tick>30</tick><offset>(-0.016,0,-0.034)</offset><angle>-4.2</angle><scale>(1.032,1,0.972)</scale></li>
+            <li><tick>40</tick><offset>(0.016,0,-0.025)</offset><angle>4.0</angle><scale>(0.975,1,1.030)</scale></li>
+            <li><tick>50</tick><offset>(-0.012,0,-0.036)</offset><angle>-2.8</angle><scale>(1.018,1,0.985)</scale></li>
+            <li><tick>60</tick><offset>(0,0,-0.042)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_Eye</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5020, 0.6094)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><scale>(1.06,1,1.06)</scale></li>
+            <li><tick>15</tick><offset>(-0.022,0,0.006)</offset><scale>(1.10,1,1.10)</scale></li>
+            <li><tick>30</tick><offset>(0.022,0,-0.005)</offset><scale>(1.04,1,1.04)</scale></li>
+            <li><tick>45</tick><offset>(-0.018,0,-0.004)</offset><scale>(1.12,1,1.12)</scale></li>
+            <li><tick>60</tick><offset>(0,0,0)</offset><scale>(1.06,1,1.06)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_LensBig</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3750, 0.7070)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle><scale>(1.02,1,1.02)</scale></li>
+            <li><tick>20</tick><angle>-7.0</angle><scale>(1.09,1,1.09)</scale></li>
+            <li><tick>40</tick><angle>6.5</angle><scale>(1.03,1,1.03)</scale></li>
+            <li><tick>60</tick><angle>0</angle><scale>(1.02,1,1.02)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_LensSmall</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6328, 0.4805)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle><scale>(1.02,1,1.02)</scale></li>
+            <li><tick>30</tick><angle>9.0</angle><scale>(1.10,1,1.10)</scale></li>
+            <li><tick>60</tick><angle>0</angle><scale>(1.02,1,1.02)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 3. SPRING-OPEN TRANSFORM (LookAtMe transform, 40t = 0.67s) ==================== -->
+  <!-- Breached & watched: iron box bursts upward off the floor as crimson flesh and 4 spiked drill legs snap violently outward -->
+  <AnimationDef>
+    <defName>Schadenfreude_Transform</defName>
+    <durationTicks>40</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>Schadenfreude_BodyBox</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5039, 0.5469)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,-0.095)</offset><angle>0</angle><scale>(1.05,1,0.92)</scale></li>
+            <li><tick>12</tick><offset>(0,0,0.068)</offset><angle>-4.5</angle><scale>(0.94,1,1.08)</scale></li>
+            <li><tick>26</tick><offset>(0,0,0.032)</offset><angle>3.2</angle><scale>(1.02,1,0.98)</scale></li>
+            <li><tick>40</tick><offset>(0,0,0.045)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_BodyMeat</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5039, 0.3672)</pivot>
+          <keyframes>
+            <li><tick>0</tick><scale>(0.65,1,0.30)</scale></li>
+            <li><tick>16</tick><scale>(1.10,1,1.15)</scale></li>
+            <li><tick>40</tick><scale>(1.0,1,1.0)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_BodyVeins</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5039, 0.4258)</pivot>
+          <keyframes>
+            <li><tick>0</tick><scale>(0.75,1,0.25)</scale></li>
+            <li><tick>22</tick><scale>(1.05,1,1.08)</scale></li>
+            <li><tick>40</tick><scale>(1.0,1,1.0)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_FrontLegLeft_Upper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3828, 0.3867)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>58.0</angle><scale>(0.55,1,0.55)</scale></li>
+            <li><tick>16</tick><angle>-14.0</angle><scale>(1.06,1,1.06)</scale></li>
+            <li><tick>40</tick><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_FrontLegLeft_Lower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.2227, 0.5313)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-72.0</angle></li>
+            <li><tick>18</tick><angle>16.0</angle></li>
+            <li><tick>40</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_FrontLegRight_Upper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6250, 0.3867)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-58.0</angle><scale>(0.55,1,0.55)</scale></li>
+            <li><tick>16</tick><angle>14.0</angle><scale>(1.06,1,1.06)</scale></li>
+            <li><tick>40</tick><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_FrontLegRight_Lower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.7852, 0.5313)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>72.0</angle></li>
+            <li><tick>18</tick><angle>-16.0</angle></li>
+            <li><tick>40</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_BackLegLeft_Upper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3984, 0.4258)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>48.0</angle><scale>(0.55,1,0.55)</scale></li>
+            <li><tick>18</tick><angle>-10.0</angle><scale>(1.04,1,1.04)</scale></li>
+            <li><tick>40</tick><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_BackLegLeft_Lower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.2695, 0.5625)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-60.0</angle></li>
+            <li><tick>20</tick><angle>12.0</angle></li>
+            <li><tick>40</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_BackLegRight_Upper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6094, 0.4258)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-48.0</angle><scale>(0.55,1,0.55)</scale></li>
+            <li><tick>18</tick><angle>10.0</angle><scale>(1.04,1,1.04)</scale></li>
+            <li><tick>40</tick><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_BackLegRight_Lower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.7383, 0.5625)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>60.0</angle></li>
+            <li><tick>20</tick><angle>-12.0</angle></li>
+            <li><tick>40</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 4. BREACHED ACTIVE IDLE (LookAtMe default, 120t = 2.0s) ==================== -->
+  <!-- Perched menacingly on 4 spiked drill legs, crimson flesh & veins throbbing, eye peering & blinking -->
+  <AnimationDef>
+    <defName>Schadenfreude_Active_Idle</defName>
+    <durationTicks>120</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>Schadenfreude_BodyBox</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5039, 0.5469)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0.045)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+            <li><tick>36</tick><offset>(0.010,0,0.068)</offset><angle>-2.8</angle><scale>(0.990,1,1.016)</scale></li>
+            <li><tick>76</tick><offset>(-0.010,0,0.036)</offset><angle>2.6</angle><scale>(1.015,1,0.988)</scale></li>
+            <li><tick>120</tick><offset>(0,0,0.045)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_BodyMeat</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5039, 0.3672)</pivot>
+          <keyframes>
+            <li><tick>0</tick><scale>(1.0,1,1.0)</scale></li>
+            <li><tick>30</tick><scale>(1.04,1,1.07)</scale></li>
+            <li><tick>60</tick><scale>(0.98,1,0.96)</scale></li>
+            <li><tick>90</tick><scale>(1.04,1,1.06)</scale></li>
+            <li><tick>120</tick><scale>(1.0,1,1.0)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_BodyVeins</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5039, 0.4258)</pivot>
+          <keyframes>
+            <li><tick>0</tick><scale>(1.0,1,1.0)</scale></li>
+            <li><tick>40</tick><scale>(1.03,1,1.08)</scale></li>
+            <li><tick>80</tick><scale>(0.98,1,0.95)</scale></li>
+            <li><tick>120</tick><scale>(1.0,1,1.0)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_Eye</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5020, 0.6094)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset></li>
+            <li><tick>34</tick><offset>(-0.018,0,0.003)</offset></li>
+            <li><tick>78</tick><offset>(0.018,0,-0.003)</offset></li>
+            <li><tick>120</tick><offset>(0,0,0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_FrontLegLeft_Upper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3828, 0.3867)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>40</tick><angle>-7.0</angle></li>
+            <li><tick>80</tick><angle>5.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_FrontLegLeft_Lower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.2227, 0.5313)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>40</tick><angle>8.0</angle></li>
+            <li><tick>80</tick><angle>-6.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_FrontLegRight_Upper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6250, 0.3867)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>40</tick><angle>6.0</angle></li>
+            <li><tick>80</tick><angle>-6.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_FrontLegRight_Lower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.7852, 0.5313)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>40</tick><angle>-7.0</angle></li>
+            <li><tick>80</tick><angle>7.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 5. BREACHED SPIDER WALK (LookAtMe walk, 72t = 1.2s) ==================== -->
+  <!-- Unnerving 4-leg mechanical spider-drill stalking gait with alternating diagonal strides -->
+  <AnimationDef>
+    <defName>Schadenfreude_Walk</defName>
+    <durationTicks>72</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>Schadenfreude_BodyBox</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5039, 0.5469)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0.042)</offset><angle>-3.5</angle><scale>(1.01,1,0.99)</scale></li>
+            <li><tick>18</tick><offset>(0,0,0.076)</offset><angle>0.5</angle><scale>(0.985,1,1.022)</scale></li>
+            <li><tick>36</tick><offset>(0,0,0.040)</offset><angle>3.8</angle><scale>(1.015,1,0.988)</scale></li>
+            <li><tick>54</tick><offset>(0,0,0.074)</offset><angle>-0.5</angle><scale>(0.985,1,1.020)</scale></li>
+            <li><tick>72</tick><offset>(0,0,0.042)</offset><angle>-3.5</angle><scale>(1.01,1,0.99)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_BodyMeat</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5039, 0.3672)</pivot>
+          <keyframes>
+            <li><tick>0</tick><scale>(1.04,1,0.96)</scale></li>
+            <li><tick>18</tick><scale>(0.97,1,1.08)</scale></li>
+            <li><tick>36</tick><scale>(1.05,1,0.95)</scale></li>
+            <li><tick>54</tick><scale>(0.97,1,1.08)</scale></li>
+            <li><tick>72</tick><scale>(1.04,1,0.96)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Front Left + Back Right stride pair -->
+      <li>
+        <key>Schadenfreude_FrontLegLeft_Upper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3828, 0.3867)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>14.0</angle></li>
+            <li><tick>18</tick><angle>-24.0</angle></li>
+            <li><tick>36</tick><angle>-14.0</angle></li>
+            <li><tick>54</tick><angle>16.0</angle></li>
+            <li><tick>72</tick><angle>14.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_FrontLegLeft_Lower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.2227, 0.5313)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-16.0</angle></li>
+            <li><tick>18</tick><angle>28.0</angle></li>
+            <li><tick>36</tick><angle>12.0</angle></li>
+            <li><tick>54</tick><angle>-20.0</angle></li>
+            <li><tick>72</tick><angle>-16.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_BackLegRight_Upper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6094, 0.4258)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-12.0</angle></li>
+            <li><tick>18</tick><angle>22.0</angle></li>
+            <li><tick>36</tick><angle>12.0</angle></li>
+            <li><tick>54</tick><angle>-15.0</angle></li>
+            <li><tick>72</tick><angle>-12.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_BackLegRight_Lower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.7383, 0.5625)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>14.0</angle></li>
+            <li><tick>18</tick><angle>-24.0</angle></li>
+            <li><tick>36</tick><angle>-10.0</angle></li>
+            <li><tick>54</tick><angle>18.0</angle></li>
+            <li><tick>72</tick><angle>14.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Front Right + Back Left counter-phase stride pair -->
+      <li>
+        <key>Schadenfreude_FrontLegRight_Upper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6250, 0.3867)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>14.0</angle></li>
+            <li><tick>18</tick><angle>-16.0</angle></li>
+            <li><tick>36</tick><angle>-14.0</angle></li>
+            <li><tick>54</tick><angle>24.0</angle></li>
+            <li><tick>72</tick><angle>14.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_FrontLegRight_Lower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.7852, 0.5313)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-12.0</angle></li>
+            <li><tick>18</tick><angle>20.0</angle></li>
+            <li><tick>36</tick><angle>16.0</angle></li>
+            <li><tick>54</tick><angle>-28.0</angle></li>
+            <li><tick>72</tick><angle>-12.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_BackLegLeft_Upper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3984, 0.4258)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-12.0</angle></li>
+            <li><tick>18</tick><angle>15.0</angle></li>
+            <li><tick>36</tick><angle>12.0</angle></li>
+            <li><tick>54</tick><angle>-22.0</angle></li>
+            <li><tick>72</tick><angle>-12.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_BackLegLeft_Lower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.2695, 0.5625)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>10.0</angle></li>
+            <li><tick>18</tick><angle>-18.0</angle></li>
+            <li><tick>36</tick><angle>-14.0</angle></li>
+            <li><tick>54</tick><angle>24.0</angle></li>
+            <li><tick>72</tick><angle>10.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 6. DRILL-LEG THRUST ATTACK (LookAtMe attack1/attack2, 54t = 0.90s) ==================== -->
+  <!-- Chassis rears up and snaps forward while both front spiked drill legs wind high and impale violently downward -->
+  <AnimationDef>
+    <defName>Schadenfreude_DrillAttack</defName>
+    <durationTicks>54</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>Schadenfreude_BodyBox</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5039, 0.5469)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0.045)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+            <li><tick>20</tick><offset>(0,0,0.095)</offset><angle>-9.5</angle><scale>(0.95,1,1.06)</scale></li>
+            <li><tick>32</tick><offset>(0,0,0.012)</offset><angle>11.5</angle><scale>(1.07,1,0.94)</scale></li>
+            <li><tick>42</tick><offset>(0,0,0.028)</offset><angle>4.0</angle><scale>(1.02,1,0.98)</scale></li>
+            <li><tick>54</tick><offset>(0,0,0.045)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_FrontLegLeft_Upper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3828, 0.3867)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>20</tick><angle>-48.0</angle></li>
+            <li><tick>31</tick><angle>34.0</angle></li>
+            <li><tick>42</tick><angle>14.0</angle></li>
+            <li><tick>54</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_FrontLegLeft_Lower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.2227, 0.5313)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>20</tick><angle>-38.0</angle></li>
+            <li><tick>31</tick><angle>46.0</angle></li>
+            <li><tick>42</tick><angle>16.0</angle></li>
+            <li><tick>54</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_FrontLegRight_Upper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6250, 0.3867)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>20</tick><angle>44.0</angle></li>
+            <li><tick>31</tick><angle>-36.0</angle></li>
+            <li><tick>42</tick><angle>-14.0</angle></li>
+            <li><tick>54</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_FrontLegRight_Lower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.7852, 0.5313)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>20</tick><angle>36.0</angle></li>
+            <li><tick>31</tick><angle>-48.0</angle></li>
+            <li><tick>42</tick><angle>-16.0</angle></li>
+            <li><tick>54</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_LensBig</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3750, 0.7070)</pivot>
+          <keyframes>
+            <li><tick>0</tick><scale>(1,1,1)</scale></li>
+            <li><tick>31</tick><scale>(1.12,1,1.12)</scale></li>
+            <li><tick>54</tick><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 7. TWIN CHAINSAW WINDUP (LookAtMe special1, 54t = 0.90s) ==================== -->
+  <!-- Chassis braces low and trembles as both giant bloody chainsaw arms violently unfold out to the sides -->
+  <AnimationDef>
+    <defName>Schadenfreude_SawWindup</defName>
+    <durationTicks>54</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>Schadenfreude_BodyBox</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5039, 0.5469)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0.045)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+            <li><tick>16</tick><offset>(-0.012,0,0.015)</offset><angle>-4.0</angle><scale>(1.04,1,0.95)</scale></li>
+            <li><tick>32</tick><offset>(0.014,0,0.008)</offset><angle>4.5</angle><scale>(1.06,1,0.93)</scale></li>
+            <li><tick>44</tick><offset>(-0.016,0,0.025)</offset><angle>-5.0</angle><scale>(1.05,1,0.96)</scale></li>
+            <li><tick>54</tick><offset>(0,0,0.042)</offset><angle>0</angle><scale>(1.02,1,1.02)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_SawArmLeft</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4023, 0.5469)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-78.0</angle><scale>(0.25,1,0.25)</scale></li>
+            <li><tick>24</tick><angle>-28.0</angle><scale>(0.78,1,0.78)</scale></li>
+            <li><tick>44</tick><angle>8.0</angle><scale>(1.08,1,1.08)</scale></li>
+            <li><tick>54</tick><angle>0</angle><scale>(1.02,1,1.02)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_SawBladeLeft</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.2773, 0.6094)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>110.0</angle></li>
+            <li><tick>28</tick><angle>22.0</angle></li>
+            <li><tick>46</tick><angle>-10.0</angle></li>
+            <li><tick>54</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_SawArmRight</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6055, 0.5469)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>78.0</angle><scale>(0.25,1,0.25)</scale></li>
+            <li><tick>24</tick><angle>28.0</angle><scale>(0.78,1,0.78)</scale></li>
+            <li><tick>44</tick><angle>-8.0</angle><scale>(1.08,1,1.08)</scale></li>
+            <li><tick>54</tick><angle>0</angle><scale>(1.02,1,1.02)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_SawBladeRight</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.7305, 0.6094)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-110.0</angle></li>
+            <li><tick>28</tick><angle>-22.0</angle></li>
+            <li><tick>46</tick><angle>10.0</angle></li>
+            <li><tick>54</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 8. TWIN CHAINSAW RAMPAGE LOOP (LookAtMe special2, 24t = 0.40s loop) ==================== -->
+  <!-- Relentless 3-second high-frequency chainsaw shredding: twin bloody saws thrash violently while chassis bucks -->
+  <AnimationDef>
+    <defName>Schadenfreude_SawSpin</defName>
+    <durationTicks>24</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>Schadenfreude_BodyBox</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5039, 0.5469)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(-0.018,0,0.036)</offset><angle>-6.0</angle><scale>(1.04,1,0.96)</scale></li>
+            <li><tick>6</tick><offset>(0.020,0,0.056)</offset><angle>6.5</angle><scale>(0.97,1,1.04)</scale></li>
+            <li><tick>12</tick><offset>(-0.022,0,0.034)</offset><angle>-6.8</angle><scale>(1.05,1,0.95)</scale></li>
+            <li><tick>18</tick><offset>(0.018,0,0.054)</offset><angle>6.0</angle><scale>(0.97,1,1.04)</scale></li>
+            <li><tick>24</tick><offset>(-0.018,0,0.036)</offset><angle>-6.0</angle><scale>(1.04,1,0.96)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_SawArmLeft</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4023, 0.5469)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-26.0</angle><scale>(1.08,1,1.08)</scale></li>
+            <li><tick>6</tick><angle>22.0</angle><scale>(1.14,1,1.06)</scale></li>
+            <li><tick>12</tick><angle>-28.0</angle><scale>(1.10,1,1.10)</scale></li>
+            <li><tick>18</tick><angle>24.0</angle><scale>(1.14,1,1.06)</scale></li>
+            <li><tick>24</tick><angle>-26.0</angle><scale>(1.08,1,1.08)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_SawBladeLeft</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.2773, 0.6094)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>20.0</angle><scale>(1.10,1,1.08)</scale></li>
+            <li><tick>6</tick><angle>-24.0</angle><scale>(1.16,1,1.12)</scale></li>
+            <li><tick>12</tick><angle>22.0</angle><scale>(1.12,1,1.08)</scale></li>
+            <li><tick>18</tick><angle>-26.0</angle><scale>(1.16,1,1.12)</scale></li>
+            <li><tick>24</tick><angle>20.0</angle><scale>(1.10,1,1.08)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_SawArmRight</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6055, 0.5469)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-22.0</angle><scale>(1.14,1,1.06)</scale></li>
+            <li><tick>6</tick><angle>26.0</angle><scale>(1.08,1,1.08)</scale></li>
+            <li><tick>12</tick><angle>-24.0</angle><scale>(1.14,1,1.06)</scale></li>
+            <li><tick>18</tick><angle>28.0</angle><scale>(1.10,1,1.10)</scale></li>
+            <li><tick>24</tick><angle>-22.0</angle><scale>(1.14,1,1.06)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_SawBladeRight</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.7305, 0.6094)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>24.0</angle><scale>(1.16,1,1.12)</scale></li>
+            <li><tick>6</tick><angle>-20.0</angle><scale>(1.10,1,1.08)</scale></li>
+            <li><tick>12</tick><angle>26.0</angle><scale>(1.16,1,1.12)</scale></li>
+            <li><tick>18</tick><angle>-22.0</angle><scale>(1.12,1,1.08)</scale></li>
+            <li><tick>24</tick><angle>24.0</angle><scale>(1.16,1,1.12)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_Eye</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5020, 0.6094)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(-0.014,0,0.004)</offset><scale>(1.12,1,1.12)</scale></li>
+            <li><tick>12</tick><offset>(0.014,0,-0.004)</offset><scale>(1.06,1,1.06)</scale></li>
+            <li><tick>24</tick><offset>(-0.014,0,0.004)</offset><scale>(1.12,1,1.12)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 9. TWIN CHAINSAW RETRACT (LookAtMe special3, 40t = 0.67s) ==================== -->
+  <!-- Twin bloody chainsaws slam shut back inside the iron casing after the shredding barrage -->
+  <AnimationDef>
+    <defName>Schadenfreude_SawRetract</defName>
+    <durationTicks>40</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>Schadenfreude_BodyBox</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5039, 0.5469)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0.036)</offset><angle>3.0</angle><scale>(1.03,1,0.97)</scale></li>
+            <li><tick>20</tick><offset>(0,0,0.056)</offset><angle>-2.0</angle><scale>(0.98,1,1.02)</scale></li>
+            <li><tick>40</tick><offset>(0,0,0.045)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_SawArmLeft</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4023, 0.5469)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle><scale>(1.0,1,1.0)</scale></li>
+            <li><tick>22</tick><angle>-45.0</angle><scale>(0.65,1,0.65)</scale></li>
+            <li><tick>40</tick><angle>-85.0</angle><scale>(0.20,1,0.20)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_SawBladeLeft</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.2773, 0.6094)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>22</tick><angle>58.0</angle></li>
+            <li><tick>40</tick><angle>115.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_SawArmRight</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6055, 0.5469)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle><scale>(1.0,1,1.0)</scale></li>
+            <li><tick>22</tick><angle>45.0</angle><scale>(0.65,1,0.65)</scale></li>
+            <li><tick>40</tick><angle>85.0</angle><scale>(0.20,1,0.20)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>Schadenfreude_SawBladeRight</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.7305, 0.6094)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>22</tick><angle>-58.0</angle></li>
+            <li><tick>40</tick><angle>-115.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+</Defs>

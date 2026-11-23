@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderNodeTagDef>
+    <defName>Fairy_Root</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>Fairy_BodyGroup</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>Fairy_AuraShimmer</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>Fairy_WingBackUpper</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>Fairy_WingBackLower</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>Fairy_WingFrontUpper</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>Fairy_WingFrontLower</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>Fairy_Tail</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>Fairy_LegBack</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>Fairy_LegFront</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>Fairy_ArmBackLower</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>Fairy_ArmBackUpper</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>Fairy_Body</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>Fairy_ArmFrontLower</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>Fairy_ArmFrontUpper</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>Fairy_Head</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>Fairy_Eyes</defName>
+  </PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef>
+    <defName>Fairy_Mouth</defName>
+  </PawnRenderNodeTagDef>
+
+</Defs>

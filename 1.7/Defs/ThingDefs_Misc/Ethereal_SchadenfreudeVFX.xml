@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_SchadenfreudeWatchAuraFX</defName>
+    <label>Schadenfreude surveillance aperture</label>
+    <thingClass>LCAbnormalities.Schadenfreude.Thing_SchadenfreudeWatchAura</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_SchadenfreudeKeyholePulseFX</defName>
+    <label>Schadenfreude keyhole pulse</label>
+    <thingClass>LCAbnormalities.Schadenfreude.Thing_SchadenfreudeKeyholePulse</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_SchadenfreudeSawVortexFX</defName>
+    <label>Schadenfreude twin chainsaw vortex</label>
+    <thingClass>LCAbnormalities.Schadenfreude.Thing_SchadenfreudeSawVortex</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_SchadenfreudeDrillThrustFX</defName>
+    <label>Schadenfreude mechanical drill thrust</label>
+    <thingClass>LCAbnormalities.Schadenfreude.Thing_SchadenfreudeDrillThrust</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_SchadenfreudeBloodBurstFX</defName>
+    <label>Schadenfreude blood splatter</label>
+    <thingClass>LCAbnormalities.Schadenfreude.Thing_SchadenfreudeBloodBurst</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_GazeSawSlashFX</defName>
+    <label>Gaze crimson buzzsaw slash</label>
+    <thingClass>LCAbnormalities.Schadenfreude.Thing_GazeSawSlash</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_GazeFlurryFX</defName>
+    <label>Gaze rotary buzzsaw flurry</label>
+    <thingClass>LCAbnormalities.Schadenfreude.Thing_GazeSawFlurryRunner</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+</Defs>

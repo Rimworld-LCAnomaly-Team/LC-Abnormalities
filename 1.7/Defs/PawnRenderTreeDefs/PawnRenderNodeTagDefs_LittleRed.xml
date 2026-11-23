@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderNodeTagDef><defName>LittleRed_Root</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>LittleRed_Pelvis</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>LittleRed_BackLegUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>LittleRed_BackLegLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>LittleRed_FrontLegUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>LittleRed_FrontLegLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>LittleRed_Torso</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>LittleRed_Cape</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>LittleRed_Head</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>LittleRed_HoodShadow</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>LittleRed_BackArmUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>LittleRed_BackArmLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>LittleRed_Gun</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>LittleRed_ShoulderCape</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>LittleRed_FrontArmUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>LittleRed_FrontArmLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>LittleRed_SickleHandle</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>LittleRed_SickleBlade</defName></PawnRenderNodeTagDef>
+
+</Defs>

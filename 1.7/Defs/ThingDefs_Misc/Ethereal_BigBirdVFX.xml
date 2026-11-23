@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_BigBirdBlackoutAuraFX</defName>
+    <label>Big Bird blackout shroud</label>
+    <thingClass>LCAbnormalities.BigBird.Thing_BigBirdBlackoutAura</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_BigBirdEnchantWaveFX</defName>
+    <label>Big Bird lantern pulse</label>
+    <thingClass>LCAbnormalities.BigBird.Thing_BigBirdEnchantWave</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_BigBirdEyeMarkFX</defName>
+    <label>Big Bird hypnotic eye mark</label>
+    <thingClass>LCAbnormalities.BigBird.Thing_BigBirdEyeMark</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_BigBirdBiteBurstFX</defName>
+    <label>Big Bird decapitation burst</label>
+    <thingClass>LCAbnormalities.BigBird.Thing_BigBirdBiteBurst</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_LampImpactFX</defName>
+    <label>Lamp E.G.O. smash impact</label>
+    <thingClass>LCAbnormalities.BigBird.Thing_LampImpactVFX</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+</Defs>

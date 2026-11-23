@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Articulated Lobotomy Corporation Spine hierarchy (긴새.json.txt / O-02-62 Judgement Bird) -->
+  <PawnRenderTreeDef>
+    <defName>JudgementBird</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li Class="LCAbnormalities.JudgementBird.PawnRenderNodeProperties_JudgementBirdPart">
+          <debugLabel>JudgementBirdRoot</debugLabel>
+          <tagDef>JudgementBird_Root</tagDef>
+          <isRoot>true</isRoot>
+          <useGraphic>false</useGraphic>
+          <formScale>2.55</formScale>
+          <children>
+            <!-- Pelvis & articulated spindly legs (bone10 -> bone11..16) -->
+            <li Class="LCAbnormalities.JudgementBird.PawnRenderNodeProperties_JudgementBirdPart">
+              <debugLabel>Pelvis</debugLabel>
+              <tagDef>JudgementBird_Pelvis</tagDef>
+              <useGraphic>false</useGraphic>
+              <children>
+                <li Class="LCAbnormalities.JudgementBird.PawnRenderNodeProperties_JudgementBirdPart">
+                  <debugLabel>LeftThigh</debugLabel>
+                  <tagDef>JudgementBird_LeftThigh</tagDef>
+                  <texPath>Things/Pawn/JudgementBird/Parts/JB_LeftThigh</texPath>
+                  <texPathLeft>Things/Pawn/JudgementBird/Parts/Left/JB_LeftThigh</texPathLeft>
+                  <baseLayer>7</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.JudgementBird.PawnRenderNodeProperties_JudgementBirdPart">
+                      <debugLabel>LeftLeg</debugLabel>
+                      <tagDef>JudgementBird_LeftLeg</tagDef>
+                      <texPath>Things/Pawn/JudgementBird/Parts/JB_LeftLeg</texPath>
+                      <texPathLeft>Things/Pawn/JudgementBird/Parts/Left/JB_LeftLeg</texPathLeft>
+                      <baseLayer>6</baseLayer>
+                      <children>
+                        <li Class="LCAbnormalities.JudgementBird.PawnRenderNodeProperties_JudgementBirdPart">
+                          <debugLabel>LeftFoot</debugLabel>
+                          <tagDef>JudgementBird_LeftFoot</tagDef>
+                          <texPath>Things/Pawn/JudgementBird/Parts/JB_LeftFoot</texPath>
+                          <texPathLeft>Things/Pawn/JudgementBird/Parts/Left/JB_LeftFoot</texPathLeft>
+                          <baseLayer>5</baseLayer>
+                        </li>
+                      </children>
+                    </li>
+                  </children>
+                </li>
+                <li Class="LCAbnormalities.JudgementBird.PawnRenderNodeProperties_JudgementBirdPart">
+                  <debugLabel>RightThigh</debugLabel>
+                  <tagDef>JudgementBird_RightThigh</tagDef>
+                  <texPath>Things/Pawn/JudgementBird/Parts/JB_RightThigh</texPath>
+                  <texPathLeft>Things/Pawn/JudgementBird/Parts/Left/JB_RightThigh</texPathLeft>
+                  <baseLayer>11</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.JudgementBird.PawnRenderNodeProperties_JudgementBirdPart">
+                      <debugLabel>RightLeg</debugLabel>
+                      <tagDef>JudgementBird_RightLeg</tagDef>
+                      <texPath>Things/Pawn/JudgementBird/Parts/JB_RightLeg</texPath>
+                      <texPathLeft>Things/Pawn/JudgementBird/Parts/Left/JB_RightLeg</texPathLeft>
+                      <baseLayer>10</baseLayer>
+                      <children>
+                        <li Class="LCAbnormalities.JudgementBird.PawnRenderNodeProperties_JudgementBirdPart">
+                          <debugLabel>RightFoot</debugLabel>
+                          <tagDef>JudgementBird_RightFoot</tagDef>
+                          <texPath>Things/Pawn/JudgementBird/Parts/JB_RightFoot</texPath>
+                          <texPathLeft>Things/Pawn/JudgementBird/Parts/Left/JB_RightFoot</texPathLeft>
+                          <baseLayer>9</baseLayer>
+                        </li>
+                      </children>
+                    </li>
+                  </children>
+                </li>
+              </children>
+            </li>
+            <!-- Fluffy black feathered torso (bone2) -->
+            <li Class="LCAbnormalities.JudgementBird.PawnRenderNodeProperties_JudgementBirdPart">
+              <debugLabel>Body</debugLabel>
+              <tagDef>JudgementBird_Body</tagDef>
+              <texPath>Things/Pawn/JudgementBird/Parts/JB_Body</texPath>
+              <texPathLeft>Things/Pawn/JudgementBird/Parts/Left/JB_Body</texPathLeft>
+              <baseLayer>8</baseLayer>
+              <children>
+                <!-- Forward/far wing (LeftArm / bone26) that lifts to hold BigScale -->
+                <li Class="LCAbnormalities.JudgementBird.PawnRenderNodeProperties_JudgementBirdPart">
+                  <debugLabel>FrontWing</debugLabel>
+                  <tagDef>JudgementBird_FrontWing</tagDef>
+                  <texPath>Things/Pawn/JudgementBird/Parts/JB_FrontWing</texPath>
+                  <texPathLeft>Things/Pawn/JudgementBird/Parts/Left/JB_FrontWing</texPathLeft>
+                  <baseLayer>4</baseLayer>
+                </li>
+                <!-- Near/trailing wing (RightArm / bone17) -->
+                <li Class="LCAbnormalities.JudgementBird.PawnRenderNodeProperties_JudgementBirdPart">
+                  <debugLabel>BackWing</debugLabel>
+                  <tagDef>JudgementBird_BackWing</tagDef>
+                  <texPath>Things/Pawn/JudgementBird/Parts/JB_BackWing</texPath>
+                  <texPathLeft>Things/Pawn/JudgementBird/Parts/Left/JB_BackWing</texPathLeft>
+                  <baseLayer>12</baseLayer>
+                </li>
+                <!-- Crooked slender neck (bone3..6) -->
+                <li Class="LCAbnormalities.JudgementBird.PawnRenderNodeProperties_JudgementBirdPart">
+                  <debugLabel>Neck</debugLabel>
+                  <tagDef>JudgementBird_Neck</tagDef>
+                  <texPath>Things/Pawn/JudgementBird/Parts/JB_Neck</texPath>
+                  <texPathLeft>Things/Pawn/JudgementBird/Parts/Left/JB_Neck</texPathLeft>
+                  <baseLayer>14</baseLayer>
+                  <children>
+                    <!-- Hanging neck brass scale pans (hide while BigChoo manifests) -->
+                    <li Class="LCAbnormalities.JudgementBird.PawnRenderNodeProperties_JudgementBirdPart">
+                      <debugLabel>BackScale</debugLabel>
+                      <tagDef>JudgementBird_BackScale</tagDef>
+                      <texPath>Things/Pawn/JudgementBird/Parts/JB_BackScale</texPath>
+                      <texPathLeft>Things/Pawn/JudgementBird/Parts/Left/JB_BackScale</texPathLeft>
+                      <baseLayer>13</baseLayer>
+                      <hideDuringBigScale>true</hideDuringBigScale>
+                    </li>
+                    <li Class="LCAbnormalities.JudgementBird.PawnRenderNodeProperties_JudgementBirdPart">
+                      <debugLabel>FrontScale</debugLabel>
+                      <tagDef>JudgementBird_FrontScale</tagDef>
+                      <texPath>Things/Pawn/JudgementBird/Parts/JB_FrontScale</texPath>
+                      <texPathLeft>Things/Pawn/JudgementBird/Parts/Left/JB_FrontScale</texPathLeft>
+                      <baseLayer>15</baseLayer>
+                      <hideDuringBigScale>true</hideDuringBigScale>
+                    </li>
+                    <!-- Bandaged oval head + signature red-tipped ear feather -->
+                    <li Class="LCAbnormalities.JudgementBird.PawnRenderNodeProperties_JudgementBirdPart">
+                      <debugLabel>Head</debugLabel>
+                      <tagDef>JudgementBird_Head</tagDef>
+                      <texPath>Things/Pawn/JudgementBird/Parts/JB_Head</texPath>
+                      <texPathLeft>Things/Pawn/JudgementBird/Parts/Left/JB_Head</texPathLeft>
+                      <baseLayer>16</baseLayer>
+                      <children>
+                        <li Class="LCAbnormalities.JudgementBird.PawnRenderNodeProperties_JudgementBirdPart">
+                          <debugLabel>Feather</debugLabel>
+                          <tagDef>JudgementBird_Feather</tagDef>
+                          <texPath>Things/Pawn/JudgementBird/Parts/JB_Feather</texPath>
+                          <texPathLeft>Things/Pawn/JudgementBird/Parts/Left/JB_Feather</texPathLeft>
+                          <baseLayer>17</baseLayer>
+                        </li>
+                      </children>
+                    </li>
+                  </children>
+                </li>
+              </children>
+            </li>
+            <!-- Giant dramatic brass scale (BigChoo / bone42) manifested during Judgement casting -->
+            <li Class="LCAbnormalities.JudgementBird.PawnRenderNodeProperties_JudgementBirdPart">
+              <debugLabel>BigScale</debugLabel>
+              <tagDef>JudgementBird_BigScale</tagDef>
+              <texPath>Things/Pawn/JudgementBird/Parts/JB_BigScale</texPath>
+              <texPathLeft>Things/Pawn/JudgementBird/Parts/Left/JB_BigScale</texPathLeft>
+              <baseLayer>18</baseLayer>
+              <onlyDuringBigScale>true</onlyDuringBigScale>
+            </li>
+          </children>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

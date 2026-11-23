@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderDef>
+    <defName>LC_VoidDreamOrb</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_VoidDreamVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_VoidDreamOrb.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3155</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_VoidDreamCrowWave</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_VoidDreamVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_VoidDreamCrowWave.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3156</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_VoidDreamSleepCloud</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_VoidDreamVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_VoidDreamSleepCloud.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <transparent>true</transparent>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3152</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_VoidDreamNightmareBurst</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_VoidDreamVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_VoidDreamNightmareBurst.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <transparent>true</transparent>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3160</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+</Defs>

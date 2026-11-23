@@ -1,0 +1,11 @@
+{
+  "TextureModID": "darthcy.lc.abnormalities",
+  "ItemDefName": "EgoWeapon_LittleRedRidingHoodedMercenary",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.16,
+  "OffY": -0.02,
+  "ScaleX": 1.25,
+  "ScaleY": 1.25,
+  "HandsMode": 2
+}

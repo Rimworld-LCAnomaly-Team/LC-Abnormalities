@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderTreeDef>
+    <defName>PunishingBird</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+
+        <!-- Contained-only perch with gently swaying golden chain & hanging blade (SmallBirdPerch.fbx) -->
+        <li Class="LCAbnormalities.PunishingBird.PawnRenderNodeProperties_PunishingBirdPart">
+          <debugLabel>PerchRoot</debugLabel>
+          <tagDef>PunishingBird_PerchRoot</tagDef>
+          <role>PerchRoot</role>
+          <useGraphic>false</useGraphic>
+          <formScale>2.14</formScale>
+          <flipOnWest>false</flipOnWest>
+          <children>
+            <li Class="LCAbnormalities.PunishingBird.PawnRenderNodeProperties_PunishingBirdPart">
+              <debugLabel>PerchTrunk</debugLabel>
+              <tagDef>PunishingBird_PerchTrunk</tagDef>
+              <role>PerchTrunk</role>
+              <texPath>Things/Pawn/PunishingBird/Parts/Perch_Trunk</texPath>
+              <flipOnWest>false</flipOnWest>
+              <baseLayer>5</baseLayer>
+            </li>
+            <li Class="LCAbnormalities.PunishingBird.PawnRenderNodeProperties_PunishingBirdPart">
+              <debugLabel>PerchChain</debugLabel>
+              <tagDef>PunishingBird_PerchChain</tagDef>
+              <role>PerchChain</role>
+              <texPath>Things/Pawn/PunishingBird/Parts/Perch_ChainFront</texPath>
+              <flipOnWest>false</flipOnWest>
+              <baseLayer>5.6</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.PunishingBird.PawnRenderNodeProperties_PunishingBirdPart">
+                  <debugLabel>PerchChainBack</debugLabel>
+                  <tagDef>PunishingBird_PerchChainBack</tagDef>
+                  <role>PerchChainBack</role>
+                  <texPath>Things/Pawn/PunishingBird/Parts/Perch_ChainBack</texPath>
+                  <flipOnWest>false</flipOnWest>
+                  <baseLayer>5.2</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.PunishingBird.PawnRenderNodeProperties_PunishingBirdPart">
+                  <debugLabel>PerchBlade</debugLabel>
+                  <tagDef>PunishingBird_PerchBlade</tagDef>
+                  <role>PerchBlade</role>
+                  <texPath>Things/Pawn/PunishingBird/Parts/Perch_Blade</texPath>
+                  <flipOnWest>false</flipOnWest>
+                  <baseLayer>5.4</baseLayer>
+                </li>
+              </children>
+            </li>
+          </children>
+        </li>
+
+        <!-- Punishing Bird articulated multi-part rig (SmallBirdDef.fbx) -->
+        <li Class="LCAbnormalities.PunishingBird.PawnRenderNodeProperties_PunishingBirdPart">
+          <debugLabel>BirdRoot</debugLabel>
+          <tagDef>PunishingBird_BirdRoot</tagDef>
+          <role>BirdRoot</role>
+          <useGraphic>false</useGraphic>
+          <formScale>1.15</formScale>
+          <containedScale>0.89</containedScale>
+          <containedOffset>(0.422, 0, 0.717)</containedOffset>
+          <flipOnWest>true</flipOnWest>
+          <children>
+            <li Class="LCAbnormalities.PunishingBird.PawnRenderNodeProperties_PunishingBirdPart">
+              <debugLabel>BirdBody</debugLabel>
+              <tagDef>PunishingBird_Body</tagDef>
+              <role>BirdBody</role>
+              <texPath>Things/Pawn/PunishingBird/Parts/Body_Normal</texPath>
+              <texPathLeft>Things/Pawn/PunishingBird/Parts/Left/Body_Normal</texPathLeft>
+              <alternateTexPaths>
+                <li>Things/Pawn/PunishingBird/Parts/Body_Attack</li>
+              </alternateTexPaths>
+              <alternateTexPathsLeft>
+                <li>Things/Pawn/PunishingBird/Parts/Left/Body_Attack</li>
+              </alternateTexPathsLeft>
+              <baseLayer>10</baseLayer>
+              <children>
+                <!-- Back flapping wing (escaped/flying only, behind body) -->
+                <li Class="LCAbnormalities.PunishingBird.PawnRenderNodeProperties_PunishingBirdPart">
+                  <debugLabel>BirdFlyWingBack</debugLabel>
+                  <tagDef>PunishingBird_FlyWingBack</tagDef>
+                  <role>BirdFlyWingBack</role>
+                  <texPath>Things/Pawn/PunishingBird/Parts/FlyWingBack_1</texPath>
+                  <texPathLeft>Things/Pawn/PunishingBird/Parts/Left/FlyWingBack_1</texPathLeft>
+                  <alternateTexPaths>
+                    <li>Things/Pawn/PunishingBird/Parts/FlyWingBack_2</li>
+                    <li>Things/Pawn/PunishingBird/Parts/FlyWingBack_3</li>
+                    <li>Things/Pawn/PunishingBird/Parts/FlyWingBack_4</li>
+                    <li>Things/Pawn/PunishingBird/Parts/FlyWingBack_5</li>
+                  </alternateTexPaths>
+                  <alternateTexPathsLeft>
+                    <li>Things/Pawn/PunishingBird/Parts/Left/FlyWingBack_2</li>
+                    <li>Things/Pawn/PunishingBird/Parts/Left/FlyWingBack_3</li>
+                    <li>Things/Pawn/PunishingBird/Parts/Left/FlyWingBack_4</li>
+                    <li>Things/Pawn/PunishingBird/Parts/Left/FlyWingBack_5</li>
+                  </alternateTexPathsLeft>
+                  <baseLayer>8</baseLayer>
+                </li>
+
+                <!-- Feet -->
+                <li Class="LCAbnormalities.PunishingBird.PawnRenderNodeProperties_PunishingBirdPart">
+                  <debugLabel>BirdFeet</debugLabel>
+                  <tagDef>PunishingBird_Feet</tagDef>
+                  <role>BirdFeet</role>
+                  <texPath>Things/Pawn/PunishingBird/Parts/Feet</texPath>
+                  <texPathLeft>Things/Pawn/PunishingBird/Parts/Left/Feet</texPathLeft>
+                  <baseLayer>10.4</baseLayer>
+                </li>
+
+                <!-- Folded resting wing (contained / portrait only) -->
+                <li Class="LCAbnormalities.PunishingBird.PawnRenderNodeProperties_PunishingBirdPart">
+                  <debugLabel>BirdFoldedWing</debugLabel>
+                  <tagDef>PunishingBird_FoldedWing</tagDef>
+                  <role>BirdFoldedWing</role>
+                  <texPath>Things/Pawn/PunishingBird/Parts/Wing_Folded</texPath>
+                  <texPathLeft>Things/Pawn/PunishingBird/Parts/Left/Wing_Folded</texPathLeft>
+                  <baseLayer>11</baseLayer>
+                </li>
+
+                <!-- Expressive face (Face_Idle / Face_Look / Face_Fly) -->
+                <li Class="LCAbnormalities.PunishingBird.PawnRenderNodeProperties_PunishingBirdPart">
+                  <debugLabel>BirdFace</debugLabel>
+                  <tagDef>PunishingBird_Face</tagDef>
+                  <role>BirdFace</role>
+                  <texPath>Things/Pawn/PunishingBird/Parts/Face_Idle</texPath>
+                  <texPathLeft>Things/Pawn/PunishingBird/Parts/Left/Face_Idle</texPathLeft>
+                  <alternateTexPaths>
+                    <li>Things/Pawn/PunishingBird/Parts/Face_Look</li>
+                    <li>Things/Pawn/PunishingBird/Parts/Face_Fly</li>
+                  </alternateTexPaths>
+                  <alternateTexPathsLeft>
+                    <li>Things/Pawn/PunishingBird/Parts/Left/Face_Look</li>
+                    <li>Things/Pawn/PunishingBird/Parts/Left/Face_Fly</li>
+                  </alternateTexPathsLeft>
+                  <baseLayer>11.5</baseLayer>
+                </li>
+
+                <!-- Front flapping wing (escaped/flying only, in front of body) -->
+                <li Class="LCAbnormalities.PunishingBird.PawnRenderNodeProperties_PunishingBirdPart">
+                  <debugLabel>BirdFlyWingFront</debugLabel>
+                  <tagDef>PunishingBird_FlyWingFront</tagDef>
+                  <role>BirdFlyWingFront</role>
+                  <texPath>Things/Pawn/PunishingBird/Parts/FlyWingFront_1</texPath>
+                  <texPathLeft>Things/Pawn/PunishingBird/Parts/Left/FlyWingFront_1</texPathLeft>
+                  <alternateTexPaths>
+                    <li>Things/Pawn/PunishingBird/Parts/FlyWingFront_2</li>
+                    <li>Things/Pawn/PunishingBird/Parts/FlyWingFront_3</li>
+                    <li>Things/Pawn/PunishingBird/Parts/FlyWingFront_4</li>
+                    <li>Things/Pawn/PunishingBird/Parts/FlyWingFront_5</li>
+                  </alternateTexPaths>
+                  <alternateTexPathsLeft>
+                    <li>Things/Pawn/PunishingBird/Parts/Left/FlyWingFront_2</li>
+                    <li>Things/Pawn/PunishingBird/Parts/Left/FlyWingFront_3</li>
+                    <li>Things/Pawn/PunishingBird/Parts/Left/FlyWingFront_4</li>
+                    <li>Things/Pawn/PunishingBird/Parts/Left/FlyWingFront_5</li>
+                  </alternateTexPathsLeft>
+                  <baseLayer>12</baseLayer>
+                </li>
+
+                <!-- Enraged 4-jaw massive fleshy maw (5.0x Jaw Canvas = 20.0 / 4.0 exact FBX ratio) -->
+                <li Class="LCAbnormalities.PunishingBird.PawnRenderNodeProperties_PunishingBirdPart">
+                  <debugLabel>JawRoot</debugLabel>
+                  <tagDef>PunishingBird_JawRoot</tagDef>
+                  <role>JawRoot</role>
+                  <useGraphic>false</useGraphic>
+                  <formScale>5.0</formScale>
+                  <flipOnWest>true</flipOnWest>
+                  <children>
+                    <li Class="LCAbnormalities.PunishingBird.PawnRenderNodeProperties_PunishingBirdPart">
+                      <debugLabel>JawEat2</debugLabel>
+                      <tagDef>PunishingBird_JawEat2</tagDef>
+                      <role>JawPart</role>
+                      <texPath>Things/Pawn/PunishingBird/Parts/Jaw_Eat2</texPath>
+                      <texPathLeft>Things/Pawn/PunishingBird/Parts/Left/Jaw_Eat2</texPathLeft>
+                      <baseLayer>13.0</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.PunishingBird.PawnRenderNodeProperties_PunishingBirdPart">
+                      <debugLabel>JawEat3</debugLabel>
+                      <tagDef>PunishingBird_JawEat3</tagDef>
+                      <role>JawPart</role>
+                      <texPath>Things/Pawn/PunishingBird/Parts/Jaw_Eat3</texPath>
+                      <texPathLeft>Things/Pawn/PunishingBird/Parts/Left/Jaw_Eat3</texPathLeft>
+                      <baseLayer>13.2</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.PunishingBird.PawnRenderNodeProperties_PunishingBirdPart">
+                      <debugLabel>JawEat1</debugLabel>
+                      <tagDef>PunishingBird_JawEat1</tagDef>
+                      <role>JawPart</role>
+                      <texPath>Things/Pawn/PunishingBird/Parts/Jaw_Eat1</texPath>
+                      <texPathLeft>Things/Pawn/PunishingBird/Parts/Left/Jaw_Eat1</texPathLeft>
+                      <baseLayer>13.5</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.PunishingBird.PawnRenderNodeProperties_PunishingBirdPart">
+                      <debugLabel>JawEat4</debugLabel>
+                      <tagDef>PunishingBird_JawEat4</tagDef>
+                      <role>JawPart</role>
+                      <texPath>Things/Pawn/PunishingBird/Parts/Jaw_Eat4</texPath>
+                      <texPathLeft>Things/Pawn/PunishingBird/Parts/Left/Jaw_Eat4</texPathLeft>
+                      <baseLayer>13.7</baseLayer>
+                    </li>
+                  </children>
+                </li>
+              </children>
+            </li>
+          </children>
+        </li>
+
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

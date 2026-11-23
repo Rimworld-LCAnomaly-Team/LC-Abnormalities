@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- T-05-41 All-Around Helper -->
+  <SoundDef>
+    <defName>LC_AllAroundHelper_Gaging</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/AllAroundHelper/Robo_gaging</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_AllAroundHelper_GageMax</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/AllAroundHelper/Robo_gageMax</clipPath></li></grains>
+        <volumeRange>34~42</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_AllAroundHelper_GageMaxSequence</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/AllAroundHelper/Robo_gageMaxSequence</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_AllAroundHelper_Rise</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/AllAroundHelper/Robo_Rise</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_AllAroundHelper_SystemOff</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/AllAroundHelper/Robo_SystemOff</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_AllAroundHelper_Spark</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>5</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/AllAroundHelper/Robo_spark_01</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/AllAroundHelper/Robo_spark_02</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/AllAroundHelper/Robo_spark_03</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/AllAroundHelper/Robo_spark_04</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/AllAroundHelper/Robo_spark_05</clipPath></li>
+        </grains>
+        <volumeRange>26~34</volumeRange>
+        <pitchRange>0.94~1.06</pitchRange>
+        <distRange>0~72</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_AllAroundHelper_Transform</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/AllAroundHelper/Robo_transform_01</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/AllAroundHelper/Robo_transform_02</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/AllAroundHelper/Robo_transform_03</clipPath></li>
+        </grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_GrinderMk4_Hit</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/AllAroundHelper/helper</clipPath></li></grains>
+        <volumeRange>26~34</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- O-02-62 Judgement Bird -->
+  <SoundDef>
+    <defName>LC_JudgementBird_On</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/JudgementBird/LongBird_On</clipPath></li></grains>
+        <volumeRange>32~40</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~90</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_JudgementBird_Down</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/JudgementBird/LongBird_Down</clipPath></li></grains>
+        <volumeRange>34~42</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~95</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_JudgementBird_Stun</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/JudgementBird/LongBird_Stun</clipPath></li></grains>
+        <volumeRange>32~40</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~90</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_JudgementBird_Wave</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/JudgementBird/judgement1</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/JudgementBird/judgement2</clipPath></li>
+        </grains>
+        <volumeRange>34~42</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~95</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Justitia_Slash1</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/JudgementBird/judgement2_1</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Justitia_Slash2</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/JudgementBird/judgement2_2</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Justitia_Slash3</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/JudgementBird/judgement2_3</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Justitia_Slash4</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/JudgementBird/judgement2_4</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~78</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_JudgementBird_Hang</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/JudgementBird/LongBird_Hang</clipPath></li></grains>
+        <volumeRange>34~42</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~90</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_JudgementBird_Hanging</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/JudgementBird/LongBird_Hanging</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- O-02-40 Big Bird -->
+  <SoundDef>
+    <defName>LC_BigBird_Attract</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/BigBird/Bigbird_Attract</clipPath></li></grains>
+        <volumeRange>34~42</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~95</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_BigBird_Dead1</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/BigBird/Bigbird_Dead1</clipPath></li></grains>
+        <volumeRange>34~42</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~95</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_BigBird_Dead2</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/BigBird/Bigbird_Dead2</clipPath></li></grains>
+        <volumeRange>34~42</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~95</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_BigBird_Walk</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/BigBird/Bigbird_Walk</clipPath></li></grains>
+        <volumeRange>26~32</volumeRange>
+        <pitchRange>0.94~1.06</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Lamp_Hammer</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/BigBird/Lamp_Hammer</clipPath></li></grains>
+        <volumeRange>32~40</volumeRange>
+        <pitchRange>0.93~1.06</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- F-01-57 Little Red Riding Hooded Mercenary -->
+  <SoundDef>
+    <defName>LC_LittleRed_Atk1</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/LittleRedRidingHoodedMercenary/RedHood_Atk1</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_LittleRed_Atk2</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/LittleRedRidingHoodedMercenary/RedHood_Atk2</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_LittleRed_AtkPower</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/LittleRedRidingHoodedMercenary/RedHood_Atk_Power</clipPath></li></grains>
+        <volumeRange>32~40</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_LittleRed_Change</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/LittleRedRidingHoodedMercenary/RedHood_Change</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_LittleRed_Gun</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>5</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/LittleRedRidingHoodedMercenary/RedHood_Gun</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_LittleRed_Throw</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/LittleRedRidingHoodedMercenary/RedHood_Throw</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- D-09-104 Backward Clock -->
+  <SoundDef>
+    <defName>LC_BackwardClock_On</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Building/BackwardClock/WarpClock_On</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_BackwardClock_Put</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Building/BackwardClock/WarpClock_Put</clipPath></li></grains>
+        <volumeRange>26~34</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_BackwardClock_Work</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Building/BackwardClock/WarpClock_Work</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_BackwardClock_SkillStart</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Building/BackwardClock/WarpClock_Skill_Start</clipPath></li></grains>
+        <volumeRange>36~44</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~120</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_BackwardClock_SkillFinish</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Building/BackwardClock/WarpClock_Skill_Finish</clipPath></li></grains>
+        <volumeRange>36~44</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~120</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- O-05-76 Schadenfreude -->
+  <SoundDef>
+    <defName>LC_Schadenfreude_Attack</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/Schadenfreude/LookAtMe_Attack</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Schadenfreude_Blood</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/Schadenfreude/LookAtMe_Blood</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Schadenfreude_Dead1</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/Schadenfreude/LookAtMe_Dead1</clipPath></li></grains>
+        <volumeRange>32~40</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Schadenfreude_Dead2</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/Schadenfreude/LookAtMe_Dead2</clipPath></li></grains>
+        <volumeRange>32~40</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Schadenfreude_Skill</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/Schadenfreude/LookAtMe_Skill</clipPath></li></grains>
+        <volumeRange>32~40</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~90</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Schadenfreude_SkillStart</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/Schadenfreude/LookAtMe_SkillStart</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Schadenfreude_SkillEnd</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/Schadenfreude/LookAtMe_SkillEnd</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Schadenfreude_Transform</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/Schadenfreude/LookAtMe_Transform</clipPath></li></grains>
+        <volumeRange>32~40</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Gaze_Saw</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/Schadenfreude/DontWatch</clipPath></li></grains>
+        <volumeRange>26~34</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Gaze_SawLoop</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/Schadenfreude/DontWatch_loop</clipPath></li></grains>
+        <volumeRange>24~32</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

@@ -10,7 +10,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(1.8, 1.8)</drawSize>
     </graphicData>
-    <soundInteract>Interact_Rifle</soundInteract>
+    <soundInteract>Interact_Autopistol</soundInteract>
     <statBases>
       <Mass>2.8</Mass>
       <AccuracyTouch>0.78</AccuracyTouch>
@@ -26,7 +26,7 @@
         <defaultProjectile>Bullet_EgoWeapon_WellCheers</defaultProjectile>
         <warmupTime>0.9</warmupTime>
         <range>24</range>
-        <soundCast>Shot_Rifle_EgoBase</soundCast>
+        <soundCast>LC_WellCheers_EgoShot</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>7</muzzleFlashScale>
       </li>

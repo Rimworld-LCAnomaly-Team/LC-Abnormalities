@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Fourth Match Flame E.G.O. Muzzle Blast (7-frame sprite sheet, MatchgirlFire) -->
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>LC_FourthMatch_Muzzle</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.0</fadeInTime>
+    <solidTime>0.34</solidTime>
+    <fadeOutTime>0.05</fadeOutTime>
+    <growthRate>0.35</growthRate>
+    <graphicData>
+      <graphicClass>Graphic_FleckPulse</graphicClass>
+      <shaderType>TransparentAnimated</shaderType>
+      <texPath>Fleck/ScorchedGirl/FireMuzzle</texPath>
+      <drawSize>(2.4, 2.4)</drawSize>
+      <shaderParameters>
+        <_NumFrames>7</_NumFrames>
+        <_FramesPerSec>18</_FramesPerSec>
+      </shaderParameters>
+    </graphicData>
+  </FleckDef>
+
+  <!-- Fourth Match Flame Explosion Fireball (9-frame sprite sheet, MatchgirlVictim) -->
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>LC_FourthMatch_Explosion</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.0</fadeInTime>
+    <solidTime>0.54</solidTime>
+    <fadeOutTime>0.06</fadeOutTime>
+    <growthRate>0.55</growthRate>
+    <graphicData>
+      <graphicClass>Graphic_FleckPulse</graphicClass>
+      <shaderType>TransparentAnimated</shaderType>
+      <texPath>Fleck/ScorchedGirl/FireExplosion</texPath>
+      <drawSize>(3.4, 3.4)</drawSize>
+      <shaderParameters>
+        <_NumFrames>9</_NumFrames>
+        <_FramesPerSec>15</_FramesPerSec>
+      </shaderParameters>
+    </graphicData>
+  </FleckDef>
+
+  <!-- Fourth Match Flame Impact Ring (7-frame sprite sheet) -->
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>LC_FourthMatch_HitRing</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.0</fadeInTime>
+    <solidTime>0.38</solidTime>
+    <fadeOutTime>0.06</fadeOutTime>
+    <growthRate>0.85</growthRate>
+    <graphicData>
+      <graphicClass>Graphic_FleckPulse</graphicClass>
+      <shaderType>TransparentAnimated</shaderType>
+      <texPath>Fleck/ScorchedGirl/FireHit</texPath>
+      <drawSize>(3.2, 3.2)</drawSize>
+      <shaderParameters>
+        <_NumFrames>7</_NumFrames>
+        <_FramesPerSec>16</_FramesPerSec>
+      </shaderParameters>
+    </graphicData>
+  </FleckDef>
+
+  <!-- Fourth Match Flame Central Blast & Embers (8-frame sprite sheet) -->
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>LC_FourthMatch_Central</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.0</fadeInTime>
+    <solidTime>0.44</solidTime>
+    <fadeOutTime>0.06</fadeOutTime>
+    <growthRate>0.40</growthRate>
+    <graphicData>
+      <graphicClass>Graphic_FleckPulse</graphicClass>
+      <shaderType>TransparentAnimated</shaderType>
+      <texPath>Fleck/ScorchedGirl/FireCentral</texPath>
+      <drawSize>(2.6, 2.6)</drawSize>
+      <shaderParameters>
+        <_NumFrames>8</_NumFrames>
+        <_FramesPerSec>16</_FramesPerSec>
+      </shaderParameters>
+    </graphicData>
+  </FleckDef>
+
+  <!-- Fourth Match Flame Splash Arc (7-frame sprite sheet) -->
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>LC_FourthMatch_Arc</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.0</fadeInTime>
+    <solidTime>0.34</solidTime>
+    <fadeOutTime>0.05</fadeOutTime>
+    <growthRate>0.45</growthRate>
+    <graphicData>
+      <graphicClass>Graphic_FleckPulse</graphicClass>
+      <shaderType>TransparentAnimated</shaderType>
+      <texPath>Fleck/ScorchedGirl/FireArc</texPath>
+      <drawSize>(2.2, 2.2)</drawSize>
+      <shaderParameters>
+        <_NumFrames>7</_NumFrames>
+        <_FramesPerSec>18</_FramesPerSec>
+      </shaderParameters>
+    </graphicData>
+  </FleckDef>
+
+  <!-- Glowing Fire Flash -->
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>LC_FourthMatch_Glow</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.03</fadeInTime>
+    <solidTime>0.12</solidTime>
+    <fadeOutTime>0.26</fadeOutTime>
+    <growthRate>0.90</growthRate>
+    <graphicData>
+      <graphicClass>Graphic_Fleck</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <texPath>Fleck/ScorchedGirl/FireGlow</texPath>
+      <drawSize>(2.2, 2.2)</drawSize>
+    </graphicData>
+  </FleckDef>
+
+  <!-- Flying Flame Spark / Ember -->
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>LC_FourthMatch_Spark</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.02</fadeInTime>
+    <solidTime>0.16</solidTime>
+    <fadeOutTime>0.28</fadeOutTime>
+    <growthRate>-0.40</growthRate>
+    <graphicData>
+      <graphicClass>Graphic_Fleck</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <texPath>Fleck/ScorchedGirl/FireSpark</texPath>
+      <drawSize>(0.68, 0.68)</drawSize>
+    </graphicData>
+  </FleckDef>
+
+  <!-- Scorched Girl Breach / Detonation Warning Mark -->
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>LC_ScorchedGirl_Mark</defName>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <fadeInTime>0.08</fadeInTime>
+    <solidTime>0.65</solidTime>
+    <fadeOutTime>0.25</fadeOutTime>
+    <growthRate>0.15</growthRate>
+    <graphicData>
+      <graphicClass>Graphic_Fleck</graphicClass>
+      <shaderType>Mote</shaderType>
+      <texPath>Fleck/ScorchedGirl/ScorchedGirlMark</texPath>
+      <drawSize>(1.25, 1.25)</drawSize>
+    </graphicData>
+  </FleckDef>
+
+</Defs>

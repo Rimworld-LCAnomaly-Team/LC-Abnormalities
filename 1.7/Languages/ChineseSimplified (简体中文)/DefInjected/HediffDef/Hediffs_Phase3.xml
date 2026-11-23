@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <LC_BigBirdEnchanted.label>目灯魅惑</LC_BigBirdEnchanted.label>
+  <LC_BigBirdEnchanted.description>被大鸟炽烈的黄金目灯摄住了心神。\n受害者会不受控制地步步靠近大鸟的巨喙，请立即选中该殖民者并点击“唤醒清醒”按钮解除魅惑！</LC_BigBirdEnchanted.description>
+
+  <LC_LampDazed.label>目灯凝视</LC_LampDazed.label>
+  <LC_LampDazed.description>被目灯重锤的诡异金瞳所凝视：移速与精准度下降，且承受额外伤害（再次遭受目灯重击时额外受到 +25% 黑伤侵蚀易伤）。</LC_LampDazed.description>
+
+  <LC_GazeRending.label>凝视撕裂</LC_GazeRending.label>
+  <LC_GazeRending.description>被“凝视”的猩红旋转锯刃撕开参差创口，令目标承受的所有伤害大幅提升。</LC_GazeRending.description>
+
+</LanguageData>

@@ -36,9 +36,9 @@
 
   <!-- WellCheers -->
   <WellCheers.label>韦尔奇牌汽水机</WellCheers.label>
-  <WellCheers.description>一架由戴着水手帽的活泼小虾打理的粉彩汽水售货机（F-05-52）。\n工作评价为“优”或“良”时会奉上红（疗伤）、蓝（安神）或紫（双效）汽水；若评估落入“差”，饮下毒化汽水的员工将直接陷入深海失温昏睡并遭受精神冲击。</WellCheers.description>
+  <WellCheers.description>一台两侧站着两只穿着吊带工装裤与黄靴子的皮皮虾守卫、出货口写着“FREE!”的自动售货机（F-05-52）。\n工作评价为“优”或“良”时会按工作类型奉上对应汽水：本能→樱桃红（疗伤）、洞察→深海蓝（安神）、沟通/压迫→暮紫（双效）。殖民者也可直接右键收容平台取用汽水（带独立冷却）；但若落入“差”结果，两只虾兵会挥臂唤起海浪与橙色渔船，令饮用者陷入深海失温昏睡并承受精神白伤。</WellCheers.description>
   <WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
-  <WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>优良工作会随机奉上樱桃红（修复外伤）、深海蓝（恢复精神）或暮紫混合罐装汽水。</WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>优良工作会按工作类型供应罐装汽水：本能对应樱桃红（修复外伤）、洞察对应深海蓝（恢复精神）、沟通与压迫对应暮紫（双效）。选中殖民者后也可直接右键收容平台饮用汽水。</WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
   <WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
   <WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>若工作结果为“差”，饮用劣质汽水会导致员工当场深度失温昏迷并承受精神白伤。\nE.G.O饰品“苏打”已解锁。</WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
   <WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
@@ -47,6 +47,8 @@
   <WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>伴随海鸥与汽水摇晃声，它是少有能稳定产出双效恢复补给的 ZAYIN 机器。\n工作速度 +8% 与成功率 +8%。</WellCheers.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
 
   <DyingWellCheers.label>韦尔奇牌汽水机（消散中）</DyingWellCheers.label>
+  <LC_FX_WellCheersSeaWave.label>韦尔奇深海浪潮</LC_FX_WellCheersSeaWave.label>
+  <LC_FX_WellCheersBubble.label>韦尔奇碳酸气泡</LC_FX_WellCheersBubble.label>
 
   <WellCheersEgg.label>韦尔奇汽水机收容蛋</WellCheersEgg.label>
   <WellCheersEgg.description>韦尔奇牌汽水机（F-05-52）还原后的原始蛰伏卵体。</WellCheersEgg.description>
@@ -105,14 +107,14 @@
 
   <!-- Void Dream -->
   <VoidDream.label>虚空之梦</VoidDream.label>
-  <VoidDream.description>一只紫绒覆体、胸口隐约眨动着鲜红三眼的嗜睡绵羊（T-02-99）。\n若指派自律 I 级的低修养员工前去接触，计数器就会骤减；一旦突破收容，它会陡然变成高大的三眼怪鸡，周期发出催眠啼鸣令附近人类沉睡乃至遭遇噩梦爆炸。</VoidDream.description>
+  <VoidDream.description>一只毛绒洁白、紫面沉睡、羊绒间嵌着绿粉双瞳的飘浮梦羊（T-02-99）。\n若指派自律 I 级的低修养员工前去接触，逆卡巴拉计数器便会骤减；突破收容后它会先以绵羊形态悬浮游荡并向四周释放催眠梦境光球（若 60 秒内无人攻击则会安静化蛋）；一旦受到伤害，它将在羊毛云爆发中蜕变为高大的多眼怪鸡，周期发出三连催眠啼鸣令附近人类沉睡乃至引爆白黑双伤噩梦。</VoidDream.description>
   <VoidDream.tools.dream_beak.label>梦魇尖啄</VoidDream.tools.dream_beak.label>
   <VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
   <VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>切勿派遣自律等级为 I 级或更低的员工接触虚空之梦，否则结束时必将扣除逆卡巴拉计数器。</VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
   <VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
-  <VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>突破收容后它会变身为诡谲的三眼巨鸡，并反复鸣叫令 10 格范围内所有人类陷入昏睡。\nE.G.O饰品“梦乡”已解锁。</VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>突破收容后它会先以绵羊形态漂浮并释放催眠光球（无人攻击满 60 秒后将安静化蛋）；若对其发起攻击，则会立刻变身为诡谲的多眼巨鸡并反复鸣叫，令 10 格范围内人类承受精神冲击与昏睡。\nE.G.O饰品“梦乡”已解锁。</VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
   <VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
-  <VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>一旦有殖民者昏睡，请选中其并点击“唤醒沉睡者”在 60 秒内晃醒，否则将直接爆发高额白黑双伤噩梦。\nTETH 级 E.G.O 武器与护甲“梦乡”已解锁。</VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>一旦有殖民者昏睡于梦境云上，请选中其并点击“唤醒沉睡者”在 60 秒内晃醒，否则将直接爆发高额白黑双伤噩梦。\nTETH 级 E.G.O 武器与护甲“梦乡”已解锁。</VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
   <VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
   <VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>沟通工作始终能安抚这头漂泊于虚梦间的绵羊。\n工作速度 +10% 与成功率 +10%。</VoidDream.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
 
@@ -130,9 +132,9 @@
   <VoidDreamEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</VoidDreamEgg.comps.LC_CompEgg.guiLabelString>
 
   <EgoWeapon_VoidDream.label>E.G.O. 武器（梦乡）</EgoWeapon_VoidDream.label>
-  <EgoWeapon_VoidDream.description>镶嵌着圆睁赤瞳的暮紫卡宾枪（TETH），发射沉重而诡异的精神白伤射线。</EgoWeapon_VoidDream.description>
-  <EgoWeapon_VoidDream.tools.stock.label>枪托</EgoWeapon_VoidDream.tools.stock.label>
-  <Bullet_EgoWeapon_VoidDream.label>梦乡 E.G.O. 射线弹</Bullet_EgoWeapon_VoidDream.label>
+  <EgoWeapon_VoidDream.description>以虚空之梦的红面公鸡首级与蓬松羊毛握把制成的奇异远程 E.G.O. 武器（TETH）。\n可从中距离极速喷射成对白伤梦境声波脉冲，既能震醒恍惚的心智，亦能侵蚀敌方精神。</EgoWeapon_VoidDream.description>
+  <EgoWeapon_VoidDream.tools.beak.label>鸡喙</EgoWeapon_VoidDream.tools.beak.label>
+  <Bullet_EgoWeapon_VoidDream.label>梦乡声波脉冲</Bullet_EgoWeapon_VoidDream.label>
   <Apparel_VoidDreamSuit.label>E.G.O. 护甲（梦乡）</Apparel_VoidDreamSuit.label>
   <Apparel_VoidDreamSuit.description>绣满鎏金星辰与睡眠魔眼的厚实紫呢风衣（TETH），具备良好的精神与黑伤抗性。</Apparel_VoidDreamSuit.description>
   <Accessory_VoidDream.label>E.G.O. 饰品（梦乡）</Accessory_VoidDream.label>

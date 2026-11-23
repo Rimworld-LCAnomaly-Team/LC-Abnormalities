@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderNodeTagDef><defName>JudgementBird_Root</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>JudgementBird_Pelvis</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>JudgementBird_LeftThigh</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>JudgementBird_LeftLeg</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>JudgementBird_LeftFoot</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>JudgementBird_RightThigh</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>JudgementBird_RightLeg</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>JudgementBird_RightFoot</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>JudgementBird_Body</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>JudgementBird_FrontWing</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>JudgementBird_BackWing</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>JudgementBird_Neck</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>JudgementBird_BackScale</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>JudgementBird_FrontScale</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>JudgementBird_Head</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>JudgementBird_Feather</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>JudgementBird_BigScale</defName></PawnRenderNodeTagDef>
+
+</Defs>

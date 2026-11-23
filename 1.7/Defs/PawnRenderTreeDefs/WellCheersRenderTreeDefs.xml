@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderTreeDef>
+    <defName>WellCheers</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li Class="LCAbnormalities.WellCheers.PawnRenderNodeProperties_WellCheersPart">
+          <debugLabel>WellCheers_Root</debugLabel>
+          <tagDef>WellCheers_Root</tagDef>
+          <role>Root</role>
+          <useGraphic>false</useGraphic>
+          <formScale>2.05</formScale>
+          <children>
+            <!-- Central vending machine body (dynamically swaps Purple / Red / Blue) -->
+            <li Class="LCAbnormalities.WellCheers.PawnRenderNodeProperties_WellCheersPart">
+              <debugLabel>WellCheers_Machine</debugLabel>
+              <tagDef>WellCheers_Machine</tagDef>
+              <role>VendingMachine</role>
+              <texPath>Things/Pawn/WellCheers/Attachments/VendingMachine_Purple</texPath>
+              <texPathPurple>Things/Pawn/WellCheers/Attachments/VendingMachine_Purple</texPathPurple>
+              <texPathRed>Things/Pawn/WellCheers/Attachments/VendingMachine_Red</texPathRed>
+              <texPathBlue>Things/Pawn/WellCheers/Attachments/VendingMachine_Blue</texPathBlue>
+              <baseLayer>4</baseLayer>
+              <children>
+                <!-- Dispensed can inside FREE! slot (shown on work / dispense / portrait) -->
+                <li Class="LCAbnormalities.WellCheers.PawnRenderNodeProperties_WellCheersPart">
+                  <debugLabel>WellCheers_Can</debugLabel>
+                  <tagDef>WellCheers_Can</tagDef>
+                  <role>DispensedCan</role>
+                  <texPath>Things/Pawn/WellCheers/Attachments/Can_Purple</texPath>
+                  <texPathPurple>Things/Pawn/WellCheers/Attachments/Can_Purple</texPathPurple>
+                  <texPathRed>Things/Pawn/WellCheers/Attachments/Can_Red</texPathRed>
+                  <texPathBlue>Things/Pawn/WellCheers/Attachments/Can_Blue</texPathBlue>
+                  <baseLayer>5</baseLayer>
+                </li>
+              </children>
+            </li>
+
+            <!-- Left shrimp mariner -->
+            <li Class="LCAbnormalities.WellCheers.PawnRenderNodeProperties_WellCheersPart">
+              <debugLabel>WellCheers_ShrimpL_Body</debugLabel>
+              <tagDef>WellCheers_ShrimpL_Body</tagDef>
+              <role>StaticPart</role>
+              <texPath>Things/Pawn/WellCheers/Attachments/ShrimpL_Body</texPath>
+              <baseLayer>8</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.WellCheers.PawnRenderNodeProperties_WellCheersPart">
+                  <debugLabel>WellCheers_ShrimpL_ArmBack</debugLabel>
+                  <tagDef>WellCheers_ShrimpL_ArmBack</tagDef>
+                  <role>StaticPart</role>
+                  <texPath>Things/Pawn/WellCheers/Attachments/ShrimpL_ArmBack</texPath>
+                  <baseLayer>6</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.WellCheers.PawnRenderNodeProperties_WellCheersPart">
+                  <debugLabel>WellCheers_ShrimpL_Leg</debugLabel>
+                  <tagDef>WellCheers_ShrimpL_Leg</tagDef>
+                  <role>StaticPart</role>
+                  <texPath>Things/Pawn/WellCheers/Attachments/ShrimpL_Leg</texPath>
+                  <baseLayer>7</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.WellCheers.PawnRenderNodeProperties_WellCheersPart">
+                  <debugLabel>WellCheers_ShrimpL_ArmFront</debugLabel>
+                  <tagDef>WellCheers_ShrimpL_ArmFront</tagDef>
+                  <role>StaticPart</role>
+                  <texPath>Things/Pawn/WellCheers/Attachments/ShrimpL_ArmFront</texPath>
+                  <baseLayer>9</baseLayer>
+                </li>
+              </children>
+            </li>
+
+            <!-- Right shrimp mariner -->
+            <li Class="LCAbnormalities.WellCheers.PawnRenderNodeProperties_WellCheersPart">
+              <debugLabel>WellCheers_ShrimpR_Body</debugLabel>
+              <tagDef>WellCheers_ShrimpR_Body</tagDef>
+              <role>StaticPart</role>
+              <texPath>Things/Pawn/WellCheers/Attachments/ShrimpR_Body</texPath>
+              <baseLayer>8.2</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.WellCheers.PawnRenderNodeProperties_WellCheersPart">
+                  <debugLabel>WellCheers_ShrimpR_ArmBack</debugLabel>
+                  <tagDef>WellCheers_ShrimpR_ArmBack</tagDef>
+                  <role>StaticPart</role>
+                  <texPath>Things/Pawn/WellCheers/Attachments/ShrimpR_ArmBack</texPath>
+                  <baseLayer>6.2</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.WellCheers.PawnRenderNodeProperties_WellCheersPart">
+                  <debugLabel>WellCheers_ShrimpR_Leg</debugLabel>
+                  <tagDef>WellCheers_ShrimpR_Leg</tagDef>
+                  <role>StaticPart</role>
+                  <texPath>Things/Pawn/WellCheers/Attachments/ShrimpR_Leg</texPath>
+                  <baseLayer>7.2</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.WellCheers.PawnRenderNodeProperties_WellCheersPart">
+                  <debugLabel>WellCheers_ShrimpR_ArmFront</debugLabel>
+                  <tagDef>WellCheers_ShrimpR_ArmFront</tagDef>
+                  <role>StaticPart</role>
+                  <texPath>Things/Pawn/WellCheers/Attachments/ShrimpR_ArmFront</texPath>
+                  <baseLayer>9.2</baseLayer>
+                </li>
+              </children>
+            </li>
+          </children>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

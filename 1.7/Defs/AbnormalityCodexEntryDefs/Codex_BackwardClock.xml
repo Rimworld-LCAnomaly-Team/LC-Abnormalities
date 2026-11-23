@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>BackwardClock</defName>
+    <label>Backward Clock</label>
+    <description>Backward Clock (D-09-104) is a WAW Tool Abnormality charged across four vacuum-tube stages by Level III+ employees.\nAt 4/4 charge, a Level V employee may sacrifice themselves to rewind disaster—instantly suppressing all non-ALEPH breached Abnormalities and Ordeals on the map.</description>
+    <uiIconPath>UI/CodexEntries/BackwardClock</uiIconPath>
+    <category>WAW</category>
+    <orderInCategory>940</orderInCategory>
+    <linkedThings>
+      <li>BackwardClock</li>
+      <li>BackwardClockEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

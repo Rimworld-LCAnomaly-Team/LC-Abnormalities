@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_BaseMeleeWeapon_EGO">
+    <defName>EgoWeapon_Schadenfreude</defName>
+    <label>E.G.O. Weapon (Gaze)</label>
+    <description>A long-handled crimson buzzsaw polearm extracted from Schadenfreude (HE).\nTears into targets with relentless Red saw-shred hits and stacks Gaze Rending to amplify all incoming harm.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/EgoWeapon_Schadenfreude</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.1, 2.1)</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>3.0</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>gaze buzzsaw</label>
+        <capacities>
+          <li>LC_GazeSawShred</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>1.15</cooldownTime>
+        <soundMeleeHit>LC_Gaze_Saw</soundMeleeHit>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Red</damageType>
+        <riskLevel>HE</riskLevel>
+        <damageMultiplier>1</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

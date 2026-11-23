@@ -35,6 +35,12 @@ namespace LCAbnormalities.Settings
         public bool EnableFuneralOfDeadButterflies = true;
         public bool EnableSnowQueen = true;
         public bool EnableNotesFromCrazedResearcher = true;
+        public bool EnableAllAroundHelper = true;
+        public bool EnableJudgementBird = true;
+        public bool EnableBigBird = true;
+        public bool EnableLittleRedRidingHoodedMercenary = true;
+        public bool EnableBackwardClock = true;
+        public bool EnableSchadenfreude = true;
 
         public bool BurrowingHeavenAllowUnwatchedTeleport = true;
         public float BurrowingHeavenSightGraceMultiplier = 1.0f;
@@ -73,6 +79,12 @@ namespace LCAbnormalities.Settings
             Scribe_Values.Look(ref EnableFuneralOfDeadButterflies, "EnableFuneralOfDeadButterflies", true);
             Scribe_Values.Look(ref EnableSnowQueen, "EnableSnowQueen", true);
             Scribe_Values.Look(ref EnableNotesFromCrazedResearcher, "EnableNotesFromCrazedResearcher", true);
+            Scribe_Values.Look(ref EnableAllAroundHelper, "EnableAllAroundHelper", true);
+            Scribe_Values.Look(ref EnableJudgementBird, "EnableJudgementBird", true);
+            Scribe_Values.Look(ref EnableBigBird, "EnableBigBird", true);
+            Scribe_Values.Look(ref EnableLittleRedRidingHoodedMercenary, "EnableLittleRedRidingHoodedMercenary", true);
+            Scribe_Values.Look(ref EnableBackwardClock, "EnableBackwardClock", true);
+            Scribe_Values.Look(ref EnableSchadenfreude, "EnableSchadenfreude", true);
 
             Scribe_Values.Look(ref BurrowingHeavenAllowUnwatchedTeleport, "BurrowingHeavenAllowUnwatchedTeleport", true);
             Scribe_Values.Look(ref BurrowingHeavenSightGraceMultiplier, "BurrowingHeavenSightGraceMultiplier", 1.0f);
@@ -202,6 +214,36 @@ namespace LCAbnormalities.Settings
                 return EnableNotesFromCrazedResearcher;
             }
 
+            if (defName.IndexOf("AllAroundHelper", StringComparison.Ordinal) >= 0)
+            {
+                return EnableAllAroundHelper;
+            }
+
+            if (defName.IndexOf("JudgementBird", StringComparison.Ordinal) >= 0)
+            {
+                return EnableJudgementBird;
+            }
+
+            if (defName.IndexOf("BigBird", StringComparison.Ordinal) >= 0)
+            {
+                return EnableBigBird;
+            }
+
+            if (defName.IndexOf("LittleRedRidingHoodedMercenary", StringComparison.Ordinal) >= 0)
+            {
+                return EnableLittleRedRidingHoodedMercenary;
+            }
+
+            if (defName.IndexOf("BackwardClock", StringComparison.Ordinal) >= 0)
+            {
+                return EnableBackwardClock;
+            }
+
+            if (defName.IndexOf("Schadenfreude", StringComparison.Ordinal) >= 0)
+            {
+                return EnableSchadenfreude;
+            }
+
             if (def is PawnKindDef_AnomalyEntity_SevenSin
                 || defName == "GluttonyEntity"
                 || defName == "LustEntity"
@@ -239,6 +281,12 @@ namespace LCAbnormalities.Settings
             EnableFuneralOfDeadButterflies = true;
             EnableSnowQueen = true;
             EnableNotesFromCrazedResearcher = true;
+            EnableAllAroundHelper = true;
+            EnableJudgementBird = true;
+            EnableBigBird = true;
+            EnableLittleRedRidingHoodedMercenary = true;
+            EnableBackwardClock = true;
+            EnableSchadenfreude = true;
 
             If_ShowVampireText = true;
             If_ShowVampireHealPartText = false;

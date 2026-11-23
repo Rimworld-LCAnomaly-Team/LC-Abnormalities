@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderTreeDef>
+    <defName>VoidDream</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+
+        <!-- ==================== FORM 1: FLOATING SLEEPING SHEEP RIG (skeleton #222774) ==================== -->
+        <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+          <debugLabel>SheepRoot</debugLabel>
+          <tagDef>VoidDream_SheepRoot</tagDef>
+          <role>SheepRoot</role>
+          <useGraphic>false</useGraphic>
+          <formScale>1.85</formScale>
+          <containedScale>1.65</containedScale>
+          <containedOffset>(0, 0, -0.02)</containedOffset>
+          <flipOnWest>true</flipOnWest>
+          <children>
+
+            <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+              <debugLabel>SheepShadow</debugLabel>
+              <tagDef>VoidDream_SheepShadow</tagDef>
+              <role>SheepShadow</role>
+              <texPath>Things/Pawn/VoidDream/Parts/Sheep_Shadow</texPath>
+              <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Sheep_Shadow</texPathLeft>
+              <useTransparentShader>true</useTransparentShader>
+              <baseLayer>2.0</baseLayer>
+            </li>
+
+            <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+              <debugLabel>SheepBody</debugLabel>
+              <tagDef>VoidDream_SheepBody</tagDef>
+              <role>SheepBody</role>
+              <texPath>Things/Pawn/VoidDream/Parts/Sheep_Body</texPath>
+              <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Sheep_Body</texPathLeft>
+              <baseLayer>8.0</baseLayer>
+              <children>
+
+                <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                  <debugLabel>SheepFeet</debugLabel>
+                  <tagDef>VoidDream_SheepFeet</tagDef>
+                  <role>SheepFeet</role>
+                  <texPath>Things/Pawn/VoidDream/Parts/Sheep_Feet</texPath>
+                  <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Sheep_Feet</texPathLeft>
+                  <baseLayer>7.2</baseLayer>
+                </li>
+
+                <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                  <debugLabel>SheepTail</debugLabel>
+                  <tagDef>VoidDream_SheepTail</tagDef>
+                  <role>SheepTail</role>
+                  <texPath>Things/Pawn/VoidDream/Parts/Sheep_Tail</texPath>
+                  <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Sheep_Tail</texPathLeft>
+                  <baseLayer>8.6</baseLayer>
+                </li>
+
+                <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                  <debugLabel>SheepEyesWhite</debugLabel>
+                  <tagDef>VoidDream_SheepEyesWhite</tagDef>
+                  <role>SheepEyesWhite</role>
+                  <texPath>Things/Pawn/VoidDream/Parts/Sheep_EyesWhite</texPath>
+                  <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Sheep_EyesWhite</texPathLeft>
+                  <baseLayer>9.0</baseLayer>
+                </li>
+
+                <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                  <debugLabel>SheepEyePupils</debugLabel>
+                  <tagDef>VoidDream_SheepEyePupils</tagDef>
+                  <role>SheepEyePupils</role>
+                  <texPath>Things/Pawn/VoidDream/Parts/Sheep_EyePupils</texPath>
+                  <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Sheep_EyePupils</texPathLeft>
+                  <baseLayer>9.4</baseLayer>
+                </li>
+
+                <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                  <debugLabel>SheepHead</debugLabel>
+                  <tagDef>VoidDream_SheepHead</tagDef>
+                  <role>SheepHead</role>
+                  <texPath>Things/Pawn/VoidDream/Parts/Sheep_Head</texPath>
+                  <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Sheep_Head</texPathLeft>
+                  <baseLayer>10.0</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                      <debugLabel>SheepEar</debugLabel>
+                      <tagDef>VoidDream_SheepEar</tagDef>
+                      <role>SheepEar</role>
+                      <texPath>Things/Pawn/VoidDream/Parts/Sheep_Ear</texPath>
+                      <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Sheep_Ear</texPathLeft>
+                      <baseLayer>10.6</baseLayer>
+                    </li>
+                  </children>
+                </li>
+
+                <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                  <debugLabel>SheepZ1</debugLabel>
+                  <tagDef>VoidDream_SheepZ1</tagDef>
+                  <role>SheepZ1</role>
+                  <texPath>Things/Pawn/VoidDream/Parts/Sheep_Z1</texPath>
+                  <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Sheep_Z1</texPathLeft>
+                  <useTransparentShader>true</useTransparentShader>
+                  <baseLayer>11.2</baseLayer>
+                </li>
+
+                <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                  <debugLabel>SheepZ2</debugLabel>
+                  <tagDef>VoidDream_SheepZ2</tagDef>
+                  <role>SheepZ2</role>
+                  <texPath>Things/Pawn/VoidDream/Parts/Sheep_Z2</texPath>
+                  <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Sheep_Z2</texPathLeft>
+                  <useTransparentShader>true</useTransparentShader>
+                  <baseLayer>11.4</baseLayer>
+                </li>
+
+              </children>
+            </li>
+
+          </children>
+        </li>
+
+        <!-- ==================== FORM 2: ENRAGED ROOSTER RIG (skeleton #223054) ==================== -->
+        <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+          <debugLabel>RoosterRoot</debugLabel>
+          <tagDef>VoidDream_RoosterRoot</tagDef>
+          <role>RoosterRoot</role>
+          <useGraphic>false</useGraphic>
+          <formScale>2.55</formScale>
+          <containedScale>2.00</containedScale>
+          <flipOnWest>true</flipOnWest>
+          <children>
+
+            <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+              <debugLabel>RoosterShadow</debugLabel>
+              <tagDef>VoidDream_RoosterShadow</tagDef>
+              <role>RoosterShadow</role>
+              <texPath>Things/Pawn/VoidDream/Parts/Rooster_Shadow</texPath>
+              <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Rooster_Shadow</texPathLeft>
+              <useTransparentShader>true</useTransparentShader>
+              <baseLayer>2.0</baseLayer>
+            </li>
+
+            <!-- Back articulated leg -->
+            <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+              <debugLabel>RoosterBackThigh</debugLabel>
+              <tagDef>VoidDream_RoosterBackThigh</tagDef>
+              <role>RoosterBackThigh</role>
+              <texPath>Things/Pawn/VoidDream/Parts/Rooster_BackThigh</texPath>
+              <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Rooster_BackThigh</texPathLeft>
+              <baseLayer>5.0</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                  <debugLabel>RoosterBackShin</debugLabel>
+                  <tagDef>VoidDream_RoosterBackShin</tagDef>
+                  <role>RoosterBackShin</role>
+                  <texPath>Things/Pawn/VoidDream/Parts/Rooster_BackShin</texPath>
+                  <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Rooster_BackShin</texPathLeft>
+                  <baseLayer>5.4</baseLayer>
+                </li>
+              </children>
+            </li>
+
+            <!-- Front articulated leg -->
+            <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+              <debugLabel>RoosterFrontThigh</debugLabel>
+              <tagDef>VoidDream_RoosterFrontThigh</tagDef>
+              <role>RoosterFrontThigh</role>
+              <texPath>Things/Pawn/VoidDream/Parts/Rooster_FrontThigh</texPath>
+              <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Rooster_FrontThigh</texPathLeft>
+              <baseLayer>6.0</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                  <debugLabel>RoosterFrontShin</debugLabel>
+                  <tagDef>VoidDream_RoosterFrontShin</tagDef>
+                  <role>RoosterFrontShin</role>
+                  <texPath>Things/Pawn/VoidDream/Parts/Rooster_FrontShin</texPath>
+                  <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Rooster_FrontShin</texPathLeft>
+                  <baseLayer>6.4</baseLayer>
+                </li>
+              </children>
+            </li>
+
+            <!-- Shaggy wool torso + drooping sheep head + black ink eye-tail + elongated rooster neck & head -->
+            <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+              <debugLabel>RoosterBody</debugLabel>
+              <tagDef>VoidDream_RoosterBody</tagDef>
+              <role>RoosterBody</role>
+              <texPath>Things/Pawn/VoidDream/Parts/Rooster_Body</texPath>
+              <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Rooster_Body</texPathLeft>
+              <baseLayer>9.0</baseLayer>
+              <children>
+
+                <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                  <debugLabel>RoosterSheepHead</debugLabel>
+                  <tagDef>VoidDream_RoosterSheepHead</tagDef>
+                  <role>RoosterSheepHead</role>
+                  <texPath>Things/Pawn/VoidDream/Parts/Rooster_SheepHead</texPath>
+                  <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Rooster_SheepHead</texPathLeft>
+                  <baseLayer>7.4</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                      <debugLabel>RoosterEyeTail</debugLabel>
+                      <tagDef>VoidDream_RoosterEyeTail</tagDef>
+                      <role>RoosterEyeTail</role>
+                      <texPath>Things/Pawn/VoidDream/Parts/Rooster_EyeTail</texPath>
+                      <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Rooster_EyeTail</texPathLeft>
+                      <useTransparentShader>true</useTransparentShader>
+                      <baseLayer>7.8</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                      <debugLabel>RoosterSheepHorn</debugLabel>
+                      <tagDef>VoidDream_RoosterSheepHorn</tagDef>
+                      <role>RoosterSheepHorn</role>
+                      <texPath>Things/Pawn/VoidDream/Parts/Rooster_SheepHorn</texPath>
+                      <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Rooster_SheepHorn</texPathLeft>
+                      <baseLayer>9.8</baseLayer>
+                    </li>
+                  </children>
+                </li>
+
+                <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                  <debugLabel>RoosterBodyPupils</debugLabel>
+                  <tagDef>VoidDream_RoosterBodyPupils</tagDef>
+                  <role>RoosterBodyPupils</role>
+                  <texPath>Things/Pawn/VoidDream/Parts/Rooster_BodyPupils</texPath>
+                  <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Rooster_BodyPupils</texPathLeft>
+                  <baseLayer>9.4</baseLayer>
+                </li>
+
+                <!-- Long violet neck with blue & yellow eyes -->
+                <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                  <debugLabel>RoosterNeck</debugLabel>
+                  <tagDef>VoidDream_RoosterNeck</tagDef>
+                  <role>RoosterNeck</role>
+                  <texPath>Things/Pawn/VoidDream/Parts/Rooster_Neck</texPath>
+                  <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Rooster_Neck</texPathLeft>
+                  <baseLayer>10.4</baseLayer>
+                  <children>
+
+                    <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                      <debugLabel>RoosterNeckPupils</debugLabel>
+                      <tagDef>VoidDream_RoosterNeckPupils</tagDef>
+                      <role>RoosterNeckPupils</role>
+                      <texPath>Things/Pawn/VoidDream/Parts/Rooster_NeckPupils</texPath>
+                      <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Rooster_NeckPupils</texPathLeft>
+                      <baseLayer>10.8</baseLayer>
+                    </li>
+
+                    <!-- Crimson-masked rooster head + blinking eye + articulated hinged beaks -->
+                    <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                      <debugLabel>RoosterHead</debugLabel>
+                      <tagDef>VoidDream_RoosterHead</tagDef>
+                      <role>RoosterHead</role>
+                      <texPath>Things/Pawn/VoidDream/Parts/Rooster_Head</texPath>
+                      <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Rooster_Head</texPathLeft>
+                      <baseLayer>11.6</baseLayer>
+                      <children>
+
+                        <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                          <debugLabel>RoosterLowerBeak</debugLabel>
+                          <tagDef>VoidDream_RoosterLowerBeak</tagDef>
+                          <role>RoosterLowerBeak</role>
+                          <texPath>Things/Pawn/VoidDream/Parts/Rooster_LowerBeak</texPath>
+                          <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Rooster_LowerBeak</texPathLeft>
+                          <baseLayer>12.0</baseLayer>
+                        </li>
+
+                        <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                          <debugLabel>RoosterRealEye</debugLabel>
+                          <tagDef>VoidDream_RoosterRealEye</tagDef>
+                          <role>RoosterRealEye</role>
+                          <texPath>Things/Pawn/VoidDream/Parts/Rooster_RealEye_Open</texPath>
+                          <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Rooster_RealEye_Open</texPathLeft>
+                          <alternateTexPaths>
+                            <li>Things/Pawn/VoidDream/Parts/Rooster_RealEye_Alert</li>
+                            <li>Things/Pawn/VoidDream/Parts/Rooster_RealEye_Half</li>
+                            <li>Things/Pawn/VoidDream/Parts/Rooster_RealEye_Closed</li>
+                          </alternateTexPaths>
+                          <alternateTexPathsLeft>
+                            <li>Things/Pawn/VoidDream/Parts/Left/Rooster_RealEye_Alert</li>
+                            <li>Things/Pawn/VoidDream/Parts/Left/Rooster_RealEye_Half</li>
+                            <li>Things/Pawn/VoidDream/Parts/Left/Rooster_RealEye_Closed</li>
+                          </alternateTexPathsLeft>
+                          <baseLayer>12.4</baseLayer>
+                        </li>
+
+                        <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+                          <debugLabel>RoosterUpperBeak</debugLabel>
+                          <tagDef>VoidDream_RoosterUpperBeak</tagDef>
+                          <role>RoosterUpperBeak</role>
+                          <texPath>Things/Pawn/VoidDream/Parts/Rooster_UpperBeak</texPath>
+                          <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Rooster_UpperBeak</texPathLeft>
+                          <baseLayer>12.8</baseLayer>
+                        </li>
+
+                      </children>
+                    </li>
+
+                  </children>
+                </li>
+
+              </children>
+            </li>
+
+          </children>
+        </li>
+
+        <!-- ==================== TRANSFORMATION WOOL CLOUD BURST (cloud1..cloud5) ==================== -->
+        <li Class="LCAbnormalities.VoidDream.PawnRenderNodeProperties_VoidDreamPart">
+          <debugLabel>TransformCloud</debugLabel>
+          <tagDef>VoidDream_TransformCloud</tagDef>
+          <role>TransformCloud</role>
+          <texPath>Things/Pawn/VoidDream/Parts/Transform_Cloud1</texPath>
+          <texPathLeft>Things/Pawn/VoidDream/Parts/Left/Transform_Cloud1</texPathLeft>
+          <alternateTexPaths>
+            <li>Things/Pawn/VoidDream/Parts/Transform_Cloud2</li>
+            <li>Things/Pawn/VoidDream/Parts/Transform_Cloud3</li>
+            <li>Things/Pawn/VoidDream/Parts/Transform_Cloud4</li>
+            <li>Things/Pawn/VoidDream/Parts/Transform_Cloud5</li>
+          </alternateTexPaths>
+          <alternateTexPathsLeft>
+            <li>Things/Pawn/VoidDream/Parts/Left/Transform_Cloud2</li>
+            <li>Things/Pawn/VoidDream/Parts/Left/Transform_Cloud3</li>
+            <li>Things/Pawn/VoidDream/Parts/Left/Transform_Cloud4</li>
+            <li>Things/Pawn/VoidDream/Parts/Left/Transform_Cloud5</li>
+          </alternateTexPathsLeft>
+          <formScale>2.55</formScale>
+          <useTransparentShader>true</useTransparentShader>
+          <baseLayer>18.0</baseLayer>
+        </li>
+
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

@@ -36,6 +36,24 @@
   </SoundDef>
 
   <SoundDef>
+    <defName>LC_Wingbeat_Hit</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/FairyFestival/Wingbeat_Hit</clipPath>
+          </li>
+        </grains>
+        <volumeRange>26~34</volumeRange>
+        <pitchRange>0.94~1.06</pitchRange>
+        <distRange>0~65</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
     <defName>LC_WellCheers_Drink</defName>
     <context>MapOnly</context>
     <subSounds>
@@ -56,6 +74,57 @@
   </SoundDef>
 
   <SoundDef>
+    <defName>LC_WellCheers_Drink_Male</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/WellCheers/WellCheers_Drink01</clipPath>
+          </li>
+        </grains>
+        <volumeRange>26~34</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~65</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_WellCheers_Drink_Female</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/WellCheers/WellCheers_Drink02</clipPath>
+          </li>
+        </grains>
+        <volumeRange>26~34</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~65</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_WellCheers_Dispense</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/WellCheers/WellCheers_Dispense</clipPath>
+          </li>
+        </grains>
+        <volumeRange>24~32</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~60</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
     <defName>LC_WellCheers_Sleep</defName>
     <context>MapOnly</context>
     <subSounds>
@@ -65,9 +134,67 @@
             <clipPath>Pawn/WellCheers/WellCheers_Sleep</clipPath>
           </li>
         </grains>
-        <volumeRange>28~36</volumeRange>
+        <volumeRange>30~38</volumeRange>
         <pitchRange>0.96~1.04</pitchRange>
-        <distRange>0~70</distRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_WellCheers_Dance</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/WellCheers/WellCheers_Dance</clipPath>
+          </li>
+        </grains>
+        <volumeRange>28~34</volumeRange>
+        <distRange>20~85</distRange>
+        <sustainRelease>1.2</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_WellCheers_WorkLoop</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>6</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/WellCheers/WellCheers_WorkLoop</clipPath>
+          </li>
+        </grains>
+        <volumeRange>16~20</volumeRange>
+        <distRange>18~75</distRange>
+        <sustainRelease>2.0</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_WellCheers_EgoShot</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>6</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/WellCheers/WellCheers_EgoShot</clipPath>
+          </li>
+        </grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.94~1.06</pitchRange>
+        <distRange>0~75</distRange>
       </li>
     </subSounds>
   </SoundDef>
@@ -102,6 +229,82 @@
         <volumeRange>34~44</volumeRange>
         <pitchRange>0.95~1.05</pitchRange>
         <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_PunishingBird_WingFlap</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/PunishingBird/SmallBird_WingFlap</clipPath>
+          </li>
+        </grains>
+        <volumeRange>14~20</volumeRange>
+        <pitchRange>1.05~1.20</pitchRange>
+        <distRange>0~45</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_PunishingBird_MawBite</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/PunishingBird/SmallBird_MawBite</clipPath>
+          </li>
+        </grains>
+        <volumeRange>36~46</volumeRange>
+        <pitchRange>0.92~1.04</pitchRange>
+        <distRange>0~90</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_PunishingBird_Death</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/PunishingBird/SmallBird_Death</clipPath>
+          </li>
+        </grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>1.15~1.28</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_PunishingBird_BeakShot</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/PunishingBird/SmallBird_BeakShot1</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/PunishingBird/SmallBird_BeakShot2</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/PunishingBird/SmallBird_BeakShot3</clipPath>
+          </li>
+        </grains>
+        <volumeRange>26~34</volumeRange>
+        <pitchRange>0.96~1.06</pitchRange>
+        <distRange>0~75</distRange>
       </li>
     </subSounds>
   </SoundDef>
@@ -152,6 +355,66 @@
         </grains>
         <volumeRange>25~33</volumeRange>
         <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_VoidDream_Ball</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/VoidDream/Dreamy_Ball</clipPath>
+          </li>
+        </grains>
+        <volumeRange>24~32</volumeRange>
+        <pitchRange>0.95~1.06</pitchRange>
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_VoidDream_Default</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/VoidDream/Dreamy_Default1</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/VoidDream/Dreamy_Default2</clipPath>
+          </li>
+        </grains>
+        <volumeRange>18~26</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~55</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_VoidDream_EgoShot</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>6</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/VoidDream/Dreamy1</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/VoidDream/Dreamy2</clipPath>
+          </li>
+        </grains>
+        <volumeRange>24~32</volumeRange>
+        <pitchRange>0.96~1.06</pitchRange>
         <distRange>0~70</distRange>
       </li>
     </subSounds>

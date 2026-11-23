@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <LC_GrinderMk4_Saw.label>研磨机旋转锯刃</LC_GrinderMk4_Saw.label>
+  <LC_GrinderMk4_Saw.deathMessage>{0}被研磨机 Mk4 撕成了碎片。</LC_GrinderMk4_Saw.deathMessage>
+
+  <LC_Justitia_PaleSlash.label>正义裁决者苍白斩</LC_Justitia_PaleSlash.label>
+  <LC_Justitia_PaleSlash.deathMessage>{0}在正义裁决者的天平下迎来了终末。</LC_Justitia_PaleSlash.deathMessage>
+
+  <LC_Lamp_BlackCrush.label>目灯黑伤重锤</LC_Lamp_BlackCrush.label>
+  <LC_Lamp_BlackCrush.deathMessage>{0}被目灯沉重的金光击碎了身心。</LC_Lamp_BlackCrush.deathMessage>
+
+  <LC_CrimsonScar_RedShot.label>赤红疤痕突袭</LC_CrimsonScar_RedShot.label>
+  <LC_CrimsonScar_RedShot.deathMessage>{0}倒在了赤红疤痕的狩猎之下。</LC_CrimsonScar_RedShot.deathMessage>
+
+  <LC_Gaze_SawDamage.label>凝视锯刃撕裂</LC_Gaze_SawDamage.label>
+  <LC_Gaze_SawDamage.deathMessage>{0}在凝视的锯刃下粉身碎骨。</LC_Gaze_SawDamage.deathMessage>
+
+</LanguageData>

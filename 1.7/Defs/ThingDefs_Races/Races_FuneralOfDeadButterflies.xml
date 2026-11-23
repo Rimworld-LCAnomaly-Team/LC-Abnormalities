@@ -48,6 +48,7 @@
         <cooldownTime>1.8</cooldownTime>
         <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <soundMeleeHit>LC_Funeral_Close</soundMeleeHit>
       </li>
     </tools>
     <comps>
@@ -57,6 +58,7 @@
         <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
         <ifProvideWarningPoints>true</ifProvideWarningPoints>
         <customWarningPoints>-1</customWarningPoints>
+        <soundWorking>LC_Funeral_WorkLoop</soundWorking>
         <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
         <dyingFxDef>DyingFuneralOfDeadButterflies</dyingFxDef>
         <workDamageDef>LC_WhiteDamage</workDamageDef>
@@ -80,7 +82,7 @@
       </li>
       <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
         <lookForTargetOnEscape>true</lookForTargetOnEscape>
-        <hasAnimation>false</hasAnimation>
+        <hasAnimation>true</hasAnimation>
       </li>
       <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
         <frequencyTicks>60000</frequencyTicks>

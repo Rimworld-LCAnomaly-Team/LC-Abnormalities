@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ==================== 1. SHEEP IDLE (Spine Default, 240t = 4.0s) ==================== -->
+  <!-- Dreamy hovering sheep: gentle levitation, breathing wool squash/stretch, head nod, ear twitch, roving eyes, floating Zzz -->
+  <AnimationDef>
+    <defName>VoidDream_SheepIdle</defName>
+    <durationTicks>240</durationTicks>
+    <startOnRandomTick>true</startOnRandomTick>
+    <playWhenDowned>true</playWhenDowned>
+    <keyframeParts>
+      <li>
+        <key>VoidDream_SheepShadow</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5043, 0.1272)</pivot>
+          <keyframes>
+            <li><tick>0</tick><scale>(1.00,1,1.00)</scale></li>
+            <li><tick>60</tick><scale>(0.88,1,0.90)</scale></li>
+            <li><tick>120</tick><scale>(1.02,1,1.02)</scale></li>
+            <li><tick>180</tick><scale>(0.90,1,0.92)</scale></li>
+            <li><tick>240</tick><scale>(1.00,1,1.00)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_SheepBody</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5032, 0.6102)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1.000,1,1.000)</scale></li>
+            <li><tick>60</tick><offset>(0,0,0.068)</offset><angle>-2.4</angle><scale>(0.986,1,1.018)</scale></li>
+            <li><tick>120</tick><offset>(0,0,-0.010)</offset><angle>1.6</angle><scale>(1.016,1,0.986)</scale></li>
+            <li><tick>180</tick><offset>(0,0,0.056)</offset><angle>-1.8</angle><scale>(0.990,1,1.014)</scale></li>
+            <li><tick>240</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1.000,1,1.000)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_SheepHead</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6926, 0.5871)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>65</tick><angle>5.5</angle></li>
+            <li><tick>130</tick><angle>-3.5</angle></li>
+            <li><tick>190</tick><angle>4.0</angle></li>
+            <li><tick>240</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_SheepEar</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.7760, 0.6266)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>50</tick><angle>-8.0</angle></li>
+            <li><tick>64</tick><angle>5.0</angle></li>
+            <li><tick>78</tick><angle>-2.0</angle></li>
+            <li><tick>170</tick><angle>-5.0</angle></li>
+            <li><tick>240</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_SheepTail</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.2586, 0.4999)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>60</tick><angle>7.5</angle></li>
+            <li><tick>120</tick><angle>-6.0</angle></li>
+            <li><tick>180</tick><angle>6.5</angle></li>
+            <li><tick>240</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_SheepFeet</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5032, 0.4500)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+            <li><tick>60</tick><offset>(0,0,-0.012)</offset><angle>4.0</angle></li>
+            <li><tick>120</tick><offset>(0,0,0.008)</offset><angle>-3.5</angle></li>
+            <li><tick>180</tick><offset>(0,0,-0.010)</offset><angle>3.5</angle></li>
+            <li><tick>240</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Green and Pink wool-eyes glancing lazily around -->
+      <li>
+        <key>VoidDream_SheepEyePupils</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5200, 0.5770)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset></li>
+            <li><tick>40</tick><offset>(0.010,0,0.006)</offset></li>
+            <li><tick>90</tick><offset>(0.010,0,0.006)</offset></li>
+            <li><tick>120</tick><offset>(-0.011,0,-0.005)</offset></li>
+            <li><tick>175</tick><offset>(-0.011,0,-0.005)</offset></li>
+            <li><tick>205</tick><offset>(0.005,0,-0.006)</offset></li>
+            <li><tick>240</tick><offset>(0,0,0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Bubbly Z1 & Z2 drifting gently upward above the sleeping head -->
+      <li>
+        <key>VoidDream_SheepZ1</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6620, 0.6815)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.045,0,0.060)</offset><angle>-6</angle><scale>(0.62,1,0.62)</scale></li>
+            <li><tick>80</tick><offset>(0.075,0,0.135)</offset><angle>5</angle><scale>(0.92,1,0.92)</scale></li>
+            <li><tick>160</tick><offset>(0.100,0,0.205)</offset><angle>-4</angle><scale>(1.04,1,1.04)</scale></li>
+            <li><tick>220</tick><offset>(0.115,0,0.245)</offset><angle>3</angle><scale>(0.50,1,0.50)</scale></li>
+            <li><tick>240</tick><offset>(0.045,0,0.060)</offset><angle>-6</angle><scale>(0.62,1,0.62)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_SheepZ2</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6678, 0.6072)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.095,0,0.165)</offset><angle>4</angle><scale>(0.90,1,0.90)</scale></li>
+            <li><tick>90</tick><offset>(0.125,0,0.245)</offset><angle>-5</angle><scale>(0.48,1,0.48)</scale></li>
+            <li><tick>115</tick><offset>(0.045,0,0.080)</offset><angle>-7</angle><scale>(0.58,1,0.58)</scale></li>
+            <li><tick>190</tick><offset>(0.075,0,0.145)</offset><angle>6</angle><scale>(0.96,1,0.96)</scale></li>
+            <li><tick>240</tick><offset>(0.095,0,0.165)</offset><angle>4</angle><scale>(0.90,1,0.90)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 2. SHEEP WALK / FLOAT (Spine 1_walk, 120t = 2.0s) ==================== -->
+  <!-- Breached sheep gliding smoothly through hallways, launching dream light orbs -->
+  <AnimationDef>
+    <defName>VoidDream_SheepWalk</defName>
+    <durationTicks>120</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>VoidDream_SheepShadow</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5043, 0.1272)</pivot>
+          <keyframes>
+            <li><tick>0</tick><scale>(0.96,1,0.96)</scale></li>
+            <li><tick>30</tick><scale>(0.84,1,0.86)</scale></li>
+            <li><tick>60</tick><scale>(0.98,1,0.98)</scale></li>
+            <li><tick>90</tick><scale>(0.86,1,0.88)</scale></li>
+            <li><tick>120</tick><scale>(0.96,1,0.96)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_SheepBody</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5032, 0.6102)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0.010)</offset><angle>4.0</angle><scale>(1.015,1,0.986)</scale></li>
+            <li><tick>30</tick><offset>(0,0,0.088)</offset><angle>-3.0</angle><scale>(0.982,1,1.022)</scale></li>
+            <li><tick>60</tick><offset>(0,0,0.008)</offset><angle>4.5</angle><scale>(1.018,1,0.984)</scale></li>
+            <li><tick>90</tick><offset>(0,0,0.082)</offset><angle>-2.5</angle><scale>(0.985,1,1.020)</scale></li>
+            <li><tick>120</tick><offset>(0,0,0.010)</offset><angle>4.0</angle><scale>(1.015,1,0.986)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_SheepHead</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6926, 0.5871)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>3.0</angle></li>
+            <li><tick>30</tick><angle>-5.0</angle></li>
+            <li><tick>60</tick><angle>4.5</angle></li>
+            <li><tick>90</tick><angle>-4.5</angle></li>
+            <li><tick>120</tick><angle>3.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_SheepTail</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.2586, 0.4999)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-8.0</angle></li>
+            <li><tick>30</tick><angle>12.0</angle></li>
+            <li><tick>60</tick><angle>-9.0</angle></li>
+            <li><tick>90</tick><angle>11.0</angle></li>
+            <li><tick>120</tick><angle>-8.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_SheepFeet</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5032, 0.4500)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-10.0</angle></li>
+            <li><tick>30</tick><angle>8.0</angle></li>
+            <li><tick>60</tick><angle>-10.0</angle></li>
+            <li><tick>90</tick><angle>8.0</angle></li>
+            <li><tick>120</tick><angle>-10.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_SheepEyePupils</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5200, 0.5770)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.011,0,0.002)</offset></li>
+            <li><tick>60</tick><offset>(0.013,0,-0.004)</offset></li>
+            <li><tick>120</tick><offset>(0.011,0,0.002)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_SheepZ1</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6620, 0.6815)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.020,0,0.080)</offset><scale>(0.75,1,0.75)</scale></li>
+            <li><tick>60</tick><offset>(-0.015,0,0.180)</offset><scale>(0.95,1,0.95)</scale></li>
+            <li><tick>120</tick><offset>(0.020,0,0.080)</offset><scale>(0.75,1,0.75)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_SheepZ2</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6678, 0.6072)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(-0.010,0,0.165)</offset><scale>(0.85,1,0.85)</scale></li>
+            <li><tick>60</tick><offset>(0.025,0,0.095)</offset><scale>(0.62,1,0.62)</scale></li>
+            <li><tick>120</tick><offset>(-0.010,0,0.165)</offset><scale>(0.85,1,0.85)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 3. TRANSFORM SHEEP -> ROOSTER (Spine 0_Transform, 150t = 2.5s) ==================== -->
+  <!-- Ticks 0..72: Sheep shudders & bloats; Ticks 45..135: Wool Cloud bursts; Tick 72: Swaps to Rooster emerging tall! -->
+  <AnimationDef>
+    <defName>VoidDream_Transform</defName>
+    <durationTicks>150</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>VoidDream_SheepBody</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5032, 0.6102)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1.00,1,1.00)</scale></li>
+            <li><tick>14</tick><offset>(-0.025,0,0.020)</offset><angle>-8.0</angle><scale>(1.08,1,0.92)</scale></li>
+            <li><tick>28</tick><offset>(0.028,0,0.045)</offset><angle>9.0</angle><scale>(0.92,1,1.10)</scale></li>
+            <li><tick>42</tick><offset>(-0.032,0,0.065)</offset><angle>-12.0</angle><scale>(1.14,1,0.88)</scale></li>
+            <li><tick>58</tick><offset>(0.022,0,0.095)</offset><angle>11.0</angle><scale>(1.24,1,1.22)</scale></li>
+            <li><tick>75</tick><offset>(0,0,0.120)</offset><angle>0</angle><scale>(1.36,1,1.34)</scale></li>
+            <li><tick>150</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1.00,1,1.00)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterBody</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4696, 0.5302)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,-0.080)</offset><angle>8.0</angle><scale>(0.78,1,0.72)</scale></li>
+            <li><tick>72</tick><offset>(0,0,-0.090)</offset><angle>10.0</angle><scale>(0.82,1,0.75)</scale></li>
+            <li><tick>96</tick><offset>(0,0,0.055)</offset><angle>-8.0</angle><scale>(1.06,1,1.08)</scale></li>
+            <li><tick>124</tick><offset>(0,0,0.020)</offset><angle>-3.0</angle><scale>(1.02,1,1.02)</scale></li>
+            <li><tick>150</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1.00,1,1.00)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterNeck</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6165, 0.5143)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>22.0</angle></li>
+            <li><tick>72</tick><angle>26.0</angle></li>
+            <li><tick>98</tick><angle>-18.0</angle></li>
+            <li><tick>128</tick><angle>-6.0</angle></li>
+            <li><tick>150</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterHead</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4955, 0.7723)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-14.0</angle></li>
+            <li><tick>72</tick><angle>-16.0</angle></li>
+            <li><tick>102</tick><angle>-20.0</angle></li>
+            <li><tick>130</tick><angle>-5.0</angle></li>
+            <li><tick>150</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterUpperBeak</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6044, 0.7842)</pivot>
+          <keyframes>
+            <li><tick>72</tick><angle>0</angle></li>
+            <li><tick>100</tick><angle>-20.0</angle></li>
+            <li><tick>132</tick><angle>-8.0</angle></li>
+            <li><tick>150</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterLowerBeak</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6017, 0.7811)</pivot>
+          <keyframes>
+            <li><tick>72</tick><angle>0</angle></li>
+            <li><tick>100</tick><angle>32.0</angle></li>
+            <li><tick>132</tick><angle>12.0</angle></li>
+            <li><tick>150</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterEyeTail</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3320, 0.5201)</pivot>
+          <keyframes>
+            <li><tick>72</tick><angle>18.0</angle></li>
+            <li><tick>104</tick><angle>-16.0</angle></li>
+            <li><tick>130</tick><angle>8.0</angle></li>
+            <li><tick>150</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 4. ROOSTER IDLE (Spine 1_default, 120t = 2.0s) ==================== -->
+  <!-- Uncanny towering rooster breathing sway, roving 4 eyes, drooping sheep head & black ink-thread tail -->
+  <AnimationDef>
+    <defName>VoidDream_RoosterIdle</defName>
+    <durationTicks>120</durationTicks>
+    <startOnRandomTick>true</startOnRandomTick>
+    <keyframeParts>
+      <li>
+        <key>VoidDream_RoosterBody</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4696, 0.5302)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1.000,1,1.000)</scale></li>
+            <li><tick>30</tick><offset>(0,0,0.016)</offset><angle>-1.8</angle><scale>(0.990,1,1.015)</scale></li>
+            <li><tick>60</tick><offset>(0,0,-0.008)</offset><angle>1.2</angle><scale>(1.012,1,0.988)</scale></li>
+            <li><tick>90</tick><offset>(0,0,0.014)</offset><angle>-1.4</angle><scale>(0.992,1,1.012)</scale></li>
+            <li><tick>120</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1.000,1,1.000)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterNeck</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6165, 0.5143)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>35</tick><angle>-4.0</angle></li>
+            <li><tick>70</tick><angle>3.5</angle></li>
+            <li><tick>100</tick><angle>-2.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterHead</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4955, 0.7723)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>35</tick><angle>4.5</angle></li>
+            <li><tick>75</tick><angle>-4.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterSheepHead</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3320, 0.5201)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>40</tick><angle>4.0</angle></li>
+            <li><tick>85</tick><angle>-3.5</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterEyeTail</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3320, 0.4800)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>30</tick><angle>-5.5</angle></li>
+            <li><tick>60</tick><angle>5.0</angle></li>
+            <li><tick>90</tick><angle>-4.5</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterBodyPupils</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4297, 0.5760)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset></li>
+            <li><tick>35</tick><offset>(0.008,0,0.004)</offset></li>
+            <li><tick>75</tick><offset>(-0.008,0,-0.004)</offset></li>
+            <li><tick>120</tick><offset>(0,0,0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterNeckPupils</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5968, 0.5796)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset></li>
+            <li><tick>45</tick><offset>(-0.006,0,0.005)</offset></li>
+            <li><tick>85</tick><offset>(0.008,0,-0.003)</offset></li>
+            <li><tick>120</tick><offset>(0,0,0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 5. ROOSTER WALK (Spine 1_walk, 80t = 1.33s) ==================== -->
+  <!-- Articulated stalking rooster stride with alternating thigh/shin bend, rhythmic head-bob, and trailing ink eye-tail -->
+  <AnimationDef>
+    <defName>VoidDream_RoosterWalk</defName>
+    <durationTicks>80</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>VoidDream_RoosterBody</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4696, 0.5302)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,-0.020)</offset><angle>3.5</angle><scale>(1.015,1,0.985)</scale></li>
+            <li><tick>20</tick><offset>(0,0,0.032)</offset><angle>-2.5</angle><scale>(0.988,1,1.018)</scale></li>
+            <li><tick>40</tick><offset>(0,0,-0.020)</offset><angle>3.8</angle><scale>(1.015,1,0.985)</scale></li>
+            <li><tick>60</tick><offset>(0,0,0.030)</offset><angle>-2.2</angle><scale>(0.988,1,1.016)</scale></li>
+            <li><tick>80</tick><offset>(0,0,-0.020)</offset><angle>3.5</angle><scale>(1.015,1,0.985)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterBackThigh</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4681, 0.4375)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>16.0</angle></li>
+            <li><tick>20</tick><angle>-24.0</angle></li>
+            <li><tick>40</tick><angle>-12.0</angle></li>
+            <li><tick>60</tick><angle>22.0</angle></li>
+            <li><tick>80</tick><angle>16.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterBackShin</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4178, 0.3317)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-14.0</angle></li>
+            <li><tick>20</tick><angle>26.0</angle></li>
+            <li><tick>40</tick><angle>6.0</angle></li>
+            <li><tick>60</tick><angle>-20.0</angle></li>
+            <li><tick>80</tick><angle>-14.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterFrontThigh</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5811, 0.4284)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-14.0</angle></li>
+            <li><tick>20</tick><angle>22.0</angle></li>
+            <li><tick>40</tick><angle>16.0</angle></li>
+            <li><tick>60</tick><angle>-26.0</angle></li>
+            <li><tick>80</tick><angle>-14.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterFrontShin</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5270, 0.3281)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>8.0</angle></li>
+            <li><tick>20</tick><angle>-20.0</angle></li>
+            <li><tick>40</tick><angle>-14.0</angle></li>
+            <li><tick>60</tick><angle>28.0</angle></li>
+            <li><tick>80</tick><angle>8.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Classic rooster walking neck/head bob -->
+      <li>
+        <key>VoidDream_RoosterNeck</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6165, 0.5143)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>9.0</angle></li>
+            <li><tick>20</tick><angle>-8.0</angle></li>
+            <li><tick>40</tick><angle>9.5</angle></li>
+            <li><tick>60</tick><angle>-7.5</angle></li>
+            <li><tick>80</tick><angle>9.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterHead</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4955, 0.7723)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-7.0</angle></li>
+            <li><tick>20</tick><angle>9.0</angle></li>
+            <li><tick>40</tick><angle>-7.5</angle></li>
+            <li><tick>60</tick><angle>8.5</angle></li>
+            <li><tick>80</tick><angle>-7.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterSheepHead</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3320, 0.5201)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-7.0</angle></li>
+            <li><tick>20</tick><angle>8.0</angle></li>
+            <li><tick>40</tick><angle>-7.0</angle></li>
+            <li><tick>60</tick><angle>8.0</angle></li>
+            <li><tick>80</tick><angle>-7.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterEyeTail</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3320, 0.4800)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>14.0</angle></li>
+            <li><tick>20</tick><angle>4.0</angle></li>
+            <li><tick>40</tick><angle>15.0</angle></li>
+            <li><tick>60</tick><angle>3.0</angle></li>
+            <li><tick>80</tick><angle>14.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 6. ROOSTER CROW WINDUP (Spine 2_default_to-crying, 60t = 1.0s) ==================== -->
+  <!-- Crouches low, coils neck back, then rears skyward spreading jaws wide open for hypnotic crow -->
+  <AnimationDef>
+    <defName>VoidDream_RoosterCrowStart</defName>
+    <durationTicks>60</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>VoidDream_RoosterBody</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4696, 0.5302)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1.00,1,1.00)</scale></li>
+            <li><tick>26</tick><offset>(-0.015,0,-0.048)</offset><angle>8.5</angle><scale>(1.05,1,0.94)</scale></li>
+            <li><tick>60</tick><offset>(0.012,0,0.042)</offset><angle>-10.0</angle><scale>(0.96,1,1.06)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterNeck</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6165, 0.5143)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>26</tick><angle>18.0</angle></li>
+            <li><tick>60</tick><angle>-16.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterHead</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4955, 0.7723)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>26</tick><angle>-8.0</angle></li>
+            <li><tick>60</tick><angle>-26.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterUpperBeak</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6044, 0.7842)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>28</tick><angle>-4.0</angle></li>
+            <li><tick>60</tick><angle>-26.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterLowerBeak</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6017, 0.7811)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>28</tick><angle>6.0</angle></li>
+            <li><tick>60</tick><angle>42.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterBackThigh</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4681, 0.4375)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>26</tick><angle>14.0</angle></li>
+            <li><tick>60</tick><angle>-8.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterBackShin</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4178, 0.3317)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>26</tick><angle>-14.0</angle></li>
+            <li><tick>60</tick><angle>8.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterFrontThigh</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5811, 0.4284)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>26</tick><angle>12.0</angle></li>
+            <li><tick>60</tick><angle>-6.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterFrontShin</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5270, 0.3281)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>26</tick><angle>-12.0</angle></li>
+            <li><tick>60</tick><angle>6.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 7. ROOSTER CROW LOOP (Spine 3_crying_loop, 180t = 3.0s) ==================== -->
+  <!-- Full-throated hypnotic crow with 3 synchronized sonic pulses at ticks 30, 90, 150! -->
+  <AnimationDef>
+    <defName>VoidDream_RoosterCrowLoop</defName>
+    <durationTicks>180</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>VoidDream_RoosterBody</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4696, 0.5302)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.012,0,0.042)</offset><angle>-10.0</angle><scale>(0.96,1,1.06)</scale></li>
+            <li><tick>30</tick><offset>(0.025,0,0.068)</offset><angle>-14.5</angle><scale>(1.04,1,1.08)</scale></li>
+            <li><tick>60</tick><offset>(0.008,0,0.028)</offset><angle>-8.0</angle><scale>(0.97,1,1.03)</scale></li>
+            <li><tick>90</tick><offset>(0.028,0,0.072)</offset><angle>-15.0</angle><scale>(1.05,1,1.09)</scale></li>
+            <li><tick>120</tick><offset>(0.008,0,0.028)</offset><angle>-8.0</angle><scale>(0.97,1,1.03)</scale></li>
+            <li><tick>150</tick><offset>(0.028,0,0.070)</offset><angle>-15.0</angle><scale>(1.05,1,1.09)</scale></li>
+            <li><tick>180</tick><offset>(0.012,0,0.042)</offset><angle>-10.0</angle><scale>(0.96,1,1.06)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterNeck</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6165, 0.5143)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-16.0</angle></li>
+            <li><tick>30</tick><angle>-24.0</angle></li>
+            <li><tick>60</tick><angle>-13.0</angle></li>
+            <li><tick>90</tick><angle>-25.0</angle></li>
+            <li><tick>120</tick><angle>-13.0</angle></li>
+            <li><tick>150</tick><angle>-25.0</angle></li>
+            <li><tick>180</tick><angle>-16.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterHead</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4955, 0.7723)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-26.0</angle></li>
+            <li><tick>22</tick><angle>-34.0</angle></li>
+            <li><tick>30</tick><angle>-28.0</angle></li>
+            <li><tick>38</tick><angle>-35.0</angle></li>
+            <li><tick>60</tick><angle>-22.0</angle></li>
+            <li><tick>82</tick><angle>-35.0</angle></li>
+            <li><tick>90</tick><angle>-28.0</angle></li>
+            <li><tick>98</tick><angle>-36.0</angle></li>
+            <li><tick>120</tick><angle>-22.0</angle></li>
+            <li><tick>142</tick><angle>-35.0</angle></li>
+            <li><tick>150</tick><angle>-28.0</angle></li>
+            <li><tick>158</tick><angle>-35.0</angle></li>
+            <li><tick>180</tick><angle>-26.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterUpperBeak</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6044, 0.7842)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-26.0</angle></li>
+            <li><tick>30</tick><angle>-34.0</angle></li>
+            <li><tick>60</tick><angle>-22.0</angle></li>
+            <li><tick>90</tick><angle>-35.0</angle></li>
+            <li><tick>120</tick><angle>-22.0</angle></li>
+            <li><tick>150</tick><angle>-35.0</angle></li>
+            <li><tick>180</tick><angle>-26.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterLowerBeak</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6017, 0.7811)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>42.0</angle></li>
+            <li><tick>30</tick><angle>52.0</angle></li>
+            <li><tick>60</tick><angle>36.0</angle></li>
+            <li><tick>90</tick><angle>54.0</angle></li>
+            <li><tick>120</tick><angle>36.0</angle></li>
+            <li><tick>150</tick><angle>54.0</angle></li>
+            <li><tick>180</tick><angle>42.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterSheepHead</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3320, 0.5201)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>8.0</angle></li>
+            <li><tick>30</tick><angle>16.0</angle></li>
+            <li><tick>60</tick><angle>6.0</angle></li>
+            <li><tick>90</tick><angle>17.0</angle></li>
+            <li><tick>120</tick><angle>6.0</angle></li>
+            <li><tick>150</tick><angle>16.0</angle></li>
+            <li><tick>180</tick><angle>8.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterEyeTail</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3320, 0.4800)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-10.0</angle></li>
+            <li><tick>30</tick><angle>18.0</angle></li>
+            <li><tick>60</tick><angle>-14.0</angle></li>
+            <li><tick>90</tick><angle>20.0</angle></li>
+            <li><tick>120</tick><angle>-14.0</angle></li>
+            <li><tick>150</tick><angle>18.0</angle></li>
+            <li><tick>180</tick><angle>-10.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 8. ROOSTER CROW RECOVERY (Spine 4_crying_to_default, 60t = 1.0s) ==================== -->
+  <AnimationDef>
+    <defName>VoidDream_RoosterCrowEnd</defName>
+    <durationTicks>60</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>VoidDream_RoosterBody</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4696, 0.5302)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.012,0,0.042)</offset><angle>-10.0</angle><scale>(0.96,1,1.06)</scale></li>
+            <li><tick>35</tick><offset>(0,0,-0.012)</offset><angle>3.0</angle><scale>(1.02,1,0.98)</scale></li>
+            <li><tick>60</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1.00,1,1.00)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterNeck</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6165, 0.5143)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-16.0</angle></li>
+            <li><tick>35</tick><angle>5.0</angle></li>
+            <li><tick>60</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterHead</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4955, 0.7723)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-26.0</angle></li>
+            <li><tick>35</tick><angle>4.0</angle></li>
+            <li><tick>60</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterUpperBeak</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6044, 0.7842)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-26.0</angle></li>
+            <li><tick>30</tick><angle>-4.0</angle></li>
+            <li><tick>60</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>VoidDream_RoosterLowerBeak</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6017, 0.7811)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>42.0</angle></li>
+            <li><tick>30</tick><angle>6.0</angle></li>
+            <li><tick>60</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+</Defs>

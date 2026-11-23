@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThinkTreeDef>
+    <defName>AllAroundHelperMain</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Subtree"><treeDef>Despawned</treeDef></li>
+        <li Class="ThinkNode_Subtree"><treeDef>Downed</treeDef></li>
+        <li Class="LCAbnormalities.AllAroundHelper.JobGiver_AllAroundHelperHunt" />
+        <li Class="JobGiver_WanderAnywhere">
+          <maxDanger>Deadly</maxDanger>
+          <ticksBetweenWandersRange>40~90</ticksBetweenWandersRange>
+        </li>
+        <li Class="JobGiver_Idle" />
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef>
+    <defName>JudgementBirdMain</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Subtree"><treeDef>Despawned</treeDef></li>
+        <li Class="ThinkNode_Subtree"><treeDef>Downed</treeDef></li>
+        <li Class="LCAbnormalities.JudgementBird.JobGiver_JudgementBirdStalk" />
+        <li Class="JobGiver_WanderAnywhere">
+          <maxDanger>Deadly</maxDanger>
+          <ticksBetweenWandersRange>60~120</ticksBetweenWandersRange>
+        </li>
+        <li Class="JobGiver_Idle" />
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef>
+    <defName>BigBirdMain</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Subtree"><treeDef>Despawned</treeDef></li>
+        <li Class="ThinkNode_Subtree"><treeDef>Downed</treeDef></li>
+        <li Class="LCAbnormalities.BigBird.JobGiver_BigBirdStalk" />
+        <li Class="JobGiver_WanderAnywhere">
+          <maxDanger>Deadly</maxDanger>
+          <ticksBetweenWandersRange>60~140</ticksBetweenWandersRange>
+        </li>
+        <li Class="JobGiver_Idle" />
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef>
+    <defName>LittleRedMain</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Subtree"><treeDef>Despawned</treeDef></li>
+        <li Class="ThinkNode_Subtree"><treeDef>Downed</treeDef></li>
+        <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.JobGiver_LittleRedCombat" />
+        <li Class="JobGiver_WanderAnywhere">
+          <maxDanger>Deadly</maxDanger>
+          <ticksBetweenWandersRange>45~95</ticksBetweenWandersRange>
+        </li>
+        <li Class="JobGiver_Idle" />
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef>
+    <defName>SchadenfreudeMain</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Subtree"><treeDef>Despawned</treeDef></li>
+        <li Class="ThinkNode_Subtree"><treeDef>Downed</treeDef></li>
+        <li Class="LCAbnormalities.Schadenfreude.JobGiver_SchadenfreudeHunt" />
+        <li Class="JobGiver_Idle" />
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+</Defs>

@@ -27,9 +27,9 @@
         <ai_AvoidFriendlyFireRadius>2.6</ai_AvoidFriendlyFireRadius>
         <warmupTime>1.4</warmupTime>
         <range>25</range>
-        <soundCast>Shot_Rifle_EgoBase</soundCast>
+        <soundCast>LC_ScorchedGirl_Cannon</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>12</muzzleFlashScale>
+        <muzzleFlashScale>14</muzzleFlashScale>
       </li>
     </verbs>
     <tools>
@@ -59,11 +59,13 @@
       <armorPenetrationBase>0.35</armorPenetrationBase>
       <explosionRadius>2.4</explosionRadius>
       <stoppingPower>2.0</stoppingPower>
-      <speed>70</speed>
+      <speed>68</speed>
     </projectile>
     <graphicData>
       <texPath>Things/Projectile/Projectile_FourthMatchFlame</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>(1.35, 1.35)</drawSize>
     </graphicData>
   </ThingDef>
 

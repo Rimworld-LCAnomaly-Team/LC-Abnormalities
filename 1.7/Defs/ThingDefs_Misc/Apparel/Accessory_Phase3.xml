@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_AllAroundHelper</defName>
+    <label>Accessory (Grinder Mk4)</label>
+    <description>A sleek white robotic sensor visor gifted by All-Around Helper, accelerating both work and Abnormality study.</description>
+    <thingCategories><li>LC_Apparel_Accessory_EGO</li></thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/AllAroundHelperAccessory</texPath>
+    </graphicData>
+    <statBases><Beauty>3</Beauty></statBases>
+    <apparel>
+      <layers><li>LC_AccessoryEye</li></layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups><li>FullHead</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/AllAroundHelperAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <WorkSpeedGlobal>0.08</WorkSpeedGlobal>
+      <LC_AbnormalityStudyRate>0.08</LC_AbnormalityStudyRate>
+    </equippedStatOffsets>
+    <tradeTags><li>LC_Apparel_Accessory</li></tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_JudgementBird</defName>
+    <label>Accessory (Justitia)</label>
+    <description>A pale linen blindfold wrapped across the eyes, granting uncanny battle focus, swift footwork, and rapid weapon readiness.</description>
+    <thingCategories><li>LC_Apparel_Accessory_EGO</li></thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/JudgementBirdAccessory</texPath>
+    </graphicData>
+    <statBases><Beauty>6</Beauty></statBases>
+    <apparel>
+      <layers><li>LC_AccessoryEye</li></layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups><li>FullHead</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/JudgementBirdAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <MoveSpeed>0.18</MoveSpeed>
+      <AimingDelayFactor>-0.10</AimingDelayFactor>
+      <MeleeHitChance>0.30</MeleeHitChance>
+    </equippedStatOffsets>
+    <tradeTags><li>LC_Apparel_Accessory</li></tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_BigBird</defName>
+    <label>Accessory (Lamp)</label>
+    <description>A golden-eyed crownlet shimmering with Big Bird's vigil, toughening the wearer while enhancing containment mastery.</description>
+    <thingCategories><li>LC_Apparel_Accessory_EGO</li></thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/BigBirdAccessory</texPath>
+    </graphicData>
+    <statBases><Beauty>5</Beauty></statBases>
+    <apparel>
+      <layers><li>LC_AccessoryHead</li></layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups><li>FullHead</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/BigBirdAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <IncomingDamageFactor>-0.06</IncomingDamageFactor>
+      <WorkSpeedGlobal>0.06</WorkSpeedGlobal>
+      <LC_AbnormalityStudyRate>0.08</LC_AbnormalityStudyRate>
+    </equippedStatOffsets>
+    <tradeTags><li>LC_Apparel_Accessory</li></tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_LittleRedRidingHoodedMercenary</defName>
+    <label>Accessory (Crimson Scar)</label>
+    <description>A tattered scarlet huntress scarf concealing battle scars, boosting endurance, sprint speed, and trigger discipline.</description>
+    <thingCategories><li>LC_Apparel_Accessory_EGO</li></thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/LittleRedRidingHoodedMercenaryAccessory</texPath>
+    </graphicData>
+    <statBases><Beauty>4</Beauty></statBases>
+    <apparel>
+      <layers><li>LC_AccessoryMouth</li></layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups><li>FullHead</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/LittleRedRidingHoodedMercenaryAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <IncomingDamageFactor>-0.05</IncomingDamageFactor>
+      <MoveSpeed>0.14</MoveSpeed>
+      <AimingDelayFactor>-0.08</AimingDelayFactor>
+    </equippedStatOffsets>
+    <tradeTags><li>LC_Apparel_Accessory</li></tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_Schadenfreude</defName>
+    <label>Accessory (Gaze)</label>
+    <description>A sinewy crimson right-hand gauntlet manifested from Schadenfreude, bolstering physical toughness and melee strike force.</description>
+    <thingCategories><li>LC_Apparel_Accessory_EGO</li></thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/SchadenfreudeAccessory</texPath>
+    </graphicData>
+    <statBases><Beauty>2</Beauty></statBases>
+    <apparel>
+      <layers><li>LC_AccessoryGlove</li></layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups><li>FullHead</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/SchadenfreudeAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <IncomingDamageFactor>-0.04</IncomingDamageFactor>
+      <MeleeDamageFactor>0.06</MeleeDamageFactor>
+      <MoveSpeed>0.08</MoveSpeed>
+    </equippedStatOffsets>
+    <tradeTags><li>LC_Apparel_Accessory</li></tradeTags>
+  </ThingDef>
+
+</Defs>

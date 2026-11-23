@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>Schadenfreude</defName>
+    <label>Schadenfreude</label>
+    <description>Schadenfreude (O-05-76) is an iron keyhole box that thrives on your gaze.\nNever watch it on-screen while working; if it breaches, pan the camera away to freeze it motionless inside its armored shell.</description>
+    <uiIconPath>UI/CodexEntries/Schadenfreude</uiIconPath>
+    <category>HE</category>
+    <orderInCategory>880</orderInCategory>
+    <linkedThings>
+      <li>Schadenfreude</li>
+      <li>SchadenfreudeEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

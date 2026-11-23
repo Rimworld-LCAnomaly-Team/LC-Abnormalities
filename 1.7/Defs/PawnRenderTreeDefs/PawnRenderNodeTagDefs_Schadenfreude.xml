@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderNodeTagDef><defName>Schadenfreude_Root</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Schadenfreude_BodyBox</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Schadenfreude_BodyMeat</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Schadenfreude_BodyVeins</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Schadenfreude_Eye</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Schadenfreude_KeyholeMask</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Schadenfreude_LensBig</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Schadenfreude_LensSmall</defName></PawnRenderNodeTagDef>
+
+  <PawnRenderNodeTagDef><defName>Schadenfreude_BackLegLeft_Upper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Schadenfreude_BackLegLeft_Lower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Schadenfreude_BackLegRight_Upper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Schadenfreude_BackLegRight_Lower</defName></PawnRenderNodeTagDef>
+
+  <PawnRenderNodeTagDef><defName>Schadenfreude_FrontLegLeft_Upper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Schadenfreude_FrontLegLeft_Lower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Schadenfreude_FrontLegRight_Upper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Schadenfreude_FrontLegRight_Lower</defName></PawnRenderNodeTagDef>
+
+  <PawnRenderNodeTagDef><defName>Schadenfreude_SawArmLeft</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Schadenfreude_SawBladeLeft</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Schadenfreude_SawArmRight</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Schadenfreude_SawBladeRight</defName></PawnRenderNodeTagDef>
+
+</Defs>

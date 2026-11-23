@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- T-05-41 All-Around Helper now uses its dedicated articulated rig in AllAroundHelperRenderTreeDefs.xml -->
+
+  <!-- JudgementBird uses its dedicated articulated Spine render tree in JudgementBirdRenderTreeDefs.xml -->
+
+  <!-- O-02-40 Big Bird now uses its dedicated articulated rig in BigBirdRenderTreeDefs.xml -->
+
+  <!-- F-01-57 Little Red Riding Hooded Mercenary now uses its dedicated articulated Spine rig in LittleRedRenderTreeDefs.xml -->
+
+  <!-- O-05-76 Schadenfreude now uses its dedicated articulated Spine rig in SchadenfreudeRenderTreeDefs.xml -->
+
+</Defs>

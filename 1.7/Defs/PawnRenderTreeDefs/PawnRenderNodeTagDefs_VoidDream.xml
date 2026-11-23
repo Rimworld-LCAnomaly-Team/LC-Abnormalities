@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- T-02-99 Void Dream articulated multi-part render node tags (Sheep + TransformCloud + Rooster) -->
+  <PawnRenderNodeTagDef><defName>VoidDream_SheepRoot</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_SheepShadow</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_SheepBody</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_SheepFeet</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_SheepTail</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_SheepEyesWhite</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_SheepEyePupils</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_SheepHead</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_SheepEar</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_SheepZ1</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_SheepZ2</defName></PawnRenderNodeTagDef>
+
+  <PawnRenderNodeTagDef><defName>VoidDream_TransformCloud</defName></PawnRenderNodeTagDef>
+
+  <PawnRenderNodeTagDef><defName>VoidDream_RoosterRoot</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_RoosterShadow</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_RoosterBackThigh</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_RoosterBackShin</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_RoosterFrontThigh</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_RoosterFrontShin</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_RoosterBody</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_RoosterBodyPupils</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_RoosterSheepHead</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_RoosterSheepHorn</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_RoosterEyeTail</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_RoosterNeck</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_RoosterNeckPupils</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_RoosterHead</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_RoosterRealEye</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_RoosterUpperBeak</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>VoidDream_RoosterLowerBeak</defName></PawnRenderNodeTagDef>
+
+</Defs>

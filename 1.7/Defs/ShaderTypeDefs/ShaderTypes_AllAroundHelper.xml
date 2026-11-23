@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderTypeDef>
+    <defName>LC_HelperChargeTelegraph</defName>
+    <shaderPath>Map/LC_HelperChargeTelegraph</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_HelperSawVortex</defName>
+    <shaderPath>Map/LC_HelperSawVortex</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_GrinderSawSlash</defName>
+    <shaderPath>Map/LC_GrinderSawSlash</shaderPath>
+  </ShaderTypeDef>
+
+</Defs>

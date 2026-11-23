@@ -151,4 +151,29 @@
     </modExtensions>
   </LCAnomalyCore.Defs.PawnKindDef_AbnormalityEntity>
 
+  <LCAnomalyCore.Defs.PawnKindDef_AbnormalityEntity ParentName="LC_ToolEntityKindBase">
+    <defName>BackwardClock</defName>
+    <label>Backward Clock</label>
+    <race>BackwardClock</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Building/BackwardClock/BackwardClock</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2.0</drawSize>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>UI/CodexEntries/BackwardClock_MenuIcon</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>1.6</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>WAW</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.PawnKindDef_AbnormalityEntity>
+
 </Defs>

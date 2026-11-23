@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>JudgementBird</defName>
+    <label>Judgement Bird</label>
+    <description>Judgement Bird (O-02-62) weighs every soul on its crooked brass scale, delivering Pale percentage damage that ignores conventional armor.\nOne of the Three Birds of the Black Forest; its ALEPH-grade E.G.O. 'Justitia' provides the colony's first Pale weapon and balanced Pale armor.</description>
+    <uiIconPath>UI/CodexEntries/JudgementBird</uiIconPath>
+    <category>WAW</category>
+    <orderInCategory>910</orderInCategory>
+    <linkedThings>
+      <li>JudgementBird</li>
+      <li>JudgementBirdEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

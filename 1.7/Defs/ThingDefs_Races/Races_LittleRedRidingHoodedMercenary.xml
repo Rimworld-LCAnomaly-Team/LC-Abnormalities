@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_EntityBase">
+    <defName>LittleRedRidingHoodedMercenary</defName>
+    <label>Little Red Riding Hooded Mercenary</label>
+    <description>A scarred, crimson-cloaked monster hunter wielding a hand cannon and hooked sickle (F-01-57).\n\nWhile contained, you may pay 15 PE-Boxes on her holding platform to hire her as an allied mercenary to hunt any hostile target on the map. However, Bad work or any other Abnormality escaping drops her Qliphoth Counter (max 3), unleashing her in a hostile rampage at 0.</description>
+    <uiIconPath>UI/CodexEntries/LittleRedRidingHoodedMercenary</uiIconPath>
+    <thingClass>LCAbnormalities.LittleRedRidingHoodedMercenary.LC_LittleRedPawn</thingClass>
+    <statBases>
+      <MoveSpeed>5.0</MoveSpeed>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-200</ComfyTemperatureMin>
+      <ComfyTemperatureMax>150</ComfyTemperatureMax>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <LC_MinimumContainmentStrength>80</LC_MinimumContainmentStrength>
+      <StaggerDurationFactor>0.15</StaggerDurationFactor>
+      <ToxicResistance>1</ToxicResistance>
+    </statBases>
+    <tools>
+      <li>
+        <label>crimson sickle</label>
+        <capacities><li>Cut</li></capacities>
+        <power>20</power>
+        <cooldownTime>1.3</cooldownTime>
+      </li>
+    </tools>
+    <race>
+      <body>OneSin</body>
+      <baseBodySize>1.35</baseBodySize>
+      <baseHealthScale>7.5</baseHealthScale>
+      <intelligence>ToolUser</intelligence>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <fleshType>LC_AbnormalityOrganic</fleshType>
+      <foodType>None</foodType>
+      <hasCorpse>false</hasCorpse>
+      <lifeExpectancy>1000</lifeExpectancy>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <disableIgniteVerb>true</disableIgniteVerb>
+      <trainability>None</trainability>
+      <renderTree>LittleRedRidingHoodedMercenary</renderTree>
+      <thinkTreeMain>LittleRedMain</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+      <lifeStageAges>
+        <li>
+          <def>LC_EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.CompProperties_LittleRedRidingHoodedMercenary">
+        <qliphothCountMax>3</qliphothCountMax>
+        <studySucessRateBase>0.0</studySucessRateBase>
+        <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>true</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
+        <dyingFxDef>DyingLittleRedRidingHoodedMercenary</dyingFxDef>
+        <workDamageDef>LC_RedDamage</workDamageDef>
+        <workDamageRange>4~6</workDamageRange>
+        <escapedLetterLabelKey>LC_LittleRed_EscapedLabel</escapedLetterLabelKey>
+        <escapedLetterTextKey>LC_LittleRed_EscapedText</escapedLetterTextKey>
+        <killedLetterLabelKey>LC_LittleRed_SuppressedLabel</killedLetterLabelKey>
+        <killedLetterTextKey>LC_LittleRed_SuppressedText</killedLetterTextKey>
+        <hireCostPeBox>15</hireCostPeBox>
+        <instinctProbs>
+          <li>0.0</li><li>0.0</li><li>0.45</li><li>0.45</li><li>0.50</li>
+        </instinctProbs>
+        <insightProbs>
+          <li>0.45</li><li>0.50</li><li>0.50</li><li>0.55</li><li>0.55</li>
+        </insightProbs>
+        <attachmentProbs>
+          <li>0.0</li><li>0.0</li><li>0.0</li><li>0.0</li><li>0.0</li>
+        </attachmentProbs>
+        <repressionProbs>
+          <li>0.30</li><li>0.30</li><li>0.30</li><li>0.30</li><li>0.30</li>
+        </repressionProbs>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <lookForTargetOnEscape>true</lookForTargetOnEscape>
+        <hasAnimation>true</hasAnimation>
+      </li>
+      <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
+        <frequencyTicks>60000</frequencyTicks>
+        <studyTimesPeriod>1</studyTimesPeriod>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <speedOffsetsByProgress>
+          <li>0</li><li>0.03</li><li>0.06</li><li>0.09</li><li>0.12</li>
+        </speedOffsetsByProgress>
+        <successOffsetsByProgress>
+          <li>0</li><li>0.03</li><li>0.06</li><li>0.09</li><li>0.12</li>
+        </successOffsetsByProgress>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_PeBoxProduce">
+        <peBoxDef>EnkephalinBox</peBoxDef>
+        <amountProdueRangeNormal>9~16</amountProdueRangeNormal>
+        <amountProdueMax>20</amountProdueMax>
+        <boxTexOffsetZ>0.0668</boxTexOffsetZ>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
+        <accessoryDef>Accessory_LittleRedRidingHoodedMercenary</accessoryDef>
+        <accessoryChance>0.03</accessoryChance>
+        <unlockLevel>2</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
+        <weaponExtracted>EgoWeapon_LittleRedRidingHoodedMercenary</weaponExtracted>
+        <weaponIconPath>UI/Commands/ExtractEGO_LittleRedRidingHoodedMercenary_Weapon</weaponIconPath>
+        <amountMaxWeapon>1</amountMaxWeapon>
+        <weaponExtractedNeed>70</weaponExtractedNeed>
+        <armorExtracted>Apparel_LittleRedRidingHoodedMercenarySuit</armorExtracted>
+        <armorIconPath>UI/Commands/ExtractEGO_LittleRedRidingHoodedMercenary_Armor</armorIconPath>
+        <amountMaxArmor>1</amountMaxArmor>
+        <armorExtractedNeed>60</armorExtractedNeed>
+        <unlockLevel>3</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>4</threshold>
+            <label>Observation Level: I</label>
+            <text>Never choose Attachment work (0% success rate). Insight work by skilled employees—or Instinct by level III+ veterans—reliably satisfies her.</text>
+          </li>
+          <li>
+            <threshold>9</threshold>
+            <label>Observation Level: II</label>
+            <text>Any Bad result or breach of another Abnormality on the map lowers her Qliphoth Counter (max 3).\nUnlocks the E.G.O. Gift 'Crimson Scar'.</text>
+          </li>
+          <li>
+            <threshold>15</threshold>
+            <label>Observation Level: III</label>
+            <text>Pay 15 PE-Boxes on her holding platform to commission a mercenary hunt against any hostile target. You may recall her manually at any time, or let her return automatically once threats are cleared.</text>
+          </li>
+          <li>
+            <threshold>20</threshold>
+            <label>Observation Level: IV</label>
+            <text>Armed with both crimson scattergun and hooked blade, her WAW E.G.O. 'Crimson Scar' grows deadlier as its wielder's health drops (up to +50% damage).</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>WAW</abnormalityCategoryDef>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>0.9</redResistance>
+        <whiteResistance>0.6</whiteResistance>
+        <blackResistance>0.8</blackResistance>
+        <paleResistance>1.2</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

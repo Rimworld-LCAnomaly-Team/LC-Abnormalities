@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderNodeTagDef><defName>BigBird_Root</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>BigBird_Body</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>BigBird_EyePupils</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>BigBird_Eyelids</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>BigBird_MouthInterior</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>BigBird_UpperBeak</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>BigBird_LowerBeak</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>BigBird_BackThigh</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>BigBird_BackShinFoot</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>BigBird_FrontThigh</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>BigBird_FrontShinFoot</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>BigBird_UpperArm</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>BigBird_ForearmHand</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>BigBird_Lantern</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>BigBird_LanternFlame</defName></PawnRenderNodeTagDef>
+
+</Defs>

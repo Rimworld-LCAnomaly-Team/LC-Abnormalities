@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- 1. Contained / Idle (120 ticks = 2.00s, MatchGirl_Normal_Baked) -->
+  <AnimationDef>
+    <defName>ScorchedGirl_Idle</defName>
+    <durationTicks>120</durationTicks>
+    <startOnRandomTick>true</startOnRandomTick>
+    <playWhenDowned>true</playWhenDowned>
+    <keyframeParts>
+      <li>
+        <key>ScorchedGirl_Torso</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.488, 0.455)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+            <li><tick>52</tick><offset>(0,0,-0.022)</offset><angle>-1.4</angle><scale>(1.015,1,0.985)</scale></li>
+            <li><tick>120</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>ScorchedGirl_Head</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.532, 0.612)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+            <li><tick>42</tick><offset>(0,0,-0.038)</offset><angle>3.2</angle></li>
+            <li><tick>88</tick><offset>(0,0,-0.015)</offset><angle>1.2</angle></li>
+            <li><tick>120</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>ScorchedGirl_TailB</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.652, 0.642)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>55</tick><angle>-4.5</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>ScorchedGirl_TailF</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.490, 0.616)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>55</tick><angle>4.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- 2. Contained Work / Low Qliphoth Agitated Trembling (72 ticks = 1.20s) -->
+  <AnimationDef>
+    <defName>ScorchedGirl_Work</defName>
+    <durationTicks>72</durationTicks>
+    <playWhenDowned>true</playWhenDowned>
+    <keyframeParts>
+      <li>
+        <key>ScorchedGirl_Torso</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.488, 0.455)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+            <li><tick>18</tick><offset>(-0.008,0,-0.025)</offset><angle>-2.5</angle><scale>(1.028,1,0.975)</scale></li>
+            <li><tick>36</tick><offset>(0.008,0,0.006)</offset><angle>2.0</angle><scale>(0.985,1,1.02)</scale></li>
+            <li><tick>54</tick><offset>(-0.006,0,-0.020)</offset><angle>-2.0</angle><scale>(1.022,1,0.98)</scale></li>
+            <li><tick>72</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>ScorchedGirl_Head</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.532, 0.612)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+            <li><tick>18</tick><offset>(-0.010,0,-0.042)</offset><angle>5.5</angle></li>
+            <li><tick>36</tick><offset>(0.008,0,-0.008)</offset><angle>-2.5</angle></li>
+            <li><tick>54</tick><offset>(-0.008,0,-0.038)</offset><angle>5.0</angle></li>
+            <li><tick>72</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>ScorchedGirl_TailB</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.652, 0.642)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>24</tick><angle>-8</angle></li>
+            <li><tick>48</tick><angle>5</angle></li>
+            <li><tick>72</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>ScorchedGirl_TailF</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.490, 0.616)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>24</tick><angle>8</angle></li>
+            <li><tick>48</tick><angle>-5</angle></li>
+            <li><tick>72</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- 3. Breached Walk / Charge (60 ticks = 1.00s, MatchGirl_Walk_Baked) -->
+  <AnimationDef>
+    <defName>ScorchedGirl_Walk</defName>
+    <durationTicks>60</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>ScorchedGirl_Root</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0.02)</offset></li>
+            <li><tick>15</tick><offset>(0,0,-0.035)</offset></li>
+            <li><tick>30</tick><offset>(0,0,0.025)</offset></li>
+            <li><tick>45</tick><offset>(0,0,-0.035)</offset></li>
+            <li><tick>60</tick><offset>(0,0,0.02)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>ScorchedGirl_Torso</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.488, 0.455)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>4.0</angle></li>
+            <li><tick>15</tick><offset>(0.01,0,-0.045)</offset><angle>8.5</angle></li>
+            <li><tick>30</tick><offset>(0,0,0)</offset><angle>3.5</angle></li>
+            <li><tick>45</tick><offset>(0.01,0,-0.045)</offset><angle>8.5</angle></li>
+            <li><tick>60</tick><offset>(0,0,0)</offset><angle>4.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>ScorchedGirl_Head</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.532, 0.612)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>2.0</angle></li>
+            <li><tick>18</tick><offset>(0.025,0,-0.075)</offset><angle>8.5</angle></li>
+            <li><tick>34</tick><offset>(0.01,0,-0.02)</offset><angle>1.5</angle></li>
+            <li><tick>48</tick><offset>(0.025,0,-0.075)</offset><angle>8.5</angle></li>
+            <li><tick>60</tick><offset>(0,0,0)</offset><angle>2.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>ScorchedGirl_TailB</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.652, 0.642)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-4</angle></li>
+            <li><tick>15</tick><angle>10</angle></li>
+            <li><tick>30</tick><angle>-6</angle></li>
+            <li><tick>45</tick><angle>10</angle></li>
+            <li><tick>60</tick><angle>-4</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>ScorchedGirl_TailF</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.490, 0.616)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>6</angle></li>
+            <li><tick>15</tick><angle>-10</angle></li>
+            <li><tick>30</tick><angle>6</angle></li>
+            <li><tick>45</tick><angle>-10</angle></li>
+            <li><tick>60</tick><angle>6</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Front Leg (bone_1 / bone_2 stride) -->
+      <li>
+        <key>ScorchedGirl_LegFUpper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.456, 0.312)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-24</angle></li>
+            <li><tick>15</tick><angle>-4</angle></li>
+            <li><tick>30</tick><angle>26</angle></li>
+            <li><tick>45</tick><angle>6</angle></li>
+            <li><tick>60</tick><angle>-24</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>ScorchedGirl_LegFLower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.458, 0.220)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>6</angle></li>
+            <li><tick>15</tick><angle>2</angle></li>
+            <li><tick>30</tick><angle>-28</angle></li>
+            <li><tick>45</tick><angle>-14</angle></li>
+            <li><tick>60</tick><angle>6</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Back Leg (bone_4 / bone_5 counter-stride) -->
+      <li>
+        <key>ScorchedGirl_LegBUpper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.547, 0.312)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>26</angle></li>
+            <li><tick>15</tick><angle>6</angle></li>
+            <li><tick>30</tick><angle>-24</angle></li>
+            <li><tick>45</tick><angle>-4</angle></li>
+            <li><tick>60</tick><angle>26</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>ScorchedGirl_LegBLower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.555, 0.220)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-28</angle></li>
+            <li><tick>15</tick><angle>-14</angle></li>
+            <li><tick>30</tick><angle>6</angle></li>
+            <li><tick>45</tick><angle>2</angle></li>
+            <li><tick>60</tick><angle>-28</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- 4. Detonation Priming / Attack (90 ticks = 1.50s, MatchGirl_Attack_Baked) -->
+  <AnimationDef>
+    <defName>ScorchedGirl_Attack</defName>
+    <durationTicks>90</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>ScorchedGirl_Root</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><scale>(1,1,1)</scale></li>
+            <li><tick>25</tick><offset>(-0.015,0,-0.045)</offset><scale>(1.04,1,0.95)</scale></li>
+            <li><tick>42</tick><offset>(0.015,0,-0.055)</offset><scale>(1.06,1,0.94)</scale></li>
+            <li><tick>52</tick><offset>(-0.020,0,-0.030)</offset><scale>(1.09,1,1.04)</scale></li>
+            <li><tick>65</tick><offset>(0.022,0,-0.020)</offset><scale>(1.12,1,1.06)</scale></li>
+            <li><tick>78</tick><offset>(-0.025,0,0.010)</offset><scale>(1.18,1,1.12)</scale></li>
+            <li><tick>90</tick><offset>(0,0,0.025)</offset><scale>(1.26,1,1.20)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>ScorchedGirl_Torso</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.488, 0.455)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+            <li><tick>30</tick><offset>(0,0,-0.045)</offset><angle>-4.5</angle></li>
+            <li><tick>46</tick><offset>(0.015,0,-0.055)</offset><angle>4.5</angle></li>
+            <li><tick>60</tick><offset>(-0.018,0,-0.035)</offset><angle>-5.5</angle></li>
+            <li><tick>75</tick><offset>(0.018,0,-0.015)</offset><angle>5.5</angle></li>
+            <li><tick>90</tick><offset>(0,0,0.015)</offset><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>ScorchedGirl_Head</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.532, 0.612)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle></li>
+            <li><tick>32</tick><offset>(0,0,-0.065)</offset><angle>10</angle></li>
+            <li><tick>46</tick><offset>(0.01,0,0.015)</offset><angle>-8</angle></li>
+            <li><tick>60</tick><offset>(-0.018,0,0.020)</offset><angle>-12</angle></li>
+            <li><tick>75</tick><offset>(0.018,0,0.025)</offset><angle>-6</angle></li>
+            <li><tick>90</tick><offset>(0,0,0.035)</offset><angle>-14</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>ScorchedGirl_LegFUpper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.456, 0.312)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>35</tick><angle>-10</angle></li>
+            <li><tick>70</tick><angle>-6</angle></li>
+            <li><tick>90</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>ScorchedGirl_LegBUpper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.547, 0.312)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>35</tick><angle>10</angle></li>
+            <li><tick>70</tick><angle>6</angle></li>
+            <li><tick>90</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+</Defs>

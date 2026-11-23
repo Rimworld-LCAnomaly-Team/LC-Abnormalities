@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderTreeDef>
+    <defName>Schadenfreude</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+
+        <!-- O-05-76 Schadenfreude articulated Spine rig (aligned with LookAtMe.txt & LookAtMe.png) -->
+        <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+          <debugLabel>SchadenfreudeRoot</debugLabel>
+          <tagDef>Schadenfreude_Root</tagDef>
+          <role>Root</role>
+          <useGraphic>false</useGraphic>
+          <activeScale>2.55</activeScale>
+          <boxScale>2.20</boxScale>
+          <containedScale>2.25</containedScale>
+          <containedOffset>(0, 0, -0.05)</containedOffset>
+          <children>
+
+            <!-- Iron Box Chassis (parent of lenses, keyhole eye, meat, veins, 4 drill legs & twin chainsaws) -->
+            <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+              <debugLabel>BodyBox</debugLabel>
+              <tagDef>Schadenfreude_BodyBox</tagDef>
+              <role>BodyBox</role>
+              <texPath>Things/Pawn/Schadenfreude/Parts/BodyBox</texPath>
+              <baseLayer>9.0</baseLayer>
+              <children>
+
+                <!-- Twin Extending Chainsaws (behind iron box; emerge during SawWindup / SawSpin / SawRetract) -->
+                <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+                  <debugLabel>SawArmLeft</debugLabel>
+                  <tagDef>Schadenfreude_SawArmLeft</tagDef>
+                  <role>SawArmLeft</role>
+                  <texPath>Things/Pawn/Schadenfreude/Parts/SawArmLeft</texPath>
+                  <baseLayer>6.2</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+                      <debugLabel>SawBladeLeft</debugLabel>
+                      <tagDef>Schadenfreude_SawBladeLeft</tagDef>
+                      <role>SawBladeLeft</role>
+                      <texPath>Things/Pawn/Schadenfreude/Parts/SawBladeLeft</texPath>
+                      <baseLayer>6.4</baseLayer>
+                    </li>
+                  </children>
+                </li>
+
+                <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+                  <debugLabel>SawArmRight</debugLabel>
+                  <tagDef>Schadenfreude_SawArmRight</tagDef>
+                  <role>SawArmRight</role>
+                  <texPath>Things/Pawn/Schadenfreude/Parts/SawArmRight</texPath>
+                  <baseLayer>6.3</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+                      <debugLabel>SawBladeRight</debugLabel>
+                      <tagDef>Schadenfreude_SawBladeRight</tagDef>
+                      <role>SawBladeRight</role>
+                      <texPath>Things/Pawn/Schadenfreude/Parts/SawBladeRight</texPath>
+                      <baseLayer>6.5</baseLayer>
+                    </li>
+                  </children>
+                </li>
+
+                <!-- Background Pair of Spider Drill Legs (visible when breached & watched) -->
+                <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+                  <debugLabel>BackLegLeftUpper</debugLabel>
+                  <tagDef>Schadenfreude_BackLegLeft_Upper</tagDef>
+                  <role>BackLegLeftUpper</role>
+                  <texPath>Things/Pawn/Schadenfreude/Parts/BackLegLeft_Upper</texPath>
+                  <baseLayer>7.0</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+                      <debugLabel>BackLegLeftLower</debugLabel>
+                      <tagDef>Schadenfreude_BackLegLeft_Lower</tagDef>
+                      <role>BackLegLeftLower</role>
+                      <texPath>Things/Pawn/Schadenfreude/Parts/BackLegLeft_Lower</texPath>
+                      <baseLayer>7.2</baseLayer>
+                    </li>
+                  </children>
+                </li>
+
+                <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+                  <debugLabel>BackLegRightUpper</debugLabel>
+                  <tagDef>Schadenfreude_BackLegRight_Upper</tagDef>
+                  <role>BackLegRightUpper</role>
+                  <texPath>Things/Pawn/Schadenfreude/Parts/BackLegRight_Upper</texPath>
+                  <baseLayer>7.1</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+                      <debugLabel>BackLegRightLower</debugLabel>
+                      <tagDef>Schadenfreude_BackLegRight_Lower</tagDef>
+                      <role>BackLegRightLower</role>
+                      <texPath>Things/Pawn/Schadenfreude/Parts/BackLegRight_Lower</texPath>
+                      <baseLayer>7.3</baseLayer>
+                    </li>
+                  </children>
+                </li>
+
+                <!-- Raw Flesh Erupting Beneath Iron Box (visible when breached & watched) -->
+                <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+                  <debugLabel>BodyMeat</debugLabel>
+                  <tagDef>Schadenfreude_BodyMeat</tagDef>
+                  <role>BodyMeat</role>
+                  <texPath>Things/Pawn/Schadenfreude/Parts/BodyMeat</texPath>
+                  <baseLayer>8.2</baseLayer>
+                </li>
+
+                <!-- Pulsing Crimson Veins Crawling Up Lower Box (visible when breached & watched) -->
+                <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+                  <debugLabel>BodyVeins</debugLabel>
+                  <tagDef>Schadenfreude_BodyVeins</tagDef>
+                  <role>BodyVeins</role>
+                  <texPath>Things/Pawn/Schadenfreude/Parts/BodyVeins</texPath>
+                  <useTransparentShader>true</useTransparentShader>
+                  <baseLayer>9.3</baseLayer>
+                </li>
+
+                <!-- Photorealistic Peering Keyhole Eye (switches Open / Closed Blink / Bloodshot Alert) -->
+                <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+                  <debugLabel>Eye</debugLabel>
+                  <tagDef>Schadenfreude_Eye</tagDef>
+                  <role>Eye</role>
+                  <texPath>Things/Pawn/Schadenfreude/Parts/Eye_Open</texPath>
+                  <alternateTexPaths>
+                    <li>Things/Pawn/Schadenfreude/Parts/Eye_Closed</li>
+                    <li>Things/Pawn/Schadenfreude/Parts/Eye_Alert</li>
+                  </alternateTexPaths>
+                  <useTransparentShader>true</useTransparentShader>
+                  <baseLayer>9.6</baseLayer>
+                </li>
+
+                <!-- Punched-Out Keyhole Collar Mask (clips glancing eye strictly inside the keyhole) -->
+                <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+                  <debugLabel>KeyholeMask</debugLabel>
+                  <tagDef>Schadenfreude_KeyholeMask</tagDef>
+                  <role>KeyholeMask</role>
+                  <texPath>Things/Pawn/Schadenfreude/Parts/KeyholeMask</texPath>
+                  <useTransparentShader>true</useTransparentShader>
+                  <baseLayer>9.8</baseLayer>
+                </li>
+
+                <!-- Antique Camera Lenses Mounted on Chassis -->
+                <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+                  <debugLabel>LensBig</debugLabel>
+                  <tagDef>Schadenfreude_LensBig</tagDef>
+                  <role>LensBig</role>
+                  <texPath>Things/Pawn/Schadenfreude/Parts/LensBig</texPath>
+                  <useTransparentShader>true</useTransparentShader>
+                  <baseLayer>10.2</baseLayer>
+                </li>
+
+                <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+                  <debugLabel>LensSmall</debugLabel>
+                  <tagDef>Schadenfreude_LensSmall</tagDef>
+                  <role>LensSmall</role>
+                  <texPath>Things/Pawn/Schadenfreude/Parts/LensSmall</texPath>
+                  <useTransparentShader>true</useTransparentShader>
+                  <baseLayer>10.4</baseLayer>
+                </li>
+
+                <!-- Foreground Pair of Spider Drill Legs (visible when breached & watched) -->
+                <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+                  <debugLabel>FrontLegLeftUpper</debugLabel>
+                  <tagDef>Schadenfreude_FrontLegLeft_Upper</tagDef>
+                  <role>FrontLegLeftUpper</role>
+                  <texPath>Things/Pawn/Schadenfreude/Parts/FrontLegLeft_Upper</texPath>
+                  <baseLayer>10.8</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+                      <debugLabel>FrontLegLeftLower</debugLabel>
+                      <tagDef>Schadenfreude_FrontLegLeft_Lower</tagDef>
+                      <role>FrontLegLeftLower</role>
+                      <texPath>Things/Pawn/Schadenfreude/Parts/FrontLegLeft_Lower</texPath>
+                      <baseLayer>11.0</baseLayer>
+                    </li>
+                  </children>
+                </li>
+
+                <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+                  <debugLabel>FrontLegRightUpper</debugLabel>
+                  <tagDef>Schadenfreude_FrontLegRight_Upper</tagDef>
+                  <role>FrontLegRightUpper</role>
+                  <texPath>Things/Pawn/Schadenfreude/Parts/FrontLegRight_Upper</texPath>
+                  <baseLayer>10.9</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.Schadenfreude.PawnRenderNodeProperties_SchadenfreudePart">
+                      <debugLabel>FrontLegRightLower</debugLabel>
+                      <tagDef>Schadenfreude_FrontLegRight_Lower</tagDef>
+                      <role>FrontLegRightLower</role>
+                      <texPath>Things/Pawn/Schadenfreude/Parts/FrontLegRight_Lower</texPath>
+                      <baseLayer>11.1</baseLayer>
+                    </li>
+                  </children>
+                </li>
+
+              </children>
+            </li>
+
+          </children>
+        </li>
+
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

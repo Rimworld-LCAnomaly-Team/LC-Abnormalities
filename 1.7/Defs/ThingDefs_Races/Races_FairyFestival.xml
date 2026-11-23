@@ -6,7 +6,7 @@
     <label>Fairy Festival</label>
     <description>A gathering of glowing, gossamer-winged fairies (F-04-83) that tirelessly dote upon the staff assigned to them, tending bruises and calming weary minds.\n\nYet their care is a jealous feast: whoever accepts their blessing and then dares tend to any other Abnormality is mercilessly torn apart and devoured.</description>
     <uiIconPath>UI/CodexEntries/FairyFestival</uiIconPath>
-    <thingClass>LCAbnormalities.Shared.LC_StandardEntityPawn</thingClass>
+    <thingClass>LCAbnormalities.FairyFestival.LC_FairyFestivalPawn</thingClass>
     <statBases>
       <MoveSpeed>0</MoveSpeed>
       <Flammability>0</Flammability>
@@ -66,7 +66,7 @@
       </li>
       <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
         <lookForTargetOnEscape>false</lookForTargetOnEscape>
-        <hasAnimation>false</hasAnimation>
+        <hasAnimation>true</hasAnimation>
       </li>
       <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
         <frequencyTicks>60000</frequencyTicks>

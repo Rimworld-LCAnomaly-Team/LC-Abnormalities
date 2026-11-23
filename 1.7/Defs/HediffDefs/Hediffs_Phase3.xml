@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>LC_BigBirdEnchanted</defName>
+    <label>Lantern Enchantment</label>
+    <description>Hypnotized by Big Bird's glowing lantern.\nThe victim walks inexorably toward Big Bird's waiting jaws. Select the colonist and use "Snap Out of Trance" to break the spell before it is too late.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.85, 0.25)</defaultLabelColor>
+    <isBad>true</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>0.80</MoveSpeed>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="LCAbnormalities.BigBird.HediffCompProperties_BigBirdEnchanted" />
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>720</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>LC_LampDazed</defName>
+    <label>Lantern Gaze</label>
+    <description>Marked by the hypnotic golden eyes of Lamp: slows movement, lowers accuracy, and increases vulnerability to incoming damage (+25% bonus Black damage from Lamp strikes).</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.96, 0.80, 0.28)</defaultLabelColor>
+    <isBad>true</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>0.65</MoveSpeed>
+          <IncomingDamageFactor>1.15</IncomingDamageFactor>
+        </statFactors>
+        <statOffsets>
+          <MeleeHitChance>-0.25</MeleeHitChance>
+          <ShootingAccuracyPawn>-0.25</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>300</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>LC_GazeRending</defName>
+    <label>Gaze Rending</label>
+    <description>Lacerated by the spinning crimson buzzsaw of Gaze, increasing incoming damage taken as jagged wounds stack.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.90, 0.25, 0.28)</defaultLabelColor>
+    <isBad>true</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <statFactors>
+          <IncomingDamageFactor>1.12</IncomingDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>0.50</minSeverity>
+        <statFactors>
+          <IncomingDamageFactor>1.25</IncomingDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>0.90</minSeverity>
+        <statFactors>
+          <IncomingDamageFactor>1.40</IncomingDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>240</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
+  </HediffDef>
+
+</Defs>

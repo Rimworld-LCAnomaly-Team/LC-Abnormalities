@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_FairyCareSwarmFX</defName>
+    <label>Fairy's Care orbiting swarm</label>
+    <thingClass>LCAbnormalities.FairyFestival.Thing_FairyCareSwarm</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_FairyBlessingBurstFX</defName>
+    <label>Fairy Festival blessing pulse</label>
+    <thingClass>LCAbnormalities.FairyFestival.Thing_FairyBlessingBurst</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_FairyDevourExecutionFX</defName>
+    <label>Fairy Festival devouring swarm</label>
+    <thingClass>LCAbnormalities.FairyFestival.Thing_FairyDevourExecution</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_WingbeatSlashFX</defName>
+    <label>Wingbeat gossamer cleave</label>
+    <thingClass>LCAbnormalities.FairyFestival.Thing_WingbeatSlash</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_WingbeatLifestealFX</defName>
+    <label>Wingbeat vitality siphon</label>
+    <thingClass>LCAbnormalities.FairyFestival.Thing_WingbeatLifesteal</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+</Defs>

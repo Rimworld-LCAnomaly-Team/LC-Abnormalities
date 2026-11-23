@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_EntityBase">
+    <defName>AllAroundHelper</defName>
+    <label>All-Around Helper</label>
+    <description>A sleek white spherical housekeeping droid (T-05-41) originally marketed to "clean everything effortlessly".\n\nNormal work has a 50% chance to drop its Qliphoth Counter, and Bad work always drops it. Upon reaching 0, its chassis snaps open to reveal spinning buzzsaws and launches blinding charge dashes that shred anyone in its path.</description>
+    <uiIconPath>UI/CodexEntries/AllAroundHelper</uiIconPath>
+    <thingClass>LCAbnormalities.AllAroundHelper.LC_AllAroundHelperPawn</thingClass>
+    <statBases>
+      <MoveSpeed>4.4</MoveSpeed>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-200</ComfyTemperatureMin>
+      <ComfyTemperatureMax>150</ComfyTemperatureMax>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <LC_MinimumContainmentStrength>50</LC_MinimumContainmentStrength>
+      <StaggerDurationFactor>0.2</StaggerDurationFactor>
+      <ToxicResistance>1</ToxicResistance>
+    </statBases>
+    <tools>
+      <li>
+        <label>rotary sawblade</label>
+        <capacities><li>Cut</li></capacities>
+        <power>16</power>
+        <cooldownTime>1.35</cooldownTime>
+      </li>
+    </tools>
+    <race>
+      <body>OneSin</body>
+      <baseBodySize>1.3</baseBodySize>
+      <baseHealthScale>5.0</baseHealthScale>
+      <intelligence>ToolUser</intelligence>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <fleshType>LC_AbnormalityOrganic</fleshType>
+      <foodType>None</foodType>
+      <hasCorpse>false</hasCorpse>
+      <lifeExpectancy>1000</lifeExpectancy>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <disableIgniteVerb>true</disableIgniteVerb>
+      <trainability>None</trainability>
+      <renderTree>AllAroundHelper</renderTree>
+      <thinkTreeMain>AllAroundHelperMain</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+      <lifeStageAges>
+        <li>
+          <def>LC_EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="LCAbnormalities.AllAroundHelper.CompProperties_AllAroundHelper">
+        <qliphothCountMax>2</qliphothCountMax>
+        <studySucessRateBase>0.0</studySucessRateBase>
+        <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>true</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
+        <dyingFxDef>DyingAllAroundHelper</dyingFxDef>
+        <workDamageDef>LC_RedDamage</workDamageDef>
+        <workDamageRange>3~5</workDamageRange>
+        <escapedLetterLabelKey>LC_AllAroundHelper_EscapedLabel</escapedLetterLabelKey>
+        <escapedLetterTextKey>LC_AllAroundHelper_EscapedText</escapedLetterTextKey>
+        <killedLetterLabelKey>LC_AllAroundHelper_SuppressedLabel</killedLetterLabelKey>
+        <killedLetterTextKey>LC_AllAroundHelper_SuppressedText</killedLetterTextKey>
+        <instinctProbs>
+          <li>0.50</li><li>0.55</li><li>0.55</li><li>0.50</li><li>0.45</li>
+        </instinctProbs>
+        <insightProbs>
+          <li>0.0</li><li>0.0</li><li>0.0</li><li>0.0</li><li>0.0</li>
+        </insightProbs>
+        <attachmentProbs>
+          <li>0.35</li><li>0.40</li><li>0.40</li><li>0.35</li><li>0.30</li>
+        </attachmentProbs>
+        <repressionProbs>
+          <li>0.50</li><li>0.55</li><li>0.55</li><li>0.50</li><li>0.45</li>
+        </repressionProbs>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <lookForTargetOnEscape>true</lookForTargetOnEscape>
+        <hasAnimation>true</hasAnimation>
+        <heldDrawScale>1.0</heldDrawScale>
+        <heldDrawOffset>(0, 0, -0.06)</heldDrawOffset>
+      </li>
+      <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
+        <frequencyTicks>60000</frequencyTicks>
+        <studyTimesPeriod>1</studyTimesPeriod>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <speedOffsetsByProgress>
+          <li>0</li><li>0.03</li><li>0.06</li><li>0.09</li><li>0.12</li>
+        </speedOffsetsByProgress>
+        <successOffsetsByProgress>
+          <li>0</li><li>0.03</li><li>0.05</li><li>0.08</li><li>0.10</li>
+        </successOffsetsByProgress>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_PeBoxProduce">
+        <peBoxDef>EnkephalinBox</peBoxDef>
+        <amountProdueRangeNormal>6~9</amountProdueRangeNormal>
+        <amountProdueMax>16</amountProdueMax>
+        <boxTexOffsetZ>0.0835</boxTexOffsetZ>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
+        <accessoryDef>Accessory_AllAroundHelper</accessoryDef>
+        <accessoryChance>0.04</accessoryChance>
+        <unlockLevel>2</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
+        <weaponExtracted>EgoWeapon_AllAroundHelper</weaponExtracted>
+        <weaponIconPath>UI/Commands/ExtractEGO_AllAroundHelper_Weapon</weaponIconPath>
+        <amountMaxWeapon>1</amountMaxWeapon>
+        <weaponExtractedNeed>40</weaponExtractedNeed>
+        <armorExtracted>Apparel_AllAroundHelperSuit</armorExtracted>
+        <armorIconPath>UI/Commands/ExtractEGO_AllAroundHelper_Armor</armorIconPath>
+        <amountMaxArmor>3</amountMaxArmor>
+        <armorExtractedNeed>28</armorExtractedNeed>
+        <unlockLevel>3</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>3</threshold>
+            <label>Observation Level: I</label>
+            <text>Never perform Insight work (0% success rate). Instinct and Repression yield reliable PE-Boxes while avoiding its cleaning rage.</text>
+          </li>
+          <li>
+            <threshold>7</threshold>
+            <label>Observation Level: II</label>
+            <text>A Normal result has a 50% chance to lower its Qliphoth Counter (max 2), and a Bad result always lowers it.\nUnlocks the E.G.O. Gift 'Grinder Mk4'.</text>
+          </li>
+          <li>
+            <threshold>12</threshold>
+            <label>Observation Level: III</label>
+            <text>Once breached, it periodically charges its rotary turbine before tearing forward in a high-speed Red sawblade dash.</text>
+          </li>
+          <li>
+            <threshold>16</threshold>
+            <label>Observation Level: IV</label>
+            <text>All-Around Helper is resistant to Red damage (0.5x) but highly vulnerable to Black and Pale (2.0x).\nUnlocks the HE E.G.O. Saw and Suit 'Grinder Mk4'.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>0.5</redResistance>
+        <whiteResistance>1.0</whiteResistance>
+        <blackResistance>2.0</blackResistance>
+        <paleResistance>2.0</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

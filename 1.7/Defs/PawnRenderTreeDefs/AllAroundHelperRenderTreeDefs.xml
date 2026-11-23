@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderTreeDef>
+    <defName>AllAroundHelper</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+
+        <!-- T-05-41 All-Around Helper articulated multi-part rig (aligned with Helper.fbx & HelperSprite.png) -->
+        <li Class="LCAbnormalities.AllAroundHelper.PawnRenderNodeProperties_AllAroundHelperPart">
+          <debugLabel>AllAroundHelperRoot</debugLabel>
+          <tagDef>AllAroundHelper_Root</tagDef>
+          <role>Root</role>
+          <useGraphic>false</useGraphic>
+          <formScale>1.95</formScale>
+          <containedScale>1.75</containedScale>
+          <containedOffset>(0, 0, -0.06)</containedOffset>
+          <children>
+
+            <!-- High-RPM 8-blade rotary saw pinwheel (visible during Lv3_Spin & late Lv3_Attack_On) -->
+            <li Class="LCAbnormalities.AllAroundHelper.PawnRenderNodeProperties_AllAroundHelperPart">
+              <debugLabel>SawRotor</debugLabel>
+              <tagDef>AllAroundHelper_SawRotor</tagDef>
+              <role>SawRotor</role>
+              <texPath>Things/Pawn/AllAroundHelper/Parts/SawRotor</texPath>
+              <baseLayer>7.0</baseLayer>
+            </li>
+
+            <!-- Main White Oval Chassis Body (all limbs and face attach as children for unified bounce/tilt) -->
+            <li Class="LCAbnormalities.AllAroundHelper.PawnRenderNodeProperties_AllAroundHelperPart">
+              <debugLabel>Body</debugLabel>
+              <tagDef>AllAroundHelper_Body</tagDef>
+              <role>Body</role>
+              <texPath>Things/Pawn/AllAroundHelper/Parts/Body</texPath>
+              <baseLayer>10.0</baseLayer>
+              <children>
+
+                <!-- Lv1 / Lv2 Wheeled Housekeeping Droid Legs -->
+                <li Class="LCAbnormalities.AllAroundHelper.PawnRenderNodeProperties_AllAroundHelperPart">
+                  <debugLabel>LegLeft</debugLabel>
+                  <tagDef>AllAroundHelper_LegLeft</tagDef>
+                  <role>LegLeft</role>
+                  <texPath>Things/Pawn/AllAroundHelper/Parts/LegLeft</texPath>
+                  <baseLayer>8.0</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.AllAroundHelper.PawnRenderNodeProperties_AllAroundHelperPart">
+                  <debugLabel>LegRight</debugLabel>
+                  <tagDef>AllAroundHelper_LegRight</tagDef>
+                  <role>LegRight</role>
+                  <texPath>Things/Pawn/AllAroundHelper/Parts/LegRight</texPath>
+                  <baseLayer>8.2</baseLayer>
+                </li>
+
+                <!-- Upper-Left Articulated Scythe Arm (ArmUL -> BladeUL) -->
+                <li Class="LCAbnormalities.AllAroundHelper.PawnRenderNodeProperties_AllAroundHelperPart">
+                  <debugLabel>ArmUL</debugLabel>
+                  <tagDef>AllAroundHelper_ArmUL</tagDef>
+                  <role>ArmUL</role>
+                  <texPath>Things/Pawn/AllAroundHelper/Parts/ArmUL</texPath>
+                  <baseLayer>8.4</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.AllAroundHelper.PawnRenderNodeProperties_AllAroundHelperPart">
+                      <debugLabel>BladeUL</debugLabel>
+                      <tagDef>AllAroundHelper_BladeUL</tagDef>
+                      <role>BladeUL</role>
+                      <texPath>Things/Pawn/AllAroundHelper/Parts/BladeUL</texPath>
+                      <baseLayer>8.5</baseLayer>
+                    </li>
+                  </children>
+                </li>
+
+                <!-- Upper-Right Articulated Scythe Arm (ArmUR -> BladeUR) -->
+                <li Class="LCAbnormalities.AllAroundHelper.PawnRenderNodeProperties_AllAroundHelperPart">
+                  <debugLabel>ArmUR</debugLabel>
+                  <tagDef>AllAroundHelper_ArmUR</tagDef>
+                  <role>ArmUR</role>
+                  <texPath>Things/Pawn/AllAroundHelper/Parts/ArmUR</texPath>
+                  <baseLayer>8.6</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.AllAroundHelper.PawnRenderNodeProperties_AllAroundHelperPart">
+                      <debugLabel>BladeUR</debugLabel>
+                      <tagDef>AllAroundHelper_BladeUR</tagDef>
+                      <role>BladeUR</role>
+                      <texPath>Things/Pawn/AllAroundHelper/Parts/BladeUR</texPath>
+                      <baseLayer>8.7</baseLayer>
+                    </li>
+                  </children>
+                </li>
+
+                <!-- Lower-Left Articulated Scythe Arm (ArmDL -> BladeDL) -->
+                <li Class="LCAbnormalities.AllAroundHelper.PawnRenderNodeProperties_AllAroundHelperPart">
+                  <debugLabel>ArmDL</debugLabel>
+                  <tagDef>AllAroundHelper_ArmDL</tagDef>
+                  <role>ArmDL</role>
+                  <texPath>Things/Pawn/AllAroundHelper/Parts/ArmDL</texPath>
+                  <baseLayer>8.8</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.AllAroundHelper.PawnRenderNodeProperties_AllAroundHelperPart">
+                      <debugLabel>BladeDL</debugLabel>
+                      <tagDef>AllAroundHelper_BladeDL</tagDef>
+                      <role>BladeDL</role>
+                      <texPath>Things/Pawn/AllAroundHelper/Parts/BladeDL</texPath>
+                      <baseLayer>8.9</baseLayer>
+                    </li>
+                  </children>
+                </li>
+
+                <!-- Lower-Right Articulated Scythe Arm (ArmDR -> BladeDR) -->
+                <li Class="LCAbnormalities.AllAroundHelper.PawnRenderNodeProperties_AllAroundHelperPart">
+                  <debugLabel>ArmDR</debugLabel>
+                  <tagDef>AllAroundHelper_ArmDR</tagDef>
+                  <role>ArmDR</role>
+                  <texPath>Things/Pawn/AllAroundHelper/Parts/ArmDR</texPath>
+                  <baseLayer>9.0</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.AllAroundHelper.PawnRenderNodeProperties_AllAroundHelperPart">
+                      <debugLabel>BladeDR</debugLabel>
+                      <tagDef>AllAroundHelper_BladeDR</tagDef>
+                      <role>BladeDR</role>
+                      <texPath>Things/Pawn/AllAroundHelper/Parts/BladeDR</texPath>
+                      <baseLayer>9.1</baseLayer>
+                    </li>
+                  </children>
+                </li>
+
+                <!-- Independently Glancing Red-Eyed Smiling Face (Normal / Alert Crimson Glow / Shutdown Dim) -->
+                <li Class="LCAbnormalities.AllAroundHelper.PawnRenderNodeProperties_AllAroundHelperPart">
+                  <debugLabel>Face</debugLabel>
+                  <tagDef>AllAroundHelper_Face</tagDef>
+                  <role>Face</role>
+                  <texPath>Things/Pawn/AllAroundHelper/Parts/Face_Normal</texPath>
+                  <alternateTexPaths>
+                    <li>Things/Pawn/AllAroundHelper/Parts/Face_Alert</li>
+                    <li>Things/Pawn/AllAroundHelper/Parts/Face_Off</li>
+                  </alternateTexPaths>
+                  <useTransparentShader>true</useTransparentShader>
+                  <baseLayer>10.5</baseLayer>
+                </li>
+
+              </children>
+            </li>
+
+          </children>
+        </li>
+
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

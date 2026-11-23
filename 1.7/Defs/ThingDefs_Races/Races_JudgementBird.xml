@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_EntityBase">
+    <defName>JudgementBird</defName>
+    <label>Judgement Bird</label>
+    <description>A tall, bandaged avian judge draped in mourning cloth, clutching an unbalanced brass scale (O-02-62).\n\nIt is the first source of Pale damage—wounds that strike directly at the soul as a percentage of maximum vitality, bypassing conventional armor. Should its Qliphoth Counter fall to 0, it roams silently and periodically tilts its scale to deliver Pale judgement across nearby humanlikes.</description>
+    <uiIconPath>UI/CodexEntries/JudgementBird</uiIconPath>
+    <thingClass>LCAbnormalities.JudgementBird.LC_JudgementBirdPawn</thingClass>
+    <statBases>
+      <MoveSpeed>3.0</MoveSpeed>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-200</ComfyTemperatureMin>
+      <ComfyTemperatureMax>150</ComfyTemperatureMax>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <LC_MinimumContainmentStrength>85</LC_MinimumContainmentStrength>
+      <StaggerDurationFactor>0.1</StaggerDurationFactor>
+      <ToxicResistance>1</ToxicResistance>
+    </statBases>
+    <tools>
+      <li>
+        <label>unjust scale</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>14</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+    </tools>
+    <race>
+      <body>OneSin</body>
+      <baseBodySize>1.8</baseBodySize>
+      <baseHealthScale>8.5</baseHealthScale>
+      <intelligence>ToolUser</intelligence>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <fleshType>LC_AbnormalityOrganic</fleshType>
+      <foodType>None</foodType>
+      <hasCorpse>false</hasCorpse>
+      <lifeExpectancy>1000</lifeExpectancy>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <disableIgniteVerb>true</disableIgniteVerb>
+      <trainability>None</trainability>
+      <renderTree>JudgementBird</renderTree>
+      <thinkTreeMain>JudgementBirdMain</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+      <lifeStageAges>
+        <li>
+          <def>LC_EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="LCAbnormalities.JudgementBird.CompProperties_JudgementBird">
+        <qliphothCountMax>2</qliphothCountMax>
+        <studySucessRateBase>0.0</studySucessRateBase>
+        <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>true</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
+        <dyingFxDef>DyingJudgementBird</dyingFxDef>
+        <workDamageDef>LC_PaleDamage</workDamageDef>
+        <workDamageRange>5~7</workDamageRange>
+        <escapedLetterLabelKey>LC_JudgementBird_EscapedLabel</escapedLetterLabelKey>
+        <escapedLetterTextKey>LC_JudgementBird_EscapedText</escapedLetterTextKey>
+        <killedLetterLabelKey>LC_JudgementBird_SuppressedLabel</killedLetterLabelKey>
+        <killedLetterTextKey>LC_JudgementBird_SuppressedText</killedLetterTextKey>
+        <instinctProbs>
+          <li>0.20</li><li>0.20</li><li>0.35</li><li>0.45</li><li>0.45</li>
+        </instinctProbs>
+        <insightProbs>
+          <li>0.20</li><li>0.20</li><li>0.40</li><li>0.50</li><li>0.50</li>
+        </insightProbs>
+        <attachmentProbs>
+          <li>0.20</li><li>0.20</li><li>0.35</li><li>0.45</li><li>0.45</li>
+        </attachmentProbs>
+        <repressionProbs>
+          <li>0.0</li><li>0.0</li><li>0.0</li><li>0.0</li><li>0.0</li>
+        </repressionProbs>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <lookForTargetOnEscape>true</lookForTargetOnEscape>
+        <hasAnimation>true</hasAnimation>
+      </li>
+      <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
+        <frequencyTicks>60000</frequencyTicks>
+        <studyTimesPeriod>1</studyTimesPeriod>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <speedOffsetsByProgress>
+          <li>0</li><li>0.03</li><li>0.06</li><li>0.09</li><li>0.12</li>
+        </speedOffsetsByProgress>
+        <successOffsetsByProgress>
+          <li>0</li><li>0.04</li><li>0.07</li><li>0.10</li><li>0.14</li>
+        </successOffsetsByProgress>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_PeBoxProduce">
+        <peBoxDef>EnkephalinBox</peBoxDef>
+        <amountProdueRangeNormal>7~12</amountProdueRangeNormal>
+        <amountProdueMax>24</amountProdueMax>
+        <boxTexOffsetZ>0.0556</boxTexOffsetZ>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
+        <accessoryDef>Accessory_JudgementBird</accessoryDef>
+        <accessoryChance>0.02</accessoryChance>
+        <unlockLevel>2</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
+        <weaponExtracted>EgoWeapon_JudgementBird</weaponExtracted>
+        <weaponIconPath>UI/Commands/ExtractEGO_JudgementBird_Weapon</weaponIconPath>
+        <amountMaxWeapon>1</amountMaxWeapon>
+        <weaponExtractedNeed>110</weaponExtractedNeed>
+        <armorExtracted>Apparel_JudgementBirdSuit</armorExtracted>
+        <armorIconPath>UI/Commands/ExtractEGO_JudgementBird_Armor</armorIconPath>
+        <amountMaxArmor>1</amountMaxArmor>
+        <armorExtractedNeed>90</armorExtractedNeed>
+        <unlockLevel>4</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>4</threshold>
+            <label>Observation Level: I</label>
+            <text>Work failures inflict Pale damage that bypasses conventional armor. Never assign Repression work (0% success rate); send high-level Insight or Attachment specialists.</text>
+          </li>
+          <li>
+            <threshold>9</threshold>
+            <label>Observation Level: II</label>
+            <text>A Normal result has a 50% chance to drop its Qliphoth Counter (max 2), and a Bad result always drops it.\nUnlocks the E.G.O. Gift 'Justitia'.</text>
+          </li>
+          <li>
+            <threshold>15</threshold>
+            <label>Observation Level: III</label>
+            <text>When breached, Judgement Bird periodically tilts its scale to strike all humanlikes within 8.5 cells with Pale soul judgement. It is notably weak to Pale damage itself (2.0x).</text>
+          </li>
+          <li>
+            <threshold>22</threshold>
+            <label>Observation Level: IV</label>
+            <text>One of the Three Birds of the Black Forest. Though classified WAW, its E.G.O. 'Justitia' reaches ALEPH grade—granting the colony's first Pale blade and balanced 0.5x Pale armor.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>WAW</abnormalityCategoryDef>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>0.8</redResistance>
+        <whiteResistance>0.8</whiteResistance>
+        <blackResistance>0.8</blackResistance>
+        <paleResistance>2.0</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

@@ -100,6 +100,12 @@ namespace LCAbnormalities.Settings
             listing.CheckboxLabeled("LCAbn_Settings_EnableFuneralOfDeadButterflies".Translate(), ref Settings.EnableFuneralOfDeadButterflies);
             listing.CheckboxLabeled("LCAbn_Settings_EnableSnowQueen".Translate(), ref Settings.EnableSnowQueen);
             listing.CheckboxLabeled("LCAbn_Settings_EnableNotesFromCrazedResearcher".Translate(), ref Settings.EnableNotesFromCrazedResearcher);
+            listing.CheckboxLabeled("LCAbn_Settings_EnableAllAroundHelper".Translate(), ref Settings.EnableAllAroundHelper);
+            listing.CheckboxLabeled("LCAbn_Settings_EnableJudgementBird".Translate(), ref Settings.EnableJudgementBird);
+            listing.CheckboxLabeled("LCAbn_Settings_EnableBigBird".Translate(), ref Settings.EnableBigBird);
+            listing.CheckboxLabeled("LCAbn_Settings_EnableLittleRedRidingHoodedMercenary".Translate(), ref Settings.EnableLittleRedRidingHoodedMercenary);
+            listing.CheckboxLabeled("LCAbn_Settings_EnableBackwardClock".Translate(), ref Settings.EnableBackwardClock);
+            listing.CheckboxLabeled("LCAbn_Settings_EnableSchadenfreude".Translate(), ref Settings.EnableSchadenfreude);
         }
 
         private static void DrawMeatLanternSection(Listing_Standard listing)

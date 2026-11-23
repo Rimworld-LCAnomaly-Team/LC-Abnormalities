@@ -84,7 +84,9 @@
   <FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
   <FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>那双名为“圣宣”的黑白色手枪将永远为死者送去最后的安息。\nWAW 级 E.G.O 武器与 HE 级护甲“圣宣”已解锁。</FuneralOfDeadButterflies.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
 
-  <DyingFuneralOfDeadButterflies.label>亡蝶葬仪（消散中）</DyingFuneralOfDeadButterflies.label>
+  <DyingFuneralOfDeadButterflies.label>亡蝶葬仪（入棺中）</DyingFuneralOfDeadButterflies.label>
+  <LC_SolemnLamentButterflyBloom.label>圣宣绽放亡蝶</LC_SolemnLamentButterflyBloom.label>
+  <LC_SolemnLamentButterflyFlutter.label>圣宣飞散亡蝶</LC_SolemnLamentButterflyFlutter.label>
 
   <FuneralOfDeadButterfliesEgg.label>亡蝶葬仪收容蛋</FuneralOfDeadButterfliesEgg.label>
   <FuneralOfDeadButterfliesEgg.description>亡蝶葬仪（T-01-68）重归安息后的黑曜卵体。</FuneralOfDeadButterfliesEgg.description>

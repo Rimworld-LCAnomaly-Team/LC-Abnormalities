@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>LittleRedRidingHoodedMercenary</defName>
+    <label>Little Red Riding Hooded Mercenary</label>
+    <description>Little Red Riding Hooded Mercenary (F-01-57) is a scarred WAW huntress who can be commissioned for 15 PE-Boxes to hunt hostile threats on the map.\nBeware: other Abnormalities breaching will agitate her Qliphoth Counter until she breaks free on her own.</description>
+    <uiIconPath>UI/CodexEntries/LittleRedRidingHoodedMercenary</uiIconPath>
+    <category>WAW</category>
+    <orderInCategory>930</orderInCategory>
+    <linkedThings>
+      <li>LittleRedRidingHoodedMercenary</li>
+      <li>LittleRedRidingHoodedMercenaryEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

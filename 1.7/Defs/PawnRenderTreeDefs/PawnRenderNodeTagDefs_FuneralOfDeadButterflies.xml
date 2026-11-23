@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Front / Contained Rig -->
+  <PawnRenderNodeTagDef><defName>Funeral_FrontRoot</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_FrontBackArms</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_FrontCoffin</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_FrontBody</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_FrontArmLeft</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_FrontArmRight</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_FrontChestArm</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_FrontHeadWingOuterL</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_FrontHeadWingOuterR</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_FrontHeadWingInnerL</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_FrontHeadWingInnerR</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_FrontHeadCenter</defName></PawnRenderNodeTagDef>
+
+  <!-- Side / Breached Walk & Attack Rig -->
+  <PawnRenderNodeTagDef><defName>Funeral_SideRoot</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_SideCoffinBack</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_SideBackLeg</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_SideFrontLeg</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_SideTorso</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_SidePocketArm</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_SideGunArm</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_SideChestArm</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_SideHeadWingA</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_SideHeadWingB</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_SideHeadCenter</defName></PawnRenderNodeTagDef>
+
+  <!-- Open-Coffin Eruption Rig -->
+  <PawnRenderNodeTagDef><defName>Funeral_OpenRoot</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_OpenBody</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_OpenHeadWingOuter</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_OpenHeadWingInner</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_OpenHeadCenter</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_OpenCoffinBox</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Funeral_OpenCoffinLid</defName></PawnRenderNodeTagDef>
+
+</Defs>

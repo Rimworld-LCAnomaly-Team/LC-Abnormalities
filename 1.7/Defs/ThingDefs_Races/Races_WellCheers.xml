@@ -4,9 +4,9 @@
   <ThingDef ParentName="LC_EntityBase">
     <defName>WellCheers</defName>
     <label>Opened Can of WellCheers</label>
-    <description>A pastel vending machine tended by cheerful shrimp mariners (F-05-52) offering ice-cold cans of grape and cherry soda.\n\nGood or normal work rewards workers with random revitalizing sodas—red to mend flesh, blue to restore sanity, or purple for both. Yet a poorly tended machine leaves the drinker freezing inside an eerie nightmare slumber.</description>
+    <description>A vending machine flanked by two cheerful shrimp mariners (F-05-52) offering free ice-cold cans of WellCheers soda.\n\nGood or normal work dispenses a flavor tied to the work type—Instinct yields Cherry Red to mend wounds, Insight yields Deep Sea Blue to restore sanity, and Attachment or Repression yields Twilight Purple for both. Colonists can also right-click the containment platform directly to grab a soda (subject to its own cooldown). Beware bad results: a spiked can sends the drinker into freezing open-sea slumber as surging waves and an orange fishing boat sweep across the chamber.</description>
     <uiIconPath>UI/CodexEntries/WellCheers</uiIconPath>
-    <thingClass>LCAbnormalities.Shared.LC_StandardEntityPawn</thingClass>
+    <thingClass>LCAbnormalities.WellCheers.LC_WellCheersPawn</thingClass>
     <statBases>
       <MoveSpeed>0</MoveSpeed>
       <Flammability>0</Flammability>
@@ -47,6 +47,7 @@
         <shouldNotifyWhenEscape>false</shouldNotifyWhenEscape>
         <ifProvideWarningPoints>false</ifProvideWarningPoints>
         <customWarningPoints>-1</customWarningPoints>
+        <soundWorking>LC_WellCheers_WorkLoop</soundWorking>
         <allowRoamingOutsideContainment>false</allowRoamingOutsideContainment>
         <dyingFxDef>DyingWellCheers</dyingFxDef>
         <workDamageDef>LC_RedDamage</workDamageDef>
@@ -66,7 +67,7 @@
       </li>
       <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
         <lookForTargetOnEscape>false</lookForTargetOnEscape>
-        <hasAnimation>false</hasAnimation>
+        <hasAnimation>true</hasAnimation>
       </li>
       <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
         <frequencyTicks>60000</frequencyTicks>
@@ -106,7 +107,7 @@
           <li>
             <threshold>1</threshold>
             <label>Observation Level: I</label>
-            <text>Good and Normal work dispense one of three canned drinks: Cherry Red heals wounds, Deep Sea Blue restores sanity, and Twilight Purple offers both.</text>
+            <text>Good and Normal work dispense canned soda determined by the work type: Instinct serves Cherry Red (heals wounds), Insight serves Deep Sea Blue (restores sanity), and Attachment or Repression serves Twilight Purple (both). Colonists may also right-click the platform directly to drink.</text>
           </li>
           <li>
             <threshold>3</threshold>

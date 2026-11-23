@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>BigBird</defName>
+    <label>Big Bird</label>
+    <description>Big Bird (O-02-40) watches over the facility with countless golden eyes, losing Qliphoth stability whenever five humanlikes perish.\nWhen breached, its lantern enchants nearby targets and draws them toward its jaws. One of the Three Birds of the Black Forest.</description>
+    <uiIconPath>UI/CodexEntries/BigBird</uiIconPath>
+    <category>WAW</category>
+    <orderInCategory>920</orderInCategory>
+    <linkedThings>
+      <li>BigBird</li>
+      <li>BigBirdEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

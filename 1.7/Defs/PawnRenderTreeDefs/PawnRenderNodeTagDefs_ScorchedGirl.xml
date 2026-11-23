@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderNodeTagDef><defName>ScorchedGirl_Root</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>ScorchedGirl_LegBUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>ScorchedGirl_LegBLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>ScorchedGirl_LegFUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>ScorchedGirl_LegFLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>ScorchedGirl_Torso</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>ScorchedGirl_MatchBack</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>ScorchedGirl_MatchHead</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>ScorchedGirl_Body</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>ScorchedGirl_Flame</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>ScorchedGirl_Head</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>ScorchedGirl_TailB</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>ScorchedGirl_HeadMesh</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>ScorchedGirl_TailF</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>ScorchedGirl_Eye</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>ScorchedGirl_Mouth</defName></PawnRenderNodeTagDef>
+
+</Defs>

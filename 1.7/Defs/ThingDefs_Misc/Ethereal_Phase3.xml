@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
+    <defName>DyingAllAroundHelper</defName>
+    <label>All-Around Helper (Dissolving)</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>LCAbnormalities.AllAroundHelper.DyingAllAroundHelper</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <modExtensions>
+      <li Class="LCAbnormalities.Shared.EggReturnExtension">
+        <eggDef>AllAroundHelperEgg</eggDef>
+        <spawnFilth>false</spawnFilth>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
+    <defName>DyingJudgementBird</defName>
+    <label>Judgement Bird (Dissolving)</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>LCAbnormalities.JudgementBird.DyingJudgementBird</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <modExtensions>
+      <li Class="LCAbnormalities.Shared.EggReturnExtension">
+        <eggDef>JudgementBirdEgg</eggDef>
+        <spawnFilth>false</spawnFilth>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_JudgementCastAuraFX</defName>
+    <label>Judgement Bird casting domain</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>LCAbnormalities.JudgementBird.Thing_JudgementCastAura</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_JudgementPaleWaveFX</defName>
+    <label>Judgement Bird pale shockwave</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>LCAbnormalities.JudgementBird.Thing_JudgementPaleWave</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_JudgementGallowsFX</defName>
+    <label>Judgement Bird gallows</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>LCAbnormalities.JudgementBird.Thing_JudgementGallows</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_JudgementBandageFX</defName>
+    <label>Judgement Bird drifting bandage</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>LCAbnormalities.JudgementBird.Thing_JudgementBandageWisp</thingClass>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_JustitiaSlashFX</defName>
+    <label>Justitia pale crescent slash</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>LCAbnormalities.JudgementBird.Thing_JustitiaSlash</thingClass>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_JustitiaComboFX</defName>
+    <label>Justitia judgement flurry</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>LCAbnormalities.JudgementBird.Thing_JustitiaComboRunner</thingClass>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
+    <defName>DyingBigBird</defName>
+    <label>Big Bird (Dissolving)</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <thingClass>LCAbnormalities.Shared.DyingAbnormality</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <modExtensions>
+      <li Class="LCAbnormalities.Shared.EggReturnExtension">
+        <eggDef>BigBirdEgg</eggDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
+    <defName>DyingLittleRedRidingHoodedMercenary</defName>
+    <label>Little Red Riding Hooded Mercenary (Dissolving)</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>LCAbnormalities.LittleRedRidingHoodedMercenary.DyingLittleRed</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <modExtensions>
+      <li Class="LCAbnormalities.Shared.EggReturnExtension">
+        <eggDef>LittleRedRidingHoodedMercenaryEgg</eggDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
+    <defName>DyingSchadenfreude</defName>
+    <label>Schadenfreude (Dissolving)</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>LCAbnormalities.Schadenfreude.DyingSchadenfreude</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <modExtensions>
+      <li Class="LCAbnormalities.Shared.EggReturnExtension">
+        <eggDef>SchadenfreudeEgg</eggDef>
+        <spawnFilth>false</spawnFilth>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
+
+</Defs>

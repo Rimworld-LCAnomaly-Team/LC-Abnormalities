@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderNodeTagDef><defName>DerFreischutz_Root</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>DerFreischutz_Legs</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>DerFreischutz_Waist</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>DerFreischutz_Torso</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>DerFreischutz_BackCloak</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>DerFreischutz_Head</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>DerFreischutz_ShoulderCape</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>DerFreischutz_CapeUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>DerFreischutz_CapeLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>DerFreischutz_BackArmUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>DerFreischutz_BackArmLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>DerFreischutz_FrontArm</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>DerFreischutz_Rifle</defName></PawnRenderNodeTagDef>
+
+</Defs>

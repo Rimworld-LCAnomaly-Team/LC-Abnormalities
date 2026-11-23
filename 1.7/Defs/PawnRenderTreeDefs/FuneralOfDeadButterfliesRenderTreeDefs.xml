@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderTreeDef>
+    <defName>FuneralOfDeadButterflies</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+
+        <!-- ==================== 1. FRONT RIG (Contained / Portrait / Idle & Work) ==================== -->
+        <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+          <debugLabel>FuneralFrontRoot</debugLabel>
+          <tagDef>Funeral_FrontRoot</tagDef>
+          <role>FrontRoot</role>
+          <useGraphic>false</useGraphic>
+          <formScale>2.05</formScale>
+          <flipOnWest>false</flipOnWest>
+          <children>
+            <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+              <debugLabel>FrontBackArms</debugLabel>
+              <tagDef>Funeral_FrontBackArms</tagDef>
+              <role>FrontPart</role>
+              <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Front_BackArms</texPath>
+              <flipOnWest>false</flipOnWest>
+              <baseLayer>6</baseLayer>
+            </li>
+            <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+              <debugLabel>FrontCoffin</debugLabel>
+              <tagDef>Funeral_FrontCoffin</tagDef>
+              <role>FrontPart</role>
+              <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Front_Coffin</texPath>
+              <flipOnWest>false</flipOnWest>
+              <baseLayer>7</baseLayer>
+            </li>
+            <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+              <debugLabel>FrontBody</debugLabel>
+              <tagDef>Funeral_FrontBody</tagDef>
+              <role>FrontPart</role>
+              <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Front_Body</texPath>
+              <flipOnWest>false</flipOnWest>
+              <baseLayer>9</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+                  <debugLabel>FrontArmLeft</debugLabel>
+                  <tagDef>Funeral_FrontArmLeft</tagDef>
+                  <role>FrontPart</role>
+                  <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Front_ArmLeft</texPath>
+                  <flipOnWest>false</flipOnWest>
+                  <baseLayer>10</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+                  <debugLabel>FrontArmRight</debugLabel>
+                  <tagDef>Funeral_FrontArmRight</tagDef>
+                  <role>FrontPart</role>
+                  <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Front_ArmRight</texPath>
+                  <flipOnWest>false</flipOnWest>
+                  <baseLayer>10</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+                  <debugLabel>FrontChestArm</debugLabel>
+                  <tagDef>Funeral_FrontChestArm</tagDef>
+                  <role>FrontPart</role>
+                  <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Front_ChestArm</texPath>
+                  <flipOnWest>false</flipOnWest>
+                  <baseLayer>11</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+                  <debugLabel>FrontHeadWingOuterL</debugLabel>
+                  <tagDef>Funeral_FrontHeadWingOuterL</tagDef>
+                  <role>FrontPart</role>
+                  <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Front_HeadWingOuterL</texPath>
+                  <flipOnWest>false</flipOnWest>
+                  <baseLayer>11.4</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+                  <debugLabel>FrontHeadWingOuterR</debugLabel>
+                  <tagDef>Funeral_FrontHeadWingOuterR</tagDef>
+                  <role>FrontPart</role>
+                  <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Front_HeadWingOuterR</texPath>
+                  <flipOnWest>false</flipOnWest>
+                  <baseLayer>11.4</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+                  <debugLabel>FrontHeadWingInnerL</debugLabel>
+                  <tagDef>Funeral_FrontHeadWingInnerL</tagDef>
+                  <role>FrontPart</role>
+                  <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Front_HeadWingInnerL</texPath>
+                  <flipOnWest>false</flipOnWest>
+                  <baseLayer>11.7</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+                  <debugLabel>FrontHeadWingInnerR</debugLabel>
+                  <tagDef>Funeral_FrontHeadWingInnerR</tagDef>
+                  <role>FrontPart</role>
+                  <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Front_HeadWingInnerR</texPath>
+                  <flipOnWest>false</flipOnWest>
+                  <baseLayer>11.7</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+                  <debugLabel>FrontHeadCenter</debugLabel>
+                  <tagDef>Funeral_FrontHeadCenter</tagDef>
+                  <role>FrontPart</role>
+                  <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Front_HeadCenter</texPath>
+                  <flipOnWest>false</flipOnWest>
+                  <baseLayer>12</baseLayer>
+                </li>
+              </children>
+            </li>
+          </children>
+        </li>
+
+        <!-- ==================== 2. SIDE RIG (Breached Walk / Idle / Finger-Gun Attack) ==================== -->
+        <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+          <debugLabel>FuneralSideRoot</debugLabel>
+          <tagDef>Funeral_SideRoot</tagDef>
+          <role>SideRoot</role>
+          <useGraphic>false</useGraphic>
+          <formScale>2.05</formScale>
+          <flipOnWest>true</flipOnWest>
+          <children>
+            <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+              <debugLabel>SideCoffinBack</debugLabel>
+              <tagDef>Funeral_SideCoffinBack</tagDef>
+              <role>SidePart</role>
+              <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Side_CoffinBack</texPath>
+              <texPathLeft>Things/Pawn/FuneralOfDeadButterflies/Parts/Left/Side_CoffinBack</texPathLeft>
+              <baseLayer>6</baseLayer>
+            </li>
+            <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+              <debugLabel>SideBackLeg</debugLabel>
+              <tagDef>Funeral_SideBackLeg</tagDef>
+              <role>SidePart</role>
+              <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Side_BackLeg</texPath>
+              <texPathLeft>Things/Pawn/FuneralOfDeadButterflies/Parts/Left/Side_BackLeg</texPathLeft>
+              <baseLayer>7.5</baseLayer>
+            </li>
+            <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+              <debugLabel>SideFrontLeg</debugLabel>
+              <tagDef>Funeral_SideFrontLeg</tagDef>
+              <role>SidePart</role>
+              <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Side_FrontLeg</texPath>
+              <texPathLeft>Things/Pawn/FuneralOfDeadButterflies/Parts/Left/Side_FrontLeg</texPathLeft>
+              <baseLayer>8</baseLayer>
+            </li>
+            <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+              <debugLabel>SideTorso</debugLabel>
+              <tagDef>Funeral_SideTorso</tagDef>
+              <role>SidePart</role>
+              <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Side_Torso</texPath>
+              <texPathLeft>Things/Pawn/FuneralOfDeadButterflies/Parts/Left/Side_Torso</texPathLeft>
+              <baseLayer>9</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+                  <debugLabel>SidePocketArm</debugLabel>
+                  <tagDef>Funeral_SidePocketArm</tagDef>
+                  <role>SideArmRest</role>
+                  <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Side_PocketArm</texPath>
+                  <texPathLeft>Things/Pawn/FuneralOfDeadButterflies/Parts/Left/Side_PocketArm</texPathLeft>
+                  <baseLayer>9.8</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+                  <debugLabel>SideGunArm</debugLabel>
+                  <tagDef>Funeral_SideGunArm</tagDef>
+                  <role>SideArmGun</role>
+                  <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Side_GunArm</texPath>
+                  <texPathLeft>Things/Pawn/FuneralOfDeadButterflies/Parts/Left/Side_GunArm</texPathLeft>
+                  <baseLayer>10.2</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+                  <debugLabel>SideChestArm</debugLabel>
+                  <tagDef>Funeral_SideChestArm</tagDef>
+                  <role>SidePart</role>
+                  <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Side_ChestArm</texPath>
+                  <texPathLeft>Things/Pawn/FuneralOfDeadButterflies/Parts/Left/Side_ChestArm</texPathLeft>
+                  <baseLayer>10.6</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+                  <debugLabel>SideHeadWingA</debugLabel>
+                  <tagDef>Funeral_SideHeadWingA</tagDef>
+                  <role>SidePart</role>
+                  <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Side_HeadWingA</texPath>
+                  <texPathLeft>Things/Pawn/FuneralOfDeadButterflies/Parts/Left/Side_HeadWingA</texPathLeft>
+                  <baseLayer>11.4</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+                  <debugLabel>SideHeadWingB</debugLabel>
+                  <tagDef>Funeral_SideHeadWingB</tagDef>
+                  <role>SidePart</role>
+                  <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Side_HeadWingB</texPath>
+                  <texPathLeft>Things/Pawn/FuneralOfDeadButterflies/Parts/Left/Side_HeadWingB</texPathLeft>
+                  <baseLayer>11.6</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+                  <debugLabel>SideHeadCenter</debugLabel>
+                  <tagDef>Funeral_SideHeadCenter</tagDef>
+                  <role>SidePart</role>
+                  <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Side_HeadCenter</texPath>
+                  <texPathLeft>Things/Pawn/FuneralOfDeadButterflies/Parts/Left/Side_HeadCenter</texPathLeft>
+                  <baseLayer>12</baseLayer>
+                </li>
+              </children>
+            </li>
+          </children>
+        </li>
+
+        <!-- ==================== 3. OPEN-COFFIN RIG (Breached Coffin Eruption) ==================== -->
+        <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+          <debugLabel>FuneralOpenRoot</debugLabel>
+          <tagDef>Funeral_OpenRoot</tagDef>
+          <role>OpenRoot</role>
+          <useGraphic>false</useGraphic>
+          <formScale>2.05</formScale>
+          <flipOnWest>true</flipOnWest>
+          <children>
+            <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+              <debugLabel>OpenBody</debugLabel>
+              <tagDef>Funeral_OpenBody</tagDef>
+              <role>OpenPart</role>
+              <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Open_Body</texPath>
+              <texPathLeft>Things/Pawn/FuneralOfDeadButterflies/Parts/Left/Open_Body</texPathLeft>
+              <baseLayer>8</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+                  <debugLabel>OpenHeadWingOuter</debugLabel>
+                  <tagDef>Funeral_OpenHeadWingOuter</tagDef>
+                  <role>OpenPart</role>
+                  <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Open_HeadWingOuter</texPath>
+                  <texPathLeft>Things/Pawn/FuneralOfDeadButterflies/Parts/Left/Open_HeadWingOuter</texPathLeft>
+                  <baseLayer>9.2</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+                  <debugLabel>OpenHeadWingInner</debugLabel>
+                  <tagDef>Funeral_OpenHeadWingInner</tagDef>
+                  <role>OpenPart</role>
+                  <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Open_HeadWingInner</texPath>
+                  <texPathLeft>Things/Pawn/FuneralOfDeadButterflies/Parts/Left/Open_HeadWingInner</texPathLeft>
+                  <baseLayer>9.5</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+                  <debugLabel>OpenHeadCenter</debugLabel>
+                  <tagDef>Funeral_OpenHeadCenter</tagDef>
+                  <role>OpenPart</role>
+                  <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Open_HeadCenter</texPath>
+                  <texPathLeft>Things/Pawn/FuneralOfDeadButterflies/Parts/Left/Open_HeadCenter</texPathLeft>
+                  <baseLayer>9.8</baseLayer>
+                </li>
+              </children>
+            </li>
+            <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+              <debugLabel>OpenCoffinBox</debugLabel>
+              <tagDef>Funeral_OpenCoffinBox</tagDef>
+              <role>OpenPart</role>
+              <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Open_CoffinBox</texPath>
+              <texPathLeft>Things/Pawn/FuneralOfDeadButterflies/Parts/Left/Open_CoffinBox</texPathLeft>
+              <baseLayer>10.5</baseLayer>
+            </li>
+            <li Class="LCAbnormalities.FuneralOfDeadButterflies.PawnRenderNodeProperties_FuneralPart">
+              <debugLabel>OpenCoffinLid</debugLabel>
+              <tagDef>Funeral_OpenCoffinLid</tagDef>
+              <role>OpenPart</role>
+              <texPath>Things/Pawn/FuneralOfDeadButterflies/Parts/Open_CoffinLid</texPath>
+              <texPathLeft>Things/Pawn/FuneralOfDeadButterflies/Parts/Left/Open_CoffinLid</texPathLeft>
+              <baseLayer>11.5</baseLayer>
+            </li>
+          </children>
+        </li>
+
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

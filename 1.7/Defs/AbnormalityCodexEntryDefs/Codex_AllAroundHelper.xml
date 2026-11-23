@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>AllAroundHelper</defName>
+    <label>All-Around Helper</label>
+    <description>All-Around Helper (T-05-41) is a spherical housekeeping robot that interprets bloodstains as dust to be scrubbed.\nWhen breached, it revs up its hidden buzzsaws and launches blinding charge dashes across corridors.</description>
+    <uiIconPath>UI/CodexEntries/AllAroundHelper</uiIconPath>
+    <category>HE</category>
+    <orderInCategory>870</orderInCategory>
+    <linkedThings>
+      <li>AllAroundHelper</li>
+      <li>AllAroundHelperEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

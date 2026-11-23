@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ==================== 1. IDLE (Bird_Default_1_Baked + Bird_Default_2_Baked, 240t = 4.0s) ==================== -->
+  <!-- Gentle breathing bob, subtle leg bend, synchronized 17-eye glancing, and smooth pendulum lantern sway -->
+  <AnimationDef>
+    <defName>BigBird_Idle</defName>
+    <durationTicks>240</durationTicks>
+    <startOnRandomTick>true</startOnRandomTick>
+    <playWhenDowned>true</playWhenDowned>
+    <keyframeParts>
+      <li>
+        <key>BigBird_Body</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4424, 0.4136)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+            <li><tick>60</tick><offset>(0,0,0.016)</offset><angle>-1.8</angle><scale>(0.992,1,1.014)</scale></li>
+            <li><tick>120</tick><offset>(0,0,0.002)</offset><angle>0.8</angle><scale>(1.010,1,0.990)</scale></li>
+            <li><tick>180</tick><offset>(0,0,0.014)</offset><angle>-1.2</angle><scale>(0.994,1,1.012)</scale></li>
+            <li><tick>240</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- All 17 pupils glancing slowly side to side (Bird_Default_2_Baked) -->
+      <li>
+        <key>BigBird_EyePupils</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4654, 0.6382)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset></li>
+            <li><tick>45</tick><offset>(0,0,0)</offset></li>
+            <li><tick>65</tick><offset>(0.011,0,0.004)</offset></li>
+            <li><tick>115</tick><offset>(0.011,0,0.004)</offset></li>
+            <li><tick>135</tick><offset>(-0.010,0,-0.003)</offset></li>
+            <li><tick>185</tick><offset>(-0.010,0,-0.003)</offset></li>
+            <li><tick>210</tick><offset>(0,0,0)</offset></li>
+            <li><tick>240</tick><offset>(0,0,0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_UpperArm</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5311, 0.4574)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>65</tick><angle>-5.5</angle></li>
+            <li><tick>130</tick><angle>4.0</angle></li>
+            <li><tick>190</tick><angle>-3.5</angle></li>
+            <li><tick>240</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_ForearmHand</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5726, 0.3629)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>70</tick><angle>6.5</angle></li>
+            <li><tick>140</tick><angle>-5.0</angle></li>
+            <li><tick>200</tick><angle>4.0</angle></li>
+            <li><tick>240</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_Lantern</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.7430, 0.4159)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>45</tick><angle>-6.0</angle></li>
+            <li><tick>105</tick><angle>7.5</angle></li>
+            <li><tick>165</tick><angle>-5.5</angle></li>
+            <li><tick>210</tick><angle>4.0</angle></li>
+            <li><tick>240</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_BackThigh</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3814, 0.3998)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>120</tick><angle>3.5</angle></li>
+            <li><tick>240</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_BackShinFoot</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3330, 0.3146)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>120</tick><angle>-3.5</angle></li>
+            <li><tick>240</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_FrontThigh</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4804, 0.4021)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>120</tick><angle>3.0</angle></li>
+            <li><tick>240</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_FrontShinFoot</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4297, 0.3076)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>120</tick><angle>-3.0</angle></li>
+            <li><tick>240</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 2. CONTAINED WORK (Bird_Work_Baked, 180t = 3.0s) ==================== -->
+  <!-- Deeper curious crouch/sway while holding the golden lamp closer to observe the working employee -->
+  <AnimationDef>
+    <defName>BigBird_Work</defName>
+    <durationTicks>180</durationTicks>
+    <playWhenDowned>true</playWhenDowned>
+    <keyframeParts>
+      <li>
+        <key>BigBird_Body</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4424, 0.4136)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+            <li><tick>45</tick><offset>(0.012,0,-0.024)</offset><angle>4.5</angle><scale>(1.018,1,0.985)</scale></li>
+            <li><tick>90</tick><offset>(0.018,0,-0.032)</offset><angle>6.5</angle><scale>(1.024,1,0.980)</scale></li>
+            <li><tick>135</tick><offset>(0.008,0,-0.012)</offset><angle>2.5</angle><scale>(1.010,1,0.992)</scale></li>
+            <li><tick>180</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_EyePupils</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4654, 0.6382)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.006,0,-0.002)</offset></li>
+            <li><tick>90</tick><offset>(0.014,0,-0.006)</offset></li>
+            <li><tick>180</tick><offset>(0.006,0,-0.002)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_UpperArm</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5311, 0.4574)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>60</tick><angle>-10.0</angle></li>
+            <li><tick>120</tick><angle>-4.0</angle></li>
+            <li><tick>180</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_ForearmHand</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5726, 0.3629)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>60</tick><angle>11.0</angle></li>
+            <li><tick>120</tick><angle>-6.0</angle></li>
+            <li><tick>180</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_Lantern</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.7430, 0.4159)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>45</tick><angle>-10.0</angle></li>
+            <li><tick>100</tick><angle>11.0</angle></li>
+            <li><tick>145</tick><angle>-6.0</angle></li>
+            <li><tick>180</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_BackThigh</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3814, 0.3998)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>90</tick><angle>11.0</angle></li>
+            <li><tick>180</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_BackShinFoot</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3330, 0.3146)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>90</tick><angle>-11.0</angle></li>
+            <li><tick>180</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_FrontThigh</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4804, 0.4021)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>90</tick><angle>9.5</angle></li>
+            <li><tick>180</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_FrontShinFoot</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4297, 0.3076)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>90</tick><angle>-9.5</angle></li>
+            <li><tick>180</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 3. CONTAINED MIND ATTACK (Bird_MindAttack_Baked, 90t = 1.5s) ==================== -->
+  <!-- Raises lantern arm high and vigorously swings the lamp to emit Black work damage -->
+  <AnimationDef>
+    <defName>BigBird_MindAttack</defName>
+    <durationTicks>90</durationTicks>
+    <playWhenDowned>true</playWhenDowned>
+    <keyframeParts>
+      <li>
+        <key>BigBird_Body</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4424, 0.4136)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+            <li><tick>22</tick><offset>(-0.012,0,0.032)</offset><angle>-6.0</angle><scale>(0.975,1,1.032)</scale></li>
+            <li><tick>46</tick><offset>(0.018,0,0.012)</offset><angle>5.0</angle><scale>(1.030,1,0.978)</scale></li>
+            <li><tick>68</tick><offset>(0.008,0,0.020)</offset><angle>-2.0</angle><scale>(0.990,1,1.015)</scale></li>
+            <li><tick>90</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_UpperArm</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5311, 0.4574)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>20</tick><angle>-28.0</angle></li>
+            <li><tick>44</tick><angle>-14.0</angle></li>
+            <li><tick>64</tick><angle>-24.0</angle></li>
+            <li><tick>90</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_ForearmHand</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5726, 0.3629)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>20</tick><angle>-16.0</angle></li>
+            <li><tick>42</tick><angle>22.0</angle></li>
+            <li><tick>64</tick><angle>-18.0</angle></li>
+            <li><tick>90</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_Lantern</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.7430, 0.4159)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>18</tick><angle>24.0</angle></li>
+            <li><tick>36</tick><angle>-32.0</angle></li>
+            <li><tick>54</tick><angle>28.0</angle></li>
+            <li><tick>72</tick><angle>-18.0</angle></li>
+            <li><tick>90</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_UpperBeak</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6555, 0.5806)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>30</tick><angle>-6.5</angle></li>
+            <li><tick>60</tick><angle>-4.0</angle></li>
+            <li><tick>90</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 4. BREACHED WALK (Bird_Walk_Baked, 96t = 1.6s) ==================== -->
+  <!-- Heavy lumbering bipedal bird stride: alternating thigh/knee flexion, weighty body bob, swinging lantern -->
+  <AnimationDef>
+    <defName>BigBird_Walk</defName>
+    <durationTicks>96</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>BigBird_Body</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4424, 0.4136)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,-0.022)</offset><angle>3.5</angle><scale>(1.015,1,0.986)</scale></li>
+            <li><tick>24</tick><offset>(0,0,0.036)</offset><angle>-2.5</angle><scale>(0.986,1,1.018)</scale></li>
+            <li><tick>48</tick><offset>(0,0,-0.022)</offset><angle>4.0</angle><scale>(1.015,1,0.986)</scale></li>
+            <li><tick>72</tick><offset>(0,0,0.034)</offset><angle>-2.2</angle><scale>(0.988,1,1.016)</scale></li>
+            <li><tick>96</tick><offset>(0,0,-0.022)</offset><angle>3.5</angle><scale>(1.015,1,0.986)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Back Leg stride (forward at 24t, planted/pushing back at 72t) -->
+      <li>
+        <key>BigBird_BackThigh</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3814, 0.3998)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>14.0</angle></li>
+            <li><tick>24</tick><angle>-26.0</angle></li>
+            <li><tick>48</tick><angle>-14.0</angle></li>
+            <li><tick>72</tick><angle>22.0</angle></li>
+            <li><tick>96</tick><angle>14.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_BackShinFoot</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3330, 0.3146)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-12.0</angle></li>
+            <li><tick>24</tick><angle>28.0</angle></li>
+            <li><tick>48</tick><angle>6.0</angle></li>
+            <li><tick>72</tick><angle>-20.0</angle></li>
+            <li><tick>96</tick><angle>-12.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Front Leg stride (180 deg out of phase: pushing back at 24t, swinging forward at 72t) -->
+      <li>
+        <key>BigBird_FrontThigh</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4804, 0.4021)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-14.0</angle></li>
+            <li><tick>24</tick><angle>24.0</angle></li>
+            <li><tick>48</tick><angle>14.0</angle></li>
+            <li><tick>72</tick><angle>-28.0</angle></li>
+            <li><tick>96</tick><angle>-14.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_FrontShinFoot</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4297, 0.3076)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>8.0</angle></li>
+            <li><tick>24</tick><angle>-22.0</angle></li>
+            <li><tick>48</tick><angle>-12.0</angle></li>
+            <li><tick>72</tick><angle>30.0</angle></li>
+            <li><tick>96</tick><angle>8.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Counter-swinging lantern arm -->
+      <li>
+        <key>BigBird_UpperArm</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5311, 0.4574)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>8.0</angle></li>
+            <li><tick>24</tick><angle>-10.0</angle></li>
+            <li><tick>48</tick><angle>9.0</angle></li>
+            <li><tick>72</tick><angle>-9.0</angle></li>
+            <li><tick>96</tick><angle>8.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_ForearmHand</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5726, 0.3629)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>-10.0</angle></li>
+            <li><tick>24</tick><angle>12.0</angle></li>
+            <li><tick>48</tick><angle>-11.0</angle></li>
+            <li><tick>72</tick><angle>10.0</angle></li>
+            <li><tick>96</tick><angle>-10.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_Lantern</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.7430, 0.4159)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>12.0</angle></li>
+            <li><tick>24</tick><angle>-14.0</angle></li>
+            <li><tick>48</tick><angle>13.0</angle></li>
+            <li><tick>72</tick><angle>-13.0</angle></li>
+            <li><tick>96</tick><angle>12.0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 5. LANTERN ENCHANTMENT / LURE (Bigbird_attract_Baked, 120t = 2.0s) ==================== -->
+  <!-- Big Bird lifts its glowing golden lantern high and sweeps it side-to-side, opening its beak slightly as all 17 eyes flare -->
+  <AnimationDef>
+    <defName>BigBird_Attract</defName>
+    <durationTicks>120</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>BigBird_Body</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4424, 0.4136)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+            <li><tick>28</tick><offset>(-0.015,0,0.042)</offset><angle>-6.5</angle><scale>(0.972,1,1.038)</scale></li>
+            <li><tick>56</tick><offset>(0.020,0,0.025)</offset><angle>4.0</angle><scale>(1.032,1,0.976)</scale></li>
+            <li><tick>88</tick><offset>(-0.010,0,0.032)</offset><angle>-4.5</angle><scale>(0.985,1,1.022)</scale></li>
+            <li><tick>120</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_EyePupils</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4654, 0.6382)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset></li>
+            <li><tick>30</tick><offset>(0.014,0,0.006)</offset></li>
+            <li><tick>60</tick><offset>(0.016,0,-0.004)</offset></li>
+            <li><tick>90</tick><offset>(0.010,0,0.004)</offset></li>
+            <li><tick>120</tick><offset>(0,0,0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_UpperBeak</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6555, 0.5806)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>40</tick><angle>-7.0</angle></li>
+            <li><tick>75</tick><angle>-5.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Sweeping arm lifting the lantern dramatically forward & upward -->
+      <li>
+        <key>BigBird_UpperArm</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5311, 0.4574)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>26</tick><angle>-32.0</angle></li>
+            <li><tick>56</tick><angle>-12.0</angle></li>
+            <li><tick>86</tick><angle>-28.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_ForearmHand</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5726, 0.3629)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>26</tick><angle>-14.0</angle></li>
+            <li><tick>56</tick><angle>26.0</angle></li>
+            <li><tick>86</tick><angle>-18.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Wide hypnotic pendulum swing of the golden lantern (peaks at tick 45 & 76) -->
+      <li>
+        <key>BigBird_Lantern</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.7430, 0.4159)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>22</tick><angle>28.0</angle></li>
+            <li><tick>46</tick><angle>-38.0</angle></li>
+            <li><tick>72</tick><angle>34.0</angle></li>
+            <li><tick>96</tick><angle>-22.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 6. DECAPITATION BITE EXECUTION (Bird_Deadshot_Baked, 120t = 2.0s) ==================== -->
+  <!-- Crouches forward, pulls lantern arm down clear of jaws, rips beak wide open exposing crimson fanged maw (18t..54t),
+       SLAMS JAWS SHUT at tick 62 (synchronized with CompBigBird decapitation damage + crimson-eye VFX!), then settles back -->
+  <AnimationDef>
+    <defName>BigBird_Deadshot</defName>
+    <durationTicks>120</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>BigBird_Body</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4424, 0.4136)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+            <li><tick>22</tick><offset>(-0.045,0,0.055)</offset><angle>-12.0</angle><scale>(0.960,1,1.055)</scale></li>
+            <li><tick>52</tick><offset>(-0.055,0,0.068)</offset><angle>-14.5</angle><scale>(0.955,1,1.062)</scale></li>
+            <li><tick>62</tick><offset>(0.150,0,-0.045)</offset><angle>14.0</angle><scale>(1.105,1,0.920)</scale></li>
+            <li><tick>74</tick><offset>(0.115,0,-0.032)</offset><angle>9.0</angle><scale>(1.055,1,0.955)</scale></li>
+            <li><tick>98</tick><offset>(0.025,0,-0.008)</offset><angle>2.0</angle><scale>(1.012,1,0.990)</scale></li>
+            <li><tick>120</tick><offset>(0,0,0)</offset><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_EyePupils</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4654, 0.6382)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset></li>
+            <li><tick>22</tick><offset>(0.015,0,-0.006)</offset></li>
+            <li><tick>62</tick><offset>(0.018,0,-0.010)</offset></li>
+            <li><tick>95</tick><offset>(0.008,0,-0.004)</offset></li>
+            <li><tick>120</tick><offset>(0,0,0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Upper beak rips wide upward (-28 deg), holds ominously, SLAMS shut at tick 62! -->
+      <li>
+        <key>BigBird_UpperBeak</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6555, 0.5806)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>22</tick><angle>-26.0</angle></li>
+            <li><tick>52</tick><angle>-30.0</angle></li>
+            <li><tick>62</tick><angle>4.0</angle></li>
+            <li><tick>74</tick><angle>2.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Lower beak drops dramatically downward (+44 deg), holds ominously, SLAMS shut at tick 62! -->
+      <li>
+        <key>BigBird_LowerBeak</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6555, 0.5806)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>22</tick><angle>40.0</angle></li>
+            <li><tick>52</tick><angle>45.0</angle></li>
+            <li><tick>62</tick><angle>-4.0</angle></li>
+            <li><tick>74</tick><angle>-2.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Crimson fanged maw expands while jaws are wide open and collapses on chomp -->
+      <li>
+        <key>BigBird_MouthInterior</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.6555, 0.5806)</pivot>
+          <keyframes>
+            <li><tick>0</tick><scale>(0.2,1,0.1)</scale></li>
+            <li><tick>22</tick><scale>(1.05,1,1.08)</scale></li>
+            <li><tick>52</tick><scale>(1.14,1,1.16)</scale></li>
+            <li><tick>60</tick><scale>(0.55,1,0.35)</scale></li>
+            <li><tick>63</tick><scale>(0.05,1,0.05)</scale></li>
+            <li><tick>120</tick><scale>(0.05,1,0.05)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Lantern arm pulls down and back clear of the jaws during the bite -->
+      <li>
+        <key>BigBird_UpperArm</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5311, 0.4574)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>22</tick><angle>32.0</angle></li>
+            <li><tick>56</tick><angle>36.0</angle></li>
+            <li><tick>66</tick><angle>18.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_ForearmHand</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5726, 0.3629)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>22</tick><angle>18.0</angle></li>
+            <li><tick>56</tick><angle>22.0</angle></li>
+            <li><tick>66</tick><angle>-14.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_Lantern</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.7430, 0.4159)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>24</tick><angle>-36.0</angle></li>
+            <li><tick>58</tick><angle>-44.0</angle></li>
+            <li><tick>68</tick><angle>26.0</angle></li>
+            <li><tick>94</tick><angle>-14.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <!-- Legs brace deeply for the lunge -->
+      <li>
+        <key>BigBird_BackThigh</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3814, 0.3998)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>28</tick><angle>-16.0</angle></li>
+            <li><tick>62</tick><angle>20.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_BackShinFoot</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.3330, 0.3146)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>28</tick><angle>16.0</angle></li>
+            <li><tick>62</tick><angle>-18.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_FrontThigh</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4804, 0.4021)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>28</tick><angle>-14.0</angle></li>
+            <li><tick>62</tick><angle>18.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>BigBird_FrontShinFoot</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.4297, 0.3076)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>28</tick><angle>14.0</angle></li>
+            <li><tick>62</tick><angle>-16.0</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+</Defs>

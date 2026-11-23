@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Perch parts (contained on holding platform) -->
+  <PawnRenderNodeTagDef><defName>PunishingBird_PerchRoot</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>PunishingBird_PerchTrunk</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>PunishingBird_PerchChain</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>PunishingBird_PerchChainBack</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>PunishingBird_PerchBlade</defName></PawnRenderNodeTagDef>
+
+  <!-- Bird rig parts (SmallBirdDef.fbx) -->
+  <PawnRenderNodeTagDef><defName>PunishingBird_BirdRoot</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>PunishingBird_Body</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>PunishingBird_Feet</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>PunishingBird_FoldedWing</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>PunishingBird_Face</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>PunishingBird_FlyWingFront</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>PunishingBird_FlyWingBack</defName></PawnRenderNodeTagDef>
+
+  <!-- Enraged four-jaw maw (SmallBirdDef.fbx EAT1..4) -->
+  <PawnRenderNodeTagDef><defName>PunishingBird_JawRoot</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>PunishingBird_JawEat1</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>PunishingBird_JawEat2</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>PunishingBird_JawEat3</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>PunishingBird_JawEat4</defName></PawnRenderNodeTagDef>
+
+</Defs>

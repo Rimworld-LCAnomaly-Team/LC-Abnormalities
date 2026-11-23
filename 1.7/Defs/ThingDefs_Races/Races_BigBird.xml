@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_EntityBase">
+    <defName>BigBird</defName>
+    <label>Big Bird</label>
+    <description>A hulking, many-eyed feathered guardian carrying an eternal golden lantern (O-02-40).\n\nEvery 5 humanlike deaths on the map lower its Qliphoth Counter (max 5); Good work restores +1 while Bad work drops -1. Upon escaping, it enchants nearby humanlikes with its glowing lamp, drawing them helplessly toward its massive beak unless snapped out of the trance.</description>
+    <uiIconPath>UI/CodexEntries/BigBird</uiIconPath>
+    <thingClass>LCAbnormalities.BigBird.LC_BigBirdPawn</thingClass>
+    <statBases>
+      <MoveSpeed>2.4</MoveSpeed>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-200</ComfyTemperatureMin>
+      <ComfyTemperatureMax>150</ComfyTemperatureMax>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <LC_MinimumContainmentStrength>90</LC_MinimumContainmentStrength>
+      <StaggerDurationFactor>0.05</StaggerDurationFactor>
+      <ToxicResistance>1</ToxicResistance>
+    </statBases>
+    <tools>
+      <li>
+        <label>enormous beak</label>
+        <capacities><li>Bite</li></capacities>
+        <power>24</power>
+        <cooldownTime>2.0</cooldownTime>
+      </li>
+    </tools>
+    <race>
+      <body>OneSin</body>
+      <baseBodySize>2.4</baseBodySize>
+      <baseHealthScale>11.5</baseHealthScale>
+      <intelligence>ToolUser</intelligence>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <fleshType>LC_AbnormalityOrganic</fleshType>
+      <foodType>None</foodType>
+      <hasCorpse>false</hasCorpse>
+      <lifeExpectancy>1000</lifeExpectancy>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <disableIgniteVerb>true</disableIgniteVerb>
+      <trainability>None</trainability>
+      <renderTree>BigBird</renderTree>
+      <thinkTreeMain>BigBirdMain</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+      <lifeStageAges>
+        <li>
+          <def>LC_EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="LCAbnormalities.BigBird.CompProperties_BigBird">
+        <qliphothCountMax>5</qliphothCountMax>
+        <studySucessRateBase>0.0</studySucessRateBase>
+        <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>true</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
+        <dyingFxDef>DyingBigBird</dyingFxDef>
+        <workDamageDef>LC_BlackDamage</workDamageDef>
+        <workDamageRange>2~6</workDamageRange>
+        <escapedLetterLabelKey>LC_BigBird_EscapedLabel</escapedLetterLabelKey>
+        <escapedLetterTextKey>LC_BigBird_EscapedText</escapedLetterTextKey>
+        <killedLetterLabelKey>LC_BigBird_SuppressedLabel</killedLetterLabelKey>
+        <killedLetterTextKey>LC_BigBird_SuppressedText</killedLetterTextKey>
+        <instinctProbs>
+          <li>0.45</li><li>0.45</li><li>0.45</li><li>0.50</li><li>0.50</li>
+        </instinctProbs>
+        <insightProbs>
+          <li>0.35</li><li>0.35</li><li>0.35</li><li>0.35</li><li>0.35</li>
+        </insightProbs>
+        <attachmentProbs>
+          <li>0.40</li><li>0.45</li><li>0.50</li><li>0.55</li><li>0.55</li>
+        </attachmentProbs>
+        <repressionProbs>
+          <li>0.25</li><li>0.20</li><li>0.15</li><li>0.10</li><li>0.0</li>
+        </repressionProbs>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <lookForTargetOnEscape>true</lookForTargetOnEscape>
+        <hasAnimation>true</hasAnimation>
+        <heldDrawScale>1.0</heldDrawScale>
+        <heldDrawOffset>(0, 0, -0.10)</heldDrawOffset>
+      </li>
+      <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
+        <frequencyTicks>60000</frequencyTicks>
+        <studyTimesPeriod>1</studyTimesPeriod>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <speedOffsetsByProgress>
+          <li>0</li><li>0.03</li><li>0.06</li><li>0.09</li><li>0.12</li>
+        </speedOffsetsByProgress>
+        <successOffsetsByProgress>
+          <li>0</li><li>0.03</li><li>0.06</li><li>0.09</li><li>0.12</li>
+        </successOffsetsByProgress>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_PeBoxProduce">
+        <peBoxDef>EnkephalinBox</peBoxDef>
+        <amountProdueRangeNormal>8~13</amountProdueRangeNormal>
+        <amountProdueMax>20</amountProdueMax>
+        <boxTexOffsetZ>0.0668</boxTexOffsetZ>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
+        <accessoryDef>Accessory_BigBird</accessoryDef>
+        <accessoryChance>0.03</accessoryChance>
+        <unlockLevel>2</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
+        <weaponExtracted>EgoWeapon_BigBird</weaponExtracted>
+        <weaponIconPath>UI/Commands/ExtractEGO_BigBird_Weapon</weaponIconPath>
+        <amountMaxWeapon>1</amountMaxWeapon>
+        <weaponExtractedNeed>70</weaponExtractedNeed>
+        <armorExtracted>Apparel_BigBirdSuit</armorExtracted>
+        <armorIconPath>UI/Commands/ExtractEGO_BigBird_Armor</armorIconPath>
+        <amountMaxArmor>1</amountMaxArmor>
+        <armorExtractedNeed>60</armorExtractedNeed>
+        <unlockLevel>3</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>4</threshold>
+            <label>Observation Level: I</label>
+            <text>Attachment and Instinct work reliably calm Big Bird, and Good work restores +1 Qliphoth Counter (max 5). Avoid Repression.</text>
+          </li>
+          <li>
+            <threshold>9</threshold>
+            <label>Observation Level: II</label>
+            <text>Every 5 humanlike deaths anywhere on the map lower its Qliphoth Counter by 1—watch Big Bird closely during raids and Ordeals.\nUnlocks the E.G.O. Gift 'Lamp'.</text>
+          </li>
+          <li>
+            <threshold>15</threshold>
+            <label>Observation Level: III</label>
+            <text>When breached, Big Bird hypnotizes nearby humanlikes with its golden lamp, luring them in for a lethal Black bite. Select entranced colonists and use "Snap Out of Trance" to free them!</text>
+          </li>
+          <li>
+            <threshold>20</threshold>
+            <label>Observation Level: IV</label>
+            <text>One of the Three Birds of the Black Forest. Resistant to Black damage (0.5x) but vulnerable to White (1.2x) and Pale (1.5x).\nUnlocks the WAW E.G.O. Hammer and Suit 'Lamp'.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>WAW</abnormalityCategoryDef>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>0.8</redResistance>
+        <whiteResistance>1.2</whiteResistance>
+        <blackResistance>0.5</blackResistance>
+        <paleResistance>1.5</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

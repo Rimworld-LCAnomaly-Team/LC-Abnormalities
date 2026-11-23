@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_VoidDreamSleepOrbFX</defName>
+    <label>void dream light orb</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <thingClass>LCAbnormalities.VoidDream.Thing_VoidDreamSleepOrb</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_VoidDreamCrowWaveFX</defName>
+    <label>void dream hypnotic wave</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <thingClass>LCAbnormalities.VoidDream.Thing_VoidDreamCrowWave</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_VoidDreamSleepAuraFX</defName>
+    <label>void dream slumber cloud</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <thingClass>LCAbnormalities.VoidDream.Thing_VoidDreamSleepAura</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_VoidDreamNightmareBurstFX</defName>
+    <label>void dream nightmare shatter</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <thingClass>LCAbnormalities.VoidDream.Thing_VoidDreamNightmareBurst</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+  </ThingDef>
+
+</Defs>

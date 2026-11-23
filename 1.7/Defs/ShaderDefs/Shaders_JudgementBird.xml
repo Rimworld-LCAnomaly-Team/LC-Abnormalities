@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderDef>
+    <defName>LC_JudgementPaleField</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_JudgementVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_JudgementPaleField.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3157</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_JudgementScaleGlow</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_JudgementVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_JudgementScaleGlow.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3158</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_JustitiaPaleSlash</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_JudgementVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_JustitiaPaleSlash.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3159</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+</Defs>

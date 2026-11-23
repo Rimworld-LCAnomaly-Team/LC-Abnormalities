@@ -1,65 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <PawnRenderTreeDef>
-    <defName>ScorchedGirl</defName>
-    <root Class="PawnRenderNodeProperties_Parent">
-      <debugLabel>Root</debugLabel>
-      <tagDef>Root</tagDef>
-      <children>
-        <li Class="LCAbnormalities.Shared.PawnRenderNodeProperties_DynamicEntity">
-          <debugLabel>Body</debugLabel>
-          <tagDef>Body</tagDef>
-          <texPath>Things/Pawn/ScorchedGirl/ScorchedGirl</texPath>
-          <baseLayer>4</baseLayer>
-          <baseDrawSize>1.75,1.75</baseDrawSize>
-          <alternateTexPaths>
-            <li>Things/Pawn/ScorchedGirl/ScorchedGirl_Ignited</li>
-          </alternateTexPaths>
-        </li>
-      </children>
-    </root>
-  </PawnRenderTreeDef>
+  <!-- ScorchedGirl RenderTree moved to ScorchedGirlRenderTreeDefs.xml -->
 
-  <PawnRenderTreeDef>
-    <defName>DerFreischutz</defName>
-    <root Class="PawnRenderNodeProperties_Parent">
-      <debugLabel>Root</debugLabel>
-      <tagDef>Root</tagDef>
-      <children>
-        <li Class="LCAbnormalities.Shared.PawnRenderNodeProperties_DynamicEntity">
-          <debugLabel>Body</debugLabel>
-          <tagDef>Body</tagDef>
-          <texPath>Things/Pawn/DerFreischutz/DerFreischutz</texPath>
-          <baseLayer>4</baseLayer>
-          <baseDrawSize>1.9,1.9</baseDrawSize>
-          <alternateTexPaths>
-            <li>Things/Pawn/DerFreischutz/DerFreischutz_Aiming</li>
-          </alternateTexPaths>
-        </li>
-      </children>
-    </root>
-  </PawnRenderTreeDef>
+  <!-- DerFreischutz RenderTree moved to DerFreischutzRenderTreeDefs.xml -->
 
-  <PawnRenderTreeDef>
-    <defName>FuneralOfDeadButterflies</defName>
-    <root Class="PawnRenderNodeProperties_Parent">
-      <debugLabel>Root</debugLabel>
-      <tagDef>Root</tagDef>
-      <children>
-        <li Class="LCAbnormalities.Shared.PawnRenderNodeProperties_DynamicEntity">
-          <debugLabel>Body</debugLabel>
-          <tagDef>Body</tagDef>
-          <texPath>Things/Pawn/FuneralOfDeadButterflies/FuneralOfDeadButterflies</texPath>
-          <baseLayer>4</baseLayer>
-          <baseDrawSize>2.0,2.0</baseDrawSize>
-          <alternateTexPaths>
-            <li>Things/Pawn/FuneralOfDeadButterflies/FuneralOfDeadButterflies_Open</li>
-          </alternateTexPaths>
-        </li>
-      </children>
-    </root>
-  </PawnRenderTreeDef>
+  <!-- FuneralOfDeadButterflies RenderTree moved to FuneralOfDeadButterfliesRenderTreeDefs.xml -->
 
   <PawnRenderTreeDef>
     <defName>SnowQueen</defName>
