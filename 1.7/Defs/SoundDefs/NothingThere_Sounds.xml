@@ -134,6 +134,38 @@
   </SoundDef>
 
   <SoundDef>
+    <defName>NothingThere_BoneSpikeCharge</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/NothingThere/BoneSpike_Charge</clipPath>
+          </li>
+        </grains>
+        <volumeRange>34</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>NothingThere_BoneSpikeLaunch</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Pawn/NothingThere/BoneSpike_Launch</clipPath>
+          </li>
+        </grains>
+        <volumeRange>38</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
     <defName>NothingThere_BoneSpikeHit</defName>
     <context>MapOnly</context>
     <subSounds>

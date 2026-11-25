@@ -165,11 +165,16 @@ namespace NothingThere.Things
             UpdateAnimation(force: true);
         }
 
-        public void PlayDogAttackAnimation()
+        public void PlayDogAttackAnimation() => PlayDogAttackAnimation(variant2: false);
+
+        public void PlayDogAttackAnimation(bool variant2)
         {
-            if (Def.AnimationDefOf.NothingThere_DogAttack != null && Drawer?.renderer != null)
+            AnimationDef anim = (variant2 && Def.AnimationDefOf.NothingThere_DogAttack2 != null)
+                ? Def.AnimationDefOf.NothingThere_DogAttack2
+                : Def.AnimationDefOf.NothingThere_DogAttack;
+            if (anim != null && Drawer?.renderer != null)
             {
-                Drawer.renderer.SetAnimation(Def.AnimationDefOf.NothingThere_DogAttack);
+                Drawer.renderer.SetAnimation(anim);
             }
         }
 
@@ -220,7 +225,9 @@ namespace NothingThere.Things
                     }
                     else if (comp != null && comp.AttackAnimTicks > 0)
                     {
-                        desired = Def.AnimationDefOf.NothingThere_DogAttack;
+                        desired = (comp.UseDogAttackVariant2 && Def.AnimationDefOf.NothingThere_DogAttack2 != null)
+                            ? Def.AnimationDefOf.NothingThere_DogAttack2
+                            : Def.AnimationDefOf.NothingThere_DogAttack;
                     }
                     else
                     {

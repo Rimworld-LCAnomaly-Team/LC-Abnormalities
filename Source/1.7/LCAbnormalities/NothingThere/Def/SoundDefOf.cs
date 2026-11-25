@@ -14,6 +14,8 @@ namespace NothingThere.Def
         public static SoundDef NothingThere_Hatch;
         public static SoundDef NothingThere_Attack;
         public static SoundDef NothingThere_BoneSpikeCast;
+        public static SoundDef NothingThere_BoneSpikeCharge;
+        public static SoundDef NothingThere_BoneSpikeLaunch;
         public static SoundDef NothingThere_BoneSpikeHit;
         public static SoundDef NothingThere_GoodbyeCast;
         public static SoundDef NothingThere_GoodbyeFinish;

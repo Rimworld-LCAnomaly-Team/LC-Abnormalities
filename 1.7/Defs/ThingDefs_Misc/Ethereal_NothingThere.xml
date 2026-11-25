@@ -21,7 +21,7 @@
     <graphicData>
       <texPath>Things/Pawn/NothingThere/NothingThere_BoneSpike</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(0.75, 2.25)</drawSize>
+      <drawSize>(1.15, 2.15)</drawSize>
     </graphicData>
     <projectile>
       <damageDef>LC_NothingThere_BoneSpike</damageDef>

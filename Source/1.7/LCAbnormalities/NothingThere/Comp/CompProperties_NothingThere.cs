@@ -24,7 +24,7 @@ namespace NothingThere.Comp
         public int boneSpikeCooldownTicks = 300;
         public int throwWindupTicks = 44;
         public int throwRecoverTicks = 76;
-        public float boneSpikeMinRange = 4.5f;
+        public float boneSpikeMinRange = 0f;
         public float boneSpikeMaxRange = 16f;
         public int goodbyeCooldownTicks = 420;
         public int goodbyeWindupTicks = 120;

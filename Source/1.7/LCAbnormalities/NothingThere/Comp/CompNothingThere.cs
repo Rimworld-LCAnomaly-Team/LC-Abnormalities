@@ -43,6 +43,7 @@ namespace NothingThere.Comp
         private Pawn currentStudier = null;
         private int studyingGraceTicks = 0;
         private int attackAnimTicks = 0;
+        private bool useDogAttackVariant2 = false;
         private int throwWindupTicks = 0;
         private int throwRecoverTicks = 0;
         private Pawn throwTarget = null;
@@ -76,6 +77,8 @@ namespace NothingThere.Comp
         public int ThrowWindupTicks => throwWindupTicks;
 
         public int AttackAnimTicks => attackAnimTicks;
+
+        public bool UseDogAttackVariant2 => useDogAttackVariant2;
 
         public bool IsBeingStudiedNow => studyingGraceTicks > 0 && !Escaped;
 
@@ -400,6 +403,7 @@ namespace NothingThere.Comp
             goodbyeSlashTicks = 0;
             goodbyeTarget = null;
             attackAnimTicks = 0;
+            useDogAttackVariant2 = false;
             throwWindupTicks = 0;
             throwRecoverTicks = 0;
             throwTarget = null;
@@ -442,6 +446,7 @@ namespace NothingThere.Comp
             goodbyeSlashTicks = 0;
             goodbyeTarget = null;
             attackAnimTicks = 0;
+            useDogAttackVariant2 = false;
             throwWindupTicks = 0;
             throwRecoverTicks = 0;
             throwTarget = null;
@@ -461,6 +466,7 @@ namespace NothingThere.Comp
             goodbyeSlashTicks = 0;
             goodbyeTarget = null;
             attackAnimTicks = 0;
+            useDogAttackVariant2 = false;
             throwWindupTicks = 0;
             throwRecoverTicks = 0;
             throwTarget = null;
@@ -493,6 +499,7 @@ namespace NothingThere.Comp
             goodbyeSlashTicks = 0;
             goodbyeTarget = null;
             attackAnimTicks = 0;
+            useDogAttackVariant2 = false;
             throwWindupTicks = 0;
             throwRecoverTicks = 0;
             throwTarget = null;
@@ -585,7 +592,8 @@ namespace NothingThere.Comp
                     if (!HasDisguise)
                     {
                         attackAnimTicks = 37;
-                        SelfPawn?.PlayDogAttackAnimation();
+                        useDogAttackVariant2 = !useDogAttackVariant2;
+                        SelfPawn?.PlayDogAttackAnimation(useDogAttackVariant2);
                     }
 
                     DamageDef slashDef = Def.DamageDefOf.LC_NothingThere_RedSlash ?? LCAnomalyCore.Defs.DamageDefOf.LC_RedDamage;
@@ -669,6 +677,10 @@ namespace NothingThere.Comp
                 }
 
                 throwWindupTicks--;
+                if (throwWindupTicks == 24)
+                {
+                    PlayOneShotIfSpawned(Def.SoundDefOf.NothingThere_BoneSpikeCharge);
+                }
                 if (throwWindupTicks == 0)
                 {
                     LaunchBoneSpikeProjectile(throwTarget);
@@ -694,35 +706,27 @@ namespace NothingThere.Comp
 
             if (specialCheckCooldown <= 0)
             {
-                Pawn anyHostile = FindNearestHostileTarget(Props.boneSpikeMaxRange);
-                if (anyHostile != null)
+                Pawn clawTarget = boneSpikeCooldown <= 0 ? FindClawShotTarget(Props.boneSpikeMaxRange) : null;
+                Pawn closeTarget = goodbyeCooldown <= 0 ? FindNearestHostileTarget(Props.goodbyeRadius) : null;
+                if (clawTarget != null || closeTarget != null)
                 {
                     specialCheckCooldown = Props.specialCheckIntervalTicks;
                     if (Rand.Chance(specialAttackChance))
                     {
-                        if (Rand.Chance(Props.specialBoneSpikeShare))
+                        bool useClaw = (clawTarget != null && closeTarget != null)
+                            ? Rand.Chance(Props.specialBoneSpikeShare)
+                            : (clawTarget != null);
+
+                        specialAttackChance = Props.specialBaseChance;
+                        if (useClaw)
                         {
-                            if (boneSpikeCooldown <= 0)
-                            {
-                                Pawn rangedTarget = FindRangedTarget(2.0f, Props.boneSpikeMaxRange);
-                                if (rangedTarget != null)
-                                {
-                                    specialAttackChance = Props.specialBaseChance;
-                                    StartBoneSpikeThrow(rangedTarget);
-                                    return;
-                                }
-                            }
+                            StartBoneSpikeThrow(clawTarget);
                         }
-                        else if (goodbyeCooldown <= 0)
+                        else
                         {
-                            Pawn closeTarget = FindNearestHostileTarget(Props.goodbyeRadius);
-                            if (closeTarget != null)
-                            {
-                                specialAttackChance = Props.specialBaseChance;
-                                StartGoodbyeWindup(closeTarget);
-                                return;
-                            }
+                            StartGoodbyeWindup(closeTarget);
                         }
+                        return;
                     }
                 }
             }
@@ -814,6 +818,7 @@ namespace NothingThere.Comp
                 SelfPawn?.FaceCellHorizontal(target.Position);
             }
 
+            ThrowMoteText("LC_NothingThere_Voice_Hello".Translate(), new Color(0.95f, 0.2f, 0.2f));
             PlayOneShotIfSpawned(Def.SoundDefOf.NothingThere_BoneSpikeCast);
             SelfPawn?.PlayThrowAnimation();
         }
@@ -860,7 +865,7 @@ namespace NothingThere.Comp
 
             if (target == null || !target.Spawned || target.Dead || target.Map != SelfPawn.Map)
             {
-                target = FindRangedTarget(2f, Props.boneSpikeMaxRange);
+                target = FindClawShotTarget(Props.boneSpikeMaxRange);
             }
 
             ThingDef projDef = Def.ThingDefOf.NothingThere_BoneSpikeProj;
@@ -877,20 +882,52 @@ namespace NothingThere.Comp
             }
             else
             {
-                dir = Vector3.right;
+                dir = SelfPawn.IsFacingLeft ? Vector3.left : Vector3.right;
             }
 
-            Vector3 launchPos = SelfPawn.DrawPos + dir * 0.85f + new Vector3(0f, 0f, 0.2f);
+            IntVec3 farCell = ComputeClawPierceEndCell(SelfPawn.Map, SelfPawn.Position, target.Position, dir, Props.boneSpikeMaxRange);
+            Vector3 launchPos = SelfPawn.DrawPos + dir * 0.35f + new Vector3(0f, 0f, 0.15f);
             AbnormalityUtility.Burst(SelfPawn.Position, SelfPawn.Map, 0.6f);
+            PlayOneShotIfSpawned(Def.SoundDefOf.NothingThere_BoneSpikeLaunch);
 
             Projectile projectile = (Projectile)GenSpawn.Spawn(projDef, SelfPawn.Position, SelfPawn.Map);
             projectile?.Launch(
                 SelfPawn,
                 launchPos,
-                target,
-                target,
-                ProjectileHitFlags.IntendedTarget | ProjectileHitFlags.NonTargetPawns,
+                new LocalTargetInfo(farCell),
+                new LocalTargetInfo(farCell),
+                ProjectileHitFlags.IntendedTarget | ProjectileHitFlags.NonTargetWorld,
                 preventFriendlyFire: false);
+        }
+
+        private static IntVec3 ComputeClawPierceEndCell(Map map, IntVec3 origin, IntVec3 targetCell, Vector3 dir, float maxRange)
+        {
+            Vector3 start = origin.ToVector3Shifted();
+            IntVec3 bestCell = origin;
+            int steps = Mathf.Max(1, Mathf.RoundToInt(maxRange));
+
+            for (int d = 1; d <= steps; d++)
+            {
+                IntVec3 cell = (start + dir * d).ToIntVec3();
+                if (!cell.InBounds(map))
+                {
+                    break;
+                }
+
+                bestCell = cell;
+                Building edifice = cell.GetEdifice(map);
+                if (cell.Impassable(map) || (edifice != null && edifice.def.Fillage == FillCategory.Full && !(edifice is Building_Door { Open: true })))
+                {
+                    break;
+                }
+            }
+
+            if (bestCell == origin && targetCell.IsValid && targetCell.InBounds(map))
+            {
+                return targetCell;
+            }
+
+            return bestCell;
         }
 
         private void KillAndStealSkinContained(Pawn victim)
@@ -1087,7 +1124,7 @@ namespace NothingThere.Comp
             return best;
         }
 
-        private Pawn FindRangedTarget(float minRange, float maxRange)
+        private Pawn FindClawShotTarget(float maxRange)
         {
             Map map = SelfPawn?.MapHeld;
             IntVec3 pos = SelfPawn?.PositionHeld ?? IntVec3.Invalid;
@@ -1096,8 +1133,9 @@ namespace NothingThere.Comp
                 return null;
             }
 
-            float minSq = minRange * minRange;
             float maxSq = maxRange * maxRange;
+            float bestSq = float.MaxValue;
+            Pawn best = null;
             IReadOnlyList<Pawn> spawned = map.mapPawns.AllPawnsSpawned;
 
             for (int i = 0; i < spawned.Count; i++)
@@ -1109,13 +1147,14 @@ namespace NothingThere.Comp
                 }
 
                 float dSq = c.PositionHeld.DistanceToSquared(pos);
-                if (dSq >= minSq && dSq <= maxSq && GenSight.LineOfSight(pos, c.PositionHeld, map))
+                if (dSq <= maxSq && dSq < bestSq && (c.PositionHeld == pos || GenSight.LineOfSight(pos, c.PositionHeld, map)))
                 {
-                    return c;
+                    bestSq = dSq;
+                    best = c;
                 }
             }
 
-            return null;
+            return best;
         }
 
         private void PlayOneShotIfSpawned(SoundDef sound)
@@ -1153,6 +1192,7 @@ namespace NothingThere.Comp
             Scribe_References.Look(ref goodbyeTarget, "goodbyeTarget");
             Scribe_Values.Look(ref studyingGraceTicks, "studyingGraceTicks", 0);
             Scribe_Values.Look(ref attackAnimTicks, "attackAnimTicks", 0);
+            Scribe_Values.Look(ref useDogAttackVariant2, "useDogAttackVariant2", false);
             Scribe_Values.Look(ref throwWindupTicks, "throwWindupTicks", 0);
             Scribe_Values.Look(ref throwRecoverTicks, "throwRecoverTicks", 0);
             Scribe_References.Look(ref throwTarget, "throwTarget");

@@ -11,6 +11,7 @@ namespace NothingThere.Def
         public static AnimationDef NothingThere_DogWork;
         public static AnimationDef NothingThere_DogWalk;
         public static AnimationDef NothingThere_DogAttack;
+        public static AnimationDef NothingThere_DogAttack2;
         public static AnimationDef NothingThere_DisguiseIdle;
         public static AnimationDef NothingThere_DisguiseWalk;
         public static AnimationDef NothingThere_CocoonIdle;

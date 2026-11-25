@@ -370,6 +370,105 @@
     </keyframeParts>
   </AnimationDef>
 
+  <!-- Dog Attack 2 (37 ticks = 0.62s, 변신1_공격2_Baked: deeper crouch & pounce) -->
+  <AnimationDef>
+    <defName>NothingThere_DogAttack2</defName>
+    <durationTicks>37</durationTicks>
+    <keyframeParts>
+      <li>
+        <key>NothingThere_DogRoot</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0,0,0)</offset></li>
+            <li><tick>8</tick><offset>(-0.10,0,-0.04)</offset></li>
+            <li><tick>18</tick><offset>(0.30,0,0.04)</offset></li>
+            <li><tick>37</tick><offset>(0,0,0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>NothingThere_DogBody</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.516, 0.497)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>8</tick><angle>-16</angle></li>
+            <li><tick>18</tick><angle>18</angle></li>
+            <li><tick>37</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>NothingThere_DogTail</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.274, 0.485)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>8</tick><angle>-22</angle></li>
+            <li><tick>18</tick><angle>28</angle></li>
+            <li><tick>37</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>NothingThere_DogTongue</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.625, 0.485)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle><scale>(1,1,1)</scale></li>
+            <li><tick>8</tick><angle>-16</angle><scale>(1,1,1.08)</scale></li>
+            <li><tick>18</tick><angle>20</angle><scale>(1,1,1.22)</scale></li>
+            <li><tick>37</tick><angle>0</angle><scale>(1,1,1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>NothingThere_DogHeadArm</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.588, 0.630)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>8</tick><angle>46</angle></li>
+            <li><tick>18</tick><angle>-58</angle></li>
+            <li><tick>26</tick><angle>-18</angle></li>
+            <li><tick>37</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>NothingThere_DogFrontLeg</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.520, 0.388)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>8</tick><angle>34</angle></li>
+            <li><tick>18</tick><angle>-46</angle></li>
+            <li><tick>37</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>NothingThere_DogBackLeg</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.659, 0.353)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>8</tick><angle>20</angle></li>
+            <li><tick>18</tick><angle>-30</angle></li>
+            <li><tick>37</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
   <!-- ==================== 2. FORM 1 DISGUISED ==================== -->
 
   <AnimationDef>
@@ -754,7 +853,7 @@
     </keyframeParts>
   </AnimationDef>
 
-  <!-- True Ranged Throw: Bone-Jaw Spear Thrust (120 ticks = 2.0s; projectile fires at tick 44 when arm is outstretched) -->
+  <!-- True Ranged Throw: Skill 1 Kneeling Back-Hand Claw Shot (120 ticks = 2.0s; fires at tick 44) -->
   <AnimationDef>
     <defName>NothingThere_TrueThrow</defName>
     <durationTicks>120</durationTicks>
@@ -765,9 +864,10 @@
           <workerType>AnimationWorker_Keyframes</workerType>
           <keyframes>
             <li><tick>0</tick><offset>(0,0,0)</offset></li>
-            <li><tick>20</tick><offset>(-0.12,0,-0.02)</offset></li>
-            <li><tick>44</tick><offset>(0.24,0,0.04)</offset></li>
-            <li><tick>64</tick><offset>(0.14,0,0.01)</offset></li>
+            <li><tick>18</tick><offset>(-0.06,0,-0.14)</offset></li>
+            <li><tick>36</tick><offset>(-0.08,0,-0.17)</offset></li>
+            <li><tick>44</tick><offset>(0.18,0,-0.12)</offset></li>
+            <li><tick>68</tick><offset>(0.08,0,-0.08)</offset></li>
             <li><tick>120</tick><offset>(0,0,0)</offset></li>
           </keyframes>
         </value>
@@ -779,9 +879,10 @@
           <pivot>(0.486, 0.571)</pivot>
           <keyframes>
             <li><tick>0</tick><angle>0</angle></li>
-            <li><tick>20</tick><angle>-14</angle></li>
-            <li><tick>44</tick><angle>14</angle></li>
-            <li><tick>64</tick><angle>8</angle></li>
+            <li><tick>18</tick><angle>16</angle></li>
+            <li><tick>36</tick><angle>20</angle></li>
+            <li><tick>44</tick><angle>24</angle></li>
+            <li><tick>68</tick><angle>12</angle></li>
             <li><tick>120</tick><angle>0</angle></li>
           </keyframes>
         </value>
@@ -793,8 +894,22 @@
           <pivot>(0.547, 0.713)</pivot>
           <keyframes>
             <li><tick>0</tick><angle>0</angle></li>
-            <li><tick>20</tick><angle>-8</angle></li>
-            <li><tick>44</tick><angle>6</angle></li>
+            <li><tick>18</tick><angle>-12</angle></li>
+            <li><tick>36</tick><angle>-14</angle></li>
+            <li><tick>44</tick><angle>8</angle></li>
+            <li><tick>120</tick><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>NothingThere_TrueHeadHand</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.550, 0.801)</pivot>
+          <keyframes>
+            <li><tick>0</tick><angle>0</angle></li>
+            <li><tick>24</tick><angle>18</angle></li>
+            <li><tick>44</tick><angle>-24</angle></li>
             <li><tick>120</tick><angle>0</angle></li>
           </keyframes>
         </value>
@@ -806,9 +921,9 @@
           <pivot>(0.441, 0.697)</pivot>
           <keyframes>
             <li><tick>0</tick><angle>0</angle></li>
-            <li><tick>20</tick><angle>34</angle></li>
-            <li><tick>44</tick><angle>-82</angle></li>
-            <li><tick>56</tick><angle>-92</angle></li>
+            <li><tick>18</tick><angle>-26</angle></li>
+            <li><tick>36</tick><angle>-32</angle></li>
+            <li><tick>44</tick><angle>-18</angle></li>
             <li><tick>120</tick><angle>0</angle></li>
           </keyframes>
         </value>
@@ -820,9 +935,8 @@
           <pivot>(0.341, 0.508)</pivot>
           <keyframes>
             <li><tick>0</tick><angle>0</angle></li>
-            <li><tick>20</tick><angle>12</angle></li>
-            <li><tick>44</tick><angle>-12</angle><scale>(1.08,1,0.92)</scale></li>
-            <li><tick>56</tick><angle>-8</angle><scale>(1,1,1)</scale></li>
+            <li><tick>24</tick><angle>-14</angle></li>
+            <li><tick>44</tick><angle>-18</angle></li>
             <li><tick>120</tick><angle>0</angle></li>
           </keyframes>
         </value>
@@ -834,8 +948,10 @@
           <pivot>(0.572, 0.682)</pivot>
           <keyframes>
             <li><tick>0</tick><angle>0</angle></li>
-            <li><tick>20</tick><angle>18</angle></li>
-            <li><tick>44</tick><angle>32</angle></li>
+            <li><tick>18</tick><angle>42</angle></li>
+            <li><tick>36</tick><angle>56</angle></li>
+            <li><tick>44</tick><angle>-96</angle></li>
+            <li><tick>60</tick><angle>-82</angle></li>
             <li><tick>120</tick><angle>0</angle></li>
           </keyframes>
         </value>
@@ -847,7 +963,9 @@
           <pivot>(0.429, 0.499)</pivot>
           <keyframes>
             <li><tick>0</tick><angle>0</angle></li>
-            <li><tick>44</tick><angle>-12</angle></li>
+            <li><tick>18</tick><angle>-28</angle></li>
+            <li><tick>36</tick><angle>-32</angle></li>
+            <li><tick>44</tick><angle>-24</angle></li>
             <li><tick>120</tick><angle>0</angle></li>
           </keyframes>
         </value>
@@ -859,7 +977,9 @@
           <pivot>(0.490, 0.507)</pivot>
           <keyframes>
             <li><tick>0</tick><angle>0</angle></li>
-            <li><tick>44</tick><angle>12</angle></li>
+            <li><tick>18</tick><angle>34</angle></li>
+            <li><tick>36</tick><angle>38</angle></li>
+            <li><tick>44</tick><angle>28</angle></li>
             <li><tick>120</tick><angle>0</angle></li>
           </keyframes>
         </value>
