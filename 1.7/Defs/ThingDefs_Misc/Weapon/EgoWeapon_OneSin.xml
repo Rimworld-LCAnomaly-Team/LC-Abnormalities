@@ -33,6 +33,16 @@
         <cooldownTime>0.8</cooldownTime>
       </li>
     </tools>
+    <descriptionHyperlinks>
+      <AbilityDef>Penitence_Absolution</AbilityDef>
+    </descriptionHyperlinks>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_EquippableAbility">
+        <abilityDef>Penitence_Absolution</abilityDef>
+      </li>
+      <li Class="CompProperties_Styleable"/>
+    </comps>
     <modExtensions>
       <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
         <damageType>White</damageType>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>GrinderMk4_OverdriveRush</defName>
+    <label>Overdrive Rush</label>
+    <description>Spin Grinder Mk4 to peak RPM and dash along a crimson buzzsaw trail, carving hostiles within 2.5 cells through multiple rapid Red slashes and an overdrive cleave finale.</description>
+    <iconPath>UI/WeaponSkills/AllAroundHelper/GrinderMk4_OverdriveRush</iconPath>
+    <cooldownTicksRange>1020</cooldownTicksRange>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>LCAbnormalities.AllAroundHelper.Verb_CastAbility_GrinderMk4Rush</verbClass>
+      <range>6.0</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.65</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="LCAbnormalities.AllAroundHelper.CompProperties_AbilityGrinderMk4Rush">
+        <shredRadius>2.5</shredRadius>
+        <openerDamageRange>12~16</openerDamageRange>
+        <pulseDamageRange>6~9</pulseDamageRange>
+        <finaleDamageRange>18~24</finaleDamageRange>
+        <armorPenetration>0.42</armorPenetration>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

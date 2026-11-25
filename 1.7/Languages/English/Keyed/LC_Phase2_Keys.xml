@@ -22,29 +22,34 @@
   <LC_Funeral_KilledText>{0} collapsed into an abnormality egg.</LC_Funeral_KilledText>
   <LC_Funeral_BadVirtueMsg>{0}'s incompatible Fortitude/Justice distressed Funeral of the Dead Butterflies, dropping its Qliphoth Counter!</LC_Funeral_BadVirtueMsg>
 
-  <LC_SnowQueen_FirstKissMsg>The Snow Queen pressed a frost-petal Kiss onto {0}. Do not fail work with her again!</LC_SnowQueen_FirstKissMsg>
+  <LC_SnowQueen_FirstKissMsg>The Snow Queen pressed a frost-petal Kiss onto {0}. Do not risk another Kiss within 24 hours!</LC_SnowQueen_FirstKissMsg>
   <LC_SnowQueen_FrozenLetterLabel>Frozen in Ice: {0}</LC_SnowQueen_FrozenLetterLabel>
-  <LC_SnowQueen_FrozenLetterText>A second Bad work result trapped {0} inside The Snow Queen's ice coffin! Win a "Duel for Rescue" within 90 seconds before they freeze to death.</LC_SnowQueen_FrozenLetterText>
+  <LC_SnowQueen_FrozenLetterText>A second Kiss trapped {0} inside The Snow Queen's ice coffin and halted all normal work! Win a "Duel for Rescue" within 90 seconds before they shatter to death.</LC_SnowQueen_FrozenLetterText>
   <LC_SnowQueen_FreezeTimeoutMsg>The Snow Queen's 90-second timer expired—{0} shattered to death inside the ice!</LC_SnowQueen_FreezeTimeoutMsg>
   <LC_SnowQueen_DuelWinLetterLabel>Duel Victory: Rescued</LC_SnowQueen_DuelWinLetterLabel>
   <LC_SnowQueen_DuelWinLetterText>{0} defeated The Snow Queen and melted {1} free! Both heroes received The Snow Queen's E.G.O. Gift.</LC_SnowQueen_DuelWinLetterText>
   <LC_SnowQueen_DuelLossLetterLabel>Duel Defeat</LC_SnowQueen_DuelLossLetterLabel>
   <LC_SnowQueen_DuelLossLetterText>{0} fell in The Snow Queen's trial, claiming both challenger and {1} in a deadly frost burst.</LC_SnowQueen_DuelLossLetterText>
   <LC_SnowQueen_DuelGizmoLabel>Duel for Rescue...</LC_SnowQueen_DuelGizmoLabel>
-  <LC_SnowQueen_DuelGizmoDesc>Send a colonist to duel The Snow Queen and rescue {0}. Win rate scales with Fortitude.</LC_SnowQueen_DuelGizmoDesc>
+  <LC_SnowQueen_DuelGizmoDesc>Send a colonist to duel The Snow Queen and rescue {0}. Win rate scales with Fortitude (10%/30%/50%/80%/100%).</LC_SnowQueen_DuelGizmoDesc>
   <LC_SnowQueen_DuelOption>{0} ({1}% Fortitude win chance)</LC_SnowQueen_DuelOption>
   <LC_SnowQueen_InspectFrozen>Frozen captive: {0} ({1}s remaining)</LC_SnowQueen_InspectFrozen>
+  <LC_SnowQueen_StudyBlockedFrozen>{0} is sealed inside the ice coffin—rescue via Duel first.</LC_SnowQueen_StudyBlockedFrozen>
 
   <LC_ResearcherNote_EquipGizmoLabel>Borrow Notes...</LC_ResearcherNote_EquipGizmoLabel>
-  <LC_ResearcherNote_EquipGizmoDesc>Choose a colonist to carry Notes from a Crazed Researcher (+50% Work &amp; Study Speed). Must be held for 30s with at least 1 completed study before return, and taking 100 cumulative damage is fatal.</LC_ResearcherNote_EquipGizmoDesc>
+  <LC_ResearcherNote_EquipGizmoDesc>Choose a colonist to carry Notes from a Crazed Researcher (+50% Work, Research &amp; Study Speed, +10% Study Success Rate). Must be held for 30s with at least 1 completed non-tool Abnormality study before return, and reaching 60 cumulative HP/SP damage (Black counts double) is fatal.</LC_ResearcherNote_EquipGizmoDesc>
   <LC_ResearcherNote_ReturnGizmoLabel>Return Notes</LC_ResearcherNote_ReturnGizmoLabel>
-  <LC_ResearcherNote_ReturnGizmoDesc>Order {0} to safely return the notebook to its holding pedestal.</LC_ResearcherNote_ReturnGizmoDesc>
-  <LC_ResearcherNote_EquipMsg>{0} took Notes from a Crazed Researcher. Complete 1 study &amp; hold 30s before returning; avoid taking 100 damage!</LC_ResearcherNote_EquipMsg>
-  <LC_ResearcherNote_PrematureExplodeMsg>{0} returned the Crazed Researcher's Notes before completing 1 study and 30 seconds—the notebook detonated violently!</LC_ResearcherNote_PrematureExplodeMsg>
-  <LC_ResearcherNote_DamageExplodeMsg>{0} exceeded 100 cumulative damage while holding the Crazed Researcher's Notes, triggering a fatal explosion!</LC_ResearcherNote_DamageExplodeMsg>
+  <LC_ResearcherNote_ReturnGizmoDesc>Order {0} to return the notebook to its holding pedestal.</LC_ResearcherNote_ReturnGizmoDesc>
+  <LC_ResearcherNote_EquipMsg>{0} took Notes from a Crazed Researcher. Complete 1 Abnormality study &amp; hold 30s before returning; avoid reaching 60 cumulative damage!</LC_ResearcherNote_EquipMsg>
+  <LC_ResearcherNote_PrematureExplodeMsg>{0} returned the Crazed Researcher's Notes before completing 1 Abnormality study and 30 seconds—the bearer detonated in a gore blast!</LC_ResearcherNote_PrematureExplodeMsg>
+  <LC_ResearcherNote_DamageExplodeMsg>{0} reached 60 cumulative HP/SP damage while holding the Crazed Researcher's Notes, triggering a fatal RED gore explosion!</LC_ResearcherNote_DamageExplodeMsg>
+  <LC_ResearcherNote_DangerWarningMsg>WARNING: {0}'s Crazed Researcher's Notes are swelling violently ({1} / {2} cumulative damage)!</LC_ResearcherNote_DangerWarningMsg>
+  <LC_ResearcherNote_SafeReadyMsg>{0} satisfied the Crazed Researcher's conditions—the notebook may now be returned safely.</LC_ResearcherNote_SafeReadyMsg>
   <LC_ResearcherNote_SafeReturnMsg>{0} fulfilled the Crazed Researcher's conditions and returned the notebook safely.</LC_ResearcherNote_SafeReturnMsg>
   <LC_ResearcherNote_ExplodeLetterLabel>Explosion: Crazed Researcher's Notes</LC_ResearcherNote_ExplodeLetterLabel>
-  <LC_ResearcherNote_StatusInspect>Notes threshold: {0} / {1} dmg | Studies completed: {2}</LC_ResearcherNote_StatusInspect>
-  <LC_ResearcherNote_HediffTip>Damage taken: {0} / {1} | Studies completed: {2} (safe return needs 30s + 1 study)</LC_ResearcherNote_HediffTip>
+  <LC_ResearcherNote_SafeTagReady>Safe to return</LC_ResearcherNote_SafeTagReady>
+  <LC_ResearcherNote_SafeTagWait>Safe return in {0}s</LC_ResearcherNote_SafeTagWait>
+  <LC_ResearcherNote_StatusInspect>Damage threshold: {0} / {1} | Studies: {2} ({3})</LC_ResearcherNote_StatusInspect>
+  <LC_ResearcherNote_HediffTip>Cumulative damage: {0} / {1} | Studies: {2} | Study success +{3}% (safe return needs 30s + 1 study)</LC_ResearcherNote_HediffTip>
 
 </LanguageData>

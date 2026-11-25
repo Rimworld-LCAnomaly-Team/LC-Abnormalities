@@ -41,6 +41,10 @@
   <LC_LittleRed_RecallLabel>Recall Mercenary</LC_LittleRed_RecallLabel>
   <LC_LittleRed_RecallDesc>Order Little Red Riding Hooded Mercenary to end her hunt and return directly to her holding platform.</LC_LittleRed_RecallDesc>
 
+  <!-- E.G.O. Weapon Active Skill Validation -->
+  <LC_EgoSkill_TargetMustBeAlive>Target must be alive.</LC_EgoSkill_TargetMustBeAlive>
+  <LC_EgoSkill_CannotTargetAlly>Cannot target an allied unit.</LC_EgoSkill_CannotTargetAlly>
+
   <!-- D-09-104 Backward Clock -->
   <LC_BackwardClock_UseFloatMenu>Operate {0}</LC_BackwardClock_UseFloatMenu>
   <LC_BackwardClock_UseGizmoLabel>Charge / Activate Clock...</LC_BackwardClock_UseGizmoLabel>

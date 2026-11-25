@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>Beak_PunishingBarrage</defName>
+    <label>Punishing Barrage</label>
+    <description>Raise Beak in a rapid flurry, firing five sharp Red tracer rounds at the target before snapping shut with Punishing Bird's crimson maw to cleave and stun hostiles within 2.5 cells.</description>
+    <iconPath>UI/WeaponSkills/PunishingBird/Beak_PunishingBarrage</iconPath>
+    <cooldownTicksRange>960</cooldownTicksRange>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>LCAbnormalities.PunishingBird.Verb_CastAbility_BeakBarrage</verbClass>
+      <range>22</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.45</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="LCAbnormalities.PunishingBird.CompProperties_AbilityBeakBarrage">
+        <pelletDamageRange>4~6</pelletDamageRange>
+        <mawDamageRange>14~19</mawDamageRange>
+        <mawRadius>2.5</mawRadius>
+        <armorPenetration>0.32</armorPenetration>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_SnowQueenFrozenPrisonFX</defName>
+    <label>Snow Queen ice prison</label>
+    <thingClass>LCAbnormalities.SnowQueen.Thing_SnowQueenFrozenPrison</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_SnowQueenFirstKissMarkFX</defName>
+    <label>Snow Queen frost kiss shard</label>
+    <thingClass>LCAbnormalities.SnowQueen.Thing_SnowQueenFirstKissMark</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_SnowQueenFrostBurstFX</defName>
+    <label>Snow Queen frost pulse</label>
+    <thingClass>LCAbnormalities.SnowQueen.Thing_SnowQueenFrostBurst</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_SnowQueenIceDeathFX</defName>
+    <label>Snow Queen glacial shatter</label>
+    <thingClass>LCAbnormalities.SnowQueen.Thing_SnowQueenIceDeath</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>LC_FrostSplinterSkillRunnerFX</defName>
+    <label>frost splinter skill runner fx</label>
+    <thingClass>LCAbnormalities.SnowQueen.Thing_FrostSplinterSkillRunner</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>None</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+  </ThingDef>
+
+</Defs>

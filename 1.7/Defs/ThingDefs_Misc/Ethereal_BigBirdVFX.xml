@@ -66,4 +66,32 @@
     <isSaveable>false</isSaveable>
   </ThingDef>
 
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_LampSkillBeaconFX</defName>
+    <label>Lamp lantern salvation beacon</label>
+    <thingClass>LCAbnormalities.BigBird.Thing_LampSkillBeacon</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_LampSkillRunnerFX</defName>
+    <label>Lamp lantern salvation sequence</label>
+    <thingClass>LCAbnormalities.BigBird.Thing_LampSkillRunner</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>None</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
 </Defs>

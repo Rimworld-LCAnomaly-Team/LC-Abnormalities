@@ -19,10 +19,21 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
         public static readonly Material[] FlutterWhiteMats;
         public static readonly Material[] FlutterBlackMats;
 
+        public static readonly Material StreamRibbonMat;
+        public static readonly int PropColor = Shader.PropertyToID("_Color");
+        public static readonly int PropDarkColor = Shader.PropertyToID("_DarkColor");
+        public static readonly int PropHeadProgress = Shader.PropertyToID("_HeadProgress");
+        public static readonly int PropTailProgress = Shader.PropertyToID("_TailProgress");
+        public static readonly int PropAgeSecs = Shader.PropertyToID("_AgeSecs");
+        public static readonly int PropAlpha = Shader.PropertyToID("_Alpha");
+
         public static readonly Material DeadCoffinBackMat;
         public static readonly Material DeadCoffinFrontMat;
         public static readonly Material DeadCoffinLidMat;
         public static readonly Material DeadBodyMat;
+
+        private const int AlphaBucketCount = 24;
+        private static readonly MaterialPropertyBlock[] AlphaPropBlocks;
 
         private static readonly Dictionary<int, bool> LauncherBlackToggle = new Dictionary<int, bool>();
 
@@ -53,10 +64,58 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
                 MaterialPool.MatFrom("Effects/FuneralOfDeadButterflies/ButterflyFlutter_Black_2", ShaderDatabase.Transparent),
             };
 
+            Shader streamShader = ShaderDatabase.LoadShader("Map/LC_FuneralButterflyStream") ?? ShaderDatabase.Transparent;
+            StreamRibbonMat = MaterialPool.MatFrom(new MaterialRequest
+            {
+                mainTex = BaseContent.WhiteTex,
+                shader = streamShader,
+                color = new Color(0.92f, 0.94f, 0.98f, 0.85f)
+            });
+
             DeadCoffinBackMat = MaterialPool.MatFrom("Things/Pawn/FuneralOfDeadButterflies/Parts/Dead_CoffinBack", ShaderDatabase.Transparent);
             DeadCoffinFrontMat = MaterialPool.MatFrom("Things/Pawn/FuneralOfDeadButterflies/Parts/Dead_CoffinFront", ShaderDatabase.Transparent);
             DeadCoffinLidMat = MaterialPool.MatFrom("Things/Pawn/FuneralOfDeadButterflies/Parts/Dead_CoffinLid", ShaderDatabase.Transparent);
             DeadBodyMat = MaterialPool.MatFrom("Things/Pawn/FuneralOfDeadButterflies/Parts/Dead_Body", ShaderDatabase.Transparent);
+
+            AlphaPropBlocks = new MaterialPropertyBlock[AlphaBucketCount];
+            for (int i = 0; i < AlphaBucketCount; i++)
+            {
+                float a = i / (float)(AlphaBucketCount - 1);
+                MaterialPropertyBlock block = new MaterialPropertyBlock();
+                block.SetColor(ShaderPropertyIDs.Color, new Color(1f, 1f, 1f, a));
+                AlphaPropBlocks[i] = block;
+            }
+        }
+
+        /// <summary>按量化透明度返回预分配的只读 MaterialPropertyBlock，避免多实例同帧绘制相互覆写。</summary>
+        public static MaterialPropertyBlock GetAlphaPropBlock(float alpha)
+        {
+            int idx = Mathf.Clamp(Mathf.RoundToInt(Mathf.Clamp01(alpha) * (AlphaBucketCount - 1)), 0, AlphaBucketCount - 1);
+            return AlphaPropBlocks[idx];
+        }
+
+        /// <summary>根据水平飞行方向计算蝴蝶贴图（原图触角朝右）对应的网格与 Y 轴旋转角，确保任意 360° 方向均头朝前且翅膀朝上。</summary>
+        public static void ComputeButterflyOrientation(Vector3 moveDir, out Mesh mesh, out float angleDeg)
+        {
+            Vector3 d = moveDir.Yto0();
+            if (d.sqrMagnitude < 0.0001f)
+            {
+                mesh = MeshPool.plane10;
+                angleDeg = 0f;
+                return;
+            }
+
+            d.Normalize();
+            if (d.x >= 0f)
+            {
+                mesh = MeshPool.plane10;
+                angleDeg = Mathf.Atan2(-d.z, d.x) * Mathf.Rad2Deg;
+            }
+            else
+            {
+                mesh = MeshPool.plane10Flip;
+                angleDeg = Mathf.Atan2(d.z, -d.x) * Mathf.Rad2Deg;
+            }
         }
 
         /// <summary>按发射者交替返回黑白双枪属性，实现圣宣白/黑双蝶交替绽放。</summary>
@@ -131,7 +190,36 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
             SpawnFlutterButterfly(map, spawnPos, vel, isBlack, Rand.Range(0.28f, 0.38f), Rand.Range(14, 22));
         }
 
-        /// <summary>开棺爆发期间释放向四周/前方飞舞的亡蝶群。</summary>
+        /// <summary>开棺爆发期间释放沿直线席卷前方的密集黑白蝴蝶洪流（底带哀悼气流 + 高密度振翅亡蝶群）。</summary>
+        public static SolemnLamentButterflyStream SpawnCoffinButterflyStream(
+            Map map,
+            Vector3 startPos,
+            Vector3 direction,
+            float length = 13f,
+            float halfWidth = 1.65f,
+            int emitDurationTicks = 80)
+        {
+            if (map == null || FuneralDefOf.LC_SolemnLamentButterflyStream == null)
+            {
+                return null;
+            }
+
+            IntVec3 cell = startPos.ToIntVec3().ClampInsideMap(map);
+            if (!cell.InBounds(map))
+            {
+                return null;
+            }
+
+            if (GenSpawn.Spawn(FuneralDefOf.LC_SolemnLamentButterflyStream, cell, map) is SolemnLamentButterflyStream stream)
+            {
+                stream.Init(startPos, direction, length, halfWidth, emitDurationTicks);
+                return stream;
+            }
+
+            return null;
+        }
+
+        /// <summary>开棺爆发 / 死亡入棺期间释放向四周飞舞的零散亡蝶群。</summary>
         public static void SpawnCoffinSwarmWave(Map map, Vector3 origin, bool facingLeft, int count = 5)
         {
             if (map == null || FuneralDefOf.LC_SolemnLamentButterflyFlutter == null)
@@ -142,12 +230,12 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
             float baseDirX = facingLeft ? -1f : 1f;
             for (int i = 0; i < count; i++)
             {
-                float spreadAng = Rand.Range(-1.35f, 1.35f);
-                float spd = Rand.Range(0.05f, 0.11f);
+                float spreadAng = Rand.Range(-1.15f, 1.15f);
+                float spd = Rand.Range(0.06f, 0.12f);
                 Vector3 vel = new Vector3(Mathf.Cos(spreadAng) * baseDirX * spd, 0f, Mathf.Sin(spreadAng) * spd + 0.012f);
                 Vector3 start = origin + new Vector3(baseDirX * Rand.Range(0.15f, 0.45f), 0f, Rand.Range(-0.25f, 0.35f));
                 bool isBlack = Rand.Value < 0.30f;
-                SpawnFlutterButterfly(map, start, vel, isBlack, Rand.Range(0.40f, 0.62f), Rand.Range(36, 56));
+                SpawnFlutterButterfly(map, start, vel, isBlack, Rand.Range(0.45f, 0.68f), Rand.Range(36, 56));
             }
         }
 
@@ -173,7 +261,7 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
 
     /// <summary>
     /// 圣宣 / 亡蝶葬仪目标点 3 帧蝴蝶绽放特效（合翼 -> 展翼 -> 柔光盛放消散）。
-    /// 使用解包 ButterflyAttackEffect 三帧贴图与 MaterialPropertyBlock 实现无 GC 透明淡出。
+    /// 使用解包 ButterflyAttackEffect 三帧贴图与预分配 MaterialPropertyBlock 实现无 GC 透明淡出。
     /// </summary>
     public class SolemnLamentButterflyBloom : Thing
     {
@@ -183,8 +271,6 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
         private float angleDeg;
         private int ageTicks;
         private int lifetimeTicks = 22;
-
-        private readonly MaterialPropertyBlock propBlock = new MaterialPropertyBlock();
 
         public void Init(Vector3 pos, bool black, float scale, float angle)
         {
@@ -237,9 +323,8 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
             pos.y = AltitudeLayer.MoteOverhead.AltitudeFor() + (isBlack ? 0.015f : 0.025f);
             pos.z += progress * 0.14f;
 
-            propBlock.SetColor(ShaderPropertyIDs.Color, new Color(1f, 1f, 1f, alpha));
             Matrix4x4 matrix = Matrix4x4.TRS(pos, Quaternion.AngleAxis(angleDeg, Vector3.up), new Vector3(finalScale, 1f, finalScale));
-            Graphics.DrawMesh(MeshPool.plane10, matrix, mat, 0, null, 0, propBlock);
+            Graphics.DrawMesh(MeshPool.plane10, matrix, mat, 0, null, 0, FuneralVfxUtility.GetAlphaPropBlock(alpha));
         }
 
         public override void ExposeData()
@@ -265,8 +350,6 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
         private int lifetimeTicks = 34;
         private float phaseSeed;
 
-        private readonly MaterialPropertyBlock propBlock = new MaterialPropertyBlock();
-
         public void Init(Vector3 pos, Vector3 vel, bool black, float scale, int life)
         {
             exactPos = pos;
@@ -286,6 +369,15 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
             float wave = Mathf.Sin(ageTicks * 0.35f + phaseSeed) * 0.014f;
             exactPos.z += wave;
             velocity *= 0.965f;
+
+            if (Map != null)
+            {
+                IntVec3 cell = exactPos.ToIntVec3();
+                if (cell.InBounds(Map) && cell != Position)
+                {
+                    Position = cell;
+                }
+            }
 
             if (ageTicks >= lifetimeTicks)
             {
@@ -319,13 +411,10 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
             Vector3 pos = exactPos;
             pos.y = AltitudeLayer.MoteOverhead.AltitudeFor() + 0.03f;
 
-            bool faceRight = velocity.x >= 0f;
-            Mesh mesh = faceRight ? MeshPool.plane10Flip : MeshPool.plane10;
-            float tilt = Mathf.Clamp(velocity.z * 220f, -22f, 22f);
+            FuneralVfxUtility.ComputeButterflyOrientation(velocity, out Mesh mesh, out float angleDeg);
 
-            propBlock.SetColor(ShaderPropertyIDs.Color, new Color(1f, 1f, 1f, alpha));
-            Matrix4x4 matrix = Matrix4x4.TRS(pos, Quaternion.AngleAxis(tilt, Vector3.up), new Vector3(size, 1f, size));
-            Graphics.DrawMesh(mesh, matrix, mat, 0, null, 0, propBlock);
+            Matrix4x4 matrix = Matrix4x4.TRS(pos, Quaternion.AngleAxis(angleDeg, Vector3.up), new Vector3(size, 1f, size));
+            Graphics.DrawMesh(mesh, matrix, mat, 0, null, 0, FuneralVfxUtility.GetAlphaPropBlock(alpha));
         }
 
         public override void ExposeData()
@@ -338,6 +427,270 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
             Scribe_Values.Look(ref ageTicks, "slFlutAge", 0);
             Scribe_Values.Look(ref lifetimeTicks, "slFlutLife", 34);
             Scribe_Values.Look(ref phaseSeed, "slFlutSeed", 0f);
+        }
+    }
+
+    /// <summary>
+    /// 亡蝶葬仪开棺范围攻击的“直线黑白蝴蝶洪流”专属特效实体：
+    /// 1) 底层使用 GLSL 450 着色器 LC_FuneralButterflyStream 绘制沿直线奔涌的素白/墨黑哀悼气流薄纱带；
+    /// 2) 上层内置轻量级粒子池（单实体统一渲染、零额外 Thing 污染），驱动 50+ 只 3 帧振翅黑白蝴蝶从棺材口笔直横扫整条直线走廊。
+    /// </summary>
+    public class SolemnLamentButterflyStream : Thing
+    {
+        private struct StreamButterfly
+        {
+            public float along;          // 沿直线方向已前进距离（格）
+            public float maxAlong;       // 飞达终点距离（格）
+            public float lateralBase;    // 横向基准偏移（格）
+            public float lateralAmp;     // 横向正弦摆幅
+            public float lateralFreq;    // 横向正弦频率
+            public float speedPerTick;   // 沿直线前进速度（格/tick）
+            public float scale;          // 蝴蝶尺寸
+            public float phaseSeed;      // 振翅与摆动随机初相
+            public int ageTicks;         // 已存活 tick
+            public int flapDivisor;      // 振翅周期除数（2~3）
+            public bool isBlack;         // 黑蝶 / 白蝶
+            public float altOffset;      // 微小高度层次避免 Z-fighting
+        }
+
+        private const int MaxStreamButterflies = 96;
+
+        private Vector3 startPos;
+        private Vector3 streamDir = Vector3.right;
+        private Vector3 streamRight = Vector3.back;
+        private float streamLength = 13f;
+        private float streamHalfWidth = 1.65f;
+        private int emitDurationTicks = 80;
+        private int ageTicks;
+        private int emitStopTick = -1;
+        private bool initialized;
+
+        private readonly List<StreamButterfly> butterflies = new List<StreamButterfly>(MaxStreamButterflies);
+        private MaterialPropertyBlock ribbonProps;
+
+        public void Init(Vector3 origin, Vector3 direction, float length, float halfWidth, int emitTicks)
+        {
+            startPos = origin.Yto0();
+            Vector3 d = direction.Yto0();
+            if (d.sqrMagnitude < 0.0001f)
+            {
+                d = Vector3.right;
+            }
+            streamDir = d.normalized;
+            streamRight = new Vector3(-streamDir.z, 0f, streamDir.x);
+
+            streamLength = Mathf.Clamp(length, 2.5f, 24f);
+            streamHalfWidth = Mathf.Clamp(halfWidth, 0.8f, 3.0f);
+            emitDurationTicks = Mathf.Max(20, emitTicks);
+            ageTicks = 0;
+            emitStopTick = -1;
+            butterflies.Clear();
+            initialized = true;
+
+            // 开棺瞬间先放出一批紧密错落的先锋蝶群，立刻勾勒出一条直线蝶潮轮廓
+            for (int i = 0; i < 18; i++)
+            {
+                float initialAlong = Rand.Range(0f, Mathf.Min(2.4f, streamLength * 0.28f));
+                SpawnInternalButterfly(initialAlong, initialBurst: true);
+            }
+        }
+
+        public void StopEmitting()
+        {
+            if (emitStopTick < 0)
+            {
+                emitStopTick = ageTicks;
+            }
+        }
+
+        private bool IsEmitting => emitStopTick < 0 && ageTicks < emitDurationTicks;
+
+        private void SpawnInternalButterfly(float initialAlong = 0f, bool initialBurst = false)
+        {
+            if (butterflies.Count >= MaxStreamButterflies)
+            {
+                return;
+            }
+
+            // 使用三角分布让中心线更密集、边缘略轻盈，形成鲜明的“一条线”视觉聚焦
+            float u = (Rand.Value + Rand.Value - 1f);
+            float lateralLimit = streamHalfWidth * 0.62f;
+            float lateral = u * lateralLimit;
+
+            // 前进速度保证 34~50 tick 内笔直贯穿整条直线，绝不在棺口停滞
+            float baseSpeed = Mathf.Max(0.24f, streamLength / 42f);
+            float speed = baseSpeed * Rand.Range(0.84f, 1.24f);
+            if (initialBurst)
+            {
+                speed *= 1.12f;
+            }
+
+            StreamButterfly b = new StreamButterfly
+            {
+                along = initialAlong,
+                maxAlong = streamLength * Rand.Range(0.88f, 1.04f),
+                lateralBase = lateral,
+                lateralAmp = Rand.Range(0.08f, 0.24f),
+                lateralFreq = Rand.Range(0.20f, 0.34f),
+                speedPerTick = speed,
+                scale = Rand.Range(0.56f, 0.92f),
+                phaseSeed = Rand.Range(0f, Mathf.PI * 2f),
+                ageTicks = Rand.Range(0, 6),
+                flapDivisor = Rand.Bool ? 2 : 3,
+                isBlack = Rand.Value < 0.32f,
+                altOffset = Rand.Range(0.025f, 0.075f)
+            };
+            butterflies.Add(b);
+        }
+
+        protected override void Tick()
+        {
+            if (!initialized || Map == null)
+            {
+                Destroy();
+                return;
+            }
+
+            ageTicks++;
+
+            if (IsEmitting)
+            {
+                // 每 tick 持续喷射 1~2 只，使整条直线内常驻 50~70 只高频振翅的黑白蝴蝶
+                int emitCount = (ageTicks % 2 == 0) ? 2 : 1;
+                for (int i = 0; i < emitCount; i++)
+                {
+                    SpawnInternalButterfly(Rand.Range(-0.15f, 0.35f));
+                }
+
+                // 定期在直线中远端补一小簇绽放微光，强调蝶潮冲击感
+                if (ageTicks > 14 && ageTicks % 24 == 0 && streamLength >= 4f)
+                {
+                    float dist = Rand.Range(streamLength * 0.45f, streamLength * 0.92f);
+                    Vector3 bloomPos = startPos + streamDir * dist + streamRight * Rand.Range(-0.45f, 0.45f);
+                    FuneralVfxUtility.SpawnTargetButterflyBloom(Map, bloomPos, isBlack: Rand.Value < 0.38f, scale: 0.72f, flutterCount: 0);
+                }
+            }
+            else if (emitStopTick < 0)
+            {
+                emitStopTick = emitDurationTicks;
+            }
+
+            for (int i = butterflies.Count - 1; i >= 0; i--)
+            {
+                StreamButterfly b = butterflies[i];
+                b.ageTicks++;
+                b.along += b.speedPerTick;
+                if (b.along >= b.maxAlong)
+                {
+                    butterflies.RemoveAt(i);
+                }
+                else
+                {
+                    butterflies[i] = b;
+                }
+            }
+
+            int ticksSinceStop = emitStopTick < 0 ? 0 : (ageTicks - emitStopTick);
+            if (!IsEmitting && butterflies.Count == 0 && ticksSinceStop >= 26)
+            {
+                Destroy();
+            }
+            else if (ageTicks > emitDurationTicks + 95)
+            {
+                Destroy();
+            }
+        }
+
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
+        {
+            if (!initialized)
+            {
+                return;
+            }
+
+            float baseAlt = AltitudeLayer.MoteOverhead.AltitudeFor();
+            float ageSecs = ageTicks / 60f;
+
+            // 1. 底层 GLSL 450 直线哀悼气流薄纱带（先快速推进至全长，合棺后由棺口向远端自然收尾散去）
+            if (FuneralVfxUtility.StreamRibbonMat != null)
+            {
+                float headProgress = Mathf.Clamp01(ageTicks / 20f);
+                float tailProgress = emitStopTick < 0
+                    ? 0f
+                    : Mathf.Clamp01((ageTicks - emitStopTick) / 34f);
+                float ribbonAlpha = emitStopTick < 0
+                    ? Mathf.Clamp01(ageTicks / 8f)
+                    : Mathf.Clamp01(1f - (ageTicks - emitStopTick) / 38f);
+
+                if (ribbonAlpha > 0.01f && tailProgress < 0.99f)
+                {
+                    ribbonProps ??= new MaterialPropertyBlock();
+                    ribbonProps.SetColor(FuneralVfxUtility.PropColor, new Color(0.93f, 0.95f, 1.0f, 0.85f));
+                    ribbonProps.SetColor(FuneralVfxUtility.PropDarkColor, new Color(0.04f, 0.04f, 0.07f, 0.72f));
+                    ribbonProps.SetFloat(FuneralVfxUtility.PropHeadProgress, headProgress);
+                    ribbonProps.SetFloat(FuneralVfxUtility.PropTailProgress, tailProgress);
+                    ribbonProps.SetFloat(FuneralVfxUtility.PropAgeSecs, ageSecs);
+                    ribbonProps.SetFloat(FuneralVfxUtility.PropAlpha, ribbonAlpha);
+
+                    Vector3 mid = startPos + streamDir * (streamLength * 0.5f);
+                    Quaternion ribbonRot = Quaternion.LookRotation(streamDir, Vector3.up);
+                    Matrix4x4 ribbonMatrix = Matrix4x4.TRS(
+                        new Vector3(mid.x, baseAlt + 0.005f, mid.z),
+                        ribbonRot,
+                        new Vector3(streamHalfWidth * 1.65f, 1f, streamLength));
+                    Graphics.DrawMesh(MeshPool.plane10, ribbonMatrix, FuneralVfxUtility.StreamRibbonMat, 0, null, 0, ribbonProps);
+                }
+            }
+
+            // 2. 上层密集直线飞驰的 3 帧振翅黑白蝴蝶群
+            Material[] whiteFrames = FuneralVfxUtility.FlutterWhiteMats;
+            Material[] blackFrames = FuneralVfxUtility.FlutterBlackMats;
+            if (whiteFrames == null || whiteFrames.Length < 3 || blackFrames == null || blackFrames.Length < 3)
+            {
+                return;
+            }
+
+            FuneralVfxUtility.ComputeButterflyOrientation(streamDir, out Mesh baseMesh, out float baseAngleDeg);
+            bool flipSign = streamDir.x < 0f;
+
+            for (int i = 0; i < butterflies.Count; i++)
+            {
+                StreamButterfly b = butterflies[i];
+                float t = Mathf.Clamp01(b.along / Mathf.Max(0.5f, b.maxAlong));
+
+                // 离开棺口平滑淡入、抵达远端平滑消散
+                float alpha = t < 0.09f
+                    ? Mathf.Lerp(0.15f, 1f, t / 0.09f)
+                    : (t > 0.78f ? Mathf.Lerp(1f, 0f, (t - 0.78f) / 0.22f) : 1f);
+                if (alpha <= 0.02f)
+                {
+                    continue;
+                }
+
+                // 0 -> 1 -> 2 -> 1 振翅循环（每只独立初相，群蝶交错扑翼）
+                int cycle = ((b.ageTicks + (int)(b.phaseSeed * 5f)) / b.flapDivisor) % 4;
+                int frameIdx = cycle == 3 ? 1 : cycle;
+                Material mat = b.isBlack ? blackFrames[frameIdx] : whiteFrames[frameIdx];
+                if (mat == null)
+                {
+                    continue;
+                }
+
+                // 沿直线行进并伴随轻柔横向正弦起伏
+                float waveOffset = Mathf.Sin(b.ageTicks * b.lateralFreq + b.phaseSeed) * b.lateralAmp;
+                float waveSlope = Mathf.Cos(b.ageTicks * b.lateralFreq + b.phaseSeed) * b.lateralAmp * b.lateralFreq;
+                Vector3 worldPos = startPos + streamDir * b.along + streamRight * (b.lateralBase + waveOffset);
+                worldPos.y = baseAlt + b.altOffset;
+
+                float pitchJitter = Mathf.Clamp(waveSlope * 90f, -14f, 14f) * (flipSign ? -1f : 1f);
+                float size = b.scale * Mathf.Lerp(0.88f, 1.12f, t);
+
+                Matrix4x4 matrix = Matrix4x4.TRS(
+                    worldPos,
+                    Quaternion.AngleAxis(baseAngleDeg + pitchJitter, Vector3.up),
+                    new Vector3(size, 1f, size));
+                Graphics.DrawMesh(baseMesh, matrix, mat, 0, null, 0, FuneralVfxUtility.GetAlphaPropBlock(alpha));
+            }
         }
     }
 
@@ -443,7 +796,6 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
         private const int TotalDurationTicks = 210; // 3.5 秒
         private int startTick;
         private bool closedSoundPlayed;
-        private readonly MaterialPropertyBlock propBlock = new MaterialPropertyBlock();
 
         public override void InitWith(Pawn targetPawn)
         {
@@ -593,9 +945,8 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
                 return;
             }
 
-            propBlock.SetColor(ShaderPropertyIDs.Color, new Color(1f, 1f, 1f, alpha));
             Matrix4x4 matrix = Matrix4x4.TRS(pos, Quaternion.AngleAxis(angleDeg, Vector3.up), new Vector3(size, 1f, size));
-            Graphics.DrawMesh(MeshPool.plane10, matrix, mat, 0, null, 0, propBlock);
+            Graphics.DrawMesh(MeshPool.plane10, matrix, mat, 0, null, 0, FuneralVfxUtility.GetAlphaPropBlock(alpha));
         }
 
         public override void Complete()

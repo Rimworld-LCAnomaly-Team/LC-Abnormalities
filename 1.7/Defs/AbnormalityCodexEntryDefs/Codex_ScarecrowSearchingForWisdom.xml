@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>ScarecrowSearchingForWisdom</defName>
+    <label>Scarecrow Searching for Wisdom</label>
+    <description>Scarecrow Searching for Wisdom (F-01-87) is a stitched burlap effigy clutching a rusting rake and sickle, endlessly envying the minds of scholars.\nSend anyone with Prudence Level III or above—or suffer a Bad result—and it tears off its hat to harvest the brains of the wise, shrugging off all harm while feeding on fallen victims.</description>
+    <uiIconPath>UI/CodexEntries/ScarecrowSearchingForWisdom</uiIconPath>
+    <category>HE</category>
+    <orderInCategory>900</orderInCategory>
+    <linkedThings>
+      <li>ScarecrowSearchingForWisdom</li>
+      <li>ScarecrowSearchingForWisdomEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

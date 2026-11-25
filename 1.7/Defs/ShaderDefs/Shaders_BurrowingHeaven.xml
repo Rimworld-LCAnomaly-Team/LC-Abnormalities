@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderDef>
+    <defName>LC_HeavenThorns</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_HeavenVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_HeavenThorns.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <transparent>true</transparent>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3166</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+</Defs>

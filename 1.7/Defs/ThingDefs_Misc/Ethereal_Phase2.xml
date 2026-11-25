@@ -52,11 +52,12 @@
     <selectable>false</selectable>
     <tickerType>Normal</tickerType>
     <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <thingClass>LCAbnormalities.FuneralOfDeadButterflies.SolemnLamentButterflyBloom</thingClass>
-    <drawOffscreen>false</drawOffscreen>
+    <drawOffscreen>true</drawOffscreen>
     <useHitPoints>false</useHitPoints>
-    <saveCompressible>false</saveCompressible>
+    <isSaveable>false</isSaveable>
   </ThingDef>
 
   <ThingDef ParentName="EtherealThingBase">
@@ -65,11 +66,26 @@
     <selectable>false</selectable>
     <tickerType>Normal</tickerType>
     <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <thingClass>LCAbnormalities.FuneralOfDeadButterflies.SolemnLamentButterflyFlutter</thingClass>
-    <drawOffscreen>false</drawOffscreen>
+    <drawOffscreen>true</drawOffscreen>
     <useHitPoints>false</useHitPoints>
-    <saveCompressible>false</saveCompressible>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_SolemnLamentButterflyStream</defName>
+    <label>Funeral of the Dead Butterflies swarm stream</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>LCAbnormalities.FuneralOfDeadButterflies.SolemnLamentButterflyStream</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
   </ThingDef>
 
   <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
@@ -85,5 +101,33 @@
       </li>
     </modExtensions>
   </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
+
+  <!-- 圣宣技能时序驱动器 -->
+  <ThingDef>
+    <defName>LC_SolemnLamentSkillRunnerFX</defName>
+    <label>Solemn Lament Skill Runner</label>
+    <thingClass>LCAbnormalities.FuneralOfDeadButterflies.Thing_SolemnLamentSkillRunner</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>None</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+  <!-- 终末火柴之光技能时序驱动器 -->
+  <ThingDef>
+    <defName>LC_FourthMatchSkillRunnerFX</defName>
+    <label>Fourth Match Flame Skill Runner</label>
+    <thingClass>LCAbnormalities.ScorchedGirl.Thing_FourthMatchSkillRunner</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>None</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
 
 </Defs>

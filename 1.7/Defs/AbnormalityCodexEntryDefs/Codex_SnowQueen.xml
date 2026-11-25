@@ -4,7 +4,7 @@
   <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
     <defName>SnowQueen</defName>
     <label>The Snow Queen</label>
-    <description>The Snow Queen (F-01-37) seals repeatedly failed workers inside a crystalline ice coffin.\nSend a courageous champion to win her duel within 90 seconds to rescue the prisoner and earn the Snow Queen's frost-blossom E.G.O. Gift.</description>
+    <description>The Snow Queen (F-01-37) marks workers with an icy Kiss (50% Normal / 100% Bad) and seals twice-kissed victims inside a 90-second ice coffin, locking normal work.\nWin her Rescue Duel (Fortitude 10%–100%) to thaw the prisoner and exclusively earn her frost-blossom E.G.O. Gift for both hero and captive.</description>
     <uiIconPath>UI/CodexEntries/SnowQueen</uiIconPath>
     <category>HE</category>
     <orderInCategory>830</orderInCategory>

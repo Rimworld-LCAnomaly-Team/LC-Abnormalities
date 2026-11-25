@@ -31,4 +31,39 @@
     </comps>
   </ThingDef>
 
+  <ThingDef>
+    <defName>LC_HeavenThrustFX</defName>
+    <label>heaven thrust fx</label>
+    <thingClass>BurrowingHeaven.Effect.Thing_HeavenSpearThrust</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>LC_HeavenChargeAuraFX</defName>
+    <label>heaven charge aura fx</label>
+    <thingClass>BurrowingHeaven.Effect.Thing_HeavenChargeAura</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>LC_HeavenSkillRunnerFX</defName>
+    <label>heaven skill runner fx</label>
+    <thingClass>BurrowingHeaven.Effect.Thing_HeavenSkillRunner</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>None</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+  </ThingDef>
+
 </Defs>

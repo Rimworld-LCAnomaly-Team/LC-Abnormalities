@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>MagicBullet_DimensionalBarrage</defName>
+    <label>Magic Bullet Salvo</label>
+    <description>Channel the Marksman's dimensional runes to fire a piercing steel-blue Black lance along the line of fire, then summon two cursed violet portals flanking the target that converge into cross-piercing Black beams without harming allies.</description>
+    <iconPath>UI/WeaponSkills/DerFreischutz/MagicBullet_DimensionalBarrage</iconPath>
+    <cooldownTicksRange>1320</cooldownTicksRange>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>LCAbnormalities.DerFreischutz.Verb_CastAbility_MagicBulletBarrage</verbClass>
+      <range>38</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.95</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="LCAbnormalities.DerFreischutz.CompProperties_AbilityMagicBulletBarrage">
+        <beamRange>38</beamRange>
+        <mainDamageRange>28~36</mainDamageRange>
+        <portalDamageRange>22~28</portalDamageRange>
+        <armorPenetration>0.80</armorPenetration>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

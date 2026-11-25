@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using LCAbnormalities.Shared;
 using LCAnomalyCore.Comp;
 using LCAnomalyCore.Misc;
+using LCAnomalyCore.Render.Weapon;
 using LCAnomalyCore.Util;
 using RimWorld;
 using UnityEngine;
@@ -472,7 +473,10 @@ namespace LCAbnormalities.LittleRedRidingHoodedMercenary
                     continue;
                 }
 
-                if (ownerIsHired ? !candidate.HostileTo(Faction.OfPlayer) : !(candidate.RaceProps?.Humanlike ?? false))
+                bool canHit = (ownerIsHired || (owner.Faction != null && owner.Faction.IsPlayer))
+                    ? candidate.HostileTo(owner)
+                    : ((candidate.RaceProps?.Humanlike ?? false) || candidate.HostileTo(owner));
+                if (!canHit)
                 {
                     continue;
                 }
@@ -801,6 +805,17 @@ namespace LCAbnormalities.LittleRedRidingHoodedMercenary
                 dir.Normalize();
 
                 bool berserk = Caster is Pawn p && !p.Dead && p.health?.summaryHealth != null && p.health.summaryHealth.SummaryHealthPercent < 0.55f;
+                if (Caster is Pawn shooter && !EgoWeaponAnimationManager.IsPlaying(shooter, "CrimsonScar_Skill"))
+                {
+                    float aimAngle = EgoWeaponAnimationUtility.ResolveAimAngle(shooter, targetPos);
+                    EgoWeaponAnimationManager.Play(
+                        shooter,
+                        EquipmentSource as ThingWithComps ?? shooter.equipment?.Primary,
+                        CrimsonScarWeaponAnimHandler.ClipRangeShot,
+                        34,
+                        aimAngle);
+                }
+
                 Vector3 muzzlePos = origin + dir * 0.55f;
                 LittleRedVfxUtility.SpawnShotgunCone(
                     Caster.MapHeld,

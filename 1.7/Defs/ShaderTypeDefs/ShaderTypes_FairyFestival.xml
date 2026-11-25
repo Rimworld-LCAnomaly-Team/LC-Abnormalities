@@ -16,4 +16,14 @@
     <shaderPath>Map/LC_FairyWingSlash</shaderPath>
   </ShaderTypeDef>
 
+  <ShaderTypeDef>
+    <defName>LC_FairySpinePMA</defName>
+    <shaderPath>Map/LC_FairySpinePMA</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_FairySpineAdditive</defName>
+    <shaderPath>Map/LC_FairySpineAdditive</shaderPath>
+  </ShaderTypeDef>
+
 </Defs>

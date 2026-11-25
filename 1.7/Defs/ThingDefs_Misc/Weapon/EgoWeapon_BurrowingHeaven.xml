@@ -5,6 +5,9 @@
     <defName>EgoWeapon_BurrowingHeaven</defName>
     <label>E.G.O. Weapon (Heaven)</label>
     <description>The Burrowing Heaven's form is warped into a twin-pronged crimson spear veined like living tendrils.\nThose who grip it feel an unsettling compulsion to never take their eyes off their target.\n"Your attention itself feeds the roots that pierce the sky."</description>
+    <descriptionHyperlinks>
+      <AbilityDef>Heaven_RootImpale</AbilityDef>
+    </descriptionHyperlinks>
     <thingClass>ThingWithComps</thingClass>
     <weaponClasses>
       <li>MeleePiercer</li>
@@ -30,13 +33,20 @@
         <label>twin prongs</label>
         <labelUsedInLogging>false</labelUsedInLogging>
         <capacities>
-          <li>Stab</li>
+          <li>LC_HeavenImpale</li>
         </capacities>
         <power>28</power>
         <armorPenetration>0.42</armorPenetration>
         <cooldownTime>1.65</cooldownTime>
       </li>
     </tools>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_EquippableAbility">
+        <abilityDef>Heaven_RootImpale</abilityDef>
+      </li>
+      <li Class="CompProperties_Styleable"/>
+    </comps>
     <modExtensions>
       <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
         <damageType>Red</damageType>

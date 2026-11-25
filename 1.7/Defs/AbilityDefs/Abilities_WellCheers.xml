@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>Soda_RefreshingSplash</defName>
+    <label>Refreshing Splash</label>
+    <description>Pressurize the WellCheers soda cannon to blast cherry-fizz Red trauma into the target, then burst into a 4.0-cell sea-foam surge that stuns hostiles with Red splash while soothing the wielder's wounds and mind.</description>
+    <iconPath>UI/WeaponSkills/WellCheers/Soda_RefreshingSplash</iconPath>
+    <cooldownTicksRange>960</cooldownTicksRange>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>LCAbnormalities.WellCheers.Verb_CastAbility_SodaSplash</verbClass>
+      <range>24</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.60</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="LCAbnormalities.WellCheers.CompProperties_AbilitySodaSplash">
+        <splashRadius>4.0</splashRadius>
+        <shotDamageRange>10~14</shotDamageRange>
+        <splashDamageRange>14~18</splashDamageRange>
+        <armorPenetration>0.25</armorPenetration>
+        <healAmount>7</healAmount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

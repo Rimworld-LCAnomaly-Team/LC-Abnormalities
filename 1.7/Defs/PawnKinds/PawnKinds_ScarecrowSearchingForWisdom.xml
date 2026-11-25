@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.PawnKindDef_AbnormalityEntity>
+    <defName>ScarecrowSearchingForWisdom</defName>
+    <label>Scarecrow Searching for Wisdom</label>
+    <race>ScarecrowSearchingForWisdom</race>
+    <canMeleeAttack>true</canMeleeAttack>
+    <defaultFactionType>LC_Abnormalities</defaultFactionType>
+    <preventIdeo>true</preventIdeo>
+    <overrideDebugActionCategory>Entity</overrideDebugActionCategory>
+    <forceDeathOnDowned>true</forceDeathOnDowned>
+    <combatPower>220</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/ScarecrowSearchingForWisdom/ScarecrowSearchingForWisdom</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>1.85</drawSize>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>UI/CodexEntries/ScarecrowSearchingForWisdom</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>1.7</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.PawnKindDef_AbnormalityEntity>
+
+</Defs>

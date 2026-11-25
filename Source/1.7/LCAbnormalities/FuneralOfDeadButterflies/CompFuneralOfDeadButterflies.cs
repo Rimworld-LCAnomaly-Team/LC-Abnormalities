@@ -22,8 +22,11 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
         public static SoundDef LC_Funeral_Dead;
         public static SoundDef LC_SolemnLament_BloomWhite;
         public static SoundDef LC_SolemnLament_BloomBlack;
+        public static SoundDef LC_SolemnLament_Shoot;
         public static ThingDef LC_SolemnLamentButterflyBloom;
         public static ThingDef LC_SolemnLamentButterflyFlutter;
+        public static ThingDef LC_SolemnLamentButterflyStream;
+        public static ThingDef LC_SolemnLamentSkillRunnerFX;
 
         static FuneralDefOf()
         {
@@ -62,6 +65,8 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
         public int burstIntervalTicks = 600;
         public int salvoIntervalTicks = 110;
         public float burstRadius = 6.5f;
+        public float coffinStreamLength = 13f;
+        public float coffinStreamHalfWidth = 1.75f;
         public float salvoRange = 18f;
 
         public CompProperties_FuneralOfDeadButterflies()
@@ -72,18 +77,22 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
 
     /// <summary>
     /// T-01-68 亡蝶葬仪核心逻辑：勇气高于 III 或正义低于 III 工作必降计数；
-    /// 突破后定期开棺（开盖 -> 群蝶持续喷涌 -> 合盖）释放白黑混合群蝶冲击，并穿插手枪手势远程齐射。
+    /// 突破后定期开棺（开盖 -> 沿直线持续喷涌黑白蝴蝶洪流 -> 合盖）释放白黑混合群蝶冲击，并穿插手枪手势远程齐射。
     /// </summary>
     public class CompFuneralOfDeadButterflies : CompLCAbnormality
     {
         private const int CoffinOpenDuration = 40;
         private const int CoffinLoopDuration = 80;
         private const int CoffinCloseDuration = 30;
+        private const int CoffinDamageWaveInterval = 20;
         private const int AttackAnimDuration = 60;
         private const int AttackFireTickOffset = 20;
 
         private FuneralCoffinPhase coffinPhase = FuneralCoffinPhase.None;
         private int coffinPhaseTicks;
+        private Vector3 coffinStreamOrigin;
+        private Vector3 coffinStreamDir = Vector3.right;
+        private float coffinStreamActualLength = 13f;
         private int burstCooldownTicks = 240;
         private int salvoCooldownTicks = 60;
         private int attackAnimTicks;
@@ -91,6 +100,7 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
         private Pawn pendingSalvoTarget;
         private int studyingGraceTicks;
         private Sustainer coffinSkillSustainer;
+        private SolemnLamentButterflyStream activeCoffinStream;
 
         public CompProperties_FuneralOfDeadButterflies PropsFuneral => (CompProperties_FuneralOfDeadButterflies)props;
 
@@ -135,6 +145,7 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
             bool wasEscaped = Escaped;
             base.Notify_Escaped();
             EndCoffinSkillSustainer();
+            StopActiveCoffinStream();
             coffinPhase = FuneralCoffinPhase.None;
             coffinPhaseTicks = 0;
             attackAnimTicks = 0;
@@ -154,6 +165,7 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
         {
             base.Notify_Holded();
             EndCoffinSkillSustainer();
+            StopActiveCoffinStream();
             coffinPhase = FuneralCoffinPhase.None;
             coffinPhaseTicks = 0;
             attackAnimTicks = 0;
@@ -166,19 +178,34 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
         public override void Notify_Killed(Map prevMap, DamageInfo? dinfo = null)
         {
             EndCoffinSkillSustainer();
+            StopActiveCoffinStream();
             base.Notify_Killed(prevMap, dinfo);
         }
 
         public override void PostDeSpawn(Map map, DestroyMode mode = DestroyMode.Vanish)
         {
             EndCoffinSkillSustainer();
+            StopActiveCoffinStream();
             base.PostDeSpawn(map, mode);
         }
 
         public override void PostDestroy(DestroyMode mode, Map previousMap)
         {
             EndCoffinSkillSustainer();
+            StopActiveCoffinStream();
             base.PostDestroy(mode, previousMap);
+        }
+
+        private void StopActiveCoffinStream()
+        {
+            if (activeCoffinStream != null)
+            {
+                if (!activeCoffinStream.Destroyed)
+                {
+                    activeCoffinStream.StopEmitting();
+                }
+                activeCoffinStream = null;
+            }
         }
 
         private void MaintainCoffinSkillSustainer()
@@ -274,16 +301,31 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
             }
 
             Pawn nearest = LCAbnormalitiesHelper.FindNearestHumanlike(map, pos, PropsFuneral.salvoRange);
+            Vector3 desiredDir;
             if (nearest != null)
             {
                 selfPawn?.FaceCellHorizontal(nearest.Position);
+                desiredDir = (nearest.DrawPos - parent.DrawPos).Yto0();
             }
+            else
+            {
+                desiredDir = (selfPawn?.IsFacingLeft ?? false) ? Vector3.left : Vector3.right;
+            }
+
+            if (desiredDir.sqrMagnitude < 0.001f)
+            {
+                desiredDir = (selfPawn?.IsFacingLeft ?? false) ? Vector3.left : Vector3.right;
+            }
+            coffinStreamDir = desiredDir.normalized;
+            coffinStreamOrigin = GetCoffinMouthOrigin(selfPawn, coffinStreamDir);
+            coffinStreamActualLength = ComputeWallClippedStreamLength(map, coffinStreamOrigin, coffinStreamDir, PropsFuneral.coffinStreamLength);
 
             if (selfPawn?.pather?.Moving == true)
             {
                 selfPawn.pather.StopDead();
             }
 
+            StopActiveCoffinStream();
             coffinPhase = FuneralCoffinPhase.Opening;
             coffinPhaseTicks = CoffinOpenDuration;
             LCAbnormalitiesHelper.PlaySoundAt(FuneralDefOf.LC_Funeral_Open, parent);
@@ -305,25 +347,32 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
                     coffinPhase = FuneralCoffinPhase.Loop;
                     coffinPhaseTicks = CoffinLoopDuration;
                     MaintainCoffinSkillSustainer();
-                    TriggerCoffinBurstDamageAndVfx(selfPawn);
+                    BeginCoffinLineStreamAndVfx(selfPawn, CoffinLoopDuration);
+                    ApplyCoffinLineStreamDamage(selfPawn, waveIndex: 0);
                     selfPawn?.UpdateAnimation(force: true);
                 }
             }
             else if (coffinPhase == FuneralCoffinPhase.Loop)
             {
                 MaintainCoffinSkillSustainer();
-                if (coffinPhaseTicks % 16 == 0 && parent.Map != null)
+
+                // 读档恢复或特效意外销毁时，自动补齐剩余时长的直线蝴蝶洪流
+                if ((activeCoffinStream == null || activeCoffinStream.Destroyed) && coffinPhaseTicks > 6 && parent.Map != null)
                 {
-                    FuneralVfxUtility.SpawnCoffinSwarmWave(
-                        parent.Map,
-                        parent.DrawPos,
-                        selfPawn?.IsFacingLeft ?? false,
-                        count: 4);
+                    BeginCoffinLineStreamAndVfx(selfPawn, coffinPhaseTicks);
+                }
+
+                // 开棺持续 80 tick 内每隔 20 tick 沿整条直线蝶潮结算一次白+黑混合伤害（共 4 波）
+                int elapsed = CoffinLoopDuration - coffinPhaseTicks;
+                if (elapsed > 0 && elapsed < CoffinLoopDuration && elapsed % CoffinDamageWaveInterval == 0)
+                {
+                    ApplyCoffinLineStreamDamage(selfPawn, elapsed / CoffinDamageWaveInterval);
                 }
 
                 if (coffinPhaseTicks <= 0)
                 {
                     EndCoffinSkillSustainer();
+                    StopActiveCoffinStream();
                     coffinPhase = FuneralCoffinPhase.Closing;
                     coffinPhaseTicks = CoffinCloseDuration;
                     LCAbnormalitiesHelper.PlaySoundAt(FuneralDefOf.LC_Funeral_Close, parent);
@@ -333,6 +382,7 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
             else if (coffinPhase == FuneralCoffinPhase.Closing)
             {
                 EndCoffinSkillSustainer();
+                StopActiveCoffinStream();
                 if (coffinPhaseTicks <= 0)
                 {
                     coffinPhase = FuneralCoffinPhase.None;
@@ -342,7 +392,47 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
             }
         }
 
-        private void TriggerCoffinBurstDamageAndVfx(LC_FuneralOfDeadButterfliesPawn selfPawn)
+        private Vector3 GetCoffinMouthOrigin(LC_FuneralOfDeadButterfliesPawn selfPawn, Vector3 dir)
+        {
+            Vector3 d = dir.Yto0();
+            if (d.sqrMagnitude < 0.001f)
+            {
+                d = (selfPawn?.IsFacingLeft ?? false) ? Vector3.left : Vector3.right;
+            }
+            else
+            {
+                d.Normalize();
+            }
+
+            Vector3 basePos = parent != null ? parent.DrawPos.Yto0() : Vector3.zero;
+            return basePos + d * 0.42f + new Vector3(0f, 0f, 0.08f);
+        }
+
+        private static float ComputeWallClippedStreamLength(Map map, Vector3 origin, Vector3 dir, float maxLength)
+        {
+            float clampedMax = Mathf.Clamp(maxLength, 3f, 24f);
+            if (map == null)
+            {
+                return clampedMax;
+            }
+
+            const float step = 0.5f;
+            float dist = 1.0f;
+            while (dist <= clampedMax)
+            {
+                Vector3 p = origin + dir * dist;
+                IntVec3 cell = p.ToIntVec3();
+                if (!cell.InBounds(map) || cell.Filled(map))
+                {
+                    return Mathf.Max(2.5f, dist - 0.35f);
+                }
+                dist += step;
+            }
+
+            return clampedMax;
+        }
+
+        private void BeginCoffinLineStreamAndVfx(LC_FuneralOfDeadButterfliesPawn selfPawn, int emitDurationTicks)
         {
             Map map = parent.Map;
             IntVec3 pos = parent.Position;
@@ -351,9 +441,49 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
                 return;
             }
 
-            FuneralVfxUtility.SpawnCoffinSwarmWave(map, parent.DrawPos, selfPawn?.IsFacingLeft ?? false, count: 9);
+            if (coffinStreamDir.sqrMagnitude < 0.001f)
+            {
+                coffinStreamDir = (selfPawn?.IsFacingLeft ?? false) ? Vector3.left : Vector3.right;
+            }
+            coffinStreamDir = coffinStreamDir.Yto0().normalized;
+            coffinStreamOrigin = GetCoffinMouthOrigin(selfPawn, coffinStreamDir);
+            coffinStreamActualLength = ComputeWallClippedStreamLength(map, coffinStreamOrigin, coffinStreamDir, PropsFuneral.coffinStreamLength);
 
-            float radSq = PropsFuneral.burstRadius * PropsFuneral.burstRadius;
+            StopActiveCoffinStream();
+            activeCoffinStream = FuneralVfxUtility.SpawnCoffinButterflyStream(
+                map,
+                coffinStreamOrigin,
+                coffinStreamDir,
+                coffinStreamActualLength,
+                PropsFuneral.coffinStreamHalfWidth,
+                emitDurationTicks);
+
+            // 棺材口补一缕近身散逸亡蝶，衔接棺盖打开的层次感
+            FuneralVfxUtility.SpawnCoffinSwarmWave(map, coffinStreamOrigin, coffinStreamDir.x < 0f, count: 5);
+        }
+
+        private void ApplyCoffinLineStreamDamage(LC_FuneralOfDeadButterfliesPawn selfPawn, int waveIndex)
+        {
+            Map map = parent.Map;
+            IntVec3 pos = parent.Position;
+            if (map == null || !pos.InBounds(map))
+            {
+                return;
+            }
+
+            Vector3 dir = coffinStreamDir.Yto0();
+            if (dir.sqrMagnitude < 0.001f)
+            {
+                dir = (selfPawn?.IsFacingLeft ?? false) ? Vector3.left : Vector3.right;
+            }
+            dir.Normalize();
+            Vector3 right = new Vector3(-dir.z, 0f, dir.x);
+            Vector3 origin = coffinStreamOrigin.sqrMagnitude > 0.01f ? coffinStreamOrigin : GetCoffinMouthOrigin(selfPawn, dir);
+            float maxLen = Mathf.Max(2.5f, coffinStreamActualLength);
+            float halfW = Mathf.Max(1.0f, PropsFuneral.coffinStreamHalfWidth);
+            const float closeAuraSq = 2.2f * 2.2f;
+
+            bool blackFirst = (waveIndex % 2) == 1;
             List<Pawn> list = new List<Pawn>(map.mapPawns.AllPawnsSpawned);
             for (int i = 0; i < list.Count; i++)
             {
@@ -363,14 +493,19 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
                     continue;
                 }
 
-                if ((target.Position - pos).LengthHorizontalSquared <= radSq)
+                Vector3 rel = (target.DrawPos - origin).Yto0();
+                float along = Vector3.Dot(rel, dir);
+                float perp = Mathf.Abs(Vector3.Dot(rel, right));
+                bool inLineCorridor = along >= -0.6f && along <= maxLen + 0.5f && perp <= halfW;
+                bool inCloseCoffinAura = (target.Position - pos).LengthHorizontalSquared <= closeAuraSq;
+
+                if (inLineCorridor || inCloseCoffinAura)
                 {
-                    FuneralVfxUtility.SpawnTargetButterflyBloom(map, target.DrawPos, isBlack: false, scale: 1.15f, flutterCount: 3);
-                    FuneralVfxUtility.SpawnTargetButterflyBloom(map, target.DrawPos, isBlack: true, scale: 0.95f, flutterCount: 2);
-                    target.TakeDamage(new DamageInfo(LCAnomalyCore.Defs.DamageDefOf.LC_WhiteDamage, 14f, 0.35f, instigator: parent));
+                    FuneralVfxUtility.SpawnTargetButterflyBloom(map, target.DrawPos, isBlack: blackFirst, scale: 1.05f, flutterCount: 2);
+                    target.TakeDamage(new DamageInfo(LCAnomalyCore.Defs.DamageDefOf.LC_WhiteDamage, 4.5f, 0.35f, instigator: parent));
                     if (!target.Dead)
                     {
-                        target.TakeDamage(new DamageInfo(LCAnomalyCore.Defs.DamageDefOf.LC_BlackDamage, 14f, 0.35f, instigator: parent));
+                        target.TakeDamage(new DamageInfo(LCAnomalyCore.Defs.DamageDefOf.LC_BlackDamage, 4.5f, 0.35f, instigator: parent));
                     }
                 }
             }
@@ -437,6 +572,9 @@ namespace LCAbnormalities.FuneralOfDeadButterflies
             base.PostExposeData();
             Scribe_Values.Look(ref coffinPhase, "fdbCoffinPhase", FuneralCoffinPhase.None);
             Scribe_Values.Look(ref coffinPhaseTicks, "fdbCoffinPhaseTicks", 0);
+            Scribe_Values.Look(ref coffinStreamOrigin, "fdbCoffinStreamOrigin");
+            Scribe_Values.Look(ref coffinStreamDir, "fdbCoffinStreamDir", Vector3.right);
+            Scribe_Values.Look(ref coffinStreamActualLength, "fdbCoffinStreamLen", 13f);
             Scribe_Values.Look(ref burstCooldownTicks, "fdbBurstCooldownTicks", 240);
             Scribe_Values.Look(ref salvoCooldownTicks, "fdbSalvoCooldownTicks", 60);
             Scribe_Values.Look(ref attackAnimTicks, "fdbAttackAnimTicks", 0);

@@ -4,5 +4,6 @@
   <DyingMeatLantern.label>肉食提灯（死亡中）</DyingMeatLantern.label>
   <EscapingMeatLantern.label>肉食提灯（逃脱中）</EscapingMeatLantern.label>
   <EatingMeatLantern.label>肉食提灯（吞噬中）</EatingMeatLantern.label>
+  <LC_MeatLanternChompFX.label>灯笼巨颚噬咬特效</LC_MeatLanternChompFX.label>
 
 </LanguageData>

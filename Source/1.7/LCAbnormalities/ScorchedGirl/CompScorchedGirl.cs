@@ -41,6 +41,7 @@ namespace LCAbnormalities.ScorchedGirl
         public static FleckDef LC_FourthMatch_Glow;
         public static FleckDef LC_FourthMatch_Spark;
         public static FleckDef LC_ScorchedGirl_Mark;
+        public static ThingDef LC_FourthMatchSkillRunnerFX;
 
         static ScorchedGirlDefOf()
         {

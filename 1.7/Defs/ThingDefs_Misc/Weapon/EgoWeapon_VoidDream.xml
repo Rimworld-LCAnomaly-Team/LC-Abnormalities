@@ -41,6 +41,21 @@
         <cooldownTime>1.6</cooldownTime>
       </li>
     </tools>
+    <descriptionHyperlinks>
+      <AbilityDef>EngulfingDream_LullabyBurst</AbilityDef>
+    </descriptionHyperlinks>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_EquippableAbility">
+        <abilityDef>EngulfingDream_LullabyBurst</abilityDef>
+      </li>
+      <li Class="CompProperties_Styleable"/>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
         <damageType>White</damageType>

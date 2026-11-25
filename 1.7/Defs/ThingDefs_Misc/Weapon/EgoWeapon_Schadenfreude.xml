@@ -5,6 +5,9 @@
     <defName>EgoWeapon_Schadenfreude</defName>
     <label>E.G.O. Weapon (Gaze)</label>
     <description>A long-handled crimson buzzsaw polearm extracted from Schadenfreude (HE).\nTears into targets with relentless Red saw-shred hits and stacks Gaze Rending to amplify all incoming harm.</description>
+    <descriptionHyperlinks>
+      <AbilityDef>Gaze_KeyholeSawstorm</AbilityDef>
+    </descriptionHyperlinks>
     <thingClass>ThingWithComps</thingClass>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <graphicData>
@@ -26,6 +29,13 @@
         <soundMeleeHit>LC_Gaze_Saw</soundMeleeHit>
       </li>
     </tools>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_EquippableAbility">
+        <abilityDef>Gaze_KeyholeSawstorm</abilityDef>
+      </li>
+      <li Class="CompProperties_Styleable"/>
+    </comps>
     <modExtensions>
       <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
         <damageType>Red</damageType>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderTreeDef>
+    <defName>ScarecrowSearchingForWisdom</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+          <debugLabel>ScarecrowRoot</debugLabel>
+          <tagDef>Scarecrow_Root</tagDef>
+          <role>Root</role>
+          <useGraphic>false</useGraphic>
+          <containedScale>2.10</containedScale>
+          <breachedScale>2.35</breachedScale>
+          <portraitScale>2.15</portraitScale>
+          <containedOffset>(0, 0, -0.04)</containedOffset>
+          <children>
+            <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+              <debugLabel>Scarecrow_Pelvis</debugLabel>
+              <tagDef>Scarecrow_Pelvis</tagDef>
+              <role>Scarecrow_Pelvis</role>
+              <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_Pant</texPath>
+              <baseLayer>32</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                  <debugLabel>SC_PantStrap1</debugLabel>
+                  <role>Scarecrow_Pelvis</role>
+                  <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_PantStrap1</texPath>
+                  <baseLayer>34.8</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                  <debugLabel>SC_PantStrap1Metal</debugLabel>
+                  <role>Scarecrow_Pelvis</role>
+                  <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_PantStrap1Metal</texPath>
+                  <baseLayer>35.2</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                  <debugLabel>SC_PantStrap2</debugLabel>
+                  <role>Scarecrow_Pelvis</role>
+                  <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_PantStrap2</texPath>
+                  <baseLayer>34</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                  <debugLabel>SC_PantStrap2Metal</debugLabel>
+                  <role>Scarecrow_Pelvis</role>
+                  <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_PantStrap2Metal</texPath>
+                  <baseLayer>34.4</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                  <debugLabel>Scarecrow_LegBackUpper</debugLabel>
+                  <tagDef>Scarecrow_LegBackUpper</tagDef>
+                  <role>Scarecrow_LegBackUpper</role>
+                  <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_LegBackUpper</texPath>
+                  <baseLayer>22</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                      <debugLabel>Scarecrow_LegBackLower</debugLabel>
+                      <tagDef>Scarecrow_LegBackLower</tagDef>
+                      <role>Scarecrow_LegBackLower</role>
+                      <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_LegBackLower</texPath>
+                      <baseLayer>22.8</baseLayer>
+                    </li>
+                  </children>
+                </li>
+                <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                  <debugLabel>Scarecrow_LegFrontUpper</debugLabel>
+                  <tagDef>Scarecrow_LegFrontUpper</tagDef>
+                  <role>Scarecrow_LegFrontUpper</role>
+                  <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_LegFrontUpper</texPath>
+                  <baseLayer>30</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                      <debugLabel>Scarecrow_LegFrontLower</debugLabel>
+                      <tagDef>Scarecrow_LegFrontLower</tagDef>
+                      <role>Scarecrow_LegFrontLower</role>
+                      <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_LegFrontLower</texPath>
+                      <baseLayer>30.8</baseLayer>
+                    </li>
+                  </children>
+                </li>
+                <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                  <debugLabel>Scarecrow_Torso</debugLabel>
+                  <tagDef>Scarecrow_Torso</tagDef>
+                  <role>Scarecrow_Torso</role>
+                  <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_Torso</texPath>
+                  <baseLayer>28</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                      <debugLabel>SC_Gut1</debugLabel>
+                      <role>Scarecrow_Torso</role>
+                      <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_Gut1</texPath>
+                      <baseLayer>28.8</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                      <debugLabel>SC_Gut2</debugLabel>
+                      <role>Scarecrow_Torso</role>
+                      <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_Gut2</texPath>
+                      <baseLayer>29.2</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                      <debugLabel>SC_Gut3</debugLabel>
+                      <role>Scarecrow_Torso</role>
+                      <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_Gut3</texPath>
+                      <baseLayer>33.2</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                      <debugLabel>SC_Gut4</debugLabel>
+                      <role>Scarecrow_Torso</role>
+                      <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_Gut4</texPath>
+                      <baseLayer>33.6</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                      <debugLabel>SC_Gut5</debugLabel>
+                      <role>Scarecrow_Torso</role>
+                      <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_Gut5</texPath>
+                      <baseLayer>31.2</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                      <debugLabel>Scarecrow_ArmBackUpper</debugLabel>
+                      <tagDef>Scarecrow_ArmBackUpper</tagDef>
+                      <role>Scarecrow_ArmBackUpper</role>
+                      <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_ArmBackUpper</texPath>
+                      <baseLayer>18</baseLayer>
+                      <children>
+                        <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                          <debugLabel>Scarecrow_ArmBackLower</debugLabel>
+                          <tagDef>Scarecrow_ArmBackLower</tagDef>
+                          <role>Scarecrow_ArmBackLower</role>
+                          <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_ArmBackLower</texPath>
+                          <baseLayer>18.8</baseLayer>
+                          <children>
+                            <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                              <debugLabel>Scarecrow_ArmBackSickle</debugLabel>
+                              <tagDef>Scarecrow_ArmBackSickle</tagDef>
+                              <role>Scarecrow_ArmBackSickle</role>
+                              <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_ArmBackSickle</texPath>
+                              <baseLayer>19.6</baseLayer>
+                            </li>
+                          </children>
+                        </li>
+                      </children>
+                    </li>
+                    <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                      <debugLabel>Scarecrow_Ribbon</debugLabel>
+                      <tagDef>Scarecrow_Ribbon</tagDef>
+                      <role>Scarecrow_Ribbon</role>
+                      <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_Ribbon</texPath>
+                      <baseLayer>42.8</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                      <debugLabel>Scarecrow_Head</debugLabel>
+                      <tagDef>Scarecrow_Head</tagDef>
+                      <role>Scarecrow_Head</role>
+                      <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_FaceBack</texPath>
+                      <baseLayer>36</baseLayer>
+                      <children>
+                        <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                          <debugLabel>SC_FaceFront</debugLabel>
+                          <role>Scarecrow_Head</role>
+                          <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_FaceFront</texPath>
+                          <baseLayer>36.8</baseLayer>
+                        </li>
+                        <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                          <debugLabel>SC_FaceEyes</debugLabel>
+                          <role>Scarecrow_Head</role>
+                          <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_FaceEyes</texPath>
+                          <baseLayer>37.6</baseLayer>
+                        </li>
+                        <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                          <debugLabel>Scarecrow_Hat</debugLabel>
+                          <tagDef>Scarecrow_Hat</tagDef>
+                          <role>Scarecrow_Hat</role>
+                          <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_Hat</texPath>
+                          <baseLayer>46</baseLayer>
+                        </li>
+                        <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                          <debugLabel>Scarecrow_Tongue</debugLabel>
+                          <tagDef>Scarecrow_Tongue</tagDef>
+                          <role>Scarecrow_Tongue</role>
+                          <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_Tongue</texPath>
+                          <baseLayer>44.4</baseLayer>
+                        </li>
+                      </children>
+                    </li>
+                    <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                      <debugLabel>Scarecrow_ArmFrontUpper</debugLabel>
+                      <tagDef>Scarecrow_ArmFrontUpper</tagDef>
+                      <role>Scarecrow_ArmFrontUpper</role>
+                      <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_ArmFrontUpper</texPath>
+                      <baseLayer>40</baseLayer>
+                      <children>
+                        <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                          <debugLabel>Scarecrow_ArmFrontLower</debugLabel>
+                          <tagDef>Scarecrow_ArmFrontLower</tagDef>
+                          <role>Scarecrow_ArmFrontLower</role>
+                          <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_ArmFrontLower</texPath>
+                          <baseLayer>40.8</baseLayer>
+                          <children>
+                            <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.PawnRenderNodeProperties_ScarecrowPart">
+                              <debugLabel>Scarecrow_ArmFrontRake</debugLabel>
+                              <tagDef>Scarecrow_ArmFrontRake</tagDef>
+                              <role>Scarecrow_ArmFrontRake</role>
+                              <texPath>Things/Pawn/ScarecrowSearchingForWisdom/Parts/SC_ArmFrontRake</texPath>
+                              <baseLayer>41.6</baseLayer>
+                            </li>
+                          </children>
+                        </li>
+                      </children>
+                    </li>
+                  </children>
+                </li>
+              </children>
+            </li>
+          </children>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

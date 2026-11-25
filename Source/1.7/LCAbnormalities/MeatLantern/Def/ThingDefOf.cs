@@ -13,6 +13,7 @@ namespace MeatLantern.Def
 
         public static ThingDef MeatLanternEgg;
         public static ThingDef EgoWeapon_MeatLantern;
+        public static ThingDef LC_MeatLanternChompFX;
 
         static ThingDefOf()
         {

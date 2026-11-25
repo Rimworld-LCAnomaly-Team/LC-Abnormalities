@@ -41,6 +41,10 @@
   <LC_LittleRed_RecallLabel>召回雇佣兵</LC_LittleRed_RecallLabel>
   <LC_LittleRed_RecallDesc>命令小红帽雇佣兵结束本次委托并直接返回原先的收容平台。</LC_LittleRed_RecallDesc>
 
+  <!-- E.G.O 武器主动技能通用校验提示 -->
+  <LC_EgoSkill_TargetMustBeAlive>目标必须处于存活状态。</LC_EgoSkill_TargetMustBeAlive>
+  <LC_EgoSkill_CannotTargetAlly>不能以己方单位作为该技能的目标。</LC_EgoSkill_CannotTargetAlly>
+
   <!-- D-09-104 逆流时钟 -->
   <LC_BackwardClock_UseFloatMenu>操作{0}</LC_BackwardClock_UseFloatMenu>
   <LC_BackwardClock_UseGizmoLabel>充能 / 发动倒流...</LC_BackwardClock_UseGizmoLabel>

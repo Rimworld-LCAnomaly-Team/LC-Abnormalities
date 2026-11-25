@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- D-02-107 波迪 -->
+  <LC_Ppodae_EscapedLabel>波迪突破收容！</LC_Ppodae_EscapedLabel>
+  <LC_Ppodae_EscapedText>{0}扯碎了乖巧温顺的外表，化为浑身刺青的狂暴恶犬！它将猛烈扑杀附近的人类目标，直到亲手撕碎一人后才会满足地自行变回异想体蛋。</LC_Ppodae_EscapedText>
+  <LC_Ppodae_SuppressedLabel>波迪已被镇压</LC_Ppodae_SuppressedLabel>
+  <LC_Ppodae_SuppressedText>{0}平息了狂暴姿态并还原为收容蛋。</LC_Ppodae_SuppressedText>
+  <LC_Ppodae_NonInstinctGrowl>（凶戾低吼！）</LC_Ppodae_NonInstinctGrowl>
+  <LC_Ppodae_SatedReturn>心满意足——自行化卵！</LC_Ppodae_SatedReturn>
+  <LC_Ppodae_SatedMessage>{0}击杀了{1}后心满意足地平息下来，自行化为收容蛋返回休眠。</LC_Ppodae_SatedMessage>
+
+  <!-- F-05-32 热心的樵夫 -->
+  <LC_Woodsman_EscapedLabel>热心的樵夫突破收容！</LC_Woodsman_EscapedLabel>
+  <LC_Woodsman_EscapedText>{0}将一颗鲜活跳动的心脏塞入胸膛熔炉并破封而出！当心它沉重的红伤巨斧劈砍，并避免周围遗留人类尸体使其吞食回血（每次约 95 点生命）。</LC_Woodsman_EscapedText>
+  <LC_Woodsman_SuppressedLabel>热心的樵夫已被镇压</LC_Woodsman_SuppressedLabel>
+  <LC_Woodsman_SuppressedText>{0}胸腔炉火熄灭，钢铁身躯瓦解并还原为收容蛋。</LC_Woodsman_SuppressedText>
+  <LC_Woodsman_TrapArmedFloat>饥渴陷阱已触发待机……</LC_Woodsman_TrapArmedFloat>
+  <LC_Woodsman_TrapArmedMessage>{0}的逆卡巴拉计数器已归 0——它此刻正佯装静止，下一名进入收容单元作业的员工将被其冷酷处决献心并引发出逃！</LC_Woodsman_TrapArmedMessage>
+  <LC_Woodsman_TrapArmedInspect>警告：心脏猎杀陷阱已待机——下一名进入作业的员工将被就地处决！</LC_Woodsman_TrapArmedInspect>
+  <LC_Woodsman_HeartTrapTriggered>{0}猛然拉下铁闸门处决了{1}并挖出心脏塞入胸炉，随后突破收容！</LC_Woodsman_HeartTrapTriggered>
+  <LC_Woodsman_EatHeartFloat>进食心脏（+{0} 生命）</LC_Woodsman_EatHeartFloat>
+
+  <!-- O-03-60 宇宙碎片 -->
+  <LC_Cosmos_EscapedLabel>宇宙碎片突破收容！</LC_Cosmos_EscapedLabel>
+  <LC_Cosmos_EscapedText>{0}褪去了彩心伪装，展开四条漆黑触须与恐怖巨口！请留心它周期性高歌引发的群体白伤音波震荡。</LC_Cosmos_EscapedText>
+  <LC_Cosmos_SuppressedLabel>宇宙碎片已被镇压</LC_Cosmos_SuppressedLabel>
+  <LC_Cosmos_SuppressedText>{0}诡异的宇宙歌声渐渐消散，折叠还原为收容蛋。</LC_Cosmos_SuppressedText>
+  <LC_Cosmos_PanicDropFloat>与作业者恐慌发生共鸣！</LC_Cosmos_PanicDropFloat>
+  <LC_Cosmos_EnlightenmentFloat>宇宙悟性庇护！</LC_Cosmos_EnlightenmentFloat>
+
+  <!-- F-01-87 索求智慧的稻草人 -->
+  <LC_Scarecrow_EscapedLabel>索求智慧的稻草人突破收容！</LC_Scarecrow_EscapedLabel>
+  <LC_Scarecrow_EscapedText>{0}掀开草帽，挥舞草叉与镰刀前去收割聪明人的头脑！当它伸出染血稻草长舌吸食受害者脑浆时将处于完全无敌并高速回血，切勿浪费火力！</LC_Scarecrow_EscapedText>
+  <LC_Scarecrow_SuppressedLabel>索求智慧的稻草人已被镇压</LC_Scarecrow_SuppressedLabel>
+  <LC_Scarecrow_SuppressedText>{0}散落为破旧麻布与稻草堆，还原为收容蛋。</LC_Scarecrow_SuppressedText>
+  <LC_Scarecrow_PrudenceEnvyFloat>嫉妒聪慧的头脑……</LC_Scarecrow_PrudenceEnvyFloat>
+  <LC_Scarecrow_BrainDrainFloat>吸食脑浆中！</LC_Scarecrow_BrainDrainFloat>
+  <LC_Scarecrow_InvulnFloat>吸食期间免疫伤害！</LC_Scarecrow_InvulnFloat>
+
+</LanguageData>

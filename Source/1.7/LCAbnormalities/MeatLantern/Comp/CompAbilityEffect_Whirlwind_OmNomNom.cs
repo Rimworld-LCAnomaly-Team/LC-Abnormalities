@@ -1,5 +1,6 @@
 ﻿using MeatLantern.Utility;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace MeatLantern.Comp
@@ -11,7 +12,33 @@ namespace MeatLantern.Comp
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
+            Pawn caster = parent?.pawn;
             Pawn pawn = target.Pawn;
+            if (caster != null && caster.Spawned && caster.MapHeld != null)
+            {
+                Vector3 anchorPos = pawn != null && pawn.Spawned ? pawn.DrawPos.Yto0() : target.CenterVector3.Yto0();
+                float aimAngle = LCAnomalyCore.Render.Weapon.EgoWeaponAnimationUtility.ResolveAimAngle(caster, anchorPos);
+                ThingWithComps weapon = caster.equipment?.Primary;
+                if (weapon != null && weapon.def?.defName == MeatLantern.Effect.MeatLanternWeaponAnimHandler.WeaponDefName)
+                {
+                    LCAnomalyCore.Render.Weapon.EgoWeaponAnimationManager.Play(
+                        caster,
+                        weapon,
+                        MeatLantern.Effect.MeatLanternWeaponAnimHandler.ClipSkillChomp,
+                        72,
+                        aimAngle);
+                }
+
+                if (MeatLantern.Def.ThingDefOf.LC_MeatLanternChompFX != null && caster.PositionHeld.InBounds(caster.MapHeld))
+                {
+                    IntVec3 spawnCell = pawn != null && pawn.Spawned ? pawn.PositionHeld : caster.PositionHeld;
+                    if (GenSpawn.Spawn(MeatLantern.Def.ThingDefOf.LC_MeatLanternChompFX, spawnCell, caster.MapHeld) is MeatLantern.Effect.Thing_MeatLanternChompFX chompFx)
+                    {
+                        chompFx.Initialize(anchorPos, 2.75f, 30);
+                    }
+                }
+            }
+
             if (pawn != null)
             {
                 MeatLanternUtility.DoBiteOnPawn(pawn, parent.pawn, Props.damageRange, Props.armorPenetration, Props.suckPercent, Props.stunPercent);

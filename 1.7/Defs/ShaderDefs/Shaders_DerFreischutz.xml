@@ -33,7 +33,7 @@
       <vertexShaderFileName>LC_MagicBulletPortal.vert.glsl</vertexShaderFileName>
       <fragmentShaderFileName>LC_MagicBulletPortal.frag.glsl</fragmentShaderFileName>
       <flipTextureST>false</flipTextureST>
-      <blendMode>Additive</blendMode>
+      <transparent>true</transparent>
       <depthWrite>false</depthWrite>
       <cullMode>None</cullMode>
       <renderQueue>3156</renderQueue>

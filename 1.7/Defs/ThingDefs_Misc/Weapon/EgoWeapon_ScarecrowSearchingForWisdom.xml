@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_BaseMeleeWeapon_EGO">
+    <defName>EgoWeapon_ScarecrowSearchingForWisdom</defName>
+    <label>E.G.O. Weapon (Harvest)</label>
+    <description>A long-handled four-pronged iron harvest rake extracted from Scarecrow Searching for Wisdom (HE).\nRakes rapidly at targets with relentless Black strikes that tear mind and flesh alike.</description>
+    <descriptionHyperlinks>
+      <AbilityDef>Harvest_WisdomDrain</AbilityDef>
+    </descriptionHyperlinks>
+    <thingClass>ThingWithComps</thingClass>
+    <equippedAngleOffset>-45</equippedAngleOffset>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/EgoWeapon_ScarecrowSearchingForWisdom</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.2, 2.2)</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>2.8</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>harvest rake</label>
+        <capacities>
+          <li>LC_ScarecrowEgoRake</li>
+        </capacities>
+        <power>17</power>
+        <cooldownTime>1.15</cooldownTime>
+        <soundMeleeHit>LC_Scarecrow_SpearHit</soundMeleeHit>
+      </li>
+    </tools>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_EquippableAbility">
+        <abilityDef>Harvest_WisdomDrain</abilityDef>
+      </li>
+      <li Class="CompProperties_Styleable"/>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Black</damageType>
+        <riskLevel>HE</riskLevel>
+        <damageMultiplier>1</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

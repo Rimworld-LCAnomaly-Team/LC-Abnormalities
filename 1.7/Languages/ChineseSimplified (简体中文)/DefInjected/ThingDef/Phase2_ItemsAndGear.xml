@@ -66,10 +66,13 @@
   <EgoWeapon_DerFreischutz.tools.barrel.label>长枪管</EgoWeapon_DerFreischutz.tools.barrel.label>
   <Bullet_EgoWeapon_DerFreischutz.label>魔弹 E.G.O. 贯穿弹</Bullet_EgoWeapon_DerFreischutz.label>
   <MagicBullet_Request.label>契约贯穿魔弹</MagicBullet_Request.label>
+  <LC_MagicBulletSkillRunnerFX.label>魔弹齐射魔门演出</LC_MagicBulletSkillRunnerFX.label>
   <Apparel_DerFreischutzSuit.label>E.G.O. 护甲（魔弹）</Apparel_DerFreischutzSuit.label>
   <Apparel_DerFreischutzSuit.description>镌刻鎏金符纹与沉厚肩饰的靛蓝风衣（HE），红/白/黑三色抗性均衡优异，并略微缩短瞄准延迟。</Apparel_DerFreischutzSuit.description>
   <Accessory_DerFreischutz.label>E.G.O. 饰品（魔弹）</Accessory_DerFreischutz.label>
   <Accessory_DerFreischutz.description>冷冽冒烟的猎手烟斗，显著加快装填瞄准与步伐，却会让灵魂更易承伤与崩解。</Accessory_DerFreischutz.description>
+  <LC_SolemnLamentSkillRunnerFX.label>圣宣死蝶哀歌演出</LC_SolemnLamentSkillRunnerFX.label>
+  <LC_FourthMatchSkillRunnerFX.label>终末火柴之焰演出</LC_FourthMatchSkillRunnerFX.label>
 
   <!-- Funeral of Dead Butterflies -->
   <FuneralOfDeadButterflies.label>亡蝶葬仪</FuneralOfDeadButterflies.label>
@@ -87,6 +90,7 @@
   <DyingFuneralOfDeadButterflies.label>亡蝶葬仪（入棺中）</DyingFuneralOfDeadButterflies.label>
   <LC_SolemnLamentButterflyBloom.label>圣宣绽放亡蝶</LC_SolemnLamentButterflyBloom.label>
   <LC_SolemnLamentButterflyFlutter.label>圣宣飞散亡蝶</LC_SolemnLamentButterflyFlutter.label>
+  <LC_SolemnLamentButterflyStream.label>亡蝶葬仪直线蝶潮</LC_SolemnLamentButterflyStream.label>
 
   <FuneralOfDeadButterfliesEgg.label>亡蝶葬仪收容蛋</FuneralOfDeadButterfliesEgg.label>
   <FuneralOfDeadButterfliesEgg.description>亡蝶葬仪（T-01-68）重归安息后的黑曜卵体。</FuneralOfDeadButterfliesEgg.description>
@@ -110,13 +114,13 @@
 
   <!-- Snow Queen -->
   <SnowQueen.label>冰雪女皇</SnowQueen.label>
-  <SnowQueen.description>坐在剔透坚冰王座上等待挑战者的冷艳女王（F-01-37）。\n工作评价若落入“差”，她会首先印下霜吻；再错一次便会直接将那名员工关入冰晶棺椁开启 90 秒处刑倒计时——唯有在平台点击“决斗救援”派高勇气勇者赢下试炼，方可溶化坚冰救回同伴并双获 E.G.O 赠礼！</SnowQueen.description>
+  <SnowQueen.description>戴着苍蓝冰晶冠冕、守候春暖与挑战者的冷艳女王（F-01-37）。\n工作取得“良”结果有 50% 概率、“差”结果有 100% 概率印下霜吻；二度受吻即封入 90 秒冰晶棺椁并暂停一切常规工作。派遣高勇气勇者赢下“决斗救援”即可融冰救人并双双必得她的 E.G.O. 饰品，败北或超时则会碎冰双亡。</SnowQueen.description>
   <SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
   <SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>切忌选用“压迫”工作（恒为 0%）。高智慧员工执行“洞察”与“沟通”最容易收获她冰冷的青睐。</SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
   <SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
-  <SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>工作结果首次为“差”时获得霜吻标记；若身带霜吻时再度取得“差”，该员工将立刻被封冻入冰棺 90 秒。\nE.G.O饰品“霜之碎片”已解锁。</SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>“良”工作 50%、“差”工作 100% 落下霜吻标记；携带霜吻时再度受吻便会被封冻入冰棺 90 秒并锁死常规研究。\nE.G.O. 饰品“霜之碎片”仅通过决斗胜利必得解锁。</SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
   <SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
-  <SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>选中收容平台点击“决斗救援...”派遣高勇气勇者前往迎战（I~V 胜率为 25%/45%/65%/85%/95%）：胜利全员获救并双双领受饰品，败北或超时则同归于尽！</SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>选中收容平台点击“决斗救援...”或右键平台直接派勇者应战（勇气 I~V 胜率 10%/30%/50%/80%/100%）：胜利双双获救且必得饰品，败北或超时同归于尽！</SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
   <SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
   <SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>当春日终于溶化了她冰雪的宫殿，只留下一杆透彻冰晶长枪。\nHE 级 E.G.O 长矛与护甲“霜之碎片”已解锁。</SnowQueen.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
 
@@ -143,13 +147,13 @@
 
   <!-- Notes from a Crazed Researcher -->
   <NotesFromCrazedResearcher.label>癫狂研究员的笔记</NotesFromCrazedResearcher.label>
-  <NotesFromCrazedResearcher.description>一位彻底陷落于异想体狂想中的先驱所留下的厚重皮面笔记（T-09-78）。\n指派殖民者随身借阅期间，其常规作业速度与异想体研究速率都将暴增 +50%；但切记铁律——佩戴后若累计承受达 100 点伤害，或在未持有满 30 秒且未完成至少 1 次研究的情况下擅自放回，整本手札都会轰然爆裂摧毁宿主。</NotesFromCrazedResearcher.description>
+  <NotesFromCrazedResearcher.description>一位彻底陷落于异想体狂想中的先驱所留下的厚重皮面笔记（T-09-78）。\n指派殖民者随身借阅期间，其工作、科研与异想体研究速率暴增 +50%，研究成功率 +10%，学习速度 +25%，移速 +20%；但切记铁律——佩戴后若累计承受达 60 点 HP/SP 伤害（黑伤双倍计入，被肖像代偿或完全免疫的伤害不计），或在未满 30 秒且未完成至少 1 次非工具研究时擅自放回，手札就会膨胀炸碎宿主（半径 6.0 格 35 点红伤）。</NotesFromCrazedResearcher.description>
   <NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
-  <NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>随身携带着癫狂研究员的笔记期间，佩戴者的工作速度、异想体研究速度与学习速度都会得到惊人幅度的狂飙提升。</NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>随身携带癫狂研究员的笔记期间，佩戴者的工作、研究台科研与异想体工作速率 +50%，研究成功率 +10%，学习与移动速度亦大幅提升。</NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
   <NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
-  <NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>危险警告：持有笔记期间若累计受到达到 100 点任何来源伤害，笔记便会当场引爆成覆盖 4.5 格范围的高额黑红爆炸，直接炸死携带者！</NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>危险警告：持有笔记期间累计承受达 60 点有效伤害（黑伤按生命+精神双倍计算；免疫或由异界肖像转嫁的伤害除外），佩戴者便会当场发生半径 6 格、35 点红伤的血肉爆裂！</NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
   <NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
-  <NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>安全归还铁律：必须在持有笔记超过 30 秒且佩戴者亲自完成至少 1 次任意异想体研究工作后方可安全放回，否则归还瞬间即刻爆裂。</NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>安全归还铁律：必须在持有笔记满 30 秒且完成至少 1 次非工具异想体研究后方可安全放回，否则归还瞬间即刻爆裂。</NotesFromCrazedResearcher.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
 
   <NotesFromCrazedResearcherEgg.label>癫狂研究员笔记收容蛋</NotesFromCrazedResearcherEgg.label>
   <NotesFromCrazedResearcherEgg.description>封存着癫狂研究员的笔记（T-09-78）的工具型异想体收容胶囊。绑上收容平台即可供研究者随身借阅，或砸碎回收脑啡肽箱。</NotesFromCrazedResearcherEgg.description>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderTreeDef>
+    <defName>FragmentOfTheUniverse</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li Class="LCAbnormalities.FragmentOfTheUniverse.PawnRenderNodeProperties_FragmentOfTheUniversePart">
+          <debugLabel>Cosmos_Root</debugLabel>
+          <tagDef>Cosmos_Root</tagDef>
+          <role>Root</role>
+          <containedScale>1.75</containedScale>
+          <breachedScale>2.05</breachedScale>
+          <portraitScale>1.85</portraitScale>
+          <containedOffset>(0, 0, -0.05)</containedOffset>
+          <useGraphic>false</useGraphic>
+          <children>
+            <li Class="LCAbnormalities.FragmentOfTheUniverse.PawnRenderNodeProperties_FragmentOfTheUniversePart">
+              <debugLabel>Cosmos_Body</debugLabel>
+              <tagDef>Cosmos_Body</tagDef>
+              <role>Cosmos_Body</role>
+              <texPath>Things/Pawn/FragmentOfTheUniverse/Parts/CS_BodyContained</texPath>
+              <alternateTexPaths>
+                <li>Things/Pawn/FragmentOfTheUniverse/Parts/CS_BodyBreached</li>
+              </alternateTexPaths>
+              <baseLayer>30</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.FragmentOfTheUniverse.PawnRenderNodeProperties_FragmentOfTheUniversePart">
+                  <debugLabel>Cosmos_Spikes</debugLabel>
+                  <tagDef>Cosmos_Spikes</tagDef>
+                  <role>Cosmos_Spikes</role>
+                  <texPath>Things/Pawn/FragmentOfTheUniverse/Parts/CS_Spikes</texPath>
+                  <baseLayer>28</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.FragmentOfTheUniverse.PawnRenderNodeProperties_FragmentOfTheUniversePart">
+                  <debugLabel>Cosmos_Neck</debugLabel>
+                  <tagDef>Cosmos_Neck</tagDef>
+                  <role>Cosmos_Neck</role>
+                  <texPath>Things/Pawn/FragmentOfTheUniverse/Parts/CS_Neck</texPath>
+                  <baseLayer>42</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.FragmentOfTheUniverse.PawnRenderNodeProperties_FragmentOfTheUniversePart">
+                      <debugLabel>Cosmos_Head</debugLabel>
+                      <tagDef>Cosmos_Head</tagDef>
+                      <role>Cosmos_Head</role>
+                      <texPath>Things/Pawn/FragmentOfTheUniverse/Parts/CS_HeadContained</texPath>
+                      <alternateTexPaths>
+                        <li>Things/Pawn/FragmentOfTheUniverse/Parts/CS_HeadBreached</li>
+                      </alternateTexPaths>
+                      <baseLayer>46</baseLayer>
+                    </li>
+                  </children>
+                </li>
+              </children>
+            </li>
+            <li Class="LCAbnormalities.FragmentOfTheUniverse.PawnRenderNodeProperties_FragmentOfTheUniversePart">
+              <debugLabel>Cosmos_LegBackLeftUpper</debugLabel>
+              <tagDef>Cosmos_LegBackLeftUpper</tagDef>
+              <role>Cosmos_LegBackLeftUpper</role>
+              <texPath>Things/Pawn/FragmentOfTheUniverse/Parts/CS_LegBackLeftUpper</texPath>
+              <baseLayer>22</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.FragmentOfTheUniverse.PawnRenderNodeProperties_FragmentOfTheUniversePart">
+                  <debugLabel>Cosmos_LegBackLeftMid</debugLabel>
+                  <tagDef>Cosmos_LegBackLeftMid</tagDef>
+                  <role>Cosmos_LegBackLeftMid</role>
+                  <texPath>Things/Pawn/FragmentOfTheUniverse/Parts/CS_LegBackLeftMid</texPath>
+                  <baseLayer>22.4</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.FragmentOfTheUniverse.PawnRenderNodeProperties_FragmentOfTheUniversePart">
+                      <debugLabel>Cosmos_LegBackLeftLower</debugLabel>
+                      <tagDef>Cosmos_LegBackLeftLower</tagDef>
+                      <role>Cosmos_LegBackLeftLower</role>
+                      <texPath>Things/Pawn/FragmentOfTheUniverse/Parts/CS_LegBackLeftLower</texPath>
+                      <baseLayer>22.8</baseLayer>
+                    </li>
+                  </children>
+                </li>
+              </children>
+            </li>
+            <li Class="LCAbnormalities.FragmentOfTheUniverse.PawnRenderNodeProperties_FragmentOfTheUniversePart">
+              <debugLabel>Cosmos_LegBackRightUpper</debugLabel>
+              <tagDef>Cosmos_LegBackRightUpper</tagDef>
+              <role>Cosmos_LegBackRightUpper</role>
+              <texPath>Things/Pawn/FragmentOfTheUniverse/Parts/CS_LegBackRightUpper</texPath>
+              <baseLayer>26</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.FragmentOfTheUniverse.PawnRenderNodeProperties_FragmentOfTheUniversePart">
+                  <debugLabel>Cosmos_LegBackRightMid</debugLabel>
+                  <tagDef>Cosmos_LegBackRightMid</tagDef>
+                  <role>Cosmos_LegBackRightMid</role>
+                  <texPath>Things/Pawn/FragmentOfTheUniverse/Parts/CS_LegBackRightMid</texPath>
+                  <baseLayer>26.4</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.FragmentOfTheUniverse.PawnRenderNodeProperties_FragmentOfTheUniversePart">
+                      <debugLabel>Cosmos_LegBackRightLower</debugLabel>
+                      <tagDef>Cosmos_LegBackRightLower</tagDef>
+                      <role>Cosmos_LegBackRightLower</role>
+                      <texPath>Things/Pawn/FragmentOfTheUniverse/Parts/CS_LegBackRightLower</texPath>
+                      <baseLayer>26.8</baseLayer>
+                    </li>
+                  </children>
+                </li>
+              </children>
+            </li>
+            <li Class="LCAbnormalities.FragmentOfTheUniverse.PawnRenderNodeProperties_FragmentOfTheUniversePart">
+              <debugLabel>Cosmos_LegFrontRightUpper</debugLabel>
+              <tagDef>Cosmos_LegFrontRightUpper</tagDef>
+              <role>Cosmos_LegFrontRightUpper</role>
+              <texPath>Things/Pawn/FragmentOfTheUniverse/Parts/CS_LegFrontRightUpper</texPath>
+              <baseLayer>34</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.FragmentOfTheUniverse.PawnRenderNodeProperties_FragmentOfTheUniversePart">
+                  <debugLabel>Cosmos_LegFrontRightMid</debugLabel>
+                  <tagDef>Cosmos_LegFrontRightMid</tagDef>
+                  <role>Cosmos_LegFrontRightMid</role>
+                  <texPath>Things/Pawn/FragmentOfTheUniverse/Parts/CS_LegFrontRightMid</texPath>
+                  <baseLayer>34.4</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.FragmentOfTheUniverse.PawnRenderNodeProperties_FragmentOfTheUniversePart">
+                      <debugLabel>Cosmos_LegFrontRightLower</debugLabel>
+                      <tagDef>Cosmos_LegFrontRightLower</tagDef>
+                      <role>Cosmos_LegFrontRightLower</role>
+                      <texPath>Things/Pawn/FragmentOfTheUniverse/Parts/CS_LegFrontRightLower</texPath>
+                      <baseLayer>34.8</baseLayer>
+                    </li>
+                  </children>
+                </li>
+              </children>
+            </li>
+            <li Class="LCAbnormalities.FragmentOfTheUniverse.PawnRenderNodeProperties_FragmentOfTheUniversePart">
+              <debugLabel>Cosmos_LegFrontLeftUpper</debugLabel>
+              <tagDef>Cosmos_LegFrontLeftUpper</tagDef>
+              <role>Cosmos_LegFrontLeftUpper</role>
+              <texPath>Things/Pawn/FragmentOfTheUniverse/Parts/CS_LegFrontLeftUpper</texPath>
+              <baseLayer>38</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.FragmentOfTheUniverse.PawnRenderNodeProperties_FragmentOfTheUniversePart">
+                  <debugLabel>Cosmos_LegFrontLeftMid</debugLabel>
+                  <tagDef>Cosmos_LegFrontLeftMid</tagDef>
+                  <role>Cosmos_LegFrontLeftMid</role>
+                  <texPath>Things/Pawn/FragmentOfTheUniverse/Parts/CS_LegFrontLeftMid</texPath>
+                  <baseLayer>38.4</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.FragmentOfTheUniverse.PawnRenderNodeProperties_FragmentOfTheUniversePart">
+                      <debugLabel>Cosmos_LegFrontLeftLower</debugLabel>
+                      <tagDef>Cosmos_LegFrontLeftLower</tagDef>
+                      <role>Cosmos_LegFrontLeftLower</role>
+                      <texPath>Things/Pawn/FragmentOfTheUniverse/Parts/CS_LegFrontLeftLower</texPath>
+                      <baseLayer>38.8</baseLayer>
+                    </li>
+                  </children>
+                </li>
+              </children>
+            </li>
+          </children>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderNodeTagDef><defName>Woodsman_Root</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Woodsman_Pelvis</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Woodsman_LegLeftUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Woodsman_LegLeftLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Woodsman_LegRightUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Woodsman_LegRightLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Woodsman_Torso</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Woodsman_Pipe1</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Woodsman_Pipe2</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Woodsman_Heart</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Woodsman_Head</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Woodsman_ArmLeftUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Woodsman_ArmLeftLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Woodsman_ArmLeftAxe</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Woodsman_ArmRightUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Woodsman_ArmRightLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Woodsman_ArmRightHand</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Woodsman_Guts</defName></PawnRenderNodeTagDef>
+
+</Defs>

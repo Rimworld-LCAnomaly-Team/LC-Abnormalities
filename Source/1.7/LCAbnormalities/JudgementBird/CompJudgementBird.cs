@@ -3,6 +3,7 @@ using LCAbnormalities.Shared;
 using LCAnomalyCore.Comp.Pawns;
 using LCAnomalyCore.DamageWorker;
 using LCAnomalyCore.Misc;
+using LCAnomalyCore.Render.Weapon;
 using LCAnomalyCore.Util;
 using RimWorld;
 using UnityEngine;
@@ -25,10 +26,14 @@ namespace LCAbnormalities.JudgementBird
         public static SoundDef LC_Justitia_Slash3;
         public static SoundDef LC_Justitia_Slash4;
 
+        public static DamageDef LC_Justitia_VerdictPale;
+
         public static AnimationDef JudgementBird_Standing;
         public static AnimationDef JudgementBird_Seeing;
         public static AnimationDef JudgementBird_Walk;
         public static AnimationDef JudgementBird_Judgement;
+        public static AnimationDef JudgementBird_VictimHangStart;
+        public static AnimationDef JudgementBird_VictimHangLoop;
 
         public static ThingDef LC_JudgementCastAuraFX;
         public static ThingDef LC_JudgementPaleWaveFX;
@@ -36,6 +41,8 @@ namespace LCAbnormalities.JudgementBird
         public static ThingDef LC_JudgementBandageFX;
         public static ThingDef LC_JustitiaSlashFX;
         public static ThingDef LC_JustitiaComboFX;
+        public static ThingDef LC_JustitiaChargeSigilFX;
+        public static ThingDef LC_JustitiaVerdictRunnerFX;
 
         static JudgementBirdDefOf()
         {
@@ -321,7 +328,6 @@ namespace LCAbnormalities.JudgementBird
                 }
 
                 Vector3 targetVec = target.DrawPos.Yto0();
-                bool wasHumanlike = target.RaceProps?.Humanlike == true;
                 float palePoints = Rand.Range(PropsJudge.judgementPaleMin, PropsJudge.judgementPaleMax);
 
                 // Crisp cross Pale verdict slash VFX on every judged victim
@@ -332,10 +338,10 @@ namespace LCAbnormalities.JudgementBird
                 target.TakeDamage(new DamageInfo(LCAnomalyCore.Defs.DamageDefOf.LC_PaleDamage, palePoints, 1f, instigator: self));
                 struck++;
 
-                // Iconic Lobotomy Corporation Gallows execution VFX whenever a humanlike is killed by Judgement Bird!
-                if (wasHumanlike && (target.Dead || target.Destroyed))
+                // Iconic Lobotomy Corporation Gallows execution VFX whenever a unit is killed by Judgement Bird (deduplicated with Patch_PawnKill)
+                if (target.Dead || target.Destroyed)
                 {
-                    JudgementBirdVfxUtility.SpawnGallows(map, targetVec);
+                    JudgementBirdVfxUtility.TrySpawnGallowsForVictim(target, map, targetVec);
                 }
             }
 
@@ -558,18 +564,34 @@ namespace LCAbnormalities.JudgementBird
                 dinfo.SetAmount(dinfo.Amount * 1.35f);
             }
 
+            Map victimMap = victim?.MapHeld;
+            IntVec3 center = victim?.PositionHeld ?? IntVec3.Invalid;
+            Vector3 victimVec = victim != null
+                ? (victim.Spawned ? victim.DrawPos.Yto0() : center.ToVector3Shifted().Yto0())
+                : Vector3.zero;
+
             Verse.DamageWorker.DamageResult result = base.Apply(dinfo, victim);
 
-            if (dinfo.Instigator is Pawn attacker && victim != null && victim.MapHeld != null && victim.PositionHeld.InBounds(victim.MapHeld))
+            if (dinfo.Instigator is Pawn attacker && victim != null && victimMap != null && center.InBounds(victimMap))
             {
-                Map map = victim.MapHeld;
-                IntVec3 center = victim.PositionHeld;
-                Vector3 victimVec = victim.Spawned ? victim.DrawPos.Yto0() : center.ToVector3Shifted().Yto0();
+                Map map = victimMap;
                 Vector3 attackerVec = attacker.Spawned ? attacker.DrawPos.Yto0() : victimVec + Vector3.left;
                 Vector3 attackDir = (victimVec - attackerVec).Yto0();
                 float attackYaw = attackDir.sqrMagnitude > 0.001f
                     ? Mathf.Atan2(-attackDir.z, attackDir.x) * Mathf.Rad2Deg
                     : dinfo.Angle;
+
+                // Trigger vertical overhead slash animation on Justitia wielder when not in Verdict Charge / Flurry
+                if (!EgoWeaponAnimationManager.IsPlaying(attacker, JustitiaWeaponAnimHandler.ClipVerdictFlurry)
+                    && !EgoWeaponAnimationManager.IsPlaying(attacker, JustitiaWeaponAnimHandler.ClipVerdictCharge))
+                {
+                    ThingWithComps heldWeapon = attacker.equipment?.Primary;
+                    if (heldWeapon != null && heldWeapon.def?.defName == JustitiaWeaponAnimHandler.WeaponDefName)
+                    {
+                        float aimAngle = EgoWeaponAnimationUtility.ResolveAimAngle(attacker, victimVec);
+                        EgoWeaponAnimationManager.Play(attacker, heldWeapon, JustitiaWeaponAnimHandler.ClipNormalSlash, 62, aimAngle);
+                    }
+                }
 
                 // Spawn authentic multi-slash Pale crescent combo VFX & SFX (60% standard / 40% extended golden scale verdict)
                 JudgementBirdVfxUtility.SpawnJustitiaCombo(map, victimVec, attackYaw, isExtendedCombo);

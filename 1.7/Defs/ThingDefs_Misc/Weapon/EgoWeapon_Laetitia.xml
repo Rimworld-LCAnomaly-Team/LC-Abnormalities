@@ -5,6 +5,9 @@
     <defName>EgoWeapon_Laetitia</defName>
     <label>E.G.O. Weapon (Laetitia)</label>
     <description>It takes a lot of time to extract, but its power cannot be ignored.\nThe crude design appears to have been made a long time ago.\nThe small accessory remains like the wishes of a child who yearned for happiness.</description>
+    <descriptionHyperlinks>
+      <AbilityDef>LaetitiaEGO_SendTheGift</AbilityDef>
+    </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/EgoWeapon_Laetitia</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -21,7 +24,7 @@
     </statBases>
     <verbs>
       <li>
-        <verbClass>Verb_Shoot</verbClass>
+        <verbClass>Laetitia.Effect.Verb_ShootLaetitia</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_EgoWeapon_Laetitia</defaultProjectile>
         <warmupTime>0.9</warmupTime>
@@ -50,9 +53,17 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
-    <comps>
+    <!-- 覆盖 BaseWeapon 的 CompEquippable，避免与 CompEquippableAbility 重复注册 Verb LoadID -->
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
       <li Class="CompProperties_EquippableAbility">
         <abilityDef>LaetitiaEGO_SendTheGift</abilityDef>
+      </li>
+      <li Class="CompProperties_Styleable"/>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
       </li>
     </comps>
     <modExtensions>
@@ -67,6 +78,7 @@
   <ThingDef ParentName="LC_BaseBullet_EGO">
     <defName>Bullet_EgoWeapon_Laetitia</defName>
     <label>Laetitia E.G.O. bullet</label>
+    <thingClass>Laetitia.Effect.Projectile_LaetitiaShot</thingClass>
     <projectile>
       <damageAmountBase>15</damageAmountBase>
       <stoppingPower>1.5</stoppingPower>
@@ -82,25 +94,24 @@
   <AbilityDef>
     <defName>LaetitiaEGO_SendTheGift</defName>
     <label>Send The Gift</label>
-    <description>Mark a hostile humanlike target with an aggressive gift from Laetitia.\nUnlike gifts received during containment work, this mark rapidly destabilizes. When it expires or the target is downed or killed, it triggers a heavy Black damage burst. If the target falls, temporary Little Witch's Friends burst forth—hostile to everyone nearby.</description>
+    <description>Fire a two-beat enchanted Heart-Lace volley at any non-allied living target (range 25), dealing Black damage and affixing an aggressive Gift.\nFollow-up hits from Laetitia's E.G.O. rifle deal +25% bonus Black damage and shatter the gift faster into an ally-safe Heartbreak Black-Lace AoE detonation (stunning and blasting nearby hostiles within 3.6 cells).</description>
     <iconPath>UI/Abilities/SendTheGift</iconPath>
-    <cooldownTicksRange>3600</cooldownTicksRange>
+    <cooldownTicksRange>1080</cooldownTicksRange>
     <hostile>true</hostile>
     <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
     <aiCanUse>true</aiCanUse>
     <warmupStartSound>Shot_Rifle_EgoBase</warmupStartSound>
     <showOnCharacterCard>false</showOnCharacterCard>
     <verbProperties>
-      <verbClass>Verb_CastAbility</verbClass>
+      <verbClass>Laetitia.Effect.Verb_CastAbility_LaetitiaGift</verbClass>
       <requireLineOfSight>true</requireLineOfSight>
-      <range>9.9</range>
-      <warmupTime>0.5</warmupTime>
+      <range>24.9</range>
+      <warmupTime>0.55</warmupTime>
       <soundCast>Shot_Rifle_EgoBase</soundCast>
       <targetParams>
         <canTargetLocations>false</canTargetLocations>
         <canTargetSelf>false</canTargetSelf>
         <canTargetBuildings>false</canTargetBuildings>
-        <canTargetMechs>false</canTargetMechs>
       </targetParams>
     </verbProperties>
     <comps>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderNodeTagDef><defName>Cosmos_Root</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Cosmos_Body</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Cosmos_Spikes</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Cosmos_LegBackLeftUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Cosmos_LegBackLeftMid</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Cosmos_LegBackLeftLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Cosmos_LegBackRightUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Cosmos_LegBackRightMid</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Cosmos_LegBackRightLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Cosmos_LegFrontRightUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Cosmos_LegFrontRightMid</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Cosmos_LegFrontRightLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Cosmos_LegFrontLeftUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Cosmos_LegFrontLeftMid</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Cosmos_LegFrontLeftLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Cosmos_Neck</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Cosmos_Head</defName></PawnRenderNodeTagDef>
+
+</Defs>

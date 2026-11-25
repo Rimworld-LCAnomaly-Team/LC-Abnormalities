@@ -79,4 +79,15 @@
     <isSaveable>false</isSaveable>
   </ThingDef>
 
+  <ThingDef>
+    <defName>LC_GrinderMk4SkillRunnerFX</defName>
+    <label>grinder mk4 skill runner fx</label>
+    <thingClass>LCAbnormalities.AllAroundHelper.Thing_GrinderMk4SkillRunner</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>None</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+  </ThingDef>
+
 </Defs>

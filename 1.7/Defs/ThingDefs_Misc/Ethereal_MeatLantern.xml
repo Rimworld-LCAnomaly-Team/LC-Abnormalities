@@ -25,4 +25,18 @@
     <drawOffscreen>true</drawOffscreen>
   </ThingDef>
 
+  <!-- 灯笼巨颚啃咬瞬爆视觉实体 -->
+  <ThingDef>
+    <defName>LC_MeatLanternChompFX</defName>
+    <label>Meat Lantern Chomp FX</label>
+    <thingClass>MeatLantern.Effect.Thing_MeatLanternChompFX</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
 </Defs>

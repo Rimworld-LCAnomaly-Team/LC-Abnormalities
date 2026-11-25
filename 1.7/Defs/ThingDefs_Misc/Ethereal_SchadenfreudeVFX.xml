@@ -92,4 +92,15 @@
     <isSaveable>false</isSaveable>
   </ThingDef>
 
+  <ThingDef>
+    <defName>LC_GazeSkillRunnerFX</defName>
+    <label>gaze skill runner fx</label>
+    <thingClass>LCAbnormalities.Schadenfreude.Thing_GazeSkillRunner</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>None</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+  </ThingDef>
+
 </Defs>

@@ -28,6 +28,7 @@ namespace LCAbnormalities.FairyFestival
         public static ThingDef LC_FairyDevourExecutionFX;
         public static ThingDef LC_WingbeatSlashFX;
         public static ThingDef LC_WingbeatLifestealFX;
+        public static ThingDef LC_WingbeatSkillRunnerFX;
 
         static FairyFestivalDefOf()
         {
@@ -162,14 +163,22 @@ namespace LCAbnormalities.FairyFestival
 
     /// <summary>
     /// 精灵盛宴异想体 Pawn：
-    /// 驱动 Idle（Default 3s 六连振翅悬停）、Work（研究迎候）、GiveFairy（Give_fairy 2.17s 翠绿发光祝福）与 Feast（分食狂喜）四套动画状态机。
+    /// 驱动连续亚刻插值 Spine 时钟，精准同步 Idle（Default 3.0s）、Work（1.15x）、GiveFairy（Give_fairy 2.167s）与 Feast（1.25x 猩红狂喜）状态机。
     /// </summary>
     public class LC_FairyFestivalPawn : LC_StandardEntityPawn
     {
+        private const float DefaultClipDuration = 3.0f;
+        private const float GiveFairyClipDuration = 2.1667f;
+
         private int oneShotAnimStartTick = -1;
         private int oneShotAnimEndTick = -1;
         private bool oneShotIsFeast;
         private int lastWorkingTick = -999999;
+
+        private bool idlePhaseInitialized;
+        private float continuousIdlePhase;
+        private int lastClockTick = -1;
+        private float lastTickRealtime = -1f;
 
         public CompFairyFestival FairyComp => EntityComp as CompFairyFestival;
 
@@ -204,11 +213,19 @@ namespace LCAbnormalities.FairyFestival
             Scribe_Values.Look(ref oneShotIsFeast, "ffOneShotIsFeast", false);
         }
 
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        {
+            base.SpawnSetup(map, respawningAfterLoad);
+            EnsureClockInitialized();
+            UpdateAnimation();
+        }
+
         protected override void Tick()
         {
             base.Tick();
             if (!Destroyed)
             {
+                AdvanceSpineClock();
                 UpdateAnimation();
                 EmitAmbientShimmer();
             }
@@ -217,8 +234,81 @@ namespace LCAbnormalities.FairyFestival
         public override void TickHolded()
         {
             base.TickHolded();
+            AdvanceSpineClock();
             UpdateAnimation();
             EmitAmbientShimmer();
+        }
+
+        private void EnsureClockInitialized()
+        {
+            if (!idlePhaseInitialized)
+            {
+                idlePhaseInitialized = true;
+                continuousIdlePhase = ((Mathf.Abs(thingIDNumber) * 0.6180339f) % 1f) * DefaultClipDuration;
+            }
+        }
+
+        private void AdvanceSpineClock()
+        {
+            EnsureClockInitialized();
+            if (Find.TickManager == null)
+            {
+                return;
+            }
+
+            int ticksGame = Find.TickManager.TicksGame;
+            if (ticksGame == lastClockTick)
+            {
+                return;
+            }
+
+            int deltaTicks = lastClockTick >= 0 ? Mathf.Clamp(ticksGame - lastClockTick, 1, 12) : 1;
+            lastClockTick = ticksGame;
+            lastTickRealtime = Time.realtimeSinceStartup;
+
+            if (!OneShotPlaying)
+            {
+                float speed = IsWorkingNow ? 1.15f : 1.0f;
+                continuousIdlePhase = Mathf.Repeat(continuousIdlePhase + (deltaTicks / 60f) * speed, DefaultClipDuration);
+            }
+        }
+
+        public void GetSpinePlaybackState(out FairySpineAnimKind animKind, out float animTime, out bool feastMode)
+        {
+            EnsureClockInitialized();
+
+            float subTick = 0f;
+            if (Find.TickManager != null && !Find.TickManager.Paused && lastTickRealtime > 0f)
+            {
+                float elapsedReal = Time.realtimeSinceStartup - lastTickRealtime;
+                float rate = Find.TickManager.TickRateMultiplier;
+                subTick = Mathf.Clamp(elapsedReal * rate, 0f, 1f / 60f);
+            }
+
+            if (OneShotPlaying && Find.TickManager != null)
+            {
+                float elapsed = ((Find.TickManager.TicksGame - oneShotAnimStartTick) / 60f) + subTick;
+                if (oneShotIsFeast)
+                {
+                    animKind = FairySpineAnimKind.GiveFairy;
+                    animTime = Mathf.Repeat(Mathf.Max(0f, elapsed) * 1.25f, GiveFairyClipDuration);
+                    feastMode = true;
+                    return;
+                }
+
+                if (elapsed < GiveFairyClipDuration)
+                {
+                    animKind = FairySpineAnimKind.GiveFairy;
+                    animTime = Mathf.Clamp(elapsed, 0f, GiveFairyClipDuration);
+                    feastMode = false;
+                    return;
+                }
+            }
+
+            float idleSpeed = IsWorkingNow ? 1.15f : 1.0f;
+            animKind = FairySpineAnimKind.Default;
+            animTime = Mathf.Repeat(continuousIdlePhase + subTick * idleSpeed, DefaultClipDuration);
+            feastMode = false;
         }
 
         public void NotifyWorkingTick()
@@ -245,6 +335,7 @@ namespace LCAbnormalities.FairyFestival
             oneShotIsFeast = false;
             oneShotAnimStartTick = Find.TickManager.TicksGame;
             oneShotAnimEndTick = oneShotAnimStartTick + anim.durationTicks;
+            lastTickRealtime = Time.realtimeSinceStartup;
             SetAnimationIfNeeded(anim);
         }
 
@@ -259,19 +350,24 @@ namespace LCAbnormalities.FairyFestival
             oneShotIsFeast = true;
             oneShotAnimStartTick = Find.TickManager.TicksGame;
             oneShotAnimEndTick = oneShotAnimStartTick + anim.durationTicks;
+            lastTickRealtime = Time.realtimeSinceStartup;
             SetAnimationIfNeeded(anim);
         }
 
         private void EmitAmbientShimmer()
         {
+            if (!IsFeastingNow)
+            {
+                return;
+            }
+
             Map map = MapHeld;
             if (map == null || Find.TickManager == null)
             {
                 return;
             }
 
-            int interval = IsGivingFairyNow ? 18 : (IsFeastingNow ? 14 : 72);
-            if (((Find.TickManager.TicksGame + thingIDNumber * 17) % interval) != 0)
+            if (((Find.TickManager.TicksGame + thingIDNumber * 17) % 14) != 0)
             {
                 return;
             }
@@ -284,10 +380,7 @@ namespace LCAbnormalities.FairyFestival
 
             Vector3 drawPos = Spawned ? DrawPos.Yto0() : pos.ToVector3Shifted().Yto0();
             Vector3 offset = new Vector3(Rand.Range(-0.55f, 0.55f), 0f, Rand.Range(-0.20f, 0.65f));
-            Color dustCol = IsFeastingNow
-                ? new Color(0.92f, 0.16f, 0.20f)
-                : new Color(0.45f, 1.0f, 0.80f);
-            FleckMaker.ThrowDustPuffThick(drawPos + offset, map, IsGivingFairyNow ? 0.72f : 0.50f, dustCol);
+            FleckMaker.ThrowDustPuffThick(drawPos + offset, map, 0.68f, new Color(0.92f, 0.16f, 0.20f));
         }
 
         private void UpdateAnimation()
@@ -311,6 +404,11 @@ namespace LCAbnormalities.FairyFestival
                     return;
                 }
 
+                if (!oneShotIsFeast)
+                {
+                    // Seamless transition: Give_fairy ends in closed-wing pose matching Default t=0
+                    continuousIdlePhase = 0f;
+                }
                 oneShotAnimStartTick = -1;
                 oneShotAnimEndTick = -1;
                 oneShotIsFeast = false;

@@ -25,6 +25,16 @@
         <soundMeleeHit>LC_Wingbeat_Hit</soundMeleeHit>
       </li>
     </tools>
+    <descriptionHyperlinks>
+      <AbilityDef>Wingbeat_FairyFeast</AbilityDef>
+    </descriptionHyperlinks>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_EquippableAbility">
+        <abilityDef>Wingbeat_FairyFeast</abilityDef>
+      </li>
+      <li Class="CompProperties_Styleable"/>
+    </comps>
     <modExtensions>
       <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
         <damageType>Red</damageType>

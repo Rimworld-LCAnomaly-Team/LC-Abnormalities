@@ -66,4 +66,18 @@
     <isSaveable>false</isSaveable>
   </ThingDef>
 
+  <!-- 振翅技能时序驱动器 -->
+  <ThingDef>
+    <defName>LC_WingbeatSkillRunnerFX</defName>
+    <label>Wingbeat Skill Runner</label>
+    <thingClass>LCAbnormalities.FairyFestival.Thing_WingbeatSkillRunner</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>None</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
 </Defs>

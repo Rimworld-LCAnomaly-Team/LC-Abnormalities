@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
+    <defName>DyingPpodae</defName>
+    <label>Ppodae (Dissolving)</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>LCAbnormalities.Ppodae.DyingPpodae</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <modExtensions>
+      <li Class="LCAbnormalities.Shared.EggReturnExtension">
+        <eggDef>PpodaeEgg</eggDef>
+        <spawnFilth>false</spawnFilth>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
+    <defName>DyingWarmHeartedWoodsman</defName>
+    <label>Warm-Hearted Woodsman (Dissolving)</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>LCAbnormalities.WarmHeartedWoodsman.DyingWarmHeartedWoodsman</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <modExtensions>
+      <li Class="LCAbnormalities.Shared.EggReturnExtension">
+        <eggDef>WarmHeartedWoodsmanEgg</eggDef>
+        <spawnFilth>false</spawnFilth>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
+    <defName>DyingFragmentOfTheUniverse</defName>
+    <label>Fragment of the Universe (Dissolving)</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>LCAbnormalities.FragmentOfTheUniverse.DyingFragmentOfTheUniverse</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <modExtensions>
+      <li Class="LCAbnormalities.Shared.EggReturnExtension">
+        <eggDef>FragmentOfTheUniverseEgg</eggDef>
+        <spawnFilth>false</spawnFilth>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
+
+  <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
+    <defName>DyingScarecrowSearchingForWisdom</defName>
+    <label>Scarecrow Searching for Wisdom (Dissolving)</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <thingClass>LCAbnormalities.ScarecrowSearchingForWisdom.DyingScarecrowSearchingForWisdom</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <modExtensions>
+      <li Class="LCAbnormalities.Shared.EggReturnExtension">
+        <eggDef>ScarecrowSearchingForWisdomEgg</eggDef>
+        <spawnFilth>false</spawnFilth>
+      </li>
+    </modExtensions>
+  </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_PpodaeSlamFX</defName>
+    <label>Ppodae frenzy slam</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>LCAbnormalities.Ppodae.Thing_PpodaeSlamFX</thingClass>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_WoodsmanShutterFX</defName>
+    <label>Woodsman iron shutter execution</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>LCAbnormalities.WarmHeartedWoodsman.Thing_WoodsmanShutterFX</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_WoodsmanFurnaceAuraFX</defName>
+    <label>Woodsman furnace heart glow</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>LCAbnormalities.WarmHeartedWoodsman.Thing_WoodsmanFurnaceAuraFX</thingClass>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_CosmosSongWaveFX</defName>
+    <label>Cosmic song resonance wave</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>LCAbnormalities.FragmentOfTheUniverse.Thing_CosmosSongWaveFX</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_ScarecrowDrainBeamFX</defName>
+    <label>Scarecrow wisdom drain</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>LCAbnormalities.ScarecrowSearchingForWisdom.Thing_ScarecrowDrainBeamFX</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+  <!-- 伐木技能时序驱动器 -->
+  <ThingDef>
+    <defName>LC_LoggingSkillRunnerFX</defName>
+    <label>Logging Skill Runner</label>
+    <thingClass>LCAbnormalities.WarmHeartedWoodsman.Thing_LoggingSkillRunner</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>None</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+  <!-- 收获技能时序驱动器 -->
+  <ThingDef>
+    <defName>LC_HarvestSkillRunnerFX</defName>
+    <label>Harvest Skill Runner</label>
+    <thingClass>LCAbnormalities.ScarecrowSearchingForWisdom.Thing_HarvestSkillRunner</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>None</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+  <!-- 好可爱技能时序驱动器 -->
+  <ThingDef>
+    <defName>LC_SoCuteSkillRunnerFX</defName>
+    <label>So Cute Skill Runner</label>
+    <thingClass>LCAbnormalities.Ppodae.Thing_SoCuteSkillRunner</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>None</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+  <!-- 宇宙之矛技能时序驱动器 -->
+  <ThingDef>
+    <defName>LC_CosmosSpearSkillRunnerFX</defName>
+    <label>Cosmos Spear Skill Runner</label>
+    <thingClass>LCAbnormalities.FragmentOfTheUniverse.Thing_CosmosSpearSkillRunner</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>None</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+</Defs>

@@ -5,6 +5,9 @@
     <defName>EgoWeapon_PunishingBird</defName>
     <label>E.G.O. Weapon (Beak)</label>
     <description>A sleek white sidearm carved in the likeness of Punishing Bird's slender bill (TETH).\nExceptionally light and rapid-firing, it punishes careless targets with relentless accuracy.</description>
+    <descriptionHyperlinks>
+      <AbilityDef>Beak_PunishingBarrage</AbilityDef>
+    </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/EgoWeapon_PunishingBird</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -21,7 +24,7 @@
     </statBases>
     <verbs>
       <li>
-        <verbClass>Verb_Shoot</verbClass>
+        <verbClass>LCAbnormalities.PunishingBird.Verb_ShootBeak</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_EgoWeapon_PunishingBird</defaultProjectile>
         <warmupTime>0.35</warmupTime>
@@ -41,6 +44,19 @@
         <cooldownTime>1.6</cooldownTime>
       </li>
     </tools>
+    <!-- 覆盖 BaseWeapon 的 CompEquippable，避免与 CompEquippableAbility 重复注册 Verb LoadID -->
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_EquippableAbility">
+        <abilityDef>Beak_PunishingBarrage</abilityDef>
+      </li>
+      <li Class="CompProperties_Styleable"/>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
         <damageType>Red</damageType>
@@ -53,6 +69,7 @@
   <ThingDef ParentName="LC_BaseBullet_EGO">
     <defName>Bullet_EgoWeapon_PunishingBird</defName>
     <label>Beak E.G.O. bullet</label>
+    <thingClass>LCAbnormalities.PunishingBird.Projectile_BeakShot</thingClass>
     <projectile>
       <damageAmountBase>8</damageAmountBase>
       <armorPenetrationBase>0.28</armorPenetrationBase>

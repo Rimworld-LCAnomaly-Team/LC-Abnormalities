@@ -4,5 +4,8 @@
   <DyingBurrowingHeaven.label>穿刺乐园（死亡中）</DyingBurrowingHeaven.label>
   <BurrowingHeaven_KillTree.label>穿刺乐园血枝</BurrowingHeaven_KillTree.label>
   <BurrowingHeaven_KillTree.description>穿刺乐园击杀受害者后，从血泊中疯长而出的狰狞猩红荆棘。</BurrowingHeaven_KillTree.description>
+  <LC_HeavenThrustFX.label>天堂猩红矛刺特效</LC_HeavenThrustFX.label>
+  <LC_HeavenChargeAuraFX.label>天堂蓄力荆棘光环</LC_HeavenChargeAuraFX.label>
+  <LC_HeavenSkillRunnerFX.label>天堂地棘技能演出</LC_HeavenSkillRunnerFX.label>
 
 </LanguageData>

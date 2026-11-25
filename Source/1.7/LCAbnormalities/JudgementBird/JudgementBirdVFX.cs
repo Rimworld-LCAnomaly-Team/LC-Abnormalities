@@ -35,6 +35,7 @@ namespace LCAbnormalities.JudgementBird
         public static readonly Material GallowsBaseMat;
         public static readonly Material GallowsChainMat;
         public static readonly Material BandageWispMat;
+        public static readonly Material GroundShadowMat;
 
         static JudgementBirdMaterials()
         {
@@ -48,6 +49,7 @@ namespace LCAbnormalities.JudgementBird
             Texture2D gallowsBaseTex = ContentFinder<Texture2D>.Get("Things/VFX/JudgementBird/Gallows_Base", reportFailure: false) ?? BaseContent.WhiteTex;
             Texture2D gallowsChainTex = ContentFinder<Texture2D>.Get("Things/VFX/JudgementBird/Gallows_Chain", reportFailure: false) ?? BaseContent.WhiteTex;
             Texture2D bandageTex = ContentFinder<Texture2D>.Get("Things/VFX/JudgementBird/Bandage_Wisp", reportFailure: false) ?? BaseContent.WhiteTex;
+            Texture2D shadowTex = ContentFinder<Texture2D>.Get("Things/Skyfaller/SkyfallerShadowCircle", reportFailure: false) ?? BaseContent.WhiteTex;
 
             PaleFieldMat = MaterialPool.MatFrom(new MaterialRequest
             {
@@ -103,6 +105,13 @@ namespace LCAbnormalities.JudgementBird
                 mainTex = bandageTex,
                 shader = ShaderDatabase.Transparent,
                 color = Color.white
+            });
+
+            GroundShadowMat = MaterialPool.MatFrom(new MaterialRequest
+            {
+                mainTex = shadowTex,
+                shader = ShaderDatabase.Transparent,
+                color = new Color(0f, 0f, 0f, 1f)
             });
         }
     }
@@ -363,29 +372,376 @@ namespace LCAbnormalities.JudgementBird
     }
 
     /// <summary>
-    /// 审判鸟处决绞刑架演出（还原脑叶解包 LongBirdScaffold / 교수형1~3 + 교수대끈）：
-    /// 当人类被审判鸟苍白审判处决致死时，三爪黑羽支架破土而出，竖起红白羽绞刑梁并垂下摇曳的黄金吊链。
+    /// 审判鸟处决绞刑架演出（还原参考视频与脑叶解包 LongBirdScaffold / longBirdAgentDead）：
+    /// 捕获被审判鸟击杀单位的尸体并将其立于原地，依次从地表长出三爪黑羽底座、黑羽立柱与红白羽横梁，
+    /// 逐节垂下黄金吊链并在吊起瞬间触发短暂挣扎与断颈歪头，随吊链做两个完整周期的钟摆摇曳后缓缓落地释放尸体、消散绞刑架。
     /// </summary>
-    public class Thing_JudgementGallows : Thing
+    public class Thing_JudgementGallows : Thing, IThingHolderWithDrawnPawn
     {
+        private const int BaseStartTick = 0;
+        private const int BaseEndTick = 30;
+        private const int PostStartTick = 30;
+        private const int PostEndTick = 50;
+        private const int TopStartTick = 50;
+        private const int TopEndTick = 70;
+        private const int HoistStartTick = 90;
+        private const int HoistEndTick = 120;
+        private const int NeckSnapFxTick = 128;
+        private const int SwayStartTick = 160;
+        private const int SwayLoopTicks = 190;
+        private const int ReleaseStartTick = 540; // 160 + 190 * 2
+        private const int DropEndTick = 554;
+        private const int TotalTicks = 590;
+
+        private const float Ppu = 390f;
+        private const float BaseW = 333f / Ppu;
+        private const float BaseH = 219f / Ppu;
+        private const float PostW = 85f / Ppu;
+        private const float PostH = 522f / Ppu;
+        private const float TopW = 492f / Ppu;
+        private const float TopH = 255f / Ppu;
+        private const float ArmReach = (0.684f - 0.085f) * TopW;
+        private const float HoistLift = 0.60f;
+        private const float ChainSegW = 0.115f;
+        private const float ChainSegH = 0.355f;
+        private const float ChainSegStep = 0.315f;
+
+        private static readonly int[] ChainSegAppearTicks = { 70, 78, 86, 92, 100 };
+
+        private ThingOwner<Thing> innerContainer;
         private Vector3 exactPos;
         private int ageTicks;
-        private const int TotalTicks = 270; // 4.5s solemn execution lingering
-        private bool hangFollowupPlayed;
+        private float visualScale = 1f;
+        private float neckOffsetZ = 0.20f;
+        private float targetDownedAngle = 65f;
+        private int victimPawnId = -1;
+        private bool hangLoopSoundPlayed;
+        private bool neckSnapFxSpawned;
+        private bool corpseReleased;
         private bool initialized;
+
+        [Unsaved(false)] private float cachedBaseAlt;
+        [Unsaved(false)] private float cachedBodyAngle;
+        [Unsaved(false)] private float cachedChainAngleDeg;
+        [Unsaved(false)] private float cachedLift;
+        [Unsaved(false)] private float cachedStruggleJitterX;
+        [Unsaved(false)] private Vector3 cachedVictimDrawPos;
 
         private readonly MaterialPropertyBlock propBlock = new MaterialPropertyBlock();
 
-        public void Initialize(Vector3 worldPos)
+        public Thing_JudgementGallows()
         {
+            innerContainer = new ThingOwner<Thing>(this, oneStackOnly: true, LookMode.Deep);
+        }
+
+        public Corpse HeldCorpse => innerContainer != null && innerContainer.Count > 0 ? innerContainer[0] as Corpse : null;
+
+        public int VictimPawnId => victimPawnId;
+
+        public float HeldPawnDrawPos_Y => cachedBaseAlt + 0.014f;
+
+        public float HeldPawnBodyAngle => cachedBodyAngle;
+
+        public PawnPosture HeldPawnPosture => PawnPosture.LayingOnGroundNormal;
+
+        public ThingOwner GetDirectlyHeldThings()
+        {
+            return innerContainer;
+        }
+
+        public void GetChildHolders(List<IThingHolder> outChildren)
+        {
+            ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, GetDirectlyHeldThings());
+        }
+
+        public void Initialize(Vector3 worldPos, Corpse victimCorpse = null, Pawn victimPawn = null)
+        {
+            innerContainer ??= new ThingOwner<Thing>(this, oneStackOnly: true, LookMode.Deep);
             exactPos = worldPos.Yto0();
             ageTicks = 0;
-            hangFollowupPlayed = false;
+            hangLoopSoundPlayed = false;
+            neckSnapFxSpawned = false;
+            corpseReleased = false;
             initialized = true;
+
+            Pawn targetPawn = victimCorpse?.InnerPawn ?? victimPawn;
+            float bodySize = targetPawn?.BodySize ?? 1f;
+            visualScale = bodySize <= 1f
+                ? Mathf.Lerp(0.78f, 1.0f, Mathf.Clamp01((bodySize - 0.25f) / 0.75f))
+                : Mathf.Lerp(1.0f, 1.25f, Mathf.Clamp01((bodySize - 1.0f) / 1.5f));
+
+            if (targetPawn != null && targetPawn.RaceProps?.Humanlike == true
+                && targetPawn.story?.bodyType != null && targetPawn.ageTracker?.CurLifeStage != null)
+            {
+                float headY = targetPawn.story.bodyType.headOffset.y * Mathf.Sqrt(Mathf.Max(0.25f, targetPawn.ageTracker.CurLifeStage.bodySizeFactor));
+                neckOffsetZ = Mathf.Clamp(headY - 0.14f, 0.08f, 0.36f);
+            }
+            else
+            {
+                neckOffsetZ = 0.14f * visualScale;
+            }
+
+            victimPawnId = targetPawn?.thingIDNumber ?? -1;
+            targetDownedAngle = targetPawn?.Drawer?.renderer?.wiggler?.downedAngle ?? 65f;
+            cachedBaseAlt = AltitudeLayer.MoteOverheadLow.AltitudeFor() + (Mathf.Abs(thingIDNumber) % 7) * 0.0002f;
+
+            if (victimCorpse != null && !victimCorpse.Destroyed && victimCorpse.Spawned && victimCorpse.Map != null)
+            {
+                Map corpseMap = victimCorpse.Map;
+                victimCorpse.DeSpawn(DestroyMode.Vanish);
+                if (!innerContainer.TryAdd(victimCorpse))
+                {
+                    IntVec3 fallbackCell = exactPos.ToIntVec3().ClampInsideMap(corpseMap);
+                    if (fallbackCell.InBounds(corpseMap))
+                    {
+                        GenPlace.TryPlaceThing(victimCorpse, fallbackCell, corpseMap, ThingPlaceMode.Near);
+                    }
+                }
+                else if (victimCorpse.InnerPawn is Pawn innerPawn)
+                {
+                    innerPawn.Rotation = Rot4.South;
+                    if (JudgementBirdDefOf.JudgementBird_VictimHangStart != null)
+                    {
+                        innerPawn.Drawer?.renderer?.SetAnimation(JudgementBirdDefOf.JudgementBird_VictimHangStart);
+                    }
+                }
+            }
+
+            UpdateCachedPose();
+        }
+
+        private float GetChainAnchorZ(float s)
+        {
+            float baseBottomZ = exactPos.z - 0.40f * s;
+            float postBottomZ = baseBottomZ + (BaseH - 0.05f) * s;
+            float topBottomZ = postBottomZ + (PostH - 0.05f) * s;
+            return topBottomZ + (TopH * 0.617f) * s;
+        }
+
+        private static float CosineLerp(float a, float b, float t)
+        {
+            float k = 0.5f - 0.5f * Mathf.Cos(Mathf.Clamp01(t) * Mathf.PI);
+            return Mathf.Lerp(a, b, k);
+        }
+
+        private static float EvaluatePendulumAngle(int tick)
+        {
+            if (tick < HoistEndTick)
+            {
+                return 0f;
+            }
+
+            if (tick < SwayStartTick)
+            {
+                float dt = tick - HoistEndTick;
+                return Mathf.Sin(dt * 0.22f) * 2.5f * (1f - dt / (SwayStartTick - HoistEndTick));
+            }
+
+            if (tick < ReleaseStartTick)
+            {
+                float u = (tick - SwayStartTick) % SwayLoopTicks;
+                if (u < 80f)
+                {
+                    return CosineLerp(0f, 6.28f, u / 80f);
+                }
+                if (u < 100f)
+                {
+                    return CosineLerp(6.28f, 2.73f, (u - 80f) / 20f);
+                }
+                if (u < 160f)
+                {
+                    return CosineLerp(2.73f, -5.05f, (u - 100f) / 60f);
+                }
+                return CosineLerp(-5.05f, 0f, (u - 160f) / 30f);
+            }
+
+            return 0f;
+        }
+
+        private void UpdateCachedPose()
+        {
+            float s = visualScale;
+            float maxLift = HoistLift * s;
+
+            if (ageTicks < HoistStartTick)
+            {
+                cachedLift = 0f;
+            }
+            else if (ageTicks < HoistEndTick)
+            {
+                float p = Mathf.Pow((ageTicks - HoistStartTick) / (float)(HoistEndTick - HoistStartTick), 0.85f);
+                cachedLift = Mathf.SmoothStep(0f, 1f, p) * maxLift;
+            }
+            else if (ageTicks < ReleaseStartTick)
+            {
+                cachedLift = maxLift;
+            }
+            else if (ageTicks < DropEndTick)
+            {
+                float t = (ageTicks - ReleaseStartTick) / (float)(DropEndTick - ReleaseStartTick);
+                cachedLift = (1f - t * t) * maxLift;
+            }
+            else
+            {
+                cachedLift = 0f;
+            }
+
+            cachedChainAngleDeg = EvaluatePendulumAngle(ageTicks);
+
+            if (ageTicks < HoistStartTick)
+            {
+                cachedStruggleJitterX = 0f;
+                cachedBodyAngle = Mathf.Sin(ageTicks * 0.14f) * 1.2f;
+                cachedVictimDrawPos = new Vector3(exactPos.x, HeldPawnDrawPos_Y, exactPos.z);
+                return;
+            }
+
+            float chainAnchorZ = GetChainAnchorZ(s);
+            float hangChainLen = Mathf.Max(0.25f * s, chainAnchorZ - (exactPos.z + maxLift + neckOffsetZ));
+
+            if (ageTicks < SwayStartTick)
+            {
+                if (ageTicks < 136)
+                {
+                    float t = (ageTicks - HoistStartTick) / 46f;
+                    float env = Mathf.Sin(Mathf.Clamp01(t) * Mathf.PI);
+                    float thrash = Mathf.Sin(t * 28f) * 7.5f + Mathf.Sin(t * 47f) * 3.5f;
+                    float limpBlend = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01((ageTicks - 122f) / 14f));
+                    cachedBodyAngle = Mathf.Lerp(env * thrash, 5.0f, limpBlend);
+                    cachedStruggleJitterX = env * Mathf.Sin(t * 34f) * 0.025f * s;
+                }
+                else
+                {
+                    float swayBlend = Mathf.Clamp01((ageTicks - 136f) / (float)(SwayStartTick - 136));
+                    cachedBodyAngle = 5.0f + cachedChainAngleDeg * 0.65f * swayBlend;
+                    cachedStruggleJitterX = 0f;
+                }
+
+                float hoistPosX = exactPos.x + cachedStruggleJitterX;
+                float hoistPosZ = exactPos.z + cachedLift;
+                if (ageTicks >= HoistEndTick)
+                {
+                    float pinBlend = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01((ageTicks - HoistEndTick) / 20f));
+                    float chainRad = cachedChainAngleDeg * Mathf.Deg2Rad;
+                    float neckX = exactPos.x - Mathf.Sin(chainRad) * hangChainLen;
+                    float neckZ = chainAnchorZ - Mathf.Cos(chainRad) * hangChainLen;
+                    float bodyRad = cachedBodyAngle * Mathf.Deg2Rad;
+                    float pinnedX = neckX - neckOffsetZ * Mathf.Sin(bodyRad) + cachedStruggleJitterX;
+                    float pinnedZ = neckZ - neckOffsetZ * Mathf.Cos(bodyRad);
+                    cachedVictimDrawPos = new Vector3(
+                        Mathf.Lerp(hoistPosX, pinnedX, pinBlend),
+                        HeldPawnDrawPos_Y,
+                        Mathf.Lerp(hoistPosZ, pinnedZ, pinBlend));
+                }
+                else
+                {
+                    cachedVictimDrawPos = new Vector3(hoistPosX, HeldPawnDrawPos_Y, hoistPosZ);
+                }
+                return;
+            }
+
+            if (ageTicks < ReleaseStartTick)
+            {
+                cachedStruggleJitterX = 0f;
+                cachedBodyAngle = 5.0f + cachedChainAngleDeg * 0.65f;
+
+                float chainRad = cachedChainAngleDeg * Mathf.Deg2Rad;
+                float neckX = exactPos.x - Mathf.Sin(chainRad) * hangChainLen;
+                float neckZ = chainAnchorZ - Mathf.Cos(chainRad) * hangChainLen;
+
+                float bodyRad = cachedBodyAngle * Mathf.Deg2Rad;
+                float vx = neckX - neckOffsetZ * Mathf.Sin(bodyRad);
+                float vz = neckZ - neckOffsetZ * Mathf.Cos(bodyRad);
+                cachedVictimDrawPos = new Vector3(vx, HeldPawnDrawPos_Y, vz);
+                return;
+            }
+
+            cachedStruggleJitterX = 0f;
+            float dropT = Mathf.Clamp01((ageTicks - ReleaseStartTick) / (float)(DropEndTick - ReleaseStartTick));
+            float dropEase = dropT * dropT;
+            cachedBodyAngle = Mathf.LerpAngle(5.0f, targetDownedAngle, dropEase);
+            cachedVictimDrawPos = new Vector3(exactPos.x, HeldPawnDrawPos_Y, exactPos.z + cachedLift);
+        }
+
+        private void ReleaseHeldCorpse(Map targetMap = null, bool playLandingDust = true)
+        {
+            corpseReleased = true;
+            Corpse corpse = HeldCorpse;
+            if (corpse == null)
+            {
+                return;
+            }
+
+            if (corpse.InnerPawn?.Drawer?.renderer != null)
+            {
+                corpse.InnerPawn.Drawer.renderer.SetAnimation(null);
+            }
+
+            Map dropMap = targetMap ?? Map ?? MapHeld;
+            if (dropMap != null)
+            {
+                IntVec3 dropCell = exactPos.ToIntVec3();
+                if (!dropCell.InBounds(dropMap))
+                {
+                    dropCell = PositionHeld.ClampInsideMap(dropMap);
+                }
+
+                if (dropCell.InBounds(dropMap))
+                {
+                    if (!innerContainer.TryDrop(corpse, dropCell, dropMap, ThingPlaceMode.Direct, out _, playDropSound: false))
+                    {
+                        innerContainer.TryDrop(corpse, dropCell, dropMap, ThingPlaceMode.Near, out _, playDropSound: false);
+                    }
+
+                    if (playLandingDust)
+                    {
+                        FleckMaker.ThrowDustPuff(exactPos, dropMap, 0.85f);
+                    }
+                    return;
+                }
+            }
+
+            innerContainer.ClearAndDestroyContents();
+        }
+
+        public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
+        {
+            if (mode != DestroyMode.WillReplace && innerContainer != null && innerContainer.Count > 0 && Map != null && !corpseReleased)
+            {
+                ReleaseHeldCorpse(Map, playLandingDust: false);
+            }
+            base.DeSpawn(mode);
+        }
+
+        public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
+        {
+            if (Destroyed)
+            {
+                return;
+            }
+
+            Map prevMap = Map ?? MapHeld;
+            if (innerContainer != null && innerContainer.Count > 0)
+            {
+                if (prevMap != null && !corpseReleased)
+                {
+                    ReleaseHeldCorpse(prevMap, playLandingDust: false);
+                }
+                else
+                {
+                    innerContainer.ClearAndDestroyContents();
+                }
+            }
+            base.Destroy(mode);
         }
 
         protected override void Tick()
         {
+            if (Destroyed)
+            {
+                return;
+            }
+
             if (!initialized)
             {
                 Destroy();
@@ -393,21 +749,53 @@ namespace LCAbnormalities.JudgementBird
             }
 
             ageTicks++;
+            UpdateCachedPose();
 
-            if (!hangFollowupPlayed && ageTicks >= 16)
+            if (!neckSnapFxSpawned && ageTicks >= NeckSnapFxTick)
             {
-                hangFollowupPlayed = true;
+                neckSnapFxSpawned = true;
                 if (Map != null && Position.InBounds(Map))
                 {
-                    LCAbnormalitiesHelper.PlaySoundAt(JudgementBirdDefOf.LC_JudgementBird_Hanging, this);
                     for (int i = 0; i < 4; i++)
                     {
                         JudgementBirdVfxUtility.SpawnBandageWisp(
                             Map,
-                            exactPos + new Vector3(Rand.Range(-0.55f, 0.55f), 0f, Rand.Range(0.2f, 1.5f)),
-                            new Vector3(Rand.Range(-0.018f, 0.018f), 0f, Rand.Range(0.015f, 0.035f)),
-                            Rand.Range(0.55f, 0.85f),
+                            exactPos + new Vector3(Rand.Range(-0.45f, 0.45f), 0f, cachedLift + Rand.Range(0.15f, 0.75f)),
+                            new Vector3(Rand.Range(-0.016f, 0.016f), 0f, Rand.Range(0.016f, 0.036f)),
+                            Rand.Range(0.50f, 0.80f),
                             Rand.Range(48, 76));
+                    }
+                }
+            }
+
+            if (!hangLoopSoundPlayed && ageTicks >= SwayStartTick)
+            {
+                hangLoopSoundPlayed = true;
+                if (HeldCorpse?.InnerPawn is Pawn victim && victim.Drawer?.renderer != null
+                    && JudgementBirdDefOf.JudgementBird_VictimHangLoop != null)
+                {
+                    victim.Drawer.renderer.SetAnimation(JudgementBirdDefOf.JudgementBird_VictimHangLoop);
+                }
+
+                if (Map != null && Position.InBounds(Map))
+                {
+                    LCAbnormalitiesHelper.PlaySoundAt(JudgementBirdDefOf.LC_JudgementBird_Hanging, this);
+                }
+            }
+
+            if (!corpseReleased && ageTicks >= DropEndTick)
+            {
+                ReleaseHeldCorpse(Map, playLandingDust: true);
+                if (Map != null && Position.InBounds(Map))
+                {
+                    for (int i = 0; i < 3; i++)
+                    {
+                        JudgementBirdVfxUtility.SpawnBandageWisp(
+                            Map,
+                            exactPos + new Vector3(Rand.Range(-0.4f, 0.7f), 0f, Rand.Range(0.2f, 1.4f)),
+                            new Vector3(Rand.Range(-0.015f, 0.015f), 0f, Rand.Range(0.015f, 0.032f)),
+                            Rand.Range(0.48f, 0.78f),
+                            Rand.Range(42, 65));
                     }
                 }
             }
@@ -418,6 +806,16 @@ namespace LCAbnormalities.JudgementBird
             }
         }
 
+        public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
+        {
+            base.DynamicDrawPhaseAt(phase, drawLoc, flip);
+
+            if (initialized && !corpseReleased && HeldCorpse?.InnerPawn is Pawn victim && victim.Drawer?.renderer != null)
+            {
+                victim.Drawer.renderer.DynamicDrawPhaseAt(phase, cachedVictimDrawPos, Rot4.South, neverAimWeapon: true);
+            }
+        }
+
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             if (!initialized)
@@ -425,93 +823,241 @@ namespace LCAbnormalities.JudgementBird
                 return;
             }
 
-            float ageSecs = ageTicks / 60f;
-            float riseBase = Mathf.Clamp01(ageTicks / 10f);
-            float risePost = Mathf.Clamp01((ageTicks - 4f) / 14f);
-            float riseTop = Mathf.Clamp01((ageTicks - 12f) / 14f);
-            float dropChain = Mathf.Clamp01((ageTicks - 18f) / 16f);
-            float fadeOut = ageTicks > TotalTicks - 45
-                ? Mathf.Clamp01((TotalTicks - ageTicks) / 45f)
+            float s = visualScale;
+            float gallowsAlpha = ageTicks > DropEndTick
+                ? Mathf.Clamp01((TotalTicks - ageTicks) / (float)(TotalTicks - DropEndTick))
                 : 1f;
-
-            if (fadeOut <= 0.01f)
+            if (gallowsAlpha <= 0.01f)
             {
                 return;
             }
 
-            float baseAlt = AltitudeLayer.MoteOverhead.AltitudeFor() - 0.02f;
-            float postEase = 1f - Mathf.Pow(1f - risePost, 3f);
-            float topEase = 1f - Mathf.Pow(1f - riseTop, 3f);
-            float chainEase = 1f - Mathf.Pow(1f - dropChain, 2.5f);
+            float chainAlpha = ageTicks < ReleaseStartTick
+                ? 1f
+                : (ageTicks < DropEndTick
+                    ? Mathf.Clamp01((DropEndTick - ageTicks) / (float)(DropEndTick - ReleaseStartTick))
+                    : 0f);
+
+            float postX = exactPos.x + ArmReach * s;
+            float baseBottomZ = exactPos.z - 0.40f * s;
+            float postBottomZ = baseBottomZ + (BaseH - 0.05f) * s;
+            float topBottomZ = postBottomZ + (PostH - 0.05f) * s;
+            float chainAnchorX = exactPos.x;
+            float chainAnchorZ = GetChainAnchorZ(s);
+
+            // 0. Ground shadow directly beneath hoisted victim
+            if (JudgementBirdMaterials.GroundShadowMat != null && cachedLift > 0.01f && !corpseReleased)
+            {
+                float liftFrac = Mathf.Clamp01(cachedLift / (HoistLift * s));
+                float shadowAlpha = 0.42f * Mathf.Clamp01(liftFrac * 2.5f) * gallowsAlpha;
+                float shadowW = Mathf.Lerp(0.72f, 0.50f, liftFrac) * s;
+                float shadowH = Mathf.Lerp(0.36f, 0.24f, liftFrac) * s;
+                float shadowAlt = AltitudeLayer.Shadows.AltitudeFor() + 0.005f;
+                Vector3 shadowPos = new Vector3(cachedVictimDrawPos.x, shadowAlt, exactPos.z - 0.34f * s);
+                propBlock.SetColor(ShaderPropertyIDs.Color, new Color(0f, 0f, 0f, shadowAlpha));
+                Matrix4x4 shadowMat = Matrix4x4.TRS(shadowPos, Quaternion.identity, new Vector3(shadowW, 1f, shadowH));
+                Graphics.DrawMesh(MeshPool.plane10, shadowMat, JudgementBirdMaterials.GroundShadowMat, 0, null, 0, propBlock);
+            }
 
             // 1. Three-taloned feathered base claw (Gallows_Base)
-            DrawPart(
+            float baseT = Mathf.Clamp01((ageTicks - BaseStartTick) / (float)(BaseEndTick - BaseStartTick));
+            float baseEase = 1f - Mathf.Pow(1f - baseT, 3f);
+            DrawPartAnchored(
                 JudgementBirdMaterials.GallowsBaseMat,
-                new Vector3(exactPos.x + 0.42f, baseAlt, exactPos.z - 0.12f),
+                new Vector3(postX, cachedBaseAlt, baseBottomZ),
                 0f,
-                1.45f * riseBase,
-                0.78f * riseBase,
-                fadeOut);
+                BaseW * s,
+                BaseH * s,
+                baseEase,
+                baseEase,
+                0.520f,
+                0.00f,
+                gallowsAlpha);
 
             // 2. Tall black feathered vertical pillar (Gallows_Post)
-            if (postEase > 0.02f)
+            if (ageTicks >= PostStartTick)
             {
-                float postH = 2.15f * postEase;
-                DrawPart(
+                float postT = Mathf.Clamp01((ageTicks - PostStartTick) / (float)(PostEndTick - PostStartTick));
+                float postEase = 1f - Mathf.Pow(1f - postT, 3f);
+                DrawPartAnchored(
                     JudgementBirdMaterials.GallowsPostMat,
-                    new Vector3(exactPos.x + 0.42f, baseAlt + 0.01f, exactPos.z - 0.12f + postH * 0.48f),
+                    new Vector3(postX, cachedBaseAlt + 0.002f, postBottomZ),
                     0f,
-                    0.46f,
-                    postH,
-                    fadeOut);
+                    PostW * s,
+                    PostH * s,
+                    Mathf.Lerp(0.4f, 1.0f, postEase),
+                    postEase,
+                    0.558f,
+                    0.00f,
+                    gallowsAlpha);
             }
 
             // 3. Feathered crossbar with iconic red-tipped white feather (Gallows_Top)
-            if (topEase > 0.02f)
+            if (ageTicks >= TopStartTick)
             {
-                DrawPart(
+                float topT = Mathf.Clamp01((ageTicks - TopStartTick) / (float)(TopEndTick - TopStartTick));
+                float topEase = 1f - Mathf.Pow(1f - topT, 3f);
+                DrawPartAnchored(
                     JudgementBirdMaterials.GallowsTopMat,
-                    new Vector3(exactPos.x + 0.10f, baseAlt + 0.02f, exactPos.z + 1.86f),
-                    Mathf.Lerp(-12f, 0f, topEase),
-                    1.68f * topEase,
-                    0.86f * topEase,
-                    fadeOut);
+                    new Vector3(postX, cachedBaseAlt + 0.004f, topBottomZ),
+                    0f,
+                    TopW * s,
+                    TopH * s,
+                    topEase,
+                    1.0f,
+                    0.684f,
+                    0.04f,
+                    gallowsAlpha);
             }
 
-            // 4. Gently swaying golden gallows chain hanging over the condemned victim (Gallows_Chain)
-            if (chainEase > 0.02f)
+            // 4. Segmented swaying golden gallows chain (Gallows_Chain x5 segments)
+            if (ageTicks >= ChainSegAppearTicks[0] && chainAlpha > 0.01f)
             {
-                float sway = Mathf.Sin(ageSecs * 2.2f) * 6.5f;
-                float chainLen = 1.15f * chainEase;
-                DrawPart(
-                    JudgementBirdMaterials.GallowsChainMat,
-                    new Vector3(exactPos.x - 0.34f + Mathf.Sin(sway * Mathf.Deg2Rad) * 0.12f, baseAlt + 0.03f, exactPos.z + 1.78f - chainLen * 0.48f),
-                    sway,
-                    0.22f,
-                    chainLen,
-                    fadeOut);
+                float maxLift = HoistLift * s;
+                float currentChainLen;
+                if (!corpseReleased && HeldCorpse != null)
+                {
+                    if (ageTicks < SwayStartTick)
+                    {
+                        float neckZ = exactPos.z + cachedLift + neckOffsetZ;
+                        float dx = cachedStruggleJitterX;
+                        float dz = Mathf.Max(0.20f * s, chainAnchorZ - neckZ);
+                        currentChainLen = Mathf.Sqrt(dx * dx + dz * dz);
+                    }
+                    else
+                    {
+                        currentChainLen = Mathf.Max(0.25f * s, chainAnchorZ - (exactPos.z + maxLift + neckOffsetZ));
+                    }
+                }
+                else
+                {
+                    float liftFrac = Mathf.Clamp01(cachedLift / maxLift);
+                    currentChainLen = Mathf.Lerp(1.60f * s, 1.00f * s, liftFrac);
+                }
+
+                float chainRad = cachedChainAngleDeg * Mathf.Deg2Rad;
+                float sinC = Mathf.Sin(chainRad);
+                float cosC = Mathf.Cos(chainRad);
+                float segW = ChainSegW * s;
+                float segH = ChainSegH * s;
+                float step = ChainSegStep * s;
+
+                for (int k = 0; k < ChainSegAppearTicks.Length; k++)
+                {
+                    int appearTick = ChainSegAppearTicks[k];
+                    if (ageTicks < appearTick)
+                    {
+                        continue;
+                    }
+
+                    float d0 = k * step;
+                    float avail = currentChainLen - d0;
+                    if (avail <= 0.02f * s)
+                    {
+                        continue;
+                    }
+
+                    float segAppear = Mathf.Clamp01((ageTicks - appearTick) / 3f);
+                    float drawnLen = Mathf.Min(segH, avail) * segAppear;
+                    if (drawnLen <= 0.01f * s)
+                    {
+                        continue;
+                    }
+
+                    Vector3 segPivot = new Vector3(
+                        chainAnchorX - sinC * d0,
+                        cachedBaseAlt + 0.008f,
+                        chainAnchorZ - cosC * d0);
+
+                    DrawPartAnchored(
+                        JudgementBirdMaterials.GallowsChainMat,
+                        segPivot,
+                        cachedChainAngleDeg,
+                        segW,
+                        segH,
+                        1.0f,
+                        drawnLen / segH,
+                        0.5f,
+                        1.0f,
+                        chainAlpha);
+                }
             }
         }
 
-        private void DrawPart(Material mat, Vector3 pos, float angleDeg, float sizeX, float sizeZ, float alpha)
+        private void DrawPartAnchored(
+            Material mat,
+            Vector3 pivotWorldPos,
+            float angleDeg,
+            float fullW,
+            float fullH,
+            float scaleX,
+            float scaleZ,
+            float pivotU,
+            float pivotV,
+            float alpha)
         {
-            if (mat == null || alpha <= 0.01f || sizeX <= 0.01f || sizeZ <= 0.01f)
+            if (mat == null || alpha <= 0.01f || scaleX <= 0.01f || scaleZ <= 0.01f)
             {
                 return;
             }
 
+            float w = fullW * scaleX;
+            float h = fullH * scaleZ;
+            if (w <= 0.005f || h <= 0.005f)
+            {
+                return;
+            }
+
+            Vector3 localCenterOffset = new Vector3((0.5f - pivotU) * w, 0f, (0.5f - pivotV) * h);
+            Quaternion rot = Mathf.Abs(angleDeg) > 0.01f ? Quaternion.AngleAxis(angleDeg, Vector3.up) : Quaternion.identity;
+            Vector3 centerPos = pivotWorldPos + (rot * localCenterOffset);
+
             propBlock.SetColor(ShaderPropertyIDs.Color, new Color(1f, 1f, 1f, alpha));
-            Matrix4x4 matrix = Matrix4x4.TRS(pos, Quaternion.AngleAxis(angleDeg, Vector3.up), new Vector3(sizeX, 1f, sizeZ));
+            Matrix4x4 matrix = Matrix4x4.TRS(centerPos, rot, new Vector3(w, 1f, h));
             Graphics.DrawMesh(MeshPool.plane10, matrix, mat, 0, null, 0, propBlock);
         }
 
         public override void ExposeData()
         {
             base.ExposeData();
+            Scribe_Deep.Look(ref innerContainer, "jbGallowsContainer", this);
             Scribe_Values.Look(ref exactPos, "jbGallowsPos");
             Scribe_Values.Look(ref ageTicks, "jbGallowsAge", 0);
-            Scribe_Values.Look(ref hangFollowupPlayed, "jbGallowsSound", false);
+            Scribe_Values.Look(ref visualScale, "jbGallowsScale", 1f);
+            Scribe_Values.Look(ref neckOffsetZ, "jbGallowsNeckZ", 0.20f);
+            Scribe_Values.Look(ref targetDownedAngle, "jbGallowsDownAngle", 65f);
+            Scribe_Values.Look(ref victimPawnId, "jbGallowsVictimId", -1);
+            Scribe_Values.Look(ref hangLoopSoundPlayed, "jbGallowsSound", false);
+            Scribe_Values.Look(ref neckSnapFxSpawned, "jbGallowsSnapFx", false);
+            Scribe_Values.Look(ref corpseReleased, "jbGallowsReleased", false);
             Scribe_Values.Look(ref initialized, "jbGallowsInit", false);
+
+            if (Scribe.mode == LoadSaveMode.PostLoadInit)
+            {
+                innerContainer ??= new ThingOwner<Thing>(this, oneStackOnly: true, LookMode.Deep);
+                visualScale = Mathf.Clamp(visualScale <= 0.01f ? 1f : visualScale, 0.75f, 1.35f);
+                neckOffsetZ = Mathf.Clamp(neckOffsetZ <= 0.01f ? 0.20f : neckOffsetZ, 0.08f, 0.45f);
+                cachedBaseAlt = AltitudeLayer.MoteOverheadLow.AltitudeFor() + (Mathf.Abs(thingIDNumber) % 7) * 0.0002f;
+
+                if (!corpseReleased && HeldCorpse?.InnerPawn is Pawn victim && victim.Drawer?.renderer != null)
+                {
+                    victim.Rotation = Rot4.South;
+                    AnimationDef anim = ageTicks >= SwayStartTick
+                        ? JudgementBirdDefOf.JudgementBird_VictimHangLoop
+                        : JudgementBirdDefOf.JudgementBird_VictimHangStart;
+                    if (anim != null)
+                    {
+                        victim.Drawer.renderer.SetAnimation(anim);
+                        int animElapsed = ageTicks >= SwayStartTick ? (ageTicks - SwayStartTick) : ageTicks;
+                        if (victim.Drawer.renderer.renderTree != null)
+                        {
+                            victim.Drawer.renderer.renderTree.animationStartTick = GenTicks.TicksGame - animElapsed;
+                        }
+                    }
+                }
+
+                UpdateCachedPose();
+            }
         }
     }
 
@@ -951,6 +1497,50 @@ namespace LCAbnormalities.JudgementBird
 
         public static void SpawnGallows(Map map, Vector3 victimPos)
         {
+            SpawnGallowsInternal(map, victimPos, null, null);
+        }
+
+        public static void TrySpawnGallowsForVictim(Pawn victim, Map fallbackMap = null, Vector3? fallbackPos = null)
+        {
+            if (victim == null || victim is LC_JudgementBirdPawn)
+            {
+                return;
+            }
+
+            if (victim.Corpse?.ParentHolder is Thing_JudgementGallows)
+            {
+                return;
+            }
+
+            Corpse corpse = (victim.Corpse != null && !victim.Corpse.Destroyed && victim.Corpse.Spawned && victim.Corpse.Map != null)
+                ? victim.Corpse
+                : null;
+            Map map = corpse?.Map ?? fallbackMap ?? victim.MapHeld;
+            if (map == null || JudgementBirdDefOf.LC_JudgementGallowsFX == null)
+            {
+                return;
+            }
+
+            List<Thing> existing = map.listerThings?.ThingsOfDef(JudgementBirdDefOf.LC_JudgementGallowsFX);
+            if (existing != null)
+            {
+                for (int i = 0; i < existing.Count; i++)
+                {
+                    if (existing[i] is Thing_JudgementGallows g && !g.Destroyed && g.VictimPawnId == victim.thingIDNumber)
+                    {
+                        return;
+                    }
+                }
+            }
+
+            Vector3 pos = corpse != null
+                ? corpse.DrawPos.Yto0()
+                : (fallbackPos ?? (victim.PositionHeld.IsValid ? victim.PositionHeld.ToVector3Shifted().Yto0() : Vector3.zero));
+            SpawnGallowsInternal(map, pos, corpse, victim);
+        }
+
+        private static void SpawnGallowsInternal(Map map, Vector3 victimPos, Corpse corpse, Pawn victim)
+        {
             if (map == null || JudgementBirdDefOf.LC_JudgementGallowsFX == null)
             {
                 return;
@@ -964,7 +1554,7 @@ namespace LCAbnormalities.JudgementBird
 
             if (GenSpawn.Spawn(JudgementBirdDefOf.LC_JudgementGallowsFX, cell, map) is Thing_JudgementGallows gallows)
             {
-                gallows.Initialize(victimPos);
+                gallows.Initialize(victimPos, corpse, victim);
                 LCAbnormalitiesHelper.PlaySoundAt(JudgementBirdDefOf.LC_JudgementBird_Hang, gallows);
             }
         }

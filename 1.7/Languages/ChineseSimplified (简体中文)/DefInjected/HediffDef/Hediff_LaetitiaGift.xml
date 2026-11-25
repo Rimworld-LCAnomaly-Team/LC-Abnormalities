@@ -6,7 +6,7 @@
   <LaetitiaGift.labelNoun>这个单位在工作中被赠与了蕾蒂希娅的礼物，该状态将会持续一天。</LaetitiaGift.labelNoun>
 
   <LaetitiaGiftAggresive.label>蕾蒂希娅的礼物（攻击性）</LaetitiaGiftAggresive.label>
-  <LaetitiaGiftAggresive.description>不同于工作中获得的礼物，这种攻击性礼物会在短时间内引爆。\n在倒计时结束、目标倒地或死亡时，会爆发高额黑伤；若目标因此倒地或死亡，其体内会孵化出1~2只临时存在的敌对“小女孩的朋友”。</LaetitiaGiftAggresive.description>
+  <LaetitiaGiftAggresive.description>被蕾蒂希娅 E.G.O. 武器赋予的攻击性礼赞标记。\n使用蕾蒂希娅心蕾步枪后续命中将追加 +25% 黑伤并迅速震裂标记；当标记破裂、到期或携带者倒下时，会引爆友军安全的“碎心黑蕾丝”黑伤冲击波，震伤并眩晕 3.6 格内的全部敌军。</LaetitiaGiftAggresive.description>
   <LaetitiaGiftAggresive.labelNoun>这个单位被E.G.O武器赋予了攻击性的蕾蒂希娅的礼物，该状态将会很快结束。</LaetitiaGiftAggresive.labelNoun>
 
 </LanguageData>

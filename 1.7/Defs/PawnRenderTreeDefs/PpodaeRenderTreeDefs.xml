@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderTreeDef>
+    <defName>Ppodae</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+          <debugLabel>PpodaeRoot</debugLabel>
+          <tagDef>Ppodae_Root</tagDef>
+          <role>Root</role>
+          <useGraphic>false</useGraphic>
+          <containedScale>1.45</containedScale>
+          <frenzyScale>2.10</frenzyScale>
+          <portraitScale>1.55</portraitScale>
+          <containedOffset>(0, 0, -0.04)</containedOffset>
+          <children>
+            <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+              <debugLabel>Ppodae_Puppy_Body</debugLabel>
+              <tagDef>Ppodae_Puppy_Body</tagDef>
+              <role>Ppodae_Puppy_Body</role>
+              <formGroup>Puppy</formGroup>
+              <texPath>Things/Pawn/Ppodae/Parts/PP_Puppy_Body</texPath>
+              <baseLayer>30</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                  <debugLabel>Ppodae_Puppy_Leg3</debugLabel>
+                  <tagDef>Ppodae_Puppy_Leg3</tagDef>
+                  <role>Ppodae_Puppy_Leg3</role>
+                  <formGroup>Puppy</formGroup>
+                  <texPath>Things/Pawn/Ppodae/Parts/PP_Puppy_Leg3</texPath>
+                  <baseLayer>26.8</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                  <debugLabel>Ppodae_Puppy_Leg1</debugLabel>
+                  <tagDef>Ppodae_Puppy_Leg1</tagDef>
+                  <role>Ppodae_Puppy_Leg1</role>
+                  <formGroup>Puppy</formGroup>
+                  <texPath>Things/Pawn/Ppodae/Parts/PP_Puppy_Leg1</texPath>
+                  <baseLayer>34</baseLayer>
+                </li>
+                <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                  <debugLabel>Ppodae_Puppy_Head</debugLabel>
+                  <tagDef>Ppodae_Puppy_Head</tagDef>
+                  <role>Ppodae_Puppy_Head</role>
+                  <formGroup>Puppy</formGroup>
+                  <texPath>Things/Pawn/Ppodae/Parts/PP_Puppy_Face</texPath>
+                  <baseLayer>38</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                      <debugLabel>PP_Puppy_Eye</debugLabel>
+                      <role>Ppodae_Puppy_Head</role>
+                      <formGroup>Puppy</formGroup>
+                      <texPath>Things/Pawn/Ppodae/Parts/PP_Puppy_Eye</texPath>
+                      <baseLayer>38.8</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                      <debugLabel>PP_Puppy_Undereye</debugLabel>
+                      <role>Ppodae_Puppy_Head</role>
+                      <formGroup>Puppy</formGroup>
+                      <texPath>Things/Pawn/Ppodae/Parts/PP_Puppy_Undereye</texPath>
+                      <baseLayer>39.2</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                      <debugLabel>PP_Puppy_Nose</debugLabel>
+                      <role>Ppodae_Puppy_Head</role>
+                      <formGroup>Puppy</formGroup>
+                      <texPath>Things/Pawn/Ppodae/Parts/PP_Puppy_Nose</texPath>
+                      <useTransparentShader>true</useTransparentShader>
+                      <baseLayer>40.8</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                      <debugLabel>Ppodae_Puppy_Twinkle</debugLabel>
+                      <tagDef>Ppodae_Puppy_Twinkle</tagDef>
+                      <role>Ppodae_Puppy_Twinkle</role>
+                      <formGroup>Puppy</formGroup>
+                      <texPath>Things/Pawn/Ppodae/Parts/PP_Puppy_Twinkle1</texPath>
+                      <useTransparentShader>true</useTransparentShader>
+                      <alternateTexPaths>
+                        <li>Things/Pawn/Ppodae/Parts/PP_Puppy_Twinkle2</li>
+                      </alternateTexPaths>
+                      <baseLayer>39.6</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                      <debugLabel>Ppodae_Puppy_Mouth</debugLabel>
+                      <tagDef>Ppodae_Puppy_Mouth</tagDef>
+                      <role>Ppodae_Puppy_Mouth</role>
+                      <formGroup>Puppy</formGroup>
+                      <texPath>Things/Pawn/Ppodae/Parts/PP_Puppy_MouthDefault</texPath>
+                      <alternateTexPaths>
+                        <li>Things/Pawn/Ppodae/Parts/PP_Puppy_MouthBark</li>
+                        <li>Things/Pawn/Ppodae/Parts/PP_Puppy_MouthEat</li>
+                      </alternateTexPaths>
+                      <baseLayer>40</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                      <debugLabel>Ppodae_Puppy_EarLeft</debugLabel>
+                      <tagDef>Ppodae_Puppy_EarLeft</tagDef>
+                      <role>Ppodae_Puppy_EarLeft</role>
+                      <formGroup>Puppy</formGroup>
+                      <texPath>Things/Pawn/Ppodae/Parts/PP_Puppy_EarLeft</texPath>
+                      <baseLayer>41.2</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                      <debugLabel>Ppodae_Puppy_EarRight</debugLabel>
+                      <tagDef>Ppodae_Puppy_EarRight</tagDef>
+                      <role>Ppodae_Puppy_EarRight</role>
+                      <formGroup>Puppy</formGroup>
+                      <texPath>Things/Pawn/Ppodae/Parts/PP_Puppy_EarRight</texPath>
+                      <baseLayer>41.6</baseLayer>
+                    </li>
+                  </children>
+                </li>
+              </children>
+            </li>
+            <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+              <debugLabel>Ppodae_Puppy_Tail</debugLabel>
+              <tagDef>Ppodae_Puppy_Tail</tagDef>
+              <role>Ppodae_Puppy_Tail</role>
+              <formGroup>Puppy</formGroup>
+              <texPath>Things/Pawn/Ppodae/Parts/PP_Puppy_Tail</texPath>
+              <baseLayer>22</baseLayer>
+            </li>
+            <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+              <debugLabel>Ppodae_Puppy_Leg4</debugLabel>
+              <tagDef>Ppodae_Puppy_Leg4</tagDef>
+              <role>Ppodae_Puppy_Leg4</role>
+              <formGroup>Puppy</formGroup>
+              <texPath>Things/Pawn/Ppodae/Parts/PP_Puppy_Leg4</texPath>
+              <baseLayer>24.4</baseLayer>
+            </li>
+            <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+              <debugLabel>Ppodae_Puppy_Leg2</debugLabel>
+              <tagDef>Ppodae_Puppy_Leg2</tagDef>
+              <role>Ppodae_Puppy_Leg2</role>
+              <formGroup>Puppy</formGroup>
+              <texPath>Things/Pawn/Ppodae/Parts/PP_Puppy_Leg2</texPath>
+              <baseLayer>32.4</baseLayer>
+            </li>
+            <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+              <debugLabel>Ppodae_Frenzy_Belly</debugLabel>
+              <tagDef>Ppodae_Frenzy_Belly</tagDef>
+              <role>Ppodae_Frenzy_Belly</role>
+              <formGroup>Frenzy</formGroup>
+              <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_Belly</texPath>
+              <baseLayer>30</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                  <debugLabel>Ppodae_Frenzy_Tail</debugLabel>
+                  <tagDef>Ppodae_Frenzy_Tail</tagDef>
+                  <role>Ppodae_Frenzy_Tail</role>
+                  <formGroup>Frenzy</formGroup>
+                  <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_Tail</texPath>
+                  <baseLayer>22</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                      <debugLabel>PP_Frenzy_TailFur</debugLabel>
+                      <role>Ppodae_Frenzy_Tail</role>
+                      <formGroup>Frenzy</formGroup>
+                      <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_TailFur</texPath>
+                      <baseLayer>22.8</baseLayer>
+                    </li>
+                  </children>
+                </li>
+                <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                  <debugLabel>Ppodae_Frenzy_BackLegUpper</debugLabel>
+                  <tagDef>Ppodae_Frenzy_BackLegUpper</tagDef>
+                  <role>Ppodae_Frenzy_BackLegUpper</role>
+                  <formGroup>Frenzy</formGroup>
+                  <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_BackLegUpper</texPath>
+                  <baseLayer>26</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                      <debugLabel>Ppodae_Frenzy_BackLegLower</debugLabel>
+                      <tagDef>Ppodae_Frenzy_BackLegLower</tagDef>
+                      <role>Ppodae_Frenzy_BackLegLower</role>
+                      <formGroup>Frenzy</formGroup>
+                      <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_BackLegLower</texPath>
+                      <baseLayer>26.8</baseLayer>
+                    </li>
+                  </children>
+                </li>
+                <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                  <debugLabel>Ppodae_Frenzy_Chest</debugLabel>
+                  <tagDef>Ppodae_Frenzy_Chest</tagDef>
+                  <role>Ppodae_Frenzy_Chest</role>
+                  <formGroup>Frenzy</formGroup>
+                  <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_Chest</texPath>
+                  <baseLayer>34</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                      <debugLabel>Ppodae_Frenzy_BackArmUpper</debugLabel>
+                      <tagDef>Ppodae_Frenzy_BackArmUpper</tagDef>
+                      <role>Ppodae_Frenzy_BackArmUpper</role>
+                      <formGroup>Frenzy</formGroup>
+                      <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_BackArmUpper</texPath>
+                      <baseLayer>18</baseLayer>
+                      <children>
+                        <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                          <debugLabel>Ppodae_Frenzy_BackArmLower</debugLabel>
+                          <tagDef>Ppodae_Frenzy_BackArmLower</tagDef>
+                          <role>Ppodae_Frenzy_BackArmLower</role>
+                          <formGroup>Frenzy</formGroup>
+                          <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_BackArmLower</texPath>
+                          <baseLayer>18.8</baseLayer>
+                        </li>
+                      </children>
+                    </li>
+                    <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                      <debugLabel>Ppodae_Frenzy_Head</debugLabel>
+                      <tagDef>Ppodae_Frenzy_Head</tagDef>
+                      <role>Ppodae_Frenzy_Head</role>
+                      <formGroup>Frenzy</formGroup>
+                      <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_RightEar</texPath>
+                      <baseLayer>38</baseLayer>
+                      <children>
+                        <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                          <debugLabel>PP_Frenzy_Head</debugLabel>
+                          <role>Ppodae_Frenzy_Head</role>
+                          <formGroup>Frenzy</formGroup>
+                          <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_Head</texPath>
+                          <baseLayer>40</baseLayer>
+                        </li>
+                        <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                          <debugLabel>PP_Frenzy_Undermouth</debugLabel>
+                          <role>Ppodae_Frenzy_Head</role>
+                          <formGroup>Frenzy</formGroup>
+                          <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_Undermouth</texPath>
+                          <baseLayer>40.8</baseLayer>
+                        </li>
+                        <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                          <debugLabel>PP_Frenzy_Nose</debugLabel>
+                          <role>Ppodae_Frenzy_Head</role>
+                          <formGroup>Frenzy</formGroup>
+                          <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_Nose</texPath>
+                          <useTransparentShader>true</useTransparentShader>
+                          <baseLayer>42.8</baseLayer>
+                        </li>
+                        <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                          <debugLabel>PP_Frenzy_LeftEar</debugLabel>
+                          <role>Ppodae_Frenzy_Head</role>
+                          <formGroup>Frenzy</formGroup>
+                          <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_LeftEar</texPath>
+                          <baseLayer>43.6</baseLayer>
+                        </li>
+                        <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                          <debugLabel>Ppodae_Frenzy_Eye</debugLabel>
+                          <tagDef>Ppodae_Frenzy_Eye</tagDef>
+                          <role>Ppodae_Frenzy_Eye</role>
+                          <formGroup>Frenzy</formGroup>
+                          <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_EyeOpen</texPath>
+                          <alternateTexPaths>
+                            <li>Things/Pawn/Ppodae/Parts/PP_Frenzy_EyeClosed</li>
+                          </alternateTexPaths>
+                          <baseLayer>40.4</baseLayer>
+                          <children>
+                            <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                              <debugLabel>PP_Frenzy_Twinkle</debugLabel>
+                              <role>Ppodae_Frenzy_Twinkle</role>
+                              <formGroup>Frenzy</formGroup>
+                              <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_Twinkle</texPath>
+                              <useTransparentShader>true</useTransparentShader>
+                              <baseLayer>43.2</baseLayer>
+                            </li>
+                          </children>
+                        </li>
+                        <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                          <debugLabel>Ppodae_Frenzy_Mouth</debugLabel>
+                          <tagDef>Ppodae_Frenzy_Mouth</tagDef>
+                          <role>Ppodae_Frenzy_Mouth</role>
+                          <formGroup>Frenzy</formGroup>
+                          <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_MouthDefault</texPath>
+                          <alternateTexPaths>
+                            <li>Things/Pawn/Ppodae/Parts/PP_Frenzy_MouthBark</li>
+                          </alternateTexPaths>
+                          <baseLayer>42</baseLayer>
+                        </li>
+                      </children>
+                    </li>
+                    <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                      <debugLabel>Ppodae_Frenzy_FrontArmUpper</debugLabel>
+                      <tagDef>Ppodae_Frenzy_FrontArmUpper</tagDef>
+                      <role>Ppodae_Frenzy_FrontArmUpper</role>
+                      <formGroup>Frenzy</formGroup>
+                      <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_FrontArmUpper</texPath>
+                      <baseLayer>46</baseLayer>
+                      <children>
+                        <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                          <debugLabel>Ppodae_Frenzy_FrontArmLower</debugLabel>
+                          <tagDef>Ppodae_Frenzy_FrontArmLower</tagDef>
+                          <role>Ppodae_Frenzy_FrontArmLower</role>
+                          <formGroup>Frenzy</formGroup>
+                          <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_FrontArmLower</texPath>
+                          <baseLayer>46.8</baseLayer>
+                        </li>
+                      </children>
+                    </li>
+                  </children>
+                </li>
+                <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                  <debugLabel>Ppodae_Frenzy_FrontLegUpper</debugLabel>
+                  <tagDef>Ppodae_Frenzy_FrontLegUpper</tagDef>
+                  <role>Ppodae_Frenzy_FrontLegUpper</role>
+                  <formGroup>Frenzy</formGroup>
+                  <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_FrontLegUpper</texPath>
+                  <baseLayer>36</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.Ppodae.PawnRenderNodeProperties_PpodaePart">
+                      <debugLabel>Ppodae_Frenzy_FrontLegLower</debugLabel>
+                      <tagDef>Ppodae_Frenzy_FrontLegLower</tagDef>
+                      <role>Ppodae_Frenzy_FrontLegLower</role>
+                      <formGroup>Frenzy</formGroup>
+                      <texPath>Things/Pawn/Ppodae/Parts/PP_Frenzy_FrontLegLower</texPath>
+                      <baseLayer>36.8</baseLayer>
+                    </li>
+                  </children>
+                </li>
+              </children>
+            </li>
+          </children>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

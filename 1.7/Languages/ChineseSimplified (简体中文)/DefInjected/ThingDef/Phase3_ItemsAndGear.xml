@@ -54,6 +54,8 @@
   <LC_JudgementBandageFX.label>审判鸟飘散绷带</LC_JudgementBandageFX.label>
   <LC_JustitiaSlashFX.label>正义裁决者苍白月牙斩击</LC_JustitiaSlashFX.label>
   <LC_JustitiaComboFX.label>正义裁决者连斩裁决</LC_JustitiaComboFX.label>
+  <LC_JustitiaChargeSigilFX.label>正义裁决者蓄力天平印记</LC_JustitiaChargeSigilFX.label>
+  <LC_JustitiaVerdictRunnerFX.label>正义裁决者苍白裁决演出</LC_JustitiaVerdictRunnerFX.label>
   <JudgementBirdEgg.label>审判鸟收容蛋</JudgementBirdEgg.label>
   <JudgementBirdEgg.description>审判鸟（O-02-62）缠绕着苍白绷带的静默卵核。</JudgementBirdEgg.description>
   <JudgementBirdEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>审判鸟已收容</JudgementBirdEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
@@ -66,7 +68,7 @@
   <JudgementBirdEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</JudgementBirdEgg.comps.LC_CompEgg.guiLabelString>
 
   <EgoWeapon_JudgementBird.label>E.G.O. 武器（正义裁决者）</EgoWeapon_JudgementBird.label>
-  <EgoWeapon_JudgementBird.description>缠绕着绷带与天平徽记的 ALEPH 级苍白裁决长刃。\n造成无视常规护甲的百分比蓝伤，每次挥砍均可顺劈周围最多 2 名敌对目标。</EgoWeapon_JudgementBird.description>
+  <EgoWeapon_JudgementBird.description>缠绕着绷带与天平徽记的 ALEPH 级苍白裁决长刃。\n造成无视常规护甲的百分比蓝伤，每次挥砍均可顺劈周围最多 2 名敌对目标。\n主动技能：苍白裁决。</EgoWeapon_JudgementBird.description>
   <EgoWeapon_JudgementBird.tools.pale_verdict_blade.label>苍白裁决刃</EgoWeapon_JudgementBird.tools.pale_verdict_blade.label>
   <Apparel_JudgementBirdSuit.label>E.G.O. 护甲（正义裁决者）</Apparel_JudgementBirdSuit.label>
   <Apparel_JudgementBirdSuit.description>以黑曜长袍与绷带披肩织就的 ALEPH 级神圣护甲。\n提供极为珍贵的红/白/黑/蓝全 0.5 倍率抗性，是殖民地首个可靠的抗蓝伤防具。</Apparel_JudgementBirdSuit.description>
@@ -101,6 +103,8 @@
   <EgoWeapon_BigBird.label>E.G.O. 武器（目灯）</EgoWeapon_BigBird.label>
   <EgoWeapon_BigBird.description>以大鸟无数金瞳与黄铜灯笼锻造的 WAW 级重型黑伤战锤。\n挥动沉重但威力惊人，重击会激荡 2 格范围的黑金侵蚀冲击波，并有 25% 概率施加“目灯凝视”——令目标眩晕迟缓且承受额外黑伤侵蚀易伤。</EgoWeapon_BigBird.description>
   <EgoWeapon_BigBird.tools.lantern_hammerhead.label>目灯锤头</EgoWeapon_BigBird.tools.lantern_hammerhead.label>
+  <LC_LampSkillBeaconFX.label>目灯引渡蓄力信标</LC_LampSkillBeaconFX.label>
+  <LC_LampSkillRunnerFX.label>目灯引渡技能演出</LC_LampSkillRunnerFX.label>
   <Apparel_BigBirdSuit.label>E.G.O. 护甲（目灯）</Apparel_BigBirdSuit.label>
   <Apparel_BigBirdSuit.description>饰以金眸刺绣的厚重黑羽大衣（WAW），拥有高达 0.4 倍率的超强黑伤防护与优秀白伤抗性。</Apparel_BigBirdSuit.description>
   <Accessory_BigBird.label>E.G.O. 饰品（目灯）</Accessory_BigBird.label>
@@ -125,6 +129,7 @@
   <LC_LittleRedHuntMarkFX.label>小红帽猎杀标记</LC_LittleRedHuntMarkFX.label>
   <LC_LittleRedThrownSickleFX.label>小红帽回旋飞镰</LC_LittleRedThrownSickleFX.label>
   <LC_LittleRedImpactFX.label>小红帽猩红命中冲击</LC_LittleRedImpactFX.label>
+  <LC_CrimsonScarSkillRunnerFX.label>赤红疤痕猎杀技能演出</LC_CrimsonScarSkillRunnerFX.label>
   <LittleRedRidingHoodedMercenaryEgg.label>小红帽雇佣兵收容蛋</LittleRedRidingHoodedMercenaryEgg.label>
   <LittleRedRidingHoodedMercenaryEgg.description>小红帽雇佣兵（F-01-57）退散后凝结的绯红布带卵核。</LittleRedRidingHoodedMercenaryEgg.description>
   <LittleRedRidingHoodedMercenaryEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>小红帽雇佣兵已收容</LittleRedRidingHoodedMercenaryEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
@@ -137,7 +142,7 @@
   <LittleRedRidingHoodedMercenaryEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</LittleRedRidingHoodedMercenaryEgg.comps.LC_CompEgg.guiLabelString>
 
   <EgoWeapon_LittleRedRidingHoodedMercenary.label>E.G.O. 武器（赤红疤痕）</EgoWeapon_LittleRedRidingHoodedMercenary.label>
-  <EgoWeapon_LittleRedRidingHoodedMercenary.description>集霰弹手炮与猩红弯镰于一体的 WAW 级红伤武器。\n中距点射与贴身斩击俱佳，且随着持握者生命值下降不断放大伤害（最高 +50%）。</EgoWeapon_LittleRedRidingHoodedMercenary.description>
+  <EgoWeapon_LittleRedRidingHoodedMercenary.description>集霰弹手炮与猩红弯镰于一体的 WAW 级红伤武器。\n中距点射与贴身斩击俱佳，且随着持握者生命值下降不断放大伤害（最高 +50%）。\n主动技能：猩红狩猎连射。</EgoWeapon_LittleRedRidingHoodedMercenary.description>
   <EgoWeapon_LittleRedRidingHoodedMercenary.tools.crimson_sickle.label>赤红镰刃</EgoWeapon_LittleRedRidingHoodedMercenary.tools.crimson_sickle.label>
   <Bullet_EgoWeapon_LittleRedRidingHoodedMercenary.label>赤红疤痕霰弹</Bullet_EgoWeapon_LittleRedRidingHoodedMercenary.label>
   <Apparel_LittleRedRidingHoodedMercenarySuit.label>E.G.O. 护甲（赤红疤痕）</Apparel_LittleRedRidingHoodedMercenarySuit.label>
@@ -187,6 +192,7 @@
   <LC_SchadenfreudeBloodBurstFX.label>幸灾乐祸血雾飞溅</LC_SchadenfreudeBloodBurstFX.label>
   <LC_GazeSawSlashFX.label>凝视猩红锯齿斩击</LC_GazeSawSlashFX.label>
   <LC_GazeFlurryFX.label>凝视高速锯盘连切</LC_GazeFlurryFX.label>
+  <LC_GazeSkillRunnerFX.label>凝视窥孔锯暴演出</LC_GazeSkillRunnerFX.label>
   <SchadenfreudeEgg.label>幸灾乐祸收容蛋</SchadenfreudeEgg.label>
   <SchadenfreudeEgg.description>幸灾乐祸（O-05-76）合上锁孔后凝结的铁灰卵核。</SchadenfreudeEgg.description>
   <SchadenfreudeEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>幸灾乐祸已收容</SchadenfreudeEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
@@ -205,5 +211,6 @@
   <Apparel_SchadenfreudeSuit.description>以黑铁锁孔纹路裁剪的战术大衣（HE），具备稳固的 0.8 白伤防护并提高移速与近战威力。</Apparel_SchadenfreudeSuit.description>
   <Accessory_Schadenfreude.label>E.G.O. 饰品（凝视）</Accessory_Schadenfreude.label>
   <Accessory_Schadenfreude.description>宛如血肉筋络缠绕于右手的猩红护手，略微增强防御韧性、移速与近战杀伤力。</Accessory_Schadenfreude.description>
+  <LC_GrinderMk4SkillRunnerFX.label>研磨机 Mk4 过载突进演出</LC_GrinderMk4SkillRunnerFX.label>
 
 </LanguageData>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- T-09-97 Old Belief and Promise VFX -->
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_OldBeliefOracleAuraFX</defName>
+    <label>Old Belief oracle vortex</label>
+    <thingClass>LCAbnormalities.OldBeliefAndPromise.Thing_OldBeliefOracleAura</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_OldBeliefResultBurstFX</defName>
+    <label>Old Belief judgment burst</label>
+    <thingClass>LCAbnormalities.OldBeliefAndPromise.Thing_OldBeliefResultBurst</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_OldBeliefOrbTransferFX</defName>
+    <label>Old Belief spirit orb</label>
+    <thingClass>LCAbnormalities.OldBeliefAndPromise.Thing_OldBeliefOrbTransfer</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <!-- T-09-79 Flesh Idol VFX -->
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_FleshIdolPrayerAuraFX</defName>
+    <label>Flesh Idol prayer halo</label>
+    <thingClass>LCAbnormalities.FleshIdol.Thing_FleshIdolPrayerAura</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_FleshIdolMiracleWaveFX</defName>
+    <label>Flesh Idol miracle wave</label>
+    <thingClass>LCAbnormalities.FleshIdol.Thing_FleshIdolMiracleWave</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_FleshIdolHealMoteFX</defName>
+    <label>Flesh Idol miracle grace</label>
+    <thingClass>LCAbnormalities.FleshIdol.Thing_FleshIdolHealMote</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <!-- T-09-77 The Heart of Aspiration VFX -->
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_HeartBearerAuraFX</defName>
+    <label>Heart of Aspiration bearer pulse</label>
+    <thingClass>LCAbnormalities.HeartOfAspiration.Thing_HeartBearerAura</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_HeartPulseWaveFX</defName>
+    <label>Heart of Aspiration pulse wave</label>
+    <thingClass>LCAbnormalities.HeartOfAspiration.Thing_HeartPulseWave</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_ResearcherNoteBearerAuraFX</defName>
+    <label>Notes from a Crazed Researcher bearer aura</label>
+    <thingClass>LCAbnormalities.NotesFromCrazedResearcher.Thing_ResearcherNoteBearerAura</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_ResearcherNoteBurstFX</defName>
+    <label>Notes from a Crazed Researcher burst</label>
+    <thingClass>LCAbnormalities.NotesFromCrazedResearcher.Thing_ResearcherNoteBurst</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_ResearcherNoteGutsFX</defName>
+    <label>Notes from a Crazed Researcher gore fragments</label>
+    <thingClass>LCAbnormalities.NotesFromCrazedResearcher.Thing_ResearcherNoteGuts</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <seeThroughFog>true</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+</Defs>

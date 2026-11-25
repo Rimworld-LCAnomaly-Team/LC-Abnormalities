@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>Gaze_KeyholeSawstorm</defName>
+    <label>Keyhole Sawstorm</label>
+    <description>Coil Gaze back in a crimson keyhole pulse, then unleash a rapid multi-beat buzzsaw frenzy within 2.6 cells before shattering the target with an enraged red-eye cleave (+25% damage while watched).</description>
+    <iconPath>UI/WeaponSkills/Schadenfreude/Gaze_KeyholeSawstorm</iconPath>
+    <cooldownTicksRange>1080</cooldownTicksRange>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>LCAbnormalities.Schadenfreude.Verb_CastAbility_GazeSawstorm</verbClass>
+      <range>3.5</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.65</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="LCAbnormalities.Schadenfreude.CompProperties_AbilityGazeSawstorm">
+        <slashRadius>2.6</slashRadius>
+        <openerDamageRange>12~16</openerDamageRange>
+        <tickDamageRange>6~9</tickDamageRange>
+        <finisherDamageRange>18~25</finisherDamageRange>
+        <armorPenetration>0.42</armorPenetration>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

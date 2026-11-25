@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderDef>
+    <defName>LC_MimicryCleave</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_MimicryVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_MimicryCleave.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <transparent>true</transparent>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3164</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_MimicryGroundRupture</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_MimicryVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_MimicryGroundRupture.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3165</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+</Defs>

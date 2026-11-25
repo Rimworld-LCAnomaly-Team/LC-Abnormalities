@@ -34,7 +34,7 @@ namespace LCAbnormalities.FleshIdol
     }
 
     /// <summary>
-    /// T-09-79 血肉偶像核心逻辑：
+    /// T-09-79 血肉偶像核心逻辑与活体蠕动/神迹/灾变视觉演出：
     /// 持续祈祷满 20 秒且在 80 秒内停止可为全殖民地周期性回复生命与精神值；
     /// 未满 20 秒提前打断会遭受信仰反噬；超过 90 秒则引发全图惨烈爆炸并进入长冷却。
     /// </summary>
@@ -49,11 +49,19 @@ namespace LCAbnormalities.FleshIdol
         private bool explodedThisSession;
         private float lastHealPulseSecond = -999f;
 
+        // Transient animation timers
+        private int healPulseFlashTicks;
+        private int visualTickCounter;
+        private MaterialPropertyBlock crossProps;
+        private MaterialPropertyBlock backGlowProps;
+
         public CompProperties_FleshIdol PropsFlesh => (CompProperties_FleshIdol)props;
 
         public int HealPulsesTriggered => healPulsesTriggered;
 
         public int DetonationsTriggered => detonationsTriggered;
+
+        public float HealPulseFlash => Mathf.Clamp01(healPulseFlashTicks / 28f);
 
         public int ExplosionCooldownRemaining
         {
@@ -103,6 +111,43 @@ namespace LCAbnormalities.FleshIdol
             return base.CanUseTool(pawn);
         }
 
+        public override void TickWhileHeld()
+        {
+            base.TickWhileHeld();
+            TickVisualEffects();
+        }
+
+        public override void CompTick()
+        {
+            base.CompTick();
+            TickVisualEffects();
+        }
+
+        private void TickVisualEffects()
+        {
+            visualTickCounter++;
+            if (healPulseFlashTicks > 0)
+            {
+                healPulseFlashTicks--;
+            }
+
+            Map map = ActiveMap;
+            if (map == null || !ActivePosition.IsValid)
+            {
+                return;
+            }
+
+            if (IsActiveContinuous && visualTickCounter % 20 == 0)
+            {
+                FleshIdolVfxUtility.EnsurePrayerAura(parent, map, ActivePosition);
+            }
+            else if (ExplosionCooldownRemaining > 0 && visualTickCounter % 45 == 0)
+            {
+                // Faint charred smoke wisps rising during post-explosion dormancy
+                FleckMaker.ThrowSmoke(ActiveDrawPos + new Vector3(0f, 0f, 0.35f), map, 0.65f);
+            }
+        }
+
         public override void OnContinuousStart(Pawn user)
         {
             base.OnContinuousStart(user);
@@ -110,6 +155,12 @@ namespace LCAbnormalities.FleshIdol
             announcedWarning = false;
             explodedThisSession = false;
             lastHealPulseSecond = -999f;
+
+            Map map = ActiveMap;
+            if (IsOperational && map != null && ActivePosition.IsValid)
+            {
+                FleshIdolVfxUtility.EnsurePrayerAura(parent, map, ActivePosition);
+            }
         }
 
         public override void OnContinuousTick(Pawn user, int intervalTicks, int sessionTicks)
@@ -154,6 +205,10 @@ namespace LCAbnormalities.FleshIdol
                 if (!announcedMiracle)
                 {
                     announcedMiracle = true;
+                    if (IsOperational && ActivePosition.IsValid)
+                    {
+                        FleshIdolSoundDefOf.LC_FleshIdol_Choir?.PlayOneShot(new TargetInfo(ActivePosition, map));
+                    }
                     Messages.Message("LC_FleshIdol_MiracleStarted".Translate(parent.LabelCap), focusTarget, MessageTypeDefOf.PositiveEvent);
                 }
 
@@ -178,6 +233,12 @@ namespace LCAbnormalities.FleshIdol
                 && !user.Dead
                 && !user.Destroyed)
             {
+                Map map = ActiveMap ?? user.MapHeld;
+                if (map != null)
+                {
+                    FleshIdolVfxUtility.SpawnRetributionBurst(map, user.Spawned ? user.DrawPos : ActiveDrawPos, catastrophic: false);
+                }
+
                 user.TakeDamage(new DamageInfo(
                     LCAnomalyCore.Defs.DamageDefOf.LC_BlackDamage,
                     PropsFlesh.earlyStopBlackDamage,
@@ -215,6 +276,7 @@ namespace LCAbnormalities.FleshIdol
             }
 
             bool anyHealed = false;
+            int motesSpawned = 0;
             List<Pawn> candidates = map.mapPawns.FreeColonistsAndPrisonersSpawned
                 .Where(p => p != null && !p.Dead && !p.IsPrisonerOfColony)
                 .ToList();
@@ -222,6 +284,7 @@ namespace LCAbnormalities.FleshIdol
             for (int i = 0; i < candidates.Count; i++)
             {
                 Pawn target = candidates[i];
+                bool targetHealed = false;
                 int healedInjuries = 0;
                 List<Hediff> hediffs = target.health?.hediffSet?.hediffs;
                 if (hediffs != null)
@@ -233,6 +296,7 @@ namespace LCAbnormalities.FleshIdol
                             injury.Heal(PropsFlesh.healAmountPerPulse);
                             healedInjuries++;
                             anyHealed = true;
+                            targetHealed = true;
                         }
                     }
                 }
@@ -249,12 +313,24 @@ namespace LCAbnormalities.FleshIdol
                         }
                     }
                     anyHealed = true;
+                    targetHealed = true;
+                }
+
+                if (targetHealed && motesSpawned < 16)
+                {
+                    FleshIdolVfxUtility.SpawnHealMote(target);
+                    motesSpawned++;
                 }
             }
 
-            if (anyHealed && IsOperational && ActivePosition.IsValid && map != null)
+            healPulseFlashTicks = 28;
+            if (IsOperational && ActivePosition.IsValid && map != null)
             {
-                FleshIdolSoundDefOf.LC_FleshIdol_Heal?.PlayOneShot(new TargetInfo(ActivePosition, map));
+                FleshIdolVfxUtility.SpawnMiracleWave(map, ActiveDrawPos + new Vector3(0f, 0f, 0.28f), radius: 8.0f, duration: 50);
+                if (anyHealed)
+                {
+                    FleshIdolSoundDefOf.LC_FleshIdol_Heal?.PlayOneShot(new TargetInfo(ActivePosition, map));
+                }
             }
 
             healPulsesTriggered++;
@@ -273,6 +349,11 @@ namespace LCAbnormalities.FleshIdol
             if (IsOperational && map != null && pos.IsValid)
             {
                 FleshIdolSoundDefOf.LC_FleshIdol_Explode?.PlayOneShot(new TargetInfo(pos, map));
+                FleshIdolVfxUtility.SpawnRetributionBurst(map, ActiveDrawPos, catastrophic: true);
+                if (RimWorld.ThingDefOf.Filth_Blood != null)
+                {
+                    FilthMaker.TryMakeFilth(pos, map, RimWorld.ThingDefOf.Filth_Blood, count: 3);
+                }
             }
 
             if (user != null && !user.Dead && !user.Destroyed)
@@ -326,22 +407,95 @@ namespace LCAbnormalities.FleshIdol
             RequestStopContinuous();
         }
 
-        protected override Color GetHeldOverrideColor()
+        public override bool TryDrawHeldOverride(DrawPhase phase, Vector3 drawLoc)
         {
-            if (IsActiveContinuous)
+            if (phase != DrawPhase.Draw)
             {
-                switch (CurrentPhase)
-                {
-                    case 2:
-                        return new Color(1.0f, 0.92f, 0.68f);
-                    case 3:
-                        return new Color(1.0f, 0.38f, 0.38f);
-                    default:
-                        return new Color(0.95f, 0.78f, 0.75f);
-                }
+                return true;
             }
 
-            return Color.white;
+            Pawn pawn = parent as Pawn;
+            List<PawnKindLifeStage> lifeStages = pawn?.kindDef?.lifeStages;
+            GraphicData bodyGraphic = (lifeStages != null && lifeStages.Count > 0) ? lifeStages[0].bodyGraphicData : null;
+            Vector2 drawSize = bodyGraphic?.drawSize ?? new Vector2(2.2f, 2.2f);
+            CompAbnormalityHoldingPlatformTarget targetComp = pawn?.TryGetComp<CompAbnormalityHoldingPlatformTarget>();
+            if (targetComp != null && targetComp.Props.heldDrawScale > 0f && Mathf.Abs(targetComp.Props.heldDrawScale - 1f) > 0.0001f)
+            {
+                drawSize *= targetComp.Props.heldDrawScale;
+            }
+
+            float baseY = HeldPlatform != null ? HeldPlatform.HeldPawnDrawPos_Y : drawLoc.y;
+            float ageSecs = ((Find.TickManager?.TicksGame ?? 0) + (parent?.thingIDNumber ?? 0) * 13) / 60f;
+            int curPhase = CurrentPhase;
+            bool charred = ExplosionCooldownRemaining > 0 && !IsActiveContinuous;
+            float shaderPhase = charred ? 4.0f : (float)curPhase;
+            float pulseFlash = HealPulseFlash;
+
+            // Subtle living scale pulse & violent overload seismic tremble
+            Vector3 offset = Vector3.zero;
+            float scalePulse = 1f;
+            if (curPhase == 2)
+            {
+                scalePulse = 1f + 0.032f * pulseFlash + 0.012f * Mathf.Sin(ageSecs * 4.5f);
+            }
+            else if (curPhase == 3)
+            {
+                offset.x = Mathf.Sin(ageSecs * 58.0f) * 0.032f;
+                offset.z = Mathf.Cos(ageSecs * 67.0f) * 0.020f;
+                scalePulse = 1f + 0.035f * Mathf.Abs(Mathf.Sin(ageSecs * 12.0f));
+            }
+            else if (curPhase == 1)
+            {
+                scalePulse = 1f + 0.014f * Mathf.Pow(Mathf.Max(0f, Mathf.Sin(ageSecs * 3.8f)), 2f);
+            }
+
+            // Optional radiant divine/crimson back-glow behind the cross junction during Miracle or Overload
+            if ((curPhase == 2 || curPhase == 3) && FleshIdolMaterials.MiracleWaveMat != null)
+            {
+                backGlowProps ??= new MaterialPropertyBlock();
+                Color backCol = curPhase == 2
+                    ? new Color(1.0f, 0.86f, 0.44f, 0.72f)
+                    : new Color(0.98f, 0.14f, 0.14f, 0.85f);
+                Color backCore = curPhase == 2
+                    ? new Color(1.0f, 0.99f, 0.90f, 0.90f)
+                    : new Color(1.0f, 0.76f, 0.72f, 0.95f);
+
+                backGlowProps.SetColor(FleshIdolMaterials.PropColor, backCol);
+                backGlowProps.SetColor(FleshIdolMaterials.PropCoreColor, backCore);
+                backGlowProps.SetFloat(FleshIdolMaterials.PropProgress, curPhase == 3 ? 1.0f : 0.0f);
+                backGlowProps.SetFloat(FleshIdolMaterials.PropAgeSecs, ageSecs);
+                backGlowProps.SetFloat(FleshIdolMaterials.PropAlpha, curPhase == 2 ? (0.55f + 0.35f * pulseFlash) : 0.82f);
+                backGlowProps.SetFloat(FleshIdolMaterials.PropIntensity, curPhase == 2 ? (1.15f + 0.45f * pulseFlash) : 1.45f);
+                backGlowProps.SetFloat(FleshIdolMaterials.PropMode, 1.0f);
+
+                float glowSize = drawSize.y * (curPhase == 2 ? (1.05f + 0.18f * pulseFlash) : 1.18f);
+                Matrix4x4 gMat = Matrix4x4.TRS(
+                    new Vector3(drawLoc.x + offset.x, baseY - 0.004f, drawLoc.z + 0.34f + offset.z),
+                    Quaternion.identity,
+                    new Vector3(glowSize, 1f, glowSize));
+                Graphics.DrawMesh(MeshPool.plane10, gMat, FleshIdolMaterials.MiracleWaveMat, 0, null, 0, backGlowProps);
+            }
+
+            if (FleshIdolMaterials.CrossMat != null)
+            {
+                crossProps ??= new MaterialPropertyBlock();
+                crossProps.SetColor(FleshIdolMaterials.PropColor, Color.white);
+                crossProps.SetColor(FleshIdolMaterials.PropGlowColor, curPhase == 2
+                    ? new Color(1.0f, 0.88f, 0.46f, 1.0f)
+                    : new Color(1.0f, 0.24f, 0.22f, 1.0f));
+                crossProps.SetFloat(FleshIdolMaterials.PropAgeSecs, ageSecs);
+                crossProps.SetFloat(FleshIdolMaterials.PropPhase, shaderPhase);
+                crossProps.SetFloat(FleshIdolMaterials.PropPulseAmt, pulseFlash);
+
+                Matrix4x4 cMat = Matrix4x4.TRS(
+                    new Vector3(drawLoc.x + offset.x, baseY, drawLoc.z + offset.z),
+                    Quaternion.identity,
+                    new Vector3(drawSize.x * scalePulse, 1f, drawSize.y * scalePulse));
+                Graphics.DrawMesh(MeshPool.plane10, cMat, FleshIdolMaterials.CrossMat, 0, null, 0, crossProps);
+                return true;
+            }
+
+            return false;
         }
 
         public override void DrawExtraSelectionOverlaysForPlatform(Building_AbnormalityHoldingPlatform platform)
@@ -396,6 +550,7 @@ namespace LCAbnormalities.FleshIdol
     {
         public static SoundDef LC_FleshIdol_Heal;
         public static SoundDef LC_FleshIdol_Explode;
+        public static SoundDef LC_FleshIdol_Choir;
 
         static FleshIdolSoundDefOf()
         {

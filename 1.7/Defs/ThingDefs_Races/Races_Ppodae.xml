@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_EntityBase">
+    <defName>Ppodae</defName>
+    <label>Ppodae</label>
+    <description>An endearing, fluffy white Pekingese puppy that melts the hearts of everyone nearby (D-02-107).\n\nWhen Instinct work is performed inside its containment unit, Ppodae happily wags its tail. Assigning Insight, Attachment, or Repression carries a 50% chance to drop its Qliphoth Counter (max 2) as soon as the employee enters, and Bad work always lowers it. Upon breaching, its muscles bulge with ink tattoos into a towering frenzy beast—yet once it slays a single victim, it curls back into containment stasis on its own.</description>
+    <uiIconPath>UI/CodexEntries/Ppodae</uiIconPath>
+    <thingClass>LCAbnormalities.Ppodae.LC_PpodaePawn</thingClass>
+    <statBases>
+      <MoveSpeed>5.2</MoveSpeed>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-200</ComfyTemperatureMin>
+      <ComfyTemperatureMax>150</ComfyTemperatureMax>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <LC_MinimumContainmentStrength>35</LC_MinimumContainmentStrength>
+      <StaggerDurationFactor>0.25</StaggerDurationFactor>
+      <ToxicResistance>1</ToxicResistance>
+    </statBases>
+    <tools>
+      <li>
+        <label>frenzy paw slam</label>
+        <capacities><li>LC_PpodaeFrenzyClaw</li></capacities>
+        <power>19</power>
+        <cooldownTime>1.25</cooldownTime>
+        <soundMeleeHit>LC_Ppodae_Fist</soundMeleeHit>
+      </li>
+    </tools>
+    <race>
+      <body>OneSin</body>
+      <baseBodySize>1.25</baseBodySize>
+      <baseHealthScale>3.5</baseHealthScale>
+      <intelligence>ToolUser</intelligence>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <fleshType>LC_AbnormalityOrganic</fleshType>
+      <foodType>None</foodType>
+      <hasCorpse>false</hasCorpse>
+      <lifeExpectancy>1000</lifeExpectancy>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <disableIgniteVerb>true</disableIgniteVerb>
+      <trainability>None</trainability>
+      <renderTree>Ppodae</renderTree>
+      <thinkTreeMain>PpodaeMain</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+      <lifeStageAges>
+        <li>
+          <def>LC_EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="LCAbnormalities.Ppodae.CompProperties_Ppodae">
+        <qliphothCountMax>2</qliphothCountMax>
+        <studySucessRateBase>0.0</studySucessRateBase>
+        <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>true</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
+        <dyingFxDef>DyingPpodae</dyingFxDef>
+        <workDamageDef>LC_RedDamage</workDamageDef>
+        <workDamageRange>2~3</workDamageRange>
+        <escapedLetterLabelKey>LC_Ppodae_EscapedLabel</escapedLetterLabelKey>
+        <escapedLetterTextKey>LC_Ppodae_EscapedText</escapedLetterTextKey>
+        <killedLetterLabelKey>LC_Ppodae_SuppressedLabel</killedLetterLabelKey>
+        <killedLetterTextKey>LC_Ppodae_SuppressedText</killedLetterTextKey>
+        <instinctProbs>
+          <li>0.60</li><li>0.60</li><li>0.60</li><li>0.60</li><li>0.60</li>
+        </instinctProbs>
+        <insightProbs>
+          <li>0.40</li><li>0.40</li><li>0.30</li><li>0.30</li><li>0.30</li>
+        </insightProbs>
+        <attachmentProbs>
+          <li>0.40</li><li>0.40</li><li>0.40</li><li>0.40</li><li>0.40</li>
+        </attachmentProbs>
+        <repressionProbs>
+          <li>0.40</li><li>0.40</li><li>0.30</li><li>0.30</li><li>0.30</li>
+        </repressionProbs>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <lookForTargetOnEscape>true</lookForTargetOnEscape>
+        <hasAnimation>true</hasAnimation>
+        <heldDrawScale>1.0</heldDrawScale>
+        <heldDrawOffset>(0, 0, -0.04)</heldDrawOffset>
+      </li>
+      <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
+        <frequencyTicks>60000</frequencyTicks>
+        <studyTimesPeriod>1</studyTimesPeriod>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <speedOffsetsByProgress>
+          <li>0</li><li>0.04</li><li>0.04</li><li>0.08</li><li>0.08</li>
+        </speedOffsetsByProgress>
+        <successOffsetsByProgress>
+          <li>0</li><li>0.04</li><li>0.04</li><li>0.08</li><li>0.08</li>
+        </successOffsetsByProgress>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_PeBoxProduce">
+        <peBoxDef>EnkephalinBox</peBoxDef>
+        <amountProdueRangeNormal>6~9</amountProdueRangeNormal>
+        <amountProdueMax>12</amountProdueMax>
+        <boxTexOffsetZ>0.0742</boxTexOffsetZ>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
+        <accessoryDef>Accessory_Ppodae</accessoryDef>
+        <accessoryChance>0.05</accessoryChance>
+        <unlockLevel>2</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
+        <weaponExtracted>EgoWeapon_Ppodae</weaponExtracted>
+        <weaponIconPath>UI/Commands/ExtractEGO_Ppodae_Weapon</weaponIconPath>
+        <amountMaxWeapon>2</amountMaxWeapon>
+        <weaponExtractedNeed>25</weaponExtractedNeed>
+        <armorExtracted>Apparel_PpodaeSuit</armorExtracted>
+        <armorIconPath>UI/Commands/ExtractEGO_Ppodae_Armor</armorIconPath>
+        <amountMaxArmor>3</amountMaxArmor>
+        <armorExtractedNeed>20</armorExtractedNeed>
+        <unlockLevel>3</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>2</threshold>
+            <label>Observation Level: I</label>
+            <text>Ppodae prefers Instinct care above all else (60% across all Fortitude levels) and deals light 2~3 Red damage on failures.</text>
+          </li>
+          <li>
+            <threshold>4</threshold>
+            <label>Observation Level: II</label>
+            <text>Managerial Tip 1: Assigning any work other than Instinct carries a 50% chance to lower Ppodae's Qliphoth Counter upon entry.\nUnlocks the E.G.O. Gift 'SO CUTE!!!'.</text>
+          </li>
+          <li>
+            <threshold>7</threshold>
+            <label>Observation Level: III</label>
+            <text>Managerial Tip 2: Bad work results always reduce Ppodae's Qliphoth Counter (max 2), and Good results do not raise it back up.</text>
+          </li>
+          <li>
+            <threshold>10</threshold>
+            <label>Observation Level: IV</label>
+            <text>Managerial Tip 3: Once its Qliphoth Counter reaches 0, Ppodae bulks into a muscular frenzy monster wielding devastating Red attacks. After slaying a humanlike target, it turns back into a harmless egg.\nUnlocks the TETH E.G.O. Fist 'SO CUTE!!!' and Suit.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>TETH</abnormalityCategoryDef>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>1.2</redResistance>
+        <whiteResistance>0.8</whiteResistance>
+        <blackResistance>1.0</blackResistance>
+        <paleResistance>2.0</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

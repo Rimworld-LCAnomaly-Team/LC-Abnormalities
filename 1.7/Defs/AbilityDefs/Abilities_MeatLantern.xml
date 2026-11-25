@@ -12,11 +12,11 @@
     <hostile>true</hostile>
     <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
     <verbProperties>
-      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <verbClass>MeatLantern.Effect.Verb_CastAbilityTouch_MeatLanternChomp</verbClass>
+      <warmupTime>0.35</warmupTime>
       <drawAimPie>false</drawAimPie>
       <range>-1</range>
       <requireLineOfSight>true</requireLineOfSight>
-      <warmupTime>0.01</warmupTime>
       <targetParams>
         <canTargetSelf>false</canTargetSelf>
         <canTargetBuildings>false</canTargetBuildings>

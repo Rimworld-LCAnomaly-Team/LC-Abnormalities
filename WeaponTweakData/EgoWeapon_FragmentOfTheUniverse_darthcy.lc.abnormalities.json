@@ -1,0 +1,14 @@
+{
+  "TextureModID": "darthcy.lc.abnormalities",
+  "ItemDefName": "EgoWeapon_FragmentOfTheUniverse",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.32,
+  "OffY": -0.04,
+  "ScaleX": 2.2,
+  "ScaleY": 2.2,
+  "HandsMode": 2,
+  "BladeStart": 0.55,
+  "BladeEnd": 1.25,
+  "MeleeWeaponType": 7
+}

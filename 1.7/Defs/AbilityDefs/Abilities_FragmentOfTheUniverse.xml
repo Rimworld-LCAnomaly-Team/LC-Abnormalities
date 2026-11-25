@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>CosmosSpear_StarlightEcho</defName>
+    <label>Starlight Echo</label>
+    <description>Thrust the cosmic lance forward for Black starlight damage, then echo a resonant songwave across 3.2 cells that inflicts Black shock and stuns surrounding foes.</description>
+    <iconPath>UI/WeaponSkills/FragmentOfTheUniverse/CosmosSpear_StarlightEcho</iconPath>
+    <cooldownTicksRange>960</cooldownTicksRange>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>LCAbnormalities.FragmentOfTheUniverse.Verb_CastAbility_CosmosSpearEcho</verbClass>
+      <range>4.5</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.60</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="LCAbnormalities.FragmentOfTheUniverse.CompProperties_AbilityCosmosSpearEcho">
+        <echoRadius>3.2</echoRadius>
+        <pierceDamageRange>14~19</pierceDamageRange>
+        <echoDamageRange>18~24</echoDamageRange>
+        <armorPenetration>0.35</armorPenetration>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

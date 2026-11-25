@@ -21,7 +21,7 @@
     </statBases>
     <verbs>
       <li>
-        <verbClass>Verb_Shoot</verbClass>
+        <verbClass>LCAbnormalities.ScorchedGirl.Verb_ShootFourthMatch</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_EgoWeapon_ScorchedGirl</defaultProjectile>
         <ai_AvoidFriendlyFireRadius>2.6</ai_AvoidFriendlyFireRadius>
@@ -40,6 +40,21 @@
         <cooldownTime>2.0</cooldownTime>
       </li>
     </tools>
+    <descriptionHyperlinks>
+      <AbilityDef>FourthMatchFlame_MatchIgnition</AbilityDef>
+    </descriptionHyperlinks>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_EquippableAbility">
+        <abilityDef>FourthMatchFlame_MatchIgnition</abilityDef>
+      </li>
+      <li Class="CompProperties_Styleable"/>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
         <damageType>Red</damageType>

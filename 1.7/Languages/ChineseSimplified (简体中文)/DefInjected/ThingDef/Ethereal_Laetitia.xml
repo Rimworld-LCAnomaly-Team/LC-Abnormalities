@@ -4,5 +4,9 @@
   <DyingLaetitia.label>蕾蒂希娅（死亡中）</DyingLaetitia.label>
   <SpawningLaetitiaMonster.label>小女孩的朋友（生成中）</SpawningLaetitiaMonster.label>
   <DyingLaetitiaMonster.label>小女孩的朋友（死亡中）</DyingLaetitiaMonster.label>
+  <LC_LaetitiaHeartBurstFX.label>蕾蒂希娅碎心花爆特效</LC_LaetitiaHeartBurstFX.label>
+  <LC_LaetitiaGiftChargeFX.label>蕾蒂希娅礼赞蓄力光环</LC_LaetitiaGiftChargeFX.label>
+  <LC_LaetitiaRibbonTracerFX.label>蕾蒂希娅丝带曳光</LC_LaetitiaRibbonTracerFX.label>
+  <LC_LaetitiaSkillRunnerFX.label>蕾蒂希娅礼赞技能演出</LC_LaetitiaSkillRunnerFX.label>
 
 </LanguageData>

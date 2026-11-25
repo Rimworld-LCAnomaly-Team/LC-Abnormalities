@@ -40,4 +40,34 @@
     </shaderProgram>
   </ShaderDef>
 
+  <ShaderDef>
+    <defName>LC_FairySpinePMA</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_FairyVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_FairySpinePMA.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Custom</blendMode>
+      <blendSrcFactor>One</blendSrcFactor>
+      <blendDstFactor>OneMinusSrcAlpha</blendDstFactor>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>2900</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_FairySpineAdditive</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_FairyVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_FairySpineAdditive.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Custom</blendMode>
+      <blendSrcFactor>One</blendSrcFactor>
+      <blendDstFactor>One</blendDstFactor>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3152</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
 </Defs>

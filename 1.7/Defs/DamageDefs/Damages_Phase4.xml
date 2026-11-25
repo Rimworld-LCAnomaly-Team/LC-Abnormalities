@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ==================== 1. Ppodae (D-02-107) ==================== -->
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Ppodae_FrenzyClaw</defName>
+    <label>frenzy slam</label>
+    <workerClass>LCAbnormalities.Ppodae.DamageWorker_PpodaeClaw</workerClass>
+    <deathMessage>{0} was mangled by Ppodae.</deathMessage>
+    <hediff>Crush</hediff>
+    <armorCategory>Blunt</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Red</damageType>
+        <riskLevel>TETH</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>LC_PpodaeFrenzyClaw</defName>
+    <label>frenzy slam</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef>
+    <defName>LC_PpodaeFrenzyClaw</defName>
+    <requiredCapacity>LC_PpodaeFrenzyClaw</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>LC_Ppodae_FrenzyClaw</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Smash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Smash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Smash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Smash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Ppodae_EgoRedFist</defName>
+    <label>cute red pummel</label>
+    <workerClass>LCAnomalyCore.DamageWorker.DamageWorker_FourColor</workerClass>
+    <deathMessage>{0} was battered to pieces by SO CUTE!!!.</deathMessage>
+    <hediff>Crush</hediff>
+    <armorCategory>Blunt</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Red</damageType>
+        <riskLevel>TETH</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>LC_PpodaeEgoFist</defName>
+    <label>paw pummel</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef>
+    <defName>LC_PpodaeEgoFist</defName>
+    <requiredCapacity>LC_PpodaeEgoFist</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>LC_Ppodae_EgoRedFist</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Smash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Smash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Smash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Smash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+  <!-- ==================== 2. Warm-Hearted Woodsman (F-05-32) ==================== -->
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Woodsman_BreachAxe</defName>
+    <label>logging cleave</label>
+    <workerClass>LCAbnormalities.WarmHeartedWoodsman.DamageWorker_WoodsmanAxe</workerClass>
+    <deathMessage>{0} was chopped down by Warm-Hearted Woodsman.</deathMessage>
+    <hediff>Cut</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Red</damageType>
+        <riskLevel>HE</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>LC_WoodsmanBreachAxe</defName>
+    <label>logging cleave</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef>
+    <defName>LC_WoodsmanBreachAxe</defName>
+    <requiredCapacity>LC_WoodsmanBreachAxe</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>LC_Woodsman_BreachAxe</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Slash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Woodsman_EgoRedAxe</defName>
+    <label>logging chop</label>
+    <workerClass>LCAnomalyCore.DamageWorker.DamageWorker_FourColor</workerClass>
+    <deathMessage>{0} was felled by Logging.</deathMessage>
+    <hediff>Cut</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Red</damageType>
+        <riskLevel>HE</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>LC_WoodsmanEgoCleave</defName>
+    <label>great axe chop</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef>
+    <defName>LC_WoodsmanEgoCleave</defName>
+    <requiredCapacity>LC_WoodsmanEgoCleave</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>LC_Woodsman_EgoRedAxe</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Slash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+  <!-- ==================== 3. Fragment of the Universe (O-03-60) ==================== -->
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Cosmos_BreachTentacle</defName>
+    <label>cosmic tendril stab</label>
+    <workerClass>LCAbnormalities.FragmentOfTheUniverse.DamageWorker_CosmosTentacle</workerClass>
+    <deathMessage>{0} was pierced by Fragment of the Universe.</deathMessage>
+    <hediff>Stab</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Black</damageType>
+        <riskLevel>TETH</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>LC_CosmosBreachTentacle</defName>
+    <label>cosmic tendril</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef>
+    <defName>LC_CosmosBreachTentacle</defName>
+    <requiredCapacity>LC_CosmosBreachTentacle</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>LC_Cosmos_BreachTentacle</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Stab_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Stab_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Stab_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Stab_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Cosmos_SongWhite</defName>
+    <label>cosmic echo</label>
+    <workerClass>LCAnomalyCore.DamageWorker.DamageWorker_FourColor</workerClass>
+    <deathMessage>{0}'s mind shattered under the Fragment of the Universe's song.</deathMessage>
+    <harmsHealth>false</harmsHealth>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>White</damageType>
+        <riskLevel>TETH</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Cosmos_BlackSpear</defName>
+    <label>starlight thrust</label>
+    <workerClass>LCAbnormalities.FragmentOfTheUniverse.DamageWorker_CosmosSpear</workerClass>
+    <deathMessage>{0} was run through by Fragments from Somewhere.</deathMessage>
+    <hediff>Stab</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Black</damageType>
+        <riskLevel>TETH</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>LC_CosmosSpearStrike</defName>
+    <label>cosmic lance thrust</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef>
+    <defName>LC_CosmosSpearStrike</defName>
+    <requiredCapacity>LC_CosmosSpearStrike</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>LC_Cosmos_BlackSpear</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Stab_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Stab_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Stab_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Stab_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+  <!-- ==================== 4. Scarecrow Searching for Wisdom (F-01-87) ==================== -->
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Scarecrow_BreachHarvest</defName>
+    <label>straw harvest tear</label>
+    <workerClass>LCAbnormalities.ScarecrowSearchingForWisdom.DamageWorker_ScarecrowHarvest</workerClass>
+    <deathMessage>{0}'s wisdom was harvested by Scarecrow Searching for Wisdom.</deathMessage>
+    <hediff>Cut</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Black</damageType>
+        <riskLevel>HE</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>LC_ScarecrowBreachHarvest</defName>
+    <label>rake harvest</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef>
+    <defName>LC_ScarecrowBreachHarvest</defName>
+    <requiredCapacity>LC_ScarecrowBreachHarvest</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>LC_Scarecrow_BreachHarvest</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Slash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Scarecrow_EgoBlackRake</defName>
+    <label>harvest rake</label>
+    <workerClass>LCAnomalyCore.DamageWorker.DamageWorker_FourColor</workerClass>
+    <deathMessage>{0} was reaped by Harvest.</deathMessage>
+    <hediff>Cut</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Black</damageType>
+        <riskLevel>HE</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>LC_ScarecrowEgoRake</defName>
+    <label>harvest sweep</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef>
+    <defName>LC_ScarecrowEgoRake</defName>
+    <requiredCapacity>LC_ScarecrowEgoRake</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>LC_Scarecrow_EgoBlackRake</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Slash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Slash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+</Defs>

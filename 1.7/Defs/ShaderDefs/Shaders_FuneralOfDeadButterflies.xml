@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderDef>
+    <defName>LC_FuneralButterflyStream</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_FuneralVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_FuneralButterflyStream.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <transparent>true</transparent>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3153</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+</Defs>

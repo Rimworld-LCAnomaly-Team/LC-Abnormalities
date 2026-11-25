@@ -13,6 +13,9 @@ namespace NothingThere.Def
         public static ThingDef EgoWeapon_NothingThere;
         public static ThingDef Apparel_NothingThereSuit;
         public static ThingDef Accessory_NothingThere;
+        public static ThingDef LC_MimicrySlashFX;
+        public static ThingDef LC_MimicryGroundRuptureFX;
+        public static ThingDef LC_MimicryChargeAuraFX;
 
         static ThingDefOf()
         {

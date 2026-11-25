@@ -5,6 +5,6 @@
   <LaetitiaMonster_Attack.description>你不应当看到这条描述。</LaetitiaMonster_Attack.description>
 
   <LaetitiaEGO_SendTheGift.label>送出礼物</LaetitiaEGO_SendTheGift.label>
-  <LaetitiaEGO_SendTheGift.description>标记一名敌对类人目标，为其施加攻击性的蕾蒂希娅的礼物。\n与收容工作中获得的礼物不同，此礼物会迅速失稳；当状态结束、目标倒地或死亡时，会引发一次高额黑伤爆发。若目标倒下，还会生成数只临时存在的“小女孩的朋友”无差别攻击附近所有人。</LaetitiaEGO_SendTheGift.description>
+  <LaetitiaEGO_SendTheGift.description>向 25 格内的任意敌对存活目标射出双拍心蕾礼赞连射，造成黑伤并挂上“蕾蒂希娅的礼物（攻击性）”。\n此后使用蕾蒂希娅步枪连续命中携礼目标可触发 +25% 黑伤裂解并大幅加速引爆，当标记碎裂、到期或目标倒下时将引爆友军安全的“碎心黑蕾丝”范围黑伤冲击波并眩晕 3.6 格内敌军。</LaetitiaEGO_SendTheGift.description>
 
 </LanguageData>

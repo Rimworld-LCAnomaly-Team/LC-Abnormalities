@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderTypeDef>
+    <defName>LC_PpodaeSlam</defName>
+    <shaderPath>Map/LC_PpodaeSlam</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_WoodsmanFurnace</defName>
+    <shaderPath>Map/LC_WoodsmanFurnace</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_CosmosSongWave</defName>
+    <shaderPath>Map/LC_CosmosSongWave</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_ScarecrowDrainBeam</defName>
+    <shaderPath>Map/LC_ScarecrowDrainBeam</shaderPath>
+  </ShaderTypeDef>
+
+</Defs>

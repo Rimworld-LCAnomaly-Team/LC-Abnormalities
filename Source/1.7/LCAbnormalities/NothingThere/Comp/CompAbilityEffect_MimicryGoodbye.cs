@@ -1,4 +1,6 @@
+using LCAnomalyCore.Render.Weapon;
 using LCAnomalyCore.Util;
+using NothingThere.Effect;
 using NothingThere.Util;
 using RimWorld;
 using UnityEngine;
@@ -28,6 +30,21 @@ namespace NothingThere.Comp
             Map map = victim.MapHeld ?? caster.MapHeld;
             IntVec3 pos = victim.PositionHeld;
             bool isMechanoid = victim.def?.race?.IsMechanoid == true;
+            Vector3 casterPos = caster.DrawPos.Yto0();
+            Vector3 victimPos = victim.Spawned ? victim.DrawPos.Yto0() : pos.ToVector3Shifted().Yto0();
+            Vector3 dir = (victimPos - casterPos).Yto0();
+            if (dir.sqrMagnitude < 0.001f)
+            {
+                dir = Vector3.right;
+            }
+            dir.Normalize();
+
+            float aimAngle = EgoWeaponAnimationUtility.ResolveAimAngle(caster, victimPos);
+            ThingWithComps primary = caster.equipment?.Primary;
+            if (primary != null && primary.def?.defName == MimicryWeaponAnimHandler.WeaponDefName)
+            {
+                EgoWeaponAnimationManager.Play(caster, primary, MimicryWeaponAnimHandler.ClipGoodbyeSlam, 78, aimAngle);
+            }
 
             float rawDamage = Props.damageRange.RandomInRange;
             DamageDef slashDef = Def.DamageDefOf.LC_NothingThere_RedSlash ?? LCAnomalyCore.Defs.DamageDefOf.LC_RedDamage;
@@ -36,6 +53,9 @@ namespace NothingThere.Comp
 
             if (map != null && pos.InBounds(map))
             {
+                float yaw = Mathf.Atan2(-dir.z, dir.x) * Mathf.Rad2Deg;
+                MimicryVfxUtility.SpawnSlash(map, Vector3.Lerp(casterPos, victimPos, 0.55f), yaw, scale: 2.85f, flipSweep: false, heavy: true, lifeTicks: 22, spanRad: 3.10f);
+                MimicryVfxUtility.SpawnGroundRupture(map, casterPos + dir * 0.85f, yaw, scale: 3.4f, lifeTicks: 28);
                 Def.SoundDefOf.NothingThere_GoodbyeFinish?.PlayOneShot(new TargetInfo(pos, map));
                 AbnormalityUtility.Burst(pos, map, 1.4f);
                 Vector3 motePos = pos.ToVector3Shifted();

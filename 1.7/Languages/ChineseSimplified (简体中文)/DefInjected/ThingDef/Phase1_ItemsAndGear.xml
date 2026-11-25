@@ -49,6 +49,9 @@
   <DyingWellCheers.label>韦尔奇牌汽水机（消散中）</DyingWellCheers.label>
   <LC_FX_WellCheersSeaWave.label>韦尔奇深海浪潮</LC_FX_WellCheersSeaWave.label>
   <LC_FX_WellCheersBubble.label>韦尔奇碳酸气泡</LC_FX_WellCheersBubble.label>
+  <LC_WellCheersMuzzleFizzFX.label>苏打枪口碳酸雾</LC_WellCheersMuzzleFizzFX.label>
+  <LC_WellCheersSodaSplashFX.label>苏打气泡飞溅</LC_WellCheersSodaSplashFX.label>
+  <LC_WellCheersHealMistFX.label>苏打舒缓雾气</LC_WellCheersHealMistFX.label>
 
   <WellCheersEgg.label>韦尔奇汽水机收容蛋</WellCheersEgg.label>
   <WellCheersEgg.description>韦尔奇牌汽水机（F-05-52）还原后的原始蛰伏卵体。</WellCheersEgg.description>
@@ -62,13 +65,16 @@
   <WellCheersEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</WellCheersEgg.comps.LC_CompEgg.guiLabelString>
 
   <EgoWeapon_WellCheers.label>E.G.O. 武器（苏打）</EgoWeapon_WellCheers.label>
-  <EgoWeapon_WellCheers.description>嘶嘶冒着汽泡的粉彩碳酸卡宾枪（ZAYIN）。\n命中敌人时有概率四溅汽水微粒，顺带治愈射手些许伤势与精神负荷。</EgoWeapon_WellCheers.description>
-  <EgoWeapon_WellCheers.tools.stock.label>枪托</EgoWeapon_WellCheers.tools.stock.label>
-  <Bullet_EgoWeapon_WellCheers.label>苏打 E.G.O. 能量弹</Bullet_EgoWeapon_WellCheers.label>
+  <EgoWeapon_WellCheers.description>一把涂着清爽葡萄紫色涂装的 ZAYIN 级手枪，据传最后是由一名格外偏爱海虾的员工提取而成。\n每次开火时，空气中都会弥漫开淡淡的葡萄清香与碳酸气泡；高速射出的远程红伤弹丸命中敌人时，有概率挥洒舒缓的汽水雾气，顺带治愈射手些许伤势与精神负荷。</EgoWeapon_WellCheers.description>
+  <EgoWeapon_WellCheers.tools.grip.label>握把</EgoWeapon_WellCheers.tools.grip.label>
+  <Bullet_EgoWeapon_WellCheers.label>苏打 E.G.O. 碳酸弹</Bullet_EgoWeapon_WellCheers.label>
   <Apparel_WellCheersSuit.label>E.G.O. 护甲（苏打）</Apparel_WellCheersSuit.label>
   <Apparel_WellCheersSuit.description>清新蓝红水手风工作服（ZAYIN），兼具不错的物理防寒与防暑效果。</Apparel_WellCheersSuit.description>
   <Accessory_WellCheers.label>E.G.O. 饰品（苏打）</Accessory_WellCheers.label>
   <Accessory_WellCheers.description>别在衣领旁的俏皮海虾徽章，总能提振佩戴者的士气。</Accessory_WellCheers.description>
+  <LC_WingbeatSkillRunnerFX.label>振翅盛宴技能演出</LC_WingbeatSkillRunnerFX.label>
+  <LC_SodaSkillRunnerFX.label>汽水激浪技能演出</LC_SodaSkillRunnerFX.label>
+  <LC_VoidDreamSkillRunnerFX.label>梦乡催眠爆裂演出</LC_VoidDreamSkillRunnerFX.label>
 
   <!-- Punishing Bird -->
   <PunishingBird.label>惩戒鸟</PunishingBird.label>
@@ -100,6 +106,9 @@
   <EgoWeapon_PunishingBird.description>仿照惩戒鸟纤细鸟喙雕刻而成的洁白速射手枪（TETH），出膛迅疾、连点精准。</EgoWeapon_PunishingBird.description>
   <EgoWeapon_PunishingBird.tools.grip.label>握把</EgoWeapon_PunishingBird.tools.grip.label>
   <Bullet_EgoWeapon_PunishingBird.label>喙 E.G.O. 穿甲弹</Bullet_EgoWeapon_PunishingBird.label>
+  <LC_BeakTracerFX.label>喙纯白绯红曳光</LC_BeakTracerFX.label>
+  <LC_BeakImpactFX.label>喙啄击星芒特效</LC_BeakImpactFX.label>
+  <LC_BeakSkillRunnerFX.label>喙惩戒连射演出</LC_BeakSkillRunnerFX.label>
   <Apparel_PunishingBirdSuit.label>E.G.O. 护甲（喙）</Apparel_PunishingBirdSuit.label>
   <Apparel_PunishingBirdSuit.description>镶着猩红绒边警示带的洁白羽衣风外套（TETH），物理与精神防护均衡而轻快。</Apparel_PunishingBirdSuit.description>
   <Accessory_PunishingBird.label>E.G.O. 饰品（喙）</Accessory_PunishingBird.label>

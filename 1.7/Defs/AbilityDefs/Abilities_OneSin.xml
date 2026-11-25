@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>Penitence_Absolution</defName>
+    <label>Penitent Absolution</label>
+    <description>Raise Penitence to project a radiant cross flash and strike the target for White damage, then unfurl a purifying White sanctum wave within 3.8 cells that stuns hostiles while mending allies' wounds and soothing mental trauma.</description>
+    <iconPath>UI/WeaponSkills/OneSin/Penitence_Absolution</iconPath>
+    <cooldownTicksRange>1080</cooldownTicksRange>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>OneSin.Effect.Verb_CastAbility_PenitenceAbsolution</verbClass>
+      <range>4.5</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.65</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="OneSin.Effect.CompProperties_AbilityPenitenceAbsolution">
+        <absolutionRadius>3.8</absolutionRadius>
+        <smiteDamageRange>10~14</smiteDamageRange>
+        <sanctumDamageRange>14~18</sanctumDamageRange>
+        <armorPenetration>0.28</armorPenetration>
+        <healAmount>10</healAmount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

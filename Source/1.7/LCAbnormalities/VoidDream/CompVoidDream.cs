@@ -36,6 +36,7 @@ namespace LCAbnormalities.VoidDream
         public static ThingDef LC_VoidDreamCrowWaveFX;
         public static ThingDef LC_VoidDreamSleepAuraFX;
         public static ThingDef LC_VoidDreamNightmareBurstFX;
+        public static ThingDef LC_VoidDreamSkillRunnerFX;
 
         static VoidDreamDefOf()
         {

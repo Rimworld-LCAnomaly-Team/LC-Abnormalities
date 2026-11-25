@@ -4,7 +4,10 @@
   <ThingDef ParentName="LC_BaseMeleeWeapon_EGO">
     <defName>EgoWeapon_JudgementBird</defName>
     <label>E.G.O. Weapon (Justitia)</label>
-    <description>A bandaged greatsword of inexorable judgement extracted from Judgement Bird (ALEPH).\nDelivers Pale soul damage that bypasses conventional armor as a percentage of target vitality, cleaving up to two nearby enemies in every arc.</description>
+    <description>A bandaged greatsword of inexorable judgement extracted from Judgement Bird (ALEPH).\nDelivers Pale soul damage that bypasses conventional armor as a percentage of target vitality, cleaving up to two nearby enemies in every arc.\nActive skill: Pale Judgement.</description>
+    <descriptionHyperlinks>
+      <AbilityDef>Justitia_PaleJudgement</AbilityDef>
+    </descriptionHyperlinks>
     <thingClass>ThingWithComps</thingClass>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <graphicData>
@@ -25,6 +28,14 @@
         <cooldownTime>1.35</cooldownTime>
       </li>
     </tools>
+    <!-- 覆盖 BaseWeapon 的 CompEquippable，避免与 CompEquippableAbility 重复注册近战 Verb LoadID -->
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_EquippableAbility">
+        <abilityDef>Justitia_PaleJudgement</abilityDef>
+      </li>
+      <li Class="CompProperties_Styleable"/>
+    </comps>
     <modExtensions>
       <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
         <damageType>Pale</damageType>

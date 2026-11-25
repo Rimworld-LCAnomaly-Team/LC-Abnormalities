@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>FourthMatchFlame_MatchIgnition</defName>
+    <label>Fourth Match Ignition</label>
+    <description>Strike the ember striker along the cannon barrel to ignite a blazing match volley, then detonate a scorching 3.8-cell cinder blast that deals heavy Red damage and stuns enemies.</description>
+    <iconPath>UI/WeaponSkills/ScorchedGirl/FourthMatchFlame_MatchIgnition</iconPath>
+    <cooldownTicksRange>1020</cooldownTicksRange>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>LCAbnormalities.ScorchedGirl.Verb_CastAbility_FourthMatchIgnition</verbClass>
+      <range>28</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.75</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="LCAbnormalities.ScorchedGirl.CompProperties_AbilityFourthMatchIgnition">
+        <burnRadius>3.8</burnRadius>
+        <directDamageRange>16~22</directDamageRange>
+        <explosionDamageRange>20~28</explosionDamageRange>
+        <armorPenetration>0.38</armorPenetration>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>EngulfingDream_LullabyBurst</defName>
+    <label>Dreamy Lullaby Burst</label>
+    <description>Sound the crescent sleep-horn to sweep hostiles within 4.2 cells in a hypnotic White wave, followed by a violent White nightmare rupture that staggers surviving foes.</description>
+    <iconPath>UI/WeaponSkills/VoidDream/EngulfingDream_LullabyBurst</iconPath>
+    <cooldownTicksRange>1020</cooldownTicksRange>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>LCAbnormalities.VoidDream.Verb_CastAbility_VoidDreamLullaby</verbClass>
+      <range>22</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.65</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="LCAbnormalities.VoidDream.CompProperties_AbilityVoidDreamLullaby">
+        <burstRadius>4.2</burstRadius>
+        <sleepDamageRange>14~19</sleepDamageRange>
+        <nightmareDamageRange>18~24</nightmareDamageRange>
+        <armorPenetration>0.34</armorPenetration>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

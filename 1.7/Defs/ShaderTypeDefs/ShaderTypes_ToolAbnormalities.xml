@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderTypeDef>
+    <defName>LC_OldBeliefOracleAura</defName>
+    <shaderPath>Map/LC_OldBeliefOracleAura</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_FleshIdolCross</defName>
+    <shaderPath>Map/LC_FleshIdolCross</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_FleshIdolMiracleWave</defName>
+    <shaderPath>Map/LC_FleshIdolMiracleWave</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_HeartAspirationCore</defName>
+    <shaderPath>Map/LC_HeartAspirationCore</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_HeartPulseAura</defName>
+    <shaderPath>Map/LC_HeartPulseAura</shaderPath>
+  </ShaderTypeDef>
+
+</Defs>

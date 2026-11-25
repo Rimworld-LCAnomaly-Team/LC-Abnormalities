@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- D-02-107 Ppodae -->
+  <LC_Ppodae_EscapedLabel>Ppodae Breached!</LC_Ppodae_EscapedLabel>
+  <LC_Ppodae_EscapedText>{0} tore out of its fluffy disguise into a hulking frenzy beast! It will hunt nearby humanlikes with heavy Red slams until it claims a victim and curls back into a containment egg.</LC_Ppodae_EscapedText>
+  <LC_Ppodae_SuppressedLabel>Ppodae Suppressed</LC_Ppodae_SuppressedLabel>
+  <LC_Ppodae_SuppressedText>{0} has collapsed out of frenzy and reverted to its containment egg.</LC_Ppodae_SuppressedText>
+  <LC_Ppodae_NonInstinctGrowl>*Growl!*</LC_Ppodae_NonInstinctGrowl>
+  <LC_Ppodae_SatedReturn>Sated — returning to egg!</LC_Ppodae_SatedReturn>
+  <LC_Ppodae_SatedMessage>{0} slew {1}, calmed down, and curled back into a containment egg.</LC_Ppodae_SatedMessage>
+
+  <!-- F-05-32 Warm-Hearted Woodsman -->
+  <LC_Woodsman_EscapedLabel>Warm-Hearted Woodsman Breached!</LC_Woodsman_EscapedLabel>
+  <LC_Woodsman_EscapedText>{0} has stuffed a fresh human heart into its furnace and broken loose! Beware its heavy Red axe blows and keep corpses away so it cannot heal ~95 HP by consuming them.</LC_Woodsman_EscapedText>
+  <LC_Woodsman_SuppressedLabel>Warm-Hearted Woodsman Suppressed</LC_Woodsman_SuppressedLabel>
+  <LC_Woodsman_SuppressedText>{0}'s furnace has gone cold as the iron giant collapses back into its containment egg.</LC_Woodsman_SuppressedText>
+  <LC_Woodsman_TrapArmedFloat>Heart trap armed...</LC_Woodsman_TrapArmedFloat>
+  <LC_Woodsman_TrapArmedMessage>{0}'s Qliphoth Counter reached 0—it now waits silently to claim the heart of the very next employee who enters its containment cell!</LC_Woodsman_TrapArmedMessage>
+  <LC_Woodsman_TrapArmedInspect>WARNING: Heart trap armed — next entering worker will be executed!</LC_Woodsman_TrapArmedInspect>
+  <LC_Woodsman_HeartTrapTriggered>{0} snapped shut its iron shutter, executed {1} to claim a beating heart, and breached containment!</LC_Woodsman_HeartTrapTriggered>
+  <LC_Woodsman_EatHeartFloat>Consumed heart (+{0} HP)</LC_Woodsman_EatHeartFloat>
+
+  <!-- O-03-60 Fragment of the Universe -->
+  <LC_Cosmos_EscapedLabel>Fragment of the Universe Breached!</LC_Cosmos_EscapedLabel>
+  <LC_Cosmos_EscapedText>{0} shed its painted heart and unleashed four black tendrils! Watch out for periodic cosmic songs dealing AoE White damage.</LC_Cosmos_EscapedText>
+  <LC_Cosmos_SuppressedLabel>Fragment of the Universe Suppressed</LC_Cosmos_SuppressedLabel>
+  <LC_Cosmos_SuppressedText>{0}'s alien song fell quiet as it folded back into its containment egg.</LC_Cosmos_SuppressedText>
+  <LC_Cosmos_PanicDropFloat>Resonated with worker panic!</LC_Cosmos_PanicDropFloat>
+  <LC_Cosmos_EnlightenmentFloat>Cosmic Enlightenment!</LC_Cosmos_EnlightenmentFloat>
+
+  <!-- F-01-87 Scarecrow Searching for Wisdom -->
+  <LC_Scarecrow_EscapedLabel>Scarecrow Searching for Wisdom Breached!</LC_Scarecrow_EscapedLabel>
+  <LC_Scarecrow_EscapedText>{0} tore off its straw hat to harvest human intellect! Do not attack while its straw tongue drains a slain victim—it is completely invulnerable and heals rapidly while feeding.</LC_Scarecrow_EscapedText>
+  <LC_Scarecrow_SuppressedLabel>Scarecrow Searching for Wisdom Suppressed</LC_Scarecrow_SuppressedLabel>
+  <LC_Scarecrow_SuppressedText>{0} crumpled into tattered cloth and straw, reverting to its containment egg.</LC_Scarecrow_SuppressedText>
+  <LC_Scarecrow_PrudenceEnvyFloat>Envious of wisdom...</LC_Scarecrow_PrudenceEnvyFloat>
+  <LC_Scarecrow_BrainDrainFloat>Draining wisdom!</LC_Scarecrow_BrainDrainFloat>
+  <LC_Scarecrow_InvulnFloat>Invulnerable!</LC_Scarecrow_InvulnFloat>
+
+</LanguageData>

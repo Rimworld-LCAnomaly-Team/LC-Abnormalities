@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderTreeDef>
+    <defName>WarmHeartedWoodsman</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+          <debugLabel>WoodsmanRoot</debugLabel>
+          <tagDef>Woodsman_Root</tagDef>
+          <role>Root</role>
+          <useGraphic>false</useGraphic>
+          <containedScale>2.05</containedScale>
+          <breachedScale>2.35</breachedScale>
+          <portraitScale>2.15</portraitScale>
+          <containedOffset>(0, 0, -0.05)</containedOffset>
+          <children>
+            <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+              <debugLabel>Woodsman_Pelvis</debugLabel>
+              <tagDef>Woodsman_Pelvis</tagDef>
+              <role>Woodsman_Pelvis</role>
+              <texPath>Things/Pawn/WarmHeartedWoodsman/Parts/WM_BodyLower</texPath>
+              <baseLayer>30</baseLayer>
+              <children>
+                <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+                  <debugLabel>Woodsman_LegLeftUpper</debugLabel>
+                  <tagDef>Woodsman_LegLeftUpper</tagDef>
+                  <role>Woodsman_LegLeftUpper</role>
+                  <texPath>Things/Pawn/WarmHeartedWoodsman/Parts/WM_LegLeftUpper</texPath>
+                  <baseLayer>24</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+                      <debugLabel>Woodsman_LegLeftLower</debugLabel>
+                      <tagDef>Woodsman_LegLeftLower</tagDef>
+                      <role>Woodsman_LegLeftLower</role>
+                      <texPath>Things/Pawn/WarmHeartedWoodsman/Parts/WM_LegLeftLower</texPath>
+                      <baseLayer>22</baseLayer>
+                    </li>
+                  </children>
+                </li>
+                <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+                  <debugLabel>Woodsman_LegRightUpper</debugLabel>
+                  <tagDef>Woodsman_LegRightUpper</tagDef>
+                  <role>Woodsman_LegRightUpper</role>
+                  <texPath>Things/Pawn/WarmHeartedWoodsman/Parts/WM_LegRightUpper</texPath>
+                  <baseLayer>32.4</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+                      <debugLabel>Woodsman_LegRightLower</debugLabel>
+                      <tagDef>Woodsman_LegRightLower</tagDef>
+                      <role>Woodsman_LegRightLower</role>
+                      <texPath>Things/Pawn/WarmHeartedWoodsman/Parts/WM_LegRightLower</texPath>
+                      <baseLayer>31.6</baseLayer>
+                    </li>
+                  </children>
+                </li>
+                <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+                  <debugLabel>Woodsman_Torso</debugLabel>
+                  <tagDef>Woodsman_Torso</tagDef>
+                  <role>Woodsman_Torso</role>
+                  <texPath>Things/Pawn/WarmHeartedWoodsman/Parts/WM_TorsoBack</texPath>
+                  <baseLayer>34</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+                      <debugLabel>WM_ChestFront</debugLabel>
+                      <role>Woodsman_Torso</role>
+                      <texPath>Things/Pawn/WarmHeartedWoodsman/Parts/WM_ChestFront</texPath>
+                      <baseLayer>36.4</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+                      <debugLabel>Woodsman_Pipe1</debugLabel>
+                      <tagDef>Woodsman_Pipe1</tagDef>
+                      <role>Woodsman_Pipe1</role>
+                      <texPath>Things/Pawn/WarmHeartedWoodsman/Parts/WM_Pipe1</texPath>
+                      <baseLayer>26</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+                      <debugLabel>Woodsman_Pipe2</debugLabel>
+                      <tagDef>Woodsman_Pipe2</tagDef>
+                      <role>Woodsman_Pipe2</role>
+                      <texPath>Things/Pawn/WarmHeartedWoodsman/Parts/WM_Pipe2</texPath>
+                      <baseLayer>26.8</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+                      <debugLabel>Woodsman_Heart</debugLabel>
+                      <tagDef>Woodsman_Heart</tagDef>
+                      <role>Woodsman_Heart</role>
+                      <texPath>Things/Pawn/WarmHeartedWoodsman/Parts/WM_Heart</texPath>
+                      <baseLayer>35.2</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+                      <debugLabel>Woodsman_Head</debugLabel>
+                      <tagDef>Woodsman_Head</tagDef>
+                      <role>Woodsman_Head</role>
+                      <texPath>Things/Pawn/WarmHeartedWoodsman/Parts/WM_Head</texPath>
+                      <baseLayer>38</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+                      <debugLabel>Woodsman_ArmLeftUpper</debugLabel>
+                      <tagDef>Woodsman_ArmLeftUpper</tagDef>
+                      <role>Woodsman_ArmLeftUpper</role>
+                      <texPath>Things/Pawn/WarmHeartedWoodsman/Parts/WM_ArmLeftUpper</texPath>
+                      <baseLayer>20</baseLayer>
+                      <children>
+                        <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+                          <debugLabel>Woodsman_ArmLeftLower</debugLabel>
+                          <tagDef>Woodsman_ArmLeftLower</tagDef>
+                          <role>Woodsman_ArmLeftLower</role>
+                          <texPath>Things/Pawn/WarmHeartedWoodsman/Parts/WM_ArmLeftLower</texPath>
+                          <baseLayer>19.2</baseLayer>
+                          <children>
+                            <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+                              <debugLabel>Woodsman_ArmLeftAxe</debugLabel>
+                              <tagDef>Woodsman_ArmLeftAxe</tagDef>
+                              <role>Woodsman_ArmLeftAxe</role>
+                              <texPath>Things/Pawn/WarmHeartedWoodsman/Parts/WM_ArmLeftAxe</texPath>
+                              <baseLayer>18</baseLayer>
+                            </li>
+                          </children>
+                        </li>
+                      </children>
+                    </li>
+                    <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+                      <debugLabel>Woodsman_ArmRightUpper</debugLabel>
+                      <tagDef>Woodsman_ArmRightUpper</tagDef>
+                      <role>Woodsman_ArmRightUpper</role>
+                      <texPath>Things/Pawn/WarmHeartedWoodsman/Parts/WM_ArmRightUpper</texPath>
+                      <baseLayer>42</baseLayer>
+                      <children>
+                        <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+                          <debugLabel>Woodsman_ArmRightLower</debugLabel>
+                          <tagDef>Woodsman_ArmRightLower</tagDef>
+                          <role>Woodsman_ArmRightLower</role>
+                          <texPath>Things/Pawn/WarmHeartedWoodsman/Parts/WM_ArmRightLower</texPath>
+                          <baseLayer>41.2</baseLayer>
+                          <children>
+                            <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+                              <debugLabel>Woodsman_ArmRightHand</debugLabel>
+                              <tagDef>Woodsman_ArmRightHand</tagDef>
+                              <role>Woodsman_ArmRightHand</role>
+                              <texPath>Things/Pawn/WarmHeartedWoodsman/Parts/WM_ArmRightHand</texPath>
+                              <baseLayer>42.8</baseLayer>
+                              <children>
+                                <li Class="LCAbnormalities.WarmHeartedWoodsman.PawnRenderNodeProperties_WarmHeartedWoodsmanPart">
+                                  <debugLabel>Woodsman_Guts</debugLabel>
+                                  <tagDef>Woodsman_Guts</tagDef>
+                                  <role>Woodsman_Guts</role>
+                                  <texPath>Things/Pawn/WarmHeartedWoodsman/Parts/WM_Guts</texPath>
+                                  <baseLayer>44</baseLayer>
+                                </li>
+                              </children>
+                            </li>
+                          </children>
+                        </li>
+                      </children>
+                    </li>
+                  </children>
+                </li>
+              </children>
+            </li>
+          </children>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

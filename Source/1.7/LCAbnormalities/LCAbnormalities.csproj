@@ -44,6 +44,7 @@
     <Compile Include="Laetitia\Def\ThingDefOf.cs" />
     <Compile Include="Laetitia\Effect\DyingLaetitia.cs" />
     <Compile Include="Laetitia\Effect\DyingLaetitiaMonster.cs" />
+    <Compile Include="Laetitia\Effect\LaetitiaWeaponAnimation.cs" />
     <Compile Include="Laetitia\Effect\SpawningLaetitiaMonster.cs" />
     <Compile Include="Laetitia\Job\JobGiver_LaetitiaCastAbility.cs" />
     <Compile Include="Laetitia\Things\LC_LaetitiaMonsterPawn.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="BurrowingHeaven\Def\SoundDefOf.cs" />
     <Compile Include="BurrowingHeaven\Def\ThingDefOf.cs" />
     <Compile Include="BurrowingHeaven\Effect\DyingBurrowingHeaven.cs" />
+    <Compile Include="BurrowingHeaven\Effect\HeavenWeaponAnimation.cs" />
     <Compile Include="BurrowingHeaven\Render\BurrowingHeavenTrophyHeadRender.cs" />
     <Compile Include="BurrowingHeaven\Things\HangingHeadRecord.cs" />
     <Compile Include="BurrowingHeaven\Things\LC_BurrowingHeavenPawn.cs" />
@@ -107,12 +109,15 @@
 
     <!-- FleshIdol -->
     <Compile Include="FleshIdol\Comp\CompFleshIdol.cs" />
+    <Compile Include="FleshIdol\FleshIdolVFX.cs" />
 
     <!-- WeCanChangeAnything -->
     <Compile Include="WeCanChangeAnything\Comp\CompWeCanChangeAnything.cs" />
+    <Compile Include="WeCanChangeAnything\Render\PawnRenderNode_WeCanChangeAnythingPart.cs" />
 
     <!-- OldBeliefAndPromise -->
     <Compile Include="OldBeliefAndPromise\Comp\CompOldBeliefAndPromise.cs" />
+    <Compile Include="OldBeliefAndPromise\OldBeliefAndPromiseVFX.cs" />
 
     <!-- NothingThere -->
     <Compile Include="NothingThere\Combat\DamageWorker_MimicryLifesteal.cs" />
@@ -134,6 +139,7 @@
     <Compile Include="NothingThere\Def\SoundDefOf.cs" />
     <Compile Include="NothingThere\Def\ThingDefOf.cs" />
     <Compile Include="NothingThere\Effect\DyingNothingThere.cs" />
+    <Compile Include="NothingThere\Effect\MimicryWeaponAnimation.cs" />
     <Compile Include="NothingThere\Job\JobGiver_NothingThereHunt.cs" />
     <Compile Include="NothingThere\Job\ThinkNode_ConditionalNothingThereForm.cs" />
     <Compile Include="NothingThere\Job\ThinkNode_ConditionalNothingThereSkillLock.cs" />
@@ -144,25 +150,33 @@
     <Compile Include="Shared\LCAbnormalitiesEvents.cs" />
     <Compile Include="Shared\LCAbnormalitiesShared.cs" />
     <Compile Include="FairyFestival\CompFairyFestival.cs" />
+    <Compile Include="FairyFestival\FairySpineRuntime.cs" />
     <Compile Include="FairyFestival\PawnRenderNode_FairyFestivalPart.cs" />
     <Compile Include="FairyFestival\FairyFestivalVFX.cs" />
     <Compile Include="WellCheers\CompWellCheers.cs" />
     <Compile Include="WellCheers\WellCheersRenderNodes.cs" />
+    <Compile Include="WellCheers\WellCheersVFX.cs" />
     <Compile Include="PunishingBird\CompPunishingBird.cs" />
     <Compile Include="PunishingBird\PawnRenderNode_PunishingBirdPart.cs" />
+    <Compile Include="PunishingBird\BeakWeaponAnimation.cs" />
     <Compile Include="VoidDream\CompVoidDream.cs" />
     <Compile Include="VoidDream\PawnRenderNode_VoidDreamPart.cs" />
     <Compile Include="VoidDream\VoidDreamVFX.cs" />
     <Compile Include="HeartOfAspiration\CompHeartOfAspiration.cs" />
+    <Compile Include="HeartOfAspiration\HeartOfAspirationVFX.cs" />
     <Compile Include="ScorchedGirl\CompScorchedGirl.cs" />
     <Compile Include="ScorchedGirl\PawnRenderNode_ScorchedGirlPart.cs" />
     <Compile Include="DerFreischutz\CompDerFreischutz.cs" />
     <Compile Include="DerFreischutz\MagicBulletVFX.cs" />
+    <Compile Include="DerFreischutz\MagicBulletWeaponAnimation.cs" />
     <Compile Include="DerFreischutz\PawnRenderNode_DerFreischutzPart.cs" />
     <Compile Include="FuneralOfDeadButterflies\CompFuneralOfDeadButterflies.cs" />
     <Compile Include="FuneralOfDeadButterflies\PawnRenderNode_FuneralPart.cs" />
     <Compile Include="FuneralOfDeadButterflies\FuneralVisualEffects.cs" />
+    <Compile Include="SnowQueen\PawnRenderNode_SnowQueenPart.cs" />
+    <Compile Include="SnowQueen\SnowQueenVFX.cs" />
     <Compile Include="SnowQueen\CompSnowQueen.cs" />
+    <Compile Include="NotesFromCrazedResearcher\NotesFromCrazedResearcherVFX.cs" />
     <Compile Include="NotesFromCrazedResearcher\CompNotesFromCrazedResearcher.cs" />
     <Compile Include="AllAroundHelper\CompAllAroundHelper.cs" />
     <Compile Include="AllAroundHelper\PawnRenderNode_AllAroundHelperPart.cs" />
@@ -170,16 +184,45 @@
     <Compile Include="JudgementBird\CompJudgementBird.cs" />
     <Compile Include="JudgementBird\PawnRenderNode_JudgementBirdPart.cs" />
     <Compile Include="JudgementBird\JudgementBirdVFX.cs" />
+    <Compile Include="JudgementBird\JustitiaWeaponAnimation.cs" />
     <Compile Include="BigBird\CompBigBird.cs" />
     <Compile Include="BigBird\PawnRenderNode_BigBirdPart.cs" />
     <Compile Include="BigBird\BigBirdVFX.cs" />
+    <Compile Include="BigBird\LampWeaponAnimation.cs" />
     <Compile Include="LittleRedRidingHoodedMercenary\CompLittleRedRidingHoodedMercenary.cs" />
     <Compile Include="LittleRedRidingHoodedMercenary\PawnRenderNode_LittleRedPart.cs" />
     <Compile Include="LittleRedRidingHoodedMercenary\LittleRedVFX.cs" />
+    <Compile Include="LittleRedRidingHoodedMercenary\CrimsonScarWeaponAnimation.cs" />
     <Compile Include="BackwardClock\CompBackwardClock.cs" />
     <Compile Include="Schadenfreude\CompSchadenfreude.cs" />
     <Compile Include="Schadenfreude\PawnRenderNode_SchadenfreudePart.cs" />
     <Compile Include="Schadenfreude\SchadenfreudeVFX.cs" />
+    <Compile Include="Schadenfreude\GazeWeaponAnimation.cs" />
+    <Compile Include="Ppodae\CompPpodae.cs" />
+    <Compile Include="Ppodae\PawnRenderNode_PpodaePart.cs" />
+    <Compile Include="Ppodae\PpodaeVFX.cs" />
+    <Compile Include="WarmHeartedWoodsman\CompWarmHeartedWoodsman.cs" />
+    <Compile Include="WarmHeartedWoodsman\PawnRenderNode_WarmHeartedWoodsmanPart.cs" />
+    <Compile Include="WarmHeartedWoodsman\WarmHeartedWoodsmanVFX.cs" />
+    <Compile Include="FragmentOfTheUniverse\CompFragmentOfTheUniverse.cs" />
+    <Compile Include="FragmentOfTheUniverse\PawnRenderNode_FragmentOfTheUniversePart.cs" />
+    <Compile Include="FragmentOfTheUniverse\FragmentOfTheUniverseVFX.cs" />
+    <Compile Include="ScarecrowSearchingForWisdom\CompScarecrowSearchingForWisdom.cs" />
+    <Compile Include="ScarecrowSearchingForWisdom\PawnRenderNode_ScarecrowPart.cs" />
+    <Compile Include="ScarecrowSearchingForWisdom\ScarecrowVFX.cs" />
+    <Compile Include="FuneralOfDeadButterflies\SolemnLamentWeaponAnimation.cs" />
+    <Compile Include="AllAroundHelper\GrinderMk4WeaponAnimation.cs" />
+    <Compile Include="SnowQueen\FrostSplinterWeaponAnimation.cs" />
+    <Compile Include="WarmHeartedWoodsman\LoggingWeaponAnimation.cs" />
+    <Compile Include="ScarecrowSearchingForWisdom\HarvestWeaponAnimation.cs" />
+    <Compile Include="ScorchedGirl\FourthMatchWeaponAnimation.cs" />
+    <Compile Include="VoidDream\VoidDreamWeaponAnimation.cs" />
+    <Compile Include="Ppodae\SoCuteWeaponAnimation.cs" />
+    <Compile Include="FragmentOfTheUniverse\CosmosSpearWeaponAnimation.cs" />
+    <Compile Include="MeatLantern\Effect\MeatLanternWeaponAnimation.cs" />
+    <Compile Include="OneSin\Effect\PenitenceWeaponAnimation.cs" />
+    <Compile Include="FairyFestival\WingbeatWeaponAnimation.cs" />
+    <Compile Include="WellCheers\SodaWeaponAnimation.cs" />
 
     <ProjectReference Include="..\..\..\..\LC Anomaly Core\Source\1.7\LCAnomalyCore\LCAnomalyCore.csproj"><Private>false</Private></ProjectReference>
   </ItemGroup>

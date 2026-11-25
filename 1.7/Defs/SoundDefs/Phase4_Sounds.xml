@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ==================== 1. Ppodae (D-02-107) ==================== -->
+  <SoundDef>
+    <defName>LC_Ppodae_Bark</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/Ppodae/Bbodae_Bark</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.96~1.05</pitchRange>
+        <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Ppodae_Transform</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/Ppodae/Bbodae_Transform</clipPath></li></grains>
+        <volumeRange>38~46</volumeRange>
+        <pitchRange>0.97~1.03</pitchRange>
+        <distRange>0~95</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Ppodae_Atk</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/Ppodae/Bbodae_Atk</clipPath></li></grains>
+        <volumeRange>34~42</volumeRange>
+        <pitchRange>0.94~1.06</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Ppodae_Dead</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/Ppodae/Bbodae_Dead</clipPath></li></grains>
+        <volumeRange>36~44</volumeRange>
+        <pitchRange>0.98~1.02</pitchRange>
+        <distRange>0~90</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Ppodae_Fist</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>5</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/Ppodae/fist1</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/Ppodae/fist2</clipPath></li>
+        </grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.93~1.07</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- ==================== 2. Warm-Hearted Woodsman (F-05-32) ==================== -->
+  <SoundDef>
+    <defName>LC_Woodsman_Default</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/WarmHeartedWoodsman/Lumberjack_Default</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Woodsman_Escape</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/WarmHeartedWoodsman/Lumberjack_Escape</clipPath></li></grains>
+        <volumeRange>38~46</volumeRange>
+        <pitchRange>0.97~1.03</pitchRange>
+        <distRange>0~95</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Woodsman_Atk</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/WarmHeartedWoodsman/Lumberjack_Atk1</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/WarmHeartedWoodsman/Lumberjack_Atk2</clipPath></li>
+        </grains>
+        <volumeRange>34~42</volumeRange>
+        <pitchRange>0.94~1.05</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Woodsman_Special</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/WarmHeartedWoodsman/Lumberjack_Special</clipPath></li></grains>
+        <volumeRange>38~46</volumeRange>
+        <pitchRange>0.97~1.03</pitchRange>
+        <distRange>0~95</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Woodsman_Dead</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/WarmHeartedWoodsman/Lumberjack_Dead1</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/WarmHeartedWoodsman/Lumberjack_Dead2</clipPath></li>
+        </grains>
+        <volumeRange>36~44</volumeRange>
+        <pitchRange>0.97~1.03</pitchRange>
+        <distRange>0~90</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Woodsman_AxeHit</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>5</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/WarmHeartedWoodsman/axe1</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/WarmHeartedWoodsman/axe2</clipPath></li>
+        </grains>
+        <volumeRange>32~40</volumeRange>
+        <pitchRange>0.93~1.06</pitchRange>
+        <distRange>0~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- ==================== 3. Fragment of the Universe (O-03-60) ==================== -->
+  <SoundDef>
+    <defName>LC_Cosmos_Default</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FragmentOfTheUniverse/Cosmos_Default</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Cosmos_Hit</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FragmentOfTheUniverse/Cosmos_Hit</clipPath></li></grains>
+        <volumeRange>32~40</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Cosmos_Sing</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FragmentOfTheUniverse/Cosmos_Sing</clipPath></li></grains>
+        <volumeRange>38~46</volumeRange>
+        <pitchRange>0.98~1.02</pitchRange>
+        <distRange>0~95</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Cosmos_SpearHit</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>5</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FragmentOfTheUniverse/spear1</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.94~1.07</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <!-- ==================== 4. Scarecrow Searching for Wisdom (F-01-87) ==================== -->
+  <SoundDef>
+    <defName>LC_Scarecrow_Start</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/ScarecrowSearchingForWisdom/Scarecrow_Start</clipPath></li></grains>
+        <volumeRange>36~44</volumeRange>
+        <pitchRange>0.97~1.03</pitchRange>
+        <distRange>0~90</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Scarecrow_Atk</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/ScarecrowSearchingForWisdom/Scarecrow_Atk1</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/ScarecrowSearchingForWisdom/Scarecrow_Atk2</clipPath></li>
+        </grains>
+        <volumeRange>32~40</volumeRange>
+        <pitchRange>0.94~1.06</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Scarecrow_Drink</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/ScarecrowSearchingForWisdom/Scarecrow_Drink</clipPath></li></grains>
+        <volumeRange>38~46</volumeRange>
+        <pitchRange>0.97~1.03</pitchRange>
+        <distRange>0~95</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Scarecrow_Dead</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/ScarecrowSearchingForWisdom/Scarecrow_Dead</clipPath></li></grains>
+        <volumeRange>36~44</volumeRange>
+        <pitchRange>0.98~1.02</pitchRange>
+        <distRange>0~90</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Scarecrow_SpearHit</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>5</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/ScarecrowSearchingForWisdom/spear1</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/ScarecrowSearchingForWisdom/spear2</clipPath></li>
+        </grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.93~1.07</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

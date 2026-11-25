@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_Ppodae</defName>
+    <label>Accessory (SO CUTE!!!)</label>
+    <description>Fluffy white puppy ears gifted by Ppodae. Toughens the wearer's stamina and healing at the cost of slight clumsiness during delicate lab work.</description>
+    <thingCategories><li>LC_Apparel_Accessory_EGO</li></thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/PpodaeAccessory</texPath>
+    </graphicData>
+    <statBases><Beauty>4</Beauty></statBases>
+    <apparel>
+      <layers><li>LC_AccessoryHead</li></layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups><li>FullHead</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/PpodaeAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <IncomingDamageFactor>-0.04</IncomingDamageFactor>
+      <InjuryHealingFactor>0.08</InjuryHealingFactor>
+      <LC_AbnormalityStudyRate>-0.02</LC_AbnormalityStudyRate>
+      <WorkSpeedGlobal>-0.02</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <tradeTags><li>LC_Apparel_Accessory</li></tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_WarmHeartedWoodsman</defName>
+    <label>Accessory (Logging)</label>
+    <description>A grim blood-warmed heart brooch gifted by Warm-Hearted Woodsman, reinforcing vitality while quickening work tempo.</description>
+    <thingCategories><li>LC_Apparel_Accessory_EGO</li></thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/WarmHeartedWoodsmanAccessory</texPath>
+    </graphicData>
+    <statBases><Beauty>2</Beauty></statBases>
+    <apparel>
+      <layers><li>LC_AccessoryChest</li></layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups><li>FullHead</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/WarmHeartedWoodsmanAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <IncomingDamageFactor>-0.05</IncomingDamageFactor>
+      <LC_AbnormalityStudyRate>0.03</LC_AbnormalityStudyRate>
+      <WorkSpeedGlobal>0.03</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <tradeTags><li>LC_Apparel_Accessory</li></tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_FragmentOfTheUniverse</defName>
+    <label>Accessory (Fragments from Somewhere)</label>
+    <description>A vivid cosmic heart brooch gifted by Fragment of the Universe, boosting Abnormality observation precision and general work speed.</description>
+    <thingCategories><li>LC_Apparel_Accessory_EGO</li></thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/FragmentOfTheUniverseAccessory</texPath>
+    </graphicData>
+    <statBases><Beauty>5</Beauty></statBases>
+    <apparel>
+      <layers><li>LC_AccessoryChest</li></layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups><li>FullHead</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/FragmentOfTheUniverseAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <LC_AbnormalityStudyRate>0.04</LC_AbnormalityStudyRate>
+      <WorkSpeedGlobal>0.04</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <tradeTags><li>LC_Apparel_Accessory</li></tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_Apparel_AccessoryBase">
+    <defName>Accessory_ScarecrowSearchingForWisdom</defName>
+    <label>Accessory (Harvest)</label>
+    <description>An orange polka-dot ribbon gifted by Scarecrow Searching for Wisdom, steadying the wearer's composure against psychological strain.</description>
+    <thingCategories><li>LC_Apparel_Accessory_EGO</li></thingCategories>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Accessory/ScarecrowSearchingForWisdomAccessory</texPath>
+    </graphicData>
+    <statBases><Beauty>4</Beauty></statBases>
+    <apparel>
+      <layers><li>LC_AccessoryNeck</li></layers>
+      <developmentalStageFilter>Adult</developmentalStageFilter>
+      <bodyPartGroups><li>FullHead</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Accessory/ScarecrowSearchingForWisdomAccessory</wornGraphicPath>
+    </apparel>
+    <equippedStatOffsets>
+      <MentalBreakThreshold>-0.06</MentalBreakThreshold>
+      <PsychicSensitivity>-0.06</PsychicSensitivity>
+    </equippedStatOffsets>
+    <tradeTags><li>LC_Apparel_Accessory</li></tradeTags>
+  </ThingDef>
+
+</Defs>

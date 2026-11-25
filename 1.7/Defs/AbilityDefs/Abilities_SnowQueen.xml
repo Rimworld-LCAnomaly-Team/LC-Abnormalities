@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>FrostSplinter_GlacialDuel</defName>
+    <label>Glacial Duel</label>
+    <description>Channel the Snow Queen's chill to skewer the target with Frost Splinter, then shatter crystalline frost across 3.2 cells to inflict White trauma, chilling slow, and stun upon hostiles.</description>
+    <iconPath>UI/WeaponSkills/SnowQueen/FrostSplinter_GlacialDuel</iconPath>
+    <cooldownTicksRange>1080</cooldownTicksRange>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>LCAbnormalities.SnowQueen.Verb_CastAbility_FrostSplinterDuel</verbClass>
+      <range>5.5</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.65</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="LCAbnormalities.SnowQueen.CompProperties_AbilityFrostSplinterDuel">
+        <burstRadius>3.2</burstRadius>
+        <lanceDamageRange>16~22</lanceDamageRange>
+        <shatterDamageRange>22~28</shatterDamageRange>
+        <armorPenetration>0.42</armorPenetration>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

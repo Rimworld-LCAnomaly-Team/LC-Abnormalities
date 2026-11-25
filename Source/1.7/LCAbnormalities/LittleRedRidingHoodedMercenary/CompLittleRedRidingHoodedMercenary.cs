@@ -3,6 +3,7 @@ using LCAbnormalities.Shared;
 using LCAnomalyCore.Buildings;
 using LCAnomalyCore.Comp;
 using LCAnomalyCore.DamageWorker;
+using LCAnomalyCore.Render.Weapon;
 using LCAnomalyCore.Util;
 using RimWorld;
 using UnityEngine;
@@ -22,6 +23,9 @@ namespace LCAbnormalities.LittleRedRidingHoodedMercenary
         public static ThingDef LC_LittleRedHuntMarkFX;
         public static ThingDef LC_LittleRedThrownSickleFX;
         public static ThingDef LC_LittleRedImpactFX;
+        public static ThingDef LC_CrimsonScarSkillRunnerFX;
+
+        public static DamageDef LC_CrimsonScar_SkillRed;
 
         public static SoundDef LC_LittleRed_Atk1;
         public static SoundDef LC_LittleRed_Atk2;
@@ -1109,26 +1113,50 @@ namespace LCAbnormalities.LittleRedRidingHoodedMercenary
                 }
             }
 
+            Map victimMap = victim?.MapHeld;
+            IntVec3 victimCell = victim?.PositionHeld ?? IntVec3.Invalid;
+            Vector3 vicPos = victim != null
+                ? (victim.Spawned ? victim.DrawPos.Yto0() : victimCell.ToVector3Shifted().Yto0())
+                : Vector3.zero;
+
             Verse.DamageWorker.DamageResult result = base.Apply(dinfo, victim);
 
-            // Detect melee crimson sickle strikes (non-projectile weapon strikes from Crimson Scar)
+            // Detect melee crimson sickle strikes (non-projectile weapon strikes from Crimson Scar), including lethal strikes
             if (!Projectile_CrimsonScarShot.IsApplyingImpact &&
-                dinfo.Instigator is Pawn meleeAttacker && victim != null && victim.MapHeld != null &&
+                dinfo.Instigator is Pawn meleeAttacker && victim != null && victimMap != null && victimCell.InBounds(victimMap) &&
                 dinfo.Weapon != null &&
-                dinfo.Weapon.defName == "EgoWeapon_LittleRedRidingHoodedMercenary" &&
-                meleeAttacker.Spawned && victim.Spawned)
+                dinfo.Weapon.defName == CrimsonScarWeaponAnimHandler.WeaponDefName &&
+                meleeAttacker.Spawned)
             {
                 {
-                    Map map = victim.MapHeld;
+                    Map map = victimMap;
                     Vector3 attPos = meleeAttacker.DrawPos.Yto0();
-                    Vector3 vicPos = victim.DrawPos.Yto0();
                     Vector3 dir = (vicPos - attPos).Yto0();
                     float yaw = dir.sqrMagnitude > 0.001f ? LittleRedVfxUtility.VectorToYawDeg(dir) : dinfo.Angle;
+
+                    if (!EgoWeaponAnimationManager.IsPlaying(meleeAttacker, "CrimsonScar_Skill"))
+                    {
+                        ThingWithComps heldWeapon = meleeAttacker.equipment?.Primary;
+                        if (heldWeapon != null && heldWeapon.def?.defName == CrimsonScarWeaponAnimHandler.WeaponDefName)
+                        {
+                            float aimAngle = EgoWeaponAnimationUtility.ResolveAimAngle(meleeAttacker, vicPos);
+                            EgoWeaponAnimationManager.Play(
+                                meleeAttacker,
+                                heldWeapon,
+                                CrimsonScarWeaponAnimHandler.ClipMeleeSlash,
+                                48,
+                                aimAngle,
+                                variant: berserk ? 1 : 0);
+                        }
+                    }
 
                     SoundDef sfx = berserk
                         ? LittleRedDefOf.LC_LittleRed_AtkPower
                         : (Rand.Bool ? LittleRedDefOf.LC_LittleRed_Atk1 : LittleRedDefOf.LC_LittleRed_Atk2);
-                    LCAbnormalitiesHelper.PlaySoundAt(sfx, victim);
+                    if (sfx != null)
+                    {
+                        Verse.Sound.SoundStarter.PlayOneShot(sfx, new TargetInfo(victimCell, map));
+                    }
 
                     LittleRedVfxUtility.SpawnSlash(
                         map,
@@ -1172,7 +1200,7 @@ namespace LCAbnormalities.LittleRedRidingHoodedMercenary
                                     continue;
                                 }
 
-                                if (other.Position.DistanceTo(victim.Position) <= 2.3f)
+                                if (other.Position.DistanceTo(victimCell) <= 2.3f)
                                 {
                                     other.TakeDamage(new DamageInfo(
                                         LCAnomalyCore.Defs.DamageDefOf.LC_RedDamage,

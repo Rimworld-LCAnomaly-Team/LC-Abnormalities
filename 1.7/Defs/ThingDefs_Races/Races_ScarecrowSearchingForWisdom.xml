@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_EntityBase">
+    <defName>ScarecrowSearchingForWisdom</defName>
+    <label>Scarecrow Searching for Wisdom</label>
+    <description>A patchwork scarecrow stuffed with twitching straw and bloody entrails beneath an oversized conical hat (F-01-87).\n\nIt desperately craves intelligence: assigning any employee with Prudence Level III or higher—or completing work with a Bad result—immediately drops its Qliphoth Counter (max 1) and triggers a breach. While hunting, it targets wise minds with Black rake and sickle strikes, and upon slaying a victim it extends a jagged straw tongue to drain their brain—becoming completely invulnerable and rapidly healing its wounds during the feast.</description>
+    <uiIconPath>UI/CodexEntries/ScarecrowSearchingForWisdom</uiIconPath>
+    <thingClass>LCAbnormalities.ScarecrowSearchingForWisdom.LC_ScarecrowPawn</thingClass>
+    <statBases>
+      <MoveSpeed>4.1</MoveSpeed>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-200</ComfyTemperatureMin>
+      <ComfyTemperatureMax>150</ComfyTemperatureMax>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <LC_MinimumContainmentStrength>55</LC_MinimumContainmentStrength>
+      <StaggerDurationFactor>0.18</StaggerDurationFactor>
+      <ToxicResistance>1</ToxicResistance>
+    </statBases>
+    <tools>
+      <li>
+        <label>bloody iron rake</label>
+        <capacities><li>LC_ScarecrowBreachHarvest</li></capacities>
+        <power>17</power>
+        <cooldownTime>1.35</cooldownTime>
+        <soundMeleeHit>LC_Scarecrow_Atk</soundMeleeHit>
+      </li>
+    </tools>
+    <race>
+      <body>OneSin</body>
+      <baseBodySize>1.45</baseBodySize>
+      <baseHealthScale>7.0</baseHealthScale>
+      <intelligence>ToolUser</intelligence>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <fleshType>LC_AbnormalityOrganic</fleshType>
+      <foodType>None</foodType>
+      <hasCorpse>false</hasCorpse>
+      <lifeExpectancy>1000</lifeExpectancy>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <disableIgniteVerb>true</disableIgniteVerb>
+      <trainability>None</trainability>
+      <renderTree>ScarecrowSearchingForWisdom</renderTree>
+      <thinkTreeMain>ScarecrowSearchingForWisdomMain</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+      <lifeStageAges>
+        <li>
+          <def>LC_EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.CompProperties_ScarecrowSearchingForWisdom">
+        <qliphothCountMax>1</qliphothCountMax>
+        <studySucessRateBase>0.0</studySucessRateBase>
+        <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>true</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
+        <dyingFxDef>DyingScarecrowSearchingForWisdom</dyingFxDef>
+        <workDamageDef>LC_WhiteDamage</workDamageDef>
+        <workDamageRange>2~6</workDamageRange>
+        <escapedLetterLabelKey>LC_Scarecrow_EscapedLabel</escapedLetterLabelKey>
+        <escapedLetterTextKey>LC_Scarecrow_EscapedText</escapedLetterTextKey>
+        <killedLetterLabelKey>LC_Scarecrow_SuppressedLabel</killedLetterLabelKey>
+        <killedLetterTextKey>LC_Scarecrow_SuppressedText</killedLetterTextKey>
+        <instinctProbs>
+          <li>0.45</li><li>0.45</li><li>0.45</li><li>0.45</li><li>0.45</li>
+        </instinctProbs>
+        <insightProbs>
+          <li>0.50</li><li>0.60</li><li>0.70</li><li>0.80</li><li>0.90</li>
+        </insightProbs>
+        <attachmentProbs>
+          <li>0.45</li><li>0.45</li><li>0.45</li><li>0.45</li><li>0.45</li>
+        </attachmentProbs>
+        <repressionProbs>
+          <li>0.45</li><li>0.45</li><li>0.45</li><li>0.45</li><li>0.45</li>
+        </repressionProbs>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <lookForTargetOnEscape>true</lookForTargetOnEscape>
+        <hasAnimation>true</hasAnimation>
+        <heldDrawScale>1.0</heldDrawScale>
+        <heldDrawOffset>(0, 0, -0.04)</heldDrawOffset>
+      </li>
+      <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
+        <frequencyTicks>60000</frequencyTicks>
+        <studyTimesPeriod>1</studyTimesPeriod>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <speedOffsetsByProgress>
+          <li>0</li><li>0.04</li><li>0.04</li><li>0.08</li><li>0.08</li>
+        </speedOffsetsByProgress>
+        <successOffsetsByProgress>
+          <li>0</li><li>0.04</li><li>0.04</li><li>0.08</li><li>0.08</li>
+        </successOffsetsByProgress>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_PeBoxProduce">
+        <peBoxDef>EnkephalinBox</peBoxDef>
+        <amountProdueRangeNormal>8~14</amountProdueRangeNormal>
+        <amountProdueMax>18</amountProdueMax>
+        <boxTexOffsetZ>0.0742</boxTexOffsetZ>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
+        <accessoryDef>Accessory_ScarecrowSearchingForWisdom</accessoryDef>
+        <accessoryChance>0.04</accessoryChance>
+        <unlockLevel>2</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
+        <weaponExtracted>EgoWeapon_ScarecrowSearchingForWisdom</weaponExtracted>
+        <weaponIconPath>UI/Commands/ExtractEGO_ScarecrowSearchingForWisdom_Weapon</weaponIconPath>
+        <amountMaxWeapon>3</amountMaxWeapon>
+        <weaponExtractedNeed>35</weaponExtractedNeed>
+        <armorExtracted>Apparel_ScarecrowSearchingForWisdomSuit</armorExtracted>
+        <armorIconPath>UI/Commands/ExtractEGO_ScarecrowSearchingForWisdom_Armor</armorIconPath>
+        <amountMaxArmor>2</amountMaxArmor>
+        <armorExtractedNeed>35</armorExtractedNeed>
+        <unlockLevel>3</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>3</threshold>
+            <label>Observation Level: I</label>
+            <text>Managerial Tip 1: Whenever an employee with Prudence Level III or higher completes work here, its Qliphoth Counter (max 1) drops immediately.</text>
+          </li>
+          <li>
+            <threshold>7</threshold>
+            <label>Observation Level: II</label>
+            <text>Managerial Tip 2: Bad work results also drop the Qliphoth Counter to 0.\nUnlocks the E.G.O. Gift 'Harvest'.</text>
+          </li>
+          <li>
+            <threshold>12</threshold>
+            <label>Observation Level: III</label>
+            <text>Managerial Tip 3: Once breached, it prioritizes its provocateur and slays victims to drain their brains—becoming completely invulnerable and rapidly healing while feeding.</text>
+          </li>
+          <li>
+            <threshold>18</threshold>
+            <label>Observation Level: IV</label>
+            <text>Strong vs Red (0.8) and White (0.5); vulnerable to Black (1.2) and Pale (2.0).\nUnlocks the HE E.G.O. Rake 'Harvest' and Suit.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>0.8</redResistance>
+        <whiteResistance>0.5</whiteResistance>
+        <blackResistance>1.2</blackResistance>
+        <paleResistance>2.0</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

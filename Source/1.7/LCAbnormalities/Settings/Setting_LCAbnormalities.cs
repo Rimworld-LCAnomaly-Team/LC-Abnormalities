@@ -41,6 +41,10 @@ namespace LCAbnormalities.Settings
         public bool EnableLittleRedRidingHoodedMercenary = true;
         public bool EnableBackwardClock = true;
         public bool EnableSchadenfreude = true;
+        public bool EnablePpodae = true;
+        public bool EnableWarmHeartedWoodsman = true;
+        public bool EnableFragmentOfTheUniverse = true;
+        public bool EnableScarecrowSearchingForWisdom = true;
 
         public bool BurrowingHeavenAllowUnwatchedTeleport = true;
         public float BurrowingHeavenSightGraceMultiplier = 1.0f;
@@ -85,6 +89,10 @@ namespace LCAbnormalities.Settings
             Scribe_Values.Look(ref EnableLittleRedRidingHoodedMercenary, "EnableLittleRedRidingHoodedMercenary", true);
             Scribe_Values.Look(ref EnableBackwardClock, "EnableBackwardClock", true);
             Scribe_Values.Look(ref EnableSchadenfreude, "EnableSchadenfreude", true);
+            Scribe_Values.Look(ref EnablePpodae, "EnablePpodae", true);
+            Scribe_Values.Look(ref EnableWarmHeartedWoodsman, "EnableWarmHeartedWoodsman", true);
+            Scribe_Values.Look(ref EnableFragmentOfTheUniverse, "EnableFragmentOfTheUniverse", true);
+            Scribe_Values.Look(ref EnableScarecrowSearchingForWisdom, "EnableScarecrowSearchingForWisdom", true);
 
             Scribe_Values.Look(ref BurrowingHeavenAllowUnwatchedTeleport, "BurrowingHeavenAllowUnwatchedTeleport", true);
             Scribe_Values.Look(ref BurrowingHeavenSightGraceMultiplier, "BurrowingHeavenSightGraceMultiplier", 1.0f);
@@ -244,6 +252,26 @@ namespace LCAbnormalities.Settings
                 return EnableSchadenfreude;
             }
 
+            if (defName.IndexOf("Ppodae", StringComparison.Ordinal) >= 0)
+            {
+                return EnablePpodae;
+            }
+
+            if (defName.IndexOf("WarmHeartedWoodsman", StringComparison.Ordinal) >= 0)
+            {
+                return EnableWarmHeartedWoodsman;
+            }
+
+            if (defName.IndexOf("FragmentOfTheUniverse", StringComparison.Ordinal) >= 0)
+            {
+                return EnableFragmentOfTheUniverse;
+            }
+
+            if (defName.IndexOf("ScarecrowSearchingForWisdom", StringComparison.Ordinal) >= 0)
+            {
+                return EnableScarecrowSearchingForWisdom;
+            }
+
             if (def is PawnKindDef_AnomalyEntity_SevenSin
                 || defName == "GluttonyEntity"
                 || defName == "LustEntity"
@@ -287,6 +315,10 @@ namespace LCAbnormalities.Settings
             EnableLittleRedRidingHoodedMercenary = true;
             EnableBackwardClock = true;
             EnableSchadenfreude = true;
+            EnablePpodae = true;
+            EnableWarmHeartedWoodsman = true;
+            EnableFragmentOfTheUniverse = true;
+            EnableScarecrowSearchingForWisdom = true;
 
             If_ShowVampireText = true;
             If_ShowVampireHealPartText = false;

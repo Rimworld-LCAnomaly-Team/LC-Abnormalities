@@ -478,6 +478,23 @@
   </SoundDef>
 
   <SoundDef>
+    <defName>LC_SnowQueen_WorkLoop</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/SnowQueen/SnowQueen_Default</clipPath></li></grains>
+        <volumeRange>14~18</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>10~55</distRange>
+        <sustainRelease>3</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
     <defName>LC_SnowQueen_Kiss1</defName>
     <context>MapOnly</context>
     <subSounds>
@@ -486,6 +503,32 @@
         <volumeRange>28~36</volumeRange>
         <pitchRange>0.96~1.04</pitchRange>
         <distRange>0~70</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_SnowQueen_Kiss2</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/SnowQueen/SnowQueen_Kiss2</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_SnowQueen_Kiss3</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/SnowQueen/SnowQueen_Kiss3</clipPath></li></grains>
+        <volumeRange>34~42</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~85</distRange>
       </li>
     </subSounds>
   </SoundDef>
@@ -517,8 +560,35 @@
   </SoundDef>
 
   <SoundDef>
+    <defName>LC_SnowQueen_Filter_On</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/SnowQueen/SnowQueen_Filter_On</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_SnowQueen_Filter_Off</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/SnowQueen/SnowQueen_Filter_Off</clipPath></li></grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~75</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
     <defName>LC_SnowQueen_Fight</defName>
     <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
     <subSounds>
       <li>
         <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/SnowQueen/SnowQueen_Fight</clipPath></li></grains>
@@ -543,12 +613,38 @@
   </SoundDef>
 
   <SoundDef>
+    <defName>LC_SnowQueen_Win_Sword</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/SnowQueen/SnowQueen_Win_Sword</clipPath></li></grains>
+        <volumeRange>30~38</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~80</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
     <defName>LC_SnowQueen_Lose</defName>
     <context>MapOnly</context>
     <subSounds>
       <li>
         <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/SnowQueen/SnowQueen_Lose</clipPath></li></grains>
         <volumeRange>34~42</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~85</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_SnowQueen_Lose_Sword</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/SnowQueen/SnowQueen_Lose_Sword</clipPath></li></grains>
+        <volumeRange>32~40</volumeRange>
         <pitchRange>0.96~1.04</pitchRange>
         <distRange>0~85</distRange>
       </li>
@@ -577,6 +673,46 @@
         <volumeRange>24~32</volumeRange>
         <pitchRange>0.96~1.04</pitchRange>
         <distRange>0~65</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_ResearcherNote_PageTurn</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Building/NotesFromCrazedResearcher/NoteBook_PageTurn</clipPath></li></grains>
+        <volumeRange>24~32</volumeRange>
+        <pitchRange>0.96~1.05</pitchRange>
+        <distRange>0~65</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_ResearcherNote_Explode</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Building/NotesFromCrazedResearcher/NoteBook_Explode</clipPath></li></grains>
+        <volumeRange>36~44</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~90</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_ResearcherNote_GoreBurst</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Building/NotesFromCrazedResearcher/NoteBook_GoreBurst</clipPath></li></grains>
+        <volumeRange>34~42</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>0~85</distRange>
       </li>
     </subSounds>
   </SoundDef>

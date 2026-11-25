@@ -11,11 +11,11 @@
     <hostile>true</hostile>
     <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
     <verbProperties>
-      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <verbClass>NothingThere.Combat.Verb_CastAbilityTouch_MimicryGoodbye</verbClass>
       <drawAimPie>false</drawAimPie>
       <range>-1</range>
       <requireLineOfSight>true</requireLineOfSight>
-      <warmupTime>0.15</warmupTime>
+      <warmupTime>1.15</warmupTime>
       <targetParams>
         <canTargetSelf>false</canTargetSelf>
         <canTargetBuildings>false</canTargetBuildings>

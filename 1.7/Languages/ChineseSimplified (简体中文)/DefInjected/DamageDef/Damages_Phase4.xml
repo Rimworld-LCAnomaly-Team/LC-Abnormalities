@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <LC_Ppodae_FrenzyClaw.label>狂暴重爪扑击</LC_Ppodae_FrenzyClaw.label>
+  <LC_Ppodae_FrenzyClaw.deathMessage>{0}被狂暴的波迪撕成了碎片。</LC_Ppodae_FrenzyClaw.deathMessage>
+  <LC_Ppodae_EgoRedFist.label>超可爱连拳重锤</LC_Ppodae_EgoRedFist.label>
+  <LC_Ppodae_EgoRedFist.deathMessage>{0}在“超可爱！！！”的重拳下粉身碎骨。</LC_Ppodae_EgoRedFist.deathMessage>
+
+  <LC_Woodsman_BreachAxe.label>伐木巨斧劈斩</LC_Woodsman_BreachAxe.label>
+  <LC_Woodsman_BreachAxe.deathMessage>{0}被热心的樵夫一斧斩断。</LC_Woodsman_BreachAxe.deathMessage>
+  <LC_Woodsman_EgoRedAxe.label>伐木重劈</LC_Woodsman_EgoRedAxe.label>
+  <LC_Woodsman_EgoRedAxe.deathMessage>{0}倒在了“伐木”的沉重锋刃之下。</LC_Woodsman_EgoRedAxe.deathMessage>
+
+  <LC_Cosmos_BreachTentacle.label>宇宙触须穿刺</LC_Cosmos_BreachTentacle.label>
+  <LC_Cosmos_BreachTentacle.deathMessage>{0}被宇宙碎片的触须刺穿。</LC_Cosmos_BreachTentacle.deathMessage>
+  <LC_Cosmos_SongWhite.label>宇宙共鸣声波</LC_Cosmos_SongWhite.label>
+  <LC_Cosmos_SongWhite.deathMessage>{0}的理智在宇宙碎片的歌声中彻底崩解。</LC_Cosmos_SongWhite.deathMessage>
+  <LC_Cosmos_BlackSpear.label>星辉黑伤突刺</LC_Cosmos_BlackSpear.label>
+  <LC_Cosmos_BlackSpear.deathMessage>{0}被“来自某处的碎片”刺穿。</LC_Cosmos_BlackSpear.deathMessage>
+
+  <LC_Scarecrow_BreachHarvest.label>稻草收割撕裂</LC_Scarecrow_BreachHarvest.label>
+  <LC_Scarecrow_BreachHarvest.deathMessage>{0}的智慧被索求智慧的稻草人收割殆尽。</LC_Scarecrow_BreachHarvest.deathMessage>
+  <LC_Scarecrow_EgoBlackRake.label>收获铁耙横扫</LC_Scarecrow_EgoBlackRake.label>
+  <LC_Scarecrow_EgoBlackRake.deathMessage>{0}死于“收获”的锐利铁耙之下。</LC_Scarecrow_EgoBlackRake.deathMessage>
+
+</LanguageData>

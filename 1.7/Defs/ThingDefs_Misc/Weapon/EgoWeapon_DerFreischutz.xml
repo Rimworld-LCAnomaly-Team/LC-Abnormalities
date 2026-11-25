@@ -5,6 +5,9 @@
     <defName>EgoWeapon_DerFreischutz</defName>
     <label>E.G.O. Weapon (Magic Bullet)</label>
     <description>The WAW-grade enchanted long rifle forged in a dark pact with Der Freischütz.\nFires piercing Black rounds to range 44 that tear cleanly through every living creature in their path—friend and foe alike.</description>
+    <descriptionHyperlinks>
+      <AbilityDef>MagicBullet_DimensionalBarrage</AbilityDef>
+    </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/EgoWeapon_DerFreischutz</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -13,10 +16,10 @@
     <soundInteract>LC_DerFreischutz_Reload</soundInteract>
     <statBases>
       <Mass>4.2</Mass>
-      <AccuracyTouch>0.75</AccuracyTouch>
-      <AccuracyShort>0.88</AccuracyShort>
-      <AccuracyMedium>0.95</AccuracyMedium>
-      <AccuracyLong>0.92</AccuracyLong>
+      <AccuracyTouch>1.00</AccuracyTouch>
+      <AccuracyShort>1.00</AccuracyShort>
+      <AccuracyMedium>1.00</AccuracyMedium>
+      <AccuracyLong>1.00</AccuracyLong>
       <RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
     </statBases>
     <verbs>
@@ -26,6 +29,7 @@
         <defaultProjectile>Bullet_EgoWeapon_DerFreischutz</defaultProjectile>
         <warmupTime>1.3</warmupTime>
         <range>44</range>
+        <canGoWild>false</canGoWild>
         <soundCast>LC_DerFreischutz_Shot</soundCast>
         <muzzleFlashScale>11</muzzleFlashScale>
       </li>
@@ -38,6 +42,19 @@
         <cooldownTime>2.0</cooldownTime>
       </li>
     </tools>
+    <!-- 覆盖 BaseWeapon 的 CompEquippable，避免与 CompEquippableAbility 重复注册 Verb LoadID -->
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_EquippableAbility">
+        <abilityDef>MagicBullet_DimensionalBarrage</abilityDef>
+      </li>
+      <li Class="CompProperties_Styleable"/>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
         <damageType>Black</damageType>

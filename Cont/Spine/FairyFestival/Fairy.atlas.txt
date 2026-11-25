@@ -1,0 +1,187 @@
+
+Fairy.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm1
+  rotate: false
+  xy: 341, 2
+  size: 119, 71
+  orig: 119, 71
+  offset: 0, 0
+  index: -1
+Arm_2
+  rotate: true
+  xy: 972, 906
+  size: 116, 42
+  orig: 116, 42
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 522, 63
+  size: 99, 119
+  orig: 99, 119
+  offset: 0, 0
+  index: -1
+Leg1
+  rotate: true
+  xy: 344, 75
+  size: 87, 176
+  orig: 87, 176
+  offset: 0, 0
+  index: -1
+Leg2
+  rotate: false
+  xy: 835, 22
+  size: 72, 173
+  orig: 72, 173
+  offset: 0, 0
+  index: -1
+Sec_arm_1
+  rotate: false
+  xy: 219, 6
+  size: 120, 72
+  orig: 120, 72
+  offset: 0, 0
+  index: -1
+Sec_arm_2
+  rotate: true
+  xy: 462, 5
+  size: 68, 58
+  orig: 68, 58
+  offset: 0, 0
+  index: -1
+Shimmer/Shimmer1
+  rotate: false
+  xy: 2, 552
+  size: 340, 470
+  orig: 340, 470
+  offset: 0, 0
+  index: -1
+Shimmer/Shimmer2
+  rotate: false
+  xy: 2, 80
+  size: 340, 470
+  orig: 340, 470
+  offset: 0, 0
+  index: -1
+Shimmer/Shimmer3
+  rotate: false
+  xy: 344, 552
+  size: 340, 470
+  orig: 340, 470
+  offset: 0, 0
+  index: -1
+Tail
+  rotate: true
+  xy: 2, 23
+  size: 55, 215
+  orig: 55, 215
+  offset: 0, 0
+  index: -1
+Wing_1
+  rotate: true
+  xy: 344, 164
+  size: 386, 303
+  orig: 386, 303
+  offset: 0, 0
+  index: -1
+Wing_2
+  rotate: false
+  xy: 649, 197
+  size: 354, 247
+  orig: 354, 247
+  offset: 0, 0
+  index: -1
+Wing_back_1
+  rotate: true
+  xy: 686, 680
+  size: 342, 284
+  orig: 342, 284
+  offset: 0, 0
+  index: -1
+Wing_back_2
+  rotate: false
+  xy: 686, 446
+  size: 298, 232
+  orig: 298, 232
+  offset: 0, 0
+  index: -1
+antenna
+  rotate: false
+  xy: 649, 508
+  size: 33, 42
+  orig: 33, 42
+  offset: 0, 0
+  index: -1
+bang_1
+  rotate: true
+  xy: 909, 11
+  size: 51, 52
+  orig: 51, 52
+  offset: 0, 0
+  index: -1
+bang_2
+  rotate: true
+  xy: 972, 849
+  size: 55, 42
+  orig: 55, 42
+  offset: 0, 0
+  index: -1
+cc
+  rotate: false
+  xy: 522, 9
+  size: 77, 52
+  orig: 77, 52
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 2, 6
+  size: 34, 15
+  orig: 34, 15
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 909, 64
+  size: 131, 100
+  orig: 131, 100
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 649, 24
+  size: 184, 171
+  orig: 184, 171
+  offset: 0, 0
+  index: -1
+mouth1
+  rotate: false
+  xy: 601, 46
+  size: 16, 15
+  orig: 16, 15
+  offset: 0, 0
+  index: -1
+mouth2
+  rotate: false
+  xy: 972, 832
+  size: 16, 15
+  orig: 16, 15
+  offset: 0, 0
+  index: -1
+
+Fairy2.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+side_hair
+  rotate: false
+  xy: 2, 2
+  size: 101, 88
+  orig: 101, 88
+  offset: 0, 0
+  index: -1

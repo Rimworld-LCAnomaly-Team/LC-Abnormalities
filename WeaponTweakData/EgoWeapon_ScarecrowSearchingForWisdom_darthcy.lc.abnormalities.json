@@ -1,0 +1,14 @@
+{
+  "TextureModID": "darthcy.lc.abnormalities",
+  "ItemDefName": "EgoWeapon_ScarecrowSearchingForWisdom",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.34,
+  "OffY": -0.04,
+  "ScaleX": 2.2,
+  "ScaleY": 2.2,
+  "HandsMode": 2,
+  "BladeStart": 0.52,
+  "BladeEnd": 1.22,
+  "MeleeWeaponType": 7
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderNodeTagDef><defName>SnowQueen_Root</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>SnowQueen_Torso</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>SnowQueen_Head</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>SnowQueen_SleeveBack</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>SnowQueen_CapeInside</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>SnowQueen_CapeBack</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>SnowQueen_ShoulderBack</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>SnowQueen_CapeFront</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>SnowQueen_ArmUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>SnowQueen_ArmLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>SnowQueen_HandBack</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>SnowQueen_HandFront</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>SnowQueen_Sword</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>SnowQueen_SleeveFront</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>SnowQueen_ShoulderFront</defName></PawnRenderNodeTagDef>
+
+</Defs>

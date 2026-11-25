@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using LCAbnormalities.Shared;
+using LCAnomalyCore.Render.Weapon;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -495,6 +496,16 @@ namespace LCAbnormalities.VoidDream
             bool fired = base.TryCastShot();
             if (fired && caster != null && caster.Spawned && caster.Map != null)
             {
+                Vector3 shotTarget = currentTarget.IsValid
+                    ? (currentTarget.HasThing && currentTarget.Thing.Spawned ? currentTarget.Thing.DrawPos.Yto0() : currentTarget.CenterVector3.Yto0())
+                    : (caster.DrawPos.Yto0() + Vector3.right);
+                if (caster is Pawn shooterPawn &&
+                    !EgoWeaponAnimationManager.IsPlaying(shooterPawn, VoidDreamWeaponAnimHandler.ClipSkillWarmup) &&
+                    !EgoWeaponAnimationManager.IsPlaying(shooterPawn, VoidDreamWeaponAnimHandler.ClipSkillLullaby))
+                {
+                    float aimAngle = EgoWeaponAnimationUtility.ResolveAimAngle(shooterPawn, shotTarget);
+                    EgoWeaponAnimationManager.Play(shooterPawn, shooterPawn.equipment?.Primary, VoidDreamWeaponAnimHandler.ClipRangeShot, 24, aimAngle);
+                }
                 Vector3 origin = caster.DrawPos.Yto0();
                 Vector3 aim = currentTarget.CenterVector3.Yto0() - origin;
                 Vector3 dir = aim.sqrMagnitude > 0.001f ? aim.normalized : Vector3.right;

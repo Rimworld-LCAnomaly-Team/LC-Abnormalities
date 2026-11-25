@@ -4,41 +4,60 @@
   <ThingDef ParentName="LC_BaseRangedWeapon_EGO">
     <defName>EgoWeapon_WellCheers</defName>
     <label>E.G.O. Weapon (Soda)</label>
-    <description>A pastel carbonated carbine humming with tiny fizzing bubbles (ZAYIN).\nEven as its bolts rupture targets, stray soda mist has a habit of soothing its shooter's aches and nerves.</description>
+    <description>A pistol painted in a refreshing grape purple, last extracted by an employee who particularly loved shrimp (ZAYIN).\nWhenever fired, a faint scent of grapes and sparkling soda fizz waft through the air; rapid long-range Red bolts have a chance to soothe the shooter's wounds and nerves.</description>
+    <weaponClasses>
+      <li>RangedLight</li>
+    </weaponClasses>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/EgoWeapon_WellCheers</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(1.8, 1.8)</drawSize>
+      <drawSize>(0.78, 0.78)</drawSize>
     </graphicData>
+    <uiIconScale>1.30</uiIconScale>
     <soundInteract>Interact_Autopistol</soundInteract>
     <statBases>
-      <Mass>2.8</Mass>
-      <AccuracyTouch>0.78</AccuracyTouch>
-      <AccuracyShort>0.85</AccuracyShort>
-      <AccuracyMedium>0.80</AccuracyMedium>
-      <AccuracyLong>0.65</AccuracyLong>
-      <RangedWeapon_Cooldown>1.1</RangedWeapon_Cooldown>
+      <Mass>1.4</Mass>
+      <AccuracyTouch>0.84</AccuracyTouch>
+      <AccuracyShort>0.86</AccuracyShort>
+      <AccuracyMedium>0.78</AccuracyMedium>
+      <AccuracyLong>0.64</AccuracyLong>
+      <RangedWeapon_Cooldown>0.55</RangedWeapon_Cooldown>
     </statBases>
     <verbs>
       <li>
-        <verbClass>Verb_Shoot</verbClass>
+        <verbClass>LCAbnormalities.WellCheers.Verb_ShootWellCheersEgo</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_EgoWeapon_WellCheers</defaultProjectile>
-        <warmupTime>0.9</warmupTime>
+        <warmupTime>0.35</warmupTime>
         <range>24</range>
         <soundCast>LC_WellCheers_EgoShot</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
-        <muzzleFlashScale>7</muzzleFlashScale>
+        <muzzleFlashScale>0</muzzleFlashScale>
       </li>
     </verbs>
     <tools>
       <li>
-        <label>stock</label>
+        <label>grip</label>
         <capacities><li>Blunt</li></capacities>
-        <power>7</power>
-        <cooldownTime>1.8</cooldownTime>
+        <power>6</power>
+        <cooldownTime>1.6</cooldownTime>
       </li>
     </tools>
+    <descriptionHyperlinks>
+      <AbilityDef>Soda_RefreshingSplash</AbilityDef>
+    </descriptionHyperlinks>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_EquippableAbility">
+        <abilityDef>Soda_RefreshingSplash</abilityDef>
+      </li>
+      <li Class="CompProperties_Styleable"/>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
         <damageType>Red</damageType>
@@ -51,15 +70,19 @@
   <ThingDef ParentName="LC_BaseBullet_EGO">
     <defName>Bullet_EgoWeapon_WellCheers</defName>
     <label>Soda E.G.O. bolt</label>
+    <thingClass>LCAbnormalities.WellCheers.Projectile_WellCheersSoda</thingClass>
     <projectile>
       <damageDef>LC_Soda_RedHeal</damageDef>
-      <damageAmountBase>10</damageAmountBase>
-      <stoppingPower>1.0</stoppingPower>
-      <speed>95</speed>
+      <damageAmountBase>7</damageAmountBase>
+      <armorPenetrationBase>0.15</armorPenetrationBase>
+      <stoppingPower>0.8</stoppingPower>
+      <speed>112</speed>
     </projectile>
     <graphicData>
-      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <texPath>Things/Projectile/Projectile_WellCheersSoda</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>(0.68, 0.95)</drawSize>
     </graphicData>
   </ThingDef>
 

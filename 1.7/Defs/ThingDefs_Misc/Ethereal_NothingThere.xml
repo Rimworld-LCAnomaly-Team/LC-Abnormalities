@@ -33,4 +33,46 @@
     </projectile>
   </ThingDef>
 
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_MimicrySlashFX</defName>
+    <label>Mimicry crimson cleave</label>
+    <thingClass>NothingThere.Effect.Thing_MimicrySlash</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <seeThroughFog>false</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_MimicryGroundRuptureFX</defName>
+    <label>Mimicry Goodbye ground rupture</label>
+    <thingClass>NothingThere.Effect.Thing_MimicryGroundRupture</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <seeThroughFog>false</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_MimicryChargeAuraFX</defName>
+    <label>Mimicry Goodbye charge aura</label>
+    <thingClass>NothingThere.Effect.Thing_MimicryChargeAura</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <seeThroughFog>false</seeThroughFog>
+    <selectable>false</selectable>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
 </Defs>

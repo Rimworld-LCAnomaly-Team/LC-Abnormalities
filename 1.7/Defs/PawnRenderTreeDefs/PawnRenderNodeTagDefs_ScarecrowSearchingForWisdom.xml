@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderNodeTagDef><defName>Scarecrow_Root</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Scarecrow_Pelvis</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Scarecrow_LegBackUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Scarecrow_LegBackLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Scarecrow_LegFrontUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Scarecrow_LegFrontLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Scarecrow_Torso</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Scarecrow_ArmBackUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Scarecrow_ArmBackLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Scarecrow_ArmBackSickle</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Scarecrow_Ribbon</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Scarecrow_Head</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Scarecrow_Hat</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Scarecrow_Tongue</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Scarecrow_ArmFrontUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Scarecrow_ArmFrontLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Scarecrow_ArmFrontRake</defName></PawnRenderNodeTagDef>
+
+</Defs>

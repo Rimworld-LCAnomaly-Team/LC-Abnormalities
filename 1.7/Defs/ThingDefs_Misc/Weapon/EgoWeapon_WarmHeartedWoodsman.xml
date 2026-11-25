@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_BaseMeleeWeapon_EGO">
+    <defName>EgoWeapon_WarmHeartedWoodsman</defName>
+    <label>E.G.O. Weapon (Logging)</label>
+    <description>A colossal blood-caked steam-cog logging axe extracted from Warm-Hearted Woodsman (HE).\nDelivers bone-splintering heavy Red cleaves despite its deliberate swing speed.</description>
+    <descriptionHyperlinks>
+      <AbilityDef>Logging_HeartCleave</AbilityDef>
+    </descriptionHyperlinks>
+    <thingClass>ThingWithComps</thingClass>
+    <equippedAngleOffset>-45</equippedAngleOffset>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/EgoWeapon_WarmHeartedWoodsman</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.2, 2.2)</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>4.2</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>logging axe</label>
+        <capacities>
+          <li>LC_WoodsmanEgoCleave</li>
+        </capacities>
+        <power>26</power>
+        <cooldownTime>2.15</cooldownTime>
+        <soundMeleeHit>LC_Woodsman_AxeHit</soundMeleeHit>
+      </li>
+    </tools>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_EquippableAbility">
+        <abilityDef>Logging_HeartCleave</abilityDef>
+      </li>
+      <li Class="CompProperties_Styleable"/>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Red</damageType>
+        <riskLevel>HE</riskLevel>
+        <damageMultiplier>1</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

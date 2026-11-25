@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>FragmentOfTheUniverse</defName>
+    <label>Fragment of the Universe</label>
+    <description>Fragment of the Universe (O-03-60) resembles a childish crayon doodle laced with colorful hearts, longing to sing its cosmic song of understanding.\nNormal or Bad work—or any agent losing their mind inside—cracks its fragile calm and unleashes four black tentacles alongside an echoing psychic melody.</description>
+    <uiIconPath>UI/CodexEntries/FragmentOfTheUniverse</uiIconPath>
+    <category>TETH</category>
+    <orderInCategory>870</orderInCategory>
+    <linkedThings>
+      <li>FragmentOfTheUniverse</li>
+      <li>FragmentOfTheUniverseEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

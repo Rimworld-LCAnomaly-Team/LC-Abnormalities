@@ -21,6 +21,11 @@ namespace LCAbnormalities.PunishingBird
         public static SoundDef LC_PunishingBird_Open;
         public static SoundDef LC_PunishingBird_WingFlap;
         public static SoundDef LC_PunishingBird_MawBite;
+        public static SoundDef LC_PunishingBird_BeakShot;
+
+        public static ThingDef LC_BeakTracerFX;
+        public static ThingDef LC_BeakImpactFX;
+        public static ThingDef LC_BeakSkillRunnerFX;
 
         public static AnimationDef PunishingBird_Idle;
         public static AnimationDef PunishingBird_Work;

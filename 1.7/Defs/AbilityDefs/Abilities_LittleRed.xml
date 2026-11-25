@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>CrimsonScar_HuntBarrage</defName>
+    <label>Crimson Hunt Barrage</label>
+    <description>Unleash Little Red's paired Crimson Scar execution.\nAt close range, carves the prey with a rapid double crimson sickle cross-slash followed by two point-blank hand-cannon blasts.\nAt mid range, fires twin heavy buckshot blasts before hurling the hooked sickle in a spinning boomerang arc.\nDeals up to +50% bonus Red damage as the wielder's health falls.</description>
+    <iconPath>UI/WeaponSkills/LittleRedRidingHoodedMercenary/CrimsonScar_HuntBarrage</iconPath>
+    <cooldownTicksRange>1080</cooldownTicksRange>
+    <displayOrder>115</displayOrder>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>LCAbnormalities.LittleRedRidingHoodedMercenary.Verb_CastAbility_CrimsonScarBarrage</verbClass>
+      <drawAimPie>true</drawAimPie>
+      <range>12.5</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.25</warmupTime>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>true</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="LCAbnormalities.LittleRedRidingHoodedMercenary.CompProperties_AbilityCrimsonScarBarrage">
+        <sickleDamageRange>22~28</sickleDamageRange>
+        <shotDamageRange>18~24</shotDamageRange>
+        <armorPenetration>0.50</armorPenetration>
+        <closeRangeThreshold>3.5</closeRangeThreshold>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

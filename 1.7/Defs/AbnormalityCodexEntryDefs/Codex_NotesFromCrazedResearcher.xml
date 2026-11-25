@@ -4,7 +4,7 @@
   <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
     <defName>NotesFromCrazedResearcher</defName>
     <label>Notes from a Crazed Researcher</label>
-    <description>Notes from a Crazed Researcher (T-09-78) is an equippable HE Tool Abnormality.\nIts mad insights boost work and abnormality research speed by +50%, but taking 100 cumulative damage or returning it before 30s and 1 study causes a lethal explosion.</description>
+    <description>Notes from a Crazed Researcher (T-09-78) is an equippable HE Tool Abnormality.\nIts mad insights boost work, research, and abnormality study speed by +50% and study success rate by +10%, but reaching 60 cumulative HP/SP damage (Black hits count double) or returning it before 30s and 1 non-tool study triggers a lethal RED gore explosion.</description>
     <uiIconPath>UI/CodexEntries/NotesFromCrazedResearcher</uiIconPath>
     <category>HE</category>
     <orderInCategory>860</orderInCategory>

@@ -6,14 +6,22 @@
 
   <LC_Justitia_PaleSlash.label>正义裁决者苍白斩</LC_Justitia_PaleSlash.label>
   <LC_Justitia_PaleSlash.deathMessage>{0}在正义裁决者的天平下迎来了终末。</LC_Justitia_PaleSlash.deathMessage>
+  <LC_Justitia_VerdictPale.label>苍白裁决</LC_Justitia_VerdictPale.label>
+  <LC_Justitia_VerdictPale.deathMessage>{0}在正义裁决者的苍白裁决下迎来了终末。</LC_Justitia_VerdictPale.deathMessage>
 
   <LC_Lamp_BlackCrush.label>目灯黑伤重锤</LC_Lamp_BlackCrush.label>
   <LC_Lamp_BlackCrush.deathMessage>{0}被目灯沉重的金光击碎了身心。</LC_Lamp_BlackCrush.deathMessage>
+  <LC_Lamp_SkillBlack.label>提灯引渡震荡</LC_Lamp_SkillBlack.label>
+  <LC_Lamp_SkillBlack.deathMessage>{0}被目灯的提灯引渡吞噬了理智与血肉。</LC_Lamp_SkillBlack.deathMessage>
 
   <LC_CrimsonScar_RedShot.label>赤红疤痕突袭</LC_CrimsonScar_RedShot.label>
   <LC_CrimsonScar_RedShot.deathMessage>{0}倒在了赤红疤痕的狩猎之下。</LC_CrimsonScar_RedShot.deathMessage>
+  <LC_CrimsonScar_SkillRed.label>猩红狩猎连射</LC_CrimsonScar_SkillRed.label>
+  <LC_CrimsonScar_SkillRed.deathMessage>{0}倒在了赤红疤痕的狩猎连射之下。</LC_CrimsonScar_SkillRed.deathMessage>
 
   <LC_Gaze_SawDamage.label>凝视锯刃撕裂</LC_Gaze_SawDamage.label>
   <LC_Gaze_SawDamage.deathMessage>{0}在凝视的锯刃下粉身碎骨。</LC_Gaze_SawDamage.deathMessage>
+  <LC_Gaze_SkillRed.label>窥孔锯暴撕裂</LC_Gaze_SkillRed.label>
+  <LC_Gaze_SkillRed.deathMessage>{0}被凝视的窥孔锯暴撕成了碎片。</LC_Gaze_SkillRed.deathMessage>
 
 </LanguageData>

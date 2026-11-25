@@ -50,6 +50,21 @@
     </modExtensions>
   </DamageDef>
 
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Justitia_VerdictPale</defName>
+    <label>pale judgement</label>
+    <workerClass>LCAnomalyCore.DamageWorker.DamageWorker_FourColor</workerClass>
+    <deathMessage>{0} was sentenced by Justitia's Pale Judgement.</deathMessage>
+    <hediff>Cut</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Pale</damageType>
+        <riskLevel>ALEPH</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
   <ToolCapacityDef>
     <defName>LC_JustitiaCleave</defName>
     <label>pale verdict slash</label>
@@ -84,6 +99,21 @@
     </modExtensions>
   </DamageDef>
 
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Lamp_SkillBlack</defName>
+    <label>lantern of salvation</label>
+    <workerClass>LCAnomalyCore.DamageWorker.DamageWorker_FourColor</workerClass>
+    <deathMessage>{0} was crushed beneath Lamp's salvation.</deathMessage>
+    <hediff>Crush</hediff>
+    <armorCategory>Blunt</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Black</damageType>
+        <riskLevel>WAW</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
   <ToolCapacityDef>
     <defName>LC_LampCrush</defName>
     <label>lantern smash</label>
@@ -107,6 +137,21 @@
     <defName>LC_CrimsonScar_RedShot</defName>
     <label>crimson scar strike</label>
     <workerClass>LCAbnormalities.LittleRedRidingHoodedMercenary.DamageWorker_CrimsonScar</workerClass>
+    <deathMessage>{0} was hunted down by Crimson Scar.</deathMessage>
+    <hediff>Cut</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Red</damageType>
+        <riskLevel>WAW</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_CrimsonScar_SkillRed</defName>
+    <label>crimson hunt barrage</label>
+    <workerClass>LCAnomalyCore.DamageWorker.DamageWorker_FourColor</workerClass>
     <deathMessage>{0} was hunted down by Crimson Scar.</deathMessage>
     <hediff>Cut</hediff>
     <armorCategory>Sharp</armorCategory>
@@ -170,5 +215,20 @@
     <combatLogRulesMiss>Maneuver_Slash_MeleeMiss</combatLogRulesMiss>
     <combatLogRulesDodge>Maneuver_Slash_MeleeDodge</combatLogRulesDodge>
   </ManeuverDef>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Gaze_SkillRed</defName>
+    <label>keyhole sawstorm shred</label>
+    <workerClass>LCAnomalyCore.DamageWorker.DamageWorker_FourColor</workerClass>
+    <deathMessage>{0} was torn apart by Gaze's Keyhole Sawstorm.</deathMessage>
+    <hediff>Cut</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Red</damageType>
+        <riskLevel>HE</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
 
 </Defs>

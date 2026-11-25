@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_BaseMeleeWeapon_EGO">
+    <defName>EgoWeapon_FragmentOfTheUniverse</defName>
+    <label>E.G.O. Weapon (Fragments from Somewhere)</label>
+    <description>A slender pitch-black lance speckled with luminous heart-motifs extracted from Fragment of the Universe (TETH).\nStabs swiftly with Black damage; whenever wielded by an agent below Prudence Level V, each strike carries a 10% chance to grant a temporary Cosmic Enlightenment mental shield.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <equippedAngleOffset>-45</equippedAngleOffset>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/EgoWeapon_FragmentOfTheUniverse</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.2, 2.2)</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>2.0</Mass>
+    </statBases>
+    <tools>
+      <li>
+        <label>starlight lance</label>
+        <capacities>
+          <li>LC_CosmosSpearStrike</li>
+        </capacities>
+        <power>13</power>
+        <cooldownTime>1.15</cooldownTime>
+        <soundMeleeHit>LC_Cosmos_SpearHit</soundMeleeHit>
+      </li>
+    </tools>
+    <descriptionHyperlinks>
+      <AbilityDef>CosmosSpear_StarlightEcho</AbilityDef>
+    </descriptionHyperlinks>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_EquippableAbility">
+        <abilityDef>CosmosSpear_StarlightEcho</abilityDef>
+      </li>
+      <li Class="CompProperties_Styleable"/>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
+        <damageType>Black</damageType>
+        <riskLevel>TETH</riskLevel>
+        <damageMultiplier>1</damageMultiplier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

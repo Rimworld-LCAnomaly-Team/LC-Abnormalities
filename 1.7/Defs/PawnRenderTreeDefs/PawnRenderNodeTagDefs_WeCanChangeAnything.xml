@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderNodeTagDef><defName>WeCanChangeAnything_Root</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>WeCanChangeAnything_Chassis</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>WeCanChangeAnything_Body</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>WeCanChangeAnything_BodyBlood</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>WeCanChangeAnything_DoorLeft</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>WeCanChangeAnything_HingeLeftUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>WeCanChangeAnything_HingeLeftLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>WeCanChangeAnything_DoorRight</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>WeCanChangeAnything_HingeRightUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>WeCanChangeAnything_HingeRightLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>WeCanChangeAnything_Blood1</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>WeCanChangeAnything_Blood2</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>WeCanChangeAnything_Eyes</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>WeCanChangeAnything_Heart</defName></PawnRenderNodeTagDef>
+
+</Defs>

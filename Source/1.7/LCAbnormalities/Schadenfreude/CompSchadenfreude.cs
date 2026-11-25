@@ -4,6 +4,7 @@ using LCAnomalyCore.Buildings;
 using LCAnomalyCore.Damage;
 using LCAnomalyCore.DamageWorker;
 using LCAnomalyCore.Interface;
+using LCAnomalyCore.Render.Weapon;
 using LCAnomalyCore.Util;
 using RimWorld;
 using RimWorld.Planet;
@@ -46,6 +47,8 @@ namespace LCAbnormalities.Schadenfreude
         public static ThingDef LC_SchadenfreudeBloodBurstFX;
         public static ThingDef LC_GazeSawSlashFX;
         public static ThingDef LC_GazeFlurryFX;
+        public static ThingDef LC_GazeSkillRunnerFX;
+        public static DamageDef LC_Gaze_SkillRed;
 
         static SchadenfreudeDefOf()
         {
@@ -810,7 +813,7 @@ namespace LCAbnormalities.Schadenfreude
     /// </summary>
     public class DamageWorker_Gaze : DamageWorker_FourColor
     {
-        private static bool IsInstigatorWatched(Thing instigator)
+        public static bool IsInstigatorWatched(Thing instigator)
         {
             if (instigator == null || instigator.MapHeld == null || Find.CameraDriver == null || !instigator.PositionHeld.IsValid)
             {
@@ -827,6 +830,13 @@ namespace LCAbnormalities.Schadenfreude
 
         public override Verse.DamageWorker.DamageResult Apply(DamageInfo dinfo, Thing victim)
         {
+            Map victimMap = victim?.MapHeld;
+            IntVec3 center = victim?.PositionHeld ?? IntVec3.Invalid;
+            Vector3 hitPos = victim != null
+                ? (victim.Spawned ? victim.DrawPos : center.ToVector3Shifted())
+                : Vector3.zero;
+            Vector3 instigatorPos = dinfo.Instigator != null && dinfo.Instigator.Spawned ? dinfo.Instigator.DrawPos : hitPos;
+
             LCAbnormalitiesHelper.PlaySoundAt(SchadenfreudeDefOf.LC_Gaze_Saw, victim);
             Verse.DamageWorker.DamageResult result = base.Apply(dinfo, victim);
 
@@ -835,15 +845,12 @@ namespace LCAbnormalities.Schadenfreude
                 return result;
             }
 
-            Map map = victim.MapHeld;
-            IntVec3 center = victim.PositionHeld;
             bool watchedBoost = IsInstigatorWatched(dinfo.Instigator);
 
-            if (map != null && center.InBounds(map))
+            if (victimMap != null && center.InBounds(victimMap))
             {
-                Vector3 hitPos = victim.Spawned ? victim.DrawPos : center.ToVector3Shifted();
                 float attackYaw = dinfo.Instigator != null && dinfo.Instigator.Spawned
-                    ? (hitPos - dinfo.Instigator.DrawPos).AngleFlat()
+                    ? (hitPos - instigatorPos).AngleFlat()
                     : dinfo.Angle;
 
                 if (SchadenfreudeDefOf.LC_Gaze_SawLoop != null)
@@ -852,7 +859,21 @@ namespace LCAbnormalities.Schadenfreude
                 }
 
                 // Spawn authentic Gaze spinning bloody saw disc + 4 staggered serrated crimson slashes!
-                SchadenfreudeVfxUtility.SpawnGazeFlurry(map, hitPos, attackYaw, watchedBoost);
+                SchadenfreudeVfxUtility.SpawnGazeFlurry(victimMap, hitPos, attackYaw, watchedBoost);
+
+                if (dinfo.Instigator is Pawn attacker)
+                {
+                    if (!EgoWeaponAnimationManager.IsPlaying(attacker, GazeWeaponAnimHandler.ClipSkillWarmup)
+                        && !EgoWeaponAnimationManager.IsPlaying(attacker, GazeWeaponAnimHandler.ClipSkillStorm))
+                    {
+                        ThingWithComps heldWeapon = attacker.equipment?.Primary;
+                        if (heldWeapon != null && heldWeapon.def?.defName == GazeWeaponAnimHandler.WeaponDefName)
+                        {
+                            float aimAngle = EgoWeaponAnimationUtility.ResolveAimAngle(attacker, hitPos);
+                            EgoWeaponAnimationManager.Play(attacker, heldWeapon, GazeWeaponAnimHandler.ClipNormalGrind, 58, aimAngle);
+                        }
+                    }
+                }
             }
 
             if (victim is Pawn victimPawn && !victimPawn.Dead && !victimPawn.Destroyed && victimPawn.health?.hediffSet != null)
@@ -874,10 +895,10 @@ namespace LCAbnormalities.Schadenfreude
                 }
 
                 // Trigger crimson Keyhole Gaze flash when Gaze Rending reaches >= 50% stack or on watched boost
-                if (map != null && center.InBounds(map) && (newSeverity >= 0.50f || watchedBoost))
+                if (victimMap != null && center.InBounds(victimMap) && (newSeverity >= 0.50f || watchedBoost))
                 {
                     Vector3 vPos = victimPawn.Spawned ? victimPawn.DrawPos : center.ToVector3Shifted();
-                    SchadenfreudeVfxUtility.SpawnKeyholePulse(map, vPos, scale: 2.0f, lifeTicks: 20, withEyeMedallion: newSeverity >= 0.50f);
+                    SchadenfreudeVfxUtility.SpawnKeyholePulse(victimMap, vPos, scale: 2.0f, lifeTicks: 20, withEyeMedallion: newSeverity >= 0.50f);
                 }
 
                 // 旋转锯刃追加一段 25% 红伤撕扯（镜头注视下提升至 35%）

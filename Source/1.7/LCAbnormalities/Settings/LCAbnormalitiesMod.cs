@@ -1,3 +1,4 @@
+using LCAnomalyCore.Render.Weapon;
 using LCAnomalyCore.Util;
 using UnityEngine;
 using Verse;
@@ -10,12 +11,14 @@ namespace LCAbnormalities.Settings
     public class LCAbnormalitiesMod : Mod
     {
         public static Setting_LCAbnormalities Settings { get; private set; }
+        public static string ModRootDir { get; private set; }
 
         private Vector2 scrollPosition;
         private float scrollViewHeight = 600f;
 
         public LCAbnormalitiesMod(ModContentPack content) : base(content)
         {
+            ModRootDir = content?.RootDir;
             Settings = GetSettings<Setting_LCAbnormalities>();
         }
 
@@ -106,6 +109,10 @@ namespace LCAbnormalities.Settings
             listing.CheckboxLabeled("LCAbn_Settings_EnableLittleRedRidingHoodedMercenary".Translate(), ref Settings.EnableLittleRedRidingHoodedMercenary);
             listing.CheckboxLabeled("LCAbn_Settings_EnableBackwardClock".Translate(), ref Settings.EnableBackwardClock);
             listing.CheckboxLabeled("LCAbn_Settings_EnableSchadenfreude".Translate(), ref Settings.EnableSchadenfreude);
+            listing.CheckboxLabeled("LCAbn_Settings_EnablePpodae".Translate(), ref Settings.EnablePpodae);
+            listing.CheckboxLabeled("LCAbn_Settings_EnableWarmHeartedWoodsman".Translate(), ref Settings.EnableWarmHeartedWoodsman);
+            listing.CheckboxLabeled("LCAbn_Settings_EnableFragmentOfTheUniverse".Translate(), ref Settings.EnableFragmentOfTheUniverse);
+            listing.CheckboxLabeled("LCAbn_Settings_EnableScarecrowSearchingForWisdom".Translate(), ref Settings.EnableScarecrowSearchingForWisdom);
         }
 
         private static void DrawMeatLanternSection(Listing_Standard listing)
@@ -211,6 +218,73 @@ namespace LCAbnormalities.Settings
         {
             LCAbnormalities.Shared.LCAbnormalitiesEvents.EnsureRegistered();
             ExtractUtil.RegisterEligibilityFilter(def => LCAbnormalitiesMod.Settings?.IsDefEnabledForExtraction(def) ?? true);
+
+            EgoWeaponAnimationManager.RegisterHandler(
+                LCAbnormalities.LittleRedRidingHoodedMercenary.CrimsonScarWeaponAnimHandler.WeaponDefName,
+                new LCAbnormalities.LittleRedRidingHoodedMercenary.CrimsonScarWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                NothingThere.Effect.MimicryWeaponAnimHandler.WeaponDefName,
+                new NothingThere.Effect.MimicryWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                LCAbnormalities.JudgementBird.JustitiaWeaponAnimHandler.WeaponDefName,
+                new LCAbnormalities.JudgementBird.JustitiaWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                LCAbnormalities.BigBird.LampWeaponAnimHandler.WeaponDefName,
+                new LCAbnormalities.BigBird.LampWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                BurrowingHeaven.Effect.HeavenWeaponAnimHandler.WeaponDefName,
+                new BurrowingHeaven.Effect.HeavenWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                LCAbnormalities.Schadenfreude.GazeWeaponAnimHandler.WeaponDefName,
+                new LCAbnormalities.Schadenfreude.GazeWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                LCAbnormalities.PunishingBird.BeakWeaponAnimHandler.WeaponDefName,
+                new LCAbnormalities.PunishingBird.BeakWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                LCAbnormalities.DerFreischutz.MagicBulletWeaponAnimHandler.WeaponDefName,
+                new LCAbnormalities.DerFreischutz.MagicBulletWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                Laetitia.Effect.LaetitiaWeaponAnimHandler.WeaponDefName,
+                new Laetitia.Effect.LaetitiaWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                LCAbnormalities.FuneralOfDeadButterflies.SolemnLamentWeaponAnimHandler.WeaponDefName,
+                new LCAbnormalities.FuneralOfDeadButterflies.SolemnLamentWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                LCAbnormalities.AllAroundHelper.GrinderMk4WeaponAnimHandler.WeaponDefName,
+                new LCAbnormalities.AllAroundHelper.GrinderMk4WeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                LCAbnormalities.SnowQueen.FrostSplinterWeaponAnimHandler.WeaponDefName,
+                new LCAbnormalities.SnowQueen.FrostSplinterWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                LCAbnormalities.WarmHeartedWoodsman.LoggingWeaponAnimHandler.WeaponDefName,
+                new LCAbnormalities.WarmHeartedWoodsman.LoggingWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                LCAbnormalities.ScarecrowSearchingForWisdom.HarvestWeaponAnimHandler.WeaponDefName,
+                new LCAbnormalities.ScarecrowSearchingForWisdom.HarvestWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                LCAbnormalities.ScorchedGirl.FourthMatchWeaponAnimHandler.WeaponDefName,
+                new LCAbnormalities.ScorchedGirl.FourthMatchWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                LCAbnormalities.VoidDream.VoidDreamWeaponAnimHandler.WeaponDefName,
+                new LCAbnormalities.VoidDream.VoidDreamWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                LCAbnormalities.Ppodae.SoCuteWeaponAnimHandler.WeaponDefName,
+                new LCAbnormalities.Ppodae.SoCuteWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                LCAbnormalities.FragmentOfTheUniverse.CosmosSpearWeaponAnimHandler.WeaponDefName,
+                new LCAbnormalities.FragmentOfTheUniverse.CosmosSpearWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                MeatLantern.Effect.MeatLanternWeaponAnimHandler.WeaponDefName,
+                new MeatLantern.Effect.MeatLanternWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                OneSin.Effect.PenitenceWeaponAnimHandler.WeaponDefName,
+                new OneSin.Effect.PenitenceWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                LCAbnormalities.FairyFestival.WingbeatWeaponAnimHandler.WeaponDefName,
+                new LCAbnormalities.FairyFestival.WingbeatWeaponAnimHandler());
+            EgoWeaponAnimationManager.RegisterHandler(
+                LCAbnormalities.WellCheers.SodaWeaponAnimHandler.WeaponDefName,
+                new LCAbnormalities.WellCheers.SodaWeaponAnimHandler());
         }
     }
 }

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- ==================== D-02-107 Ppodae ==================== -->
+  <Ppodae.label>波迪</Ppodae.label>
+  <Ppodae.description>毛茸茸、总是讨喜地摇着尾巴的白色京巴小狗异想体（D-02-107）。\n对“本能”工作十分温顺；但若指派洞察、沟通或压迫工作，员工走入收容室时便有 50% 概率立刻掉 1 点逆卡巴拉计数器（上限 2），工作结果为差也会掉计数。归零出逃后狂暴化为肌肉虬结的刺青巨犬猛烈扑杀人类，直到击杀一名人类受害者后便会满意地自行化卵休眠。</Ppodae.description>
+  <Ppodae.tools.frenzy_paw_slam.label>狂暴爪击</Ppodae.tools.frenzy_paw_slam.label>
+  <Ppodae.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</Ppodae.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <Ppodae.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>波迪只偏爱“本能”照料（全勇气等级恒定 60%），工作失败时造成 2~3 点轻微红伤。</Ppodae.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <Ppodae.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</Ppodae.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <Ppodae.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>管理须知 1：每当员工前来进行除“本能”以外的工作并进入收容单元时，都有 50% 概率使波迪的逆卡巴拉计数器减少。\nE.G.O饰品“超可爱！！！”已解锁。</Ppodae.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <Ppodae.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</Ppodae.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <Ppodae.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>管理须知 2：工作结果为“差”时，波迪的逆卡巴拉计数器（上限 2）同样减少，且“优”结果不会恢复计数器。</Ppodae.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <Ppodae.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</Ppodae.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <Ppodae.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>管理须知 3：逆卡巴拉计数器归 0 后波迪将狂暴突破并造成高额红伤；一旦亲手杀死 1 名人类目标，它会平息并自行重新收容为蛋。\nTETH 级 E.G.O 拳套与护甲“超可爱！！！”已解锁。</Ppodae.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+  <DyingPpodae.label>波迪（消散中）</DyingPpodae.label>
+  <LC_PpodaeSlamFX.label>波迪狂暴冲击波</LC_PpodaeSlamFX.label>
+  <PpodaeEgg.label>波迪收容蛋</PpodaeEgg.label>
+  <PpodaeEgg.description>波迪（D-02-107）平息后系着丝带的温顺收容卵核。</PpodaeEgg.description>
+  <PpodaeEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>波迪已收容</PpodaeEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <PpodaeEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将波迪收容蛋安置到收容平台上，一只乖巧的小白狗正摇着尾巴等待喂食。</PpodaeEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <PpodaeEgg.comps.CompUsable.useLabel>砸碎{0_label}</PpodaeEgg.comps.CompUsable.useLabel>
+  <PpodaeEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了波迪收容蛋，回收了一批脑啡肽箱。</PpodaeEgg.comps.CompUsable.useMessage>
+  <PpodaeEgg.comps.LC_CompEgg.activateDescString>砸碎波迪收容蛋以回收脑啡肽箱。</PpodaeEgg.comps.LC_CompEgg.activateDescString>
+  <PpodaeEgg.comps.LC_CompEgg.activateLabelString>砸碎...</PpodaeEgg.comps.LC_CompEgg.activateLabelString>
+  <PpodaeEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎波迪收容蛋</PpodaeEgg.comps.LC_CompEgg.activatingStringPending>
+  <PpodaeEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</PpodaeEgg.comps.LC_CompEgg.guiLabelString>
+
+  <EgoWeapon_Ppodae.label>E.G.O. 武器（超可爱！！！）</EgoWeapon_Ppodae.label>
+  <EgoWeapon_Ppodae.description>提取自波迪的白色绒毛犬爪拳套（TETH），可爱外表下潜藏着凶猛的红伤锤击威力。</EgoWeapon_Ppodae.description>
+  <EgoWeapon_Ppodae.tools.frenzy_paw.label>狂暴犬爪</EgoWeapon_Ppodae.tools.frenzy_paw.label>
+  <Apparel_PpodaeSuit.label>E.G.O. 护甲（超可爱！！！）</Apparel_PpodaeSuit.label>
+  <Apparel_PpodaeSuit.description>雪白厚实的仿犬毛束带夹克（TETH），兼顾 红 0.8 与 黑 0.8 防护与灵巧身法。</Apparel_PpodaeSuit.description>
+  <Accessory_Ppodae.label>E.G.O. 饰品（超可爱！！！）</Accessory_Ppodae.label>
+  <Accessory_Ppodae.description>松软垂落的白色小狗耳朵头饰，提升耐久与愈合速度，但会让精密作业略有分心。</Accessory_Ppodae.description>
+
+  <!-- ==================== F-05-32 Warm-Hearted Woodsman ==================== -->
+  <WarmHeartedWoodsman.label>热心的樵夫</WarmHeartedWoodsman.label>
+  <WarmHeartedWoodsman.description>胸膛敞开露出一座炙热锅炉的苔藓锡铁樵夫（F-05-32）。\n工作为“差”或自律 ≥ III 级员工完成作业都会扣除计数器（上限 1）。极其凶险的是：计数器归零后它不会立刻出逃，而是静止埋伏在原地，将下一名进入收容室工作的员工冷酷处决并把跳动的心脏塞入胸膛后再破封逃脱，战斗中还会吞食人类尸体恢复约 95 点生命。</WarmHeartedWoodsman.description>
+  <WarmHeartedWoodsman.tools.bloody_logging_axe.label>染血伐木巨斧</WarmHeartedWoodsman.tools.bloody_logging_axe.label>
+  <WarmHeartedWoodsman.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</WarmHeartedWoodsman.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <WarmHeartedWoodsman.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>管理须知 1：工作结果为“差”时，热心的樵夫的逆卡巴拉计数器（上限 1）下降。\n白/黑伤抗性良好（0.8），惧怕红伤（1.5）。</WarmHeartedWoodsman.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <WarmHeartedWoodsman.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</WarmHeartedWoodsman.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <WarmHeartedWoodsman.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>管理须知 2：每当自律等级 ≥ III 级的员工结束对它的工作时，逆卡巴拉计数器下降。\nE.G.O饰品“伐木”已解锁。</WarmHeartedWoodsman.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <WarmHeartedWoodsman.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</WarmHeartedWoodsman.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <WarmHeartedWoodsman.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>管理须知 3：逆卡巴拉计数器归 0 时它并不会立刻出逃，但下一名踏入收容单元的员工将被其冷血杀害献心，随后引发突破。</WarmHeartedWoodsman.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <WarmHeartedWoodsman.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</WarmHeartedWoodsman.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <WarmHeartedWoodsman.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>逃脱后若自身受损且附近存在人类尸体，会执行“进食心脏”回复约 95 点生命值。\nHE 级 E.G.O 巨斧与护甲“伐木”已解锁。</WarmHeartedWoodsman.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+  <DyingWarmHeartedWoodsman.label>热心的樵夫（消散中）</DyingWarmHeartedWoodsman.label>
+  <LC_WoodsmanShutterFX.label>樵夫铁闸处决</LC_WoodsmanShutterFX.label>
+  <LC_WoodsmanFurnaceAuraFX.label>樵夫炉心烈焰</LC_WoodsmanFurnaceAuraFX.label>
+  <WarmHeartedWoodsmanEgg.label>热心的樵夫收容蛋</WarmHeartedWoodsmanEgg.label>
+  <WarmHeartedWoodsmanEgg.description>热心的樵夫（F-05-32）炉火熄灭后的锈铁收容卵核。</WarmHeartedWoodsmanEgg.description>
+  <WarmHeartedWoodsmanEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>热心的樵夫已收容</WarmHeartedWoodsmanEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <WarmHeartedWoodsmanEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将热心的樵夫收容蛋锁入收容平台，沉重的钢铁巨斧暂时垂落在地。</WarmHeartedWoodsmanEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <WarmHeartedWoodsmanEgg.comps.CompUsable.useLabel>砸碎{0_label}</WarmHeartedWoodsmanEgg.comps.CompUsable.useLabel>
+  <WarmHeartedWoodsmanEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了热心的樵夫收容蛋，回收了一批脑啡肽箱。</WarmHeartedWoodsmanEgg.comps.CompUsable.useMessage>
+  <WarmHeartedWoodsmanEgg.comps.LC_CompEgg.activateDescString>砸碎热心的樵夫收容蛋以回收脑啡肽箱。</WarmHeartedWoodsmanEgg.comps.LC_CompEgg.activateDescString>
+  <WarmHeartedWoodsmanEgg.comps.LC_CompEgg.activateLabelString>砸碎...</WarmHeartedWoodsmanEgg.comps.LC_CompEgg.activateLabelString>
+  <WarmHeartedWoodsmanEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎热心的樵夫收容蛋</WarmHeartedWoodsmanEgg.comps.LC_CompEgg.activatingStringPending>
+  <WarmHeartedWoodsmanEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</WarmHeartedWoodsmanEgg.comps.LC_CompEgg.guiLabelString>
+
+  <EgoWeapon_WarmHeartedWoodsman.label>E.G.O. 武器（伐木）</EgoWeapon_WarmHeartedWoodsman.label>
+  <EgoWeapon_WarmHeartedWoodsman.description>提取自热心的樵夫的沉重蒸汽齿轮巨斧（HE），挥舞虽偏缓慢，单次红伤劈砍威力极为惊人。</EgoWeapon_WarmHeartedWoodsman.description>
+  <EgoWeapon_WarmHeartedWoodsman.tools.logging_axe.label>伐木重斧</EgoWeapon_WarmHeartedWoodsman.tools.logging_axe.label>
+  <Apparel_WarmHeartedWoodsmanSuit.label>E.G.O. 护甲（伐木）</Apparel_WarmHeartedWoodsmanSuit.label>
+  <Apparel_WarmHeartedWoodsmanSuit.description>铆接厚重苔藓铁板的钢铁战衣（HE），对红伤与黑伤提供 0.8 倍率坚实防护。</Apparel_WarmHeartedWoodsmanSuit.description>
+  <Accessory_WarmHeartedWoodsman.label>E.G.O. 饰品（伐木）</Accessory_WarmHeartedWoodsman.label>
+  <Accessory_WarmHeartedWoodsman.description>微温的染血心脏胸针饰品，强化体质防御并略微加快作业速率。</Accessory_WarmHeartedWoodsman.description>
+
+  <!-- ==================== O-03-60 Fragment of the Universe ==================== -->
+  <FragmentOfTheUniverse.label>宇宙碎片</FragmentOfTheUniverse.label>
+  <FragmentOfTheUniverse.description>仿佛孩子潦草蜡笔画般、周身绘着绚丽桃心的神秘存在（O-03-60）。\n“一般”结果有 50% 概率、“差”结果有 70% 概率扣除逆卡巴拉计数器（上限 2），员工在单元内陷入恐慌精神崩溃时也会立刻掉计数。突破后露出炫彩怪诞巨口，伸出触须造成黑伤并高歌降下群体白伤震荡。</FragmentOfTheUniverse.description>
+  <FragmentOfTheUniverse.tools.cosmic_tentacle_stab.label>宇宙触须突刺</FragmentOfTheUniverse.tools.cosmic_tentacle_stab.label>
+  <FragmentOfTheUniverse.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</FragmentOfTheUniverse.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <FragmentOfTheUniverse.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>管理须知 1：当工作结果为“一般”时，其逆卡巴拉计数器（上限 2）有 50% 概率减少。</FragmentOfTheUniverse.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <FragmentOfTheUniverse.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</FragmentOfTheUniverse.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <FragmentOfTheUniverse.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>管理须知 2：当工作结果为“差”时，其逆卡巴拉计数器有 70% 概率减少。\nE.G.O饰品“来自某处的碎片”已解锁。</FragmentOfTheUniverse.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <FragmentOfTheUniverse.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</FragmentOfTheUniverse.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <FragmentOfTheUniverse.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>管理须知 3：若员工在作业途中陷入恐慌崩溃，逆卡巴拉计数器将立刻减少 1 点。</FragmentOfTheUniverse.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <FragmentOfTheUniverse.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</FragmentOfTheUniverse.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <FragmentOfTheUniverse.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>突破后攻击造成黑伤，且周期性高歌对大范围内殖民者造成群体白伤。\nTETH 级 E.G.O 长枪与礼服“来自某处的碎片”已解锁。</FragmentOfTheUniverse.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+  <DyingFragmentOfTheUniverse.label>宇宙碎片（消散中）</DyingFragmentOfTheUniverse.label>
+  <LC_CosmosSongWaveFX.label>宇宙碎片的共鸣歌声</LC_CosmosSongWaveFX.label>
+  <FragmentOfTheUniverseEgg.label>宇宙碎片收容蛋</FragmentOfTheUniverseEgg.label>
+  <FragmentOfTheUniverseEgg.description>宇宙碎片（O-03-60）闪烁星尘与桃心涂鸦的收容卵核。</FragmentOfTheUniverseEgg.description>
+  <FragmentOfTheUniverseEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>宇宙碎片已收容</FragmentOfTheUniverseEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <FragmentOfTheUniverseEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将宇宙碎片收容蛋安放在平台上，耳畔传来遥远而轻柔的异界哼鸣。</FragmentOfTheUniverseEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <FragmentOfTheUniverseEgg.comps.CompUsable.useLabel>砸碎{0_label}</FragmentOfTheUniverseEgg.comps.CompUsable.useLabel>
+  <FragmentOfTheUniverseEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了宇宙碎片收容蛋，回收了一批脑啡肽箱。</FragmentOfTheUniverseEgg.comps.CompUsable.useMessage>
+  <FragmentOfTheUniverseEgg.comps.LC_CompEgg.activateDescString>砸碎宇宙碎片收容蛋以回收脑啡肽箱。</FragmentOfTheUniverseEgg.comps.LC_CompEgg.activateDescString>
+  <FragmentOfTheUniverseEgg.comps.LC_CompEgg.activateLabelString>砸碎...</FragmentOfTheUniverseEgg.comps.LC_CompEgg.activateLabelString>
+  <FragmentOfTheUniverseEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎宇宙碎片收容蛋</FragmentOfTheUniverseEgg.comps.LC_CompEgg.activatingStringPending>
+  <FragmentOfTheUniverseEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</FragmentOfTheUniverseEgg.comps.LC_CompEgg.guiLabelString>
+
+  <EgoWeapon_FragmentOfTheUniverse.label>E.G.O. 武器（来自某处的碎片）</EgoWeapon_FragmentOfTheUniverse.label>
+  <EgoWeapon_FragmentOfTheUniverse.description>提取自宇宙碎片的细长黑伤长枪（TETH）。\n当由慎重等级低于 V 级的员工持有并命中时，每次有 10% 概率附加持续 30 秒的“宇宙悟性”精神护盾。</EgoWeapon_FragmentOfTheUniverse.description>
+  <EgoWeapon_FragmentOfTheUniverse.tools.starlight_lance.label>星辉长枪</EgoWeapon_FragmentOfTheUniverse.tools.starlight_lance.label>
+  <Apparel_FragmentOfTheUniverseSuit.label>E.G.O. 护甲（来自某处的碎片）</Apparel_FragmentOfTheUniverseSuit.label>
+  <Apparel_FragmentOfTheUniverseSuit.description>华丽的紫罗兰长摆燕尾礼服（TETH），提供优异的 0.6 倍率黑伤防护与少量洞察加成。</Apparel_FragmentOfTheUniverseSuit.description>
+  <Accessory_FragmentOfTheUniverse.label>E.G.O. 饰品（来自某处的碎片）</Accessory_FragmentOfTheUniverse.label>
+  <Accessory_FragmentOfTheUniverse.description>绚丽紫橙桃心胸针饰品，略微提高作业成功率与全局工作速度。</Accessory_FragmentOfTheUniverse.description>
+
+  <!-- ==================== F-01-87 Scarecrow Searching for Wisdom ==================== -->
+  <ScarecrowSearchingForWisdom.label>索求智慧的稻草人</ScarecrowSearchingForWisdom.label>
+  <ScarecrowSearchingForWisdom.description>宽大破旧草帽下塞满浸透鲜血稻草与残缺布囊的诡异稻草人（F-01-87）。\n任何慎重 ≥ III 级的员工或差结果都将立刻触发出逃；突破后优先追杀作业者与高慎重目标，并在杀死人类后伸出长舌吸食脑浆——吸食期间完全无敌并高频恢复生命值。</ScarecrowSearchingForWisdom.description>
+  <ScarecrowSearchingForWisdom.tools.bloody_iron_rake.label>染血农用铁耙</ScarecrowSearchingForWisdom.tools.bloody_iron_rake.label>
+  <ScarecrowSearchingForWisdom.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>观察等级：I</ScarecrowSearchingForWisdom.comps.CompAbnormalityStudyUnlocks.studyNotes.0.label>
+  <ScarecrowSearchingForWisdom.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>管理须知 1：若慎重等级 ≥ III 级的员工完成了对该异想体的工作，其逆卡巴拉计数器（上限 1）将下降。</ScarecrowSearchingForWisdom.comps.CompAbnormalityStudyUnlocks.studyNotes.0.text>
+  <ScarecrowSearchingForWisdom.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>观察等级：II</ScarecrowSearchingForWisdom.comps.CompAbnormalityStudyUnlocks.studyNotes.1.label>
+  <ScarecrowSearchingForWisdom.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>管理须知 2：工作结果为“差”同样会导致计数器直接归 0 并出逃。\nE.G.O饰品“收获”已解锁。</ScarecrowSearchingForWisdom.comps.CompAbnormalityStudyUnlocks.studyNotes.1.text>
+  <ScarecrowSearchingForWisdom.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>观察等级：III</ScarecrowSearchingForWisdom.comps.CompAbnormalityStudyUnlocks.studyNotes.2.label>
+  <ScarecrowSearchingForWisdom.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>管理须知 3：击杀目标并吸食脑浆的动作期间，它完全免疫一切伤害并分次累计回复大量生命。</ScarecrowSearchingForWisdom.comps.CompAbnormalityStudyUnlocks.studyNotes.2.text>
+  <ScarecrowSearchingForWisdom.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>观察等级：IV</ScarecrowSearchingForWisdom.comps.CompAbnormalityStudyUnlocks.studyNotes.3.label>
+  <ScarecrowSearchingForWisdom.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>对红伤（0.8）与白伤（0.5）具备极高抗性，建议集中黑伤或蓝伤火力予以镇压。\nHE 级 E.G.O 草叉与护甲“收获”已解锁。</ScarecrowSearchingForWisdom.comps.CompAbnormalityStudyUnlocks.studyNotes.3.text>
+
+  <DyingScarecrowSearchingForWisdom.label>索求智慧的稻草人（消散中）</DyingScarecrowSearchingForWisdom.label>
+  <LC_ScarecrowDrainBeamFX.label>稻草人脑浆汲取脉动</LC_ScarecrowDrainBeamFX.label>
+  <ScarecrowSearchingForWisdomEgg.label>索求智慧的稻草人收容蛋</ScarecrowSearchingForWisdomEgg.label>
+  <ScarecrowSearchingForWisdomEgg.description>索求智慧的稻草人（F-01-87）缠满稻梗与麻布条的收容卵核。</ScarecrowSearchingForWisdomEgg.description>
+  <ScarecrowSearchingForWisdomEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>索求智慧的稻草人已收容</ScarecrowSearchingForWisdomEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterLabel>
+  <ScarecrowSearchingForWisdomEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>{PAWN_nameDef}将索求智慧的稻草人收容蛋悬挂在收容平台上，它歪斜的草帽暂时垂落盖住了空洞的脸庞。</ScarecrowSearchingForWisdomEgg.comps.CompAbnormalityHoldingPlatformTarget.capturedLetterText>
+  <ScarecrowSearchingForWisdomEgg.comps.CompUsable.useLabel>砸碎{0_label}</ScarecrowSearchingForWisdomEgg.comps.CompUsable.useLabel>
+  <ScarecrowSearchingForWisdomEgg.comps.CompUsable.useMessage>{PAWN_nameDef}砸碎了索求智慧的稻草人收容蛋，回收了一批脑啡肽箱。</ScarecrowSearchingForWisdomEgg.comps.CompUsable.useMessage>
+  <ScarecrowSearchingForWisdomEgg.comps.LC_CompEgg.activateDescString>砸碎索求智慧的稻草人收容蛋以回收脑啡肽箱。</ScarecrowSearchingForWisdomEgg.comps.LC_CompEgg.activateDescString>
+  <ScarecrowSearchingForWisdomEgg.comps.LC_CompEgg.activateLabelString>砸碎...</ScarecrowSearchingForWisdomEgg.comps.LC_CompEgg.activateLabelString>
+  <ScarecrowSearchingForWisdomEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎索求智慧的稻草人收容蛋</ScarecrowSearchingForWisdomEgg.comps.LC_CompEgg.activatingStringPending>
+  <ScarecrowSearchingForWisdomEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</ScarecrowSearchingForWisdomEgg.comps.LC_CompEgg.guiLabelString>
+
+  <EgoWeapon_ScarecrowSearchingForWisdom.label>E.G.O. 武器（收获）</EgoWeapon_ScarecrowSearchingForWisdom.label>
+  <EgoWeapon_ScarecrowSearchingForWisdom.description>提取自索求智慧的稻草人的长柄四齿黑伤铁耙（HE），攻速极快且擅长连贯横扫。</EgoWeapon_ScarecrowSearchingForWisdom.description>
+  <EgoWeapon_ScarecrowSearchingForWisdom.tools.harvest_rake.label>收获铁耙</EgoWeapon_ScarecrowSearchingForWisdom.tools.harvest_rake.label>
+  <Apparel_ScarecrowSearchingForWisdomSuit.label>E.G.O. 护甲（收获）</Apparel_ScarecrowSearchingForWisdomSuit.label>
+  <Apparel_ScarecrowSearchingForWisdomSuit.description>缀满干草纹理的红格工装背带服（HE），具备极佳的 红 0.6 与 白 0.8 防护。</Apparel_ScarecrowSearchingForWisdomSuit.description>
+  <Accessory_ScarecrowSearchingForWisdom.label>E.G.O. 饰品（收获）</Accessory_ScarecrowSearchingForWisdom.label>
+  <Accessory_ScarecrowSearchingForWisdom.description>鲜明活泼的橙底白点颈部领结饰品，稳固佩戴者精神阈值并抵御精神冲击。</Accessory_ScarecrowSearchingForWisdom.description>
+  <LC_LoggingSkillRunnerFX.label>伐木熔炉处决演出</LC_LoggingSkillRunnerFX.label>
+  <LC_HarvestSkillRunnerFX.label>收获智慧收割演出</LC_HarvestSkillRunnerFX.label>
+  <LC_SoCuteSkillRunnerFX.label>好可爱狂犬扑杀演出</LC_SoCuteSkillRunnerFX.label>
+  <LC_CosmosSpearSkillRunnerFX.label>宇宙之矛星辉回响演出</LC_CosmosSpearSkillRunnerFX.label>
+
+</LanguageData>

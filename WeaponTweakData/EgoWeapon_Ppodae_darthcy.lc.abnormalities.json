@@ -1,0 +1,14 @@
+{
+  "TextureModID": "darthcy.lc.abnormalities",
+  "ItemDefName": "EgoWeapon_Ppodae",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.24,
+  "OffY": -0.04,
+  "ScaleX": 1.45,
+  "ScaleY": 1.45,
+  "HandsMode": 2,
+  "BladeStart": 0.25,
+  "BladeEnd": 0.90,
+  "MeleeWeaponType": 8
+}

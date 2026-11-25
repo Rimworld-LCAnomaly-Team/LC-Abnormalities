@@ -49,6 +49,36 @@
     <drawOffscreen>true</drawOffscreen>
   </ThingDef>
 
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_WellCheersMuzzleFizzFX</defName>
+    <label>WellCheers muzzle fizz</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <thingClass>LCAbnormalities.WellCheers.Thing_WellCheersMuzzleFizz</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_WellCheersSodaSplashFX</defName>
+    <label>Soda E.G.O. splash</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <thingClass>LCAbnormalities.WellCheers.Thing_WellCheersSodaSplash</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_WellCheersHealMistFX</defName>
+    <label>Soda E.G.O. soothing mist</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <thingClass>LCAbnormalities.WellCheers.Thing_WellCheersHealMist</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+  </ThingDef>
+
   <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
     <defName>DyingPunishingBird</defName>
     <label>Punishing Bird (Dissolving)</label>
@@ -76,5 +106,54 @@
       </li>
     </modExtensions>
   </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
+
+  <ThingDef>
+    <defName>LC_BeakTracerFX</defName>
+    <label>beak tracer fx</label>
+    <thingClass>LCAbnormalities.PunishingBird.Thing_BeakTracer</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>LC_BeakImpactFX</defName>
+    <label>beak impact fx</label>
+    <thingClass>LCAbnormalities.PunishingBird.Thing_BeakImpact</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>LC_BeakSkillRunnerFX</defName>
+    <label>beak skill runner fx</label>
+    <thingClass>LCAbnormalities.PunishingBird.Thing_BeakSkillRunner</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>None</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+  </ThingDef>
+
+  <!-- 汽水技能时序驱动器 -->
+  <ThingDef>
+    <defName>LC_SodaSkillRunnerFX</defName>
+    <label>Soda Skill Runner</label>
+    <thingClass>LCAbnormalities.WellCheers.Thing_SodaSkillRunner</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>None</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
 
 </Defs>

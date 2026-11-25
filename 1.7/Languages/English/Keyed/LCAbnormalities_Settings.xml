@@ -31,6 +31,10 @@
   <LCAbn_Settings_EnableLittleRedRidingHoodedMercenary>Enable Little Red Riding Hooded Mercenary (WAW)</LCAbn_Settings_EnableLittleRedRidingHoodedMercenary>
   <LCAbn_Settings_EnableBackwardClock>Enable Backward Clock (WAW Tool)</LCAbn_Settings_EnableBackwardClock>
   <LCAbn_Settings_EnableSchadenfreude>Enable Schadenfreude (HE)</LCAbn_Settings_EnableSchadenfreude>
+  <LCAbn_Settings_EnablePpodae>Enable Ppodae (TETH)</LCAbn_Settings_EnablePpodae>
+  <LCAbn_Settings_EnableWarmHeartedWoodsman>Enable Warm-Hearted Woodsman (HE)</LCAbn_Settings_EnableWarmHeartedWoodsman>
+  <LCAbn_Settings_EnableFragmentOfTheUniverse>Enable Fragment of the Universe (TETH)</LCAbn_Settings_EnableFragmentOfTheUniverse>
+  <LCAbn_Settings_EnableScarecrowSearchingForWisdom>Enable Scarecrow Searching for Wisdom (HE)</LCAbn_Settings_EnableScarecrowSearchingForWisdom>
 
   <LCAbn_Settings_PortraitHeader>Portrait of Another World</LCAbn_Settings_PortraitHeader>
   <LCAbn_Settings_PortraitAllowNonColonist>Allow prisoners and visitors as substitutes</LCAbn_Settings_PortraitAllowNonColonist>

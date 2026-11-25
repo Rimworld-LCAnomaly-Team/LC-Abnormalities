@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderTreeDef>
+    <defName>WeCanChangeAnything</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+
+        <!-- T-09-85 We Can Change Anything articulated Spine rig (aligned with IronMaiden.txt & IronMaiden.png) -->
+        <li Class="LCAbnormalities.WeCanChangeAnything.PawnRenderNodeProperties_WeCanChangeAnythingPart">
+          <debugLabel>WeCanChangeAnythingRoot</debugLabel>
+          <tagDef>WeCanChangeAnything_Root</tagDef>
+          <role>Root</role>
+          <useGraphic>false</useGraphic>
+          <formScale>2.2</formScale>
+          <containedScale>2.2</containedScale>
+          <children>
+
+            <!-- Base-pivoted shaking chassis (parent of interior, doors, hinges, blood seams, pixel eyes & heart) -->
+            <li Class="LCAbnormalities.WeCanChangeAnything.PawnRenderNodeProperties_WeCanChangeAnythingPart">
+              <debugLabel>Chassis</debugLabel>
+              <tagDef>WeCanChangeAnything_Chassis</tagDef>
+              <role>Chassis</role>
+              <useGraphic>false</useGraphic>
+              <children>
+
+                <!-- Clean spiked interior chamber -->
+                <li Class="LCAbnormalities.WeCanChangeAnything.PawnRenderNodeProperties_WeCanChangeAnythingPart">
+                  <debugLabel>Body</debugLabel>
+                  <tagDef>WeCanChangeAnything_Body</tagDef>
+                  <role>Body</role>
+                  <texPath>Things/Building/WeCanChangeAnything/Parts/Body</texPath>
+                  <baseLayer>8.0</baseLayer>
+                </li>
+
+                <!-- Blood-drenched gore interior (visible after a victim dies inside: End / Default_After / Start_After) -->
+                <li Class="LCAbnormalities.WeCanChangeAnything.PawnRenderNodeProperties_WeCanChangeAnythingPart">
+                  <debugLabel>BodyBlood</debugLabel>
+                  <tagDef>WeCanChangeAnything_BodyBlood</tagDef>
+                  <role>BodyBlood</role>
+                  <texPath>Things/Building/WeCanChangeAnything/Parts/BodyBlood</texPath>
+                  <useTransparentShader>true</useTransparentShader>
+                  <baseLayer>8.2</baseLayer>
+                </li>
+
+                <!-- Right outer door + retracting hinges -->
+                <li Class="LCAbnormalities.WeCanChangeAnything.PawnRenderNodeProperties_WeCanChangeAnythingPart">
+                  <debugLabel>DoorRight</debugLabel>
+                  <tagDef>WeCanChangeAnything_DoorRight</tagDef>
+                  <role>DoorRight</role>
+                  <texPath>Things/Building/WeCanChangeAnything/Parts/DoorRight</texPath>
+                  <baseLayer>9.2</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.WeCanChangeAnything.PawnRenderNodeProperties_WeCanChangeAnythingPart">
+                      <debugLabel>HingeRightUpper</debugLabel>
+                      <tagDef>WeCanChangeAnything_HingeRightUpper</tagDef>
+                      <role>HingeRightUpper</role>
+                      <texPath>Things/Building/WeCanChangeAnything/Parts/HingeRightUpper</texPath>
+                      <baseLayer>8.6</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.WeCanChangeAnything.PawnRenderNodeProperties_WeCanChangeAnythingPart">
+                      <debugLabel>HingeRightLower</debugLabel>
+                      <tagDef>WeCanChangeAnything_HingeRightLower</tagDef>
+                      <role>HingeRightLower</role>
+                      <texPath>Things/Building/WeCanChangeAnything/Parts/HingeRightLower</texPath>
+                      <baseLayer>8.7</baseLayer>
+                    </li>
+                  </children>
+                </li>
+
+                <!-- Stage 3 heavy seam blood spatter (right seam layer, matching Spine slot order) -->
+                <li Class="LCAbnormalities.WeCanChangeAnything.PawnRenderNodeProperties_WeCanChangeAnythingPart">
+                  <debugLabel>Blood1</debugLabel>
+                  <tagDef>WeCanChangeAnything_Blood1</tagDef>
+                  <role>Blood1</role>
+                  <texPath>Things/Building/WeCanChangeAnything/Parts/Blood1</texPath>
+                  <useTransparentShader>true</useTransparentShader>
+                  <baseLayer>9.5</baseLayer>
+                </li>
+
+                <!-- Left outer door + retracting hinges -->
+                <li Class="LCAbnormalities.WeCanChangeAnything.PawnRenderNodeProperties_WeCanChangeAnythingPart">
+                  <debugLabel>DoorLeft</debugLabel>
+                  <tagDef>WeCanChangeAnything_DoorLeft</tagDef>
+                  <role>DoorLeft</role>
+                  <texPath>Things/Building/WeCanChangeAnything/Parts/DoorLeft</texPath>
+                  <baseLayer>9.8</baseLayer>
+                  <children>
+                    <li Class="LCAbnormalities.WeCanChangeAnything.PawnRenderNodeProperties_WeCanChangeAnythingPart">
+                      <debugLabel>HingeLeftUpper</debugLabel>
+                      <tagDef>WeCanChangeAnything_HingeLeftUpper</tagDef>
+                      <role>HingeLeftUpper</role>
+                      <texPath>Things/Building/WeCanChangeAnything/Parts/HingeLeftUpper</texPath>
+                      <baseLayer>8.4</baseLayer>
+                    </li>
+                    <li Class="LCAbnormalities.WeCanChangeAnything.PawnRenderNodeProperties_WeCanChangeAnythingPart">
+                      <debugLabel>HingeLeftLower</debugLabel>
+                      <tagDef>WeCanChangeAnything_HingeLeftLower</tagDef>
+                      <role>HingeLeftLower</role>
+                      <texPath>Things/Building/WeCanChangeAnything/Parts/HingeLeftLower</texPath>
+                      <baseLayer>8.5</baseLayer>
+                    </li>
+                  </children>
+                </li>
+
+                <!-- Stage 2 & Stage 3 seam blood seepage -->
+                <li Class="LCAbnormalities.WeCanChangeAnything.PawnRenderNodeProperties_WeCanChangeAnythingPart">
+                  <debugLabel>Blood2</debugLabel>
+                  <tagDef>WeCanChangeAnything_Blood2</tagDef>
+                  <role>Blood2</role>
+                  <texPath>Things/Building/WeCanChangeAnything/Parts/Blood2</texPath>
+                  <useTransparentShader>true</useTransparentShader>
+                  <baseLayer>10.1</baseLayer>
+                </li>
+
+                <!-- Red pixel smiling eyes (solid Stage 1-2, rapidly flickering in Stage 3) -->
+                <li Class="LCAbnormalities.WeCanChangeAnything.PawnRenderNodeProperties_WeCanChangeAnythingPart">
+                  <debugLabel>Eyes</debugLabel>
+                  <tagDef>WeCanChangeAnything_Eyes</tagDef>
+                  <role>Eyes</role>
+                  <texPath>Things/Building/WeCanChangeAnything/Parts/Eyes</texPath>
+                  <useTransparentShader>true</useTransparentShader>
+                  <baseLayer>10.4</baseLayer>
+                </li>
+
+                <!-- Red pixel heart (blinks during Stage 1-2 shakes, rapidly flickering in Stage 3) -->
+                <li Class="LCAbnormalities.WeCanChangeAnything.PawnRenderNodeProperties_WeCanChangeAnythingPart">
+                  <debugLabel>Heart</debugLabel>
+                  <tagDef>WeCanChangeAnything_Heart</tagDef>
+                  <role>Heart</role>
+                  <texPath>Things/Building/WeCanChangeAnything/Parts/Heart</texPath>
+                  <useTransparentShader>true</useTransparentShader>
+                  <baseLayer>10.6</baseLayer>
+                </li>
+
+              </children>
+            </li>
+
+          </children>
+        </li>
+
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderDef>
+    <defName>LC_SnowQueenFrostAura</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_ToolVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_SnowQueenFrostAura.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3156</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_SnowQueenIceCrystal</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_ToolVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_SnowQueenIceCrystal.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <transparent>true</transparent>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3152</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+</Defs>

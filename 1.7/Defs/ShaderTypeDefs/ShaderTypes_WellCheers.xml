@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderTypeDef>
+    <defName>LC_WellCheersSodaBolt</defName>
+    <shaderPath>Map/LC_WellCheersSodaBolt</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_WellCheersMuzzleFizz</defName>
+    <shaderPath>Map/LC_WellCheersMuzzleFizz</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_WellCheersSodaSplash</defName>
+    <shaderPath>Map/LC_WellCheersSodaSplash</shaderPath>
+  </ShaderTypeDef>
+
+</Defs>

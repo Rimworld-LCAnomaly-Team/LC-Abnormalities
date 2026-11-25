@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ==================== 1. DEFAULT_FIRST (Clean Open Idle, 120t = 2.0s) ==================== -->
+  <!-- Waiting for a user: open white doors gently breathe inward and outward -->
+  <AnimationDef>
+    <defName>WeCanChangeAnything_Default_First</defName>
+    <durationTicks>120</durationTicks>
+    <startOnRandomTick>true</startOnRandomTick>
+    <playWhenDowned>true</playWhenDowned>
+    <keyframeParts>
+      <li>
+        <key>WeCanChangeAnything_DoorLeft</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, 0)</offset></li>
+            <li><tick>68</tick><offset>(0.0050, 0, 0)</offset></li>
+            <li><tick>120</tick><offset>(0, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_DoorRight</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, 0)</offset></li>
+            <li><tick>68</tick><offset>(-0.0050, 0, 0)</offset></li>
+            <li><tick>120</tick><offset>(0, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 2. DEFAULT_AFTER (Blood-Stained Open Idle, 120t = 2.0s) ==================== -->
+  <!-- Waiting for a new user: open with gore-soaked interior visible, subtle door breathing -->
+  <AnimationDef>
+    <defName>WeCanChangeAnything_Default_After</defName>
+    <durationTicks>120</durationTicks>
+    <startOnRandomTick>true</startOnRandomTick>
+    <playWhenDowned>true</playWhenDowned>
+    <keyframeParts>
+      <li>
+        <key>WeCanChangeAnything_DoorLeft</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, 0)</offset></li>
+            <li><tick>58</tick><offset>(0.0046, 0, 0)</offset></li>
+            <li><tick>120</tick><offset>(0, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_DoorRight</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, 0)</offset></li>
+            <li><tick>70</tick><offset>(-0.0046, 0, 0)</offset></li>
+            <li><tick>120</tick><offset>(0, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 3. START_FIRST (Closing on First User, 60t = 1.0s) ==================== -->
+  <!-- Hinges retract (0..20t), doors slide shut (0..40t), red pixel eyes ignite (52t) & heart ignites (58t) -->
+  <AnimationDef>
+    <defName>WeCanChangeAnything_Start_First</defName>
+    <durationTicks>60</durationTicks>
+    <playWhenDowned>true</playWhenDowned>
+    <keyframeParts>
+      <li>
+        <key>WeCanChangeAnything_Chassis</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5483, 0.1305)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, -0.0026)</offset><angle>0</angle></li>
+            <li><tick>60</tick><offset>(0, 0, -0.0026)</offset><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_DoorLeft</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, 0)</offset></li>
+            <li><tick>40</tick><offset>(0.2531, 0, 0)</offset></li>
+            <li><tick>60</tick><offset>(0.2531, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_DoorRight</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, 0)</offset></li>
+            <li><tick>40</tick><offset>(-0.1732, 0, 0)</offset></li>
+            <li><tick>60</tick><offset>(-0.1732, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeLeftUpper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, 0)</offset></li>
+            <li><tick>20</tick><offset>(-0.1385, 0, 0)</offset></li>
+            <li><tick>60</tick><offset>(-0.1385, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeLeftLower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, 0)</offset></li>
+            <li><tick>20</tick><offset>(-0.1225, 0, 0)</offset></li>
+            <li><tick>60</tick><offset>(-0.1225, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeRightUpper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, 0)</offset></li>
+            <li><tick>20</tick><offset>(0.0639, 0, 0)</offset></li>
+            <li><tick>60</tick><offset>(0.0639, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeRightLower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, 0)</offset></li>
+            <li><tick>20</tick><offset>(0.0746, 0, 0)</offset></li>
+            <li><tick>60</tick><offset>(0.0746, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 4. START_AFTER (Closing on Subsequent User, 60t = 1.0s) ==================== -->
+  <!-- Same closing kinematics with bloody interior visible behind the sliding doors -->
+  <AnimationDef>
+    <defName>WeCanChangeAnything_Start_After</defName>
+    <durationTicks>60</durationTicks>
+    <playWhenDowned>true</playWhenDowned>
+    <keyframeParts>
+      <li>
+        <key>WeCanChangeAnything_Chassis</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5483, 0.1305)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, -0.0026)</offset><angle>0</angle></li>
+            <li><tick>60</tick><offset>(0, 0, -0.0026)</offset><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_DoorLeft</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, 0)</offset></li>
+            <li><tick>40</tick><offset>(0.2531, 0, 0)</offset></li>
+            <li><tick>60</tick><offset>(0.2531, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_DoorRight</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, 0)</offset></li>
+            <li><tick>40</tick><offset>(-0.1732, 0, 0)</offset></li>
+            <li><tick>60</tick><offset>(-0.1732, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeLeftUpper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, 0)</offset></li>
+            <li><tick>20</tick><offset>(-0.1385, 0, 0)</offset></li>
+            <li><tick>60</tick><offset>(-0.1385, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeLeftLower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, 0)</offset></li>
+            <li><tick>20</tick><offset>(-0.1225, 0, 0)</offset></li>
+            <li><tick>60</tick><offset>(-0.1225, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeRightUpper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, 0)</offset></li>
+            <li><tick>20</tick><offset>(0.0639, 0, 0)</offset></li>
+            <li><tick>60</tick><offset>(0.0639, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeRightLower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, 0)</offset></li>
+            <li><tick>20</tick><offset>(0.0746, 0, 0)</offset></li>
+            <li><tick>60</tick><offset>(0.0746, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 5. GENERATE_01 (Stage 1 Shaking, 40t = 0.67s loop) ==================== -->
+  <!-- Aligned with IronMaiden.txt Generate_01: periodic base-pivoted rock/shudder, clean shell, heart blinks -->
+  <AnimationDef>
+    <defName>WeCanChangeAnything_Generate_01</defName>
+    <durationTicks>40</durationTicks>
+    <playWhenDowned>true</playWhenDowned>
+    <keyframeParts>
+      <li>
+        <key>WeCanChangeAnything_Chassis</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5483, 0.1305)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, -0.0026)</offset><angle>0</angle><scale>(1, 1, 1)</scale></li>
+            <li><tick>16</tick><offset>(0.005, 0, -0.0026)</offset><angle>3.4</angle><scale>(1.012, 1, 0.990)</scale></li>
+            <li><tick>20</tick><offset>(-0.005, 0, 0.0004)</offset><angle>-3.2</angle><scale>(0.990, 1, 1.012)</scale></li>
+            <li><tick>24</tick><offset>(0.005, 0, -0.0026)</offset><angle>3.4</angle><scale>(1.012, 1, 0.990)</scale></li>
+            <li><tick>40</tick><offset>(0, 0, -0.0026)</offset><angle>0</angle><scale>(1, 1, 1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_DoorLeft</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.2531, 0, 0)</offset></li>
+            <li><tick>40</tick><offset>(0.2531, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_DoorRight</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(-0.1732, 0, 0)</offset></li>
+            <li><tick>40</tick><offset>(-0.1732, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeLeftUpper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(-0.1385, 0, 0)</offset></li>
+            <li><tick>40</tick><offset>(-0.1385, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeLeftLower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(-0.1225, 0, 0)</offset></li>
+            <li><tick>40</tick><offset>(-0.1225, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeRightUpper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.0639, 0, 0)</offset></li>
+            <li><tick>40</tick><offset>(0.0639, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeRightLower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.0746, 0, 0)</offset></li>
+            <li><tick>40</tick><offset>(0.0746, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 6. GENERATE_02 (Stage 2 Escalated Shaking + Seam Blood, 60t = 1.0s loop) ==================== -->
+  <!-- Aligned with IronMaiden.txt Generate_02: double rapid shudder bursts per cycle, blood 2 seeps, heart blinks -->
+  <AnimationDef>
+    <defName>WeCanChangeAnything_Generate_02</defName>
+    <durationTicks>60</durationTicks>
+    <playWhenDowned>true</playWhenDowned>
+    <keyframeParts>
+      <li>
+        <key>WeCanChangeAnything_Chassis</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5483, 0.1305)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, -0.0026)</offset><angle>0</angle><scale>(1, 1, 1)</scale></li>
+            <li><tick>10</tick><offset>(0.008, 0, -0.0026)</offset><angle>3.8</angle><scale>(1.016, 1, 0.986)</scale></li>
+            <li><tick>14</tick><offset>(-0.008, 0, 0.0024)</offset><angle>-3.6</angle><scale>(0.986, 1, 1.016)</scale></li>
+            <li><tick>18</tick><offset>(0.008, 0, -0.0026)</offset><angle>3.8</angle><scale>(1.016, 1, 0.986)</scale></li>
+            <li><tick>32</tick><offset>(0.002, 0, -0.0026)</offset><angle>1.0</angle><scale>(1, 1, 1)</scale></li>
+            <li><tick>38</tick><offset>(0.008, 0, -0.0026)</offset><angle>3.8</angle><scale>(1.016, 1, 0.986)</scale></li>
+            <li><tick>42</tick><offset>(-0.008, 0, 0.0024)</offset><angle>-3.6</angle><scale>(0.986, 1, 1.016)</scale></li>
+            <li><tick>46</tick><offset>(0.008, 0, -0.0026)</offset><angle>3.8</angle><scale>(1.016, 1, 0.986)</scale></li>
+            <li><tick>50</tick><offset>(-0.008, 0, 0.0024)</offset><angle>-3.6</angle><scale>(0.986, 1, 1.016)</scale></li>
+            <li><tick>54</tick><offset>(0.008, 0, -0.0026)</offset><angle>3.8</angle><scale>(1.016, 1, 0.986)</scale></li>
+            <li><tick>60</tick><offset>(0, 0, -0.0026)</offset><angle>0</angle><scale>(1, 1, 1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_DoorLeft</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.2531, 0, 0)</offset></li>
+            <li><tick>60</tick><offset>(0.2531, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_DoorRight</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(-0.1732, 0, 0)</offset></li>
+            <li><tick>60</tick><offset>(-0.1732, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeLeftUpper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(-0.1385, 0, 0)</offset></li>
+            <li><tick>60</tick><offset>(-0.1385, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeLeftLower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(-0.1225, 0, 0)</offset></li>
+            <li><tick>60</tick><offset>(-0.1225, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeRightUpper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.0639, 0, 0)</offset></li>
+            <li><tick>60</tick><offset>(0.0639, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeRightLower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.0746, 0, 0)</offset></li>
+            <li><tick>60</tick><offset>(0.0746, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 7. GENERATE_03 (Stage 3 Violent Shaking + Heavy Blood + Flickering Face, 38t = 0.63s loop) ==================== -->
+  <!-- Aligned with IronMaiden.txt Generate_03: nonstop frantic shaking, blood 1 + blood 2, eyes & heart flickering -->
+  <AnimationDef>
+    <defName>WeCanChangeAnything_Generate_03</defName>
+    <durationTicks>38</durationTicks>
+    <playWhenDowned>true</playWhenDowned>
+    <keyframeParts>
+      <li>
+        <key>WeCanChangeAnything_Chassis</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5483, 0.1305)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, -0.0026)</offset><angle>0</angle><scale>(1, 1, 1)</scale></li>
+            <li><tick>4</tick><offset>(0.012, 0, -0.0026)</offset><angle>4.4</angle><scale>(1.022, 1, 0.980)</scale></li>
+            <li><tick>8</tick><offset>(-0.012, 0, 0.0054)</offset><angle>-4.2</angle><scale>(0.980, 1, 1.022)</scale></li>
+            <li><tick>10</tick><offset>(0.012, 0, -0.0026)</offset><angle>4.4</angle><scale>(1.022, 1, 0.980)</scale></li>
+            <li><tick>16</tick><offset>(0.010, 0, -0.0026)</offset><angle>4.4</angle><scale>(1.018, 1, 0.984)</scale></li>
+            <li><tick>20</tick><offset>(-0.012, 0, 0.0054)</offset><angle>-4.2</angle><scale>(0.980, 1, 1.022)</scale></li>
+            <li><tick>24</tick><offset>(0.012, 0, -0.0026)</offset><angle>4.4</angle><scale>(1.022, 1, 0.980)</scale></li>
+            <li><tick>30</tick><offset>(0.010, 0, -0.0026)</offset><angle>4.4</angle><scale>(1.018, 1, 0.984)</scale></li>
+            <li><tick>32</tick><offset>(-0.012, 0, 0.0054)</offset><angle>-4.2</angle><scale>(0.980, 1, 1.022)</scale></li>
+            <li><tick>36</tick><offset>(0.012, 0, -0.0026)</offset><angle>4.4</angle><scale>(1.022, 1, 0.980)</scale></li>
+            <li><tick>38</tick><offset>(0, 0, -0.0026)</offset><angle>0</angle><scale>(1, 1, 1)</scale></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_DoorLeft</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.2531, 0, 0)</offset></li>
+            <li><tick>38</tick><offset>(0.2531, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_DoorRight</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(-0.1732, 0, 0)</offset></li>
+            <li><tick>38</tick><offset>(-0.1732, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeLeftUpper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(-0.1385, 0, 0)</offset></li>
+            <li><tick>38</tick><offset>(-0.1385, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeLeftLower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(-0.1225, 0, 0)</offset></li>
+            <li><tick>38</tick><offset>(-0.1225, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeRightUpper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.0639, 0, 0)</offset></li>
+            <li><tick>38</tick><offset>(0.0639, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeRightLower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.0746, 0, 0)</offset></li>
+            <li><tick>38</tick><offset>(0.0746, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+  <!-- ==================== 8. END (Opening After Processing, 68t = 1.13s) ==================== -->
+  <!-- Aligned with IronMaiden.txt End: pixel display cuts off, doors slide open & hinges extend revealing bloody chamber -->
+  <AnimationDef>
+    <defName>WeCanChangeAnything_End</defName>
+    <durationTicks>68</durationTicks>
+    <playWhenDowned>true</playWhenDowned>
+    <keyframeParts>
+      <li>
+        <key>WeCanChangeAnything_Chassis</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <pivot>(0.5483, 0.1305)</pivot>
+          <keyframes>
+            <li><tick>0</tick><offset>(0, 0, -0.0026)</offset><angle>0</angle></li>
+            <li><tick>68</tick><offset>(0, 0, -0.0026)</offset><angle>0</angle></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_DoorLeft</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.2531, 0, 0)</offset></li>
+            <li><tick>68</tick><offset>(0, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_DoorRight</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(-0.1732, 0, 0)</offset></li>
+            <li><tick>68</tick><offset>(0, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeLeftUpper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(-0.1385, 0, 0)</offset></li>
+            <li><tick>50</tick><offset>(-0.0716, 0, 0)</offset></li>
+            <li><tick>68</tick><offset>(0, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeLeftLower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(-0.1225, 0, 0)</offset></li>
+            <li><tick>50</tick><offset>(-0.0891, 0, 0)</offset></li>
+            <li><tick>68</tick><offset>(0, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeRightUpper</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.0639, 0, 0)</offset></li>
+            <li><tick>50</tick><offset>(0.0556, 0, 0)</offset></li>
+            <li><tick>68</tick><offset>(0, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+      <li>
+        <key>WeCanChangeAnything_HingeRightLower</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li><tick>0</tick><offset>(0.0746, 0, 0)</offset></li>
+            <li><tick>50</tick><offset>(0.0704, 0, 0)</offset></li>
+            <li><tick>68</tick><offset>(0, 0, 0)</offset></li>
+          </keyframes>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+</Defs>

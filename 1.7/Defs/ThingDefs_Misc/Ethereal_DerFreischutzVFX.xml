@@ -40,4 +40,15 @@
     <isSaveable>false</isSaveable>
   </ThingDef>
 
+  <ThingDef>
+    <defName>LC_MagicBulletSkillRunnerFX</defName>
+    <label>magic bullet skill runner fx</label>
+    <thingClass>LCAbnormalities.DerFreischutz.Thing_MagicBulletSkillRunner</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>None</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+  </ThingDef>
+
 </Defs>

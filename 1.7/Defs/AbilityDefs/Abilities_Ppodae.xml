@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>SoCute_FrenzyMaul</defName>
+    <label>Frenzy Beast Maul</label>
+    <description>Unleash savage beast-claw gauntlets in a rapid two-strike frenzy before leaping into a brutal ground slam within 2.8 cells that batters and stuns enemies.</description>
+    <iconPath>UI/WeaponSkills/Ppodae/SoCute_FrenzyMaul</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>LCAbnormalities.Ppodae.Verb_CastAbility_SoCuteMaul</verbClass>
+      <range>4.0</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.55</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="LCAbnormalities.Ppodae.CompProperties_AbilitySoCuteMaul">
+        <maulRadius>2.8</maulRadius>
+        <slashDamageRange>7~10</slashDamageRange>
+        <slamDamageRange>18~24</slamDamageRange>
+        <armorPenetration>0.34</armorPenetration>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

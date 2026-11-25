@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>Wingbeat_FairyFeast</defName>
+    <label>Fairy Feast</label>
+    <description>Sweep Wingbeat through an alternating pair of rose-gold wing slashes before unleashing a crimson devouring cleave within 2.8 cells that shreds and stuns enemies while draining vitality back to the wielder.</description>
+    <iconPath>UI/WeaponSkills/FairyFestival/Wingbeat_FairyFeast</iconPath>
+    <cooldownTicksRange>960</cooldownTicksRange>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>LCAbnormalities.FairyFestival.Verb_CastAbility_WingbeatFeast</verbClass>
+      <range>4.0</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.55</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="LCAbnormalities.FairyFestival.CompProperties_AbilityWingbeatFeast">
+        <feastRadius>2.8</feastRadius>
+        <slashDamageRange>7~10</slashDamageRange>
+        <feastDamageRange>14~18</feastDamageRange>
+        <armorPenetration>0.26</armorPenetration>
+        <healAmount>8</healAmount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

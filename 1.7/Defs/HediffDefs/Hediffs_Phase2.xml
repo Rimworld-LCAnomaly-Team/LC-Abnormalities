@@ -4,7 +4,7 @@
   <HediffDef>
     <defName>LC_SnowQueenKiss</defName>
     <label>The Snow Queen's Kiss</label>
-    <description>A frost-petal kiss left by The Snow Queen.\nGetting another Bad work result on The Snow Queen while marked will seal the employee inside her ice coffin—or win a duel to melt it away.</description>
+    <description>A frost-petal kiss left by The Snow Queen (received on Normal 50% or Bad 100% work).\nReceiving a second Kiss traps the worker inside her crystalline ice coffin; expires after one day or upon winning a duel.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.55, 0.85, 1.0)</defaultLabelColor>
     <isBad>true</isBad>
@@ -18,6 +18,11 @@
       </li>
     </stages>
     <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>60000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="LCAbnormalities.SnowQueen.HediffCompProperties_SnowQueenKiss" />
       <li Class="HediffCompProperties_DisappearsOnDeath" />
     </comps>
   </HediffDef>
@@ -43,6 +48,7 @@
         <disappearsAfterTicks>300</disappearsAfterTicks>
         <showRemainingTime>true</showRemainingTime>
       </li>
+      <li Class="LCAbnormalities.SnowQueen.HediffCompProperties_FrostSlowVfx" />
       <li Class="HediffCompProperties_DisappearsOnDeath" />
     </comps>
   </HediffDef>
@@ -50,7 +56,7 @@
   <HediffDef>
     <defName>LC_ResearcherNoteBuff</defName>
     <label>Crazed Research Insights</label>
-    <description>Possessed by the frantic brilliance of Notes from a Crazed Researcher.\nGreatly speeds up work and Abnormality study, yet triggers a lethal blast at 100 cumulative damage or on premature return.</description>
+    <description>Possessed by the frantic brilliance of Notes from a Crazed Researcher.\nGreatly speeds up work, research, and Abnormality study (+50% Speed, +10% Study Success Rate), yet triggers a lethal RED gore blast at 60 cumulative HP/SP damage or on premature return.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.90, 0.72, 0.35)</defaultLabelColor>
     <isBad>false</isBad>
@@ -60,6 +66,7 @@
       <li>
         <statFactors>
           <WorkSpeedGlobal>1.50</WorkSpeedGlobal>
+          <ResearchSpeed>1.50</ResearchSpeed>
           <LC_AbnormalityStudyRate>1.50</LC_AbnormalityStudyRate>
           <MoveSpeed>1.20</MoveSpeed>
           <GlobalLearningFactor>1.25</GlobalLearningFactor>
@@ -68,7 +75,8 @@
     </stages>
     <comps>
       <li Class="LCAbnormalities.NotesFromCrazedResearcher.HediffCompProperties_ResearcherNote">
-        <maxCumulativeDamage>100</maxCumulativeDamage>
+        <maxCumulativeDamage>60</maxCumulativeDamage>
+        <studySuccessRateBonus>0.10</studySuccessRateBonus>
       </li>
       <li Class="HediffCompProperties_DisappearsOnDeath" />
     </comps>

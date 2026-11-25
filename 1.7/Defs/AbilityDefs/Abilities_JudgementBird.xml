@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef ParentName="AbilityTouchBase">
+    <defName>Justitia_PaleJudgement</defName>
+    <label>Pale Judgement</label>
+    <description>Raise Justitia in solemn judgement beneath the Unbalanced Scale, then unleash Judgement Bird's extended 10-beat Pale execution combo: three heavy alternating cleaves followed by an overhead hoist and a blinding 7-strike Pale soul storm across nearby foes.</description>
+    <iconPath>UI/WeaponSkills/JudgementBird/Justitia_PaleJudgement</iconPath>
+    <cooldownTicksRange>1320</cooldownTicksRange>
+    <displayOrder>125</displayOrder>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>LCAbnormalities.JudgementBird.Verb_CastAbilityTouch_JustitiaVerdict</verbClass>
+      <drawAimPie>false</drawAimPie>
+      <range>-1</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.85</warmupTime>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>true</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="LCAbnormalities.JudgementBird.CompProperties_AbilityJustitiaVerdict">
+        <openingPaleDamage>10</openingPaleDamage>
+        <sweepPaleDamage>9</sweepPaleDamage>
+        <stormTickPaleDamage>4.5</stormTickPaleDamage>
+        <cleaveRadius>2.8</cleaveRadius>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

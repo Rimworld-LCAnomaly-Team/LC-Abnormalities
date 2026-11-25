@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderDef>
+    <defName>LC_WellCheersSodaBolt</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_WellCheersVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_WellCheersSodaBolt.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3155</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_WellCheersMuzzleFizz</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_WellCheersVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_WellCheersMuzzleFizz.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3156</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_WellCheersSodaSplash</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_WellCheersVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_WellCheersSodaSplash.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3157</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+</Defs>

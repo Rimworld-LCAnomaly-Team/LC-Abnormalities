@@ -5,6 +5,9 @@
     <defName>EgoWeapon_FuneralOfDeadButterflies</defName>
     <label>E.G.O. Weapon (Solemn Lament)</label>
     <description>Black and white twin handguns sculpted in mourning tribute (WAW).\nOne pistol condemns the body with Black erosion, the other weeps White anguish—blossoming mourning butterflies upon the target with every trigger pull.</description>
+    <descriptionHyperlinks>
+      <AbilityDef>SolemnLament_ButterflyRequiem</AbilityDef>
+    </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/EgoWeapon_FuneralOfDeadButterflies</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -22,7 +25,7 @@
     </statBases>
     <verbs>
       <li>
-        <verbClass>Verb_Shoot</verbClass>
+        <verbClass>LCAbnormalities.FuneralOfDeadButterflies.Verb_ShootSolemnLament</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_EgoWeapon_FuneralOfDeadButterflies</defaultProjectile>
         <warmupTime>0.45</warmupTime>
@@ -41,6 +44,18 @@
         <cooldownTime>1.6</cooldownTime>
       </li>
     </tools>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_EquippableAbility">
+        <abilityDef>SolemnLament_ButterflyRequiem</abilityDef>
+      </li>
+      <li Class="CompProperties_Styleable"/>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
         <damageType>White</damageType>

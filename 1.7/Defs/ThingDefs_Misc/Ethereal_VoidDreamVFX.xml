@@ -41,4 +41,18 @@
     <drawOffscreen>true</drawOffscreen>
   </ThingDef>
 
+  <!-- 梦乡技能时序驱动器 -->
+  <ThingDef>
+    <defName>LC_VoidDreamSkillRunnerFX</defName>
+    <label>Dreamy Lullaby Skill Runner</label>
+    <thingClass>LCAbnormalities.VoidDream.Thing_VoidDreamSkillRunner</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>None</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
 </Defs>

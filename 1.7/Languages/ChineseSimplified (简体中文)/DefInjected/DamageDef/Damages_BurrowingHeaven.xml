@@ -4,4 +4,10 @@
   <LC_BurrowingHeaven_BlackDamage.label>穿刺乐园穿刺</LC_BurrowingHeaven_BlackDamage.label>
   <LC_BurrowingHeaven_BlackDamage.deathMessage>{0}被穿刺乐园的荆棘贯穿了。</LC_BurrowingHeaven_BlackDamage.deathMessage>
 
+  <LC_Heaven_RedImpale.label>天堂荆棘穿刺</LC_Heaven_RedImpale.label>
+  <LC_Heaven_RedImpale.deathMessage>{0}被天堂的猩红双叉彻底贯穿。</LC_Heaven_RedImpale.deathMessage>
+
+  <LC_Heaven_SkillRed.label>地棘贯狱爆发</LC_Heaven_SkillRed.label>
+  <LC_Heaven_SkillRed.deathMessage>{0}被喷涌而出的穿刺乐园棘柱钉死在地上。</LC_Heaven_SkillRed.deathMessage>
+
 </LanguageData>

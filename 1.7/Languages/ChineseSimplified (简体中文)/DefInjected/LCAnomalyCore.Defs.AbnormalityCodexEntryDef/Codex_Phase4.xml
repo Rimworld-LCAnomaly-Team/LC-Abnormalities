@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <Ppodae.label>波迪</Ppodae.label>
+  <Ppodae.description>外形如同毛绒绒白色京巴小狗、会在本能工作时兴奋摇尾的小型异想体（D-02-107）。\n然而一旦指派非本能工作或工作失败，它的耐心便会急速瓦解；突破后化身纹满靛蓝刺青的狂暴恶犬撕碎猎物，并在击杀一人后自行化卵重归休眠。</Ppodae.description>
+
+  <WarmHeartedWoodsman.label>热心的樵夫</WarmHeartedWoodsman.label>
+  <WarmHeartedWoodsman.description>浑身覆满苔藓的发条锡制巨人，胸膛熔炉内封存着一颗狂跳不止的血红心脏（F-05-32）。\n越是善良温柔（自律 ≥ III 级）的员工越容易引发它的饥渴；计数器归零时它会静默蛰伏，直到下一名员工走入收容单元将其处决取心后才破封而出。</WarmHeartedWoodsman.description>
+
+  <FragmentOfTheUniverse.label>宇宙碎片</FragmentOfTheUniverse.label>
+  <FragmentOfTheUniverse.description>宛如稚嫩蜡笔涂鸦、周身缀满彩色桃心的奇异宇宙造物（O-03-60）。\n工作评价为一般或差、或是员工在收容室内陷入恐慌精神崩溃，都会导致其计数器下降并令它裂开骇人巨口，挥舞四条漆黑触须高歌震荡心灵的歌谣。</FragmentOfTheUniverse.description>
+
+  <ScarecrowSearchingForWisdom.label>索求智慧的稻草人</ScarecrowSearchingForWisdom.label>
+  <ScarecrowSearchingForWisdom.description>缝缀粗糙、腹腔渗血却渴望得到人类聪慧头脑的稻草人（F-01-87）。\n任何慎重 ≥ III 级的员工或差结果都将立刻触发出逃；它会摘下草帽追杀聪慧者，并在杀害生灵后伸出血染长舌吸食脑浆——进食期间免疫一切伤害并急速再生。</ScarecrowSearchingForWisdom.description>
+
+</LanguageData>

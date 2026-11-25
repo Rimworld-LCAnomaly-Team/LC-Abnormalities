@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderDef>
+    <defName>LC_OldBeliefOracleAura</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_ToolVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_OldBeliefOracleAura.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3156</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_FleshIdolCross</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_ToolVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_FleshIdolCross.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <transparent>true</transparent>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>2915</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_FleshIdolMiracleWave</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_ToolVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_FleshIdolMiracleWave.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3158</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_HeartAspirationCore</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_ToolVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_HeartAspirationCore.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <transparent>true</transparent>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3152</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_HeartPulseAura</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_ToolVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_HeartPulseAura.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3155</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_ResearcherNoteCore</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_ToolVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_ResearcherNoteCore.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <transparent>true</transparent>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3152</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+  <ShaderDef>
+    <defName>LC_ResearcherNoteAura</defName>
+    <shaderProgram>
+      <vertexShaderFileName>LC_ToolVFX.vert.glsl</vertexShaderFileName>
+      <fragmentShaderFileName>LC_ResearcherNoteAura.frag.glsl</fragmentShaderFileName>
+      <flipTextureST>false</flipTextureST>
+      <blendMode>Additive</blendMode>
+      <depthWrite>false</depthWrite>
+      <cullMode>None</cullMode>
+      <renderQueue>3155</renderQueue>
+    </shaderProgram>
+  </ShaderDef>
+
+</Defs>

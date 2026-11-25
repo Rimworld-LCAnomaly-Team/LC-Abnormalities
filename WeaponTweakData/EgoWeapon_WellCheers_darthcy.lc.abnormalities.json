@@ -1,0 +1,11 @@
+{
+  "TextureModID": "darthcy.lc.abnormalities",
+  "ItemDefName": "EgoWeapon_WellCheers",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.14,
+  "OffY": -0.02,
+  "ScaleX": 0.78,
+  "ScaleY": 0.78,
+  "HandsMode": 1
+}

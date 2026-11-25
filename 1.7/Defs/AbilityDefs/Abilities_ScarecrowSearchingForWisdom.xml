@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>Harvest_WisdomDrain</defName>
+    <label>Wisdom Harvest</label>
+    <description>Drive the four prongs of Harvest into the target and unleash a pulsing siphon field within 2.8 cells, draining Black damage twice while restoring the wielder's physical and mental vitality.</description>
+    <iconPath>UI/WeaponSkills/ScarecrowSearchingForWisdom/Harvest_WisdomDrain</iconPath>
+    <cooldownTicksRange>1080</cooldownTicksRange>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>LCAbnormalities.ScarecrowSearchingForWisdom.Verb_CastAbility_HarvestDrain</verbClass>
+      <range>4.5</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.65</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="LCAbnormalities.ScarecrowSearchingForWisdom.CompProperties_AbilityHarvestDrain">
+        <drainRadius>2.8</drainRadius>
+        <openerDamageRange>14~20</openerDamageRange>
+        <siphonDamageRange>12~17</siphonDamageRange>
+        <armorPenetration>0.42</armorPenetration>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

@@ -145,4 +145,80 @@
     </subSounds>
   </SoundDef>
 
+  <SoundDef>
+    <defName>LC_Promise_Marble</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Building/OldBeliefAndPromise/Promise_Marble</clipPath>
+          </li>
+        </grains>
+        <volumeRange>24~32</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~65</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Promise_Result</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Building/OldBeliefAndPromise/Promise_Result</clipPath>
+          </li>
+        </grains>
+        <volumeRange>28~36</volumeRange>
+        <pitchRange>0.97~1.03</pitchRange>
+        <distRange>0~75</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_FleshIdol_Choir</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Building/FleshIdol/FleshIdol_Choir</clipPath>
+          </li>
+        </grains>
+        <volumeRange>22~30</volumeRange>
+        <pitchRange>0.96~1.03</pitchRange>
+        <distRange>0~85</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_HeartOfAspiration_Equip</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>3</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Building/HeartOfAspiration/HeartOfAspiration_Equip</clipPath>
+          </li>
+        </grains>
+        <volumeRange>24~32</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>0~65</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
 </Defs>

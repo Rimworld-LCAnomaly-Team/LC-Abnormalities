@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>Logging_HeartCleave</defName>
+    <label>Heart Cleave</label>
+    <description>Stoke the steam-cog furnace of Logging before delivering a heavy sweep and colossal guillotine chop within 2.8 cells (+30% execute damage below 50% HP) that stuns foes and mends light wounds.</description>
+    <iconPath>UI/WeaponSkills/WarmHeartedWoodsman/Logging_HeartCleave</iconPath>
+    <cooldownTicksRange>1080</cooldownTicksRange>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>LCAbnormalities.WarmHeartedWoodsman.Verb_CastAbility_LoggingCleave</verbClass>
+      <range>3.5</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.75</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="LCAbnormalities.WarmHeartedWoodsman.CompProperties_AbilityLoggingCleave">
+        <cleaveRadius>2.8</cleaveRadius>
+        <openerDamageRange>16~22</openerDamageRange>
+        <executeDamageRange>32~42</executeDamageRange>
+        <armorPenetration>0.45</armorPenetration>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

@@ -13,4 +13,53 @@
     </modExtensions>
   </DamageDef>
 
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Heaven_RedImpale</defName>
+    <label>heaven thorny impale</label>
+    <workerClass>BurrowingHeaven.Effect.DamageWorker_HeavenSpear</workerClass>
+    <deathMessage>{0} was skewered into crimson roots by Heaven.</deathMessage>
+    <hediff>Cut</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Red</damageType>
+        <riskLevel>WAW</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <DamageDef ParentName="LC_FourColorDamageBase">
+    <defName>LC_Heaven_SkillRed</defName>
+    <label>heaven root eruption</label>
+    <workerClass>LCAnomalyCore.DamageWorker.DamageWorker_FourColor</workerClass>
+    <deathMessage>{0} was impaled upon erupting thorny roots from Heaven.</deathMessage>
+    <hediff>Cut</hediff>
+    <armorCategory>Sharp</armorCategory>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorDamageExtension">
+        <damageType>Red</damageType>
+        <riskLevel>WAW</riskLevel>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <ToolCapacityDef>
+    <defName>LC_HeavenImpale</defName>
+    <label>heaven thorny pierce</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef>
+    <defName>LC_HeavenImpale</defName>
+    <requiredCapacity>LC_HeavenImpale</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>LC_Heaven_RedImpale</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Stab_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Stab_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Stab_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Stab_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
 </Defs>

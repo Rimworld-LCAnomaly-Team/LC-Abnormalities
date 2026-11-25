@@ -54,7 +54,7 @@
     <defName>LaetitiaGiftAggresive</defName>
     <label>Laetitia's Gift (Aggressive)</label>
     <labelNoun>This one has been gifted aggressively by E.G.O. Laetitia, and this hediff will soon end.</labelNoun>
-    <description>Unlike gifts obtained during work, this aggressive gift expires rapidly.\nWhen it expires or the target is downed or killed, it unleashes a heavy Black damage burst. If the target falls, one or two temporary hostile Little Witch's Friends burst forth from the body.</description>
+    <description>An aggressive enchanted gift affixed by E.G.O. Laetitia.\nFollow-up hits from Laetitia's rifle deal +25% bonus Black damage and rapidly fracture the mark; when it breaks, expires, or the carrier falls, it erupts into an ally-safe Heartbreak Black-Lace AoE shockwave that damages and stuns hostiles within 3.6 cells.</description>
     <hediffClass>Hediff_High</hediffClass>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>

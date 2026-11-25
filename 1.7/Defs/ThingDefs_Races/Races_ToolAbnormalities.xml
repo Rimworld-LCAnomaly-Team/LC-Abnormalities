@@ -125,6 +125,9 @@
     <label>We Can Change Anything</label>
     <description>An unsettling white iron maiden (T-09-85) lined inside with dense steel spikes and smiling in jagged red pixels once shut. Stepping into its chamber converts pain and vitality directly into raw Enkephalin Boxes.\n\nOnce the door slams shut, the subject normally cannot leave on their own. The longer the machine grinds on, the faster it outputs energy—ending in a final burst upon total consumption.</description>
     <uiIconPath>UI/CodexEntries/WeCanChangeAnything_MenuIcon</uiIconPath>
+    <race>
+      <renderTree>WeCanChangeAnything</renderTree>
+    </race>
     <comps>
       <li Class="LCAbnormalities.WeCanChangeAnything.CompProperties_WeCanChangeAnything">
         <toolMode>Continuous</toolMode>
@@ -291,7 +294,7 @@
   <ThingDef ParentName="LC_ToolEntityBase">
     <defName>NotesFromCrazedResearcher</defName>
     <label>Notes from a Crazed Researcher</label>
-    <description>A frantic leather notebook scrawled with feverish diagrams and containment theories (T-09-78).\n\nCarrying it unlocks extraordinary work and abnormality study efficiency (+50% Work &amp; Study Speed, +20% Move Speed), yet two curses loom: taking 100 cumulative damage, or returning the notes before 30 seconds AND 1 completed abnormality study, detonates the notebook cleanly in the bearer's hands.</description>
+    <description>A frantic leather notebook scrawled with feverish diagrams and containment theories (T-09-78).\n\nCarrying it unlocks extraordinary work, research, and Abnormality study brilliance (+50% Work, Research &amp; Study Speed, +10% Study Success Rate, +25% Learning, +20% Move Speed), yet two curses loom: taking 60 cumulative HP/SP damage (Black damage counts double; redirected or immune hits excluded), or returning the notes before 30 seconds AND 1 completed non-tool Abnormality study, detonates the bearer in a violent 6.0-cell RED gore blast.</description>
     <uiIconPath>UI/CodexEntries/NotesFromCrazedResearcher_MenuIcon</uiIconPath>
     <descriptionHyperlinks>
       <HediffDef>LC_ResearcherNoteBuff</HediffDef>
@@ -315,25 +318,26 @@
         <expStatusType>Prudence</expStatusType>
         <expGainPerContinuousSecond>0.03</expGainPerContinuousSecond>
         <minSafeReturnTicks>1800</minSafeReturnTicks>
-        <maxCumulativeDamage>100</maxCumulativeDamage>
-        <explosionRadius>4.5</explosionRadius>
+        <maxCumulativeDamage>60</maxCumulativeDamage>
+        <explosionRadius>6.0</explosionRadius>
+        <explosionRedDamage>35</explosionRedDamage>
       </li>
       <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
         <studyNotes>
           <li>
             <threshold>30</threshold>
             <label>Observation Level: I</label>
-            <text>Carrying the notebook accelerates Work Speed, Abnormality Study Speed, Learning Speed, and Move Speed markedly.</text>
+            <text>Carrying the notebook accelerates Work Speed, Research Speed, Abnormality Study Speed (+50%), Study Success Rate (+10%), Learning Speed (+25%), and Move Speed (+20%).</text>
           </li>
           <li>
             <threshold>90</threshold>
             <label>Observation Level: II</label>
-            <text>DANGER: Any wearer who accumulates 100 damage while carrying the notes immediately explodes in a fatal 4.5-cell Black/Red detonation.</text>
+            <text>DANGER: Reaching 60 cumulative effective damage while holding the notes (Black damage counts double toward HP + SP; immune or Portrait-redirected hits excluded) triggers a fatal 6.0-cell RED gore explosion (35 damage).</text>
           </li>
           <li>
             <threshold>180</threshold>
             <label>Observation Level: III</label>
-            <text>SAFE RETURN RULE: Hold the notes for at least 30 seconds AND complete at least 1 Abnormality study job before returning them—otherwise they detonate upon placement.</text>
+            <text>SAFE RETURN RULE: Hold the notes for at least 30 seconds AND complete at least 1 non-tool Abnormality study job before returning them—otherwise the bearer detonates upon placement.</text>
           </li>
         </studyNotes>
       </li>

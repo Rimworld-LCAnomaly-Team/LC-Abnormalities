@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>SolemnLament_ButterflyRequiem</defName>
+    <label>Butterfly Requiem</label>
+    <description>Raise Solemn Lament's twin black and white pistols and unleash six alternating White and Black butterfly rounds before summoning a coffin swarm within 3.0 cells to crush and stun hostiles.</description>
+    <iconPath>UI/WeaponSkills/FuneralOfDeadButterflies/SolemnLament_ButterflyRequiem</iconPath>
+    <cooldownTicksRange>1080</cooldownTicksRange>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>LCAbnormalities.FuneralOfDeadButterflies.Verb_CastAbility_SolemnLamentRequiem</verbClass>
+      <range>25</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.65</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="LCAbnormalities.FuneralOfDeadButterflies.CompProperties_AbilitySolemnLamentRequiem">
+        <volleyDamageRange>7~10</volleyDamageRange>
+        <finaleDamageRange>18~24</finaleDamageRange>
+        <finaleRadius>3.0</finaleRadius>
+        <armorPenetration>0.48</armorPenetration>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

@@ -30,8 +30,11 @@
   <NothingThereEgg.comps.LC_CompEgg.activatingStringPending>正在砸碎一无所有卵</NothingThereEgg.comps.LC_CompEgg.activatingStringPending>
   <NothingThereEgg.comps.LC_CompEgg.guiLabelString>选择操作对象</NothingThereEgg.comps.LC_CompEgg.guiLabelString>
 
-  <!-- Projectile -->
+  <!-- Projectile & VFX -->
   <NothingThere_BoneSpikeProj.label>血肉骨刺</NothingThere_BoneSpikeProj.label>
+  <LC_MimicrySlashFX.label>拟态猩红锯刃斩击</LC_MimicrySlashFX.label>
+  <LC_MimicryGroundRuptureFX.label>拟态再见裂地冲击</LC_MimicryGroundRuptureFX.label>
+  <LC_MimicryChargeAuraFX.label>拟态再见蓄力血气</LC_MimicryChargeAuraFX.label>
 
   <!-- E.G.O Equipment -->
   <EgoWeapon_NothingThere.label>E.G.O. 武器（拟态）</EgoWeapon_NothingThere.label>

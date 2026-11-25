@@ -2,12 +2,12 @@
 <LanguageData>
 
   <LC_SnowQueenKiss.label>冰雪女皇之吻</LC_SnowQueenKiss.label>
-  <LC_SnowQueenKiss.description>冰雪女皇留下的冻霜花印。\n携带此状态时若再次对冰雪女皇取得“差”工作结果，将被立刻封印进冰棺之中；也可通过决斗胜利消除。</LC_SnowQueenKiss.description>
+  <LC_SnowQueenKiss.description>冰雪女皇留下的冻霜花印（普通结果 50%、差结果 100% 触发）。\n携带此印记期间若再度受吻，将被立刻封印进 90 秒冰棺；印记将在一天后自行消散，或于决斗胜利时一并消除。</LC_SnowQueenKiss.description>
 
   <LC_FrostSlow.label>极寒迟缓</LC_FrostSlow.label>
   <LC_FrostSlow.description>被“霜之碎片”长矛冻结筋脉，5 秒内移动速度显著降至 60%。</LC_FrostSlow.description>
 
   <LC_ResearcherNoteBuff.label>狂热手札增幅</LC_ResearcherNoteBuff.label>
-  <LC_ResearcherNoteBuff.description>正随身携带癫狂研究员的笔记。\n大幅加快常规作业与异想体研究速率；累计受伤满 100 点或在未满 30 秒且未完成 1 次研究前强行归还将引爆手札。</LC_ResearcherNoteBuff.description>
+  <LC_ResearcherNoteBuff.description>正随身携带癫狂研究员的笔记。\n常规工作、科研与异想体研究速率 +50%，异想体研究成功率 +10%；但累计承受 60 点 HP/SP 伤害（黑伤双倍计入）或在未满 30 秒且未完成 1 次研究前强行归还将引发血肉爆裂。</LC_ResearcherNoteBuff.description>
 
 </LanguageData>

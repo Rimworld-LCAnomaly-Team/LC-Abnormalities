@@ -22,29 +22,34 @@
   <LC_Funeral_KilledText>{0} 已被成功镇压并还原为收容蛋。</LC_Funeral_KilledText>
   <LC_Funeral_BadVirtueMsg>{0} 的勇气或正义等级违背了亡蝶葬仪禁忌，逆卡巴拉计数器下降！</LC_Funeral_BadVirtueMsg>
 
-  <LC_SnowQueen_FirstKissMsg>冰雪女皇在 {0} 身上印下了一枚冰霜之吻，切勿再度对其取得“差”工作结果！</LC_SnowQueen_FirstKissMsg>
+  <LC_SnowQueen_FirstKissMsg>冰雪女皇在 {0} 身上印下了一枚冰霜之吻，一天内切勿再与她冒二度受吻之险！</LC_SnowQueen_FirstKissMsg>
   <LC_SnowQueen_FrozenLetterLabel>冰棺封冻：{0}</LC_SnowQueen_FrozenLetterLabel>
-  <LC_SnowQueen_FrozenLetterText>连续两次糟糕工作令 {0} 被冰雪女皇封进了冰晶棺椁！请在 90 秒倒计时归零前派人进行“决斗救援”。</LC_SnowQueen_FrozenLetterText>
+  <LC_SnowQueen_FrozenLetterText>二度被吻令 {0} 被冰雪女皇封进了冰晶棺椁，收容单元已禁止常规研究！请在 90 秒倒计时归零前派人进行“决斗救援”。</LC_SnowQueen_FrozenLetterText>
   <LC_SnowQueen_FreezeTimeoutMsg>90 秒救援倒计时归零——{0} 随冰棺一同碎裂陨落！</LC_SnowQueen_FreezeTimeoutMsg>
   <LC_SnowQueen_DuelWinLetterLabel>决斗胜利：营救成功</LC_SnowQueen_DuelWinLetterLabel>
   <LC_SnowQueen_DuelWinLetterText>{0} 战胜了冰雪女皇的试炼，成功救出 {1}！二人都获赠了冰雪女皇的 E.G.O 饰品。</LC_SnowQueen_DuelWinLetterText>
   <LC_SnowQueen_DuelLossLetterLabel>决斗败北</LC_SnowQueen_DuelLossLetterLabel>
   <LC_SnowQueen_DuelLossLetterText>{0} 未能通过冰雪女皇的试炼，与 {1} 一同葬身于致命冰霜冲击之中。</LC_SnowQueen_DuelLossLetterText>
   <LC_SnowQueen_DuelGizmoLabel>决斗救援...</LC_SnowQueen_DuelGizmoLabel>
-  <LC_SnowQueen_DuelGizmoDesc>挑选一名殖民者前去与冰雪女皇决斗以解救 {0}。胜率取决于挑战者的勇气等级。</LC_SnowQueen_DuelGizmoDesc>
+  <LC_SnowQueen_DuelGizmoDesc>挑选一名殖民者前去与冰雪女皇决斗以解救 {0}。胜率随勇气等级提升（10%/30%/50%/80%/100%）。</LC_SnowQueen_DuelGizmoDesc>
   <LC_SnowQueen_DuelOption>{0}（勇气胜率 {1}%）</LC_SnowQueen_DuelOption>
   <LC_SnowQueen_InspectFrozen>被冰封殖民者：{0}（剩余 {1} 秒）</LC_SnowQueen_InspectFrozen>
+  <LC_SnowQueen_StudyBlockedFrozen>{0} 正被封冻在冰棺之中，须先通过“决斗救援”解冻。</LC_SnowQueen_StudyBlockedFrozen>
 
   <LC_ResearcherNote_EquipGizmoLabel>借阅笔记...</LC_ResearcherNote_EquipGizmoLabel>
-  <LC_ResearcherNote_EquipGizmoDesc>指派殖民者随身携带癫狂研究员的笔记（+50% 工作与研究速度）。须至少持有满 30 秒且完成 1 次研究后再归还，且累计受伤满 100 点会立刻爆炸。</LC_ResearcherNote_EquipGizmoDesc>
+  <LC_ResearcherNote_EquipGizmoDesc>指派殖民者随身携带癫狂研究员的笔记（+50% 工作、科研与研究速度，+10% 研究成功率）。须持有满 30 秒且完成 ≥1 次非工具异想体研究后再归还；累计承伤满 60 点（黑伤双倍计入）将立刻炸裂！</LC_ResearcherNote_EquipGizmoDesc>
   <LC_ResearcherNote_ReturnGizmoLabel>归还笔记</LC_ResearcherNote_ReturnGizmoLabel>
   <LC_ResearcherNote_ReturnGizmoDesc>命令 {0} 走回平台归还癫狂研究员的笔记。</LC_ResearcherNote_ReturnGizmoDesc>
-  <LC_ResearcherNote_EquipMsg>{0} 带走了癫狂研究员的笔记。请确保研究满 1 次且持有满 30 秒后再归还，同时避免受伤累计达 100 点！</LC_ResearcherNote_EquipMsg>
-  <LC_ResearcherNote_PrematureExplodeMsg>{0} 在未满足 30 秒与 1 次研究要求前匆忙归还了笔记，本子当场发生致命爆炸！</LC_ResearcherNote_PrematureExplodeMsg>
-  <LC_ResearcherNote_DamageExplodeMsg>{0} 携带着癫狂研究员的笔记累计承受了 100 点伤害，笔记骤然剧烈引爆！</LC_ResearcherNote_DamageExplodeMsg>
+  <LC_ResearcherNote_EquipMsg>{0} 带走了癫狂研究员的笔记。请先完成 1 次非工具异想体研究并持有满 30 秒再归还，切忌累计受击满 60 点！</LC_ResearcherNote_EquipMsg>
+  <LC_ResearcherNote_PrematureExplodeMsg>{0} 在未满足 30 秒与 1 次研究要求前匆忙归还了笔记，本子膨胀爆裂并摧毁了携带者！</LC_ResearcherNote_PrematureExplodeMsg>
+  <LC_ResearcherNote_DamageExplodeMsg>{0} 携带癫狂研究员的笔记期间累计承受达 60 点伤害，笔记骤然化作血肉炸裂！</LC_ResearcherNote_DamageExplodeMsg>
+  <LC_ResearcherNote_DangerWarningMsg>危险警告：{0} 身旁的癫狂研究员笔记正在剧烈膨胀颤抖（累计承伤 {1} / {2}）！</LC_ResearcherNote_DangerWarningMsg>
+  <LC_ResearcherNote_SafeReadyMsg>{0} 已满足癫狂研究员的笔记归还条件，如今可安全放回收容仓。</LC_ResearcherNote_SafeReadyMsg>
   <LC_ResearcherNote_SafeReturnMsg>{0} 满足了癫狂研究员的所有笔记要求，平平安安地将其放回平台。</LC_ResearcherNote_SafeReturnMsg>
   <LC_ResearcherNote_ExplodeLetterLabel>致命爆燃：癫狂研究员的笔记</LC_ResearcherNote_ExplodeLetterLabel>
-  <LC_ResearcherNote_StatusInspect>累计受伤上限：{0} / {1} | 已完成研究：{2} 次</LC_ResearcherNote_StatusInspect>
-  <LC_ResearcherNote_HediffTip>累计承受伤害：{0} / {1} | 已完成研究：{2} 次（安全归还需持有满 30 秒且完成 ≥1 次研究）</LC_ResearcherNote_HediffTip>
+  <LC_ResearcherNote_SafeTagReady>可安全归还</LC_ResearcherNote_SafeTagReady>
+  <LC_ResearcherNote_SafeTagWait>安全归还倒计时 {0} 秒</LC_ResearcherNote_SafeTagWait>
+  <LC_ResearcherNote_StatusInspect>累计承伤上限：{0} / {1} | 已完成研究：{2} 次（{3}）</LC_ResearcherNote_StatusInspect>
+  <LC_ResearcherNote_HediffTip>累计承受伤害：{0} / {1} | 已完成研究：{2} 次 | 研究成功率 +{3}%（安全归还需持有 ≥30 秒且完成 ≥1 次研究）</LC_ResearcherNote_HediffTip>
 
 </LanguageData>

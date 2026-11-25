@@ -2,5 +2,8 @@
 <LanguageData>
 
   <DyingOneSin.label>一罪与百善（死亡中）</DyingOneSin.label>
+  <LC_PenitenceHaloFX.label>忏悔十字圣辉光环</LC_PenitenceHaloFX.label>
+  <LC_PenitenceChargeAuraFX.label>忏悔圣光祈祷领域</LC_PenitenceChargeAuraFX.label>
+  <LC_PenitenceSkillRunnerFX.label>忏悔赎罪圣辉演出</LC_PenitenceSkillRunnerFX.label>
 
 </LanguageData>

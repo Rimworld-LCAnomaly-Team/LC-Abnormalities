@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Articulated Lobotomy Corporation Spine hierarchy (SnowQueen_photoshop.txt) -->
+  <PawnRenderTreeDef>
+    <defName>SnowQueen</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li Class="LCAbnormalities.SnowQueen.PawnRenderNodeProperties_SnowQueenPart">
+          <debugLabel>SnowQueenRoot</debugLabel>
+          <tagDef>SnowQueen_Root</tagDef>
+          <isRoot>true</isRoot>
+          <useGraphic>false</useGraphic>
+          <formScale>2.15</formScale>
+          <children>
+            <!-- bone4: upper torso & shoulder-wing/cloak pivot -->
+            <li Class="LCAbnormalities.SnowQueen.PawnRenderNodeProperties_SnowQueenPart">
+              <debugLabel>Torso</debugLabel>
+              <tagDef>SnowQueen_Torso</tagDef>
+              <isEmptyPivot>true</isEmptyPivot>
+              <useGraphic>false</useGraphic>
+              <children>
+                <!-- bone6: crowned head -->
+                <li Class="LCAbnormalities.SnowQueen.PawnRenderNodeProperties_SnowQueenPart">
+                  <debugLabel>Head</debugLabel>
+                  <tagDef>SnowQueen_Head</tagDef>
+                  <texPath>Things/Pawn/SnowQueen/Parts/SQ_Head</texPath>
+                  <baseLayer>4</baseLayer>
+                </li>
+                <!-- slot 2: SnowQueen_sleeve_back -->
+                <li Class="LCAbnormalities.SnowQueen.PawnRenderNodeProperties_SnowQueenPart">
+                  <debugLabel>SleeveBack</debugLabel>
+                  <tagDef>SnowQueen_SleeveBack</tagDef>
+                  <texPath>Things/Pawn/SnowQueen/Parts/SQ_SleeveBack</texPath>
+                  <baseLayer>5</baseLayer>
+                </li>
+                <!-- slot 3: SnowQueen_cape_inside -->
+                <li Class="LCAbnormalities.SnowQueen.PawnRenderNodeProperties_SnowQueenPart">
+                  <debugLabel>CapeInside</debugLabel>
+                  <tagDef>SnowQueen_CapeInside</tagDef>
+                  <texPath>Things/Pawn/SnowQueen/Parts/SQ_CapeInside</texPath>
+                  <baseLayer>6</baseLayer>
+                </li>
+                <!-- slot 4: SnowQueen_cape_back -->
+                <li Class="LCAbnormalities.SnowQueen.PawnRenderNodeProperties_SnowQueenPart">
+                  <debugLabel>CapeBack</debugLabel>
+                  <tagDef>SnowQueen_CapeBack</tagDef>
+                  <texPath>Things/Pawn/SnowQueen/Parts/SQ_CapeBack</texPath>
+                  <baseLayer>7</baseLayer>
+                </li>
+                <!-- slot 7: SnowQueen_shoulder_back -->
+                <li Class="LCAbnormalities.SnowQueen.PawnRenderNodeProperties_SnowQueenPart">
+                  <debugLabel>ShoulderBack</debugLabel>
+                  <tagDef>SnowQueen_ShoulderBack</tagDef>
+                  <texPath>Things/Pawn/SnowQueen/Parts/SQ_ShoulderBack</texPath>
+                  <baseLayer>10</baseLayer>
+                </li>
+                <!-- slot 8: SnowQueen_cape_front -->
+                <li Class="LCAbnormalities.SnowQueen.PawnRenderNodeProperties_SnowQueenPart">
+                  <debugLabel>CapeFront</debugLabel>
+                  <tagDef>SnowQueen_CapeFront</tagDef>
+                  <texPath>Things/Pawn/SnowQueen/Parts/SQ_CapeFront</texPath>
+                  <baseLayer>11</baseLayer>
+                </li>
+                <!-- bone9 -> bone10 arm chain + sleeve + hands + ice sword -->
+                <li Class="LCAbnormalities.SnowQueen.PawnRenderNodeProperties_SnowQueenPart">
+                  <debugLabel>ArmUpper</debugLabel>
+                  <tagDef>SnowQueen_ArmUpper</tagDef>
+                  <isEmptyPivot>true</isEmptyPivot>
+                  <useGraphic>false</useGraphic>
+                  <children>
+                    <li Class="LCAbnormalities.SnowQueen.PawnRenderNodeProperties_SnowQueenPart">
+                      <debugLabel>ArmLower</debugLabel>
+                      <tagDef>SnowQueen_ArmLower</tagDef>
+                      <isEmptyPivot>true</isEmptyPivot>
+                      <useGraphic>false</useGraphic>
+                      <children>
+                        <!-- slot 6: SnowQueen_hand_back (behind front hand, above sword) -->
+                        <li Class="LCAbnormalities.SnowQueen.PawnRenderNodeProperties_SnowQueenPart">
+                          <debugLabel>HandBack</debugLabel>
+                          <tagDef>SnowQueen_HandBack</tagDef>
+                          <texPath>Things/Pawn/SnowQueen/Parts/SQ_HandBack</texPath>
+                          <baseLayer>9</baseLayer>
+                        </li>
+                        <!-- slot 9: SnowQueen_hand_front + slot 5: SnowQueen_sword gripped beneath hands -->
+                        <li Class="LCAbnormalities.SnowQueen.PawnRenderNodeProperties_SnowQueenPart">
+                          <debugLabel>HandFront</debugLabel>
+                          <tagDef>SnowQueen_HandFront</tagDef>
+                          <texPath>Things/Pawn/SnowQueen/Parts/SQ_HandFront</texPath>
+                          <baseLayer>12</baseLayer>
+                          <children>
+                            <li Class="LCAbnormalities.SnowQueen.PawnRenderNodeProperties_SnowQueenPart">
+                              <debugLabel>Sword</debugLabel>
+                              <tagDef>SnowQueen_Sword</tagDef>
+                              <texPath>Things/Pawn/SnowQueen/Parts/SQ_Sword</texPath>
+                              <baseLayer>8</baseLayer>
+                            </li>
+                          </children>
+                        </li>
+                      </children>
+                    </li>
+                    <!-- slot 10: SnowQueen_sleeve_front -->
+                    <li Class="LCAbnormalities.SnowQueen.PawnRenderNodeProperties_SnowQueenPart">
+                      <debugLabel>SleeveFront</debugLabel>
+                      <tagDef>SnowQueen_SleeveFront</tagDef>
+                      <texPath>Things/Pawn/SnowQueen/Parts/SQ_SleeveFront</texPath>
+                      <baseLayer>13</baseLayer>
+                    </li>
+                  </children>
+                </li>
+                <!-- slot 11: SnowQueen_shoulder_front -->
+                <li Class="LCAbnormalities.SnowQueen.PawnRenderNodeProperties_SnowQueenPart">
+                  <debugLabel>ShoulderFront</debugLabel>
+                  <tagDef>SnowQueen_ShoulderFront</tagDef>
+                  <texPath>Things/Pawn/SnowQueen/Parts/SQ_ShoulderFront</texPath>
+                  <baseLayer>14</baseLayer>
+                </li>
+              </children>
+            </li>
+          </children>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

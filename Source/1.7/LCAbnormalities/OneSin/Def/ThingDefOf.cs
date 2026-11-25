@@ -20,6 +20,10 @@ namespace OneSin.Def
         /// </summary>
         public static ThingDef OneSinEgg;
 
+        public static ThingDef LC_PenitenceHaloFX;
+        public static ThingDef LC_PenitenceChargeAuraFX;
+        public static ThingDef LC_PenitenceSkillRunnerFX;
+
         static ThingDefOf()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(ThingDefOf));

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>WarmHeartedWoodsman</defName>
+    <label>Warm-Hearted Woodsman</label>
+    <description>Warm-Hearted Woodsman (F-05-32) is a moss-grown clockwork tin giant haunted by the pounding human heart locked inside its iron chest furnace.\nWorkers with overly high Temperance only stir its hunger for a living heart; when its Qliphoth Counter reaches 0, it lies quietly in wait to crush and devour the very next employee who enters.</description>
+    <uiIconPath>UI/CodexEntries/WarmHeartedWoodsman</uiIconPath>
+    <category>HE</category>
+    <orderInCategory>890</orderInCategory>
+    <linkedThings>
+      <li>WarmHeartedWoodsman</li>
+      <li>WarmHeartedWoodsmanEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

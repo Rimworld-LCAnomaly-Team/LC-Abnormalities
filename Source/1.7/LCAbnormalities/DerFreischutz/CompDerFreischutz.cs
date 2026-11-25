@@ -15,6 +15,7 @@ namespace LCAbnormalities.DerFreischutz
         public static ThingDef LC_MagicBulletBeamFX;
         public static ThingDef LC_MagicBulletPortalFX;
         public static ThingDef LC_MagicBulletHitFX;
+        public static ThingDef LC_MagicBulletSkillRunnerFX;
 
         public static SoundDef LC_DerFreischutz_Reload;
         public static SoundDef LC_DerFreischutz_Cocking;
@@ -74,6 +75,7 @@ namespace LCAbnormalities.DerFreischutz
         private DerFreischutzAnimPhase animPhase = DerFreischutzAnimPhase.Idle;
         private int phaseTicksElapsed;
         private IntVec3 pendingTargetCell = IntVec3.Invalid;
+        private Thing pendingTargetThing;
         private bool pendingShotFired;
         private bool pendingPortalSpawned;
         private bool pendingIsCursedSeventh;
@@ -199,6 +201,7 @@ namespace LCAbnormalities.DerFreischutz
             animPhase = DerFreischutzAnimPhase.Idle;
             phaseTicksElapsed = 0;
             pendingTargetCell = IntVec3.Invalid;
+            pendingTargetThing = null;
             pendingShotFired = false;
             pendingPortalSpawned = false;
             pendingIsCursedSeventh = false;
@@ -229,7 +232,7 @@ namespace LCAbnormalities.DerFreischutz
                     cell = origin + IntVec3.East;
                 }
 
-                BeginFiringSequence(cell, cursedSeventh: true);
+                BeginFiringSequence(cell, rogueTarget, cursedSeventh: true);
                 Find.LetterStack.ReceiveLetter(
                     "LC_DerFreischutz_MeltdownLabel".Translate(),
                     "LC_DerFreischutz_MeltdownText".Translate(),
@@ -241,6 +244,11 @@ namespace LCAbnormalities.DerFreischutz
         }
 
         public bool RequestMagicBulletAt(IntVec3 targetCell)
+        {
+            return RequestMagicBulletAtTarget(new LocalTargetInfo(targetCell));
+        }
+
+        public bool RequestMagicBulletAtTarget(LocalTargetInfo target)
         {
             if (parent == null || parent.Destroyed || PeBoxComp == null || parent.MapHeld == null)
             {
@@ -256,7 +264,8 @@ namespace LCAbnormalities.DerFreischutz
             PeBoxComp.CurAmountIndiPebox -= cost;
             shotsFired++;
 
-            IntVec3 actualTarget = targetCell;
+            IntVec3 actualTarget = target.Cell;
+            Thing actualTargetThing = target.HasThing && target.Thing != parent ? target.Thing : null;
             bool isSeventh = false;
             if (shotsFired >= 7)
             {
@@ -266,6 +275,7 @@ namespace LCAbnormalities.DerFreischutz
                 if (betrayedColonist != null && betrayedColonist.Spawned)
                 {
                     actualTarget = betrayedColonist.Position;
+                    actualTargetThing = betrayedColonist;
                     Messages.Message(
                         "LC_DerFreischutz_SeventhShotMsg".Translate(betrayedColonist.LabelShortCap),
                         betrayedColonist,
@@ -277,13 +287,14 @@ namespace LCAbnormalities.DerFreischutz
             if (actualTarget == parent.PositionHeld)
             {
                 actualTarget = parent.PositionHeld + IntVec3.East;
+                actualTargetThing = null;
             }
 
-            BeginFiringSequence(actualTarget, isSeventh);
+            BeginFiringSequence(actualTarget, actualTargetThing, isSeventh);
             return true;
         }
 
-        private void BeginFiringSequence(IntVec3 targetCell, bool cursedSeventh)
+        private void BeginFiringSequence(IntVec3 targetCell, Thing targetThing, bool cursedSeventh)
         {
             if (activeMuzzlePortal != null && !activeMuzzlePortal.Destroyed)
             {
@@ -295,6 +306,7 @@ namespace LCAbnormalities.DerFreischutz
             aimingLeft = origin.IsValid && targetCell.IsValid && targetCell.x < origin.x;
 
             pendingTargetCell = targetCell;
+            pendingTargetThing = targetThing;
             pendingIsCursedSeventh = cursedSeventh;
             pendingShotFired = false;
             pendingPortalSpawned = false;
@@ -309,7 +321,19 @@ namespace LCAbnormalities.DerFreischutz
             (parent as LC_DerFreischutzPawn)?.UpdateAnimation(force: true);
         }
 
-        private Vector3 ComputeMuzzleWorldPos(IntVec3 originCell, Vector3 shotDir)
+        private Vector3 ResolvePendingTargetWorldPos(Map map, IntVec3 originCell)
+        {
+            if (pendingTargetThing != null && !pendingTargetThing.Destroyed && pendingTargetThing.Spawned && pendingTargetThing.Map == map)
+            {
+                pendingTargetCell = pendingTargetThing.Position;
+                return pendingTargetThing.DrawPos.Yto0();
+            }
+
+            IntVec3 fallbackCell = pendingTargetCell.IsValid ? pendingTargetCell : (originCell + IntVec3.East);
+            return fallbackCell.ToVector3Shifted().Yto0();
+        }
+
+        private Vector3 ComputeMuzzleWorldPos(IntVec3 originCell, Vector3 targetVec, out Vector3 exactShotDir)
         {
             Vector3 center = originCell.ToVector3Shifted().Yto0();
             if (parent?.ParentHolder is LCAnomalyCore.Buildings.Building_AbnormalityHoldingPlatform platform)
@@ -321,11 +345,28 @@ namespace LCAbnormalities.DerFreischutz
                 center = holderThing.DrawPos.Yto0();
             }
 
+            Vector3 roughDelta = (targetVec - center).Yto0();
+            float roughDist = roughDelta.magnitude;
+            Vector3 roughDir = roughDist > 0.01f
+                ? roughDelta / roughDist
+                : (aimingLeft ? Vector3.left : Vector3.right);
+
             // Align muzzle portal right at the outstretched rifle barrel tip (UV ~0.98, 0.61 at formScale 2.2)
             float signX = aimingLeft ? -1f : 1f;
             Vector3 rifleTip = center + new Vector3(signX * 1.05f, 0f, 0.24f);
-            // Blend slightly toward shotDir for steep vertical shots so the portal stays coherent with the beam
-            return Vector3.Lerp(rifleTip, center + shotDir * 1.10f, 0.35f);
+            Vector3 muzzlePos = Vector3.Lerp(rifleTip, center + roughDir * 1.10f, 0.35f);
+
+            // Keep muzzle strictly behind very close targets so the shot never reverses direction
+            if (roughDist < 1.35f)
+            {
+                float shrink = Mathf.Clamp01((roughDist - 0.15f) / 1.20f);
+                muzzlePos = Vector3.Lerp(center, muzzlePos, shrink);
+            }
+
+            // Aim directly from the actual muzzle position through targetVec to eliminate any parallel parallax offset
+            Vector3 exactDelta = (targetVec - muzzlePos).Yto0();
+            exactShotDir = exactDelta.sqrMagnitude > 0.01f ? exactDelta.normalized : roughDir;
+            return muzzlePos;
         }
 
         private void SpawnMuzzlePortalForPendingShot()
@@ -337,15 +378,11 @@ namespace LCAbnormalities.DerFreischutz
                 return;
             }
 
-            Vector3 dir = (pendingTargetCell.ToVector3Shifted() - originCell.ToVector3Shifted()).Yto0();
-            if (dir.sqrMagnitude < 0.01f)
-            {
-                dir = aimingLeft ? Vector3.left : Vector3.right;
-            }
-            dir.Normalize();
+            Vector3 targetVec = ResolvePendingTargetWorldPos(map, originCell);
+            aimingLeft = targetVec.x < originCell.ToVector3Shifted().x;
 
-            Vector3 muzzlePos = ComputeMuzzleWorldPos(originCell, dir);
-            activeMuzzlePortal = MagicBulletVfxUtility.SpawnPortal(map, muzzlePos, dir, 1.75f, charging: true, cursedSeventh: pendingIsCursedSeventh);
+            Vector3 muzzlePos = ComputeMuzzleWorldPos(originCell, targetVec, out Vector3 dir);
+            activeMuzzlePortal = MagicBulletVfxUtility.SpawnPortal(map, muzzlePos, dir, 1.15f, charging: true, cursedSeventh: pendingIsCursedSeventh);
 
             SoundDef createSound = pendingIsCursedSeventh
                 ? (DerFreischutzDefOf.LC_DerFreischutz_CursedCreate ?? DerFreischutzDefOf.LC_DerFreischutz_Create)
@@ -369,35 +406,12 @@ namespace LCAbnormalities.DerFreischutz
                 return;
             }
 
-            IntVec3 targetCell = pendingTargetCell.IsValid ? pendingTargetCell : (originCell + IntVec3.East);
-            Vector3 originCenter = originCell.ToVector3Shifted().Yto0();
-            Vector3 targetVec = targetCell.ToVector3Shifted().Yto0();
-            Vector3 dir = (targetVec - originCenter).Yto0();
-            if (dir.sqrMagnitude < 0.01f)
-            {
-                dir = aimingLeft ? Vector3.left : Vector3.right;
-            }
-            dir.Normalize();
+            Vector3 targetVec = ResolvePendingTargetWorldPos(map, originCell);
+            aimingLeft = targetVec.x < originCell.ToVector3Shifted().x;
 
-            Vector3 start = ComputeMuzzleWorldPos(originCell, dir);
-            Vector3 edgePos = start;
-            int maxSteps = map.Size.x + map.Size.z + 8;
-            for (int i = 1; i <= maxSteps; i++)
-            {
-                Vector3 next = start + dir * i;
-                IntVec3 c = next.ToIntVec3();
-                if (!c.InBounds(map))
-                {
-                    break;
-                }
-                edgePos = next;
-            }
-
+            Vector3 start = ComputeMuzzleWorldPos(originCell, targetVec, out Vector3 dir);
+            Vector3 edgePos = Projectile_PiercingMagicBulletBase.ComputeMapBoundedEndPoint(map, start, dir, maxRange: -1f);
             IntVec3 destCell = edgePos.ToIntVec3().ClampInsideMap(map);
-            if (destCell == originCell)
-            {
-                destCell = targetCell.ClampInsideMap(map);
-            }
 
             if (activeMuzzlePortal != null && !activeMuzzlePortal.Destroyed)
             {
@@ -406,7 +420,7 @@ namespace LCAbnormalities.DerFreischutz
             }
             else
             {
-                MagicBulletVfxUtility.SpawnPortal(map, start, dir, 1.75f, charging: false, cursedSeventh: pendingIsCursedSeventh);
+                MagicBulletVfxUtility.SpawnPortal(map, start, dir, 1.15f, charging: false, cursedSeventh: pendingIsCursedSeventh);
             }
 
             if (DerFreischutzDefOf.LC_DerFreischutz_Shoot != null)
@@ -415,13 +429,18 @@ namespace LCAbnormalities.DerFreischutz
             }
 
             Color smokeCol = pendingIsCursedSeventh
-                ? new Color(0.45f, 0.18f, 0.78f)
-                : new Color(0.18f, 0.48f, 0.96f);
-            FleckMaker.ThrowDustPuffThick(start, map, 1.8f, smokeCol);
+                ? new Color(0.28f, 0.14f, 0.52f)
+                : new Color(0.12f, 0.28f, 0.58f);
+            FleckMaker.ThrowDustPuffThick(start, map, 0.85f, smokeCol);
+
+            LocalTargetInfo intended = pendingTargetThing != null && !pendingTargetThing.Destroyed && pendingTargetThing.Spawned && pendingTargetThing.Map == map
+                ? new LocalTargetInfo(pendingTargetThing)
+                : new LocalTargetInfo(pendingTargetCell.IsValid ? pendingTargetCell : destCell);
 
             Projectile_MagicBullet proj = (Projectile_MagicBullet)GenSpawn.Spawn(DerFreischutzDefOf.MagicBullet_Request, originCell, map);
-            proj.ConfigureShotVisuals(isCursedSeventh: pendingIsCursedSeventh, beamWidth: 2.25f, spawnOriginPortal: false);
-            proj.Launch(parent, start, destCell, destCell, ProjectileHitFlags.None);
+            proj.ConfigureShotVisuals(isCursedSeventh: pendingIsCursedSeventh, beamWidth: 0.72f, spawnOriginPortal: false);
+            proj.SetExactDestination(edgePos);
+            proj.Launch(parent, start, destCell, intended, ProjectileHitFlags.None);
         }
 
         public override IEnumerable<Gizmo> GetPlatformGizmos()
@@ -452,7 +471,7 @@ namespace LCAbnormalities.DerFreischutz
                         canTargetBuildings = true,
                         canTargetSelf = false
                     };
-                    Find.Targeter.BeginTargeting(tp, target => RequestMagicBulletAt(target.Cell));
+                    Find.Targeter.BeginTargeting(tp, target => RequestMagicBulletAtTarget(target));
                 }
             };
 
@@ -476,6 +495,7 @@ namespace LCAbnormalities.DerFreischutz
             Scribe_Values.Look(ref animPhase, "dfAnimPhase", DerFreischutzAnimPhase.Idle);
             Scribe_Values.Look(ref phaseTicksElapsed, "dfPhaseTicksElapsed", 0);
             Scribe_Values.Look(ref pendingTargetCell, "dfPendingTargetCell", IntVec3.Invalid);
+            Scribe_References.Look(ref pendingTargetThing, "dfPendingTargetThing");
             Scribe_Values.Look(ref pendingShotFired, "dfPendingShotFired", false);
             Scribe_Values.Look(ref pendingPortalSpawned, "dfPendingPortalSpawned", false);
             Scribe_Values.Look(ref pendingIsCursedSeventh, "dfPendingIsCursedSeventh", false);
@@ -544,8 +564,10 @@ namespace LCAbnormalities.DerFreischutz
         private Thing_MagicBulletBeam linkedBeam;
         private Vector3 shotDir = Vector3.right;
         private bool playedBulletResonance;
+        private bool hasExactDestinationOverride;
+        private Vector3 exactDestinationOverride;
         protected bool isCursedSeventhShot;
-        protected float configuredBeamWidth = 1.45f;
+        protected float configuredBeamWidth = 0.55f;
         protected bool spawnOriginPortalOnLaunch = true;
 
         public void ConfigureShotVisuals(bool isCursedSeventh, float beamWidth, bool spawnOriginPortal)
@@ -553,6 +575,58 @@ namespace LCAbnormalities.DerFreischutz
             isCursedSeventhShot = isCursedSeventh;
             configuredBeamWidth = beamWidth;
             spawnOriginPortalOnLaunch = spawnOriginPortal;
+        }
+
+        public void SetExactDestination(Vector3 exactDest)
+        {
+            exactDestinationOverride = exactDest.Yto0();
+            hasExactDestinationOverride = true;
+        }
+
+        /// <summary>沿精确方向射线解析求取地图边界（或最大射程）内的无量化浮点终点。</summary>
+        public static Vector3 ComputeMapBoundedEndPoint(Map map, Vector3 start, Vector3 dir, float maxRange)
+        {
+            Vector3 s = start.Yto0();
+            Vector3 d = dir.Yto0();
+            if (d.sqrMagnitude < 1e-6f)
+            {
+                d = Vector3.right;
+            }
+            else
+            {
+                d.Normalize();
+            }
+
+            float minX = 0.08f;
+            float maxX = Mathf.Max(minX, map.Size.x - 0.08f);
+            float minZ = 0.08f;
+            float maxZ = Mathf.Max(minZ, map.Size.z - 0.08f);
+
+            float tMax = maxRange > 0f ? maxRange : (map.Size.x + map.Size.z + 16f);
+            if (d.x > 1e-5f)
+            {
+                tMax = Mathf.Min(tMax, (maxX - s.x) / d.x);
+            }
+            else if (d.x < -1e-5f)
+            {
+                tMax = Mathf.Min(tMax, (minX - s.x) / d.x);
+            }
+
+            if (d.z > 1e-5f)
+            {
+                tMax = Mathf.Min(tMax, (maxZ - s.z) / d.z);
+            }
+            else if (d.z < -1e-5f)
+            {
+                tMax = Mathf.Min(tMax, (minZ - s.z) / d.z);
+            }
+
+            tMax = Mathf.Max(0.25f, tMax);
+            Vector3 end = s + d * tMax;
+            end.x = Mathf.Clamp(end.x, minX, maxX);
+            end.z = Mathf.Clamp(end.z, minZ, maxZ);
+            end.y = 0f;
+            return end;
         }
 
         public override void Launch(
@@ -569,6 +643,13 @@ namespace LCAbnormalities.DerFreischutz
             playedBulletResonance = false;
             base.Launch(launcher, origin, usedTarget, intendedTarget, ProjectileHitFlags.None, false, equipment, targetCoverDef);
 
+            // Eliminate vanilla Projectile.Launch's Gen.RandomHorizontalVector(0.3f) scatter and IntVec3 truncation
+            destination = hasExactDestinationOverride
+                ? exactDestinationOverride
+                : usedTarget.CenterVector3.Yto0();
+            ticksToImpact = Mathf.Max(1, Mathf.CeilToInt(StartingTicksToImpact));
+            lifetime = ticksToImpact;
+
             Map map = Map ?? launcher?.MapHeld;
             if (map != null)
             {
@@ -578,7 +659,7 @@ namespace LCAbnormalities.DerFreischutz
 
                 if (spawnOriginPortalOnLaunch)
                 {
-                    MagicBulletVfxUtility.SpawnPortal(map, this.origin + shotDir * 0.45f, shotDir, configuredBeamWidth * 0.82f, charging: false, cursedSeventh: isCursedSeventhShot);
+                    MagicBulletVfxUtility.SpawnPortal(map, this.origin + shotDir * 0.40f, shotDir, configuredBeamWidth * 1.45f, charging: false, cursedSeventh: isCursedSeventhShot);
                 }
 
                 linkedBeam = MagicBulletVfxUtility.SpawnBeam(map, this.origin, destination, configuredBeamWidth, speed, isCursedSeventhShot);
@@ -609,23 +690,7 @@ namespace LCAbnormalities.DerFreischutz
             }
 
             Vector3 curr = !Destroyed ? ExactPosition : destination;
-            IntVec3 c0 = prev.ToIntVec3().ClampInsideMap(map);
-            IntVec3 c1 = (curr.InBounds(map) ? curr : prev).ToIntVec3().ClampInsideMap(map);
-
-            if (c0 == c1)
-            {
-                SweepCell(map, c0);
-                return;
-            }
-
-            foreach (IntVec3 cell in GenSight.PointsOnLineOfSight(c0, c1))
-            {
-                if (cell.InBounds(map))
-                {
-                    SweepCell(map, cell);
-                }
-            }
-            SweepCell(map, c1);
+            SweepSegment(map, prev, curr);
         }
 
         protected override void Impact(Thing hitThing, bool blockedByShield = false)
@@ -640,11 +705,46 @@ namespace LCAbnormalities.DerFreischutz
             {
                 SweepCell(map, Position);
                 Color dustCol = isCursedSeventhShot
-                    ? new Color(0.48f, 0.22f, 0.92f)
-                    : new Color(0.20f, 0.56f, 0.98f);
-                FleckMaker.ThrowDustPuffThick(ExactPosition, map, 1.15f, dustCol);
+                    ? new Color(0.28f, 0.14f, 0.52f)
+                    : new Color(0.12f, 0.28f, 0.56f);
+                FleckMaker.ThrowDustPuffThick(ExactPosition, map, 0.60f, dustCol);
             }
             base.Impact(hitThing, blockedByShield);
+        }
+
+        private void SweepSegment(Map map, Vector3 p0, Vector3 p1)
+        {
+            Vector3 a = p0.Yto0();
+            Vector3 b = (p1.InBounds(map) ? p1 : p0).Yto0();
+            Vector3 seg = b - a;
+            float len = seg.magnitude;
+
+            IntVec3 lastCell = IntVec3.Invalid;
+            int steps = Mathf.Max(1, Mathf.CeilToInt(len / 0.35f));
+            for (int i = 0; i <= steps; i++)
+            {
+                float t = i / (float)steps;
+                IntVec3 cell = (a + seg * t).ToIntVec3().ClampInsideMap(map);
+                if (cell != lastCell)
+                {
+                    lastCell = cell;
+                    SweepCell(map, cell);
+                }
+            }
+
+            // Ensure a moving intended Pawn whose visual DrawPos crosses the exact beam never slips between Position & DrawPos
+            if (intendedTarget.HasThing && intendedTarget.Thing is Pawn intendedPawn &&
+                intendedPawn != launcher && intendedPawn.Spawned && !intendedPawn.Dead &&
+                !hitIds.Contains(intendedPawn.thingIDNumber))
+            {
+                Vector3 pawnPos = intendedPawn.DrawPos.Yto0();
+                float projT = len > 1e-4f ? Mathf.Clamp01(Vector3.Dot(pawnPos - a, seg) / (len * len)) : 0f;
+                Vector3 closest = a + seg * projT;
+                if ((pawnPos - closest).sqrMagnitude <= 0.65f * 0.65f)
+                {
+                    ApplyPiercingHit(map, intendedPawn, intendedPawn.Position.ClampInsideMap(map));
+                }
+            }
         }
 
         private void SweepCell(Map map, IntVec3 cell)
@@ -670,7 +770,6 @@ namespace LCAbnormalities.DerFreischutz
                 return;
             }
 
-            DamageDef damDef = DamageDef ?? LCAnomalyCore.Defs.DamageDefOf.LC_BlackDamage;
             for (int i = 0; i < victims.Count; i++)
             {
                 Pawn target = victims[i];
@@ -679,21 +778,31 @@ namespace LCAbnormalities.DerFreischutz
                     continue;
                 }
 
-                hitIds.Add(target.thingIDNumber);
-                TargetInfo hitLoc = new TargetInfo(cell, map);
-                if (DerFreischutzDefOf.LC_DerFreischutz_PierceHit != null)
-                {
-                    DerFreischutzDefOf.LC_DerFreischutz_PierceHit.PlayOneShot(hitLoc);
-                }
-                if (!playedBulletResonance && DerFreischutzDefOf.LC_DerFreischutz_Bullet != null)
-                {
-                    playedBulletResonance = true;
-                    DerFreischutzDefOf.LC_DerFreischutz_Bullet.PlayOneShot(hitLoc);
-                }
-
-                MagicBulletVfxUtility.SpawnHitBurst(map, target.DrawPos, shotDir, configuredBeamWidth * 0.85f, isCursedSeventhShot);
-                target.TakeDamage(new DamageInfo(damDef, DamageAmount, ArmorPenetration, ExactRotation.eulerAngles.y, launcher, weapon: equipmentDef));
+                ApplyPiercingHit(map, target, cell);
             }
+        }
+
+        private void ApplyPiercingHit(Map map, Pawn target, IntVec3 cell)
+        {
+            if (target == null || target.Destroyed || target.Dead || !hitIds.Add(target.thingIDNumber))
+            {
+                return;
+            }
+
+            DamageDef damDef = DamageDef ?? LCAnomalyCore.Defs.DamageDefOf.LC_BlackDamage;
+            TargetInfo hitLoc = new TargetInfo(cell, map);
+            if (DerFreischutzDefOf.LC_DerFreischutz_PierceHit != null)
+            {
+                DerFreischutzDefOf.LC_DerFreischutz_PierceHit.PlayOneShot(hitLoc);
+            }
+            if (!playedBulletResonance && DerFreischutzDefOf.LC_DerFreischutz_Bullet != null)
+            {
+                playedBulletResonance = true;
+                DerFreischutzDefOf.LC_DerFreischutz_Bullet.PlayOneShot(hitLoc);
+            }
+
+            MagicBulletVfxUtility.SpawnHitBurst(map, target.DrawPos, shotDir, configuredBeamWidth * 0.92f, isCursedSeventhShot);
+            target.TakeDamage(new DamageInfo(damDef, DamageAmount, ArmorPenetration, ExactRotation.eulerAngles.y, launcher, weapon: equipmentDef));
         }
     }
 
@@ -701,7 +810,7 @@ namespace LCAbnormalities.DerFreischutz
     {
         public Projectile_MagicBullet()
         {
-            configuredBeamWidth = 2.25f;
+            configuredBeamWidth = 0.72f;
         }
     }
 
@@ -709,7 +818,7 @@ namespace LCAbnormalities.DerFreischutz
     {
         public Projectile_EgoMagicBullet()
         {
-            configuredBeamWidth = 1.65f;
+            configuredBeamWidth = 0.55f;
             spawnOriginPortalOnLaunch = true;
         }
 
@@ -724,28 +833,28 @@ namespace LCAbnormalities.DerFreischutz
             ThingDef targetCoverDef = null)
         {
             Map map = launcher?.MapHeld;
-            LocalTargetInfo finalTarget = usedTarget;
-            Vector3 launchOrigin = origin;
+            LocalTargetInfo aimTarget = intendedTarget.IsValid ? intendedTarget : usedTarget;
+            LocalTargetInfo finalTarget = aimTarget;
+            Vector3 launchOrigin = origin.Yto0();
+
             if (map != null)
             {
-                Vector3 dir = (usedTarget.CenterVector3 - origin).Yto0();
-                if (dir.sqrMagnitude > 0.01f)
+                Vector3 aimPos = (aimTarget.HasThing && aimTarget.Thing.Spawned
+                    ? aimTarget.Thing.DrawPos
+                    : aimTarget.CenterVector3).Yto0();
+                Vector3 delta = aimPos - launchOrigin;
+                float distToAim = delta.magnitude;
+                if (distToAim > 0.01f)
                 {
-                    dir.Normalize();
-                    // Start the piercing lance cleanly from the rifle muzzle / magic portal
-                    launchOrigin = origin.Yto0() + dir * 0.72f;
-                    Vector3 extended = launchOrigin;
-                    int steps = Mathf.CeilToInt(equipmentDef?.Verbs?[0]?.range ?? 44f);
-                    for (int i = 1; i <= steps; i++)
-                    {
-                        Vector3 next = launchOrigin + dir * i;
-                        if (!next.InBounds(map))
-                        {
-                            break;
-                        }
-                        extended = next;
-                    }
-                    finalTarget = extended.ToIntVec3().ClampInsideMap(map);
+                    Vector3 dir = delta / distToAim;
+                    // Start the piercing lance cleanly from the rifle muzzle while staying strictly behind close targets
+                    float muzzleOffset = Mathf.Min(0.72f, distToAim * 0.45f);
+                    launchOrigin += dir * muzzleOffset;
+
+                    float maxRange = equipment?.def?.Verbs?[0]?.range ?? equipmentDef?.Verbs?[0]?.range ?? 44f;
+                    Vector3 exactEnd = ComputeMapBoundedEndPoint(map, launchOrigin, dir, maxRange);
+                    SetExactDestination(exactEnd);
+                    finalTarget = exactEnd.ToIntVec3().ClampInsideMap(map);
                 }
             }
 
@@ -755,7 +864,7 @@ namespace LCAbnormalities.DerFreischutz
                 spawnOriginPortalOnLaunch = false;
             }
 
-            base.Launch(launcher, launchOrigin, finalTarget, finalTarget, ProjectileHitFlags.None, false, equipment, targetCoverDef);
+            base.Launch(launcher, launchOrigin, finalTarget, aimTarget, ProjectileHitFlags.None, false, equipment, targetCoverDef);
         }
     }
 }

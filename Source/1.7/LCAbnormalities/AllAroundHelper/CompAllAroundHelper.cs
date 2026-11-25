@@ -37,6 +37,7 @@ namespace LCAbnormalities.AllAroundHelper
         public static ThingDef LC_GrinderSawSlashFX;
         public static ThingDef LC_GrinderFlurryFX;
         public static ThingDef LC_HelperSparkBurstFX;
+        public static ThingDef LC_GrinderMk4SkillRunnerFX;
 
         static AllAroundHelperDefOf()
         {

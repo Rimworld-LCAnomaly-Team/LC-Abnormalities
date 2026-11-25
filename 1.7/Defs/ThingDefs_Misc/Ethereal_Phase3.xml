@@ -113,6 +113,32 @@
     <saveCompressible>false</saveCompressible>
   </ThingDef>
 
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_JustitiaChargeSigilFX</defName>
+    <label>Justitia verdict charge sigil</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>LCAbnormalities.JudgementBird.Thing_JustitiaChargeSigil</thingClass>
+    <drawOffscreen>false</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>LC_JustitiaVerdictRunnerFX</defName>
+    <label>Justitia Pale Judgement sequence</label>
+    <selectable>false</selectable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <thingClass>LCAbnormalities.JudgementBird.Thing_JustitiaVerdictRunner</thingClass>
+    <drawOffscreen>true</drawOffscreen>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+  </ThingDef>
+
   <LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn ParentName="EtherealThingBase">
     <defName>DyingBigBird</defName>
     <label>Big Bird (Dissolving)</label>

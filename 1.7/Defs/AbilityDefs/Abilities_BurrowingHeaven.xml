@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>Heaven_RootImpale</defName>
+    <label>Erupting Root Impale</label>
+    <description>Coil the twin prongs of Heaven back to channel crimson roots before lunging forward in a 6.8-cell piercing lance sweep, then erupting jagged thorny spires beneath the target within 3.2 cells to stun and skewer hostiles.</description>
+    <iconPath>UI/WeaponSkills/BurrowingHeaven/Heaven_RootImpale</iconPath>
+    <cooldownTicksRange>1080</cooldownTicksRange>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>BurrowingHeaven.Effect.Verb_CastAbility_HeavenImpale</verbClass>
+      <range>6.5</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.70</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="BurrowingHeaven.Effect.CompProperties_AbilityHeavenImpale">
+        <pierceRange>6.8</pierceRange>
+        <eruptionRadius>3.2</eruptionRadius>
+        <lanceDamageRange>20~28</lanceDamageRange>
+        <spireDamageRange>34~44</spireDamageRange>
+        <armorPenetration>0.50</armorPenetration>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

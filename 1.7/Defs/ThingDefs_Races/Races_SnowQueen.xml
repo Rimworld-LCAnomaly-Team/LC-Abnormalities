@@ -4,7 +4,7 @@
   <ThingDef ParentName="LC_EntityBase">
     <defName>SnowQueen</defName>
     <label>The Snow Queen</label>
-    <description>An ethereal ice queen crowned in pale sapphire crystal (F-01-37).\n\nHer first Bad work leaves an icy Kiss upon the worker; a second Bad work seals them inside a crystalline ice coffin on a 90-second timer. Dispatch a high-Fortitude champion to "Duel for Rescue"—victory frees the captive and rewards both with the Snow Queen's E.G.O. Gift, while defeat claims them both.</description>
+    <description>An ethereal ice queen crowned in pale sapphire crystal (F-01-37).\n\nNormal work carries a 50% chance and Bad work a 100% chance of leaving her icy Kiss upon the worker; receiving a second Kiss seals them inside a crystalline ice coffin on a 90-second timer and locks normal work until resolved. Dispatch a high-Fortitude champion to "Duel for Rescue"—victory frees the captive and guarantees both receive the Snow Queen's E.G.O. Gift, while defeat claims them both.</description>
     <uiIconPath>UI/CodexEntries/SnowQueen</uiIconPath>
     <thingClass>LCAbnormalities.SnowQueen.LC_SnowQueenPawn</thingClass>
     <statBases>
@@ -47,10 +47,15 @@
         <shouldNotifyWhenEscape>false</shouldNotifyWhenEscape>
         <ifProvideWarningPoints>false</ifProvideWarningPoints>
         <customWarningPoints>-1</customWarningPoints>
+        <soundWorking>LC_SnowQueen_WorkLoop</soundWorking>
         <allowRoamingOutsideContainment>false</allowRoamingOutsideContainment>
         <dyingFxDef>DyingSnowQueen</dyingFxDef>
         <workDamageDef>LC_WhiteDamage</workDamageDef>
         <workDamageRange>4~5</workDamageRange>
+        <normalKissChance>0.50</normalKissChance>
+        <badKissChance>1.0</badKissChance>
+        <duelDurationTicks>240</duelDurationTicks>
+        <duelWhiteDamageTotalRange>10~14</duelWhiteDamageTotalRange>
         <instinctProbs>
           <li>0.30</li><li>0.30</li><li>0.40</li><li>0.40</li><li>0.50</li>
         </instinctProbs>
@@ -66,7 +71,7 @@
       </li>
       <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
         <lookForTargetOnEscape>false</lookForTargetOnEscape>
-        <hasAnimation>false</hasAnimation>
+        <hasAnimation>true</hasAnimation>
       </li>
       <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
         <frequencyTicks>60000</frequencyTicks>
@@ -87,7 +92,7 @@
       </li>
       <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
         <accessoryDef>Accessory_SnowQueen</accessoryDef>
-        <accessoryChance>0.03</accessoryChance>
+        <accessoryChance>0.0</accessoryChance>
         <unlockLevel>2</unlockLevel>
       </li>
       <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
@@ -111,12 +116,12 @@
           <li>
             <threshold>7</threshold>
             <label>Observation Level: II</label>
-            <text>A Bad result inflicts The Snow Queen's Kiss; a second Bad result freezes that worker inside an ice coffin for 90 seconds.\nUnlocks the E.G.O. Gift 'Frost Splinter'.</text>
+            <text>Normal work has a 50% chance and Bad work a 100% chance of applying The Snow Queen's Kiss; a second Kiss freezes that worker inside an ice coffin for 90 seconds and locks normal work.\nUnlocks the E.G.O. Gift 'Frost Splinter' (awarded exclusively by winning her rescue duel).</text>
           </li>
           <li>
             <threshold>12</threshold>
             <label>Observation Level: III</label>
-            <text>Click "Duel for Rescue" on the platform to send a challenger (Fortitude win rate: 25%/45%/65%/85%/95%). Winning frees the captive and awards the Snow Queen's Gift to both!</text>
+            <text>Click "Duel for Rescue" or right-click the platform to send a challenger (Fortitude win rate: 10%/30%/50%/80%/100%). Winning frees the captive and guarantees the Snow Queen's Gift for both!</text>
           </li>
           <li>
             <threshold>17</threshold>

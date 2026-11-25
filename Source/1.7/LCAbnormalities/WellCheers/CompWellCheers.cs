@@ -36,6 +36,10 @@ namespace LCAbnormalities.WellCheers
         public static JobDef LC_DrinkWellCheers;
         public static ThingDef LC_FX_WellCheersSeaWave;
         public static ThingDef LC_FX_WellCheersBubble;
+        public static ThingDef LC_WellCheersMuzzleFizzFX;
+        public static ThingDef LC_WellCheersSodaSplashFX;
+        public static ThingDef LC_WellCheersHealMistFX;
+        public static ThingDef LC_SodaSkillRunnerFX;
         public static AnimationDef WellCheers_Idle;
         public static AnimationDef WellCheers_Work;
         public static AnimationDef WellCheers_Dispense;
@@ -885,7 +889,7 @@ namespace LCAbnormalities.WellCheers
         }
     }
 
-    /// <summary>苏打步枪 E.G.O 伤害处理器：命中时有 18% 概率为射手恢复少量伤口与精神损伤。</summary>
+    /// <summary>苏打手枪 E.G.O 伤害处理器：命中时有 18% 概率为射手恢复少量伤口与精神损伤，并生成葡萄汽水舒缓雾气特效。</summary>
     public class DamageWorker_SodaHeal : LCAnomalyCore.DamageWorker.DamageWorker_FourColor
     {
         public override Verse.DamageWorker.DamageResult Apply(DamageInfo dinfo, Thing victim)
@@ -898,6 +902,7 @@ namespace LCAbnormalities.WellCheers
             {
                 LCAbnormalitiesHelper.HealInjuries(attacker, 2f);
                 LCAbnormalitiesHelper.RestoreMentalHealth(attacker, 0.05f);
+                WellCheersVfxUtility.SpawnHealMist(attacker);
             }
 
             return result;

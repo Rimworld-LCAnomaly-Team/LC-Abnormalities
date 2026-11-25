@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+    <defName>Ppodae</defName>
+    <label>Ppodae</label>
+    <description>Ppodae (D-02-107) looks like an adorable white Pekingese puppy that wags its tail for Instinct care.\nYet non-Instinct handling or Bad results quickly erode its patience, unleashing a hulking tattooed beast that tears through anyone in its path before rolling back into containment stasis once sated.</description>
+    <uiIconPath>UI/CodexEntries/Ppodae</uiIconPath>
+    <category>TETH</category>
+    <orderInCategory>860</orderInCategory>
+    <linkedThings>
+      <li>Ppodae</li>
+      <li>PpodaeEgg</li>
+    </linkedThings>
+  </LCAnomalyCore.Defs.AbnormalityCodexEntryDef>
+
+</Defs>

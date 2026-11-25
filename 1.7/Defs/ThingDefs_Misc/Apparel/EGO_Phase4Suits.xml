@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_Apparel_EGO">
+    <defName>Apparel_PpodaeSuit</defName>
+    <label>E.G.O. Suit (SO CUTE!!!)</label>
+    <description>A warm white fur-trimmed harness jacket extracted from Ppodae (TETH).\nOffers dependable resistance against Red and Black harm while keeping wearers nimble.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/PpodaeSuit/PpodaeSuit</texPath>
+    </graphicData>
+    <statBases>
+      <ArmorRating_Sharp>0.58</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.44</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.38</ArmorRating_Heat>
+      <Insulation_Cold>24</Insulation_Cold>
+      <Insulation_Heat>12</Insulation_Heat>
+      <Mass>2.6</Mass>
+      <EquipDelay>6</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>0.08</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li><li>Legs</li><li>Arms</li><li>Neck</li><li>Shoulders</li><li>Feet</li><li>Hands</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PpodaeSuit/PpodaeSuit</wornGraphicPath>
+      <layers><li>Middle</li><li>Shell</li></layers>
+      <useDeflectMetalEffect>false</useDeflectMetalEffect>
+      <soundWear>Wear_PowerArmor</soundWear>
+      <soundRemove>Remove_PowerArmor</soundRemove>
+    </apparel>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorApparelExtension">
+        <riskLevel>TETH</riskLevel>
+        <redResistance>0.8</redResistance>
+        <whiteResistance>1.5</whiteResistance>
+        <blackResistance>0.8</blackResistance>
+        <paleResistance>2.0</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_Apparel_EGO">
+    <defName>Apparel_WarmHeartedWoodsmanSuit</defName>
+    <label>E.G.O. Suit (Logging)</label>
+    <description>Heavy moss-flecked riveted ironwork plating extracted from Warm-Hearted Woodsman (HE).\nShields stalwartly against Red and Black impacts in close quarters.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/WarmHeartedWoodsmanSuit/WarmHeartedWoodsmanSuit</texPath>
+    </graphicData>
+    <statBases>
+      <ArmorRating_Sharp>0.86</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.64</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.55</ArmorRating_Heat>
+      <Insulation_Cold>22</Insulation_Cold>
+      <Insulation_Heat>18</Insulation_Heat>
+      <Mass>3.8</Mass>
+      <EquipDelay>9</EquipDelay>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li><li>Legs</li><li>Arms</li><li>Neck</li><li>Shoulders</li><li>Feet</li><li>Hands</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/WarmHeartedWoodsmanSuit/WarmHeartedWoodsmanSuit</wornGraphicPath>
+      <layers><li>Middle</li><li>Shell</li></layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+      <soundWear>Wear_PowerArmor</soundWear>
+      <soundRemove>Remove_PowerArmor</soundRemove>
+    </apparel>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorApparelExtension">
+        <riskLevel>HE</riskLevel>
+        <redResistance>0.8</redResistance>
+        <whiteResistance>1.2</whiteResistance>
+        <blackResistance>0.8</blackResistance>
+        <paleResistance>1.5</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_Apparel_EGO">
+    <defName>Apparel_FragmentOfTheUniverseSuit</defName>
+    <label>E.G.O. Suit (Fragments from Somewhere)</label>
+    <description>A vibrant violet tailcoat stitched with cosmic thread extracted from Fragment of the Universe (TETH).\nProvides standout TETH-grade resistance against Black damage.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/FragmentOfTheUniverseSuit/FragmentOfTheUniverseSuit</texPath>
+    </graphicData>
+    <statBases>
+      <ArmorRating_Sharp>0.54</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.42</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.45</ArmorRating_Heat>
+      <Insulation_Cold>18</Insulation_Cold>
+      <Insulation_Heat>22</Insulation_Heat>
+      <Mass>2.5</Mass>
+      <EquipDelay>6</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <LC_AbnormalityStudyRate>0.04</LC_AbnormalityStudyRate>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li><li>Legs</li><li>Arms</li><li>Neck</li><li>Shoulders</li><li>Feet</li><li>Hands</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/FragmentOfTheUniverseSuit/FragmentOfTheUniverseSuit</wornGraphicPath>
+      <layers><li>Middle</li><li>Shell</li></layers>
+      <useDeflectMetalEffect>false</useDeflectMetalEffect>
+      <soundWear>Wear_PowerArmor</soundWear>
+      <soundRemove>Remove_PowerArmor</soundRemove>
+    </apparel>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorApparelExtension">
+        <riskLevel>TETH</riskLevel>
+        <redResistance>1.0</redResistance>
+        <whiteResistance>1.2</whiteResistance>
+        <blackResistance>0.6</blackResistance>
+        <paleResistance>2.0</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="LC_Apparel_EGO">
+    <defName>Apparel_ScarecrowSearchingForWisdomSuit</defName>
+    <label>E.G.O. Suit (Harvest)</label>
+    <description>Stitched straw-woven plaid vestments extracted from Scarecrow Searching for Wisdom (HE).\nGrants formidable Red (0.6) and White (0.8) protection, though vulnerable to Black assaults.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/ScarecrowSearchingForWisdomSuit/ScarecrowSearchingForWisdomSuit</texPath>
+    </graphicData>
+    <statBases>
+      <ArmorRating_Sharp>0.90</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.58</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.52</ArmorRating_Heat>
+      <Insulation_Cold>20</Insulation_Cold>
+      <Insulation_Heat>18</Insulation_Heat>
+      <Mass>3.4</Mass>
+      <EquipDelay>8</EquipDelay>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li><li>Legs</li><li>Arms</li><li>Neck</li><li>Shoulders</li><li>Feet</li><li>Hands</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ScarecrowSearchingForWisdomSuit/ScarecrowSearchingForWisdomSuit</wornGraphicPath>
+      <layers><li>Middle</li><li>Shell</li></layers>
+      <useDeflectMetalEffect>false</useDeflectMetalEffect>
+      <soundWear>Wear_PowerArmor</soundWear>
+      <soundRemove>Remove_PowerArmor</soundRemove>
+    </apparel>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorApparelExtension">
+        <riskLevel>HE</riskLevel>
+        <redResistance>0.6</redResistance>
+        <whiteResistance>0.8</whiteResistance>
+        <blackResistance>1.3</blackResistance>
+        <paleResistance>1.5</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

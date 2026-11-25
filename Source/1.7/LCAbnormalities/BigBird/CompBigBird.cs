@@ -3,11 +3,13 @@ using LCAbnormalities.Shared;
 using LCAnomalyCore.Buildings;
 using LCAnomalyCore.Comp.Pawns;
 using LCAnomalyCore.DamageWorker;
+using LCAnomalyCore.Render.Weapon;
 using LCAnomalyCore.Util;
 using RimWorld;
 using UnityEngine;
 using Verse;
 using Verse.AI;
+using Verse.Sound;
 
 namespace LCAbnormalities.BigBird
 {
@@ -35,6 +37,9 @@ namespace LCAbnormalities.BigBird
         public static ThingDef LC_BigBirdEyeMarkFX;
         public static ThingDef LC_BigBirdBiteBurstFX;
         public static ThingDef LC_LampImpactFX;
+        public static ThingDef LC_LampSkillBeaconFX;
+        public static ThingDef LC_LampSkillRunnerFX;
+        public static DamageDef LC_Lamp_SkillBlack;
 
         static BigBirdDefOf()
         {
@@ -885,6 +890,12 @@ namespace LCAbnormalities.BigBird
 
         public override Verse.DamageWorker.DamageResult Apply(DamageInfo dinfo, Thing victim)
         {
+            Map victimMap = victim?.MapHeld;
+            IntVec3 center = victim?.PositionHeld ?? IntVec3.Invalid;
+            Vector3 hitPos = victim != null
+                ? (victim.Spawned ? victim.DrawPos : center.ToVector3Shifted())
+                : Vector3.zero;
+
             Pawn vp = victim as Pawn;
             bool alreadyMarked = vp != null && !vp.Dead && !vp.Destroyed && BigBirdDefOf.LC_LampDazed != null
                 && (vp.health?.hediffSet?.HasHediff(BigBirdDefOf.LC_LampDazed) ?? false);
@@ -907,14 +918,15 @@ namespace LCAbnormalities.BigBird
                 }
             }
 
-            if (victim != null && victim.MapHeld != null && victim.PositionHeld.InBounds(victim.MapHeld))
+            if (victim != null && victimMap != null && center.InBounds(victimMap))
             {
-                Map map = victim.MapHeld;
-                IntVec3 center = victim.PositionHeld;
-                Vector3 hitPos = victim.Spawned ? victim.DrawPos : center.ToVector3Shifted();
+                Map map = victimMap;
 
                 // Play authentic Lobotomy Corp hammer.wav + spawn custom GLSL golden-black smash impact VFX!
-                LCAbnormalitiesHelper.PlaySoundAt(BigBirdDefOf.LC_Lamp_Hammer, victim);
+                if (BigBirdDefOf.LC_Lamp_Hammer != null)
+                {
+                    BigBirdDefOf.LC_Lamp_Hammer.PlayOneShot(new TargetInfo(center, map));
+                }
                 BigBirdVfxUtility.SpawnLampImpact(map, hitPos, radius: 2.2f, proc: proc);
                 if (proc && vp != null && vp.Spawned)
                 {
@@ -923,6 +935,17 @@ namespace LCAbnormalities.BigBird
 
                 if (dinfo.Instigator is Pawn attacker)
                 {
+                    if (!EgoWeaponAnimationManager.IsPlaying(attacker, LampWeaponAnimHandler.ClipSkillSlam)
+                        && !EgoWeaponAnimationManager.IsPlaying(attacker, LampWeaponAnimHandler.ClipSkillWarmup))
+                    {
+                        ThingWithComps heldWeapon = attacker.equipment?.Primary;
+                        if (heldWeapon != null && heldWeapon.def?.defName == LampWeaponAnimHandler.WeaponDefName)
+                        {
+                            float aimAngle = EgoWeaponAnimationUtility.ResolveAimAngle(attacker, hitPos);
+                            EgoWeaponAnimationManager.Play(attacker, heldWeapon, LampWeaponAnimHandler.ClipNormalSmash, 64, aimAngle);
+                        }
+                    }
+
                     float splashAmt = Mathf.Max(5f, dinfo.Amount * 0.55f);
                     List<Pawn> nearby = new List<Pawn>(map.mapPawns.AllPawnsSpawned);
                     for (int i = 0; i < nearby.Count; i++)

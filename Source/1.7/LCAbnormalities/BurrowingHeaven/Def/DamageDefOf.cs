@@ -7,6 +7,8 @@ namespace BurrowingHeaven.Def
     public static class DamageDefOf
     {
         public static DamageDef LC_BurrowingHeaven_BlackDamage;
+        public static DamageDef LC_Heaven_RedImpale;
+        public static DamageDef LC_Heaven_SkillRed;
 
         static DamageDefOf()
         {

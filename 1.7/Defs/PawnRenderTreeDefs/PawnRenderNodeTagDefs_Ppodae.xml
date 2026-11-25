@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderNodeTagDef><defName>Ppodae_Root</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Puppy_Body</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Puppy_Tail</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Puppy_Leg4</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Puppy_Leg3</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Puppy_Leg2</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Puppy_Leg1</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Puppy_Head</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Puppy_Twinkle</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Puppy_Mouth</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Puppy_EarLeft</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Puppy_EarRight</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Frenzy_BackArmUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Frenzy_BackArmLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Frenzy_Tail</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Frenzy_BackLegUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Frenzy_BackLegLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Frenzy_Belly</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Frenzy_Chest</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Frenzy_FrontLegUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Frenzy_FrontLegLower</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Frenzy_Head</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Frenzy_Eye</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Frenzy_Mouth</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Frenzy_FrontArmUpper</defName></PawnRenderNodeTagDef>
+  <PawnRenderNodeTagDef><defName>Ppodae_Frenzy_FrontArmLower</defName></PawnRenderNodeTagDef>
+
+</Defs>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="LC_EntityBase">
+    <defName>FragmentOfTheUniverse</defName>
+    <label>Fragment of the Universe</label>
+    <description>A scribbly cosmic entity adorned with colorful crayon hearts that sings an incomprehensible star-song (O-03-60).\n\nIf an employee panics inside containment—or finishes work with a Normal (50% chance) or Bad (70% chance) outcome—its Qliphoth Counter (max 2) drops. Upon breaching, it sheds its cheerful heart to reveal jagged spikes and a roaring abyssal maw, stabbing nearby colonists with black tendrils and unleashing waves of resonant White song.</description>
+    <uiIconPath>UI/CodexEntries/FragmentOfTheUniverse</uiIconPath>
+    <thingClass>LCAbnormalities.FragmentOfTheUniverse.LC_FragmentOfTheUniversePawn</thingClass>
+    <statBases>
+      <MoveSpeed>3.6</MoveSpeed>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-200</ComfyTemperatureMin>
+      <ComfyTemperatureMax>150</ComfyTemperatureMax>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <LC_MinimumContainmentStrength>35</LC_MinimumContainmentStrength>
+      <StaggerDurationFactor>0.25</StaggerDurationFactor>
+      <ToxicResistance>1</ToxicResistance>
+    </statBases>
+    <tools>
+      <li>
+        <label>cosmic tentacle stab</label>
+        <capacities><li>LC_CosmosBreachTentacle</li></capacities>
+        <power>13</power>
+        <cooldownTime>1.35</cooldownTime>
+        <soundMeleeHit>LC_Cosmos_Hit</soundMeleeHit>
+      </li>
+    </tools>
+    <race>
+      <body>OneSin</body>
+      <baseBodySize>1.3</baseBodySize>
+      <baseHealthScale>3.5</baseHealthScale>
+      <intelligence>ToolUser</intelligence>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <fleshType>LC_AbnormalityOrganic</fleshType>
+      <foodType>None</foodType>
+      <hasCorpse>false</hasCorpse>
+      <lifeExpectancy>1000</lifeExpectancy>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <disableIgniteVerb>true</disableIgniteVerb>
+      <trainability>None</trainability>
+      <renderTree>FragmentOfTheUniverse</renderTree>
+      <thinkTreeMain>FragmentOfTheUniverseMain</thinkTreeMain>
+      <thinkTreeConstant>LC_AbnormalityConstant</thinkTreeConstant>
+      <lifeStageAges>
+        <li>
+          <def>LC_EntityFullyFormed</def>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="LCAbnormalities.FragmentOfTheUniverse.CompProperties_FragmentOfTheUniverse">
+        <qliphothCountMax>2</qliphothCountMax>
+        <studySucessRateBase>0.0</studySucessRateBase>
+        <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
+        <ifProvideWarningPoints>true</ifProvideWarningPoints>
+        <customWarningPoints>-1</customWarningPoints>
+        <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
+        <dyingFxDef>DyingFragmentOfTheUniverse</dyingFxDef>
+        <workDamageDef>LC_BlackDamage</workDamageDef>
+        <workDamageRange>1~3</workDamageRange>
+        <escapedLetterLabelKey>LC_Cosmos_EscapedLabel</escapedLetterLabelKey>
+        <escapedLetterTextKey>LC_Cosmos_EscapedText</escapedLetterTextKey>
+        <killedLetterLabelKey>LC_Cosmos_SuppressedLabel</killedLetterLabelKey>
+        <killedLetterTextKey>LC_Cosmos_SuppressedText</killedLetterTextKey>
+        <instinctProbs>
+          <li>0.30</li><li>0.30</li><li>0.20</li><li>0.20</li><li>0.20</li>
+        </instinctProbs>
+        <insightProbs>
+          <li>0.40</li><li>0.40</li><li>0.30</li><li>0.30</li><li>0.30</li>
+        </insightProbs>
+        <attachmentProbs>
+          <li>0.60</li><li>0.60</li><li>0.50</li><li>0.50</li><li>0.50</li>
+        </attachmentProbs>
+        <repressionProbs>
+          <li>0.50</li><li>0.50</li><li>0.40</li><li>0.40</li><li>0.40</li>
+        </repressionProbs>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
+        <lookForTargetOnEscape>true</lookForTargetOnEscape>
+        <hasAnimation>true</hasAnimation>
+        <heldDrawScale>1.0</heldDrawScale>
+        <heldDrawOffset>(0, 0, -0.05)</heldDrawOffset>
+      </li>
+      <li Class="LCAbnormalities.Shared.CompProperties_Studiable_LCBonus">
+        <frequencyTicks>60000</frequencyTicks>
+        <studyTimesPeriod>1</studyTimesPeriod>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <speedOffsetsByProgress>
+          <li>0</li><li>0.04</li><li>0.04</li><li>0.08</li><li>0.08</li>
+        </speedOffsetsByProgress>
+        <successOffsetsByProgress>
+          <li>0</li><li>0.04</li><li>0.04</li><li>0.08</li><li>0.08</li>
+        </successOffsetsByProgress>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_PeBoxProduce">
+        <peBoxDef>EnkephalinBox</peBoxDef>
+        <amountProdueRangeNormal>4~7</amountProdueRangeNormal>
+        <amountProdueMax>12</amountProdueMax>
+        <boxTexOffsetZ>0.0742</boxTexOffsetZ>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_Accessoryable">
+        <accessoryDef>Accessory_FragmentOfTheUniverse</accessoryDef>
+        <accessoryChance>0.05</accessoryChance>
+        <unlockLevel>2</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_EgoExtractable">
+        <weaponExtracted>EgoWeapon_FragmentOfTheUniverse</weaponExtracted>
+        <weaponIconPath>UI/Commands/ExtractEGO_FragmentOfTheUniverse_Weapon</weaponIconPath>
+        <amountMaxWeapon>3</amountMaxWeapon>
+        <weaponExtractedNeed>20</weaponExtractedNeed>
+        <armorExtracted>Apparel_FragmentOfTheUniverseSuit</armorExtracted>
+        <armorIconPath>UI/Commands/ExtractEGO_FragmentOfTheUniverse_Armor</armorIconPath>
+        <amountMaxArmor>2</amountMaxArmor>
+        <armorExtractedNeed>25</armorExtractedNeed>
+        <unlockLevel>3</unlockLevel>
+      </li>
+      <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityStudyUnlocks">
+        <studyNotes>
+          <li>
+            <threshold>2</threshold>
+            <label>Observation Level: I</label>
+            <text>Managerial Tip 1: When work yields a Normal result, its Qliphoth Counter (max 2) drops with a 50% chance.</text>
+          </li>
+          <li>
+            <threshold>4</threshold>
+            <label>Observation Level: II</label>
+            <text>Managerial Tip 2: When work yields a Bad result, its Qliphoth Counter drops with a 70% chance.\nUnlocks the E.G.O. Gift 'Fragments from Somewhere'.</text>
+          </li>
+          <li>
+            <threshold>7</threshold>
+            <label>Observation Level: III</label>
+            <text>Managerial Tip 3: If an employee suffers panic or a mental breakdown during work, the Qliphoth Counter drops immediately.</text>
+          </li>
+          <li>
+            <threshold>10</threshold>
+            <label>Observation Level: IV</label>
+            <text>When breaching, it lashes out with Black tentacles and periodically sings a haunting aria dealing AoE White damage.\nUnlocks the TETH E.G.O. Spear 'Fragments from Somewhere' and Suit.</text>
+          </li>
+        </studyNotes>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>TETH</abnormalityCategoryDef>
+      </li>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorTargetExtension">
+        <targetKind>Abnormality</targetKind>
+        <redResistance>1.0</redResistance>
+        <whiteResistance>1.5</whiteResistance>
+        <blackResistance>1.0</blackResistance>
+        <paleResistance>2.0</paleResistance>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

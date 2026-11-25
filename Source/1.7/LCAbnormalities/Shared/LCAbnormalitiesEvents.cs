@@ -136,7 +136,19 @@ namespace LCAbnormalities.Shared
 
         private static void HandlePawnKilled(Pawn victim, DamageInfo? dinfo)
         {
-            if (victim == null || !(victim.RaceProps?.Humanlike ?? false))
+            if (victim == null)
+            {
+                return;
+            }
+
+            if (!(victim is JudgementBird.LC_JudgementBirdPawn)
+                && dinfo.HasValue
+                && dinfo.Value.Instigator is JudgementBird.LC_JudgementBirdPawn)
+            {
+                JudgementBird.JudgementBirdVfxUtility.TrySpawnGallowsForVictim(victim);
+            }
+
+            if (!(victim.RaceProps?.Humanlike ?? false))
             {
                 return;
             }

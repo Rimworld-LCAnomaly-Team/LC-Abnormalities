@@ -4,7 +4,10 @@
   <ThingDef ParentName="LC_BaseRangedWeapon_EGO">
     <defName>EgoWeapon_LittleRedRidingHoodedMercenary</defName>
     <label>E.G.O. Weapon (Crimson Scar)</label>
-    <description>A paired hand-cannon and crimson sickle extracted from Little Red Riding Hooded Mercenary (WAW).\nExcels at both mid-range Red gunfire and close-quarters slashing, scaling up to +50% bonus damage—and unleashing blood-red berserk shockwaves and cleaves—as its wielder's health falls.</description>
+    <description>A paired hand-cannon and crimson sickle extracted from Little Red Riding Hooded Mercenary (WAW).\nExcels at both mid-range Red gunfire and close-quarters slashing, scaling up to +50% bonus damage—and unleashing blood-red berserk shockwaves and cleaves—as its wielder's health falls.\nActive skill: Crimson Hunt Barrage.</description>
+    <descriptionHyperlinks>
+      <AbilityDef>CrimsonScar_HuntBarrage</AbilityDef>
+    </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/EgoWeapon_LittleRedRidingHoodedMercenary</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -43,6 +46,19 @@
         <cooldownTime>1.35</cooldownTime>
       </li>
     </tools>
+    <!-- 覆盖 BaseWeapon 的 CompEquippable，避免与 CompEquippableAbility 重复注册近战 Verb LoadID -->
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_EquippableAbility">
+        <abilityDef>CrimsonScar_HuntBarrage</abilityDef>
+      </li>
+      <li Class="CompProperties_Styleable"/>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
     <modExtensions>
       <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
         <damageType>Red</damageType>

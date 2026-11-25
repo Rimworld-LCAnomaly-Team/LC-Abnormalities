@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ShaderTypeDef>
+    <defName>LC_MimicryCleave</defName>
+    <shaderPath>Map/LC_MimicryCleave</shaderPath>
+  </ShaderTypeDef>
+
+  <ShaderTypeDef>
+    <defName>LC_MimicryGroundRupture</defName>
+    <shaderPath>Map/LC_MimicryGroundRupture</shaderPath>
+  </ShaderTypeDef>
+
+</Defs>

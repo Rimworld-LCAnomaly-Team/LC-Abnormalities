@@ -36,10 +36,12 @@
         <cooldownTime>2.4</cooldownTime>
       </li>
     </tools>
-    <comps>
+    <comps Inherit="False">
+      <li Class="CompProperties_Forbiddable"/>
       <li Class="CompProperties_EquippableAbility">
         <abilityDef>Whirlwind_OmNomNom</abilityDef>
       </li>
+      <li Class="CompProperties_Styleable"/>
     </comps>
     <modExtensions>
       <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">

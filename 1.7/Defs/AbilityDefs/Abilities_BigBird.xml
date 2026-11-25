@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>Lamp_LanternSalvation</defName>
+    <label>Lantern of Salvation</label>
+    <description>Raise the brass lantern of Big Bird above head, mesmerizing nearby hostiles in a 5.5-cell golden Black-damage pulse that inflicts Lantern Gaze, before crashing the massive hammerhead down in a devastating Black shockwave (+30% damage against gazed foes).</description>
+    <iconPath>UI/WeaponSkills/BigBird/Lamp_LanternSalvation</iconPath>
+    <cooldownTicksRange>1200</cooldownTicksRange>
+    <hostile>true</hostile>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    <aiCanUse>true</aiCanUse>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>LCAbnormalities.BigBird.Verb_CastAbility_LampSalvation</verbClass>
+      <range>5.5</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.90</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="LCAbnormalities.BigBird.CompProperties_AbilityLampSalvation">
+        <pulseRadius>5.5</pulseRadius>
+        <slamRadius>3.2</slamRadius>
+        <pulseDamageRange>16~22</pulseDamageRange>
+        <slamDamageRange>36~48</slamDamageRange>
+        <armorPenetration>0.45</armorPenetration>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

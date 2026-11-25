@@ -9,4 +9,46 @@
     <drawOffscreen>true</drawOffscreen>
   </LCAnomalyCore.Defs.ThingDef_AbnormalityEntity_Spawn>
 
+  <!-- 忏悔圣光十字与赎罪光轮特效 -->
+  <ThingDef>
+    <defName>LC_PenitenceHaloFX</defName>
+    <label>Penitence Halo FX</label>
+    <thingClass>OneSin.Effect.Thing_PenitenceHaloFX</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+  <!-- 忏悔祷告圣光环绕聚能特效 -->
+  <ThingDef>
+    <defName>LC_PenitenceChargeAuraFX</defName>
+    <label>Penitence Charge Aura FX</label>
+    <thingClass>OneSin.Effect.Thing_PenitenceChargeAura</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
+  <!-- 忏悔技能时序驱动器 -->
+  <ThingDef>
+    <defName>LC_PenitenceSkillRunnerFX</defName>
+    <label>Penitence Skill Runner</label>
+    <thingClass>OneSin.Effect.Thing_PenitenceSkillRunner</thingClass>
+    <category>Ethereal</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>None</drawerType>
+    <useHitPoints>false</useHitPoints>
+    <selectable>false</selectable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <saveCompressible>false</saveCompressible>
+  </ThingDef>
+
 </Defs>
