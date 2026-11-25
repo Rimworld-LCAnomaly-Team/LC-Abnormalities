@@ -450,6 +450,14 @@ namespace LCAbnormalities.Shared
 
         protected override void Tick()
         {
+            CompAbnormalityHoldingPlatformTarget holdTarget = GetComp<CompAbnormalityHoldingPlatformTarget>();
+            if (holdTarget != null && holdTarget.CurrentlyContainedInRoom)
+            {
+                TickHolded();
+                base.Tick();
+                return;
+            }
+
             CompLCAbnormality comp = LCComp;
             if (Spawned && CarriedBy == null && comp != null)
             {

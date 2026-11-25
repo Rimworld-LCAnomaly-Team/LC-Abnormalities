@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using LCAbnormalities.Shared;
 using LCAnomalyCore.Buildings;
 using LCAnomalyCore.Comp.Pawns;
+using LCAnomalyCore.Interface;
 using LCAnomalyCore.Util;
 using RimWorld;
 using UnityEngine;
@@ -186,10 +187,10 @@ namespace LCAbnormalities.WellCheers
         public override void Notify_StudyStart(Pawn studier)
         {
             base.Notify_StudyStart(studier);
-            Building_AbnormalityHoldingPlatform platform = HoldingPlaformTargetComp?.HeldPlatform;
-            if (platform != null)
+            IAbnormalityContainmentUnit unit = HoldingPlaformTargetComp?.HeldUnit;
+            if (unit != null)
             {
-                lastStudyWorkType = platform.CurWorkType;
+                lastStudyWorkType = unit.CurWorkType;
                 currentFlavor = MapWorkTypeToFlavor(lastStudyWorkType);
             }
 
@@ -232,10 +233,21 @@ namespace LCAbnormalities.WellCheers
 
         #region 直接右键交互与 Gizmo
 
+        private Thing GetDirectDrinkTarget()
+        {
+            IAbnormalityContainmentUnit unit = HoldingPlaformTargetComp?.HeldUnit;
+            if (unit == null)
+            {
+                return null;
+            }
+
+            return (unit.IsRoomContainment && parent.Spawned) ? (Thing)parent : unit.UnitThing;
+        }
+
         public AcceptanceReport CanDirectDrink(Pawn pawn)
         {
-            Building_AbnormalityHoldingPlatform platform = HoldingPlaformTargetComp?.HeldPlatform;
-            if (platform == null || !platform.Spawned || platform.Map == null)
+            Thing target = GetDirectDrinkTarget();
+            if (target == null || !target.Spawned || target.Map == null)
             {
                 return false;
             }
@@ -255,18 +267,18 @@ namespace LCAbnormalities.WellCheers
 
         public bool TryOrderDirectDrink(Pawn pawn, WellCheersFlavor flavor)
         {
-            Building_AbnormalityHoldingPlatform platform = HoldingPlaformTargetComp?.HeldPlatform;
-            if (platform == null || WellCheersDefOf.LC_DrinkWellCheers == null || !CanDirectDrink(pawn).Accepted)
+            Thing target = GetDirectDrinkTarget();
+            if (target == null || WellCheersDefOf.LC_DrinkWellCheers == null || !CanDirectDrink(pawn).Accepted)
             {
                 return false;
             }
 
-            if (!pawn.CanReach(platform, PathEndMode.Touch, Danger.Deadly) || !pawn.CanReserve(platform))
+            if (!pawn.CanReach(target, PathEndMode.Touch, Danger.Deadly) || !pawn.CanReserve(target))
             {
                 return false;
             }
 
-            Job job = JobMaker.MakeJob(WellCheersDefOf.LC_DrinkWellCheers, platform);
+            Job job = JobMaker.MakeJob(WellCheersDefOf.LC_DrinkWellCheers, target);
             job.count = (int)flavor;
             return pawn.jobs?.TryTakeOrderedJob(job, JobTag.Misc) ?? false;
         }
@@ -329,8 +341,8 @@ namespace LCAbnormalities.WellCheers
 
         public override IEnumerable<FloatMenuOption> GetPlatformFloatMenuOptions(Pawn selPawn)
         {
-            Building_AbnormalityHoldingPlatform platform = HoldingPlaformTargetComp?.HeldPlatform;
-            if (selPawn == null || platform == null || !platform.Spawned || platform.Map == null || !selPawn.RaceProps.Humanlike)
+            Thing target = GetDirectDrinkTarget();
+            if (selPawn == null || target == null || !target.Spawned || target.Map == null || !selPawn.RaceProps.Humanlike)
             {
                 yield break;
             }
@@ -345,7 +357,7 @@ namespace LCAbnormalities.WellCheers
                 yield break;
             }
 
-            if (!selPawn.CanReach(platform, PathEndMode.Touch, Danger.Deadly))
+            if (!selPawn.CanReach(target, PathEndMode.Touch, Danger.Deadly))
             {
                 yield return new FloatMenuOption(
                     "LC_WellCheers_DrinkMenuDisabled".Translate(parent.LabelCap, "NoPath".Translate()).Resolve(),
@@ -353,7 +365,7 @@ namespace LCAbnormalities.WellCheers
                 yield break;
             }
 
-            if (!selPawn.CanReserve(platform))
+            if (!selPawn.CanReserve(target))
             {
                 yield return new FloatMenuOption(
                     "LC_WellCheers_DrinkMenuDisabled".Translate(parent.LabelCap, "Reserved".Translate()).Resolve(),
@@ -361,12 +373,12 @@ namespace LCAbnormalities.WellCheers
                 yield break;
             }
 
-            yield return MakeFlavorFloatOption(selPawn, platform, WellCheersFlavor.Red, "LC_WellCheers_DrinkRedOption");
-            yield return MakeFlavorFloatOption(selPawn, platform, WellCheersFlavor.Blue, "LC_WellCheers_DrinkBlueOption");
-            yield return MakeFlavorFloatOption(selPawn, platform, WellCheersFlavor.Purple, "LC_WellCheers_DrinkPurpleOption");
+            yield return MakeFlavorFloatOption(selPawn, target, WellCheersFlavor.Red, "LC_WellCheers_DrinkRedOption");
+            yield return MakeFlavorFloatOption(selPawn, target, WellCheersFlavor.Blue, "LC_WellCheers_DrinkBlueOption");
+            yield return MakeFlavorFloatOption(selPawn, target, WellCheersFlavor.Purple, "LC_WellCheers_DrinkPurpleOption");
         }
 
-        private FloatMenuOption MakeFlavorFloatOption(Pawn selPawn, Building_AbnormalityHoldingPlatform platform, WellCheersFlavor flavor, string labelKey)
+        private FloatMenuOption MakeFlavorFloatOption(Pawn selPawn, Thing interactTarget, WellCheersFlavor flavor, string labelKey)
         {
             return FloatMenuUtility.DecoratePrioritizedTask(
                 new FloatMenuOption(
@@ -377,26 +389,27 @@ namespace LCAbnormalities.WellCheers
                     },
                     MenuOptionPriority.Default,
                     null,
-                    platform),
+                    interactTarget),
                 selPawn,
-                platform);
+                interactTarget);
         }
 
         public override IEnumerable<Gizmo> GetPlatformGizmos()
         {
-            Building_AbnormalityHoldingPlatform platform = HoldingPlaformTargetComp?.HeldPlatform;
-            if (platform == null || !platform.Spawned || platform.Map == null)
+            IAbnormalityContainmentUnit unit = HoldingPlaformTargetComp?.HeldUnit;
+            Thing target = GetDirectDrinkTarget();
+            if (unit == null || target == null || !target.Spawned || target.Map == null)
             {
                 yield break;
             }
 
-            WellCheersFlavor platformFlavor = MapWorkTypeToFlavor(platform.CurWorkType);
+            WellCheersFlavor platformFlavor = MapWorkTypeToFlavor(unit.CurWorkType);
             Command_Action cmd = new Command_Action
             {
                 defaultLabel = "LC_WellCheers_DrinkGizmoLabel".Translate(),
                 defaultDesc = "LC_WellCheers_DrinkGizmoDesc".Translate(GetFlavorLabel(platformFlavor)),
                 icon = ContentFinder<Texture2D>.Get("UI/CodexEntries/WellCheers", reportFailure: false) ?? BaseContent.BadTex,
-                action = () => OpenDirectDrinkColonistMenu(platform, platformFlavor)
+                action = () => OpenDirectDrinkColonistMenu(target, platformFlavor)
             };
 
             if (IsDirectDrinkOnCooldown)
@@ -407,9 +420,9 @@ namespace LCAbnormalities.WellCheers
             yield return cmd;
         }
 
-        private void OpenDirectDrinkColonistMenu(Building_AbnormalityHoldingPlatform platform, WellCheersFlavor flavor)
+        private void OpenDirectDrinkColonistMenu(Thing interactTarget, WellCheersFlavor flavor)
         {
-            Map map = platform?.Map;
+            Map map = interactTarget?.Map;
             if (map?.mapPawns?.FreeColonistsSpawned == null)
             {
                 return;
@@ -420,7 +433,7 @@ namespace LCAbnormalities.WellCheers
             for (int i = 0; i < colonists.Count; i++)
             {
                 Pawn c = colonists[i];
-                if (c == null || c.Dead || c.Downed || !c.CanReach(platform, PathEndMode.Touch, Danger.Deadly))
+                if (c == null || c.Dead || c.Downed || !c.CanReach(interactTarget, PathEndMode.Touch, Danger.Deadly))
                 {
                     continue;
                 }
@@ -680,9 +693,11 @@ namespace LCAbnormalities.WellCheers
     /// <summary>殖民者直接走近收容平台从韦尔奇乐牌汽水机接汽水饮用的工作驱动。</summary>
     public class JobDriver_DrinkWellCheers : JobDriver
     {
-        private Building_AbnormalityHoldingPlatform TargetPlatform => job.targetA.Thing as Building_AbnormalityHoldingPlatform;
+        private Thing TargetDrinkThing => job.targetA.Thing;
 
-        private CompWellCheers WellCheersComp => TargetPlatform?.HeldPawn?.TryGetComp<CompWellCheers>();
+        private CompWellCheers WellCheersComp =>
+            (TargetDrinkThing as IAbnormalityContainmentUnit)?.HeldPawn?.TryGetComp<CompWellCheers>()
+            ?? TargetDrinkThing?.TryGetComp<CompWellCheers>();
 
         private WellCheersFlavor SelectedFlavor =>
             job.count == (int)WellCheersFlavor.Red
@@ -691,7 +706,7 @@ namespace LCAbnormalities.WellCheers
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            return pawn.Reserve(TargetPlatform, job, 1, -1, null, errorOnFailed);
+            return pawn.Reserve(TargetDrinkThing, job, 1, -1, null, errorOnFailed);
         }
 
         protected override IEnumerable<Toil> MakeNewToils()

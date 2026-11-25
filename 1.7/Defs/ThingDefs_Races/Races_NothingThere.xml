@@ -96,6 +96,7 @@
         <ifProvideWarningPoints>true</ifProvideWarningPoints>
         <customWarningPoints>-1</customWarningPoints>
         <soundWorking>NothingThere_WorkLoop</soundWorking>
+        <canWanderInContainmentRoom>true</canWanderInContainmentRoom>
       </li>
       <li Class="LCAnomalyCore.Comp.CompProperties_AbnormalityHoldingPlatformTarget">
         <lookForTargetOnEscape>true</lookForTargetOnEscape>

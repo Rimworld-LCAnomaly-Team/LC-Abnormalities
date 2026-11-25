@@ -3,6 +3,7 @@ using LCAbnormalities.Shared;
 using LCAnomalyCore.Buildings;
 using LCAnomalyCore.Comp;
 using LCAnomalyCore.Comp.Pawns;
+using LCAnomalyCore.Interface;
 using LCAnomalyCore.Util;
 using RimWorld;
 using UnityEngine;
@@ -580,8 +581,9 @@ namespace LCAbnormalities.FairyFestival
             {
                 for (int i = 0; i < buildings.Count; i++)
                 {
-                    if (buildings[i] is Building_AbnormalityHoldingPlatform platform
-                        && platform.HeldPawn is LC_FairyFestivalPawn heldFairy
+                    if (buildings[i] is IAbnormalityContainmentUnit unit
+                        && !unit.IsRoomContainment
+                        && unit.HeldPawn is LC_FairyFestivalPawn heldFairy
                         && !heldFairy.Destroyed
                         && !heldFairy.Dead)
                     {

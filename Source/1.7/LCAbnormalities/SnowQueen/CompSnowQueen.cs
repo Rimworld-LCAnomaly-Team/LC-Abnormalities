@@ -3,6 +3,7 @@ using System.Linq;
 using LCAbnormalities.Shared;
 using LCAnomalyCore.Buildings;
 using LCAnomalyCore.Comp.Pawns;
+using LCAnomalyCore.Interface;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -565,14 +566,15 @@ namespace LCAbnormalities.SnowQueen
                 yield break;
             }
 
-            Building_AbnormalityHoldingPlatform platform = HoldingPlaformTargetComp?.HeldPlatform;
-            if (platform == null)
+            IAbnormalityContainmentUnit unit = HoldingPlaformTargetComp?.HeldUnit;
+            Thing duelTarget = (unit != null && unit.IsRoomContainment && parent.Spawned) ? (Thing)parent : unit?.UnitThing;
+            if (duelTarget == null || !duelTarget.Spawned || duelTarget.Map == null)
             {
                 yield break;
             }
 
             float pct = GetFortitudeWinChance(selPawn) * 100f;
-            if (!selPawn.CanReach(platform, PathEndMode.Touch, Danger.Deadly))
+            if (!selPawn.CanReach(duelTarget, PathEndMode.Touch, Danger.Deadly))
             {
                 yield return new FloatMenuOption(
                     "CannotReach".Translate() + ": " + "LC_SnowQueen_DuelOption".Translate(selPawn.LabelShortCap, pct.ToString("F0")),
@@ -584,7 +586,7 @@ namespace LCAbnormalities.SnowQueen
                 "LC_SnowQueen_DuelOption".Translate(selPawn.LabelShortCap, pct.ToString("F0")),
                 () =>
                 {
-                    Job job = JobMaker.MakeJob(SnowQueenDefOf.LC_DuelSnowQueen, platform);
+                    Job job = JobMaker.MakeJob(SnowQueenDefOf.LC_DuelSnowQueen, duelTarget);
                     selPawn.jobs?.TryTakeOrderedJob(job, JobTag.Misc);
                 });
         }
@@ -592,8 +594,9 @@ namespace LCAbnormalities.SnowQueen
         private void OpenDuelMenu()
         {
             Map map = parent?.MapHeld;
-            Building_AbnormalityHoldingPlatform platform = HoldingPlaformTargetComp?.HeldPlatform;
-            if (map?.mapPawns?.FreeColonistsSpawned == null || platform == null)
+            IAbnormalityContainmentUnit unit = HoldingPlaformTargetComp?.HeldUnit;
+            Thing duelTarget = (unit != null && unit.IsRoomContainment && parent.Spawned) ? (Thing)parent : unit?.UnitThing;
+            if (map?.mapPawns?.FreeColonistsSpawned == null || duelTarget == null || !duelTarget.Spawned)
             {
                 return;
             }
@@ -603,7 +606,7 @@ namespace LCAbnormalities.SnowQueen
             for (int i = 0; i < colonists.Count; i++)
             {
                 Pawn c = colonists[i];
-                if (c == null || c.Dead || c.Downed || !c.CanReach(platform, PathEndMode.Touch, Danger.Deadly))
+                if (c == null || c.Dead || c.Downed || !c.CanReach(duelTarget, PathEndMode.Touch, Danger.Deadly))
                 {
                     continue;
                 }
@@ -613,7 +616,7 @@ namespace LCAbnormalities.SnowQueen
                     "LC_SnowQueen_DuelOption".Translate(c.LabelShortCap, pct.ToString("F0")),
                     () =>
                     {
-                        Job job = JobMaker.MakeJob(SnowQueenDefOf.LC_DuelSnowQueen, platform);
+                        Job job = JobMaker.MakeJob(SnowQueenDefOf.LC_DuelSnowQueen, duelTarget);
                         c.jobs?.TryTakeOrderedJob(job, JobTag.Misc);
                     }));
             }
@@ -741,13 +744,15 @@ namespace LCAbnormalities.SnowQueen
         private int duelElapsedTicks;
         private float clashWhiteDamage = 4f;
 
-        private Building_AbnormalityHoldingPlatform TargetPlatform => job.targetA.Thing as Building_AbnormalityHoldingPlatform;
+        private Thing TargetDuelThing => job.targetA.Thing;
 
-        private CompSnowQueen SnowComp => TargetPlatform?.HeldPawn?.TryGetComp<CompSnowQueen>();
+        private CompSnowQueen SnowComp =>
+            (TargetDuelThing as IAbnormalityContainmentUnit)?.HeldPawn?.TryGetComp<CompSnowQueen>()
+            ?? TargetDuelThing?.TryGetComp<CompSnowQueen>();
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            return pawn.Reserve(TargetPlatform, job, 1, -1, null, errorOnFailed);
+            return pawn.Reserve(TargetDuelThing, job, 1, -1, null, errorOnFailed);
         }
 
         protected override IEnumerable<Toil> MakeNewToils()
@@ -787,7 +792,7 @@ namespace LCAbnormalities.SnowQueen
                 clashWhiteDamage = comp.PropsSnow.duelWhiteDamageTotalRange.RandomInRange / 3f;
                 comp.SetActiveDuelist(pawn);
                 comp.BeginDuelAnimation();
-                LCAbnormalitiesHelper.PlaySoundAt(SnowQueenDefOf.LC_SnowQueen_Fight, TargetPlatform);
+                LCAbnormalitiesHelper.PlaySoundAt(SnowQueenDefOf.LC_SnowQueen_Fight, TargetDuelThing);
             };
             duelWait.AddPreTickAction(delegate
             {
@@ -797,7 +802,7 @@ namespace LCAbnormalities.SnowQueen
                 }
 
                 duelElapsedTicks++;
-                pawn.rotationTracker?.FaceTarget(TargetPlatform);
+                pawn.rotationTracker?.FaceTarget(TargetDuelThing);
 
                 CompSnowQueen comp = SnowComp;
                 if (comp == null || !comp.HasFrozenCaptive)
@@ -812,10 +817,10 @@ namespace LCAbnormalities.SnowQueen
                         clashWhiteDamage,
                         0.4f,
                         instigator: comp.parent));
-                    LCAbnormalitiesHelper.PlaySoundAt(SnowQueenDefOf.LC_SnowQueen_Fight, TargetPlatform);
-                    if (TargetPlatform != null && TargetPlatform.Map != null)
+                    LCAbnormalitiesHelper.PlaySoundAt(SnowQueenDefOf.LC_SnowQueen_Fight, TargetDuelThing);
+                    if (TargetDuelThing != null && TargetDuelThing.Map != null)
                     {
-                        SnowQueenVfxUtility.SpawnFrostSplinterHit(TargetPlatform.Map, TargetPlatform.DrawPos);
+                        SnowQueenVfxUtility.SpawnFrostSplinterHit(TargetDuelThing.Map, TargetDuelThing.DrawPos);
                     }
                 }
 

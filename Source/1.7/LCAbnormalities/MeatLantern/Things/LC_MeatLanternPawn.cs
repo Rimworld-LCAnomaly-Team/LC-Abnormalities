@@ -11,6 +11,13 @@ namespace MeatLantern.Things
 
         protected override void Tick()
         {
+            if (IsContainedInRoom)
+            {
+                TickHolded();
+                base.Tick();
+                return;
+            }
+
             //收容状态下丢下就出逃
             if (Spawned && CarriedBy == null && kindDef == Def.PawnKindDefOf.MeatLanternContained && !EntityComp.Escaped)
             {

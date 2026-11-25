@@ -39,7 +39,7 @@
   <LC_LittleRed_NotEnoughPeBox>需要 {0} 单位独立 PE-Box（当前仅 {1}）。</LC_LittleRed_NotEnoughPeBox>
   <LC_LittleRed_InspectPlatform>雇佣猎杀委托费：{0} PE-Box</LC_LittleRed_InspectPlatform>
   <LC_LittleRed_RecallLabel>召回雇佣兵</LC_LittleRed_RecallLabel>
-  <LC_LittleRed_RecallDesc>命令小红帽雇佣兵结束本次委托并直接返回原先的收容平台。</LC_LittleRed_RecallDesc>
+  <LC_LittleRed_RecallDesc>命令小红帽雇佣兵结束本次委托并直接返回原先的收容室。</LC_LittleRed_RecallDesc>
 
   <!-- E.G.O 武器主动技能通用校验提示 -->
   <LC_EgoSkill_TargetMustBeAlive>目标必须处于存活状态。</LC_EgoSkill_TargetMustBeAlive>

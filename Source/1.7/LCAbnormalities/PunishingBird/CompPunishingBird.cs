@@ -449,7 +449,7 @@ namespace LCAbnormalities.PunishingBird
 
         public bool IsFacingLeft => facingWest;
 
-        public bool IsHeldOnPlatform => ParentHolder is Building_AbnormalityHoldingPlatform;
+        public bool IsHeldOnPlatform => IsHeldInContainment;
 
         public override string CurrentBodyTexPath =>
             BirdComp?.IsEnraged == true
@@ -505,9 +505,18 @@ namespace LCAbnormalities.PunishingBird
 
             if (IsHeldOnPlatform || (comp != null && !comp.Escaped))
             {
-                desired = (comp != null && comp.IsBeingStudiedNow)
-                    ? PunishingBirdDefOf.PunishingBird_Work
-                    : PunishingBirdDefOf.PunishingBird_Idle;
+                if (comp != null && comp.IsBeingStudiedNow)
+                {
+                    desired = PunishingBirdDefOf.PunishingBird_Work;
+                }
+                else if (comp?.HoldingPlaformTargetComp?.CurrentlyContainedInRoom == true && Spawned && pather?.Moving == true)
+                {
+                    desired = PunishingBirdDefOf.PunishingBird_Fly;
+                }
+                else
+                {
+                    desired = PunishingBirdDefOf.PunishingBird_Idle;
+                }
             }
             else if (comp != null && comp.IsEnraged)
             {
@@ -556,7 +565,7 @@ namespace LCAbnormalities.PunishingBird
                     pather.StopDead();
                 }
 
-                if (comp.Escaped && Spawned && !Dead)
+                if ((comp.Escaped || comp.HoldingPlaformTargetComp?.CurrentlyContainedInRoom == true) && Spawned && !Dead)
                 {
                     UpdateHorizontalFacing();
                 }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using LCAnomalyCore.Buildings;
 using LCAnomalyCore.Comp;
+using LCAnomalyCore.Interface;
 using LCAnomalyCore.Util;
 using RimWorld;
 using Verse;
@@ -79,6 +80,11 @@ namespace LCAbnormalities.Shared
                     continue;
                 }
 
+                if (p.TryGetComp<CompAbnormality>()?.Escaped != true)
+                {
+                    continue;
+                }
+
                 string dn = p.def.defName;
                 if (dn == "PunishingBird") hasPunishing = true;
                 else if (dn == "JudgementBird") hasJudgement = true;
@@ -96,16 +102,18 @@ namespace LCAbnormalities.Shared
                 return;
             }
 
-            // 通知同地图所有收容于平台内的监听者（如小红帽雇佣兵）
-            List<Building_AbnormalityHoldingPlatform> platforms =
-                map.listerBuildings?.AllBuildingsColonistOfClass<Building_AbnormalityHoldingPlatform>() is IEnumerable<Building_AbnormalityHoldingPlatform> seq
-                    ? new List<Building_AbnormalityHoldingPlatform>(seq)
-                    : null;
-            if (platforms != null)
+            // 通知同地图所有收容单元内的监听者（如小红帽雇佣兵）
+            List<Building> buildings = map.listerBuildings?.allBuildingsColonist;
+            if (buildings != null)
             {
-                for (int i = 0; i < platforms.Count; i++)
+                for (int i = 0; i < buildings.Count; i++)
                 {
-                    Pawn held = platforms[i]?.HeldPawn;
+                    if (!(buildings[i] is IAbnormalityContainmentUnit unit))
+                    {
+                        continue;
+                    }
+
+                    Pawn held = unit.HeldPawn;
                     if (held == null || held == escapedComp.parent || held.AllComps == null)
                     {
                         continue;
@@ -159,18 +167,20 @@ namespace LCAbnormalities.Shared
                 return;
             }
 
-            List<Building_AbnormalityHoldingPlatform> platforms =
-                map.listerBuildings?.AllBuildingsColonistOfClass<Building_AbnormalityHoldingPlatform>() is IEnumerable<Building_AbnormalityHoldingPlatform> seq
-                    ? new List<Building_AbnormalityHoldingPlatform>(seq)
-                    : null;
-            if (platforms == null)
+            List<Building> buildings = map.listerBuildings?.allBuildingsColonist;
+            if (buildings == null)
             {
                 return;
             }
 
-            for (int i = 0; i < platforms.Count; i++)
+            for (int i = 0; i < buildings.Count; i++)
             {
-                Pawn held = platforms[i]?.HeldPawn;
+                if (!(buildings[i] is IAbnormalityContainmentUnit unit))
+                {
+                    continue;
+                }
+
+                Pawn held = unit.HeldPawn;
                 if (held == null || held.AllComps == null)
                 {
                     continue;

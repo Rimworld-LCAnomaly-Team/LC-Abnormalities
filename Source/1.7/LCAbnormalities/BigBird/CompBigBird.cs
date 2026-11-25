@@ -576,7 +576,7 @@ namespace LCAbnormalities.BigBird
 
         public bool IsFacingLeft => facingWest;
 
-        public bool IsHeldOnPlatform => ParentHolder is Building_AbnormalityHoldingPlatform;
+        public bool IsHeldOnPlatform => IsHeldInContainment;
 
         public override string CurrentBodyTexPath =>
             BigBirdComp?.IsBitingPose == true

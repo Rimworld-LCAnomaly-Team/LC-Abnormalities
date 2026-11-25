@@ -7,6 +7,13 @@ namespace LC_SevenSin.Things
     {
         protected override void Tick()
         {
+            if (IsContainedInRoom)
+            {
+                TickHolded();
+                base.Tick();
+                return;
+            }
+
             if (Spawned && CarriedBy == null && EntityComp != null && !EntityComp.Escaped)
             {
                 GetComp<CompSevenSinEntity>()?.Notify_Escaped();

@@ -57,6 +57,7 @@
         <ifProvideWarningPoints>true</ifProvideWarningPoints>
         <customWarningPoints>-1</customWarningPoints>
         <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
+        <canWanderInContainmentRoom>true</canWanderInContainmentRoom>
         <dyingFxDef>DyingFragmentOfTheUniverse</dyingFxDef>
         <workDamageDef>LC_BlackDamage</workDamageDef>
         <workDamageRange>1~3</workDamageRange>

@@ -3,6 +3,7 @@ using LCAbnormalities.Shared;
 using LCAnomalyCore.Buildings;
 using LCAnomalyCore.Comp;
 using LCAnomalyCore.DamageWorker;
+using LCAnomalyCore.Interface;
 using LCAnomalyCore.Render.Weapon;
 using LCAnomalyCore.Util;
 using RimWorld;
@@ -114,7 +115,7 @@ namespace LCAbnormalities.LittleRedRidingHoodedMercenary
 
         private bool isHired;
         private Pawn hiredTarget;
-        private Building_AbnormalityHoldingPlatform homePlatform;
+        private Thing homeContainmentThing;
         private int shotgunCooldown;
         private int meleeCooldown;
         private int axeThrowCooldown;
@@ -261,7 +262,7 @@ namespace LCAbnormalities.LittleRedRidingHoodedMercenary
             bool wasHired = isHired;
             isHired = false;
             hiredTarget = null;
-            homePlatform = null;
+            homeContainmentThing = null;
             sickleInFlight = false;
             activeThrownSickle = null;
             ClearActionState();
@@ -292,14 +293,15 @@ namespace LCAbnormalities.LittleRedRidingHoodedMercenary
                 return false;
             }
 
-            Building_AbnormalityHoldingPlatform plat = parent.ParentHolder as Building_AbnormalityHoldingPlatform;
-            if (plat == null || !plat.Spawned || plat.Map == null)
+            IAbnormalityContainmentUnit unit = HoldingPlaformTargetComp?.HeldUnit;
+            Thing unitThing = unit?.UnitThing;
+            if (unit == null || unitThing == null || !unitThing.Spawned || unitThing.Map == null)
             {
                 return false;
             }
 
             PeBoxComp.CurAmountIndiPebox -= cost;
-            homePlatform = plat;
+            homeContainmentThing = unitThing;
             hiredTarget = target;
             isHired = true;
             escaped = true;
@@ -307,7 +309,7 @@ namespace LCAbnormalities.LittleRedRidingHoodedMercenary
             huntVisualTicks = 90;
             ClearActionState();
 
-            plat.EjectContents();
+            unit.EjectContents();
 
             if (Faction.OfPlayer != null && pawn.Faction != Faction.OfPlayer)
             {
@@ -349,22 +351,19 @@ namespace LCAbnormalities.LittleRedRidingHoodedMercenary
 
             pawn.jobs?.StopAll(ifLayingKeepLaying: false);
 
-            Building_AbnormalityHoldingPlatform plat = homePlatform;
-            homePlatform = null;
+            Thing homeThing = homeContainmentThing;
+            homeContainmentThing = null;
 
-            if (plat != null && !plat.Destroyed && plat.Spawned && !plat.Occupied)
+            if (homeThing is IAbnormalityContainmentUnit unit
+                && !unit.UnitThing.Destroyed
+                && unit.UnitThing.Spawned
+                && !unit.Occupied
+                && unit.CanAcceptCapture(pawn, out _))
             {
-                if (pawn.Spawned)
+                if (unit.TryCaptureThing(pawn))
                 {
-                    pawn.DeSpawn(DestroyMode.Vanish);
-                }
-
-                ThingOwner owner = plat.GetDirectlyHeldThings();
-                if (owner != null && owner.TryAdd(pawn))
-                {
-                    HoldingPlaformTargetComp?.Notify_HeldOnPlatform(owner);
                     Notify_Holded();
-                    LCAbnormalitiesHelper.PlaySoundAt(LittleRedDefOf.LC_LittleRed_Change, plat);
+                    LCAbnormalitiesHelper.PlaySoundAt(LittleRedDefOf.LC_LittleRed_Change, unit.UnitThing);
                     return true;
                 }
             }
@@ -899,7 +898,7 @@ namespace LCAbnormalities.LittleRedRidingHoodedMercenary
             base.PostExposeData();
             Scribe_Values.Look(ref isHired, "lrIsHired", false);
             Scribe_References.Look(ref hiredTarget, "lrHiredTarget");
-            Scribe_References.Look(ref homePlatform, "lrHomePlatform");
+            Scribe_References.Look(ref homeContainmentThing, "lrHomePlatform");
             Scribe_Values.Look(ref shotgunCooldown, "lrShotgunCooldown", 0);
             Scribe_Values.Look(ref meleeCooldown, "lrMeleeCooldown", 0);
             Scribe_Values.Look(ref axeThrowCooldown, "lrAxeThrowCooldown", 0);
@@ -922,7 +921,7 @@ namespace LCAbnormalities.LittleRedRidingHoodedMercenary
 
         public bool IsFacingLeft => facingLeft;
 
-        public bool IsHeldOnPlatform => ParentHolder is Building_AbnormalityHoldingPlatform;
+        public bool IsHeldOnPlatform => IsHeldInContainment;
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {

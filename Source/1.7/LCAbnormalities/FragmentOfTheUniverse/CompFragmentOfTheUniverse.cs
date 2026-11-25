@@ -326,7 +326,7 @@ namespace LCAbnormalities.FragmentOfTheUniverse
     {
         public CompFragmentOfTheUniverse CosmosComp => EntityComp as CompFragmentOfTheUniverse;
 
-        public bool IsHeldOnPlatform => ParentHolder is Building_AbnormalityHoldingPlatform;
+        public bool IsHeldOnPlatform => IsHeldInContainment;
 
         public void UpdateAnimation(bool force = false)
         {

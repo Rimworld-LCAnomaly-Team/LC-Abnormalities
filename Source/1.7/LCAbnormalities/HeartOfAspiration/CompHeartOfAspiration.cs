@@ -261,7 +261,7 @@ namespace LCAbnormalities.HeartOfAspiration
                 drawSize *= targetComp.Props.heldDrawScale;
             }
 
-            float baseY = HeldPlatform != null ? HeldPlatform.HeldPawnDrawPos_Y : drawLoc.y;
+            float baseY = drawLoc.y;
             float ageSecs = ((Find.TickManager?.TicksGame ?? 0) + (parent?.thingIDNumber ?? 0) * 19) / 60f;
             bool equipped = IsEquipped;
 

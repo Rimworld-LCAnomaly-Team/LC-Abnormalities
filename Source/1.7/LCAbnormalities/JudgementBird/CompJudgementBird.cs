@@ -366,7 +366,7 @@ namespace LCAbnormalities.JudgementBird
 
         public CompJudgementBird JudgeComp => EntityComp as CompJudgementBird;
 
-        public bool IsHeldOnPlatform => ParentHolder is LCAnomalyCore.Buildings.Building_AbnormalityHoldingPlatform;
+        public bool IsHeldOnPlatform => IsHeldInContainment;
 
         public bool IsFacingLeft => facingWest && JudgeComp?.Escaped == true;
 

@@ -293,6 +293,17 @@ namespace NothingThere.Things
 
         protected override void Tick()
         {
+            if (IsContainedInRoom)
+            {
+                TickHolded();
+                if (Spawned && !Dead && pather?.Moving == true)
+                {
+                    UpdateHorizontalFacing();
+                }
+                base.Tick();
+                return;
+            }
+
             // 若在未正式出逃状态下离开收容平台，立即转入出逃状态
             if (Spawned && CarriedBy == null && SelfEntityComp != null && !SelfEntityComp.Escaped)
             {

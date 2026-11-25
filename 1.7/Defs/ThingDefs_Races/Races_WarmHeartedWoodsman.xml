@@ -57,6 +57,7 @@
         <ifProvideWarningPoints>true</ifProvideWarningPoints>
         <customWarningPoints>-1</customWarningPoints>
         <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
+        <canWanderInContainmentRoom>true</canWanderInContainmentRoom>
         <dyingFxDef>DyingWarmHeartedWoodsman</dyingFxDef>
         <workDamageDef>LC_WhiteDamage</workDamageDef>
         <workDamageRange>3~5</workDamageRange>

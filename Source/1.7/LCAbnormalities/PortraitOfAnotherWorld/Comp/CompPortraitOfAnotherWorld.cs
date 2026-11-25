@@ -4,6 +4,7 @@ using LCAbnormalities.Settings;
 using LCAnomalyCore.Buildings;
 using LCAnomalyCore.Comp;
 using LCAnomalyCore.Defs;
+using LCAnomalyCore.Interface;
 using LCAnomalyCore.Patch;
 using LCAnomalyCore.Util;
 using RimWorld;
@@ -466,10 +467,10 @@ namespace PortraitOfAnotherWorld.Comp
                 drawSize *= targetComp.Props.heldDrawScale;
             }
 
-            float y = HeldPlatform != null ? HeldPlatform.HeldPawnDrawPos_Y : drawLoc.y;
+            float y = drawLoc.y;
             Vector3 adjustedLoc = new Vector3(drawLoc.x, y, drawLoc.z);
             Graphic baseGraphic = GraphicDatabase.Get<Graphic_Single>(texPath, ShaderDatabase.Cutout, drawSize, GetHeldOverrideColor());
-            baseGraphic?.Draw(adjustedLoc, Rot4.North, (Thing)HeldPlatform ?? parent, 0f);
+            baseGraphic?.Draw(adjustedLoc, Rot4.North, parent, 0f);
 
             RenderTexture portraitTex = PortraitsCache.Get(
                 protectedPawn,
@@ -564,7 +565,7 @@ namespace PortraitOfAnotherWorld.Comp
             return cachedCanvasOverlayMesh;
         }
 
-        public override void DrawExtraSelectionOverlaysForPlatform(Building_AbnormalityHoldingPlatform platform)
+        public override void DrawExtraSelectionOverlaysForUnit(IAbnormalityContainmentUnit unit)
         {
             Map map = ActiveMap;
             if (!IsBound || map == null)

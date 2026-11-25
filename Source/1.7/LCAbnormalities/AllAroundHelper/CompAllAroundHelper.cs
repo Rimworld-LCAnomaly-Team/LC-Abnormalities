@@ -465,7 +465,7 @@ namespace LCAbnormalities.AllAroundHelper
     {
         public CompAllAroundHelper HelperComp => EntityComp as CompAllAroundHelper;
 
-        public bool IsHeldOnPlatform => ParentHolder is Building_AbnormalityHoldingPlatform;
+        public bool IsHeldOnPlatform => IsHeldInContainment;
 
         public override string CurrentBodyTexPath =>
             HelperComp?.IsSawingActive == true

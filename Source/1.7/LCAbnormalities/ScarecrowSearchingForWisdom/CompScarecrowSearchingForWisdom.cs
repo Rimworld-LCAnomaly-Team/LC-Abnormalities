@@ -239,7 +239,7 @@ namespace LCAbnormalities.ScarecrowSearchingForWisdom
     {
         public CompScarecrowSearchingForWisdom ScarecrowComp => EntityComp as CompScarecrowSearchingForWisdom;
 
-        public bool IsHeldOnPlatform => ParentHolder is Building_AbnormalityHoldingPlatform;
+        public bool IsHeldOnPlatform => IsHeldInContainment;
 
         public void UpdateAnimation(bool force = false)
         {

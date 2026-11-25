@@ -615,7 +615,7 @@ namespace LCAbnormalities.Schadenfreude
     {
         public CompSchadenfreude SchadenComp => EntityComp as CompSchadenfreude;
 
-        public bool IsHeldOnPlatform => ParentHolder is Building_AbnormalityHoldingPlatform;
+        public bool IsHeldOnPlatform => IsHeldInContainment;
 
         public override string CurrentBodyTexPath => SchadenComp != null && SchadenComp.IsWatchedActive
             ? "Things/Pawn/Schadenfreude/Schadenfreude_Active"

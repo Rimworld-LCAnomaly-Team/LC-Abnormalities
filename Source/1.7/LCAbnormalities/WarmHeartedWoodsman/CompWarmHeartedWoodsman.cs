@@ -299,7 +299,7 @@ namespace LCAbnormalities.WarmHeartedWoodsman
     {
         public CompWarmHeartedWoodsman WoodsmanComp => EntityComp as CompWarmHeartedWoodsman;
 
-        public bool IsHeldOnPlatform => ParentHolder is Building_AbnormalityHoldingPlatform;
+        public bool IsHeldOnPlatform => IsHeldInContainment;
 
         public void UpdateAnimation(bool force = false)
         {

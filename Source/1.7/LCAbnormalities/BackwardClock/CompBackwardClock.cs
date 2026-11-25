@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using LCAbnormalities.Shared;
 using LCAnomalyCore.Buildings;
 using LCAnomalyCore.Comp;
+using LCAnomalyCore.Interface;
 using LCAnomalyCore.Comp.Pawns;
 using RimWorld;
 using UnityEngine;
@@ -191,7 +192,7 @@ namespace LCAbnormalities.BackwardClock
                     }
 
                     CompAbnormality abn = p.TryGetComp<CompAbnormality>();
-                    if (abn == null)
+                    if (abn == null || p.TryGetComp<CompAbnormalityHoldingPlatformTarget>()?.CurrentlyContainedInRoom == true)
                     {
                         continue;
                     }
@@ -216,14 +217,18 @@ namespace LCAbnormalities.BackwardClock
                     suppressedCount++;
                 }
 
-                // 2. 重置同地图所有收容中的非 ALEPH 逆卡巴拉计数器
-                IEnumerable<Building_AbnormalityHoldingPlatform> platforms =
-                    map.listerBuildings?.AllBuildingsColonistOfClass<Building_AbnormalityHoldingPlatform>();
-                if (platforms != null)
+                // 2. 重置同地图所有收容单元（平台或房间控制终端）内的非 ALEPH 逆卡巴拉计数器
+                List<Building> buildings = map.listerBuildings?.allBuildingsColonist;
+                if (buildings != null)
                 {
-                    foreach (Building_AbnormalityHoldingPlatform plat in platforms)
+                    for (int i = 0; i < buildings.Count; i++)
                     {
-                        Pawn held = plat?.HeldPawn;
+                        if (!(buildings[i] is IAbnormalityContainmentUnit unit))
+                        {
+                            continue;
+                        }
+
+                        Pawn held = unit.HeldPawn;
                         CompAbnormality heldAbn = held?.TryGetComp<CompAbnormality>();
                         if (heldAbn == null || !heldAbn.QliphothEnabled)
                         {

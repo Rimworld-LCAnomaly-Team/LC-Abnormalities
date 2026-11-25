@@ -59,7 +59,7 @@ namespace LCAbnormalities.NotesFromCrazedResearcher
             }
 
             float ageSecs = ((Find.TickManager?.TicksGame ?? 0) + (parent?.thingIDNumber ?? 0) * 11) / 60f;
-            float baseY = HeldPlatform != null ? HeldPlatform.HeldPawnDrawPos_Y : drawLoc.y;
+            float baseY = drawLoc.y;
 
             float dangerAmt = 0f;
             float readyAmt = 0f;

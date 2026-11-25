@@ -3,6 +3,7 @@ using System.Linq;
 using LCAnomalyCore.Buildings;
 using LCAnomalyCore.Comp;
 using LCAnomalyCore.Hediffs;
+using LCAnomalyCore.Interface;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -424,7 +425,7 @@ namespace LCAbnormalities.FleshIdol
                 drawSize *= targetComp.Props.heldDrawScale;
             }
 
-            float baseY = HeldPlatform != null ? HeldPlatform.HeldPawnDrawPos_Y : drawLoc.y;
+            float baseY = drawLoc.y;
             float ageSecs = ((Find.TickManager?.TicksGame ?? 0) + (parent?.thingIDNumber ?? 0) * 13) / 60f;
             int curPhase = CurrentPhase;
             bool charred = ExplosionCooldownRemaining > 0 && !IsActiveContinuous;
@@ -498,7 +499,7 @@ namespace LCAbnormalities.FleshIdol
             return false;
         }
 
-        public override void DrawExtraSelectionOverlaysForPlatform(Building_AbnormalityHoldingPlatform platform)
+        public override void DrawExtraSelectionOverlaysForUnit(IAbnormalityContainmentUnit unit)
         {
             Map map = ActiveMap;
             if (!IsActiveContinuous || map == null)

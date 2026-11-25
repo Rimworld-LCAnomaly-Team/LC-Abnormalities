@@ -78,7 +78,7 @@ namespace LCAbnormalities.WeCanChangeAnything
 
         public static bool IsHeldOnPlatform(Pawn pawn)
         {
-            return GetIronComp(pawn)?.HeldPlatform != null;
+            return GetIronComp(pawn)?.HeldUnit != null;
         }
 
         public override Mesh GetMesh(PawnDrawParms parms)

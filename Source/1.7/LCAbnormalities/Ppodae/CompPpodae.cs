@@ -1,6 +1,7 @@
 using LCAbnormalities.Shared;
 using LCAnomalyCore.Buildings;
 using LCAnomalyCore.Comp.Pawns;
+using LCAnomalyCore.Interface;
 using LCAnomalyCore.Damage;
 using LCAnomalyCore.DamageWorker;
 using LCAnomalyCore.Util;
@@ -113,8 +114,8 @@ namespace LCAbnormalities.Ppodae
             if (!checkedCurrentStudy && studier != null && !Escaped)
             {
                 checkedCurrentStudy = true;
-                Building_AbnormalityHoldingPlatform plat = HoldingPlaformTargetComp?.HeldPlatform;
-                EAnomalyWorkType curWork = plat != null ? plat.CurWorkType : EAnomalyWorkType.Instinct;
+                IAbnormalityContainmentUnit unit = HoldingPlaformTargetComp?.HeldUnit;
+                EAnomalyWorkType curWork = unit != null ? unit.CurWorkType : EAnomalyWorkType.Instinct;
                 if (curWork != EAnomalyWorkType.Instinct)
                 {
                     if (Rand.Chance(PropsPpodae.nonInstinctDropChance))
@@ -270,7 +271,7 @@ namespace LCAbnormalities.Ppodae
     {
         public CompPpodae PpodaeComp => EntityComp as CompPpodae;
 
-        public bool IsHeldOnPlatform => ParentHolder is Building_AbnormalityHoldingPlatform;
+        public bool IsHeldOnPlatform => IsHeldInContainment;
 
         public void UpdateAnimation(bool force = false)
         {

@@ -336,9 +336,9 @@ namespace LCAbnormalities.DerFreischutz
         private Vector3 ComputeMuzzleWorldPos(IntVec3 originCell, Vector3 targetVec, out Vector3 exactShotDir)
         {
             Vector3 center = originCell.ToVector3Shifted().Yto0();
-            if (parent?.ParentHolder is LCAnomalyCore.Buildings.Building_AbnormalityHoldingPlatform platform)
+            if (parent != null && parent.Spawned)
             {
-                center = (platform.DrawPos + platform.PawnDrawOffset).Yto0();
+                center = parent.DrawPos.Yto0();
             }
             else if (parent?.ParentHolder is Thing holderThing)
             {

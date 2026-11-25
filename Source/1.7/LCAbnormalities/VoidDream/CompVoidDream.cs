@@ -597,7 +597,7 @@ namespace LCAbnormalities.VoidDream
 
         public bool IsFacingLeft => facingWest;
 
-        public bool IsHeldOnPlatform => ParentHolder is Building_AbnormalityHoldingPlatform;
+        public bool IsHeldOnPlatform => IsHeldInContainment;
 
         public override string CurrentBodyTexPath =>
             DreamComp?.ShowRoosterRig == true

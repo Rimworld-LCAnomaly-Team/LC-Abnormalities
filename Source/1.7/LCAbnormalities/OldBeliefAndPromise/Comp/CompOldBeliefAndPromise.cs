@@ -382,7 +382,7 @@ namespace LCAbnormalities.OldBeliefAndPromise
             }
 
             float scale = drawSize.y * SpinePxToUnit;
-            float baseY = HeldPlatform != null ? HeldPlatform.HeldPawnDrawPos_Y : drawLoc.y;
+            float baseY = drawLoc.y;
             float ageSecs = ((Find.TickManager?.TicksGame ?? 0) + (parent?.thingIDNumber ?? 0) * 17) / 60f;
 
             OldBeliefVisualPhase visualPhase = VisualPhase;

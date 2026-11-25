@@ -10,6 +10,14 @@ namespace OneSin.Things
     {
         protected override void Tick()
         {
+            CompAbnormalityHoldingPlatformTarget holdTarget = GetComp<CompAbnormalityHoldingPlatformTarget>();
+            if (holdTarget != null && holdTarget.CurrentlyContainedInRoom)
+            {
+                TickHolded();
+                base.Tick();
+                return;
+            }
+
             // 收容状态下脱离收容平台落地即消散化蛋
             if (Spawned && CarriedBy == null)
             {

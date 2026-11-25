@@ -60,6 +60,7 @@
         <customWarningPoints>-1</customWarningPoints>
         <soundWorking>LC_Funeral_WorkLoop</soundWorking>
         <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
+        <canWanderInContainmentRoom>true</canWanderInContainmentRoom>
         <dyingFxDef>DyingFuneralOfDeadButterflies</dyingFxDef>
         <workDamageDef>LC_WhiteDamage</workDamageDef>
         <workDamageRange>4~6</workDamageRange>
