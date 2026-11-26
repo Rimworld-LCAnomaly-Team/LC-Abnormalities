@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <!-- ZAYIN -->
+  <LC_Extract_Code_FairyFestival>F-04-83</LC_Extract_Code_FairyFestival>
+  <LC_Extract_Quote_FairyFestival>“只要在精灵们的看护之下，一切都会平安无事。”</LC_Extract_Quote_FairyFestival>
+
+  <LC_Extract_Code_OldBeliefAndPromise>T-09-97</LC_Extract_Code_OldBeliefAndPromise>
+  <LC_Extract_Quote_OldBeliefAndPromise>“当你感到被背叛时切勿绝望，一切诺言总会付出相应的代价。”</LC_Extract_Quote_OldBeliefAndPromise>
+
+  <LC_Extract_Code_OneSin>O-03-03</LC_Extract_Code_OneSin>
+  <LC_Extract_Quote_OneSin>“它以人类交谈时悄然流露的‘恶’为食。”</LC_Extract_Quote_OneSin>
+
+  <LC_Extract_Code_WeCanChangeAnything>T-09-85</LC_Extract_Code_WeCanChangeAnything>
+  <LC_Extract_Quote_WeCanChangeAnything>“我们将把你们所有人改变成某种比从前更好的存在。”</LC_Extract_Quote_WeCanChangeAnything>
+
+  <LC_Extract_Code_WellCheers>F-05-52</LC_Extract_Code_WellCheers>
+  <LC_Extract_Quote_WellCheers>“在不知何处的远方，你听到了海鸥的鸣叫声。”</LC_Extract_Quote_WellCheers>
+
+  <!-- TETH -->
+  <LC_Extract_Code_FragmentOfTheUniverse>O-03-60</LC_Extract_Code_FragmentOfTheUniverse>
+  <LC_Extract_Quote_FragmentOfTheUniverse>“你看见一首歌正在你面前缓缓浮现。它越来越近，愈发绚丽，也愈发响亮。”</LC_Extract_Quote_FragmentOfTheUniverse>
+
+  <LC_Extract_Code_HeartOfAspiration>T-09-77</LC_Extract_Code_HeartOfAspiration>
+  <LC_Extract_Quote_HeartOfAspiration>“过度的渴望往往会驱使人径直走向自我毁灭。”</LC_Extract_Quote_HeartOfAspiration>
+
+  <LC_Extract_Code_MeatLantern>O-04-84</LC_Extract_Code_MeatLantern>
+  <LC_Extract_Quote_MeatLantern>“苍白的花朵在暗处低声招手，泥土之下藏着致命的獠牙。”</LC_Extract_Quote_MeatLantern>
+
+  <LC_Extract_Code_Ppodae>D-02-107</LC_Extract_Code_Ppodae>
+  <LC_Extract_Quote_Ppodae>“等我长大以后，就再也不会有人小瞧我了！”</LC_Extract_Quote_Ppodae>
+
+  <LC_Extract_Code_PunishingBird>O-02-56</LC_Extract_Code_PunishingBird>
+  <LC_Extract_Quote_PunishingBird>“人类自古以来便不断犯下罪行。‘明知是不对的，为什么还要犯罪呢？’”</LC_Extract_Quote_PunishingBird>
+
+  <LC_Extract_Code_ScorchedGirl>F-01-02</LC_Extract_Code_ScorchedGirl>
+  <LC_Extract_Quote_ScorchedGirl>“我正朝你走来。你也会像我一样化为灰烬。”</LC_Extract_Quote_ScorchedGirl>
+
+  <LC_Extract_Code_VoidDream>T-02-99</LC_Extract_Code_VoidDream>
+  <LC_Extract_Quote_VoidDream>“在梦境将我彻底带走之前，请把我的梦吃掉吧。”</LC_Extract_Quote_VoidDream>
+
+  <!-- HE -->
+  <LC_Extract_Code_AllAroundHelper>T-05-41</LC_Extract_Code_AllAroundHelper>
+  <LC_Extract_Quote_AllAroundHelper>“警笛越来越响，猩红很快染遍了整间屋子的每一个角落。”</LC_Extract_Quote_AllAroundHelper>
+
+  <LC_Extract_Code_DerFreischutz>F-01-69</LC_Extract_Code_DerFreischutz>
+  <LC_Extract_Quote_DerFreischutz>“如你所说，这颗魔弹真的能够击中任何人。”</LC_Extract_Quote_DerFreischutz>
+
+  <LC_Extract_Code_FuneralOfDeadButterflies>T-01-68</LC_Extract_Code_FuneralOfDeadButterflies>
+  <LC_Extract_Quote_FuneralOfDeadButterflies>“死后的人们，又会去往何处呢？”</LC_Extract_Quote_FuneralOfDeadButterflies>
+
+  <LC_Extract_Code_Laetitia>O-01-67</LC_Extract_Code_Laetitia>
+  <LC_Extract_Quote_Laetitia>“她一想到要离开亲爱的朋友们就难过极了，于是想出了一个绝妙的主意！”</LC_Extract_Quote_Laetitia>
+
+  <LC_Extract_Code_NotesFromCrazedResearcher>T-09-78</LC_Extract_Code_NotesFromCrazedResearcher>
+  <LC_Extract_Quote_NotesFromCrazedResearcher>“一旦实验成功，你也许会就此死去……甚至祈祷自己能够死去。”</LC_Extract_Quote_NotesFromCrazedResearcher>
+
+  <LC_Extract_Code_PortraitOfAnotherWorld>O-09-91</LC_Extract_Code_PortraitOfAnotherWorld>
+  <LC_Extract_Quote_PortraitOfAnotherWorld>“当我的身影步入那幅画框的那一刻，我们便开始共享同一口呼吸。”</LC_Extract_Quote_PortraitOfAnotherWorld>
+
+  <LC_Extract_Code_ScarecrowSearchingForWisdom>F-01-87</LC_Extract_Code_ScarecrowSearchingForWisdom>
+  <LC_Extract_Quote_ScarecrowSearchingForWisdom>“那座都市依然是一座冰冷而美丽的都市，街道上挤满了毫无头脑的人们。”</LC_Extract_Quote_ScarecrowSearchingForWisdom>
+
+  <LC_Extract_Code_Schadenfreude>O-05-76</LC_Extract_Code_Schadenfreude>
+  <LC_Extract_Quote_Schadenfreude>“别看着我，快移开视线……趁钥匙孔里的双眼还未彻底睁开。”</LC_Extract_Quote_Schadenfreude>
+
+  <LC_Extract_Code_SnowQueen>F-01-37</LC_Extract_Code_SnowQueen>
+  <LC_Extract_Quote_SnowQueen>“整片森林在厚雪中沉眠，在冰雪宫殿里静候春天降临。”</LC_Extract_Quote_SnowQueen>
+
+  <LC_Extract_Code_WarmHeartedWoodsman>F-05-32</LC_Extract_Code_WarmHeartedWoodsman>
+  <LC_Extract_Quote_WarmHeartedWoodsman>“空洞的铁皮胸膛里，正沉闷而缓慢地跳动着一颗温暖的心脏。”</LC_Extract_Quote_WarmHeartedWoodsman>
+
+  <!-- WAW -->
+  <LC_Extract_Code_BackwardClock>D-09-104</LC_Extract_Code_BackwardClock>
+  <LC_Extract_Quote_BackwardClock>“将指针拨回过去，代价是一条从时间流中被彻底抹去的生命。”</LC_Extract_Quote_BackwardClock>
+
+  <LC_Extract_Code_BigBird>O-02-40</LC_Extract_Code_BigBird>
+  <LC_Extract_Quote_BigBird>“它那无数双金黄的眼睛始终熠熠生辉，好让任何怪物都无法伤害森林里的生灵。”</LC_Extract_Quote_BigBird>
+
+  <LC_Extract_Code_BurrowingHeaven>O-04-72</LC_Extract_Code_BurrowingHeaven>
+  <LC_Extract_Quote_BurrowingHeaven>“死死盯住它，绝不能让那双猩红的羽翼触及天穹。”</LC_Extract_Quote_BurrowingHeaven>
+
+  <LC_Extract_Code_JudgementBird>O-02-62</LC_Extract_Code_JudgementBird>
+  <LC_Extract_Quote_JudgementBird>“它的天平永远公正无私，绝不放过任何一丝最微小的罪孽。”</LC_Extract_Quote_JudgementBird>
+
+  <LC_Extract_Code_LittleRedRidingHoodedMercenary>F-01-57</LC_Extract_Code_LittleRedRidingHoodedMercenary>
+  <LC_Extract_Quote_LittleRedRidingHoodedMercenary>“我要把那个混蛋的脑袋挂在床头，只有那样我才能安稳地睡个好觉。”</LC_Extract_Quote_LittleRedRidingHoodedMercenary>
+
+  <LC_Extract_Code_FleshIdol>T-09-79</LC_Extract_Code_FleshIdol>
+  <LC_Extract_Quote_FleshIdol>“我们信仰的代价，永远要以血肉与鲜血来偿还。”</LC_Extract_Quote_FleshIdol>
+
+  <!-- ALEPH -->
+  <LC_Extract_Code_NothingThere>O-06-20</LC_Extract_Code_NothingThere>
+  <LC_Extract_Quote_NothingThere>“于是，无数副空壳异口同声地呼唤着同一个词……‘主管！’”</LC_Extract_Quote_NothingThere>
+</LanguageData>

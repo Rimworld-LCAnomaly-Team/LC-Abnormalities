@@ -601,6 +601,20 @@ namespace LCAbnormalities.AllAroundHelper
                 return null;
             }
 
+            if (pawn.Position == target.Position || pawn.Position.AdjacentTo8Way(target.Position))
+            {
+                Verse.AI.Job wait = JobMaker.MakeJob(JobDefOf.Wait, 15);
+                wait.expiryInterval = 15;
+                return wait;
+            }
+
+            if (!pawn.CanReach(target, Verse.AI.PathEndMode.OnCell, Verse.Danger.Deadly, canBashDoors: true))
+            {
+                Verse.AI.Job wait = JobMaker.MakeJob(JobDefOf.Wait, 30);
+                wait.expiryInterval = 30;
+                return wait;
+            }
+
             Verse.AI.Job approach = JobMaker.MakeJob(JobDefOf.Goto, target);
             approach.expiryInterval = 45;
             approach.checkOverrideOnExpire = true;

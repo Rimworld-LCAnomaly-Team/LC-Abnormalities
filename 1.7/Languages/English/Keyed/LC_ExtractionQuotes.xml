@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <!-- ZAYIN -->
+  <LC_Extract_Code_FairyFestival>F-04-83</LC_Extract_Code_FairyFestival>
+  <LC_Extract_Quote_FairyFestival>"Everything will be peaceful while you are under the fairies' care."</LC_Extract_Quote_FairyFestival>
+
+  <LC_Extract_Code_OldBeliefAndPromise>T-09-97</LC_Extract_Code_OldBeliefAndPromise>
+  <LC_Extract_Quote_OldBeliefAndPromise>"Do not despair when you feel betrayed. A price is always paid in return."</LC_Extract_Quote_OldBeliefAndPromise>
+
+  <LC_Extract_Code_OneSin>O-03-03</LC_Extract_Code_OneSin>
+  <LC_Extract_Quote_OneSin>"It feeds on the 'evil' seeping out during conversations between people."</LC_Extract_Quote_OneSin>
+
+  <LC_Extract_Code_WeCanChangeAnything>T-09-85</LC_Extract_Code_WeCanChangeAnything>
+  <LC_Extract_Quote_WeCanChangeAnything>"We will turn all of you into something even better than before."</LC_Extract_Quote_WeCanChangeAnything>
+
+  <LC_Extract_Code_WellCheers>F-05-52</LC_Extract_Code_WellCheers>
+  <LC_Extract_Quote_WellCheers>"Somewhere in the distance, you hear seagulls."</LC_Extract_Quote_WellCheers>
+
+  <!-- TETH -->
+  <LC_Extract_Code_FragmentOfTheUniverse>O-03-60</LC_Extract_Code_FragmentOfTheUniverse>
+  <LC_Extract_Quote_FragmentOfTheUniverse>"You see a song in front of you. It is approaching, becoming colorful and louder."</LC_Extract_Quote_FragmentOfTheUniverse>
+
+  <LC_Extract_Code_HeartOfAspiration>T-09-77</LC_Extract_Code_HeartOfAspiration>
+  <LC_Extract_Quote_HeartOfAspiration>"Overbearing eagerness often drives a person straight into their own ruin."</LC_Extract_Quote_HeartOfAspiration>
+
+  <LC_Extract_Code_MeatLantern>O-04-84</LC_Extract_Code_MeatLantern>
+  <LC_Extract_Quote_MeatLantern>"A pale flower beckons softly, hiding lethal teeth beneath the soil."</LC_Extract_Quote_MeatLantern>
+
+  <LC_Extract_Code_Ppodae>D-02-107</LC_Extract_Code_Ppodae>
+  <LC_Extract_Quote_Ppodae>"When I grow bigger, nobody will ever look down on me again!"</LC_Extract_Quote_Ppodae>
+
+  <LC_Extract_Code_PunishingBird>O-02-56</LC_Extract_Code_PunishingBird>
+  <LC_Extract_Quote_PunishingBird>"People have been committing sins since long ago. 'Why do they commit sins, knowing it is wrong?'"</LC_Extract_Quote_PunishingBird>
+
+  <LC_Extract_Code_ScorchedGirl>F-01-02</LC_Extract_Code_ScorchedGirl>
+  <LC_Extract_Quote_ScorchedGirl>"I am coming to you. You, who will be reduced to ashes just like me."</LC_Extract_Quote_ScorchedGirl>
+
+  <LC_Extract_Code_VoidDream>T-02-99</LC_Extract_Code_VoidDream>
+  <LC_Extract_Quote_VoidDream>"Please eat my dreams before they carry me away forever."</LC_Extract_Quote_VoidDream>
+
+  <!-- HE -->
+  <LC_Extract_Code_AllAroundHelper>T-05-41</LC_Extract_Code_AllAroundHelper>
+  <LC_Extract_Quote_AllAroundHelper>"The sirens grow louder. Blood stains everything across the room."</LC_Extract_Quote_AllAroundHelper>
+
+  <LC_Extract_Code_DerFreischutz>F-01-69</LC_Extract_Code_DerFreischutz>
+  <LC_Extract_Quote_DerFreischutz>"This magical bullet can truly hit anyone, just like you say."</LC_Extract_Quote_DerFreischutz>
+
+  <LC_Extract_Code_FuneralOfDeadButterflies>T-01-68</LC_Extract_Code_FuneralOfDeadButterflies>
+  <LC_Extract_Quote_FuneralOfDeadButterflies>"Where does one go when they die?"</LC_Extract_Quote_FuneralOfDeadButterflies>
+
+  <LC_Extract_Code_Laetitia>O-01-67</LC_Extract_Code_Laetitia>
+  <LC_Extract_Quote_Laetitia>"She was so sad that she had to leave her dear friends behind, so she came up with a brilliant idea!"</LC_Extract_Quote_Laetitia>
+
+  <LC_Extract_Code_NotesFromCrazedResearcher>T-09-78</LC_Extract_Code_NotesFromCrazedResearcher>
+  <LC_Extract_Quote_NotesFromCrazedResearcher>"Once the experiment succeeds, you may die... or even wish that you could."</LC_Extract_Quote_NotesFromCrazedResearcher>
+
+  <LC_Extract_Code_PortraitOfAnotherWorld>O-09-91</LC_Extract_Code_PortraitOfAnotherWorld>
+  <LC_Extract_Quote_PortraitOfAnotherWorld>"From the moment my likeness stepped into that frame, we began sharing a single breath."</LC_Extract_Quote_PortraitOfAnotherWorld>
+
+  <LC_Extract_Code_ScarecrowSearchingForWisdom>F-01-87</LC_Extract_Code_ScarecrowSearchingForWisdom>
+  <LC_Extract_Quote_ScarecrowSearchingForWisdom>"The city was still a place of cold, hollow beauty, and the streets were filled with mindless people."</LC_Extract_Quote_ScarecrowSearchingForWisdom>
+
+  <LC_Extract_Code_Schadenfreude>O-05-76</LC_Extract_Code_Schadenfreude>
+  <LC_Extract_Quote_Schadenfreude>"Don't look at me. Look away, before its keyhole opens wide."</LC_Extract_Quote_Schadenfreude>
+
+  <LC_Extract_Code_SnowQueen>F-01-37</LC_Extract_Code_SnowQueen>
+  <LC_Extract_Quote_SnowQueen>"The forest is asleep in the deep snow, waiting for spring inside a palace of ice."</LC_Extract_Quote_SnowQueen>
+
+  <LC_Extract_Code_WarmHeartedWoodsman>F-05-32</LC_Extract_Code_WarmHeartedWoodsman>
+  <LC_Extract_Quote_WarmHeartedWoodsman>"A warm heart full of leaden thumps beats softly inside its hollow iron chest."</LC_Extract_Quote_WarmHeartedWoodsman>
+
+  <!-- WAW -->
+  <LC_Extract_Code_BackwardClock>D-09-104</LC_Extract_Code_BackwardClock>
+  <LC_Extract_Quote_BackwardClock>"Turn the hands back to the past, at the price of a soul erased from time."</LC_Extract_Quote_BackwardClock>
+
+  <LC_Extract_Code_BigBird>O-02-40</LC_Extract_Code_BigBird>
+  <LC_Extract_Quote_BigBird>"Its many golden eyes burn brightly, for no monster may harm the creatures of the forest."</LC_Extract_Quote_BigBird>
+
+  <LC_Extract_Code_BurrowingHeaven>O-04-72</LC_Extract_Code_BurrowingHeaven>
+  <LC_Extract_Quote_BurrowingHeaven>"Keep your eyes fixed upon it, so that its crimson wings cannot reach the heavens."</LC_Extract_Quote_BurrowingHeaven>
+
+  <LC_Extract_Code_JudgementBird>O-02-62</LC_Extract_Code_JudgementBird>
+  <LC_Extract_Quote_JudgementBird>"Its scale was utterly fair, never neglecting even the smallest trace of sin."</LC_Extract_Quote_JudgementBird>
+
+  <LC_Extract_Code_LittleRedRidingHoodedMercenary>F-01-57</LC_Extract_Code_LittleRedRidingHoodedMercenary>
+  <LC_Extract_Quote_LittleRedRidingHoodedMercenary>"I'll hang that bastard's head over my bed. Only then can I finally sleep through the night."</LC_Extract_Quote_LittleRedRidingHoodedMercenary>
+
+  <LC_Extract_Code_FleshIdol>T-09-79</LC_Extract_Code_FleshIdol>
+  <LC_Extract_Quote_FleshIdol>"The price of our faith shall forever be paid by blood and flesh."</LC_Extract_Quote_FleshIdol>
+
+  <!-- ALEPH -->
+  <LC_Extract_Code_NothingThere>O-06-20</LC_Extract_Code_NothingThere>
+  <LC_Extract_Quote_NothingThere>"And the many shells cried out one single word... 'Manager!'"</LC_Extract_Quote_NothingThere>
+</LanguageData>
