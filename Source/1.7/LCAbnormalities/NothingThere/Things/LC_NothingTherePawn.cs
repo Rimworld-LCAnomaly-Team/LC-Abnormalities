@@ -283,6 +283,16 @@ namespace NothingThere.Things
             }
         }
 
+        public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
+        {
+            if (phase == DrawPhase.EnsureInitialized && SelfEntityComp != null && SelfEntityComp.HasDisguise)
+            {
+                SelfEntityComp.EnsureDisguiseMaterialInitialized();
+            }
+
+            base.DynamicDrawPhaseAt(phase, drawLoc, flip);
+        }
+
         public override void TickHolded()
         {
             base.TickHolded();

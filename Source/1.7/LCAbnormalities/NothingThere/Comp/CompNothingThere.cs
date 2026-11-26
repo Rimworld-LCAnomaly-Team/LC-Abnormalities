@@ -52,6 +52,7 @@ namespace NothingThere.Comp
         private int lastDamagedTick = -99999;
 
         private Material disguiseMaterial = null;
+        private RenderTexture disguiseRenderTexture = null;
         private Pawn disguiseMaterialPawn = null;
 
         public new CompProperties_NothingThere Props => (CompProperties_NothingThere)props;
@@ -61,6 +62,9 @@ namespace NothingThere.Comp
         public NothingThereForm CurrentForm => currentForm;
 
         public bool HasDisguise => disguiseInfo != null && disguiseInfo.hasDisguise;
+
+        /// <summary>只读获取已烘焙完成的伪装立绘材质（线程安全，供 ParallelPreDraw 阶段直接读取）。</summary>
+        public Material CachedDisguiseMaterial => disguiseMaterial;
 
         public DisguiseInfo DisguiseInfo => disguiseInfo;
 
@@ -374,9 +378,9 @@ namespace NothingThere.Comp
                 studyingGraceTicks--;
             }
 
-            if (HasDisguise && disguiseMaterial == null && UnityData.IsInMainThread)
+            if (HasDisguise && (disguiseMaterial == null || disguiseRenderTexture == null || !disguiseRenderTexture.IsCreated()) && UnityData.IsInMainThread)
             {
-                GetOrCreateDisguiseMaterial();
+                EnsureDisguiseMaterialInitialized();
             }
 
             if (HasDisguise && Find.TickManager != null && Find.TickManager.TicksGame % 300 == 0)
@@ -563,9 +567,9 @@ namespace NothingThere.Comp
 
         private void TickForm1()
         {
-            if (HasDisguise && disguiseMaterial == null && UnityData.IsInMainThread)
+            if (HasDisguise && (disguiseMaterial == null || disguiseRenderTexture == null || !disguiseRenderTexture.IsCreated()) && UnityData.IsInMainThread)
             {
-                GetOrCreateDisguiseMaterial();
+                EnsureDisguiseMaterialInitialized();
             }
 
             if (formTicks % 240 == 0)
@@ -932,14 +936,18 @@ namespace NothingThere.Comp
 
         private void KillAndStealSkinContained(Pawn victim)
         {
-            if (victim != null && !victim.Dead)
+            if (victim != null)
             {
-                DamageDef slashDef = Def.DamageDefOf.LC_NothingThere_RedSlash ?? LCAnomalyCore.Defs.DamageDefOf.LC_RedDamage;
-                DamageInfo fatal = new DamageInfo(slashDef, 9999f, 1f, instigator: SelfPawn);
-                victim.Kill(fatal);
-            }
+                CaptureVictimDisguise(victim);
+                if (!victim.Dead)
+                {
+                    DamageDef slashDef = Def.DamageDefOf.LC_NothingThere_RedSlash ?? LCAnomalyCore.Defs.DamageDefOf.LC_RedDamage;
+                    DamageInfo fatal = new DamageInfo(slashDef, 9999f, 1f, instigator: SelfPawn);
+                    victim.Kill(fatal);
+                }
 
-            EnterContainedDisguise(victim);
+                AnnounceContainedDisguise(victim);
+            }
         }
 
         private void EnterContainedDisguise(Pawn victim)
@@ -950,6 +958,16 @@ namespace NothingThere.Comp
             }
 
             CaptureVictimDisguise(victim);
+            AnnounceContainedDisguise(victim);
+        }
+
+        private void AnnounceContainedDisguise(Pawn victim)
+        {
+            if (victim == null)
+            {
+                return;
+            }
+
             ThrowMoteText("LC_NothingThere_Voice_ILoveYou".Translate(), new Color(0.95f, 0.25f, 0.25f));
             PlayOneShotIfSpawned(Def.SoundDefOf.NothingThere_Form1Voice);
             SelfPawn?.UpdateAnimation(force: true);
@@ -963,16 +981,16 @@ namespace NothingThere.Comp
 
         private void KillAndStealSkinAndBreach(Pawn victim)
         {
-            if (victim != null && !victim.Dead)
-            {
-                DamageDef slashDef = Def.DamageDefOf.LC_NothingThere_RedSlash ?? LCAnomalyCore.Defs.DamageDefOf.LC_RedDamage;
-                DamageInfo fatal = new DamageInfo(slashDef, 9999f, 1f, instigator: SelfPawn);
-                victim.Kill(fatal);
-            }
-
             if (victim != null)
             {
                 CaptureVictimDisguise(victim);
+                if (!victim.Dead)
+                {
+                    DamageDef slashDef = Def.DamageDefOf.LC_NothingThere_RedSlash ?? LCAnomalyCore.Defs.DamageDefOf.LC_RedDamage;
+                    DamageInfo fatal = new DamageInfo(slashDef, 9999f, 1f, instigator: SelfPawn);
+                    victim.Kill(fatal);
+                }
+
                 Find.LetterStack.ReceiveLetter(
                     "LC_NothingThere_SkinStolenLabel".Translate(),
                     "LC_NothingThere_SkinStolenText".Translate(victim.LabelShort),
@@ -996,51 +1014,77 @@ namespace NothingThere.Comp
             disguiseInfo.hasDisguise = true;
             totalVictimsConsumed++;
             DestroyDisguiseMaterial();
+            EnsureDisguiseMaterialInitialized();
             SelfPawn?.Drawer?.renderer?.SetAllGraphicsDirty();
         }
 
-        /// <summary>为一阶段伪装形态获取或刷新被窃皮殖民者的立绘材质（禁止使用 hideFlags）。</summary>
-        public Material GetOrCreateDisguiseMaterial()
+        /// <summary>兼容旧调用入口：在主线程安全地确保独立伪装立绘材质已烘焙。</summary>
+        public Material GetOrCreateDisguiseMaterial() => EnsureDisguiseMaterialInitialized();
+
+        /// <summary>为一阶段伪装形态在主线程一次性烘焙独立的 256×256 静态立绘纹理与材质，彻底避免与受害者尸体并行绘制产生线程冲突。</summary>
+        public Material EnsureDisguiseMaterialInitialized()
         {
             if (!HasDisguise || disguiseInfo?.victimPawn == null)
             {
                 return null;
             }
 
+            Pawn target = disguiseInfo.victimPawn;
             if (!UnityData.IsInMainThread)
             {
                 return disguiseMaterial;
             }
 
-            Pawn target = disguiseInfo.victimPawn;
-            RenderTexture portraitTex = PortraitsCache.Get(
-                target,
-                new Vector2(128f, 128f),
-                Rot4.South,
-                cameraOffset: Vector3.zero,
-                cameraZoom: 1.0f,
-                supersample: false,
-                compensateForUIScale: false,
-                renderHeadgear: true,
-                renderClothes: true,
-                healthStateOverride: PawnHealthState.Mobile);
-
-            if (portraitTex == null)
+            if (disguiseMaterial != null
+                && disguiseMaterialPawn == target
+                && disguiseRenderTexture != null
+                && disguiseRenderTexture.IsCreated())
             {
+                return disguiseMaterial;
+            }
+
+            if (Find.PawnCacheRenderer == null || Find.PawnCacheCamera == null)
+            {
+                return disguiseMaterial;
+            }
+
+            DestroyDisguiseMaterial();
+            try
+            {
+                disguiseRenderTexture = new RenderTexture(256, 256, 24)
+                {
+                    name = "LC_NothingThereDisguise",
+                    useMipMap = false,
+                    filterMode = FilterMode.Bilinear
+                };
+                disguiseRenderTexture.Create();
+
+                bool renderHead = target.health?.hediffSet?.HasHead ?? true;
+                Find.PawnCacheRenderer.RenderPawn(
+                    target,
+                    disguiseRenderTexture,
+                    cameraOffset: Vector3.zero,
+                    cameraZoom: 1.0f,
+                    angle: 0f,
+                    rotation: Rot4.South,
+                    renderHead: renderHead,
+                    renderHeadgear: true,
+                    renderClothes: true,
+                    portrait: true);
+
+                disguiseMaterial = new Material(ShaderDatabase.Transparent);
+                disguiseMaterial.mainTexture = disguiseRenderTexture;
+                disguiseMaterial.color = new Color(0.98f, 0.92f, 0.92f, 1f);
+                disguiseMaterialPawn = target;
+                InvisibilityMatPool.GetInvisibleMat(disguiseMaterial);
+                return disguiseMaterial;
+            }
+            catch (System.Exception ex)
+            {
+                Log.Warning($"[LC Abnormalities] Failed to bake NothingThere disguise texture: {ex}");
+                DestroyDisguiseMaterial();
                 return null;
             }
-
-            if (disguiseMaterial == null || disguiseMaterialPawn != target)
-            {
-                DestroyDisguiseMaterial();
-                disguiseMaterial = new Material(ShaderDatabase.Transparent);
-                disguiseMaterialPawn = target;
-            }
-
-            disguiseMaterial.mainTexture = portraitTex;
-            disguiseMaterial.color = new Color(0.98f, 0.88f, 0.88f, 1f);
-            InvisibilityMatPool.GetInvisibleMat(disguiseMaterial);
-            return disguiseMaterial;
         }
 
         private void DestroyDisguiseMaterial()
@@ -1049,6 +1093,12 @@ namespace NothingThere.Comp
             {
                 Object.Destroy(disguiseMaterial);
                 disguiseMaterial = null;
+            }
+            if (disguiseRenderTexture != null)
+            {
+                disguiseRenderTexture.Release();
+                Object.Destroy(disguiseRenderTexture);
+                disguiseRenderTexture = null;
             }
             disguiseMaterialPawn = null;
         }

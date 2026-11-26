@@ -151,7 +151,7 @@
           </children>
         </li>
 
-        <!-- Form 1 Disguised: Stolen Colonist Portrait + Twitching Seam -->
+        <!-- Form 1 Disguised: Stolen Colonist Portrait -->
         <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
           <debugLabel>DisguiseRoot</debugLabel>
           <tagDef>NothingThere_DisguiseRoot</tagDef>
@@ -166,15 +166,6 @@
               <role>DisguiseBody</role>
               <texPath>Things/Pawn/NothingThere/NothingThere_Form1</texPath>
               <baseLayer>10</baseLayer>
-              <flipOnWest>false</flipOnWest>
-            </li>
-            <li Class="NothingThere.Render.PawnRenderNodeProperties_NothingTherePart">
-              <debugLabel>DisguiseSeam</debugLabel>
-              <tagDef>NothingThere_DisguiseSeam</tagDef>
-              <role>DisguiseSeam</role>
-              <texPath>Things/Pawn/NothingThere/NothingThere_Form1_Seam</texPath>
-              <useTransparentShader>true</useTransparentShader>
-              <baseLayer>12</baseLayer>
               <flipOnWest>false</flipOnWest>
             </li>
           </children>

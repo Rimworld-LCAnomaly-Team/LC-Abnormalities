@@ -211,7 +211,7 @@ namespace NothingThere.Render
             base.EnsureMaterialVariantsInitialized(g);
             if (UnityData.IsInMainThread && PartProps?.role == NothingThereRenderRole.DisguiseBody)
             {
-                (tree?.pawn as LC_NothingTherePawn)?.SelfEntityComp?.GetOrCreateDisguiseMaterial();
+                (tree?.pawn as LC_NothingTherePawn)?.SelfEntityComp?.EnsureDisguiseMaterialInitialized();
             }
         }
     }
@@ -247,8 +247,10 @@ namespace NothingThere.Render
 
                 case NothingThereRenderRole.FormRoot_Disguise:
                 case NothingThereRenderRole.DisguiseBody:
-                case NothingThereRenderRole.DisguiseSeam:
                     return (form == NothingThereForm.Contained || form == NothingThereForm.Form1_Disguised) && hasDisguise;
+
+                case NothingThereRenderRole.DisguiseSeam:
+                    return false;
 
                 case NothingThereRenderRole.FormRoot_Cocoon:
                 case NothingThereRenderRole.CocoonPart:
@@ -282,7 +284,7 @@ namespace NothingThere.Render
                     && (comp.CurrentForm == NothingThereForm.Contained || comp.CurrentForm == NothingThereForm.Form1_Disguised)
                     && comp.HasDisguise)
                 {
-                    Material disguiseMat = comp.GetOrCreateDisguiseMaterial();
+                    Material disguiseMat = comp.CachedDisguiseMaterial;
                     if (disguiseMat != null)
                     {
                         if (!parms.Portrait && parms.flags.FlagSet(PawnRenderFlags.Invisible))
