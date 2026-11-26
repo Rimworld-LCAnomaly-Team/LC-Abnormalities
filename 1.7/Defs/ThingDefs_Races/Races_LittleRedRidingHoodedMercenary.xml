@@ -57,6 +57,7 @@
         <customWarningPoints>-1</customWarningPoints>
         <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
         <canWanderInContainmentRoom>true</canWanderInContainmentRoom>
+        <soundWorking>LC_LittleRed_WorkLoop</soundWorking>
         <dyingFxDef>DyingLittleRedRidingHoodedMercenary</dyingFxDef>
         <workDamageDef>LC_RedDamage</workDamageDef>
         <workDamageRange>4~6</workDamageRange>

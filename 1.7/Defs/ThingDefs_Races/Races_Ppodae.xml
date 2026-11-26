@@ -58,6 +58,7 @@
         <customWarningPoints>-1</customWarningPoints>
         <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
         <canWanderInContainmentRoom>true</canWanderInContainmentRoom>
+        <soundWorking>LC_Ppodae_WorkLoop</soundWorking>
         <dyingFxDef>DyingPpodae</dyingFxDef>
         <workDamageDef>LC_RedDamage</workDamageDef>
         <workDamageRange>2~3</workDamageRange>

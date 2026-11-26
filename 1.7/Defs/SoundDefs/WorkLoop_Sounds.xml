@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <SoundDef>
+    <defName>LC_AllAroundHelper_WorkLoop</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/AllAroundHelper/helper</clipPath></li></grains>
+        <sustainLoop>false</sustainLoop>
+        <sustainIntervalRange>1.8~3.0</sustainIntervalRange>
+        <volumeRange>13~17</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>10~55</distRange>
+        <sustainRelease>1.8</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_BigBird_WorkLoop</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/BigBird/Bigbird_Walk</clipPath></li></grains>
+        <sustainLoop>false</sustainLoop>
+        <sustainIntervalRange>2.2~3.5</sustainIntervalRange>
+        <volumeRange>13~18</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>
+        <distRange>10~55</distRange>
+        <sustainRelease>1.8</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_FairyFestival_WorkLoop</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FairyFestival/Fairy_Special</clipPath></li></grains>
+        <sustainLoop>false</sustainLoop>
+        <sustainIntervalRange>2.6~4.0</sustainIntervalRange>
+        <volumeRange>13~17</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>10~55</distRange>
+        <sustainRelease>2.0</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Cosmos_WorkLoop</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/FragmentOfTheUniverse/Cosmos_Default</clipPath></li></grains>
+        <volumeRange>14~18</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>10~55</distRange>
+        <sustainRelease>2.5</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_JudgementBird_WorkLoop</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/JudgementBird/LongBird_On</clipPath></li></grains>
+        <sustainLoop>false</sustainLoop>
+        <sustainIntervalRange>3.2~4.8</sustainIntervalRange>
+        <volumeRange>13~17</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>10~55</distRange>
+        <sustainRelease>2.0</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_LittleRed_WorkLoop</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/LittleRedRidingHoodedMercenary/RedHood_Change</clipPath></li></grains>
+        <sustainLoop>false</sustainLoop>
+        <sustainIntervalRange>2.8~4.4</sustainIntervalRange>
+        <volumeRange>12~16</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>10~55</distRange>
+        <sustainRelease>1.8</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Ppodae_WorkLoop</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/Ppodae/Bbodae_Bark</clipPath></li></grains>
+        <sustainLoop>false</sustainLoop>
+        <sustainIntervalRange>2.4~3.8</sustainIntervalRange>
+        <volumeRange>12~16</volumeRange>
+        <pitchRange>0.96~1.05</pitchRange>
+        <distRange>10~55</distRange>
+        <sustainRelease>1.6</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_PunishingBird_WorkLoop</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/PunishingBird/SmallBird_WingFlap</clipPath></li></grains>
+        <sustainLoop>false</sustainLoop>
+        <sustainIntervalRange>1.8~3.0</sustainIntervalRange>
+        <volumeRange>12~17</volumeRange>
+        <pitchRange>0.98~1.12</pitchRange>
+        <distRange>10~55</distRange>
+        <sustainRelease>1.5</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Scarecrow_WorkLoop</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/ScarecrowSearchingForWisdom/Scarecrow_Start</clipPath></li></grains>
+        <sustainLoop>false</sustainLoop>
+        <sustainIntervalRange>2.4~3.8</sustainIntervalRange>
+        <volumeRange>12~16</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>10~55</distRange>
+        <sustainRelease>1.8</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Schadenfreude_WorkLoop</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/Schadenfreude/DontWatch_loop</clipPath></li></grains>
+        <volumeRange>14~18</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>10~55</distRange>
+        <sustainRelease>2.0</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_VoidDream_WorkLoop</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/VoidDream/Dreamy_Default1</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>Pawn/VoidDream/Dreamy_Default2</clipPath></li>
+        </grains>
+        <sustainLoop>false</sustainLoop>
+        <sustainIntervalRange>2.2~3.6</sustainIntervalRange>
+        <volumeRange>13~17</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>10~55</distRange>
+        <sustainRelease>1.8</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>LC_Woodsman_WorkLoop</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <grains><li Class="AudioGrain_Clip"><clipPath>Pawn/WarmHeartedWoodsman/Lumberjack_Default</clipPath></li></grains>
+        <volumeRange>14~18</volumeRange>
+        <pitchRange>0.96~1.04</pitchRange>
+        <distRange>10~55</distRange>
+        <sustainRelease>2.2</sustainRelease>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

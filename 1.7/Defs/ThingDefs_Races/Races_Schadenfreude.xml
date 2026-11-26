@@ -55,8 +55,9 @@
         <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
         <ifProvideWarningPoints>true</ifProvideWarningPoints>
         <customWarningPoints>-1</customWarningPoints>
+        <soundWorking>LC_Schadenfreude_WorkLoop</soundWorking>
         <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
-        <canWanderInContainmentRoom>true</canWanderInContainmentRoom>
+        <canWanderInContainmentRoom>false</canWanderInContainmentRoom>
         <dyingFxDef>DyingSchadenfreude</dyingFxDef>
         <workDamageDef>LC_RedDamage</workDamageDef>
         <workDamageRange>3~6</workDamageRange>

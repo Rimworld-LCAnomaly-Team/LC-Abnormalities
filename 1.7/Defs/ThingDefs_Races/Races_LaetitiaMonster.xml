@@ -36,6 +36,11 @@
         </li>
       </lifeStageAges>
     </race>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.ModExtension_AbnormalityCategory">
+        <abnormalityCategoryDef>HE</abnormalityCategoryDef>
+      </li>
+    </modExtensions>
   </ThingDef>
 
   <!-- LaetitiaMonster -->

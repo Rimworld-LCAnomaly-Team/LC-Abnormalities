@@ -55,6 +55,7 @@
         <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
         <ifProvideWarningPoints>true</ifProvideWarningPoints>
         <customWarningPoints>-1</customWarningPoints>
+        <soundWorking>LC_AllAroundHelper_WorkLoop</soundWorking>
         <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
         <canWanderInContainmentRoom>true</canWanderInContainmentRoom>
         <dyingFxDef>DyingAllAroundHelper</dyingFxDef>

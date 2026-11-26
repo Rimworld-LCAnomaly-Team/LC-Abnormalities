@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- O-03-03 一罪与百善 -->
+  <LC_WorkNarration_OneSin_Start_1>{0} 怀着肃穆的心情走近高耸的骷髅十字架，开始进行{2}工作。</LC_WorkNarration_OneSin_Start_1>
+  <LC_WorkNarration_OneSin_Mid_1>它只是用空洞的眼眶沉默注视着一切……但它似乎能够听见任何忏悔。</LC_WorkNarration_OneSin_Mid_1>
+  <LC_WorkNarration_OneSin_Mid_2>{0} 低声倾诉了埋藏心底的罪愆，沉闷的空气悄然化作一丝宁静。</LC_WorkNarration_OneSin_Mid_2>
+  <LC_WorkNarration_OneSin_Mid_3>荆棘冠冕泛起微光，{1} 静静宽恕了 {0} 心中久违的重担。</LC_WorkNarration_OneSin_Mid_3>
+  <LC_WorkNarration_OneSin_Result_Good>{0} 离开收容室时，内心感到了久违的轻盈与平静。</LC_WorkNarration_OneSin_Result_Good>
+  <LC_WorkNarration_OneSin_Result_Bad>沉默变得愈发沉重——{1} 没有回应敷衍的告解。</LC_WorkNarration_OneSin_Result_Bad>
+
+  <!-- O-02-56 惩戒鸟 -->
+  <LC_WorkNarration_PunishingBird_Start_1>{0} 小心翼翼地走近扑扇着雪白翅膀的 {1}。</LC_WorkNarration_PunishingBird_Start_1>
+  <LC_WorkNarration_PunishingBird_Mid_1>虽然仅有巴掌大小，但只要觉得受到冒犯，{1} 就会毫不留情地猛啄过来。</LC_WorkNarration_PunishingBird_Mid_1>
+  <LC_WorkNarration_PunishingBird_Mid_2>{0} 克制住不去触碰它胸前鲜红的肚皮，{1} 在栖架上焦躁地蹦跳着。</LC_WorkNarration_PunishingBird_Mid_2>
+  <LC_WorkNarration_PunishingBird_Mid_3>{1} 歪着小脑袋鸣叫，深信自己正是审判世间罪恶的正义化身。</LC_WorkNarration_PunishingBird_Mid_3>
+  <LC_WorkNarration_PunishingBird_Result_Good>{1} 满足地啁啾一声，乖巧地落回了栖木上。</LC_WorkNarration_PunishingBird_Result_Good>
+  <LC_WorkNarration_PunishingBird_Result_Bad>{1} 气鼓鼓地炸起羽毛——再敢怠慢，惩戒就会降临！</LC_WorkNarration_PunishingBird_Result_Bad>
+
+  <!-- O-02-40 大鸟 -->
+  <LC_WorkNarration_BigBird_Start_1>{0} 走进 {1} 提灯散发出的暖黄色微光之中。</LC_WorkNarration_BigBird_Start_1>
+  <LC_WorkNarration_BigBird_Mid_1>{1} 漆黑羽毛上几十只金色眼睛接连睁闭，静静盯着 {0} 的举动。</LC_WorkNarration_BigBird_Mid_1>
+  <LC_WorkNarration_BigBird_Mid_2>那盏永远不会熄灭的灯火燃着，只为了照亮黑暗森林里的每一条生命。</LC_WorkNarration_BigBird_Mid_2>
+  <LC_WorkNarration_BigBird_Mid_3>{0} 保持平稳呼吸，细心清理 {1} 提灯旁的烟炱。</LC_WorkNarration_BigBird_Mid_3>
+  <LC_WorkNarration_BigBird_Result_Good>密布羽翼的金色眼眸柔和了些许，{1} 安详地垂下了提灯。</LC_WorkNarration_BigBird_Result_Good>
+  <LC_WorkNarration_BigBird_Result_Bad>{1} 浑身的眼睛警觉地圆睁——它生怕黑暗森林的悲剧再度上演。</LC_WorkNarration_BigBird_Result_Bad>
+
+  <!-- O-02-62 审判鸟 -->
+  <LC_WorkNarration_JudgementBird_Start_1>{0} 站在缠着绷带、手持倾斜金天平的 {1} 面前。</LC_WorkNarration_JudgementBird_Start_1>
+  <LC_WorkNarration_JudgementBird_Mid_1>天平在无风之中缓缓摇晃；{1} 所称量的从来不是血肉，而是罪孽。</LC_WorkNarration_JudgementBird_Mid_1>
+  <LC_WorkNarration_JudgementBird_Mid_2>即便双眼早已失去，{1} 仍能敏锐察觉收容室内的每一分失衡。</LC_WorkNarration_JudgementBird_Mid_2>
+  <LC_WorkNarration_JudgementBird_Mid_3>{0} 屏住呼吸，生怕惊扰到 {1} 倾斜的长天平。</LC_WorkNarration_JudgementBird_Mid_3>
+  <LC_WorkNarration_JudgementBird_Result_Good>金色的秤盘终于归于平衡，今天的裁决并未落下。</LC_WorkNarration_JudgementBird_Result_Good>
+  <LC_WorkNarration_JudgementBird_Result_Bad>{0} 退出房间时，天平朝着不祥的一端轻轻响了一声。</LC_WorkNarration_JudgementBird_Result_Bad>
+
+  <!-- F-01-02 焦化少女 -->
+  <LC_WorkNarration_ScorchedGirl_Start_1>{0} 穿过飘满灰烬的空气，查看 {1} 头顶燃烧的火光。</LC_WorkNarration_ScorchedGirl_Start_1>
+  <LC_WorkNarration_ScorchedGirl_Mid_1>焦黑的灰烬簌簌落下；她原本只是想在寒冷中寻得一点微弱的温暖。</LC_WorkNarration_ScorchedGirl_Mid_1>
+  <LC_WorkNarration_ScorchedGirl_Mid_2>{0} 听见昏暗角落里传来一声细微而危险的火柴擦燃声。</LC_WorkNarration_ScorchedGirl_Mid_2>
+  <LC_WorkNarration_ScorchedGirl_Mid_3>灼人热浪从 {1} 焦糊的轮廓间渗出，仿佛随时都会将整座收容室化为火海。</LC_WorkNarration_ScorchedGirl_Mid_3>
+  <LC_WorkNarration_ScorchedGirl_Result_Good>头顶火光收敛成温柔的余烬，{1} 在黑暗里轻声呢喃着。</LC_WorkNarration_ScorchedGirl_Result_Good>
+  <LC_WorkNarration_ScorchedGirl_Result_Bad>烈焰猛地沿着 {1} 焦黑的身躯骤然窜起！</LC_WorkNarration_ScorchedGirl_Result_Bad>
+
+  <!-- T-05-41 全面帮手 -->
+  <LC_WorkNarration_AllAroundHelper_Start_1>{0} 刚一进门，{1} 的红色光学镜头便嗡鸣着锁定了过来。</LC_WorkNarration_AllAroundHelper_Start_1>
+  <LC_WorkNarration_AllAroundHelper_Mid_1>“您好！请问今天有什么可以为您效劳的？”{1} 欢快地说着，同时擦拭着刀片上的血迹。</LC_WorkNarration_AllAroundHelper_Mid_1>
+  <LC_WorkNarration_AllAroundHelper_Mid_2>{0} 盯紧了那些圆锯清扫组件——每片刀刃都闪烁着准备“大扫除”的寒光。</LC_WorkNarration_AllAroundHelper_Mid_2>
+  <LC_WorkNarration_AllAroundHelper_Mid_3>在 {1} 的逻辑程序里，地面污渍和活生生的员工似乎没什么区别。</LC_WorkNarration_AllAroundHelper_Mid_3>
+  <LC_WorkNarration_AllAroundHelper_Result_Good>{1} 发出清脆的提示音：“清扫完毕！祝您拥有愉快的一天！”</LC_WorkNarration_AllAroundHelper_Result_Good>
+  <LC_WorkNarration_AllAroundHelper_Result_Bad>{1} 顶部的红灯骤然狂闪，内置锯刃疯狂空转起来！</LC_WorkNarration_AllAroundHelper_Result_Bad>
+
+  <!-- F-04-83 妖精盛宴 -->
+  <LC_WorkNarration_FairyFestival_Start_1>{0} 走进收容室，成群散发光晕的 {1} 正优雅地盘旋飞舞。</LC_WorkNarration_FairyFestival_Start_1>
+  <LC_WorkNarration_FairyFestival_Mid_1>微小的妖精们带着温柔的笑容贴近 {0}，用细嫩的翅膀拂去疲惫。</LC_WorkNarration_FairyFestival_Mid_1>
+  <LC_WorkNarration_FairyFestival_Mid_2>它们悉心照料并治愈伤痛——只为让猎物一直保持最鲜嫩的状态。</LC_WorkNarration_FairyFestival_Mid_2>
+  <LC_WorkNarration_FairyFestival_Mid_3>{0} 感到阵阵暖意与倦意袭来，险些忘了这群饥饿小生灵的真面目。</LC_WorkNarration_FairyFestival_Mid_3>
+  <LC_WorkNarration_FairyFestival_Result_Good>妖精们欢欣地撒下闪亮磷粉，似乎很满意这次照料。</LC_WorkNarration_FairyFestival_Result_Good>
+  <LC_WorkNarration_FairyFestival_Result_Bad>甜美的笑声陡然变调——{0} 及时抽身免于成为盛宴！</LC_WorkNarration_FairyFestival_Result_Bad>
+
+  <!-- F-05-52 韦尔奇牌汽水机 -->
+  <LC_WorkNarration_WellCheers_Start_1>{0} 停在嗡嗡运转的亮红色自动售货机（{1}）前。</LC_WorkNarration_WellCheers_Start_1>
+  <LC_WorkNarration_WellCheers_Mid_1>冰凉的金属箱体深处，居然隐约传来海浪拍击甲板的咸湿声响。</LC_WorkNarration_WellCheers_Mid_1>
+  <LC_WorkNarration_WellCheers_Mid_2>一只小虾米探出取货口递上一罐冰镇汽水——最好别深究它来自哪里。</LC_WorkNarration_WellCheers_Mid_2>
+  <LC_WorkNarration_WellCheers_Mid_3>{0} 在海鸥呜咽般的风声中，认真检查着机器制冷参数。</LC_WorkNarration_WellCheers_Mid_3>
+  <LC_WorkNarration_WellCheers_Result_Good>伴随着清脆的一响，一罐冰凉爽口的汽水滚落出货口。</LC_WorkNarration_WellCheers_Result_Good>
+  <LC_WorkNarration_WellCheers_Result_Bad>机器内部传来愤怒翻涌的巨浪声，舱盖咔哒一声死死锁住。</LC_WorkNarration_WellCheers_Result_Bad>
+
+  <!-- T-02-99 虚空之梦 -->
+  <LC_WorkNarration_VoidDream_Start_1>{0} 放轻脚步，靠近正在沉睡的蓝紫羊毛羊羔 {1}。</LC_WorkNarration_VoidDream_Start_1>
+  <LC_WorkNarration_VoidDream_Mid_1>柔软的毛团均匀起伏，{1} 的梦境像淡蓝色薄雾一样飘散在空中。</LC_WorkNarration_VoidDream_Mid_1>
+  <LC_WorkNarration_VoidDream_Mid_2>{0} 用力掐紧掌心驱散困意——若在这里沉睡，便再也醒不过来了。</LC_WorkNarration_VoidDream_Mid_2>
+  <LC_WorkNarration_VoidDream_Mid_3>在 {1} 紧闭的第三只眼缝隙背后，仿佛藏着令人晕眩的深邃星夜。</LC_WorkNarration_VoidDream_Mid_3>
+  <LC_WorkNarration_VoidDream_Result_Good>{1} 安稳地蜷缩在美梦里，并未被惊醒成可怖的幻梦形态。</LC_WorkNarration_VoidDream_Result_Good>
+  <LC_WorkNarration_VoidDream_Result_Bad>一声尖锐鸡鸣刺破梦境——{1} 的第三只眼睛缓缓睁开了！</LC_WorkNarration_VoidDream_Result_Bad>
+
+  <!-- O-03-60 宇宙碎片 -->
+  <LC_WorkNarration_FragmentOfTheUniverse_Start_1>{0} 仰望着悬浮在半空中、折射着异彩斑斓轮廓的 {1}。</LC_WorkNarration_FragmentOfTheUniverse_Start_1>
+  <LC_WorkNarration_FragmentOfTheUniverse_Mid_1>无法用人类语言理解的宇宙低鸣在耳畔回荡，令人既迷醉又战栗。</LC_WorkNarration_FragmentOfTheUniverse_Mid_1>
+  <LC_WorkNarration_FragmentOfTheUniverse_Mid_2>当你凝望得足够久，似乎真能触碰到一丝来自遥远星海的知识碎片。</LC_WorkNarration_FragmentOfTheUniverse_Mid_2>
+  <LC_WorkNarration_FragmentOfTheUniverse_Mid_3>{0} 紧守理智，在一声声奇异的吟唱中完成对 {1} 的记录。</LC_WorkNarration_FragmentOfTheUniverse_Mid_3>
+  <LC_WorkNarration_FragmentOfTheUniverse_Result_Good>{1} 轻柔地共鸣出一曲星辰般的清音，氛围格外祥和。</LC_WorkNarration_FragmentOfTheUniverse_Result_Good>
+  <LC_WorkNarration_FragmentOfTheUniverse_Result_Bad>刺耳的异界杂音骤然冲击着 {0} 的意识，令精神剧烈摇晃！</LC_WorkNarration_FragmentOfTheUniverse_Result_Bad>
+
+  <!-- D-02-107 波奇比 -->
+  <LC_WorkNarration_Ppodae_Start_1>{0} 蹲下身，向摇晃着蓬松白尾巴的 {1} 打了个招呼。</LC_WorkNarration_Ppodae_Start_1>
+  <LC_WorkNarration_Ppodae_Mid_1>这么可爱的小狗谁能不爱呢？只要记得顺着它的心意喂食与抚摸就好。</LC_WorkNarration_Ppodae_Mid_1>
+  <LC_WorkNarration_Ppodae_Mid_2>{0} 谨慎照料着 {1} 的食欲——谁也不想见识它生气时藏在皮囊下的东西。</LC_WorkNarration_Ppodae_Mid_2>
+  <LC_WorkNarration_Ppodae_Mid_3>{1} 开心得汪汪轻吠，用毛茸茸的小爪子蹭着 {0} 的靴边。</LC_WorkNarration_Ppodae_Mid_3>
+  <LC_WorkNarration_Ppodae_Result_Good>{1} 快活地打了个滚——它依然是部门里最讨人喜欢的小狗！</LC_WorkNarration_Ppodae_Result_Good>
+  <LC_WorkNarration_Ppodae_Result_Bad>小狗甜美面孔之下突然传出低沉诡异的兽吼声！</LC_WorkNarration_Ppodae_Result_Bad>
+
+  <!-- O-04-84 肉食提灯 -->
+  <LC_WorkNarration_MeatLanternContained_Start_1>{0} 警惕地盯着在 {1} 上方微微晃动的发光花朵诱饵。</LC_WorkNarration_MeatLanternContained_Start_1>
+  <LC_WorkNarration_MeatLanternContained_Mid_1>地底下那双圆溜溜的小黑眼眨了眨，仿佛正诱哄 {0} 再靠近半步。</LC_WorkNarration_MeatLanternContained_Mid_1>
+  <LC_WorkNarration_MeatLanternContained_Mid_2>切记不要过快结束也不要逗留太久——地砖下面藏着整张利齿巨口。</LC_WorkNarration_MeatLanternContained_Mid_2>
+  <LC_WorkNarration_MeatLanternContained_Mid_3>{0} 稳住节奏，站在安全线外小心维护着 {1} 的土壤。</LC_WorkNarration_MeatLanternContained_Mid_3>
+  <LC_WorkNarration_MeatLanternContained_Result_Good>发光的灯笼花柔和黯淡下去，{1} 安分地缩回了土层中。</LC_WorkNarration_MeatLanternContained_Result_Good>
+  <LC_WorkNarration_MeatLanternContained_Result_Bad>地砖之下猛地咬合巨颚，{0} 险之又险地抽身躲开！</LC_WorkNarration_MeatLanternContained_Result_Bad>
+
+  <!-- O-01-67 蕾蒂希娅 -->
+  <LC_WorkNarration_Laetitia_Start_1>{0} 走进挂满彩带与玩偶的房间，陪小女孩 {1} 做伴。</LC_WorkNarration_Laetitia_Start_1>
+  <LC_WorkNarration_Laetitia_Mid_1>“大哥哥/大姐姐会一直陪我玩吗？我准备了一件超特别的礼物要送给好朋友！”</LC_WorkNarration_Laetitia_Mid_1>
+  <LC_WorkNarration_Laetitia_Mid_2>{0} 露出温和微笑，但心里始终绷紧一根弦——谁知道礼盒里装了什么怪物。</LC_WorkNarration_Laetitia_Mid_2>
+  <LC_WorkNarration_Laetitia_Mid_3>{1} 晃荡着双脚哼起轻快儿歌，把一只精致礼物盒抱在怀里。</LC_WorkNarration_Laetitia_Mid_3>
+  <LC_WorkNarration_Laetitia_Result_Good>{1} 灿烂地笑了起来，因为今天也没有人把她独自丢下。</LC_WorkNarration_Laetitia_Result_Good>
+  <LC_WorkNarration_Laetitia_Result_Bad>{1} 眼眶泛红，小声念叨着要给忘了她的人一点小恶作剧……</LC_WorkNarration_Laetitia_Result_Bad>
+
+  <!-- T-01-68 亡蝶葬仪 -->
+  <LC_WorkNarration_FuneralOfDeadButterflies_Start_1>{0} 悄声走近背负沉重棺木、手持白色素花的 {1}。</LC_WorkNarration_FuneralOfDeadButterflies_Start_1>
+  <LC_WorkNarration_FuneralOfDeadButterflies_Mid_1>无数雪白蝴蝶围绕着无名葬礼翩跹飞舞，仿佛在送别无法归乡的亡魂。</LC_WorkNarration_FuneralOfDeadButterflies_Mid_1>
+  <LC_WorkNarration_FuneralOfDeadButterflies_Mid_2>{0} 垂首致意——这场悼念献给所有被永远困在设施中的员工。</LC_WorkNarration_FuneralOfDeadButterflies_Mid_2>
+  <LC_WorkNarration_FuneralOfDeadButterflies_Mid_3>纯白蝶群静静停落在 {1} 肩头，沉重的棺盖发出一声轻响。</LC_WorkNarration_FuneralOfDeadButterflies_Mid_3>
+  <LC_WorkNarration_FuneralOfDeadButterflies_Result_Good>收容室内泛起庄严而宁静的哀思，{1} 微微压低礼帽致意。</LC_WorkNarration_FuneralOfDeadButterflies_Result_Good>
+  <LC_WorkNarration_FuneralOfDeadButterflies_Result_Bad>棺盖缝隙骤然弹开，成群黑翼恶蝶涌出了半边舱室！</LC_WorkNarration_FuneralOfDeadButterflies_Result_Bad>
+
+  <!-- F-01-69 魔弹射手 -->
+  <LC_WorkNarration_DerFreischutz_Start_1>{0} 迎上幽蓝枪手 {1} 冷峻的目光，他手中长枪正冒着青烟。</LC_WorkNarration_DerFreischutz_Start_1>
+  <LC_WorkNarration_DerFreischutz_Mid_1>“那恶魔铸就的子弹总能贯穿一切你所憎恶之物……代价是永不饶恕。”</LC_WorkNarration_DerFreischutz_Mid_1>
+  <LC_WorkNarration_DerFreischutz_Mid_2>{0} 听见苍蓝色的火焰正在 {1} 的长管步枪膛线上噼啪作响。</LC_WorkNarration_DerFreischutz_Mid_2>
+  <LC_WorkNarration_DerFreischutz_Mid_3>“就连第七发子弹，也从不会听从谁的怜悯，主管。”</LC_WorkNarration_DerFreischutz_Mid_3>
+  <LC_WorkNarration_DerFreischutz_Result_Good>{1} 收起长枪，冷淡却认同地点了点头。</LC_WorkNarration_DerFreischutz_Result_Good>
+  <LC_WorkNarration_DerFreischutz_Result_Bad>苍蓝烟雾猛地翻卷起来，{1} 缓缓拉开了枪栓。</LC_WorkNarration_DerFreischutz_Result_Bad>
+
+  <!-- F-01-37 冰雪女皇 -->
+  <LC_WorkNarration_SnowQueen_Start_1>{0} 打了个寒颤，步入由寒霜与晶柱构筑的 {1} 寝殿。</LC_WorkNarration_SnowQueen_Start_1>
+  <LC_WorkNarration_SnowQueen_Mid_1>唯有怀抱真正勇气的人，才有资格融化这颗深埋寒冰中的心。</LC_WorkNarration_SnowQueen_Mid_1>
+  <LC_WorkNarration_SnowQueen_Mid_2>细碎冰花飘落在 {0} 面罩前，{1} 纹丝不动地端坐王座之上。</LC_WorkNarration_SnowQueen_Mid_2>
+  <LC_WorkNarration_SnowQueen_Mid_3>务必警惕她冰冷的双唇——当第二记吻落下时，只有决斗才能重返春天。</LC_WorkNarration_SnowQueen_Mid_3>
+  <LC_WorkNarration_SnowQueen_Result_Good>寒冰中泛起一丝春意，{1} 留下了一枚微凉的加护之吻。</LC_WorkNarration_SnowQueen_Result_Good>
+  <LC_WorkNarration_SnowQueen_Result_Bad>刺骨白霜顺着 {0} 的靴底急速蔓延，{1} 冷漠地偏过头去。</LC_WorkNarration_SnowQueen_Result_Bad>
+
+  <!-- O-05-76 幸灾乐祸 -->
+  <LC_WorkNarration_Schadenfreude_Start_1>{0} 刻意移开视线，避免直视 {1} 铁箱正面那道狭长的钥匙孔。</LC_WorkNarration_Schadenfreude_Start_1>
+  <LC_WorkNarration_Schadenfreude_Mid_1>照常操作，绝对不要直视钥匙孔里那只正窥视着你的眼睛！</LC_WorkNarration_Schadenfreude_Mid_1>
+  <LC_WorkNarration_Schadenfreude_Mid_2>一旦有人凝视那道狭缝太久，箱体内便会猛然迸裂出嗜血圆锯。</LC_WorkNarration_Schadenfreude_Mid_2>
+  <LC_WorkNarration_Schadenfreude_Mid_3>{0} 清晰听见 {1} 铁壳内部传来生锈齿轮缓缓咬合的咔嗒声。</LC_WorkNarration_Schadenfreude_Mid_3>
+  <LC_WorkNarration_Schadenfreude_Result_Good>{1} 安静地停在金属盒里——今天锯齿并未弹出。</LC_WorkNarration_Schadenfreude_Result_Good>
+  <LC_WorkNarration_Schadenfreude_Result_Bad>狭缝里那只眼球猛然充血圆睁，铁壳内传来震耳锯啸！</LC_WorkNarration_Schadenfreude_Result_Bad>
+
+  <!-- F-01-87 渴求智慧的稻草人 -->
+  <LC_WorkNarration_ScarecrowSearchingForWisdom_Start_1>{0} 冷静走近 {1}，刻意隐藏起思绪与才智的波动。</LC_WorkNarration_ScarecrowSearchingForWisdom_Start_1>
+  <LC_WorkNarration_ScarecrowSearchingForWisdom_Mid_1>那颗缝满粗线的稻草头颅，正无休止地渴求着旁人聪慧的大脑。</LC_WorkNarration_ScarecrowSearchingForWisdom_Mid_1>
+  <LC_WorkNarration_ScarecrowSearchingForWisdom_Mid_2>“要是……我也有一颗聪明的脑袋就好了……”{1} 低哑地呜咽着。</LC_WorkNarration_ScarecrowSearchingForWisdom_Mid_2>
+  <LC_WorkNarration_ScarecrowSearchingForWisdom_Mid_3>{0} 收敛神情，在 {1} 贪婪空洞的凝视下完成收容作业。</LC_WorkNarration_ScarecrowSearchingForWisdom_Mid_3>
+  <LC_WorkNarration_ScarecrowSearchingForWisdom_Result_Good>{1} 无力地垂下手臂，暂且熄灭了攫取智慧的念头。</LC_WorkNarration_ScarecrowSearchingForWisdom_Result_Good>
+  <LC_WorkNarration_ScarecrowSearchingForWisdom_Result_Bad>{1} 猛地探出枯枝般的利爪——它正迫不及待地渴求鲜活脑浆！</LC_WorkNarration_ScarecrowSearchingForWisdom_Result_Bad>
+
+  <!-- F-05-32 热心樵夫 -->
+  <LC_WorkNarration_WarmHeartedWoodsman_Start_1>{0} 站在握着沉重伐木斧的高大铁皮巨人 {1} 身旁。</LC_WorkNarration_WarmHeartedWoodsman_Start_1>
+  <LC_WorkNarration_WarmHeartedWoodsman_Mid_1>铅制的心脏永远冰冷无力——唯有滚烫的心跳才能让锅炉重新轰鸣。</LC_WorkNarration_WarmHeartedWoodsman_Mid_1>
+  <LC_WorkNarration_WarmHeartedWoodsman_Mid_2>灰白蒸汽从 {1} 空荡的胸腔阀门缓缓冒出，{0} 谨慎调试着气压。</LC_WorkNarration_WarmHeartedWoodsman_Mid_2>
+  <LC_WorkNarration_WarmHeartedWoodsman_Mid_3>{0} 尽量放缓心跳与情绪波动，避免唤醒 {1} 斧刃里的狂热。</LC_WorkNarration_WarmHeartedWoodsman_Mid_3>
+  <LC_WorkNarration_WarmHeartedWoodsman_Result_Good>锅炉嗡鸣渐渐平息，{1} 将沉重铁斧缓缓扛回肩上。</LC_WorkNarration_WarmHeartedWoodsman_Result_Good>
+  <LC_WorkNarration_WarmHeartedWoodsman_Result_Bad>胸腔炉膛发出低吼——{1} 死死盯住了 {0} 剧烈跳动的胸口！</LC_WorkNarration_WarmHeartedWoodsman_Result_Bad>
+
+  <!-- F-01-57 小红帽雇佣兵 -->
+  <LC_WorkNarration_LittleRedRidingHoodedMercenary_Start_1>{0} 走进收容室，{1} 满布伤疤的手始终按在刀柄与枪套上。</LC_WorkNarration_LittleRedRidingHoodedMercenary_Start_1>
+  <LC_WorkNarration_LittleRedRidingHoodedMercenary_Mid_1>“少拿那种眼神看着我。只要付足报酬，不管是谁我都敢去猎杀。”</LC_WorkNarration_LittleRedRidingHoodedMercenary_Mid_1>
+  <LC_WorkNarration_LittleRedRidingHoodedMercenary_Mid_2>{0} 保持冷峻干练的距离，例行核对 {1} 的弹药与悬赏记录。</LC_WorkNarration_LittleRedRidingHoodedMercenary_Mid_2>
+  <LC_WorkNarration_LittleRedRidingHoodedMercenary_Mid_3>火红兜帽下的眼眸隐隐灼烧——任何风吹草动都会点燃她的猎杀本能。</LC_WorkNarration_LittleRedRidingHoodedMercenary_Mid_3>
+  <LC_WorkNarration_LittleRedRidingHoodedMercenary_Result_Good>{1} 将左轮甩回枪套，冷冷丢下一句：“委托还算爽快。”</LC_WorkNarration_LittleRedRidingHoodedMercenary_Result_Good>
+  <LC_WorkNarration_LittleRedRidingHoodedMercenary_Result_Bad>{1} 啧了一声拉动枪机——这扇窄门迟早关不住她。</LC_WorkNarration_LittleRedRidingHoodedMercenary_Result_Bad>
+
+  <!-- O-04-72 棘刺公交 / 穿刺天堂 -->
+  <LC_WorkNarration_BurrowingHeaven_Start_1>{0} 从踏入收容室的那一刻起便死死盯着 {1}，连眨眼都克制到极限。</LC_WorkNarration_BurrowingHeaven_Start_1>
+  <LC_WorkNarration_BurrowingHeaven_Mid_1>务必牢牢盯着它——工作期间绝对不能将视线移开哪怕一瞬间！</LC_WorkNarration_BurrowingHeaven_Mid_1>
+  <LC_WorkNarration_BurrowingHeaven_Mid_2>生长在 {1} 荆棘枝杈上的猩红眼球也一动不动地回望着 {0}。</LC_WorkNarration_BurrowingHeaven_Mid_2>
+  <LC_WorkNarration_BurrowingHeaven_Mid_3>一旦无人注视，那些疯狂生长的鲜红根须就会穿透一切直刺苍穹。</LC_WorkNarration_BurrowingHeaven_Mid_3>
+  <LC_WorkNarration_BurrowingHeaven_Result_Good>在 {0} 全程紧盯之下，{1} 乖乖收拢了躁动的荆棘。</LC_WorkNarration_BurrowingHeaven_Result_Good>
+  <LC_WorkNarration_BurrowingHeaven_Result_Bad>视线稍一松懈，刺目的猩红荆棘便骤然向四周暴涨！</LC_WorkNarration_BurrowingHeaven_Result_Bad>
+
+  <!-- O-06-20 一无所有 -->
+  <LC_WorkNarration_NothingThere_Start_1>{0} 深吸一口气，踏入弥漫着浓重血腥味的 {1} 收容单元。</LC_WorkNarration_NothingThere_Start_1>
+  <LC_WorkNarration_NothingThere_Mid_1>无数只拼凑在一起的眼睛在 {1} 蠕动的肉块上眨动，笨拙地模仿着人类表情。</LC_WorkNarration_NothingThere_Mid_1>
+  <LC_WorkNarration_NothingThere_Mid_2>“你……好？……主、主管……”扭曲而空洞的人声从 {1} 裂开的口器里响起。</LC_WorkNarration_NothingThere_Mid_2>
+  <LC_WorkNarration_NothingThere_Mid_3>{0} 顶住直击灵魂的恐惧，绝不在 {1} 面前流露出半分胆怯。</LC_WorkNarration_NothingThere_Mid_3>
+  <LC_WorkNarration_NothingThere_Result_Good>这团不断模仿人类的可怖肉块缓缓平静了下来——至少暂时如此。</LC_WorkNarration_NothingThere_Result_Good>
+  <LC_WorkNarration_NothingThere_Result_Bad>“我爱你……我爱你……”{1} 剧烈痉挛着扯裂了血肉外壳！</LC_WorkNarration_NothingThere_Result_Bad>
+
+  <!-- 七罪实体 (ZAYIN) -->
+  <LC_WorkNarration_GluttonyEntity_Start_1>{0} 谨慎靠近不停开合利齿花瓣的 {1}。</LC_WorkNarration_GluttonyEntity_Start_1>
+  <LC_WorkNarration_GluttonyEntity_Mid_1>{1} 盲目地啃咬着空气，仿佛永远也填不满那具干瘪的根茎。</LC_WorkNarration_GluttonyEntity_Mid_1>
+  <LC_WorkNarration_GluttonyEntity_Mid_2>{0} 避开渗出酸液的花蕊，整理着 {1} 的枯枝。</LC_WorkNarration_GluttonyEntity_Mid_2>
+
+  <LC_WorkNarration_LustEntity_Start_1>{0} 直面 {1} 肉块裂缝中那只紧盯着自己的独眼。</LC_WorkNarration_LustEntity_Start_1>
+  <LC_WorkNarration_LustEntity_Mid_1>交缠在一起的畸形手臂朝 {0} 的方向饥渴地蠕动伸展。</LC_WorkNarration_LustEntity_Mid_1>
+  <LC_WorkNarration_LustEntity_Mid_2>{0} 保持冷静定力，丝毫不为 {1} 的狂热目光所动。</LC_WorkNarration_LustEntity_Mid_2>
+
+  <LC_WorkNarration_MelancholyEntity_Start_1>{0} 隔着透明虫壳观察 {1} 体内静止不动的水面。</LC_WorkNarration_MelancholyEntity_Start_1>
+  <LC_WorkNarration_MelancholyEntity_Mid_1>沉重得化不开的哀愁，从 {1} 苍白的躯壳里丝丝渗透出来。</LC_WorkNarration_MelancholyEntity_Mid_1>
+  <LC_WorkNarration_MelancholyEntity_Mid_2>{0} 迅速完成检查，不让自己沉浸在 {1} 的忧郁倒影里。</LC_WorkNarration_MelancholyEntity_Mid_2>
+
+  <LC_WorkNarration_PrideEntity_Start_1>{0} 走近始终不停滚转锯齿铁环的 {1}。</LC_WorkNarration_PrideEntity_Start_1>
+  <LC_WorkNarration_PrideEntity_Mid_1>冷硬铁轮发出刺耳摩擦声，似乎随时准备碾碎眼前的一切。</LC_WorkNarration_PrideEntity_Mid_1>
+  <LC_WorkNarration_PrideEntity_Mid_2>{0} 站在安全范围外，逐项校检 {1} 的物理限位销。</LC_WorkNarration_PrideEntity_Mid_2>
+
+  <LC_WorkNarration_SlothEntity_Start_1>{0} 轻轻查看漂浮在半空中懒洋洋打盹的 {1}。</LC_WorkNarration_SlothEntity_Start_1>
+  <LC_WorkNarration_SlothEntity_Mid_1>{1} 岩石中央的独眼慢吞吞转了过来，瞥了 {0} 一眼。</LC_WorkNarration_SlothEntity_Mid_1>
+  <LC_WorkNarration_SlothEntity_Mid_2>{0} 动作轻缓，避免惊动这团随时可能横冲直撞的巨石。</LC_WorkNarration_SlothEntity_Mid_2>
+
+  <LC_WorkNarration_WrathEntity_Start_1>{0} 顶住热浪，站到暗红液体滚烫沸腾的 {1} 面前。</LC_WorkNarration_WrathEntity_Start_1>
+  <LC_WorkNarration_WrathEntity_Mid_1>狂暴怒意在 {1} 触须内剧烈翻涌，末端口器躁动不安地抽搐。</LC_WorkNarration_WrathEntity_Mid_1>
+  <LC_WorkNarration_WrathEntity_Mid_2>{0} 牢牢稳住防护姿态，防备 {1} 骤然刺出的猛烈突袭。</LC_WorkNarration_WrathEntity_Mid_2>
+</LanguageData>

@@ -60,7 +60,7 @@
         <customWarningPoints>-1</customWarningPoints>
         <soundWorking>LC_ScorchedGirl_WorkLoop</soundWorking>
         <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
-        <canWanderInContainmentRoom>true</canWanderInContainmentRoom>
+        <canWanderInContainmentRoom>false</canWanderInContainmentRoom>
         <dyingFxDef>DyingScorchedGirl</dyingFxDef>
         <workDamageDef>LC_RedDamage</workDamageDef>
         <workDamageRange>2~4</workDamageRange>

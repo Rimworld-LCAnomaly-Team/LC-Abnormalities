@@ -47,6 +47,7 @@
         <shouldNotifyWhenEscape>false</shouldNotifyWhenEscape>
         <ifProvideWarningPoints>false</ifProvideWarningPoints>
         <customWarningPoints>-1</customWarningPoints>
+        <soundWorking>LC_FairyFestival_WorkLoop</soundWorking>
         <allowRoamingOutsideContainment>false</allowRoamingOutsideContainment>
         <dyingFxDef>DyingFairyFestival</dyingFxDef>
         <workDamageDef>LC_RedDamage</workDamageDef>

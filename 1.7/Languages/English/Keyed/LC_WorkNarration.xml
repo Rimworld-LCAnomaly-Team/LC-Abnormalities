@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- O-03-03 One Sin and Hundreds of Good Deeds -->
+  <LC_WorkNarration_OneSin_Start_1>{0} approaches the towering skull-cross silently to perform {2} work.</LC_WorkNarration_OneSin_Start_1>
+  <LC_WorkNarration_OneSin_Mid_1>It only stares in silence with its hollow sockets; yet it seems capable of listening.</LC_WorkNarration_OneSin_Mid_1>
+  <LC_WorkNarration_OneSin_Mid_2>{0} confesses a buried regret—heavy air clears into a quiet warmth.</LC_WorkNarration_OneSin_Mid_2>
+  <LC_WorkNarration_OneSin_Mid_3>The crown of thorns glints faintly as {1} absolves the weight on {0}'s mind.</LC_WorkNarration_OneSin_Mid_3>
+  <LC_WorkNarration_OneSin_Result_Good>{0} leaves the unit feeling unexpectedly weightless and calm.</LC_WorkNarration_OneSin_Result_Good>
+  <LC_WorkNarration_OneSin_Result_Bad>Silence hangs heavy; {1} refuses to answer empty words.</LC_WorkNarration_OneSin_Result_Bad>
+
+  <!-- O-02-56 Punishing Bird -->
+  <LC_WorkNarration_PunishingBird_Start_1>{0} carefully approaches {1}, watching its fluttering white wings.</LC_WorkNarration_PunishingBird_Start_1>
+  <LC_WorkNarration_PunishingBird_Mid_1>Though no bigger than a palm, {1} pecks fiercely whenever it feels slighted.</LC_WorkNarration_PunishingBird_Mid_1>
+  <LC_WorkNarration_PunishingBird_Mid_2>{0} resists the urge to touch the red patch on its chest—the bird hops anxiously.</LC_WorkNarration_PunishingBird_Mid_2>
+  <LC_WorkNarration_PunishingBird_Mid_3>{1} tilts its head and chirps, believing itself the righteous judge of all sins.</LC_WorkNarration_PunishingBird_Mid_3>
+  <LC_WorkNarration_PunishingBird_Result_Good>{1} settles back onto its perch with a satisfied chirp.</LC_WorkNarration_PunishingBird_Result_Good>
+  <LC_WorkNarration_PunishingBird_Result_Bad>{1} puffs up angrily—punishment will be swift if provoked further.</LC_WorkNarration_PunishingBird_Result_Bad>
+
+  <!-- O-02-40 Big Bird -->
+  <LC_WorkNarration_BigBird_Start_1>{0} steps under the warm amber glow of {1}'s eternal lamp.</LC_WorkNarration_BigBird_Start_1>
+  <LC_WorkNarration_BigBird_Mid_1>Dozens of golden eyes blink open and shut across {1}'s dark feathers, watching {0}.</LC_WorkNarration_BigBird_Mid_1>
+  <LC_WorkNarration_BigBird_Mid_2>The lamp burns bright so no creature in the dark forest can fall prey.</LC_WorkNarration_BigBird_Mid_2>
+  <LC_WorkNarration_BigBird_Mid_3>{0} keeps steady breath while tending the soot around {1}'s lantern.</LC_WorkNarration_BigBird_Mid_3>
+  <LC_WorkNarration_BigBird_Result_Good>The golden eyes soften slightly; {1} lowers its lantern in peace.</LC_WorkNarration_BigBird_Result_Good>
+  <LC_WorkNarration_BigBird_Result_Bad>{1}'s eyes flare wide in distrust—it fears another tragedy awaits.</LC_WorkNarration_BigBird_Result_Bad>
+
+  <!-- O-02-62 Judgement Bird -->
+  <LC_WorkNarration_JudgementBird_Start_1>{0} stands beneath the blindfolded avian figure and its tilted golden scale.</LC_WorkNarration_JudgementBird_Start_1>
+  <LC_WorkNarration_JudgementBird_Mid_1>The scale tips without weight; {1} weighs invisible sins rather than flesh.</LC_WorkNarration_JudgementBird_Mid_1>
+  <LC_WorkNarration_JudgementBird_Mid_2>Bandages hide its missing eyes, yet {1} still senses every flaw in the room.</LC_WorkNarration_JudgementBird_Mid_2>
+  <LC_WorkNarration_JudgementBird_Mid_3>{0} dares not disturb the delicate balance of {1}'s outstretched scale.</LC_WorkNarration_JudgementBird_Mid_3>
+  <LC_WorkNarration_JudgementBird_Result_Good>The golden scale steadies at last, sparing the chamber from judgment.</LC_WorkNarration_JudgementBird_Result_Good>
+  <LC_WorkNarration_JudgementBird_Result_Bad>The scale clinks ominously to one side as {0} withdraws.</LC_WorkNarration_JudgementBird_Result_Bad>
+
+  <!-- F-01-02 Scorched Girl -->
+  <LC_WorkNarration_ScorchedGirl_Start_1>{0} enters the ash-choked unit and checks the ember on {1}'s head.</LC_WorkNarration_ScorchedGirl_Start_1>
+  <LC_WorkNarration_ScorchedGirl_Mid_1>Charred ashes drift downward; she was only looking for a scrap of warmth.</LC_WorkNarration_ScorchedGirl_Mid_1>
+  <LC_WorkNarration_ScorchedGirl_Mid_2>{0} hears the faint strike of a match echoing from the dark corner.</LC_WorkNarration_ScorchedGirl_Mid_2>
+  <LC_WorkNarration_ScorchedGirl_Mid_3>Heat radiates off {1}'s motionless silhouette—one spark could consume everything.</LC_WorkNarration_ScorchedGirl_Mid_3>
+  <LC_WorkNarration_ScorchedGirl_Result_Good>The ember dims to a gentle glow; {1} murmurs quietly in the dark.</LC_WorkNarration_ScorchedGirl_Result_Good>
+  <LC_WorkNarration_ScorchedGirl_Result_Bad>Flames surge violently along {1}'s scorched matchstick!</LC_WorkNarration_ScorchedGirl_Result_Bad>
+
+  <!-- T-05-41 All-Around Helper -->
+  <LC_WorkNarration_AllAroundHelper_Start_1>{0} steps inside as {1}'s optical lens whirs into focus.</LC_WorkNarration_AllAroundHelper_Start_1>
+  <LC_WorkNarration_AllAroundHelper_Mid_1>"Hello! How may I assist you today?" {1} chimes brightly while polishing bloodstains.</LC_WorkNarration_AllAroundHelper_Mid_1>
+  <LC_WorkNarration_AllAroundHelper_Mid_2>{0} checks the circular saw attachments—every blade spins ready for "cleaning."</LC_WorkNarration_AllAroundHelper_Mid_2>
+  <LC_WorkNarration_AllAroundHelper_Mid_3>In {1}'s programming, dirty messes and living employees look alarmingly alike.</LC_WorkNarration_AllAroundHelper_Mid_3>
+  <LC_WorkNarration_AllAroundHelper_Result_Good>{1} chimes happily: "Cleaning complete! Have a pleasant day!"</LC_WorkNarration_AllAroundHelper_Result_Good>
+  <LC_WorkNarration_AllAroundHelper_Result_Bad>Red warning lights flash across {1}'s dome as its blades rev up!</LC_WorkNarration_AllAroundHelper_Result_Bad>
+
+  <!-- F-04-83 Fairy Festival -->
+  <LC_WorkNarration_FairyFestival_Start_1>{0} enters the unit where glowing {1} flutter peacefully.</LC_WorkNarration_FairyFestival_Start_1>
+  <LC_WorkNarration_FairyFestival_Mid_1>With warm smiles and shimmering wings, the fairies offer {0} sweet, tender care.</LC_WorkNarration_FairyFestival_Mid_1>
+  <LC_WorkNarration_FairyFestival_Mid_2>All wounds fade beneath their touch—though only so the meat stays fresh.</LC_WorkNarration_FairyFestival_Mid_2>
+  <LC_WorkNarration_FairyFestival_Mid_3>{0} feels drowsy and healed, unaware of how hungrily the swarm watches.</LC_WorkNarration_FairyFestival_Mid_3>
+  <LC_WorkNarration_FairyFestival_Result_Good>The fairies chime joyfully, blessing {0} with delicate shimmering dust.</LC_WorkNarration_FairyFestival_Result_Good>
+  <LC_WorkNarration_FairyFestival_Result_Bad>Their sweet giggles turn razor-sharp as {0} pulls away too soon.</LC_WorkNarration_FairyFestival_Result_Bad>
+
+  <!-- F-05-52 Opened Can of WellCheers -->
+  <LC_WorkNarration_WellCheers_Start_1>{0} stands before the bright crimson vending machine ({1}).</LC_WorkNarration_WellCheers_Start_1>
+  <LC_WorkNarration_WellCheers_Mid_1>From within the humming metal cabinet, the sound of crashing ocean waves drifts out.</LC_WorkNarration_WellCheers_Mid_1>
+  <LC_WorkNarration_WellCheers_Mid_2>A tiny shrimp figure offers a freshly chilled can—never mind where the shrimp came from.</LC_WorkNarration_WellCheers_Mid_2>
+  <LC_WorkNarration_WellCheers_Mid_3>{0} hears distant seagulls crying over an endless deep blue sea.</LC_WorkNarration_WellCheers_Mid_3>
+  <LC_WorkNarration_WellCheers_Result_Good>A crisp cold can drops into the tray with a refreshing hiss.</LC_WorkNarration_WellCheers_Result_Good>
+  <LC_WorkNarration_WellCheers_Result_Bad>The wave sounds roar angrily from inside the locked machine.</LC_WorkNarration_WellCheers_Result_Bad>
+
+  <!-- T-02-99 Void Dream -->
+  <LC_WorkNarration_VoidDream_Start_1>{0} steps softly beside the slumbering horned lamb, {1}.</LC_WorkNarration_VoidDream_Start_1>
+  <LC_WorkNarration_VoidDream_Mid_1>Soft indigo wool rises and falls; {1}'s dreams drift lazily into the air.</LC_WorkNarration_VoidDream_Mid_1>
+  <LC_WorkNarration_VoidDream_Mid_2>{0} fights off sudden drowsiness—falling asleep here means waking up never again.</LC_WorkNarration_VoidDream_Mid_2>
+  <LC_WorkNarration_VoidDream_Mid_3>Somewhere inside {1}'s third eye, stars flicker behind closed eyelids.</LC_WorkNarration_VoidDream_Mid_3>
+  <LC_WorkNarration_VoidDream_Result_Good>{1} curls up peacefully without waking into its terrifying true form.</LC_WorkNarration_VoidDream_Result_Good>
+  <LC_WorkNarration_VoidDream_Result_Bad>A crow's screech tears through {1}'s nap—its third eye cracks open!</LC_WorkNarration_VoidDream_Result_Bad>
+
+  <!-- O-03-60 Fragment of the Universe -->
+  <LC_WorkNarration_FragmentOfTheUniverse_Start_1>{0} observes the hovering, prism-colored silhouette of {1}.</LC_WorkNarration_FragmentOfTheUniverse_Start_1>
+  <LC_WorkNarration_FragmentOfTheUniverse_Mid_1>Unfathomable cosmic echoes hum softly—{0} hears patterns beyond human words.</LC_WorkNarration_FragmentOfTheUniverse_Mid_1>
+  <LC_WorkNarration_FragmentOfTheUniverse_Mid_2>Look long enough, and you begin to understand a sliver of the distant stars.</LC_WorkNarration_FragmentOfTheUniverse_Mid_2>
+  <LC_WorkNarration_FragmentOfTheUniverse_Mid_3>{0} steadies their mind against the eerie, melodic singing from beyond.</LC_WorkNarration_FragmentOfTheUniverse_Mid_3>
+  <LC_WorkNarration_FragmentOfTheUniverse_Result_Good>{1} chimes gently, sharing a tranquil resonance of starlight.</LC_WorkNarration_FragmentOfTheUniverse_Result_Good>
+  <LC_WorkNarration_FragmentOfTheUniverse_Result_Bad>Discordant static floods {0}'s ears as {1}'s tendrils shudder.</LC_WorkNarration_FragmentOfTheUniverse_Result_Bad>
+
+  <!-- D-02-107 Ppodae -->
+  <LC_WorkNarration_Ppodae_Start_1>{0} kneels to greet {1}, who wags its fluffy white tail excitedly.</LC_WorkNarration_Ppodae_Start_1>
+  <LC_WorkNarration_Ppodae_Mid_1>How could anyone resist this adorable puppy—as long as you only feed and pet it?</LC_WorkNarration_Ppodae_Mid_1>
+  <LC_WorkNarration_Ppodae_Mid_2>{0} carefully indulges {1}'s appetite; displeasing it reveals what hides inside.</LC_WorkNarration_Ppodae_Mid_2>
+  <LC_WorkNarration_Ppodae_Mid_3>{1} yips happily and paws at {0}'s boots for more treats.</LC_WorkNarration_Ppodae_Mid_3>
+  <LC_WorkNarration_Ppodae_Result_Good>{1} rolls over cheerfully—truly the cutest creature in the wing!</LC_WorkNarration_Ppodae_Result_Good>
+  <LC_WorkNarration_Ppodae_Result_Bad>A low, monstrous growl rumbles deep behind {1}'s innocent puppy face!</LC_WorkNarration_Ppodae_Result_Bad>
+
+  <!-- O-04-84 Meat Lantern -->
+  <LC_WorkNarration_MeatLanternContained_Start_1>{0} cautiously watches the glowing flower bobbing above {1}.</LC_WorkNarration_MeatLanternContained_Start_1>
+  <LC_WorkNarration_MeatLanternContained_Mid_1>Small round eyes blink from beneath the dirt, luring {0} a little closer.</LC_WorkNarration_MeatLanternContained_Mid_1>
+  <LC_WorkNarration_MeatLanternContained_Mid_2>Do not finish carelessly and do not linger above the lure—jaws wait below.</LC_WorkNarration_MeatLanternContained_Mid_2>
+  <LC_WorkNarration_MeatLanternContained_Mid_3>{0} keeps deliberate pacing while tending the soil around {1}.</LC_WorkNarration_MeatLanternContained_Mid_3>
+  <LC_WorkNarration_MeatLanternContained_Result_Good>The glowing blossom dims peacefully; {1} sinks quietly back into the soil.</LC_WorkNarration_MeatLanternContained_Result_Good>
+  <LC_WorkNarration_MeatLanternContained_Result_Bad>The subterranean maw snaps beneath the tiles as {0} scrambles clear!</LC_WorkNarration_MeatLanternContained_Result_Bad>
+
+  <!-- O-01-67 Laetitia -->
+  <LC_WorkNarration_Laetitia_Start_1>{0} enters the cheerful, ribbon-filled room to visit {1}.</LC_WorkNarration_Laetitia_Start_1>
+  <LC_WorkNarration_Laetitia_Mid_1>"Will you stay and play with me? I made a very special little gift for my friend!"</LC_WorkNarration_Laetitia_Mid_1>
+  <LC_WorkNarration_Laetitia_Mid_2>{0} smiles gently while keeping watch—no one knows what hatches inside her gift boxes.</LC_WorkNarration_Laetitia_Mid_2>
+  <LC_WorkNarration_Laetitia_Mid_3>{1} hums a childish tune, swinging her feet above the floor.</LC_WorkNarration_Laetitia_Mid_3>
+  <LC_WorkNarration_Laetitia_Result_Good>{1} beams brightly, happy that she isn't alone today.</LC_WorkNarration_Laetitia_Result_Good>
+  <LC_WorkNarration_Laetitia_Result_Bad>Tears well in {1}'s eyes—she whispers a terrible prank for those who forget her.</LC_WorkNarration_Laetitia_Result_Bad>
+
+  <!-- T-01-68 The Funeral of the Dead Butterflies -->
+  <LC_WorkNarration_FuneralOfDeadButterflies_Start_1>{0} steps quietly toward {1}, who stands holding a heavy coffin.</LC_WorkNarration_FuneralOfDeadButterflies_Start_1>
+  <LC_WorkNarration_FuneralOfDeadButterflies_Mid_1>Countless pale butterflies flutter softly around a nameless memorial.</LC_WorkNarration_FuneralOfDeadButterflies_Mid_1>
+  <LC_WorkNarration_FuneralOfDeadButterflies_Mid_2>{0} bows respectfully—this mourning is for employees who can never leave.</LC_WorkNarration_FuneralOfDeadButterflies_Mid_2>
+  <LC_WorkNarration_FuneralOfDeadButterflies_Mid_3>The coffin creaks lightly as snow-white wings settle along {1}'s shoulders.</LC_WorkNarration_FuneralOfDeadButterflies_Mid_3>
+  <LC_WorkNarration_FuneralOfDeadButterflies_Result_Good>A solemn stillness fills the chamber; {1} tips its hat in quiet thanks.</LC_WorkNarration_FuneralOfDeadButterflies_Result_Good>
+  <LC_WorkNarration_FuneralOfDeadButterflies_Result_Bad>The coffin lid shifts open—black-winged butterflies spill into the room!</LC_WorkNarration_FuneralOfDeadButterflies_Result_Bad>
+
+  <!-- F-01-69 Der Freischutz -->
+  <LC_WorkNarration_DerFreischutz_Start_1>{0} meets the cool azure gaze of {1} and his long smoking rifle.</LC_WorkNarration_DerFreischutz_Start_1>
+  <LC_WorkNarration_DerFreischutz_Mid_1>The devil's bullets strike anything you wish—yet every shot carries a grim price.</LC_WorkNarration_DerFreischutz_Mid_1>
+  <LC_WorkNarration_DerFreischutz_Mid_2>{0} hears cold blue flames crackle softly along the barrel of {1}'s gun.</LC_WorkNarration_DerFreischutz_Mid_2>
+  <LC_WorkNarration_DerFreischutz_Mid_3>"Even the seventh bullet knows no loyalty, manager."</LC_WorkNarration_DerFreischutz_Mid_3>
+  <LC_WorkNarration_DerFreischutz_Result_Good>{1} lowers his rifle with a faint, knowing nod.</LC_WorkNarration_DerFreischutz_Result_Good>
+  <LC_WorkNarration_DerFreischutz_Result_Bad>Blue smoke swirls ominously as {1} loads another cursed round.</LC_WorkNarration_DerFreischutz_Result_Bad>
+
+  <!-- F-01-37 The Snow Queen -->
+  <LC_WorkNarration_SnowQueen_Start_1>{0} shivers upon entering {1}'s crystalline, frost-bound chamber.</LC_WorkNarration_SnowQueen_Start_1>
+  <LC_WorkNarration_SnowQueen_Mid_1>Spring belongs only to those courageous enough to thaw a frozen heart.</LC_WorkNarration_SnowQueen_Mid_1>
+  <LC_WorkNarration_SnowQueen_Mid_2>Ice petals drift quietly past {0}'s visor while tending to {1}.</LC_WorkNarration_SnowQueen_Mid_2>
+  <LC_WorkNarration_SnowQueen_Mid_3>Beware {1}'s second kiss—few survive when frost claims their chest.</LC_WorkNarration_SnowQueen_Mid_3>
+  <LC_WorkNarration_SnowQueen_Result_Good>Warm breath lingers in the frost; {1} leaves a delicate kiss of winter strength.</LC_WorkNarration_SnowQueen_Result_Good>
+  <LC_WorkNarration_SnowQueen_Result_Bad>Biting rime creeps toward {0}'s boots as {1} turns coldly away.</LC_WorkNarration_SnowQueen_Result_Bad>
+
+  <!-- O-05-76 Schadenfreude -->
+  <LC_WorkNarration_Schadenfreude_Start_1>{0} avoids staring directly at {1}'s rusted keyhole casing.</LC_WorkNarration_Schadenfreude_Start_1>
+  <LC_WorkNarration_Schadenfreude_Mid_1>Keep working normally—do not look directly into the eye peeking from the keyhole!</LC_WorkNarration_Schadenfreude_Mid_1>
+  <LC_WorkNarration_Schadenfreude_Mid_2>The moment someone watches too closely, serrated blades erupt from the box.</LC_WorkNarration_Schadenfreude_Mid_2>
+  <LC_WorkNarration_Schadenfreude_Mid_3>{0} hears iron gears grinding slowly inside {1}'s silent metal shell.</LC_WorkNarration_Schadenfreude_Mid_3>
+  <LC_WorkNarration_Schadenfreude_Result_Good>{1} remains motionless inside its steel box—no blades spun today.</LC_WorkNarration_Schadenfreude_Result_Good>
+  <LC_WorkNarration_Schadenfreude_Result_Bad>A cruel eye widens inside the slit—sawteeth shriek beneath the lid!</LC_WorkNarration_Schadenfreude_Result_Bad>
+
+  <!-- F-01-87 Scarecrow Searching for Wisdom -->
+  <LC_WorkNarration_ScarecrowSearchingForWisdom_Start_1>{0} approaches {1} cautiously, keeping intellect and guard steady.</LC_WorkNarration_ScarecrowSearchingForWisdom_Start_1>
+  <LC_WorkNarration_ScarecrowSearchingForWisdom_Mid_1>The stitched straw head thirsts endlessly for someone else's bright mind.</LC_WorkNarration_ScarecrowSearchingForWisdom_Mid_1>
+  <LC_WorkNarration_ScarecrowSearchingForWisdom_Mid_2>"If I only had a brain..." {1} rasps while tilting its crooked hat.</LC_WorkNarration_ScarecrowSearchingForWisdom_Mid_2>
+  <LC_WorkNarration_ScarecrowSearchingForWisdom_Mid_3>{0} suppresses any flicker of vanity under {1}'s hollow, longing gaze.</LC_WorkNarration_ScarecrowSearchingForWisdom_Mid_3>
+  <LC_WorkNarration_ScarecrowSearchingForWisdom_Result_Good>{1} stands slumped and still, its silent hunger kept at bay.</LC_WorkNarration_ScarecrowSearchingForWisdom_Result_Good>
+  <LC_WorkNarration_ScarecrowSearchingForWisdom_Result_Bad>{1} reaches out with ravenous claws—it craves fresh wisdom!</LC_WorkNarration_ScarecrowSearchingForWisdom_Result_Bad>
+
+  <!-- F-05-32 Warm-Hearted Woodsman -->
+  <LC_WorkNarration_WarmHeartedWoodsman_Start_1>{0} steps near the towering tin colossus ({1}) and its heavy axe.</LC_WorkNarration_WarmHeartedWoodsman_Start_1>
+  <LC_WorkNarration_WarmHeartedWoodsman_Mid_1>A heart made of cold lead never beats fast enough—only warm hearts stoke the furnace.</LC_WorkNarration_WarmHeartedWoodsman_Mid_1>
+  <LC_WorkNarration_WarmHeartedWoodsman_Mid_2>Steam puffs faintly from {1}'s hollow chest as {0} tends its joints.</LC_WorkNarration_WarmHeartedWoodsman_Mid_2>
+  <LC_WorkNarration_WarmHeartedWoodsman_Mid_3>{0} avoids letting empathy stir too strongly near {1}'s axe.</LC_WorkNarration_WarmHeartedWoodsman_Mid_3>
+  <LC_WorkNarration_WarmHeartedWoodsman_Result_Good>The iron boiler cools down steadily; {1} rests his axe against his shoulder.</LC_WorkNarration_WarmHeartedWoodsman_Result_Good>
+  <LC_WorkNarration_WarmHeartedWoodsman_Result_Bad>Furnace gears groan louder—{1} stares at {0}'s beating chest!</LC_WorkNarration_WarmHeartedWoodsman_Result_Bad>
+
+  <!-- F-01-57 Little Red Riding Hooded Mercenary -->
+  <LC_WorkNarration_LittleRedRidingHoodedMercenary_Start_1>{0} greets {1}, whose scarred hand never leaves her blade.</LC_WorkNarration_LittleRedRidingHoodedMercenary_Start_1>
+  <LC_WorkNarration_LittleRedRidingHoodedMercenary_Mid_1>"Don't get soft on me. Pay the bounty, and I'll bring back the Wolf's head."</LC_WorkNarration_LittleRedRidingHoodedMercenary_Mid_1>
+  <LC_WorkNarration_LittleRedRidingHoodedMercenary_Mid_2>{0} maintains strict, professional distance while auditing {1}'s arsenal.</LC_WorkNarration_LittleRedRidingHoodedMercenary_Mid_2>
+  <LC_WorkNarration_LittleRedRidingHoodedMercenary_Mid_3>Raging scars beneath {1}'s crimson hood glow fiercely whenever trouble stirs nearby.</LC_WorkNarration_LittleRedRidingHoodedMercenary_Mid_3>
+  <LC_WorkNarration_LittleRedRidingHoodedMercenary_Result_Good>{1} holsters her pistol cleanly: "Keep the contract sharp."</LC_WorkNarration_LittleRedRidingHoodedMercenary_Result_Good>
+  <LC_WorkNarration_LittleRedRidingHoodedMercenary_Result_Bad>{1} spits coldly and racks her slide—this cage won't hold her forever.</LC_WorkNarration_LittleRedRidingHoodedMercenary_Result_Bad>
+
+  <!-- O-04-72 The Burrowing Heaven -->
+  <LC_WorkNarration_BurrowingHeaven_Start_1>{0} keeps eyes locked steadfastly on {1} the entire time.</LC_WorkNarration_BurrowingHeaven_Start_1>
+  <LC_WorkNarration_BurrowingHeaven_Mid_1>Keep watching it—never look away for even a heartbeat while inside!</LC_WorkNarration_BurrowingHeaven_Mid_1>
+  <LC_WorkNarration_BurrowingHeaven_Mid_2>Crimson eyes along {1}'s sprawling branches stare unblinkingly back at {0}.</LC_WorkNarration_BurrowingHeaven_Mid_2>
+  <LC_WorkNarration_BurrowingHeaven_Mid_3>Its crimson roots hunger to spread wherever no gaze restrains them.</LC_WorkNarration_BurrowingHeaven_Mid_3>
+  <LC_WorkNarration_BurrowingHeaven_Result_Good>Observed from start to finish, {1} keeps its thorns neatly coiled.</LC_WorkNarration_BurrowingHeaven_Result_Good>
+  <LC_WorkNarration_BurrowingHeaven_Result_Bad>Sharp red roots lash violently at the ceiling the moment focus slips!</LC_WorkNarration_BurrowingHeaven_Result_Bad>
+
+  <!-- O-06-20 Nothing There -->
+  <LC_WorkNarration_NothingThere_Start_1>{0} braces themselves and steps inside {1}'s crimson-stained chamber.</LC_WorkNarration_NothingThere_Start_1>
+  <LC_WorkNarration_NothingThere_Mid_1>Countless human eyes blink and mimic familiar expressions across {1}'s shifting flesh.</LC_WorkNarration_NothingThere_Mid_1>
+  <LC_WorkNarration_NothingThere_Mid_2>"H-hello? ...Manager?" A chillingly broken human voice echoes from {1}'s maw.</LC_WorkNarration_NothingThere_Mid_2>
+  <LC_WorkNarration_NothingThere_Mid_3>{0} endures bone-crushing dread, never letting {1} mistake weakness for an opening.</LC_WorkNarration_NothingThere_Mid_3>
+  <LC_WorkNarration_NothingThere_Result_Good>The shifting mound of flesh subsides quietly—at least for now.</LC_WorkNarration_NothingThere_Result_Good>
+  <LC_WorkNarration_NothingThere_Result_Bad>"I love you... I love you..." {1} spasms violently inside the shell!</LC_WorkNarration_NothingThere_Result_Bad>
+
+  <!-- Seven Sin Entities (ZAYIN) -->
+  <LC_WorkNarration_GluttonyEntity_Start_1>{0} carefully approaches {1}'s snapping botanical jaws.</LC_WorkNarration_GluttonyEntity_Start_1>
+  <LC_WorkNarration_GluttonyEntity_Mid_1>{1} snaps blindly at thin air, forever starving despite its swollen roots.</LC_WorkNarration_GluttonyEntity_Mid_1>
+  <LC_WorkNarration_GluttonyEntity_Mid_2>{0} trims withered vines while avoiding {1}'s acid-dripping petals.</LC_WorkNarration_GluttonyEntity_Mid_2>
+
+  <LC_WorkNarration_LustEntity_Start_1>{0} meets the glaring, unblinking eye nestled inside {1}'s jaws.</LC_WorkNarration_LustEntity_Start_1>
+  <LC_WorkNarration_LustEntity_Mid_1>The intertwined flesh reaches hungrily toward {0}'s warmth.</LC_WorkNarration_LustEntity_Mid_1>
+  <LC_WorkNarration_LustEntity_Mid_2>{0} maintains steady composure under {1}'s ravenous stare.</LC_WorkNarration_LustEntity_Mid_2>
+
+  <LC_WorkNarration_MelancholyEntity_Start_1>{0} peers into the motionless stagnant water inside {1}.</LC_WorkNarration_MelancholyEntity_Start_1>
+  <LC_WorkNarration_MelancholyEntity_Mid_1>Heavy sorrow radiates softly through {1}'s translucent carapace.</LC_WorkNarration_MelancholyEntity_Mid_1>
+  <LC_WorkNarration_MelancholyEntity_Mid_2>{0} refuses to let despair seep into their mind during inspection.</LC_WorkNarration_MelancholyEntity_Mid_2>
+
+  <LC_WorkNarration_PrideEntity_Start_1>{0} approaches the tirelessly spinning jagged wheel of {1}.</LC_WorkNarration_PrideEntity_Start_1>
+  <LC_WorkNarration_PrideEntity_Mid_1>Steel spokes grind relentlessly, indifferent to anything crushed beneath.</LC_WorkNarration_PrideEntity_Mid_1>
+  <LC_WorkNarration_PrideEntity_Mid_2>{0} tests the containment anchor pins without touching {1}'s edge.</LC_WorkNarration_PrideEntity_Mid_2>
+
+  <LC_WorkNarration_SlothEntity_Start_1>{0} checks on the floating, drowsy boulder of {1}.</LC_WorkNarration_SlothEntity_Start_1>
+  <LC_WorkNarration_SlothEntity_Mid_1>A single heavy eye swivels sluggishly toward {0}'s footsteps.</LC_WorkNarration_SlothEntity_Mid_1>
+  <LC_WorkNarration_SlothEntity_Mid_2>{0} works quietly so as not to provoke {1}'s crushing weight.</LC_WorkNarration_SlothEntity_Mid_2>
+
+  <LC_WorkNarration_WrathEntity_Start_1>{0} confronts the boiling crimson tentacle pulsing as {1}.</LC_WorkNarration_WrathEntity_Start_1>
+  <LC_WorkNarration_WrathEntity_Mid_1>Fury bubbles inside {1}'s veins as its proboscis whips irritably.</LC_WorkNarration_WrathEntity_Mid_1>
+  <LC_WorkNarration_WrathEntity_Mid_2>{0} keeps a shield between themselves and {1}'s volatile strikes.</LC_WorkNarration_WrathEntity_Mid_2>
+</LanguageData>

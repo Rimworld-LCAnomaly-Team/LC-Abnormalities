@@ -55,8 +55,9 @@
         <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
         <ifProvideWarningPoints>true</ifProvideWarningPoints>
         <customWarningPoints>-1</customWarningPoints>
+        <soundWorking>LC_BigBird_WorkLoop</soundWorking>
         <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
-        <canWanderInContainmentRoom>true</canWanderInContainmentRoom>
+        <canWanderInContainmentRoom>false</canWanderInContainmentRoom>
         <dyingFxDef>DyingBigBird</dyingFxDef>
         <workDamageDef>LC_BlackDamage</workDamageDef>
         <workDamageRange>2~6</workDamageRange>

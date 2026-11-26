@@ -56,8 +56,9 @@
         <shouldNotifyWhenEscape>true</shouldNotifyWhenEscape>
         <ifProvideWarningPoints>true</ifProvideWarningPoints>
         <customWarningPoints>-1</customWarningPoints>
+        <soundWorking>LC_Cosmos_WorkLoop</soundWorking>
         <allowRoamingOutsideContainment>true</allowRoamingOutsideContainment>
-        <canWanderInContainmentRoom>true</canWanderInContainmentRoom>
+        <canWanderInContainmentRoom>false</canWanderInContainmentRoom>
         <dyingFxDef>DyingFragmentOfTheUniverse</dyingFxDef>
         <workDamageDef>LC_BlackDamage</workDamageDef>
         <workDamageRange>1~3</workDamageRange>
