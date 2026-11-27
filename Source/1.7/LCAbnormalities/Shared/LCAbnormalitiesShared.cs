@@ -252,6 +252,54 @@ namespace LCAbnormalities.Shared
         {
             compClass = typeof(CompLCAbnormality);
         }
+
+        public override bool TryGetWorkPreferenceRates(EAnomalyWorkType workType, out float[] ratesByLevel)
+        {
+            List<float> table;
+            switch (workType)
+            {
+                case EAnomalyWorkType.Instinct: table = instinctProbs; break;
+                case EAnomalyWorkType.Insight: table = insightProbs; break;
+                case EAnomalyWorkType.Attachment: table = attachmentProbs; break;
+                case EAnomalyWorkType.Repression: table = repressionProbs; break;
+                default:
+                    ratesByLevel = null;
+                    return false;
+            }
+
+            ratesByLevel = new float[5];
+            if (table == null || table.Count == 0)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    ratesByLevel[i] = 0.5f;
+                }
+            }
+            else
+            {
+                float fallback = table[table.Count - 1];
+                for (int i = 0; i < 5; i++)
+                {
+                    ratesByLevel[i] = i < table.Count ? table[i] : fallback;
+                }
+            }
+
+            return true;
+        }
+
+        public override bool TryGetWorkDamageInfo(out DamageDef damageDef, out FloatRange damageRange)
+        {
+            if (workDamageDef != null && workDamageRange.max > 0)
+            {
+                damageDef = workDamageDef;
+                damageRange = new FloatRange(workDamageRange.min, workDamageRange.max);
+                return true;
+            }
+
+            damageDef = null;
+            damageRange = FloatRange.Zero;
+            return false;
+        }
     }
 
     /// <summary>通用脑叶异想体核心组件基类，统一处理四维工作概率、工作伤害、逃脱信封与死亡化蛋。</summary>

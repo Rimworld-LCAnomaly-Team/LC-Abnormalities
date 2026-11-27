@@ -1,4 +1,5 @@
 using LCAnomalyCore.Comp;
+using LCAnomalyCore.Util;
 
 namespace BurrowingHeaven.Comp
 {
@@ -29,6 +30,28 @@ namespace BurrowingHeaven.Comp
         public CompProperties_BurrowingHeaven()
         {
             compClass = typeof(CompBurrowingHeaven);
+        }
+
+        public override bool TryGetWorkPreferenceRates(EAnomalyWorkType workType, out float[] ratesByLevel)
+        {
+            switch (workType)
+            {
+                case EAnomalyWorkType.Instinct:
+                    ratesByLevel = new[] { 0.00f, 0.00f, 0.00f, 0.00f, 0.00f };
+                    return true;
+                case EAnomalyWorkType.Insight:
+                    ratesByLevel = new[] { 0.30f, 0.40f, 0.40f, 0.50f, 0.50f };
+                    return true;
+                case EAnomalyWorkType.Attachment:
+                    ratesByLevel = new[] { 0.40f, 0.40f, 0.40f, 0.30f, 0.20f };
+                    return true;
+                case EAnomalyWorkType.Repression:
+                    ratesByLevel = new[] { 0.40f, 0.45f, 0.50f, 0.55f, 0.60f };
+                    return true;
+                default:
+                    ratesByLevel = null;
+                    return false;
+            }
         }
     }
 }

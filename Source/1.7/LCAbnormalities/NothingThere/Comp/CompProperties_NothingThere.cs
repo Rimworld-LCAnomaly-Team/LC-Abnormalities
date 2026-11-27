@@ -1,4 +1,6 @@
 using LCAnomalyCore.Comp;
+using LCAnomalyCore.Defs;
+using LCAnomalyCore.Util;
 using Verse;
 
 namespace NothingThere.Comp
@@ -36,6 +38,35 @@ namespace NothingThere.Comp
         public CompProperties_NothingThere()
         {
             compClass = typeof(CompNothingThere);
+        }
+
+        public override bool TryGetWorkPreferenceRates(EAnomalyWorkType workType, out float[] ratesByLevel)
+        {
+            switch (workType)
+            {
+                case EAnomalyWorkType.Instinct:
+                    ratesByLevel = new[] { 0.00f, 0.00f, 0.35f, 0.40f, 0.45f };
+                    return true;
+                case EAnomalyWorkType.Insight:
+                    ratesByLevel = new[] { 0.00f, 0.00f, 0.00f, 0.00f, 0.00f };
+                    return true;
+                case EAnomalyWorkType.Attachment:
+                    ratesByLevel = new[] { 0.50f, 0.50f, 0.50f, 0.50f, 0.50f };
+                    return true;
+                case EAnomalyWorkType.Repression:
+                    ratesByLevel = new[] { 0.00f, 0.00f, 0.00f, 0.00f, 0.00f };
+                    return true;
+                default:
+                    ratesByLevel = null;
+                    return false;
+            }
+        }
+
+        public override bool TryGetWorkDamageInfo(out DamageDef damageDef, out FloatRange damageRange)
+        {
+            damageDef = DamageDefOf.LC_RedDamage;
+            damageRange = workRedDamageRange;
+            return damageDef != null && workRedDamageRange.max > 0f;
         }
     }
 }

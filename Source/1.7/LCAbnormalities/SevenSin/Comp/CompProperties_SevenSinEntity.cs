@@ -1,4 +1,5 @@
 using LCAnomalyCore.Comp;
+using LCAnomalyCore.Util;
 
 namespace LC_SevenSin.Comp
 {
@@ -13,6 +14,24 @@ namespace LC_SevenSin.Comp
         public CompProperties_SevenSinEntity()
         {
             compClass = typeof(CompSevenSinEntity);
+        }
+
+        public override bool TryGetWorkPreferenceRates(EAnomalyWorkType workType, out float[] ratesByLevel)
+        {
+            float val;
+            switch (workType)
+            {
+                case EAnomalyWorkType.Instinct: val = instinctBonus; break;
+                case EAnomalyWorkType.Insight: val = insightBonus; break;
+                case EAnomalyWorkType.Attachment: val = attachmentBonus; break;
+                case EAnomalyWorkType.Repression: val = repressionBonus; break;
+                default:
+                    ratesByLevel = null;
+                    return false;
+            }
+
+            ratesByLevel = new[] { val, val, val, val, val };
+            return true;
         }
     }
 }

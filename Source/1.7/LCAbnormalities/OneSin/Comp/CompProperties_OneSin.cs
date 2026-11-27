@@ -1,4 +1,5 @@
 ﻿using LCAnomalyCore.Comp;
+using LCAnomalyCore.Util;
 
 namespace OneSin.Comp
 {
@@ -13,6 +14,26 @@ namespace OneSin.Comp
         public CompProperties_OneSin()
         {
             compClass = typeof(CompOneSin);
+        }
+
+        public override bool TryGetWorkPreferenceRates(EAnomalyWorkType workType, out float[] ratesByLevel)
+        {
+            switch (workType)
+            {
+                case EAnomalyWorkType.Instinct:
+                case EAnomalyWorkType.Repression:
+                    ratesByLevel = new[] { 0.50f, 0.40f, 0.30f, 0.30f, 0.30f };
+                    return true;
+                case EAnomalyWorkType.Insight:
+                    ratesByLevel = new[] { 0.70f, 0.70f, 0.50f, 0.50f, 0.50f };
+                    return true;
+                case EAnomalyWorkType.Attachment:
+                    ratesByLevel = new[] { 0.70f, 0.70f, 0.70f, 0.70f, 0.70f };
+                    return true;
+                default:
+                    ratesByLevel = null;
+                    return false;
+            }
         }
     }
 }
