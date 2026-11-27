@@ -67,7 +67,7 @@ namespace Laetitia.Comp
 
             if (!victim.Dead && !victim.Destroyed)
             {
-                float beat1Dmg = Rand.Range(14f, 19f);
+                float beat1Dmg = Props.beat1DamageRange.RandomInRange;
                 float yaw = Mathf.Atan2(-dir.z, dir.x) * Mathf.Rad2Deg;
                 victim.TakeDamage(new DamageInfo(LCAnomalyCore.Defs.DamageDefOf.LC_BlackDamage, beat1Dmg, 0.40f, yaw, caster, weapon: weaponDef));
             }

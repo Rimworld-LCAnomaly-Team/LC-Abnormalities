@@ -60,6 +60,7 @@
         <damageType>Black</damageType>
         <riskLevel>WAW</riskLevel>
         <damageMultiplier>1</damageMultiplier>
+        <guaranteedHit>true</guaranteedHit>
       </li>
     </modExtensions>
   </ThingDef>

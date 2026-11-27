@@ -31,6 +31,15 @@
         <armorPenetration>0.34</armorPenetration>
       </li>
     </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorAbilityDamageExtension">
+        <damageType>Red</damageType>
+        <stages>
+          <li><fieldName>slashDamageRange</fieldName><hitCount>2</hitCount></li>
+          <li><fieldName>slamDamageRange</fieldName><hitCount>1</hitCount></li>
+        </stages>
+      </li>
+    </modExtensions>
   </AbilityDef>
 
 </Defs>

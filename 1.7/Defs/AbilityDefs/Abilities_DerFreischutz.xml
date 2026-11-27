@@ -31,6 +31,15 @@
         <armorPenetration>0.80</armorPenetration>
       </li>
     </comps>
+    <modExtensions>
+      <li Class="LCAnomalyCore.ModExtensions.FourColorAbilityDamageExtension">
+        <damageType>Black</damageType>
+        <stages>
+          <li><fieldName>mainDamageRange</fieldName><hitCount>1</hitCount></li>
+          <li><fieldName>portalDamageRange</fieldName><hitCount>2</hitCount></li>
+        </stages>
+      </li>
+    </modExtensions>
   </AbilityDef>
 
 </Defs>

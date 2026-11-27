@@ -59,6 +59,7 @@
     <modExtensions>
       <li Class="LCAnomalyCore.ModExtensions.FourColorWeaponExtension">
         <damageType>White</damageType>
+        <secondaryDamageType>Black</secondaryDamageType>
         <riskLevel>WAW</riskLevel>
         <damageMultiplier>1</damageMultiplier>
       </li>
