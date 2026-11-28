@@ -49,7 +49,7 @@ namespace NothingThere.Comp
             for (int i = 0; i < pawn.apparel.WornApparel.Count; i++)
             {
                 Apparel ap = pawn.apparel.WornApparel[i];
-                if (ap != null && ap.def == global::NothingThere.Def.ThingDefOf.Apparel_NothingThereSuit)
+                if (ap != null && (ap.def == global::NothingThere.Def.ThingDefOf.Apparel_NothingThereSuit || ap.TryGetComp<CompMimicrySuit>() != null))
                 {
                     return true;
                 }

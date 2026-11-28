@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="LC_Apparel_EGO">
+  <ThingDef Name="Apparel_FairyFestivalSuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_FairyFestivalSuit</defName>
     <label>E.G.O. Suit (Wingbeat)</label>
     <description>A pale moss-green robe woven with translucent fairy filaments (ZAYIN).\nLight as mist, it lets the wearer tend to work quickly while keeping them agile.</description>
@@ -44,7 +44,7 @@
     </modExtensions>
   </ThingDef>
 
-  <ThingDef ParentName="LC_Apparel_EGO">
+  <ThingDef Name="Apparel_WellCheersSuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_WellCheersSuit</defName>
     <label>E.G.O. Suit (Soda)</label>
     <description>A cheerful sky-blue and crimson sailor uniform inspired by the shrimp mariners of WellCheers (ZAYIN).\nOffers solid everyday Red resistance and keeps heat fatigue at bay.</description>
@@ -86,7 +86,7 @@
     </modExtensions>
   </ThingDef>
 
-  <ThingDef ParentName="LC_Apparel_EGO">
+  <ThingDef Name="Apparel_PunishingBirdSuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_PunishingBirdSuit</defName>
     <label>E.G.O. Suit (Beak)</label>
     <description>A feathered monochrome jacket trimmed with a warning band of crimson velvet (TETH).\nBalanced against Red and White trauma, though somewhat porous against Black corrosion.</description>
@@ -129,7 +129,7 @@
     </modExtensions>
   </ThingDef>
 
-  <ThingDef ParentName="LC_Apparel_EGO">
+  <ThingDef Name="Apparel_VoidDreamSuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_VoidDreamSuit</defName>
     <label>E.G.O. Suit (Dreamy)</label>
     <description>A plush lavender coat patterned with golden stars and sleeping eyes (TETH).\nInsulates the wearer well against psychic Whiteness and Black corrosion.</description>

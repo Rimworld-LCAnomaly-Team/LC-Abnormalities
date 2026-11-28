@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="LC_Apparel_EGO">
+  <ThingDef Name="Apparel_ScorchedGirlSuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_ScorchedGirlSuit</defName>
     <label>E.G.O. Suit (Fourth Match Flame)</label>
     <description>A charred, ember-lined coat stitched from glowing ash (TETH).\nProvides high Red and heat insulation while faintly dampening psychic calm.</description>
@@ -42,7 +42,7 @@
     </modExtensions>
   </ThingDef>
 
-  <ThingDef ParentName="LC_Apparel_EGO">
+  <ThingDef Name="Apparel_DerFreischutzSuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_DerFreischutzSuit</defName>
     <label>E.G.O. Suit (Magic Bullet)</label>
     <description>An indigo sniper trenchcoat trimmed with brass runes (HE).\nGuards evenly against Red, White, and Black assaults while steadying the marksman's aim.</description>
@@ -83,7 +83,7 @@
     </modExtensions>
   </ThingDef>
 
-  <ThingDef ParentName="LC_Apparel_EGO">
+  <ThingDef Name="Apparel_FuneralOfDeadButterfliesSuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_FuneralOfDeadButterfliesSuit</defName>
     <label>E.G.O. Suit (Solemn Lament)</label>
     <description>A crisp obsidian funeral suit adorned with pale butterfly lapels (HE).\nResists Black erosion exceptionally well while aiding agile movement.</description>
@@ -124,7 +124,7 @@
     </modExtensions>
   </ThingDef>
 
-  <ThingDef ParentName="LC_Apparel_EGO">
+  <ThingDef Name="Apparel_SnowQueenSuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_SnowQueenSuit</defName>
     <label>E.G.O. Suit (Frost Splinter)</label>
     <description>A pale azure frost-silk overcoat sparkling with winter rime (HE).\nShields strongly against White and Black mental erosion and extreme cold.</description>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="LC_Apparel_EGO">
+  <ThingDef Name="Apparel_AllAroundHelperSuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_AllAroundHelperSuit</defName>
     <label>E.G.O. Suit (Grinder Mk4)</label>
     <description>A sterile white ceramic-plated utility jacket extracted from All-Around Helper (HE).\nGuards reliably against Red lacerations while slightly boosting movement agility.</description>
@@ -42,7 +42,7 @@
     </modExtensions>
   </ThingDef>
 
-  <ThingDef ParentName="LC_Apparel_EGO">
+  <ThingDef Name="Apparel_JudgementBirdSuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_JudgementBirdSuit</defName>
     <label>E.G.O. Suit (Justitia)</label>
     <description>A bandaged obsidian-and-ivory mantle of ALEPH calibre extracted from Judgement Bird (ALEPH).\nProvides rare, balanced 0.5x resistance across every damage type—including the colony's first reliable defense against Pale damage.</description>
@@ -84,7 +84,7 @@
     </modExtensions>
   </ThingDef>
 
-  <ThingDef ParentName="LC_Apparel_EGO">
+  <ThingDef Name="Apparel_BigBirdSuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_BigBirdSuit</defName>
     <label>E.G.O. Suit (Lamp)</label>
     <description>A heavy midnight-feathered coat lined with glowing golden eye embroidery (WAW).\nOffers outstanding 0.4x Black resistance and solid White shielding for frontline containment agents.</description>
@@ -125,7 +125,7 @@
     </modExtensions>
   </ThingDef>
 
-  <ThingDef ParentName="LC_Apparel_EGO">
+  <ThingDef Name="Apparel_LittleRedRidingHoodedMercenarySuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_LittleRedRidingHoodedMercenarySuit</defName>
     <label>E.G.O. Suit (Crimson Scar)</label>
     <description>A blood-red hooded tactical mantle stitched for relentless pursuit (WAW).\nDelivers balanced 0.6x resistance across Red, White, and Black threats while sharpening combat mobility and aim.</description>
@@ -167,7 +167,7 @@
     </modExtensions>
   </ThingDef>
 
-  <ThingDef ParentName="LC_Apparel_EGO">
+  <ThingDef Name="Apparel_SchadenfreudeSuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_SchadenfreudeSuit</defName>
     <label>E.G.O. Suit (Gaze)</label>
     <description>A slate-iron tactical coat patterned after Schadenfreude's keyhole casing (HE).\nProvides steady White resistance (0.8x) while heightening melee ferocity and speed.</description>

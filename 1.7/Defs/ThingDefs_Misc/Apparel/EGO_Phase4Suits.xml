@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="LC_Apparel_EGO">
+  <ThingDef Name="Apparel_PpodaeSuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_PpodaeSuit</defName>
     <label>E.G.O. Suit (SO CUTE!!!)</label>
     <description>A warm white fur-trimmed harness jacket extracted from Ppodae (TETH).\nOffers dependable resistance against Red and Black harm while keeping wearers nimble.</description>
@@ -41,7 +41,7 @@
     </modExtensions>
   </ThingDef>
 
-  <ThingDef ParentName="LC_Apparel_EGO">
+  <ThingDef Name="Apparel_WarmHeartedWoodsmanSuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_WarmHeartedWoodsmanSuit</defName>
     <label>E.G.O. Suit (Logging)</label>
     <description>Heavy moss-flecked riveted ironwork plating extracted from Warm-Hearted Woodsman (HE).\nShields stalwartly against Red and Black impacts in close quarters.</description>
@@ -78,7 +78,7 @@
     </modExtensions>
   </ThingDef>
 
-  <ThingDef ParentName="LC_Apparel_EGO">
+  <ThingDef Name="Apparel_FragmentOfTheUniverseSuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_FragmentOfTheUniverseSuit</defName>
     <label>E.G.O. Suit (Fragments from Somewhere)</label>
     <description>A vibrant violet tailcoat stitched with cosmic thread extracted from Fragment of the Universe (TETH).\nProvides standout TETH-grade resistance against Black damage.</description>
@@ -118,7 +118,7 @@
     </modExtensions>
   </ThingDef>
 
-  <ThingDef ParentName="LC_Apparel_EGO">
+  <ThingDef Name="Apparel_ScarecrowSearchingForWisdomSuit" ParentName="LC_Apparel_EGO">
     <defName>Apparel_ScarecrowSearchingForWisdomSuit</defName>
     <label>E.G.O. Suit (Harvest)</label>
     <description>Stitched straw-woven plaid vestments extracted from Scarecrow Searching for Wisdom (HE).\nGrants formidable Red (0.6) and White (0.8) protection, though vulnerable to Black assaults.</description>
